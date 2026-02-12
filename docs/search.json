@@ -23,9 +23,16 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "my-notes-site",
+    "title": "My Academic Notes",
     "section": "",
-    "text": "Post With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nFeb 13, 2026\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nFirst post\n\n\n\nnotes\n\nupdates\n\n\n\n\n\n\n\n\n\nFeb 13, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 10, 2026\n\n\nTristan O’Malley\n\n\n\n\n\nNo matching items"
+    "text": "Welcome. This site collects notes, short posts, and PDFs."
+  },
+  {
+    "objectID": "index.html#start-here",
+    "href": "index.html#start-here",
+    "title": "My Academic Notes",
+    "section": "Start here",
+    "text": "Start here\n\nNotes\nPosts\nPDF Library"
   },
   {
     "objectID": "posts/2026-02-13-first-post.html",

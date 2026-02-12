@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Notes & Drafts — Your Name"
+  title: "Palace for Game Theory"
   navbar:
     left:
       - href: index.qmd
