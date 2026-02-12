@@ -1,0 +1,26 @@
+{
+  "posts/post-with-code/index.qmd": {
+    "index.html": "b148e962"
+  },
+  "posts/welcome/index.qmd": {
+    "index.html": "4cd18c72"
+  },
+  "index.qmd": {
+    "index.html": "a9ee1e22"
+  },
+  "about.qmd": {
+    "about.html": "b8b4d7c1"
+  },
+  "posts/2026-02-13-first-post.qmd": {
+    "2026-02-13-first-post.html": "f0773ee1"
+  },
+  "notes/index.qmd": {
+    "index.html": "953aefb7"
+  },
+  "notes/game-theory.qmd": {
+    "game-theory.html": "200e73ca"
+  },
+  "pdfs/index.qmd": {
+    "index.html": "8c303f8c"
+  }
+}

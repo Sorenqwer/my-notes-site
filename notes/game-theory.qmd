@@ -1,0 +1,11 @@
+---
+title: "Game Theory Notes"
+---
+
+Here is an equation: $u(x)=\log x$.
+
+A displayed equation:
+
+$$
+\arg\max_x \; f(x)
+$$

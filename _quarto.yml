@@ -1,0 +1,22 @@
+project:
+  type: website
+
+website:
+  title: "Notes & Drafts — Your Name"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: notes/index.qmd
+        text: Notes
+      - href: posts/index.qmd
+        text: Posts
+      - href: pdfs/index.qmd
+        text: PDFs
+
+format:
+  html:
+    toc: true
+    math: mathjax
+
+bibliography: references.bib
