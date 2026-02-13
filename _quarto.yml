@@ -4,7 +4,7 @@ project:
 
 website:
   site-url: "https://sorenqwer.github.io/my-notes-site/"
-  title: "Palace for Game Theory"
+  title: "Margins of Rationality"
   search: true
   navbar:
     left:
