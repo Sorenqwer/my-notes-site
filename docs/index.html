@@ -140,16 +140,47 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<!-- Optional: one-line subtitle under the title -->
+<div class="lead">
+<p>Notes, short write-ups, and PDFs — organised for quick retrieval.</p>
+</div>
 <blockquote class="blockquote">
 <p>“The Absence of Coalitions” - Nash, <em>Non-Cooperative Games</em> (1951)</p>
 </blockquote>
+<hr>
 <section id="start-here" class="level2">
 <h2 class="anchored" data-anchor-id="start-here">Start here</h2>
-<ul>
-<li><a href="./notes/index.html">Notes</a></li>
-<li><a href="posts/index.qmd">Posts</a></li>
-<li><a href="./pdfs/index.html">PDF Library</a></li>
-</ul>
+<div class="grid gap-3">
+<div class="g-col-12 g-col-md-4">
+<section id="notes" class="level3 card">
+<h3 class="anchored" data-anchor-id="notes">Notes</h3>
+<p>Structured topic pages and working notes.</p>
+<p><a href="./notes/index.html">Open Notes →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-4">
+<section id="posts" class="level3 card">
+<h3 class="anchored" data-anchor-id="posts">Posts</h3>
+<p>Short posts: reading notes, proofs, ideas, updates.</p>
+<p><a href="posts/index.qmd">Open Posts →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-4">
+<section id="pdfs" class="level3 card">
+<h3 class="anchored" data-anchor-id="pdfs">PDFs</h3>
+<p>A small library of PDFs linked by topic.</p>
+<p><a href="./pdfs/index.html">Open PDFs →</a></p>
+</section>
+</div>
+</div>
+<hr>
+</section>
+<section id="latest-posts" class="level2">
+<h2 class="anchored" data-anchor-id="latest-posts">Latest posts</h2>
+<div class="listing">
+<p>::: # this block is just to keep Quarto happy in some themes</p>
+</div>
+<p>contents: posts type: default sort: “date desc” max-items: 5 categories: true feed: true</p>
 
 
 </section>

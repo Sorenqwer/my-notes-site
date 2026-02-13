@@ -2,12 +2,65 @@
 title: "Solely a Place"
 page-layout: full
 title-block-banner: true
+toc: false
 ---
+
+<!-- Optional: one-line subtitle under the title -->
+<div class="lead">
+Notes, short write-ups, and PDFs — organised for quick retrieval.
+</div>
 
 > "The Absence of Coalitions"
 > - Nash, *Non-Cooperative Games* (1951)
  
+---
+
 ## Start here
-- [Notes](notes/index.qmd)
-- [Posts](posts/index.qmd)
-- [PDF Library](pdfs/index.qmd)
+
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Notes
+Structured topic pages and working notes.
+
+[Open Notes →](notes/index.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Posts
+Short posts: reading notes, proofs, ideas, updates.
+
+[Open Posts →](posts/index.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### PDFs
+A small library of PDFs linked by topic.
+
+[Open PDFs →](pdfs/index.qmd)
+:::
+:::
+
+:::
+
+---
+
+## Latest posts
+
+::: {.listing}
+:::  # this block is just to keep Quarto happy in some themes
+:::
+
+```{=markdown}
+
+contents: posts
+type: default
+sort: "date desc"
+max-items: 5
+categories: true
+feed: true
