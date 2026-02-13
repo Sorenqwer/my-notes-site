@@ -56,4 +56,3 @@ max-items: 5
 categories: true
 feed: true
 ```
-```
