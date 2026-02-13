@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Palace for Game Theory</title>
+<link>https://sorenqwer.github.io/my-notes-site/</link>
+<atom:link href="https://sorenqwer.github.io/my-notes-site/index.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.8.27</generator>
+<lastBuildDate>Thu, 12 Feb 2026 16:00:00 GMT</lastBuildDate>
+<item>
+  <title>Post With Code</title>
+  <dc:creator>Harlow Malloc</dc:creator>
+  <link>https://sorenqwer.github.io/my-notes-site/posts/post-with-code/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This is a post with executable code.</p>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <category>code</category>
+  <category>analysis</category>
+  <guid>https://sorenqwer.github.io/my-notes-site/posts/post-with-code/</guid>
+  <pubDate>Thu, 12 Feb 2026 16:00:00 GMT</pubDate>
+  <media:content url="https://sorenqwer.github.io/my-notes-site/posts/post-with-code/image.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>First post</title>
+  <link>https://sorenqwer.github.io/my-notes-site/posts/2026-02-13-first-post.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This is my first post. I’ll use this space for short writeups and reading notes.</p>
+
+
+
+ ]]></description>
+  <category>notes</category>
+  <category>updates</category>
+  <guid>https://sorenqwer.github.io/my-notes-site/posts/2026-02-13-first-post.html</guid>
+  <pubDate>Thu, 12 Feb 2026 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Welcome To My Blog</title>
+  <dc:creator>Tristan O&#39;Malley</dc:creator>
+  <link>https://sorenqwer.github.io/my-notes-site/posts/welcome/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This is the first post in a Quarto blog. Welcome!</p>
+<p><img src="https://sorenqwer.github.io/my-notes-site/posts/welcome/thumbnail.jpg" class="img-fluid"></p>
+<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://sorenqwer.github.io/my-notes-site/posts/welcome/</guid>
+  <pubDate>Mon, 09 Feb 2026 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Posts</title>
+  <link>https://sorenqwer.github.io/my-notes-site/posts/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="bmV3cyUyQ2NvZGUlMkNhbmFseXNpcw==" data-listing-date-sort="1770912000000" data-listing-file-modified-sort="1770919017443" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
+<div class="thumbnail"><a href="../posts/post-with-code/index.html" class="no-external">
+
+<img loading="lazy" src="https://sorenqwer.github.io/my-notes-site/posts/post-with-code/image.jpg" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">code</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">analysis</div>
+
+</div>
+<div class="delink listing-description"><a href="../posts/post-with-code/index.html" class="no-external">
+<!-- desc(5A0113B34292)[max=175]:posts/post-with-code/index.html -->
+</a></div>
+</div>
+<div class="metadata">
+<a href="../posts/post-with-code/index.html" class="no-external">
+<div class="listing-date">
+Feb 13, 2026
+</div>
+<div class="listing-author">
+Harlow Malloc
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="bm90ZXMlMkN1cGRhdGVz" data-listing-date-sort="1770912000000" data-listing-file-modified-sort="1770915738075" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
+<div class="thumbnail"><a href="../posts/2026-02-13-first-post.html" class="no-external">
+
+<!-- img(9CEB782EFEE6)[progressive=false, height=]:listing:posts/2026-02-13-first-post.html -->
+
+</a></div>
+<div class="body">
+
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bm90ZXM='); return false;">notes</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dXBkYXRlcw=='); return false;">updates</div>
+
+</div>
+<div class="delink listing-description"><a href="../posts/2026-02-13-first-post.html" class="no-external">
+<!-- desc(5A0113B34292)[max=175]:posts/2026-02-13-first-post.html -->
+</a></div>
+</div>
+<div class="metadata">
+<a href="../posts/2026-02-13-first-post.html" class="no-external">
+<div class="listing-date">
+Feb 13, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="bmV3cw==" data-listing-date-sort="1770652800000" data-listing-file-modified-sort="1770914768652" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
+<div class="thumbnail"><a href="../posts/welcome/index.html" class="no-external">
+
+<!-- img(9CEB782EFEE6)[progressive=false, height=]:listing:posts/welcome/index.html -->
+
+</a></div>
+<div class="body">
+
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
+
+</div>
+<div class="delink listing-description"><a href="../posts/welcome/index.html" class="no-external">
+<!-- desc(5A0113B34292)[max=175]:posts/welcome/index.html -->
+</a></div>
+</div>
+<div class="metadata">
+<a href="../posts/welcome/index.html" class="no-external">
+<div class="listing-date">
+Feb 10, 2026
+</div>
+<div class="listing-author">
+Tristan O’Malley
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div> ]]></description>
+  <guid>https://sorenqwer.github.io/my-notes-site/posts/</guid>
+  <pubDate>Fri, 13 Feb 2026 05:51:54 GMT</pubDate>
+</item>
+</channel>
+</rss>
