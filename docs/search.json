@@ -35,6 +35,13 @@
     "text": "Start here\n\n\n\nNotes\nStructured topic pages and working notes.\nOpen Notes →\n\n\n\n\nPosts\nShort posts: reading notes, proofs, ideas, updates.\nOpen Posts →\n\n\n\n\nPDFs\nA small library of PDFs linked by topic.\nOpen PDFs →"
   },
   {
+    "objectID": "index.html#latest-posts",
+    "href": "index.html#latest-posts",
+    "title": "Solely a Place",
+    "section": "Latest posts",
+    "text": "Latest posts\n\n::: # this block is just to keep Quarto happy in some themes\n\ncontents: posts type: default sort: “date desc” max-items: 5 categories: true feed: true"
+  },
+  {
     "objectID": "posts/2026-02-13-first-post.html",
     "href": "posts/2026-02-13-first-post.html",
     "title": "First post",
@@ -68,12 +75,5 @@
     "title": "Game Theory Notes",
     "section": "",
     "text": "Here is an equation: \\(u(x)=\\log x\\).\nA displayed equation:\n\\[\n\\arg\\max_x \\; f(x)\n\\]"
-  },
-  {
-    "objectID": "index.html#latest-posts",
-    "href": "index.html#latest-posts",
-    "title": "Solely a Place",
-    "section": "Latest posts",
-    "text": "Latest posts\n\n::: # this block is just to keep Quarto happy in some themes\n\ncontents: posts type: default sort: “date desc” max-items: 5 categories: true feed: true"
   }
 ]
