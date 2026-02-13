@@ -2,4 +2,4 @@
 title: "PDF Library"
 ---
 
-- [De Courson & Nettle (2021) — Inequality, crime, and trust (OA PDF)](why-inequality-crime-trust-2021.pdf)
+- [De Courson & Nettle (2021) — Inequality, crime, and trust (OA PDF)](Why do inequality and deprivation produce high crime and low trust_.pdf)
