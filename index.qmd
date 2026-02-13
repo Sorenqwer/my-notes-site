@@ -1,17 +1,15 @@
 ---
 title: "Solely a Place"
 page-layout: full
-title-block-banner: true
+title-block-banner: false
 toc: false
 
 listing:
   - id: latest-posts
     contents: posts
-    type: default
     sort: "date desc"
     max-items: 5
-    categories: true
-    feed: true
+    categories: false
 ---
 
 > "The Absence of Coalitions"  
@@ -19,42 +17,11 @@ listing:
 
 ---
 
-## Start here
-
-::: {.grid .gap-3}
-
-::: {.g-col-12 .g-col-md-4}
-::: {.card}
-### Notes
-Structured topic pages and working notes.
-
-[Open Notes →](notes/index.qmd)
-:::
-:::
-
-::: {.g-col-12 .g-col-md-4}
-::: {.card}
-### Posts
-Short posts: reading notes, proofs, ideas, updates.
-
-[Open Posts →](posts/index.qmd)
-:::
-:::
-
-::: {.g-col-12 .g-col-md-4}
-::: {.card}
-### PDFs
-A small library of PDFs linked by topic.
-
-[Open PDFs →](pdfs/index.qmd)
-:::
-:::
-
-:::
+[Notes →](notes/index.qmd) · [Posts →](posts/index.qmd) · [PDFs →](pdfs/index.qmd)
 
 ---
 
-## Latest posts
+## Latest
 
 ::: {#latest-posts}
 :::

@@ -80,9 +80,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -130,12 +130,12 @@ window.Quarto = {
 };
 </script>
 
-<link rel="alternate" type="application/rss+xml" title="Palace for Game Theory" href="index.xml" data-external="1"></head>
+</head>
 
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -173,32 +173,30 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Solely a Place</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="YW5hbHlzaXM=">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29kZQ==">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bm90ZXM=">notes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dXBkYXRlcw==">updates <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Solely a Place</h1>
+</div>
 
 
 
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <blockquote class="blockquote">
@@ -206,35 +204,10 @@ window.Quarto = {
 — Nash, <em>Non-Cooperative Games</em> (1951)</p>
 </blockquote>
 <hr>
-<section id="start-here" class="level2">
-<h2 class="anchored" data-anchor-id="start-here">Start here</h2>
-<div class="grid gap-3">
-<div class="g-col-12 g-col-md-4">
-<section id="notes" class="level3 card">
-<h3 class="anchored" data-anchor-id="notes">Notes</h3>
-<p>Structured topic pages and working notes.</p>
-<p><a href="./notes/index.html">Open Notes →</a></p>
-</section>
-</div>
-<div class="g-col-12 g-col-md-4">
-<section id="posts" class="level3 card">
-<h3 class="anchored" data-anchor-id="posts">Posts</h3>
-<p>Short posts: reading notes, proofs, ideas, updates.</p>
-<p><a href="./posts/index.html">Open Posts →</a></p>
-</section>
-</div>
-<div class="g-col-12 g-col-md-4">
-<section id="pdfs" class="level3 card">
-<h3 class="anchored" data-anchor-id="pdfs">PDFs</h3>
-<p>A small library of PDFs linked by topic.</p>
-<p><a href="./pdfs/index.html">Open PDFs →</a></p>
-</section>
-</div>
-</div>
+<p><a href="./notes/index.html">Notes →</a> · <a href="./posts/index.html">Posts →</a> · <a href="./pdfs/index.html">PDFs →</a></p>
 <hr>
-</section>
-<section id="latest-posts" class="level2">
-<h2 class="anchored" data-anchor-id="latest-posts">Latest posts</h2>
+<section id="latest" class="level2">
+<h2 class="anchored" data-anchor-id="latest">Latest</h2>
 <div id="listing-latest-posts" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
 <div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1770961401564" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
@@ -316,15 +289,6 @@ This is my first post. I’ll use…</div></div><div class="metadata"><div class
 <h3 class="no-anchor listing-title">
 <a href="./posts/post-with-code/index.html" class="no-external">Post With Code</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">code</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">analysis</div>
-
-</div>
 <div class="delink listing-description"><a href="./posts/post-with-code/index.html" class="no-external">
 This is a post with executable code.
 </a></div>
@@ -350,13 +314,6 @@ Harlow Malloc
 <h3 class="no-anchor listing-title">
 <a href="./posts/2026-02-13-first-post.html" class="no-external">First post</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bm90ZXM='); return false;">notes</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dXBkYXRlcw=='); return false;">updates</div>
-
-</div>
 <div class="delink listing-description"><a href="./posts/2026-02-13-first-post.html" class="no-external">
 This is my first post. I’ll use this space for short writeups and reading notes.
 </a></div>
@@ -379,11 +336,6 @@ Feb 13, 2026
 <h3 class="no-anchor listing-title">
 <a href="./posts/welcome/index.html" class="no-external">Welcome To My Blog</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-</div>
 <div class="delink listing-description"><a href="./posts/welcome/index.html" class="no-external">
 This is the first post in a Quarto blog. Welcome!
 </a></div>
