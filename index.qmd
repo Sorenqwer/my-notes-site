@@ -4,8 +4,9 @@ page-layout: full
 title-block-banner: true
 ---
 
-Welcome. This site collects notes, short posts, and PDFs.
-
+> "The Absence of Coalitions"
+> - Nash, *Non-Cooperative Games* (1951)
+ 
 ## Start here
 - [Notes](notes/index.qmd)
 - [Posts](posts/index.qmd)
