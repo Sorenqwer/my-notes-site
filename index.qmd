@@ -1,8 +1,10 @@
 ---
 title: "Solely a Place"
+body-classes: home
 page-layout: full
 title-block-banner: false
 toc: false
+
 
 listing:
   - id: latest-posts

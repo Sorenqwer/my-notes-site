@@ -19,6 +19,7 @@ website:
 
 format:
   html:
+    css: styles.css
     toc: false
     page-layout: full
     title-block-manner: true
