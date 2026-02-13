@@ -14,5 +14,5 @@ toc: false
 
 ---
 
-[Notes →](notes/index.qmd) · [Posts →](posts/index.qmd) · [PDFs →](pdfs/index.qmd)
+[Notes →](notes/index.qmd) · [Foundations →](foundations/index.qmd)· [PDFs →](pdfs/index.qmd)
 

@@ -1,0 +1,11 @@
+---
+title: "Foundations"
+toc: true
+---
+
+A compact toolkit of mathematical concepts used throughout game theory.
+
+## Topics
+- [Linear algebra](linear-algebra.qmd)
+- [Probability](probability.qmd)
+- [Optimization](optimization.qmd)

@@ -28,5 +28,17 @@
   },
   "notes/metrics.qmd": {
     "metrics.html": "d90b88c3"
+  },
+  "foundations/linear-algebra.qmd": {
+    "linear-algebra.html": "09e83ec5"
+  },
+  "foundations/probability.qmd": {
+    "probability.html": "a94e23f6"
+  },
+  "foundations/index.qmd": {
+    "index.html": "d3a51d8c"
+  },
+  "foundations/optimization.qmd": {
+    "optimization.html": "3b5105ef"
   }
 }

@@ -1,0 +1,7 @@
+---
+title: "Linear algebra"
+---
+
+- Vectors, norms, inner products
+- Eigenvalues/eigenvectors (intuition for dynamics)
+- Matrix games and payoff matrices

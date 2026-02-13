@@ -1,0 +1,7 @@
+---
+title: "Probability"
+---
+
+- Random variables, expectation, conditional expectation
+- Mixed strategies as probability distributions
+- Bayes’ rule and beliefs
