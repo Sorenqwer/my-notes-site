@@ -1,17 +1,12 @@
 ---
 title: "Solely a Place"
-body-classes: home
+
 page-layout: full
 title-block-banner: false
 toc: false
 
 
-listing:
-  - id: latest-posts
-    contents: posts
-    sort: "date desc"
-    max-items: 5
-    categories: false
+
 ---
 
 > "The Absence of Coalitions"  
@@ -21,9 +16,3 @@ listing:
 
 [Notes →](notes/index.qmd) · [Posts →](posts/index.qmd) · [PDFs →](pdfs/index.qmd)
 
----
-
-## Latest
-
-::: {#latest-posts}
-:::
