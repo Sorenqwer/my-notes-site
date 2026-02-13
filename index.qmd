@@ -1,5 +1,5 @@
 ---
-title: "Solely a Palace"
+title: "Solely a Place"
 page-layout: full
 title-block-banner: true
 ---
