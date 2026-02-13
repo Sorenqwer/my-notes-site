@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "Solely a Place",
     "section": "",
-    "text": "Notes, short write-ups, and PDFs — organised for quick retrieval."
+    "text": "“The Absence of Coalitions” - Nash, Non-Cooperative Games (1951)"
   },
   {
     "objectID": "index.html#start-here",
@@ -39,7 +39,7 @@
     "href": "index.html#latest-posts",
     "title": "Solely a Place",
     "section": "Latest posts",
-    "text": "Latest posts\n\n::: # this block is just to keep Quarto happy in some themes\n\ncontents: posts type: default sort: “date desc” max-items: 5 categories: true feed: true"
+    "text": "Latest posts\ncontents: posts type: default sort: “date desc” max-items: 5 categories: true feed: true"
   },
   {
     "objectID": "posts/2026-02-13-first-post.html",

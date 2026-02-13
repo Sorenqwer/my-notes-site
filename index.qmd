@@ -5,11 +5,6 @@ title-block-banner: true
 toc: false
 ---
 
-<!-- Optional: one-line subtitle under the title -->
-<div class="lead">
-Notes, short write-ups, and PDFs — organised for quick retrieval.
-</div>
-
 > "The Absence of Coalitions"
 > - Nash, *Non-Cooperative Games* (1951)
  
@@ -52,12 +47,7 @@ A small library of PDFs linked by topic.
 
 ## Latest posts
 
-::: {.listing}
-:::  # this block is just to keep Quarto happy in some themes
-:::
-
-```{=markdown}
-
+```{listing}
 contents: posts
 type: default
 sort: "date desc"
