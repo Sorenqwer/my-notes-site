@@ -1,7 +1,67 @@
 ---
 title: "Optimization"
+toc: true
 ---
 
-- Best responses as argmax problems
-- Lagrangian/KKT (when constraints matter)
-- Concavity/FOC/SOC
+## Argmax and best responses
+A best response is an optimization problem. Given others’ strategies $s_{-i}$, player $i$ chooses
+
+$$
+BR_i(s_{-i})\in \arg\max_{s_i\in S_i} u_i(s_i,s_{-i}).
+$$
+
+**Intuition.** A Nash equilibrium is a fixed point of best responses: everyone is already choosing an argmax given others.
+
+## FOC / SOC (unconstrained)
+If $f$ is differentiable and you maximize over an interval, an interior optimum $x^*$ satisfies the **first-order condition** (FOC)
+
+$$
+f'(x^*)=0.
+$$
+
+If $f$ is twice differentiable, the **second-order condition** (SOC) for a local maximum is
+
+$$
+f''(x^*)<0.
+$$
+
+**Intuition.** FOC finds stationary points; SOC checks that the curve bends downward.
+
+## KKT conditions (constrained)
+For maximizing $f(x)$ subject to inequality constraints $g_j(x)\le 0$, define the Lagrangian
+
+$$
+\mathcal{L}(x,\lambda)=f(x)-\sum_{j}\lambda_j g_j(x),
+\qquad \lambda_j\ge 0.
+$$
+
+KKT conditions (at an optimum, under standard regularity assumptions) include:
+- **Stationarity:** $\nabla_x \mathcal{L}(x^*,\lambda^*)=0$
+- **Primal feasibility:** $g_j(x^*)\le 0$
+- **Dual feasibility:** $\lambda_j^*\ge 0$
+- **Complementary slackness:** $\lambda_j^* g_j(x^*)=0$ for all $j$
+
+**Intuition.** Constraints either bind (then they get a positive “shadow price” $\lambda_j$) or don’t bind (then $\lambda_j=0$).
+
+## Example: best response with a constraint
+Maximize $f(x)=2x-x^2$ subject to $x\ge 0$.
+
+Write the constraint as $g(x)=-x\le 0$.
+Lagrangian:
+
+$$
+\mathcal{L}(x,\lambda)= (2x-x^2)-\lambda(-x)=2x-x^2+\lambda x.
+$$
+
+KKT:
+- Stationarity: $\frac{\partial \mathcal{L}}{\partial x}=2-2x+\lambda=0$
+- Primal feasibility: $x\ge 0$
+- Dual feasibility: $\lambda\ge 0$
+- Complementary slackness: $\lambda x=0$
+
+From stationarity: $2-2x+\lambda=0 \Rightarrow x=1+\lambda/2$.
+
+If $x>0$, then complementary slackness implies $\lambda=0$, so $x=1$.
+Check feasibility: $1\ge 0$ yes. So the solution is $x^*=1$.
+
+(If the unconstrained maximizer had been negative, the constraint would bind and you’d get $x^*=0$ with $\lambda>0$.)

@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -117,9 +146,20 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#argmax-and-best-responses" id="toc-argmax-and-best-responses" class="nav-link active" data-scroll-target="#argmax-and-best-responses">Argmax and best responses</a></li>
+  <li><a href="#foc-soc-unconstrained" id="toc-foc-soc-unconstrained" class="nav-link" data-scroll-target="#foc-soc-unconstrained">FOC / SOC (unconstrained)</a></li>
+  <li><a href="#kkt-conditions-constrained" id="toc-kkt-conditions-constrained" class="nav-link" data-scroll-target="#kkt-conditions-constrained">KKT conditions (constrained)</a></li>
+  <li><a href="#example-best-response-with-a-constraint" id="toc-example-best-response-with-a-constraint" class="nav-link" data-scroll-target="#example-best-response-with-a-constraint">Example: best response with a constraint</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -128,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -140,13 +180,50 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<ul>
-<li>Best responses as argmax problems</li>
-<li>Lagrangian/KKT (when constraints matter)</li>
-<li>Concavity/FOC/SOC</li>
-</ul>
+<section id="argmax-and-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="argmax-and-best-responses">Argmax and best responses</h2>
+<p>A best response is an optimization problem. Given others’ strategies <span class="math inline">\(s_{-i}\)</span>, player <span class="math inline">\(i\)</span> chooses</p>
+<p><span class="math display">\[
+BR_i(s_{-i})\in \arg\max_{s_i\in S_i} u_i(s_i,s_{-i}).
+\]</span></p>
+<p><strong>Intuition.</strong> A Nash equilibrium is a fixed point of best responses: everyone is already choosing an argmax given others.</p>
+</section>
+<section id="foc-soc-unconstrained" class="level2">
+<h2 class="anchored" data-anchor-id="foc-soc-unconstrained">FOC / SOC (unconstrained)</h2>
+<p>If <span class="math inline">\(f\)</span> is differentiable and you maximize over an interval, an interior optimum <span class="math inline">\(x^*\)</span> satisfies the <strong>first-order condition</strong> (FOC)</p>
+<p><span class="math display">\[
+f'(x^*)=0.
+\]</span></p>
+<p>If <span class="math inline">\(f\)</span> is twice differentiable, the <strong>second-order condition</strong> (SOC) for a local maximum is</p>
+<p><span class="math display">\[
+f''(x^*)&lt;0.
+\]</span></p>
+<p><strong>Intuition.</strong> FOC finds stationary points; SOC checks that the curve bends downward.</p>
+</section>
+<section id="kkt-conditions-constrained" class="level2">
+<h2 class="anchored" data-anchor-id="kkt-conditions-constrained">KKT conditions (constrained)</h2>
+<p>For maximizing <span class="math inline">\(f(x)\)</span> subject to inequality constraints <span class="math inline">\(g_j(x)\le 0\)</span>, define the Lagrangian</p>
+<p><span class="math display">\[
+\mathcal{L}(x,\lambda)=f(x)-\sum_{j}\lambda_j g_j(x),
+\qquad \lambda_j\ge 0.
+\]</span></p>
+<p>KKT conditions (at an optimum, under standard regularity assumptions) include: - <strong>Stationarity:</strong> <span class="math inline">\(\nabla_x \mathcal{L}(x^*,\lambda^*)=0\)</span> - <strong>Primal feasibility:</strong> <span class="math inline">\(g_j(x^*)\le 0\)</span> - <strong>Dual feasibility:</strong> <span class="math inline">\(\lambda_j^*\ge 0\)</span> - <strong>Complementary slackness:</strong> <span class="math inline">\(\lambda_j^* g_j(x^*)=0\)</span> for all <span class="math inline">\(j\)</span></p>
+<p><strong>Intuition.</strong> Constraints either bind (then they get a positive “shadow price” <span class="math inline">\(\lambda_j\)</span>) or don’t bind (then <span class="math inline">\(\lambda_j=0\)</span>).</p>
+</section>
+<section id="example-best-response-with-a-constraint" class="level2">
+<h2 class="anchored" data-anchor-id="example-best-response-with-a-constraint">Example: best response with a constraint</h2>
+<p>Maximize <span class="math inline">\(f(x)=2x-x^2\)</span> subject to <span class="math inline">\(x\ge 0\)</span>.</p>
+<p>Write the constraint as <span class="math inline">\(g(x)=-x\le 0\)</span>. Lagrangian:</p>
+<p><span class="math display">\[
+\mathcal{L}(x,\lambda)= (2x-x^2)-\lambda(-x)=2x-x^2+\lambda x.
+\]</span></p>
+<p>KKT: - Stationarity: <span class="math inline">\(\frac{\partial \mathcal{L}}{\partial x}=2-2x+\lambda=0\)</span> - Primal feasibility: <span class="math inline">\(x\ge 0\)</span> - Dual feasibility: <span class="math inline">\(\lambda\ge 0\)</span> - Complementary slackness: <span class="math inline">\(\lambda x=0\)</span></p>
+<p>From stationarity: <span class="math inline">\(2-2x+\lambda=0 \Rightarrow x=1+\lambda/2\)</span>.</p>
+<p>If <span class="math inline">\(x&gt;0\)</span>, then complementary slackness implies <span class="math inline">\(\lambda=0\)</span>, so <span class="math inline">\(x=1\)</span>. Check feasibility: <span class="math inline">\(1\ge 0\)</span> yes. So the solution is <span class="math inline">\(x^*=1\)</span>.</p>
+<p>(If the unconstrained maximizer had been negative, the constraint would bind and you’d get <span class="math inline">\(x^*=0\)</span> with <span class="math inline">\(\lambda&gt;0\)</span>.)</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

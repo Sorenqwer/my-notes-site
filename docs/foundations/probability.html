@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -117,9 +146,20 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#distributions-and-mixed-strategies" id="toc-distributions-and-mixed-strategies" class="nav-link active" data-scroll-target="#distributions-and-mixed-strategies">Distributions and mixed strategies</a></li>
+  <li><a href="#expectation" id="toc-expectation" class="nav-link" data-scroll-target="#expectation">Expectation</a></li>
+  <li><a href="#bayes-rule" id="toc-bayes-rule" class="nav-link" data-scroll-target="#bayes-rule">Bayes’ rule</a></li>
+  <li><a href="#example-updating-beliefs-about-types" id="toc-example-updating-beliefs-about-types" class="nav-link" data-scroll-target="#example-updating-beliefs-about-types">Example: updating beliefs about types</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -128,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -140,13 +180,45 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<ul>
-<li>Random variables, expectation, conditional expectation</li>
-<li>Mixed strategies as probability distributions</li>
-<li>Bayes’ rule and beliefs</li>
-</ul>
+<section id="distributions-and-mixed-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="distributions-and-mixed-strategies">Distributions and mixed strategies</h2>
+<p>A mixed strategy is a probability distribution over actions. If the action set is finite, this is just a probability vector (see the simplex definition in Linear algebra).</p>
+<p><strong>Intuition.</strong> “Randomizing” in game theory is not mystical: it’s a distribution that other players can form beliefs about.</p>
+</section>
+<section id="expectation" class="level2">
+<h2 class="anchored" data-anchor-id="expectation">Expectation</h2>
+<p>If a random variable <span class="math inline">\(X\)</span> takes values <span class="math inline">\(x_k\)</span> with probabilities <span class="math inline">\(p_k\)</span>, then</p>
+<p><span class="math display">\[
+\mathbb{E}[X]=\sum_k x_k p_k.
+\]</span></p>
+<p>In games, expected utility under a mixed strategy is exactly this idea: average the payoff over all possible outcomes, weighted by their probabilities.</p>
+</section>
+<section id="bayes-rule" class="level2">
+<h2 class="anchored" data-anchor-id="bayes-rule">Bayes’ rule</h2>
+<p>For events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> with <span class="math inline">\(\mathbb{P}(B)&gt;0\)</span>,</p>
+<p><span class="math display">\[
+\mathbb{P}(A\mid B)=\frac{\mathbb{P}(B\mid A)\,\mathbb{P}(A)}{\mathbb{P}(B)}.
+\]</span></p>
+<p><strong>Intuition.</strong> Prior belief <span class="math inline">\(\mathbb{P}(A)\)</span> gets <em>updated</em> by how well <span class="math inline">\(A\)</span> predicts the evidence <span class="math inline">\(B\)</span>.</p>
+</section>
+<section id="example-updating-beliefs-about-types" class="level2">
+<h2 class="anchored" data-anchor-id="example-updating-beliefs-about-types">Example: updating beliefs about types</h2>
+<p>A player is either type <span class="math inline">\(H\)</span> or <span class="math inline">\(L\)</span>. Prior <span class="math inline">\(\mathbb{P}(H)=0.3\)</span>, <span class="math inline">\(\mathbb{P}(L)=0.7\)</span>. You observe a signal <span class="math inline">\(s\)</span>. Suppose</p>
+<p><span class="math display">\[
+\mathbb{P}(s\mid H)=0.8,\qquad \mathbb{P}(s\mid L)=0.2.
+\]</span></p>
+<p>First compute the overall likelihood of <span class="math inline">\(s\)</span>:</p>
+<p><span class="math display">\[
+\mathbb{P}(s)=\mathbb{P}(s\mid H)\mathbb{P}(H)+\mathbb{P}(s\mid L)\mathbb{P}(L)=0.8\cdot 0.3+0.2\cdot 0.7=0.38.
+\]</span></p>
+<p>Then the posterior belief is</p>
+<p><span class="math display">\[
+\mathbb{P}(H\mid s)=\frac{0.8\cdot 0.3}{0.38}\approx 0.6316.
+\]</span></p>
+<p>So after observing <span class="math inline">\(s\)</span>, belief in type <span class="math inline">\(H\)</span> rises from <span class="math inline">\(0.3\)</span> to about <span class="math inline">\(0.63\)</span>.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

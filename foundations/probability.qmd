@@ -1,7 +1,49 @@
 ---
 title: "Probability"
+toc: true
 ---
 
-- Random variables, expectation, conditional expectation
-- Mixed strategies as probability distributions
-- Bayes’ rule and beliefs
+## Distributions and mixed strategies
+A mixed strategy is a probability distribution over actions. If the action set is finite, this is just a probability vector (see the simplex definition in Linear algebra).
+
+**Intuition.** “Randomizing” in game theory is not mystical: it’s a distribution that other players can form beliefs about.
+
+## Expectation
+If a random variable $X$ takes values $x_k$ with probabilities $p_k$, then
+
+$$
+\mathbb{E}[X]=\sum_k x_k p_k.
+$$
+
+In games, expected utility under a mixed strategy is exactly this idea: average the payoff over all possible outcomes, weighted by their probabilities.
+
+## Bayes’ rule
+For events $A$ and $B$ with $\mathbb{P}(B)>0$,
+
+$$
+\mathbb{P}(A\mid B)=\frac{\mathbb{P}(B\mid A)\,\mathbb{P}(A)}{\mathbb{P}(B)}.
+$$
+
+**Intuition.** Prior belief $\mathbb{P}(A)$ gets *updated* by how well $A$ predicts the evidence $B$.
+
+## Example: updating beliefs about types
+A player is either type $H$ or $L$. Prior $\mathbb{P}(H)=0.3$, $\mathbb{P}(L)=0.7$.
+You observe a signal $s$. Suppose
+
+$$
+\mathbb{P}(s\mid H)=0.8,\qquad \mathbb{P}(s\mid L)=0.2.
+$$
+
+First compute the overall likelihood of $s$:
+
+$$
+\mathbb{P}(s)=\mathbb{P}(s\mid H)\mathbb{P}(H)+\mathbb{P}(s\mid L)\mathbb{P}(L)=0.8\cdot 0.3+0.2\cdot 0.7=0.38.
+$$
+
+Then the posterior belief is
+
+$$
+\mathbb{P}(H\mid s)=\frac{0.8\cdot 0.3}{0.38}\approx 0.6316.
+$$
+
+So after observing $s$, belief in type $H$ rises from $0.3$ to about $0.63$.

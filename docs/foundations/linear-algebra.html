@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -117,9 +146,19 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#mixed-strategies-as-vectors" id="toc-mixed-strategies-as-vectors" class="nav-link active" data-scroll-target="#mixed-strategies-as-vectors">Mixed strategies as vectors</a></li>
+  <li><a href="#payoff-matrices-and-expected-payoff" id="toc-payoff-matrices-and-expected-payoff" class="nav-link" data-scroll-target="#payoff-matrices-and-expected-payoff">Payoff matrices and expected payoff</a></li>
+  <li><a href="#example-22-game" id="toc-example-22-game" class="nav-link" data-scroll-target="#example-22-game">Example: 2×2 game</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -128,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -140,13 +179,56 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<ul>
-<li>Vectors, norms, inner products</li>
-<li>Eigenvalues/eigenvectors (intuition for dynamics)</li>
-<li>Matrix games and payoff matrices</li>
-</ul>
+<section id="mixed-strategies-as-vectors" class="level2">
+<h2 class="anchored" data-anchor-id="mixed-strategies-as-vectors">Mixed strategies as vectors</h2>
+<p>A mixed strategy is a probability vector over pure actions. If player <span class="math inline">\(i\)</span> has <span class="math inline">\(m\)</span> pure actions, a mixed strategy is</p>
+<p><span class="math display">\[
+\Delta^{m-1}=\left\{x\in\mathbb{R}^m:\; x_k\ge 0\;\forall k,\;\sum_{k=1}^m x_k = 1\right\},
+\]</span></p>
+<p>the <span class="math inline">\((m-1)\)</span>-simplex.</p>
+<p><strong>Intuition.</strong> You can think of <span class="math inline">\(x\)</span> as a “weighting” of actions. The simplex condition just says: nonnegative weights that sum to 1.</p>
+</section>
+<section id="payoff-matrices-and-expected-payoff" class="level2">
+<h2 class="anchored" data-anchor-id="payoff-matrices-and-expected-payoff">Payoff matrices and expected payoff</h2>
+<p>In a two-player normal-form game, let player 1 have <span class="math inline">\(m\)</span> actions and player 2 have <span class="math inline">\(n\)</span> actions. Let <span class="math inline">\(A\in\mathbb{R}^{m\times n}\)</span> be player 1’s payoff matrix (and <span class="math inline">\(B\)</span> for player 2). If player 1 plays <span class="math inline">\(x\in\Delta^{m-1}\)</span> and player 2 plays <span class="math inline">\(y\in\Delta^{n-1}\)</span>, then player 1’s expected payoff is</p>
+<p><span class="math display">\[
+u_1(x,y)=x^\top A y.
+\]</span></p>
+<p><strong>Intuition.</strong> First compute expected payoffs against each of player 2’s pure actions (<span class="math inline">\(Ay\)</span>). Then average those numbers using player 1’s mixing weights (<span class="math inline">\(x^\top\)</span>).</p>
+</section>
+<section id="example-22-game" class="level2">
+<h2 class="anchored" data-anchor-id="example-22-game">Example: 2×2 game</h2>
+<p>Suppose</p>
+<p><span class="math display">\[
+A=\begin{pmatrix}
+2 &amp; 0\\
+1 &amp; 3
+\end{pmatrix},\quad
+x=\begin{pmatrix}0.4\\0.6\end{pmatrix},\quad
+y=\begin{pmatrix}0.25\\0.75\end{pmatrix}.
+\]</span></p>
+<p>Compute</p>
+<p><span class="math display">\[
+Ay=
+\begin{pmatrix}
+2 &amp; 0\\
+1 &amp; 3
+\end{pmatrix}
+\begin{pmatrix}
+0.25\\0.75
+\end{pmatrix}
+=
+\begin{pmatrix}
+0.5\\
+2.5
+\end{pmatrix},
+\qquad
+u_1(x,y)=x^\top(Ay)=0.4\cdot 0.5+0.6\cdot 2.5=1.7.
+\]</span></p>
+<p>So the mixed-vs-mixed expected payoff is <span class="math inline">\(1.7\)</span> for player 1.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

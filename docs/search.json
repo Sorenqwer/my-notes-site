@@ -39,7 +39,28 @@
     "href": "foundations/linear-algebra.html",
     "title": "Linear algebra",
     "section": "",
-    "text": "Vectors, norms, inner products\nEigenvalues/eigenvectors (intuition for dynamics)\nMatrix games and payoff matrices"
+    "text": "A mixed strategy is a probability vector over pure actions. If player \\(i\\) has \\(m\\) pure actions, a mixed strategy is\n\\[\n\\Delta^{m-1}=\\left\\{x\\in\\mathbb{R}^m:\\; x_k\\ge 0\\;\\forall k,\\;\\sum_{k=1}^m x_k = 1\\right\\},\n\\]\nthe \\((m-1)\\)-simplex.\nIntuition. You can think of \\(x\\) as a “weighting” of actions. The simplex condition just says: nonnegative weights that sum to 1."
+  },
+  {
+    "objectID": "foundations/linear-algebra.html#mixed-strategies-as-vectors",
+    "href": "foundations/linear-algebra.html#mixed-strategies-as-vectors",
+    "title": "Linear algebra",
+    "section": "",
+    "text": "A mixed strategy is a probability vector over pure actions. If player \\(i\\) has \\(m\\) pure actions, a mixed strategy is\n\\[\n\\Delta^{m-1}=\\left\\{x\\in\\mathbb{R}^m:\\; x_k\\ge 0\\;\\forall k,\\;\\sum_{k=1}^m x_k = 1\\right\\},\n\\]\nthe \\((m-1)\\)-simplex.\nIntuition. You can think of \\(x\\) as a “weighting” of actions. The simplex condition just says: nonnegative weights that sum to 1."
+  },
+  {
+    "objectID": "foundations/linear-algebra.html#payoff-matrices-and-expected-payoff",
+    "href": "foundations/linear-algebra.html#payoff-matrices-and-expected-payoff",
+    "title": "Linear algebra",
+    "section": "Payoff matrices and expected payoff",
+    "text": "Payoff matrices and expected payoff\nIn a two-player normal-form game, let player 1 have \\(m\\) actions and player 2 have \\(n\\) actions. Let \\(A\\in\\mathbb{R}^{m\\times n}\\) be player 1’s payoff matrix (and \\(B\\) for player 2). If player 1 plays \\(x\\in\\Delta^{m-1}\\) and player 2 plays \\(y\\in\\Delta^{n-1}\\), then player 1’s expected payoff is\n\\[\nu_1(x,y)=x^\\top A y.\n\\]\nIntuition. First compute expected payoffs against each of player 2’s pure actions (\\(Ay\\)). Then average those numbers using player 1’s mixing weights (\\(x^\\top\\))."
+  },
+  {
+    "objectID": "foundations/linear-algebra.html#example-22-game",
+    "href": "foundations/linear-algebra.html#example-22-game",
+    "title": "Linear algebra",
+    "section": "Example: 2×2 game",
+    "text": "Example: 2×2 game\nSuppose\n\\[\nA=\\begin{pmatrix}\n2 & 0\\\\\n1 & 3\n\\end{pmatrix},\\quad\nx=\\begin{pmatrix}0.4\\\\0.6\\end{pmatrix},\\quad\ny=\\begin{pmatrix}0.25\\\\0.75\\end{pmatrix}.\n\\]\nCompute\n\\[\nAy=\n\\begin{pmatrix}\n2 & 0\\\\\n1 & 3\n\\end{pmatrix}\n\\begin{pmatrix}\n0.25\\\\0.75\n\\end{pmatrix}\n=\n\\begin{pmatrix}\n0.5\\\\\n2.5\n\\end{pmatrix},\n\\qquad\nu_1(x,y)=x^\\top(Ay)=0.4\\cdot 0.5+0.6\\cdot 2.5=1.7.\n\\]\nSo the mixed-vs-mixed expected payoff is \\(1.7\\) for player 1."
   },
   {
     "objectID": "posts/index.html",
@@ -67,14 +88,70 @@
     "href": "foundations/probability.html",
     "title": "Probability",
     "section": "",
-    "text": "Random variables, expectation, conditional expectation\nMixed strategies as probability distributions\nBayes’ rule and beliefs"
+    "text": "A mixed strategy is a probability distribution over actions. If the action set is finite, this is just a probability vector (see the simplex definition in Linear algebra).\nIntuition. “Randomizing” in game theory is not mystical: it’s a distribution that other players can form beliefs about."
+  },
+  {
+    "objectID": "foundations/probability.html#distributions-and-mixed-strategies",
+    "href": "foundations/probability.html#distributions-and-mixed-strategies",
+    "title": "Probability",
+    "section": "",
+    "text": "A mixed strategy is a probability distribution over actions. If the action set is finite, this is just a probability vector (see the simplex definition in Linear algebra).\nIntuition. “Randomizing” in game theory is not mystical: it’s a distribution that other players can form beliefs about."
+  },
+  {
+    "objectID": "foundations/probability.html#expectation",
+    "href": "foundations/probability.html#expectation",
+    "title": "Probability",
+    "section": "Expectation",
+    "text": "Expectation\nIf a random variable \\(X\\) takes values \\(x_k\\) with probabilities \\(p_k\\), then\n\\[\n\\mathbb{E}[X]=\\sum_k x_k p_k.\n\\]\nIn games, expected utility under a mixed strategy is exactly this idea: average the payoff over all possible outcomes, weighted by their probabilities."
+  },
+  {
+    "objectID": "foundations/probability.html#bayes-rule",
+    "href": "foundations/probability.html#bayes-rule",
+    "title": "Probability",
+    "section": "Bayes’ rule",
+    "text": "Bayes’ rule\nFor events \\(A\\) and \\(B\\) with \\(\\mathbb{P}(B)&gt;0\\),\n\\[\n\\mathbb{P}(A\\mid B)=\\frac{\\mathbb{P}(B\\mid A)\\,\\mathbb{P}(A)}{\\mathbb{P}(B)}.\n\\]\nIntuition. Prior belief \\(\\mathbb{P}(A)\\) gets updated by how well \\(A\\) predicts the evidence \\(B\\)."
+  },
+  {
+    "objectID": "foundations/probability.html#example-updating-beliefs-about-types",
+    "href": "foundations/probability.html#example-updating-beliefs-about-types",
+    "title": "Probability",
+    "section": "Example: updating beliefs about types",
+    "text": "Example: updating beliefs about types\nA player is either type \\(H\\) or \\(L\\). Prior \\(\\mathbb{P}(H)=0.3\\), \\(\\mathbb{P}(L)=0.7\\). You observe a signal \\(s\\). Suppose\n\\[\n\\mathbb{P}(s\\mid H)=0.8,\\qquad \\mathbb{P}(s\\mid L)=0.2.\n\\]\nFirst compute the overall likelihood of \\(s\\):\n\\[\n\\mathbb{P}(s)=\\mathbb{P}(s\\mid H)\\mathbb{P}(H)+\\mathbb{P}(s\\mid L)\\mathbb{P}(L)=0.8\\cdot 0.3+0.2\\cdot 0.7=0.38.\n\\]\nThen the posterior belief is\n\\[\n\\mathbb{P}(H\\mid s)=\\frac{0.8\\cdot 0.3}{0.38}\\approx 0.6316.\n\\]\nSo after observing \\(s\\), belief in type \\(H\\) rises from \\(0.3\\) to about \\(0.63\\)."
   },
   {
     "objectID": "foundations/optimization.html",
     "href": "foundations/optimization.html",
     "title": "Optimization",
     "section": "",
-    "text": "Best responses as argmax problems\nLagrangian/KKT (when constraints matter)\nConcavity/FOC/SOC"
+    "text": "A best response is an optimization problem. Given others’ strategies \\(s_{-i}\\), player \\(i\\) chooses\n\\[\nBR_i(s_{-i})\\in \\arg\\max_{s_i\\in S_i} u_i(s_i,s_{-i}).\n\\]\nIntuition. A Nash equilibrium is a fixed point of best responses: everyone is already choosing an argmax given others."
+  },
+  {
+    "objectID": "foundations/optimization.html#argmax-and-best-responses",
+    "href": "foundations/optimization.html#argmax-and-best-responses",
+    "title": "Optimization",
+    "section": "",
+    "text": "A best response is an optimization problem. Given others’ strategies \\(s_{-i}\\), player \\(i\\) chooses\n\\[\nBR_i(s_{-i})\\in \\arg\\max_{s_i\\in S_i} u_i(s_i,s_{-i}).\n\\]\nIntuition. A Nash equilibrium is a fixed point of best responses: everyone is already choosing an argmax given others."
+  },
+  {
+    "objectID": "foundations/optimization.html#foc-soc-unconstrained",
+    "href": "foundations/optimization.html#foc-soc-unconstrained",
+    "title": "Optimization",
+    "section": "FOC / SOC (unconstrained)",
+    "text": "FOC / SOC (unconstrained)\nIf \\(f\\) is differentiable and you maximize over an interval, an interior optimum \\(x^*\\) satisfies the first-order condition (FOC)\n\\[\nf'(x^*)=0.\n\\]\nIf \\(f\\) is twice differentiable, the second-order condition (SOC) for a local maximum is\n\\[\nf''(x^*)&lt;0.\n\\]\nIntuition. FOC finds stationary points; SOC checks that the curve bends downward."
+  },
+  {
+    "objectID": "foundations/optimization.html#kkt-conditions-constrained",
+    "href": "foundations/optimization.html#kkt-conditions-constrained",
+    "title": "Optimization",
+    "section": "KKT conditions (constrained)",
+    "text": "KKT conditions (constrained)\nFor maximizing \\(f(x)\\) subject to inequality constraints \\(g_j(x)\\le 0\\), define the Lagrangian\n\\[\n\\mathcal{L}(x,\\lambda)=f(x)-\\sum_{j}\\lambda_j g_j(x),\n\\qquad \\lambda_j\\ge 0.\n\\]\nKKT conditions (at an optimum, under standard regularity assumptions) include: - Stationarity: \\(\\nabla_x \\mathcal{L}(x^*,\\lambda^*)=0\\) - Primal feasibility: \\(g_j(x^*)\\le 0\\) - Dual feasibility: \\(\\lambda_j^*\\ge 0\\) - Complementary slackness: \\(\\lambda_j^* g_j(x^*)=0\\) for all \\(j\\)\nIntuition. Constraints either bind (then they get a positive “shadow price” \\(\\lambda_j\\)) or don’t bind (then \\(\\lambda_j=0\\))."
+  },
+  {
+    "objectID": "foundations/optimization.html#example-best-response-with-a-constraint",
+    "href": "foundations/optimization.html#example-best-response-with-a-constraint",
+    "title": "Optimization",
+    "section": "Example: best response with a constraint",
+    "text": "Example: best response with a constraint\nMaximize \\(f(x)=2x-x^2\\) subject to \\(x\\ge 0\\).\nWrite the constraint as \\(g(x)=-x\\le 0\\). Lagrangian:\n\\[\n\\mathcal{L}(x,\\lambda)= (2x-x^2)-\\lambda(-x)=2x-x^2+\\lambda x.\n\\]\nKKT: - Stationarity: \\(\\frac{\\partial \\mathcal{L}}{\\partial x}=2-2x+\\lambda=0\\) - Primal feasibility: \\(x\\ge 0\\) - Dual feasibility: \\(\\lambda\\ge 0\\) - Complementary slackness: \\(\\lambda x=0\\)\nFrom stationarity: \\(2-2x+\\lambda=0 \\Rightarrow x=1+\\lambda/2\\).\nIf \\(x&gt;0\\), then complementary slackness implies \\(\\lambda=0\\), so \\(x=1\\). Check feasibility: \\(1\\ge 0\\) yes. So the solution is \\(x^*=1\\).\n(If the unconstrained maximizer had been negative, the constraint would bind and you’d get \\(x^*=0\\) with \\(\\lambda&gt;0\\).)"
   },
   {
     "objectID": "notes/index.html",
