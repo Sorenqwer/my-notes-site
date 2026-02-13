@@ -3,6 +3,7 @@ project:
   output-dir: docs
 
 website:
+  site-url: "https://sorenqwer.github.io/my-notes-site/"
   title: "Palace for Game Theory"
   search: true
   navbar:

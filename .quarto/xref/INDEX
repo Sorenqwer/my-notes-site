@@ -22,5 +22,11 @@
   },
   "pdfs/index.qmd": {
     "index.html": "8c303f8c"
+  },
+  "posts/index.qmd": {
+    "index.html": "c684c9c7"
+  },
+  "notes/metrics.qmd": {
+    "metrics.html": "d90b88c3"
   }
 }
