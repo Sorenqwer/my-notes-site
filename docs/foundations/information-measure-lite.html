@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Foundations – Palace for Game Theory</title>
+<title>Information &amp; beliefs (measure-lite) – Palace for Game Theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -99,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../foundations/index.html" aria-current="page"> 
+    <a class="nav-link" href="../foundations/index.html"> 
 <span class="menu-text">Foundations</span></a>
   </li>  
   <li class="nav-item">
@@ -122,7 +151,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#topics" id="toc-topics" class="nav-link active" data-scroll-target="#topics">Topics</a></li>
+  <li><a href="#what-information-means-in-game-theory" id="toc-what-information-means-in-game-theory" class="nav-link active" data-scroll-target="#what-information-means-in-game-theory">What “information” means in game theory</a></li>
+  <li><a href="#sigma-algebra-concept-only" id="toc-sigma-algebra-concept-only" class="nav-link" data-scroll-target="#sigma-algebra-concept-only"><span class="math inline">\(\sigma\)</span>-algebra (concept only)</a>
+  <ul class="collapse">
+  <li><a href="#finite-shortcut-partition-view" id="toc-finite-shortcut-partition-view" class="nav-link" data-scroll-target="#finite-shortcut-partition-view">Finite shortcut (partition view)</a></li>
+  </ul></li>
+  <li><a href="#conditional-expectation-as-best-prediction-given-information" id="toc-conditional-expectation-as-best-prediction-given-information" class="nav-link" data-scroll-target="#conditional-expectation-as-best-prediction-given-information">Conditional expectation as “best prediction given information”</a></li>
+  <li><a href="#example-conditional-expectation-with-a-partition" id="toc-example-conditional-expectation-with-a-partition" class="nav-link" data-scroll-target="#example-conditional-expectation-with-a-partition">Example: conditional expectation with a partition</a></li>
+  <li><a href="#common-knowledge-concept" id="toc-common-knowledge-concept" class="nav-link" data-scroll-target="#common-knowledge-concept">Common knowledge (concept)</a>
+  <ul class="collapse">
+  <li><a href="#iterated-beliefs-one-line-idea" id="toc-iterated-beliefs-one-line-idea" class="nav-link" data-scroll-target="#iterated-beliefs-one-line-idea">Iterated beliefs (one-line idea)</a></li>
+  </ul></li>
+  <li><a href="#practical-takeaway" id="toc-practical-takeaway" class="nav-link" data-scroll-target="#practical-takeaway">Practical takeaway</a></li>
   </ul>
 </nav>
     </div>
@@ -131,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Foundations</h1>
+<h1 class="title">Information &amp; beliefs (measure-lite)</h1>
 </div>
 
 
@@ -148,18 +188,90 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Where Math Comes In</p>
-<section id="topics" class="level2">
-<h2 class="anchored" data-anchor-id="topics">Topics</h2>
+<section id="what-information-means-in-game-theory" class="level2">
+<h2 class="anchored" data-anchor-id="what-information-means-in-game-theory">What “information” means in game theory</h2>
+<p>In Bayesian and information economics, “information” is usually represented by what events a player can distinguish.</p>
+<p>There are two common (equivalent) ways to think about it:</p>
 <ul>
-<li><a href="../foundations/linear-algebra.html">Linear algebra</a></li>
-<li><a href="../foundations/probability.html">Probability</a></li>
-<li><a href="../foundations/optimization.html">Optimization</a></li>
-<li><a href="../foundations/convexity.html">Convexity &amp; concavity</a></li>
-<li><a href="../foundations/fixed-points.html">Fixed points &amp; correspondences</a></li>
-<li><a href="../foundations/dynamic-reasoning.html">Dynamic reasoning</a></li>
-<li><a href="../foundations/information-measure-lite.html">Information &amp; beliefs (measure-lite)</a></li>
+<li><strong>Information partition (finite case):</strong> a player observes which cell of a partition they are in.</li>
+<li><strong><span class="math inline">\(\sigma\)</span>-algebra (general case):</strong> the collection of events the player can condition on.</li>
 </ul>
+<p>You almost never need heavy measure theory for standard game theory notes—just the intuition.</p>
+<hr>
+</section>
+<section id="sigma-algebra-concept-only" class="level2">
+<h2 class="anchored" data-anchor-id="sigma-algebra-concept-only"><span class="math inline">\(\sigma\)</span>-algebra (concept only)</h2>
+<p>Let <span class="math inline">\(\Omega\)</span> be the set of possible states of the world.<br>
+A <strong><span class="math inline">\(\sigma\)</span>-algebra</strong> <span class="math inline">\(\mathcal{F}\)</span> is a collection of subsets of <span class="math inline">\(\Omega\)</span> (events) such that:</p>
+<ol type="1">
+<li><span class="math inline">\(\Omega \in \mathcal{F}\)</span><br>
+</li>
+<li>If <span class="math inline">\(A \in \mathcal{F}\)</span> then <span class="math inline">\(A^c \in \mathcal{F}\)</span><br>
+</li>
+<li>If <span class="math inline">\(A_1, A_2, \dots \in \mathcal{F}\)</span> then <span class="math inline">\(\bigcup_{k=1}^\infty A_k \in \mathcal{F}\)</span></li>
+</ol>
+<p><strong>Intuition.</strong> <span class="math inline">\(\mathcal{F}\)</span> lists the events you are able to talk about (and condition on).<br>
+Coarser <span class="math inline">\(\mathcal{F}\)</span> = less information.</p>
+<section id="finite-shortcut-partition-view" class="level3">
+<h3 class="anchored" data-anchor-id="finite-shortcut-partition-view">Finite shortcut (partition view)</h3>
+<p>If <span class="math inline">\(\Omega\)</span> is finite and a player’s information is a partition <span class="math display">\[
+\Pi = \{C_1,\dots,C_m\},
+\]</span> then the player can distinguish only which cell <span class="math inline">\(C_j\)</span> contains the true state.<br>
+The corresponding <span class="math inline">\(\sigma\)</span>-algebra is “all unions of cells of <span class="math inline">\(\Pi\)</span>”.</p>
+<hr>
+</section>
+</section>
+<section id="conditional-expectation-as-best-prediction-given-information" class="level2">
+<h2 class="anchored" data-anchor-id="conditional-expectation-as-best-prediction-given-information">Conditional expectation as “best prediction given information”</h2>
+<p>Given an integrable random variable <span class="math inline">\(X\)</span> (e.g., payoff-relevant quantity) and an information set <span class="math inline">\(\mathcal{G}\subseteq\mathcal{F}\)</span>, the <strong>conditional expectation</strong> <span class="math inline">\(\mathbb{E}[X\mid \mathcal{G}]\)</span> is the random variable that represents the best mean-squared prediction of <span class="math inline">\(X\)</span> using only information in <span class="math inline">\(\mathcal{G}\)</span>.</p>
+<p><strong>Projection idea (intuition).</strong> Think of <span class="math inline">\(\mathbb{E}[X\mid \mathcal{G}]\)</span> as projecting <span class="math inline">\(X\)</span> onto the space of <span class="math inline">\(\mathcal{G}\)</span>-measurable variables (things you can compute using the information you have).</p>
+<hr>
+</section>
+<section id="example-conditional-expectation-with-a-partition" class="level2">
+<h2 class="anchored" data-anchor-id="example-conditional-expectation-with-a-partition">Example: conditional expectation with a partition</h2>
+<p>Let the state space be <span class="math display">\[
+\Omega=\{\omega_1,\omega_2,\omega_3,\omega_4\},
+\qquad
+\mathbb{P}(\omega_k)=\tfrac14 \text{ for each }k.
+\]</span></p>
+<p>Let <span class="math display">\[
+X(\omega_1)=0,\;X(\omega_2)=2,\;X(\omega_3)=4,\;X(\omega_4)=6.
+\]</span></p>
+<p>Suppose the player only observes whether the state is in <span class="math display">\[
+C_1=\{\omega_1,\omega_2\}\quad\text{or}\quad C_2=\{\omega_3,\omega_4\}.
+\]</span></p>
+<p>That information corresponds to a partition <span class="math inline">\(\Pi=\{C_1,C_2\}\)</span> (and a <span class="math inline">\(\sigma\)</span>-algebra generated by it).</p>
+<p>Then the conditional expectation is constant on each cell:</p>
+<ul>
+<li><p>On <span class="math inline">\(C_1\)</span>: <span class="math display">\[
+\mathbb{E}[X\mid C_1]
+=\frac{X(\omega_1)+X(\omega_2)}{2}
+=\frac{0+2}{2}=1.
+\]</span></p></li>
+<li><p>On <span class="math inline">\(C_2\)</span>: <span class="math display">\[
+\mathbb{E}[X\mid C_2]
+=\frac{X(\omega_3)+X(\omega_4)}{2}
+=\frac{4+6}{2}=5.
+\]</span></p></li>
+</ul>
+<p>So <span class="math inline">\(\mathbb{E}[X\mid \mathcal{G}]\)</span> takes value <span class="math inline">\(1\)</span> if you learn “cell <span class="math inline">\(C_1\)</span>”, and value <span class="math inline">\(5\)</span> if you learn “cell <span class="math inline">\(C_2\)</span>”.</p>
+<p><strong>Game theory interpretation.</strong> This is exactly what beliefs do: you map what you observed to an updated expectation of payoff-relevant quantities.</p>
+<hr>
+</section>
+<section id="common-knowledge-concept" class="level2">
+<h2 class="anchored" data-anchor-id="common-knowledge-concept">Common knowledge (concept)</h2>
+<p>An event <span class="math inline">\(E\)</span> is <strong>common knowledge</strong> if: - everyone knows <span class="math inline">\(E\)</span>, - everyone knows that everyone knows <span class="math inline">\(E\)</span>, - everyone knows that everyone knows that everyone knows <span class="math inline">\(E\)</span>, - and so on indefinitely.</p>
+<p><strong>Intuition.</strong> Common knowledge is what makes coordination possible (or impossible). It is stronger than “everyone knows”.</p>
+<section id="iterated-beliefs-one-line-idea" class="level3">
+<h3 class="anchored" data-anchor-id="iterated-beliefs-one-line-idea">Iterated beliefs (one-line idea)</h3>
+<p>In Bayesian games, strategies can depend on: - beliefs about types, - beliefs about others’ beliefs, - higher-order beliefs.</p>
+<p>Often you don’t compute these explicitly; you just need to know they exist and that equilibrium concepts impose consistency.</p>
+<hr>
+</section>
+</section>
+<section id="practical-takeaway" class="level2">
+<h2 class="anchored" data-anchor-id="practical-takeaway">Practical takeaway</h2>
+<p>For most game theory work: - partitions are enough to model information, - conditional expectation captures “best prediction given what you know”, - common knowledge / higher-order beliefs matter conceptually for coordination and equilibrium.</p>
 
 
 </section>

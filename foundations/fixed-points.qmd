@@ -1,0 +1,42 @@
+---
+title: "Fixed points & correspondences"
+toc: true
+---
+
+## Fixed points (functions)
+A **fixed point** of a function $f:X\to X$ is a point $x^*$ such that
+$$
+f(x^*)=x^*.
+$$
+
+**Intuition.** An equilibrium is often a fixed point: if “best response” maps strategies into strategies, equilibrium is where nothing changes.
+
+## Brouwer (idea)
+Brouwer’s fixed point theorem (informal): a continuous function from a compact convex set to itself has a fixed point.
+
+This supports existence of equilibrium in many continuous games.
+
+## Correspondences (set-valued maps)
+A **correspondence** $F:X \rightrightarrows X$ assigns a *set* $F(x)$ to each $x$.
+Best responses are usually correspondences:
+$$
+BR_i(s_{-i}) = \arg\max_{s_i\in S_i} u_i(s_i,s_{-i}),
+$$
+which may contain multiple maximizers.
+
+## Kakutani (idea)
+Kakutani’s theorem (informal): under continuity-like conditions and nonempty convex values, a correspondence has a fixed point:
+$$
+x^* \in F(x^*).
+$$
+
+This is the classic route to Nash existence with mixed strategies: the product of best-response correspondences has a fixed point.
+
+## Example: fixed point intuition in 1D
+Let $f(x)=\frac{1}{2}x+\frac{1}{4}$ on $[0,1]$.
+Solve $x=f(x)$:
+$$
+x=\frac{1}{2}x+\frac{1}{4}\Rightarrow x^*=\frac{1}{2}.
+$$
+
+Equilibrium-as-fixed-point is exactly this: apply the rule, you land back on yourself.

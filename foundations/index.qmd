@@ -3,9 +3,13 @@ title: "Foundations"
 toc: true
 ---
 
-A compact toolkit of mathematical concepts used throughout game theory.
+Where Math Comes In
 
 ## Topics
 - [Linear algebra](linear-algebra.qmd)
 - [Probability](probability.qmd)
 - [Optimization](optimization.qmd)
+- [Convexity & concavity](convexity.qmd)
+- [Fixed points & correspondences](fixed-points.qmd)
+- [Dynamic reasoning](dynamic-reasoning.qmd)
+- [Information & beliefs (measure-lite)](information-measure-lite.qmd)

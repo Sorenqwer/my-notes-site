@@ -21,67 +21,74 @@
     "text": "About this blog"
   },
   {
-    "objectID": "foundations/index.html",
-    "href": "foundations/index.html",
-    "title": "Foundations",
+    "objectID": "foundations/dynamic-reasoning.html",
+    "href": "foundations/dynamic-reasoning.html",
+    "title": "Dynamic reasoning",
     "section": "",
-    "text": "A compact toolkit of mathematical concepts used throughout game theory."
+    "text": "In finite game trees with perfect information, backward induction solves from the end:\n\ndecide optimal actions at the last decision nodes\n\nreplace subgames by their continuation payoffs\n\nmove backward to the start\n\nIntuition. Future choices discipline earlier choices."
   },
   {
-    "objectID": "foundations/index.html#topics",
-    "href": "foundations/index.html#topics",
-    "title": "Foundations",
-    "section": "Topics",
-    "text": "Topics\n\nLinear algebra\nProbability\nOptimization"
-  },
-  {
-    "objectID": "foundations/linear-algebra.html",
-    "href": "foundations/linear-algebra.html",
-    "title": "Linear algebra",
+    "objectID": "foundations/dynamic-reasoning.html#backward-induction-extensive-form-games",
+    "href": "foundations/dynamic-reasoning.html#backward-induction-extensive-form-games",
+    "title": "Dynamic reasoning",
     "section": "",
-    "text": "A mixed strategy is a probability vector over pure actions. If player \\(i\\) has \\(m\\) pure actions, a mixed strategy is\n\\[\n\\Delta^{m-1}=\\left\\{x\\in\\mathbb{R}^m:\\; x_k\\ge 0\\;\\forall k,\\;\\sum_{k=1}^m x_k = 1\\right\\},\n\\]\nthe \\((m-1)\\)-simplex.\nIntuition. You can think of \\(x\\) as a “weighting” of actions. The simplex condition just says: nonnegative weights that sum to 1."
+    "text": "In finite game trees with perfect information, backward induction solves from the end:\n\ndecide optimal actions at the last decision nodes\n\nreplace subgames by their continuation payoffs\n\nmove backward to the start\n\nIntuition. Future choices discipline earlier choices."
   },
   {
-    "objectID": "foundations/linear-algebra.html#mixed-strategies-as-vectors",
-    "href": "foundations/linear-algebra.html#mixed-strategies-as-vectors",
-    "title": "Linear algebra",
+    "objectID": "foundations/dynamic-reasoning.html#a-tiny-game-tree-diagram",
+    "href": "foundations/dynamic-reasoning.html#a-tiny-game-tree-diagram",
+    "title": "Dynamic reasoning",
+    "section": "A tiny game tree (diagram)",
+    "text": "A tiny game tree (diagram)\nBelow is a simple sequential choice: Player 1 chooses \\(A\\) or \\(B\\), then Player 2 chooses \\(L\\) or \\(R\\).\nflowchart TD\n  S((Start)) --&gt;|P1: A| A(( ))\n  S --&gt;|P1: B| B(( ))\n  A --&gt;|P2: L| AL[\"(2,1)\"]\n  A --&gt;|P2: R| AR[\"(0,0)\"]\n  B --&gt;|P2: L| BL[\"(1,2)\"]\n  B --&gt;|P2: R| BR[\"(3,0)\"]"
+  },
+  {
+    "objectID": "foundations/dynamic-reasoning.html#one-step-backward-induction",
+    "href": "foundations/dynamic-reasoning.html#one-step-backward-induction",
+    "title": "Dynamic reasoning",
+    "section": "One-step backward induction",
+    "text": "One-step backward induction\n\n\n\n\n\n\nNoteBackward induction steps\n\n\n\nStep 1 (Player 2):\nAfter \\(A\\): compare \\((2,1)\\) vs \\((0,0)\\) → choose L (since \\(1&gt;0\\)).\nAfter \\(B\\): compare \\((1,2)\\) vs \\((3,0)\\) → choose L (since \\(2&gt;0\\)).\nStep 2 (Player 1):\nIf \\(A\\) → payoff \\(2\\).\nIf \\(B\\) → payoff \\(1\\).\nSo choose A.\nOutcome: \\((A,L)\\)."
+  },
+  {
+    "objectID": "foundations/dynamic-reasoning.html#bellman-idea-optional-for-dynamic-optimization",
+    "href": "foundations/dynamic-reasoning.html#bellman-idea-optional-for-dynamic-optimization",
+    "title": "Dynamic reasoning",
+    "section": "Bellman idea (optional, for dynamic optimization)",
+    "text": "Bellman idea (optional, for dynamic optimization)\nDynamic programming often writes:\n\\[\nV(s)=\\max_{a\\in A(s)}\\bigl\\{ r(s,a) + \\beta V(s') \\bigr\\}.\n\\]\nSame “optimize now + value of continuation” logic."
+  },
+  {
+    "objectID": "foundations/optimization.html",
+    "href": "foundations/optimization.html",
+    "title": "Optimization",
     "section": "",
-    "text": "A mixed strategy is a probability vector over pure actions. If player \\(i\\) has \\(m\\) pure actions, a mixed strategy is\n\\[\n\\Delta^{m-1}=\\left\\{x\\in\\mathbb{R}^m:\\; x_k\\ge 0\\;\\forall k,\\;\\sum_{k=1}^m x_k = 1\\right\\},\n\\]\nthe \\((m-1)\\)-simplex.\nIntuition. You can think of \\(x\\) as a “weighting” of actions. The simplex condition just says: nonnegative weights that sum to 1."
+    "text": "A best response is an optimization problem. Given others’ strategies \\(s_{-i}\\), player \\(i\\) chooses\n\\[\nBR_i(s_{-i})\\in \\arg\\max_{s_i\\in S_i} u_i(s_i,s_{-i}).\n\\]\nIntuition. A Nash equilibrium is a fixed point of best responses: everyone is already choosing an argmax given others."
   },
   {
-    "objectID": "foundations/linear-algebra.html#payoff-matrices-and-expected-payoff",
-    "href": "foundations/linear-algebra.html#payoff-matrices-and-expected-payoff",
-    "title": "Linear algebra",
-    "section": "Payoff matrices and expected payoff",
-    "text": "Payoff matrices and expected payoff\nIn a two-player normal-form game, let player 1 have \\(m\\) actions and player 2 have \\(n\\) actions. Let \\(A\\in\\mathbb{R}^{m\\times n}\\) be player 1’s payoff matrix (and \\(B\\) for player 2). If player 1 plays \\(x\\in\\Delta^{m-1}\\) and player 2 plays \\(y\\in\\Delta^{n-1}\\), then player 1’s expected payoff is\n\\[\nu_1(x,y)=x^\\top A y.\n\\]\nIntuition. First compute expected payoffs against each of player 2’s pure actions (\\(Ay\\)). Then average those numbers using player 1’s mixing weights (\\(x^\\top\\))."
-  },
-  {
-    "objectID": "foundations/linear-algebra.html#example-22-game",
-    "href": "foundations/linear-algebra.html#example-22-game",
-    "title": "Linear algebra",
-    "section": "Example: 2×2 game",
-    "text": "Example: 2×2 game\nSuppose\n\\[\nA=\\begin{pmatrix}\n2 & 0\\\\\n1 & 3\n\\end{pmatrix},\\quad\nx=\\begin{pmatrix}0.4\\\\0.6\\end{pmatrix},\\quad\ny=\\begin{pmatrix}0.25\\\\0.75\\end{pmatrix}.\n\\]\nCompute\n\\[\nAy=\n\\begin{pmatrix}\n2 & 0\\\\\n1 & 3\n\\end{pmatrix}\n\\begin{pmatrix}\n0.25\\\\0.75\n\\end{pmatrix}\n=\n\\begin{pmatrix}\n0.5\\\\\n2.5\n\\end{pmatrix},\n\\qquad\nu_1(x,y)=x^\\top(Ay)=0.4\\cdot 0.5+0.6\\cdot 2.5=1.7.\n\\]\nSo the mixed-vs-mixed expected payoff is \\(1.7\\) for player 1."
-  },
-  {
-    "objectID": "posts/index.html",
-    "href": "posts/index.html",
-    "title": "Posts",
+    "objectID": "foundations/optimization.html#argmax-and-best-responses",
+    "href": "foundations/optimization.html#argmax-and-best-responses",
+    "title": "Optimization",
     "section": "",
-    "text": "First post\n\n\n\nnotes\n\nupdates\n\n\n\n\n\n\n\n\n\nFeb 13, 2026\n\n\n\n\n\nNo matching items"
+    "text": "A best response is an optimization problem. Given others’ strategies \\(s_{-i}\\), player \\(i\\) chooses\n\\[\nBR_i(s_{-i})\\in \\arg\\max_{s_i\\in S_i} u_i(s_i,s_{-i}).\n\\]\nIntuition. A Nash equilibrium is a fixed point of best responses: everyone is already choosing an argmax given others."
   },
   {
-    "objectID": "posts/2026-02-13-first-post.html",
-    "href": "posts/2026-02-13-first-post.html",
-    "title": "First post",
-    "section": "",
-    "text": "This is my first post. I’ll use this space for short writeups and reading notes."
+    "objectID": "foundations/optimization.html#foc-soc-unconstrained",
+    "href": "foundations/optimization.html#foc-soc-unconstrained",
+    "title": "Optimization",
+    "section": "FOC / SOC (unconstrained)",
+    "text": "FOC / SOC (unconstrained)\nIf \\(f\\) is differentiable and you maximize over an interval, an interior optimum \\(x^*\\) satisfies the first-order condition (FOC)\n\\[\nf'(x^*)=0.\n\\]\nIf \\(f\\) is twice differentiable, the second-order condition (SOC) for a local maximum is\n\\[\nf''(x^*)&lt;0.\n\\]\nIntuition. FOC finds stationary points; SOC checks that the curve bends downward."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Solely a Place",
-    "section": "",
-    "text": "“The Absence of Coalitions”\n— Nash, Non-Cooperative Games (1951)\n\n\nNotes → · Foundations →· PDFs →"
+    "objectID": "foundations/optimization.html#kkt-conditions-constrained",
+    "href": "foundations/optimization.html#kkt-conditions-constrained",
+    "title": "Optimization",
+    "section": "KKT conditions (constrained)",
+    "text": "KKT conditions (constrained)\nFor maximizing \\(f(x)\\) subject to inequality constraints \\(g_j(x)\\le 0\\), define the Lagrangian\n\\[\n\\mathcal{L}(x,\\lambda)=f(x)-\\sum_{j}\\lambda_j g_j(x),\n\\qquad \\lambda_j\\ge 0.\n\\]\nKKT conditions (at an optimum, under standard regularity assumptions) include: - Stationarity: \\(\\nabla_x \\mathcal{L}(x^*,\\lambda^*)=0\\) - Primal feasibility: \\(g_j(x^*)\\le 0\\) - Dual feasibility: \\(\\lambda_j^*\\ge 0\\) - Complementary slackness: \\(\\lambda_j^* g_j(x^*)=0\\) for all \\(j\\)\nIntuition. Constraints either bind (then they get a positive “shadow price” \\(\\lambda_j\\)) or don’t bind (then \\(\\lambda_j=0\\))."
+  },
+  {
+    "objectID": "foundations/optimization.html#example-best-response-with-a-constraint",
+    "href": "foundations/optimization.html#example-best-response-with-a-constraint",
+    "title": "Optimization",
+    "section": "Example: best response with a constraint",
+    "text": "Example: best response with a constraint\nMaximize \\(f(x)=2x-x^2\\) subject to \\(x\\ge 0\\).\nWrite the constraint as \\(g(x)=-x\\le 0\\). Lagrangian:\n\\[\n\\mathcal{L}(x,\\lambda)= (2x-x^2)-\\lambda(-x)=2x-x^2+\\lambda x.\n\\]\nKKT: - Stationarity: \\(\\frac{\\partial \\mathcal{L}}{\\partial x}=2-2x+\\lambda=0\\) - Primal feasibility: \\(x\\ge 0\\) - Dual feasibility: \\(\\lambda\\ge 0\\) - Complementary slackness: \\(\\lambda x=0\\)\nFrom stationarity: \\(2-2x+\\lambda=0 \\Rightarrow x=1+\\lambda/2\\).\nIf \\(x&gt;0\\), then complementary slackness implies \\(\\lambda=0\\), so \\(x=1\\). Check feasibility: \\(1\\ge 0\\) yes. So the solution is \\(x^*=1\\).\n(If the unconstrained maximizer had been negative, the constraint would bind and you’d get \\(x^*=0\\) with \\(\\lambda&gt;0\\).)"
   },
   {
     "objectID": "foundations/probability.html",
@@ -119,39 +126,186 @@
     "text": "Example: updating beliefs about types\nA player is either type \\(H\\) or \\(L\\). Prior \\(\\mathbb{P}(H)=0.3\\), \\(\\mathbb{P}(L)=0.7\\). You observe a signal \\(s\\). Suppose\n\\[\n\\mathbb{P}(s\\mid H)=0.8,\\qquad \\mathbb{P}(s\\mid L)=0.2.\n\\]\nFirst compute the overall likelihood of \\(s\\):\n\\[\n\\mathbb{P}(s)=\\mathbb{P}(s\\mid H)\\mathbb{P}(H)+\\mathbb{P}(s\\mid L)\\mathbb{P}(L)=0.8\\cdot 0.3+0.2\\cdot 0.7=0.38.\n\\]\nThen the posterior belief is\n\\[\n\\mathbb{P}(H\\mid s)=\\frac{0.8\\cdot 0.3}{0.38}\\approx 0.6316.\n\\]\nSo after observing \\(s\\), belief in type \\(H\\) rises from \\(0.3\\) to about \\(0.63\\)."
   },
   {
-    "objectID": "foundations/optimization.html",
-    "href": "foundations/optimization.html",
-    "title": "Optimization",
+    "objectID": "foundations/fixed-points.html",
+    "href": "foundations/fixed-points.html",
+    "title": "Fixed points & correspondences",
     "section": "",
-    "text": "A best response is an optimization problem. Given others’ strategies \\(s_{-i}\\), player \\(i\\) chooses\n\\[\nBR_i(s_{-i})\\in \\arg\\max_{s_i\\in S_i} u_i(s_i,s_{-i}).\n\\]\nIntuition. A Nash equilibrium is a fixed point of best responses: everyone is already choosing an argmax given others."
+    "text": "A fixed point of a function \\(f:X\\to X\\) is a point \\(x^*\\) such that \\[\nf(x^*)=x^*.\n\\]\nIntuition. An equilibrium is often a fixed point: if “best response” maps strategies into strategies, equilibrium is where nothing changes."
   },
   {
-    "objectID": "foundations/optimization.html#argmax-and-best-responses",
-    "href": "foundations/optimization.html#argmax-and-best-responses",
-    "title": "Optimization",
+    "objectID": "foundations/fixed-points.html#fixed-points-functions",
+    "href": "foundations/fixed-points.html#fixed-points-functions",
+    "title": "Fixed points & correspondences",
     "section": "",
-    "text": "A best response is an optimization problem. Given others’ strategies \\(s_{-i}\\), player \\(i\\) chooses\n\\[\nBR_i(s_{-i})\\in \\arg\\max_{s_i\\in S_i} u_i(s_i,s_{-i}).\n\\]\nIntuition. A Nash equilibrium is a fixed point of best responses: everyone is already choosing an argmax given others."
+    "text": "A fixed point of a function \\(f:X\\to X\\) is a point \\(x^*\\) such that \\[\nf(x^*)=x^*.\n\\]\nIntuition. An equilibrium is often a fixed point: if “best response” maps strategies into strategies, equilibrium is where nothing changes."
   },
   {
-    "objectID": "foundations/optimization.html#foc-soc-unconstrained",
-    "href": "foundations/optimization.html#foc-soc-unconstrained",
-    "title": "Optimization",
-    "section": "FOC / SOC (unconstrained)",
-    "text": "FOC / SOC (unconstrained)\nIf \\(f\\) is differentiable and you maximize over an interval, an interior optimum \\(x^*\\) satisfies the first-order condition (FOC)\n\\[\nf'(x^*)=0.\n\\]\nIf \\(f\\) is twice differentiable, the second-order condition (SOC) for a local maximum is\n\\[\nf''(x^*)&lt;0.\n\\]\nIntuition. FOC finds stationary points; SOC checks that the curve bends downward."
+    "objectID": "foundations/fixed-points.html#brouwer-idea",
+    "href": "foundations/fixed-points.html#brouwer-idea",
+    "title": "Fixed points & correspondences",
+    "section": "Brouwer (idea)",
+    "text": "Brouwer (idea)\nBrouwer’s fixed point theorem (informal): a continuous function from a compact convex set to itself has a fixed point.\nThis supports existence of equilibrium in many continuous games."
   },
   {
-    "objectID": "foundations/optimization.html#kkt-conditions-constrained",
-    "href": "foundations/optimization.html#kkt-conditions-constrained",
-    "title": "Optimization",
-    "section": "KKT conditions (constrained)",
-    "text": "KKT conditions (constrained)\nFor maximizing \\(f(x)\\) subject to inequality constraints \\(g_j(x)\\le 0\\), define the Lagrangian\n\\[\n\\mathcal{L}(x,\\lambda)=f(x)-\\sum_{j}\\lambda_j g_j(x),\n\\qquad \\lambda_j\\ge 0.\n\\]\nKKT conditions (at an optimum, under standard regularity assumptions) include: - Stationarity: \\(\\nabla_x \\mathcal{L}(x^*,\\lambda^*)=0\\) - Primal feasibility: \\(g_j(x^*)\\le 0\\) - Dual feasibility: \\(\\lambda_j^*\\ge 0\\) - Complementary slackness: \\(\\lambda_j^* g_j(x^*)=0\\) for all \\(j\\)\nIntuition. Constraints either bind (then they get a positive “shadow price” \\(\\lambda_j\\)) or don’t bind (then \\(\\lambda_j=0\\))."
+    "objectID": "foundations/fixed-points.html#correspondences-set-valued-maps",
+    "href": "foundations/fixed-points.html#correspondences-set-valued-maps",
+    "title": "Fixed points & correspondences",
+    "section": "Correspondences (set-valued maps)",
+    "text": "Correspondences (set-valued maps)\nA correspondence \\(F:X \\rightrightarrows X\\) assigns a set \\(F(x)\\) to each \\(x\\). Best responses are usually correspondences: \\[\nBR_i(s_{-i}) = \\arg\\max_{s_i\\in S_i} u_i(s_i,s_{-i}),\n\\] which may contain multiple maximizers."
   },
   {
-    "objectID": "foundations/optimization.html#example-best-response-with-a-constraint",
-    "href": "foundations/optimization.html#example-best-response-with-a-constraint",
-    "title": "Optimization",
-    "section": "Example: best response with a constraint",
-    "text": "Example: best response with a constraint\nMaximize \\(f(x)=2x-x^2\\) subject to \\(x\\ge 0\\).\nWrite the constraint as \\(g(x)=-x\\le 0\\). Lagrangian:\n\\[\n\\mathcal{L}(x,\\lambda)= (2x-x^2)-\\lambda(-x)=2x-x^2+\\lambda x.\n\\]\nKKT: - Stationarity: \\(\\frac{\\partial \\mathcal{L}}{\\partial x}=2-2x+\\lambda=0\\) - Primal feasibility: \\(x\\ge 0\\) - Dual feasibility: \\(\\lambda\\ge 0\\) - Complementary slackness: \\(\\lambda x=0\\)\nFrom stationarity: \\(2-2x+\\lambda=0 \\Rightarrow x=1+\\lambda/2\\).\nIf \\(x&gt;0\\), then complementary slackness implies \\(\\lambda=0\\), so \\(x=1\\). Check feasibility: \\(1\\ge 0\\) yes. So the solution is \\(x^*=1\\).\n(If the unconstrained maximizer had been negative, the constraint would bind and you’d get \\(x^*=0\\) with \\(\\lambda&gt;0\\).)"
+    "objectID": "foundations/fixed-points.html#kakutani-idea",
+    "href": "foundations/fixed-points.html#kakutani-idea",
+    "title": "Fixed points & correspondences",
+    "section": "Kakutani (idea)",
+    "text": "Kakutani (idea)\nKakutani’s theorem (informal): under continuity-like conditions and nonempty convex values, a correspondence has a fixed point: \\[\nx^* \\in F(x^*).\n\\]\nThis is the classic route to Nash existence with mixed strategies: the product of best-response correspondences has a fixed point."
+  },
+  {
+    "objectID": "foundations/fixed-points.html#example-fixed-point-intuition-in-1d",
+    "href": "foundations/fixed-points.html#example-fixed-point-intuition-in-1d",
+    "title": "Fixed points & correspondences",
+    "section": "Example: fixed point intuition in 1D",
+    "text": "Example: fixed point intuition in 1D\nLet \\(f(x)=\\frac{1}{2}x+\\frac{1}{4}\\) on \\([0,1]\\). Solve \\(x=f(x)\\): \\[\nx=\\frac{1}{2}x+\\frac{1}{4}\\Rightarrow x^*=\\frac{1}{2}.\n\\]\nEquilibrium-as-fixed-point is exactly this: apply the rule, you land back on yourself."
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Posts",
+    "section": "",
+    "text": "First post\n\n\n\nnotes\n\nupdates\n\n\n\n\n\n\n\n\n\nFeb 13, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2026-02-13-first-post.html",
+    "href": "posts/2026-02-13-first-post.html",
+    "title": "First post",
+    "section": "",
+    "text": "This is my first post. I’ll use this space for short writeups and reading notes."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Solely a Place",
+    "section": "",
+    "text": "“The Absence of Coalitions”\n— Nash, Non-Cooperative Games (1951)\n\n\nNotes → · Foundations →· PDFs →"
+  },
+  {
+    "objectID": "foundations/linear-algebra.html",
+    "href": "foundations/linear-algebra.html",
+    "title": "Linear algebra",
+    "section": "",
+    "text": "A mixed strategy is a probability vector over pure actions. If player \\(i\\) has \\(m\\) pure actions, a mixed strategy is\n\\[\n\\Delta^{m-1}=\\left\\{x\\in\\mathbb{R}^m:\\; x_k\\ge 0\\;\\forall k,\\;\\sum_{k=1}^m x_k = 1\\right\\},\n\\]\nthe \\((m-1)\\)-simplex.\nIntuition. You can think of \\(x\\) as a “weighting” of actions. The simplex condition just says: nonnegative weights that sum to 1."
+  },
+  {
+    "objectID": "foundations/linear-algebra.html#mixed-strategies-as-vectors",
+    "href": "foundations/linear-algebra.html#mixed-strategies-as-vectors",
+    "title": "Linear algebra",
+    "section": "",
+    "text": "A mixed strategy is a probability vector over pure actions. If player \\(i\\) has \\(m\\) pure actions, a mixed strategy is\n\\[\n\\Delta^{m-1}=\\left\\{x\\in\\mathbb{R}^m:\\; x_k\\ge 0\\;\\forall k,\\;\\sum_{k=1}^m x_k = 1\\right\\},\n\\]\nthe \\((m-1)\\)-simplex.\nIntuition. You can think of \\(x\\) as a “weighting” of actions. The simplex condition just says: nonnegative weights that sum to 1."
+  },
+  {
+    "objectID": "foundations/linear-algebra.html#payoff-matrices-and-expected-payoff",
+    "href": "foundations/linear-algebra.html#payoff-matrices-and-expected-payoff",
+    "title": "Linear algebra",
+    "section": "Payoff matrices and expected payoff",
+    "text": "Payoff matrices and expected payoff\nIn a two-player normal-form game, let player 1 have \\(m\\) actions and player 2 have \\(n\\) actions. Let \\(A\\in\\mathbb{R}^{m\\times n}\\) be player 1’s payoff matrix (and \\(B\\) for player 2). If player 1 plays \\(x\\in\\Delta^{m-1}\\) and player 2 plays \\(y\\in\\Delta^{n-1}\\), then player 1’s expected payoff is\n\\[\nu_1(x,y)=x^\\top A y.\n\\]\nIntuition. First compute expected payoffs against each of player 2’s pure actions (\\(Ay\\)). Then average those numbers using player 1’s mixing weights (\\(x^\\top\\))."
+  },
+  {
+    "objectID": "foundations/linear-algebra.html#example-22-game",
+    "href": "foundations/linear-algebra.html#example-22-game",
+    "title": "Linear algebra",
+    "section": "Example: 2×2 game",
+    "text": "Example: 2×2 game\nSuppose\n\\[\nA=\\begin{pmatrix}\n2 & 0\\\\\n1 & 3\n\\end{pmatrix},\\quad\nx=\\begin{pmatrix}0.4\\\\0.6\\end{pmatrix},\\quad\ny=\\begin{pmatrix}0.25\\\\0.75\\end{pmatrix}.\n\\]\nCompute\n\\[\nAy=\n\\begin{pmatrix}\n2 & 0\\\\\n1 & 3\n\\end{pmatrix}\n\\begin{pmatrix}\n0.25\\\\0.75\n\\end{pmatrix}\n=\n\\begin{pmatrix}\n0.5\\\\\n2.5\n\\end{pmatrix},\n\\qquad\nu_1(x,y)=x^\\top(Ay)=0.4\\cdot 0.5+0.6\\cdot 2.5=1.7.\n\\]\nSo the mixed-vs-mixed expected payoff is \\(1.7\\) for player 1."
+  },
+  {
+    "objectID": "foundations/index.html",
+    "href": "foundations/index.html",
+    "title": "Foundations",
+    "section": "",
+    "text": "Where Math Comes In"
+  },
+  {
+    "objectID": "foundations/index.html#topics",
+    "href": "foundations/index.html#topics",
+    "title": "Foundations",
+    "section": "Topics",
+    "text": "Topics\n\nLinear algebra\nProbability\nOptimization\nConvexity & concavity\nFixed points & correspondences\nDynamic reasoning\nInformation & beliefs (measure-lite)"
+  },
+  {
+    "objectID": "foundations/information-measure-lite.html",
+    "href": "foundations/information-measure-lite.html",
+    "title": "Information & beliefs (measure-lite)",
+    "section": "",
+    "text": "In Bayesian and information economics, “information” is usually represented by what events a player can distinguish.\nThere are two common (equivalent) ways to think about it:\n\nInformation partition (finite case): a player observes which cell of a partition they are in.\n\\(\\sigma\\)-algebra (general case): the collection of events the player can condition on.\n\nYou almost never need heavy measure theory for standard game theory notes—just the intuition."
+  },
+  {
+    "objectID": "foundations/information-measure-lite.html#what-information-means-in-game-theory",
+    "href": "foundations/information-measure-lite.html#what-information-means-in-game-theory",
+    "title": "Information & beliefs (measure-lite)",
+    "section": "",
+    "text": "In Bayesian and information economics, “information” is usually represented by what events a player can distinguish.\nThere are two common (equivalent) ways to think about it:\n\nInformation partition (finite case): a player observes which cell of a partition they are in.\n\\(\\sigma\\)-algebra (general case): the collection of events the player can condition on.\n\nYou almost never need heavy measure theory for standard game theory notes—just the intuition."
+  },
+  {
+    "objectID": "foundations/information-measure-lite.html#sigma-algebra-concept-only",
+    "href": "foundations/information-measure-lite.html#sigma-algebra-concept-only",
+    "title": "Information & beliefs (measure-lite)",
+    "section": "\\(\\sigma\\)-algebra (concept only)",
+    "text": "\\(\\sigma\\)-algebra (concept only)\nLet \\(\\Omega\\) be the set of possible states of the world.\nA \\(\\sigma\\)-algebra \\(\\mathcal{F}\\) is a collection of subsets of \\(\\Omega\\) (events) such that:\n\n\\(\\Omega \\in \\mathcal{F}\\)\n\nIf \\(A \\in \\mathcal{F}\\) then \\(A^c \\in \\mathcal{F}\\)\n\nIf \\(A_1, A_2, \\dots \\in \\mathcal{F}\\) then \\(\\bigcup_{k=1}^\\infty A_k \\in \\mathcal{F}\\)\n\nIntuition. \\(\\mathcal{F}\\) lists the events you are able to talk about (and condition on).\nCoarser \\(\\mathcal{F}\\) = less information.\n\nFinite shortcut (partition view)\nIf \\(\\Omega\\) is finite and a player’s information is a partition \\[\n\\Pi = \\{C_1,\\dots,C_m\\},\n\\] then the player can distinguish only which cell \\(C_j\\) contains the true state.\nThe corresponding \\(\\sigma\\)-algebra is “all unions of cells of \\(\\Pi\\)”."
+  },
+  {
+    "objectID": "foundations/information-measure-lite.html#conditional-expectation-as-best-prediction-given-information",
+    "href": "foundations/information-measure-lite.html#conditional-expectation-as-best-prediction-given-information",
+    "title": "Information & beliefs (measure-lite)",
+    "section": "Conditional expectation as “best prediction given information”",
+    "text": "Conditional expectation as “best prediction given information”\nGiven an integrable random variable \\(X\\) (e.g., payoff-relevant quantity) and an information set \\(\\mathcal{G}\\subseteq\\mathcal{F}\\), the conditional expectation \\(\\mathbb{E}[X\\mid \\mathcal{G}]\\) is the random variable that represents the best mean-squared prediction of \\(X\\) using only information in \\(\\mathcal{G}\\).\nProjection idea (intuition). Think of \\(\\mathbb{E}[X\\mid \\mathcal{G}]\\) as projecting \\(X\\) onto the space of \\(\\mathcal{G}\\)-measurable variables (things you can compute using the information you have)."
+  },
+  {
+    "objectID": "foundations/information-measure-lite.html#example-conditional-expectation-with-a-partition",
+    "href": "foundations/information-measure-lite.html#example-conditional-expectation-with-a-partition",
+    "title": "Information & beliefs (measure-lite)",
+    "section": "Example: conditional expectation with a partition",
+    "text": "Example: conditional expectation with a partition\nLet the state space be \\[\n\\Omega=\\{\\omega_1,\\omega_2,\\omega_3,\\omega_4\\},\n\\qquad\n\\mathbb{P}(\\omega_k)=\\tfrac14 \\text{ for each }k.\n\\]\nLet \\[\nX(\\omega_1)=0,\\;X(\\omega_2)=2,\\;X(\\omega_3)=4,\\;X(\\omega_4)=6.\n\\]\nSuppose the player only observes whether the state is in \\[\nC_1=\\{\\omega_1,\\omega_2\\}\\quad\\text{or}\\quad C_2=\\{\\omega_3,\\omega_4\\}.\n\\]\nThat information corresponds to a partition \\(\\Pi=\\{C_1,C_2\\}\\) (and a \\(\\sigma\\)-algebra generated by it).\nThen the conditional expectation is constant on each cell:\n\nOn \\(C_1\\): \\[\n\\mathbb{E}[X\\mid C_1]\n=\\frac{X(\\omega_1)+X(\\omega_2)}{2}\n=\\frac{0+2}{2}=1.\n\\]\nOn \\(C_2\\): \\[\n\\mathbb{E}[X\\mid C_2]\n=\\frac{X(\\omega_3)+X(\\omega_4)}{2}\n=\\frac{4+6}{2}=5.\n\\]\n\nSo \\(\\mathbb{E}[X\\mid \\mathcal{G}]\\) takes value \\(1\\) if you learn “cell \\(C_1\\)”, and value \\(5\\) if you learn “cell \\(C_2\\)”.\nGame theory interpretation. This is exactly what beliefs do: you map what you observed to an updated expectation of payoff-relevant quantities."
+  },
+  {
+    "objectID": "foundations/information-measure-lite.html#common-knowledge-concept",
+    "href": "foundations/information-measure-lite.html#common-knowledge-concept",
+    "title": "Information & beliefs (measure-lite)",
+    "section": "Common knowledge (concept)",
+    "text": "Common knowledge (concept)\nAn event \\(E\\) is common knowledge if: - everyone knows \\(E\\), - everyone knows that everyone knows \\(E\\), - everyone knows that everyone knows that everyone knows \\(E\\), - and so on indefinitely.\nIntuition. Common knowledge is what makes coordination possible (or impossible). It is stronger than “everyone knows”.\n\nIterated beliefs (one-line idea)\nIn Bayesian games, strategies can depend on: - beliefs about types, - beliefs about others’ beliefs, - higher-order beliefs.\nOften you don’t compute these explicitly; you just need to know they exist and that equilibrium concepts impose consistency."
+  },
+  {
+    "objectID": "foundations/information-measure-lite.html#practical-takeaway",
+    "href": "foundations/information-measure-lite.html#practical-takeaway",
+    "title": "Information & beliefs (measure-lite)",
+    "section": "Practical takeaway",
+    "text": "Practical takeaway\nFor most game theory work: - partitions are enough to model information, - conditional expectation captures “best prediction given what you know”, - common knowledge / higher-order beliefs matter conceptually for coordination and equilibrium."
+  },
+  {
+    "objectID": "foundations/convexity.html",
+    "href": "foundations/convexity.html",
+    "title": "Convexity & concavity",
+    "section": "",
+    "text": "A set \\(C \\subseteq \\mathbb{R}^n\\) is convex if for any \\(x,y\\in C\\) and any \\(\\lambda\\in[0,1]\\), \\[\n\\lambda x + (1-\\lambda)y \\in C.\n\\]\nIntuition. If you can take “mixtures” of two feasible points and stay feasible, the set is convex. This is exactly why mixed strategies live in a simplex."
+  },
+  {
+    "objectID": "foundations/convexity.html#convex-sets",
+    "href": "foundations/convexity.html#convex-sets",
+    "title": "Convexity & concavity",
+    "section": "",
+    "text": "A set \\(C \\subseteq \\mathbb{R}^n\\) is convex if for any \\(x,y\\in C\\) and any \\(\\lambda\\in[0,1]\\), \\[\n\\lambda x + (1-\\lambda)y \\in C.\n\\]\nIntuition. If you can take “mixtures” of two feasible points and stay feasible, the set is convex. This is exactly why mixed strategies live in a simplex."
+  },
+  {
+    "objectID": "foundations/convexity.html#concave-functions",
+    "href": "foundations/convexity.html#concave-functions",
+    "title": "Convexity & concavity",
+    "section": "Concave functions",
+    "text": "Concave functions\nA function \\(f\\) is concave on a convex set if for any \\(x,y\\) and \\(\\lambda\\in[0,1]\\), \\[\nf(\\lambda x + (1-\\lambda)y)\\ge \\lambda f(x) + (1-\\lambda)f(y).\n\\]\nIntuition. Concavity means “diminishing returns” and makes optimization well-behaved: local maxima are global."
+  },
+  {
+    "objectID": "foundations/convexity.html#example-why-concavity-helps-best-responses",
+    "href": "foundations/convexity.html#example-why-concavity-helps-best-responses",
+    "title": "Convexity & concavity",
+    "section": "Example: why concavity helps best responses",
+    "text": "Example: why concavity helps best responses\nLet \\(f(x)=2x-x^2\\) on \\([0,2]\\). Then \\(f''(x)=-2&lt;0\\), so \\(f\\) is concave and the maximizer is unique.\nFOC: \\(f'(x)=2-2x=0 \\Rightarrow x^*=1\\).\nIn games, concavity in your own action often implies a unique best response."
   },
   {
     "objectID": "notes/index.html",

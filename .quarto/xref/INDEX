@@ -40,5 +40,17 @@
   },
   "foundations/optimization.qmd": {
     "optimization.html": "3b5105ef"
+  },
+  "foundations/fixed-points.qmd": {
+    "fixed-points.html": "866637de"
+  },
+  "foundations/dynamic-reasoning.qmd": {
+    "dynamic-reasoning.html": "e7595bf3"
+  },
+  "foundations/convexity.qmd": {
+    "convexity.html": "a03b96ce"
+  },
+  "foundations/information-measure-lite.qmd": {
+    "information-measure-lite.html": "299d7215"
   }
 }

@@ -1,0 +1,27 @@
+---
+title: "Convexity & concavity"
+toc: true
+---
+
+## Convex sets
+A set $C \subseteq \mathbb{R}^n$ is **convex** if for any $x,y\in C$ and any $\lambda\in[0,1]$,
+$$
+\lambda x + (1-\lambda)y \in C.
+$$
+
+**Intuition.** If you can take “mixtures” of two feasible points and stay feasible, the set is convex. This is exactly why mixed strategies live in a simplex.
+
+## Concave functions
+A function $f$ is **concave** on a convex set if for any $x,y$ and $\lambda\in[0,1]$,
+$$
+f(\lambda x + (1-\lambda)y)\ge \lambda f(x) + (1-\lambda)f(y).
+$$
+
+**Intuition.** Concavity means “diminishing returns” and makes optimization well-behaved: local maxima are global.
+
+## Example: why concavity helps best responses
+Let $f(x)=2x-x^2$ on $[0,2]$. Then $f''(x)=-2<0$, so $f$ is concave and the maximizer is unique.
+
+FOC: $f'(x)=2-2x=0 \Rightarrow x^*=1$.
+
+In games, concavity in your own action often implies a unique best response.

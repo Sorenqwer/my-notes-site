@@ -1,0 +1,50 @@
+---
+title: "Dynamic reasoning"
+toc: true
+---
+
+## Backward induction (extensive-form games)
+In finite game trees with perfect information, **backward induction** solves from the end:
+
+1) decide optimal actions at the last decision nodes  
+2) replace subgames by their continuation payoffs  
+3) move backward to the start  
+
+**Intuition.** Future choices discipline earlier choices.
+
+## A tiny game tree (diagram)
+Below is a simple sequential choice: Player 1 chooses $A$ or $B$, then Player 2 chooses $L$ or $R$.
+
+```mermaid
+flowchart TD
+  S((Start)) -->|P1: A| A(( ))
+  S -->|P1: B| B(( ))
+  A -->|P2: L| AL["(2,1)"]
+  A -->|P2: R| AR["(0,0)"]
+  B -->|P2: L| BL["(1,2)"]
+  B -->|P2: R| BR["(3,0)"]
+```
+
+## One-step backward induction
+
+::: {.callout-note title="Backward induction steps"}
+**Step 1 (Player 2):**  
+After $A$: compare $(2,1)$ vs $(0,0)$ → choose **L** (since $1>0$).  
+After $B$: compare $(1,2)$ vs $(3,0)$ → choose **L** (since $2>0$).
+
+**Step 2 (Player 1):**  
+If $A$ → payoff $2$.  
+If $B$ → payoff $1$.  
+So choose **A**.
+
+**Outcome:** $(A,L)$.
+:::
+
+## Bellman idea (optional, for dynamic optimization)
+Dynamic programming often writes:
+
+$$
+V(s)=\max_{a\in A(s)}\bigl\{ r(s,a) + \beta V(s') \bigr\}.
+$$
+
+Same “optimize now + value of continuation” logic.
