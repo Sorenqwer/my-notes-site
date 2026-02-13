@@ -39,7 +39,7 @@
     "href": "index.html#latest-posts",
     "title": "Solely a Place",
     "section": "Latest posts",
-    "text": "Latest posts\ncontents: posts type: default sort: “date desc” max-items: 5 categories: true feed: true"
+    "text": "Latest posts\ncontents: posts\ntype: default\nsort: \"date desc\"\nmax-items: 5\ncategories: true\nfeed: true\n```"
   },
   {
     "objectID": "posts/2026-02-13-first-post.html",
