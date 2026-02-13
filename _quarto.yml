@@ -4,6 +4,7 @@ project:
 
 website:
   title: "Palace for Game Theory"
+  search: true
   navbar:
     left:
       - href: index.qmd
@@ -17,7 +18,8 @@ website:
 
 format:
   html:
-    toc: true
-    math: mathjax
+    toc: false
+    page-layout: full
+    title-block-manner: true
 
 bibliography: references.bib
