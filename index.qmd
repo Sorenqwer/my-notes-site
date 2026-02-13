@@ -1,5 +1,5 @@
 ---
-title: "My Academic Notes"
+title: "Solely a Palace"
 page-layout: full
 title-block-banner: true
 ---
