@@ -3,7 +3,6 @@ title: "Foundations"
 toc: true
 ---
 
-Where Math Comes In
 
 ## Topics
 - [Linear algebra](linear-algebra.qmd)

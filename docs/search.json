@@ -221,14 +221,14 @@
     "href": "foundations/index.html",
     "title": "Foundations",
     "section": "",
-    "text": "Where Math Comes In"
+    "text": "Linear algebra\nProbability\nOptimization\nConvexity & concavity\nFixed points & correspondences\nDynamic reasoning\nInformation & beliefs (measure-lite)"
   },
   {
     "objectID": "foundations/index.html#topics",
     "href": "foundations/index.html#topics",
     "title": "Foundations",
-    "section": "Topics",
-    "text": "Topics\n\nLinear algebra\nProbability\nOptimization\nConvexity & concavity\nFixed points & correspondences\nDynamic reasoning\nInformation & beliefs (measure-lite)"
+    "section": "",
+    "text": "Linear algebra\nProbability\nOptimization\nConvexity & concavity\nFixed points & correspondences\nDynamic reasoning\nInformation & beliefs (measure-lite)"
   },
   {
     "objectID": "foundations/information-measure-lite.html",
