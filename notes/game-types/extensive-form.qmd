@@ -13,6 +13,7 @@ An extensive-form game represents **timing** (who moves when) and information (w
 
 ## One example (backward induction)
 
+```{mermaid}
 flowchart TD
   S((Start)) -->|P1: A| A(( ))
   S -->|P1: B| B(( ))
@@ -20,7 +21,7 @@ flowchart TD
   A -->|P2: R| AR["(0,0)"]
   B -->|P2: L| BL["(1,2)"]
   B -->|P2: R| BR["(3,0)"]
-
+```
 
 Player 2 chooses **L** after $A$ (since $1>0$) and **L** after $B$ (since $2>0$).  
 Anticipating this, player 1 prefers $A$ (since $2>1$). Outcome: $(A,L)$.

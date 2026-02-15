@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -192,7 +196,24 @@ window.Quarto = {
 </section>
 <section id="one-example-backward-induction" class="level2">
 <h2 class="anchored" data-anchor-id="one-example-backward-induction">One example (backward induction)</h2>
-<p>flowchart TD S((Start)) –&gt;|P1: A| A(( )) S –&gt;|P1: B| B(( )) A –&gt;|P2: L| AL[“(2,1)”] A –&gt;|P2: R| AR[“(0,0)”] B –&gt;|P2: L| BL[“(1,2)”] B –&gt;|P2: R| BR[“(3,0)”]</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+  S((Start)) --&gt;|P1: A| A(( ))
+  S --&gt;|P1: B| B(( ))
+  A --&gt;|P2: L| AL["(2,1)"]
+  A --&gt;|P2: R| AR["(0,0)"]
+  B --&gt;|P2: L| BL["(1,2)"]
+  B --&gt;|P2: R| BR["(3,0)"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <p>Player 2 chooses <strong>L</strong> after <span class="math inline">\(A\)</span> (since <span class="math inline">\(1&gt;0\)</span>) and <strong>L</strong> after <span class="math inline">\(B\)</span> (since <span class="math inline">\(2&gt;0\)</span>).<br>
 Anticipating this, player 1 prefers <span class="math inline">\(A\)</span> (since <span class="math inline">\(2&gt;1\)</span>). Outcome: <span class="math inline">\((A,L)\)</span>.</p>
 
