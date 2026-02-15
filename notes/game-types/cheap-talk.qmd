@@ -1,0 +1,25 @@
+---
+title: "Cheap talk"
+toc: true
+---
+
+## What it is
+Cheap talk is communication that is **costless** and **non-binding**: a sender sends a message, then a receiver chooses an action.
+
+## What’s special
+- Messages have no direct payoff effect, so credibility comes only from **aligned incentives**.
+- Information can still be partially transmitted when preferences are not too misaligned.
+- Outcomes typically depend on how strongly the sender wants to bias the receiver’s action.
+
+## One example
+### Setup (a stylized version)
+- State: $\theta \in [0,1]$ is known to the sender.
+- Message: $m$ is any costless statement.
+- Receiver chooses action $a\in[0,1]$.
+
+Payoffs:
+- Receiver wants $a$ close to $\theta$.
+- Sender wants $a$ close to $\theta + b$ (bias $b>0$).
+
+### Key idea
+If the bias $b$ is small, the sender can truthfully separate states into **intervals** (“coarse truth”), and the receiver best-responds by choosing the expected state within the reported interval. If $b$ is large, communication becomes uninformative (pooling).

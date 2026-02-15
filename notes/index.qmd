@@ -1,7 +1,6 @@
 ---
 title: "Notes"
+toc: false
 ---
 
-## Topics
-- [Game Theory](game-theory.qmd)
-- [Econometrics](metrics.qmd)
+- [Game types](game-types/index.qmd)

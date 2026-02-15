@@ -52,5 +52,44 @@
   },
   "foundations/information-measure-lite.qmd": {
     "information-measure-lite.html": "299d7215"
+  },
+  "notes/game-types/bargaining.qmd": {
+    "bargaining.html": "c9ab4edd"
+  },
+  "notes/game-types/repeated.qmd": {
+    "repeated.html": "2cb9be04"
+  },
+  "notes/game-types/extensive-form.qmd": {
+    "extensive-form.html": "8fd6365a"
+  },
+  "notes/game-types/auctions.qmd": {
+    "auctions.html": "63fb8cce"
+  },
+  "notes/game-types/global-games.qmd": {
+    "global-games.html": "a69b3bca"
+  },
+  "notes/game-types/normal-form.qmd": {
+    "normal-form.html": "846dadc3"
+  },
+  "notes/game-types/evolutionary-learning.qmd": {
+    "evolutionary-learning.html": "6ab16a0c"
+  },
+  "notes/game-types/index.qmd": {
+    "index.html": "74df4c6d"
+  },
+  "notes/game-types/signaling.qmd": {
+    "signaling.html": "7fb426f6"
+  },
+  "notes/game-types/network-games.qmd": {
+    "network-games.html": "02f2fad8"
+  },
+  "notes/game-types/cheap-talk.qmd": {
+    "cheap-talk.html": "5b1328be"
+  },
+  "notes/game-types/bayesian.qmd": {
+    "bayesian.html": "e9d8c72a"
+  },
+  "notes/game-types/screening-mechanism.qmd": {
+    "screening-mechanism.html": "749f5953"
   }
 }

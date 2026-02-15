@@ -1,0 +1,26 @@
+---
+title: "Game types"
+toc: true
+---
+
+## Static games
+- [Normal-form (simultaneous move)](normal-form.qmd)
+
+## Dynamic games
+- [Extensive-form (sequential, perfect information)](extensive-form.qmd)
+- [Repeated games](repeated.qmd)
+
+## Incomplete information + communication
+- [Bayesian games](bayesian.qmd)
+- [Cheap talk](cheap-talk.qmd)
+- [Signaling](signaling.qmd)
+- [Screening & mechanism design](screening-mechanism.qmd)
+
+## Canonical econ applications
+- [Bargaining](bargaining.qmd)
+- [Auctions](auctions.qmd)
+
+## Selection, dynamics, and structure
+- [Global games / equilibrium selection](global-games.qmd)
+- [Evolutionary games & learning](evolutionary-learning.qmd)
+- [Network games](network-games.qmd)
