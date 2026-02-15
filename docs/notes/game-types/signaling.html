@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>signaling – Margins of Rationality</title>
+<title>Signaling games – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -117,15 +146,65 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
+  <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
+  <li><a href="#one-example-education-as-a-signal" id="toc-one-example-education-as-a-signal" class="nav-link" data-scroll-target="#one-example-education-as-a-signal">One example (education as a signal)</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Signaling games</h1>
+</div>
 
 
 
+<div class="quarto-title-meta column-page-left">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<section id="what-it-is" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
+<p>A signaling game is a dynamic game with <strong>private information</strong>: a sender knows their type, chooses a signal (often costly), then a receiver responds.</p>
+</section>
+<section id="whats-special" class="level2">
+<h2 class="anchored" data-anchor-id="whats-special">What’s special</h2>
+<ul>
+<li>Signals can be credible when different types face different costs/benefits (incentive compatibility).</li>
+<li>Typical outcomes: <strong>separating</strong> (types choose different signals), <strong>pooling</strong> (same signal), or <strong>semi-separating</strong>.</li>
+<li>Beliefs and off-path beliefs matter (PBE / sequential equilibrium ideas).</li>
+</ul>
+</section>
+<section id="one-example-education-as-a-signal" class="level2">
+<h2 class="anchored" data-anchor-id="one-example-education-as-a-signal">One example (education as a signal)</h2>
+<p>Types: high ability <span class="math inline">\(H\)</span> and low ability <span class="math inline">\(L\)</span>.<br>
+Sender chooses education level <span class="math inline">\(e\ge 0\)</span>; receiver (employer) offers wage <span class="math inline">\(w(e)\)</span>.</p>
+<ul>
+<li>Education is more costly for <span class="math inline">\(L\)</span> than <span class="math inline">\(H\)</span> (single-crossing idea): <span class="math display">\[
+c_L(e) &gt; c_H(e)\ \text{for } e&gt;0.
+\]</span></li>
+<li>Employer wants to pay higher wages if they believe the worker is <span class="math inline">\(H\)</span>.</li>
+</ul>
+<p>A separating equilibrium can exist where <span class="math inline">\(H\)</span> chooses a higher <span class="math inline">\(e\)</span> and <span class="math inline">\(L\)</span> chooses a lower <span class="math inline">\(e\)</span>, because mimicking is too costly for <span class="math inline">\(L\)</span>. The signal works because it changes beliefs and is differentially costly.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

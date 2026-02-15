@@ -1,0 +1,17 @@
+---
+title: "Global games / equilibrium selection"
+toc: true
+---
+
+## What it is
+Global games study equilibrium selection in coordination games by adding small private noise to information about fundamentals.
+
+## What’s special
+- Many coordination games have multiple equilibria (good/bad outcomes).
+- Tiny informational frictions can select a unique equilibrium.
+- Provides a disciplined way to talk about “which equilibrium happens” without arbitrary refinements.
+
+## One example (currency-attack intuition)
+A government defends a peg if fundamentals are strong; speculators attack if they expect others to attack.
+
+Each speculator observes a noisy signal of the fundamental. If signals are slightly noisy, an equilibrium often takes a **threshold form**: attack if your signal is below a cutoff. The cutoff is pinned down endogenously, yielding a unique prediction.

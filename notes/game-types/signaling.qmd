@@ -1,0 +1,24 @@
+---
+title: "Signaling games"
+toc: true
+---
+
+## What it is
+A signaling game is a dynamic game with **private information**: a sender knows their type, chooses a signal (often costly), then a receiver responds.
+
+## What’s special
+- Signals can be credible when different types face different costs/benefits (incentive compatibility).
+- Typical outcomes: **separating** (types choose different signals), **pooling** (same signal), or **semi-separating**.
+- Beliefs and off-path beliefs matter (PBE / sequential equilibrium ideas).
+
+## One example (education as a signal)
+Types: high ability $H$ and low ability $L$.  
+Sender chooses education level $e\ge 0$; receiver (employer) offers wage $w(e)$.
+
+- Education is more costly for $L$ than $H$ (single-crossing idea):
+  $$
+  c_L(e) > c_H(e)\ \text{for } e>0.
+  $$
+- Employer wants to pay higher wages if they believe the worker is $H$.
+
+A separating equilibrium can exist where $H$ chooses a higher $e$ and $L$ chooses a lower $e$, because mimicking is too costly for $L$. The signal works because it changes beliefs and is differentially costly.

@@ -1,0 +1,33 @@
+---
+title: "Bayesian games"
+toc: true
+---
+
+## What it is
+A Bayesian game models **incomplete information**: players have private types and hold beliefs about others’ types.
+
+A Bayesian Nash equilibrium (BNE) is a strategy profile where each type best-responds given beliefs.
+
+## What’s special
+- Strategies map **types to actions**.
+- Beliefs (priors/posteriors) drive behavior.
+- Same strategic logic as normal-form games, but with expectations over types.
+
+## One example (2-type entry game)
+Player 1 (incumbent) has type $\theta\in\{H,L\}$ with $\mathbb{P}(H)=p$. Player 2 (entrant) chooses $E$ (enter) or $O$ (out). If entrant stays out: payoffs $(1,0)$.
+
+If entrant enters:
+- If type is $H$: fight is profitable for incumbent.
+- If type is $L$: accommodate is better.
+
+Toy payoff if entrant enters:
+- Type $H$ incumbent prefers **Fight**, giving entrant payoff $-1$.
+- Type $L$ incumbent prefers **Accommodate**, giving entrant payoff $+1$.
+
+Entrant enters if expected payoff is nonnegative:
+$$
+\mathbb{E}[\pi_2 \mid E] = p(-1) + (1-p)(+1) = 1-2p \ge 0
+\quad\Rightarrow\quad p \le \frac12.
+$$
+
+**Solution sketch.** The entrant’s decision depends on the probability the incumbent is the tough type.

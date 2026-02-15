@@ -1,0 +1,34 @@
+---
+title: "Normal-form games"
+toc: true
+---
+
+## What it is
+A normal-form game describes **simultaneous** choice: players pick actions without observing others’ choices.
+
+A (finite) two-player game is often written as payoff matrices $(A,B)$.
+
+## What’s special
+- Strategy is a complete plan: choose an action (or a mixed strategy).
+- Key solution concept: **Nash equilibrium** (possibly in mixed strategies).
+- Many applications reduce to identifying best responses and intersections.
+
+## One example (matching pennies)
+Player 1 chooses $H$ or $T$; player 2 chooses $H$ or $T$.
+
+Payoffs to player 1:
+
+$$
+A=
+\begin{pmatrix}
+1 & -1\\
+-1 & 1
+\end{pmatrix}.
+$$
+
+There is **no** pure-strategy Nash equilibrium.  
+In the mixed equilibrium, both players randomize:
+$$
+x=(1/2,1/2),\quad y=(1/2,1/2).
+$$
+Each player makes the other indifferent.

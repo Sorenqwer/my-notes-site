@@ -14,6 +14,34 @@
     "text": "Here is an equation: \\(u(x)=\\log x\\).\nA displayed equation:\n\\[\n\\arg\\max_x \\; f(x)\n\\]"
   },
   {
+    "objectID": "notes/game-types/screening-mechanism.html",
+    "href": "notes/game-types/screening-mechanism.html",
+    "title": "Screening & mechanism design",
+    "section": "",
+    "text": "Screening (principal–agent with adverse selection) studies how a principal designs a menu of contracts to induce agents to reveal private information. Mechanism design generalizes this: choose rules to implement outcomes given strategic agents."
+  },
+  {
+    "objectID": "notes/game-types/screening-mechanism.html#what-it-is",
+    "href": "notes/game-types/screening-mechanism.html#what-it-is",
+    "title": "Screening & mechanism design",
+    "section": "",
+    "text": "Screening (principal–agent with adverse selection) studies how a principal designs a menu of contracts to induce agents to reveal private information. Mechanism design generalizes this: choose rules to implement outcomes given strategic agents."
+  },
+  {
+    "objectID": "notes/game-types/screening-mechanism.html#whats-special",
+    "href": "notes/game-types/screening-mechanism.html#whats-special",
+    "title": "Screening & mechanism design",
+    "section": "What’s special",
+    "text": "What’s special\n\nKey constraint: incentive compatibility (each type prefers its intended option).\nParticipation (individual rationality) often binds for the lowest type.\nDesign trades off efficiency vs information rents."
+  },
+  {
+    "objectID": "notes/game-types/screening-mechanism.html#one-example-two-type-contract-menu",
+    "href": "notes/game-types/screening-mechanism.html#one-example-two-type-contract-menu",
+    "title": "Screening & mechanism design",
+    "section": "One example (two-type contract menu)",
+    "text": "One example (two-type contract menu)\nAgent type \\(\\theta\\in\\{H,L\\}\\) (productivity). Principal offers contracts \\((w,q)\\): wage and required output.\nUtility: \\(u = w - c(q,\\theta)\\), where \\(c(q,H) &lt; c(q,L)\\) (high type has lower cost).\nPrincipal wants higher \\(q\\) from \\(H\\) but must prevent \\(H\\) from pretending to be \\(L\\).\nSolution sketch. The optimal menu typically: - distorts the low-type contract downward (lower \\(q\\)) to reduce information rents, - gives the high type a contract with higher \\(q\\) and positive rent, - satisfies IC constraints: \\(H\\) prefers \\(H\\)-contract; \\(L\\) prefers \\(L\\)-contract."
+  },
+  {
     "objectID": "notes/game-types/cheap-talk.html",
     "href": "notes/game-types/cheap-talk.html",
     "title": "Cheap talk",
@@ -42,6 +70,90 @@
     "text": "One example\n\nSetup (a stylized version)\n\nState: \\(\\theta \\in [0,1]\\) is known to the sender.\nMessage: \\(m\\) is any costless statement.\nReceiver chooses action \\(a\\in[0,1]\\).\n\nPayoffs: - Receiver wants \\(a\\) close to \\(\\theta\\). - Sender wants \\(a\\) close to \\(\\theta + b\\) (bias \\(b&gt;0\\)).\n\n\nKey idea\nIf the bias \\(b\\) is small, the sender can truthfully separate states into intervals (“coarse truth”), and the receiver best-responds by choosing the expected state within the reported interval. If \\(b\\) is large, communication becomes uninformative (pooling)."
   },
   {
+    "objectID": "notes/game-types/signaling.html",
+    "href": "notes/game-types/signaling.html",
+    "title": "Signaling games",
+    "section": "",
+    "text": "A signaling game is a dynamic game with private information: a sender knows their type, chooses a signal (often costly), then a receiver responds."
+  },
+  {
+    "objectID": "notes/game-types/signaling.html#what-it-is",
+    "href": "notes/game-types/signaling.html#what-it-is",
+    "title": "Signaling games",
+    "section": "",
+    "text": "A signaling game is a dynamic game with private information: a sender knows their type, chooses a signal (often costly), then a receiver responds."
+  },
+  {
+    "objectID": "notes/game-types/signaling.html#whats-special",
+    "href": "notes/game-types/signaling.html#whats-special",
+    "title": "Signaling games",
+    "section": "What’s special",
+    "text": "What’s special\n\nSignals can be credible when different types face different costs/benefits (incentive compatibility).\nTypical outcomes: separating (types choose different signals), pooling (same signal), or semi-separating.\nBeliefs and off-path beliefs matter (PBE / sequential equilibrium ideas)."
+  },
+  {
+    "objectID": "notes/game-types/signaling.html#one-example-education-as-a-signal",
+    "href": "notes/game-types/signaling.html#one-example-education-as-a-signal",
+    "title": "Signaling games",
+    "section": "One example (education as a signal)",
+    "text": "One example (education as a signal)\nTypes: high ability \\(H\\) and low ability \\(L\\).\nSender chooses education level \\(e\\ge 0\\); receiver (employer) offers wage \\(w(e)\\).\n\nEducation is more costly for \\(L\\) than \\(H\\) (single-crossing idea): \\[\nc_L(e) &gt; c_H(e)\\ \\text{for } e&gt;0.\n\\]\nEmployer wants to pay higher wages if they believe the worker is \\(H\\).\n\nA separating equilibrium can exist where \\(H\\) chooses a higher \\(e\\) and \\(L\\) chooses a lower \\(e\\), because mimicking is too costly for \\(L\\). The signal works because it changes beliefs and is differentially costly."
+  },
+  {
+    "objectID": "notes/game-types/evolutionary-learning.html",
+    "href": "notes/game-types/evolutionary-learning.html",
+    "title": "Evolutionary games & learning",
+    "section": "",
+    "text": "Evolutionary game theory studies strategy change over time via selection, imitation, or learning. Instead of fully rational choice each period, strategy shares evolve."
+  },
+  {
+    "objectID": "notes/game-types/evolutionary-learning.html#what-it-is",
+    "href": "notes/game-types/evolutionary-learning.html#what-it-is",
+    "title": "Evolutionary games & learning",
+    "section": "",
+    "text": "Evolutionary game theory studies strategy change over time via selection, imitation, or learning. Instead of fully rational choice each period, strategy shares evolve."
+  },
+  {
+    "objectID": "notes/game-types/evolutionary-learning.html#whats-special",
+    "href": "notes/game-types/evolutionary-learning.html#whats-special",
+    "title": "Evolutionary games & learning",
+    "section": "What’s special",
+    "text": "What’s special\n\nFocus shifts from equilibrium as a static concept to stability under dynamics.\nKey objects: ESS (evolutionarily stable strategy), replicator dynamics, learning rules.\nUseful when players are boundedly rational or populations adapt."
+  },
+  {
+    "objectID": "notes/game-types/evolutionary-learning.html#one-example-replicator-dynamics-2-strategies",
+    "href": "notes/game-types/evolutionary-learning.html#one-example-replicator-dynamics-2-strategies",
+    "title": "Evolutionary games & learning",
+    "section": "One example (replicator dynamics, 2 strategies)",
+    "text": "One example (replicator dynamics, 2 strategies)\nLet the population share using strategy 1 be \\(x\\in[0,1]\\). If payoffs are \\(\\pi_1(x)\\) and \\(\\pi_2(x)\\), replicator dynamics are:\n\\[\n\\dot{x} = x(1-x)\\bigl(\\pi_1(x)-\\pi_2(x)\\bigr).\n\\]\nIntuition: the share of a strategy grows when it performs better than the alternative. Fixed points correspond to states where neither strategy has a payoff advantage."
+  },
+  {
+    "objectID": "notes/game-types/global-games.html",
+    "href": "notes/game-types/global-games.html",
+    "title": "Global games / equilibrium selection",
+    "section": "",
+    "text": "Global games study equilibrium selection in coordination games by adding small private noise to information about fundamentals."
+  },
+  {
+    "objectID": "notes/game-types/global-games.html#what-it-is",
+    "href": "notes/game-types/global-games.html#what-it-is",
+    "title": "Global games / equilibrium selection",
+    "section": "",
+    "text": "Global games study equilibrium selection in coordination games by adding small private noise to information about fundamentals."
+  },
+  {
+    "objectID": "notes/game-types/global-games.html#whats-special",
+    "href": "notes/game-types/global-games.html#whats-special",
+    "title": "Global games / equilibrium selection",
+    "section": "What’s special",
+    "text": "What’s special\n\nMany coordination games have multiple equilibria (good/bad outcomes).\nTiny informational frictions can select a unique equilibrium.\nProvides a disciplined way to talk about “which equilibrium happens” without arbitrary refinements."
+  },
+  {
+    "objectID": "notes/game-types/global-games.html#one-example-currency-attack-intuition",
+    "href": "notes/game-types/global-games.html#one-example-currency-attack-intuition",
+    "title": "Global games / equilibrium selection",
+    "section": "One example (currency-attack intuition)",
+    "text": "One example (currency-attack intuition)\nA government defends a peg if fundamentals are strong; speculators attack if they expect others to attack.\nEach speculator observes a noisy signal of the fundamental. If signals are slightly noisy, an equilibrium often takes a threshold form: attack if your signal is below a cutoff. The cutoff is pinned down endogenously, yielding a unique prediction."
+  },
+  {
     "objectID": "notes/game-types/extensive-form.html",
     "href": "notes/game-types/extensive-form.html",
     "title": "Extensive-form games",
@@ -68,6 +180,34 @@
     "title": "Extensive-form games",
     "section": "One example (backward induction)",
     "text": "One example (backward induction)\nflowchart TD\n  S((Start)) --&gt;|P1: A| A(( ))\n  S --&gt;|P1: B| B(( ))\n  A --&gt;|P2: L| AL[\"(2,1)\"]\n  A --&gt;|P2: R| AR[\"(0,0)\"]\n  B --&gt;|P2: L| BL[\"(1,2)\"]\n  B --&gt;|P2: R| BR[\"(3,0)\"]\nPlayer 2 chooses L after \\(A\\) (since \\(1&gt;0\\)) and L after \\(B\\) (since \\(2&gt;0\\)).\nAnticipating this, player 1 prefers \\(A\\) (since \\(2&gt;1\\)). Outcome: \\((A,L)\\)."
+  },
+  {
+    "objectID": "notes/game-types/bargaining.html",
+    "href": "notes/game-types/bargaining.html",
+    "title": "Bargaining",
+    "section": "",
+    "text": "Bargaining models how parties negotiate over surplus (price, wage, division of a pie), often with disagreement or delay."
+  },
+  {
+    "objectID": "notes/game-types/bargaining.html#what-it-is",
+    "href": "notes/game-types/bargaining.html#what-it-is",
+    "title": "Bargaining",
+    "section": "",
+    "text": "Bargaining models how parties negotiate over surplus (price, wage, division of a pie), often with disagreement or delay."
+  },
+  {
+    "objectID": "notes/game-types/bargaining.html#whats-special",
+    "href": "notes/game-types/bargaining.html#whats-special",
+    "title": "Bargaining",
+    "section": "What’s special",
+    "text": "What’s special\n\nTiming and outside options shape outcomes.\nWith discounting, delay is costly → early agreement is attractive.\nIncomplete information introduces screening and strategic delay."
+  },
+  {
+    "objectID": "notes/game-types/bargaining.html#one-example-alternating-offers-intuition",
+    "href": "notes/game-types/bargaining.html#one-example-alternating-offers-intuition",
+    "title": "Bargaining",
+    "section": "One example (alternating-offers, intuition)",
+    "text": "One example (alternating-offers, intuition)\nTwo players bargain over splitting 1. In each round, one proposes a split; the other accepts or rejects. If rejected, bargaining continues next round with discount factor \\(\\delta\\).\nBackward induction in the infinite-horizon model yields immediate agreement: the proposer offers the responder just enough to make them indifferent between accepting now vs rejecting and waiting. More patient players (higher \\(\\delta\\)) obtain better terms."
   },
   {
     "objectID": "foundations/convexity.html",
@@ -364,6 +504,90 @@
     "text": "About this blog"
   },
   {
+    "objectID": "notes/game-types/repeated.html",
+    "href": "notes/game-types/repeated.html",
+    "title": "Repeated games",
+    "section": "",
+    "text": "A repeated game plays the same stage game over time (finitely or infinitely many periods). Strategies can condition on history."
+  },
+  {
+    "objectID": "notes/game-types/repeated.html#what-it-is",
+    "href": "notes/game-types/repeated.html#what-it-is",
+    "title": "Repeated games",
+    "section": "",
+    "text": "A repeated game plays the same stage game over time (finitely or infinitely many periods). Strategies can condition on history."
+  },
+  {
+    "objectID": "notes/game-types/repeated.html#whats-special",
+    "href": "notes/game-types/repeated.html#whats-special",
+    "title": "Repeated games",
+    "section": "What’s special",
+    "text": "What’s special\n\nPast behavior can be rewarded/punished → enables cooperation even when the one-shot game would not.\nCentral ideas: incentives over time, credibility, and equilibrium path vs off-path threats.\nInfinite-horizon models often use a discount factor \\(\\delta\\in(0,1)\\)."
+  },
+  {
+    "objectID": "notes/game-types/repeated.html#one-example-grim-trigger-in-repeated-prisoners-dilemma",
+    "href": "notes/game-types/repeated.html#one-example-grim-trigger-in-repeated-prisoners-dilemma",
+    "title": "Repeated games",
+    "section": "One example (grim trigger in repeated Prisoner’s Dilemma)",
+    "text": "One example (grim trigger in repeated Prisoner’s Dilemma)\nStage game: cooperate \\(C\\) or defect \\(D\\). Typical payoffs: - \\((C,C)\\) gives \\((R,R)\\), - \\((D,C)\\) gives \\((T,S)\\), - \\((C,D)\\) gives \\((S,T)\\), - \\((D,D)\\) gives \\((P,P)\\), with \\(T&gt;R&gt;P&gt;S\\).\nGrim trigger strategy: start with \\(C\\), continue \\(C\\) unless someone defects; after any defection, play \\(D\\) forever.\nIncentive condition (intuition): cooperate today if the present temptation \\(T-R\\) is outweighed by the discounted future loss from punishment. Cooperation can be sustained if \\(\\delta\\) is sufficiently high."
+  },
+  {
+    "objectID": "notes/game-types/auctions.html",
+    "href": "notes/game-types/auctions.html",
+    "title": "Auctions",
+    "section": "",
+    "text": "Auctions allocate an item based on bids. Models differ by: - format (first-price, second-price, English, Dutch), - values (private values vs common values), - information (signals, asymmetries)."
+  },
+  {
+    "objectID": "notes/game-types/auctions.html#what-it-is",
+    "href": "notes/game-types/auctions.html#what-it-is",
+    "title": "Auctions",
+    "section": "",
+    "text": "Auctions allocate an item based on bids. Models differ by: - format (first-price, second-price, English, Dutch), - values (private values vs common values), - information (signals, asymmetries)."
+  },
+  {
+    "objectID": "notes/game-types/auctions.html#whats-special",
+    "href": "notes/game-types/auctions.html#whats-special",
+    "title": "Auctions",
+    "section": "What’s special",
+    "text": "What’s special\n\nBidding strategies trade off winning probability vs payment.\nIn private values with risk-neutral bidders, many formats have linked outcomes (revenue equivalence under conditions).\nIn common-value settings, bidders fear the winner’s curse."
+  },
+  {
+    "objectID": "notes/game-types/auctions.html#one-example-second-price-auction-private-values",
+    "href": "notes/game-types/auctions.html#one-example-second-price-auction-private-values",
+    "title": "Auctions",
+    "section": "One example (second-price auction, private values)",
+    "text": "One example (second-price auction, private values)\nEach bidder has value \\(v_i\\) for the item. In a second-price (Vickrey) auction, the highest bidder wins and pays the second-highest bid.\nA dominant strategy is: \\[\nb_i = v_i.\n\\]\nIntuition: your bid only affects whether you win, not what you pay conditional on winning. Overbidding risks winning at a price above your value; underbidding risks losing when you would have profited."
+  },
+  {
+    "objectID": "notes/game-types/normal-form.html",
+    "href": "notes/game-types/normal-form.html",
+    "title": "Normal-form games",
+    "section": "",
+    "text": "A normal-form game describes simultaneous choice: players pick actions without observing others’ choices.\nA (finite) two-player game is often written as payoff matrices \\((A,B)\\)."
+  },
+  {
+    "objectID": "notes/game-types/normal-form.html#what-it-is",
+    "href": "notes/game-types/normal-form.html#what-it-is",
+    "title": "Normal-form games",
+    "section": "",
+    "text": "A normal-form game describes simultaneous choice: players pick actions without observing others’ choices.\nA (finite) two-player game is often written as payoff matrices \\((A,B)\\)."
+  },
+  {
+    "objectID": "notes/game-types/normal-form.html#whats-special",
+    "href": "notes/game-types/normal-form.html#whats-special",
+    "title": "Normal-form games",
+    "section": "What’s special",
+    "text": "What’s special\n\nStrategy is a complete plan: choose an action (or a mixed strategy).\nKey solution concept: Nash equilibrium (possibly in mixed strategies).\nMany applications reduce to identifying best responses and intersections."
+  },
+  {
+    "objectID": "notes/game-types/normal-form.html#one-example-matching-pennies",
+    "href": "notes/game-types/normal-form.html#one-example-matching-pennies",
+    "title": "Normal-form games",
+    "section": "One example (matching pennies)",
+    "text": "One example (matching pennies)\nPlayer 1 chooses \\(H\\) or \\(T\\); player 2 chooses \\(H\\) or \\(T\\).\nPayoffs to player 1:\n\\[\nA=\n\\begin{pmatrix}\n1 & -1\\\\\n-1 & 1\n\\end{pmatrix}.\n\\]\nThere is no pure-strategy Nash equilibrium.\nIn the mixed equilibrium, both players randomize: \\[\nx=(1/2,1/2),\\quad y=(1/2,1/2).\n\\] Each player makes the other indifferent."
+  },
+  {
     "objectID": "notes/game-types/index.html",
     "href": "notes/game-types/index.html",
     "title": "Game types",
@@ -404,6 +628,62 @@
     "title": "Game types",
     "section": "Selection, dynamics, and structure",
     "text": "Selection, dynamics, and structure\n\nGlobal games / equilibrium selection\nEvolutionary games & learning\nNetwork games"
+  },
+  {
+    "objectID": "notes/game-types/network-games.html",
+    "href": "notes/game-types/network-games.html",
+    "title": "Network games",
+    "section": "",
+    "text": "In network games, each agent’s payoff depends on their action and the actions of their neighbors in a graph."
+  },
+  {
+    "objectID": "notes/game-types/network-games.html#what-it-is",
+    "href": "notes/game-types/network-games.html#what-it-is",
+    "title": "Network games",
+    "section": "",
+    "text": "In network games, each agent’s payoff depends on their action and the actions of their neighbors in a graph."
+  },
+  {
+    "objectID": "notes/game-types/network-games.html#whats-special",
+    "href": "notes/game-types/network-games.html#whats-special",
+    "title": "Network games",
+    "section": "What’s special",
+    "text": "What’s special\n\nLocal interactions can produce global patterns (cascades, clusters).\nStrategic complements/substitutes on a graph lead to amplification or dampening.\nNetwork position (centrality) can predict influence and equilibrium actions."
+  },
+  {
+    "objectID": "notes/game-types/network-games.html#one-example-linear-quadratic-network-game",
+    "href": "notes/game-types/network-games.html#one-example-linear-quadratic-network-game",
+    "title": "Network games",
+    "section": "One example (linear-quadratic network game)",
+    "text": "One example (linear-quadratic network game)\nLet \\(G\\) be an adjacency matrix and actions \\(a\\in\\mathbb{R}^n\\). A common form is:\n\\[\nu_i(a)=\\alpha a_i - \\frac12 a_i^2 + \\beta \\sum_j G_{ij} a_i a_j.\n\\]\nFOC for each \\(i\\) gives: \\[\na_i = \\alpha + \\beta \\sum_j G_{ij} a_j.\n\\]\nIn vector form: \\[\na = \\alpha \\mathbf{1} + \\beta G a\n\\quad\\Rightarrow\\quad\na = (I-\\beta G)^{-1}\\alpha \\mathbf{1},\n\\] when \\((I-\\beta G)\\) is invertible.\nIntuition: your action responds to neighbors; the network structure shapes equilibrium via the matrix inverse."
+  },
+  {
+    "objectID": "notes/game-types/bayesian.html",
+    "href": "notes/game-types/bayesian.html",
+    "title": "Bayesian games",
+    "section": "",
+    "text": "A Bayesian game models incomplete information: players have private types and hold beliefs about others’ types.\nA Bayesian Nash equilibrium (BNE) is a strategy profile where each type best-responds given beliefs."
+  },
+  {
+    "objectID": "notes/game-types/bayesian.html#what-it-is",
+    "href": "notes/game-types/bayesian.html#what-it-is",
+    "title": "Bayesian games",
+    "section": "",
+    "text": "A Bayesian game models incomplete information: players have private types and hold beliefs about others’ types.\nA Bayesian Nash equilibrium (BNE) is a strategy profile where each type best-responds given beliefs."
+  },
+  {
+    "objectID": "notes/game-types/bayesian.html#whats-special",
+    "href": "notes/game-types/bayesian.html#whats-special",
+    "title": "Bayesian games",
+    "section": "What’s special",
+    "text": "What’s special\n\nStrategies map types to actions.\nBeliefs (priors/posteriors) drive behavior.\nSame strategic logic as normal-form games, but with expectations over types."
+  },
+  {
+    "objectID": "notes/game-types/bayesian.html#one-example-2-type-entry-game",
+    "href": "notes/game-types/bayesian.html#one-example-2-type-entry-game",
+    "title": "Bayesian games",
+    "section": "One example (2-type entry game)",
+    "text": "One example (2-type entry game)\nPlayer 1 (incumbent) has type \\(\\theta\\in\\{H,L\\}\\) with \\(\\mathbb{P}(H)=p\\). Player 2 (entrant) chooses \\(E\\) (enter) or \\(O\\) (out). If entrant stays out: payoffs \\((1,0)\\).\nIf entrant enters: - If type is \\(H\\): fight is profitable for incumbent. - If type is \\(L\\): accommodate is better.\nToy payoff if entrant enters: - Type \\(H\\) incumbent prefers Fight, giving entrant payoff \\(-1\\). - Type \\(L\\) incumbent prefers Accommodate, giving entrant payoff \\(+1\\).\nEntrant enters if expected payoff is nonnegative: \\[\n\\mathbb{E}[\\pi_2 \\mid E] = p(-1) + (1-p)(+1) = 1-2p \\ge 0\n\\quad\\Rightarrow\\quad p \\le \\frac12.\n\\]\nSolution sketch. The entrant’s decision depends on the probability the incumbent is the tough type."
   },
   {
     "objectID": "notes/index.html",

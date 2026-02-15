@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>screening-mechanism – Margins of Rationality</title>
+<title>Screening &amp; mechanism design – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -117,15 +146,60 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
+  <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
+  <li><a href="#one-example-two-type-contract-menu" id="toc-one-example-two-type-contract-menu" class="nav-link" data-scroll-target="#one-example-two-type-contract-menu">One example (two-type contract menu)</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Screening &amp; mechanism design</h1>
+</div>
 
 
 
+<div class="quarto-title-meta column-page-left">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<section id="what-it-is" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
+<p>Screening (principal–agent with adverse selection) studies how a principal designs a menu of contracts to induce agents to reveal private information. Mechanism design generalizes this: choose rules to implement outcomes given strategic agents.</p>
+</section>
+<section id="whats-special" class="level2">
+<h2 class="anchored" data-anchor-id="whats-special">What’s special</h2>
+<ul>
+<li>Key constraint: <strong>incentive compatibility</strong> (each type prefers its intended option).</li>
+<li>Participation (individual rationality) often binds for the lowest type.</li>
+<li>Design trades off efficiency vs information rents.</li>
+</ul>
+</section>
+<section id="one-example-two-type-contract-menu" class="level2">
+<h2 class="anchored" data-anchor-id="one-example-two-type-contract-menu">One example (two-type contract menu)</h2>
+<p>Agent type <span class="math inline">\(\theta\in\{H,L\}\)</span> (productivity). Principal offers contracts <span class="math inline">\((w,q)\)</span>: wage and required output.</p>
+<p>Utility: <span class="math inline">\(u = w - c(q,\theta)\)</span>, where <span class="math inline">\(c(q,H) &lt; c(q,L)\)</span> (high type has lower cost).</p>
+<p>Principal wants higher <span class="math inline">\(q\)</span> from <span class="math inline">\(H\)</span> but must prevent <span class="math inline">\(H\)</span> from pretending to be <span class="math inline">\(L\)</span>.</p>
+<p><strong>Solution sketch.</strong> The optimal menu typically: - distorts the low-type contract downward (lower <span class="math inline">\(q\)</span>) to reduce information rents, - gives the high type a contract with higher <span class="math inline">\(q\)</span> and positive rent, - satisfies IC constraints: <span class="math inline">\(H\)</span> prefers <span class="math inline">\(H\)</span>-contract; <span class="math inline">\(L\)</span> prefers <span class="math inline">\(L\)</span>-contract.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

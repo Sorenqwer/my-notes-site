@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>network-games – Margins of Rationality</title>
+<title>Network games – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -117,15 +146,69 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
+  <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
+  <li><a href="#one-example-linear-quadratic-network-game" id="toc-one-example-linear-quadratic-network-game" class="nav-link" data-scroll-target="#one-example-linear-quadratic-network-game">One example (linear-quadratic network game)</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Network games</h1>
+</div>
 
 
 
+<div class="quarto-title-meta column-page-left">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<section id="what-it-is" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
+<p>In network games, each agent’s payoff depends on their action and the actions of their neighbors in a graph.</p>
+</section>
+<section id="whats-special" class="level2">
+<h2 class="anchored" data-anchor-id="whats-special">What’s special</h2>
+<ul>
+<li>Local interactions can produce global patterns (cascades, clusters).</li>
+<li>Strategic complements/substitutes on a graph lead to amplification or dampening.</li>
+<li>Network position (centrality) can predict influence and equilibrium actions.</li>
+</ul>
+</section>
+<section id="one-example-linear-quadratic-network-game" class="level2">
+<h2 class="anchored" data-anchor-id="one-example-linear-quadratic-network-game">One example (linear-quadratic network game)</h2>
+<p>Let <span class="math inline">\(G\)</span> be an adjacency matrix and actions <span class="math inline">\(a\in\mathbb{R}^n\)</span>. A common form is:</p>
+<p><span class="math display">\[
+u_i(a)=\alpha a_i - \frac12 a_i^2 + \beta \sum_j G_{ij} a_i a_j.
+\]</span></p>
+<p>FOC for each <span class="math inline">\(i\)</span> gives: <span class="math display">\[
+a_i = \alpha + \beta \sum_j G_{ij} a_j.
+\]</span></p>
+<p>In vector form: <span class="math display">\[
+a = \alpha \mathbf{1} + \beta G a
+\quad\Rightarrow\quad
+a = (I-\beta G)^{-1}\alpha \mathbf{1},
+\]</span> when <span class="math inline">\((I-\beta G)\)</span> is invertible.</p>
+<p><strong>Intuition:</strong> your action responds to neighbors; the network structure shapes equilibrium via the matrix inverse.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

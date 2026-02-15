@@ -1,0 +1,24 @@
+---
+title: "Screening & mechanism design"
+toc: true
+---
+
+## What it is
+Screening (principal–agent with adverse selection) studies how a principal designs a menu of contracts to induce agents to reveal private information. Mechanism design generalizes this: choose rules to implement outcomes given strategic agents.
+
+## What’s special
+- Key constraint: **incentive compatibility** (each type prefers its intended option).
+- Participation (individual rationality) often binds for the lowest type.
+- Design trades off efficiency vs information rents.
+
+## One example (two-type contract menu)
+Agent type $\theta\in\{H,L\}$ (productivity). Principal offers contracts $(w,q)$: wage and required output.
+
+Utility: $u = w - c(q,\theta)$, where $c(q,H) < c(q,L)$ (high type has lower cost).
+
+Principal wants higher $q$ from $H$ but must prevent $H$ from pretending to be $L$.
+
+**Solution sketch.** The optimal menu typically:
+- distorts the low-type contract downward (lower $q$) to reduce information rents,
+- gives the high type a contract with higher $q$ and positive rent,
+- satisfies IC constraints: $H$ prefers $H$-contract; $L$ prefers $L$-contract.

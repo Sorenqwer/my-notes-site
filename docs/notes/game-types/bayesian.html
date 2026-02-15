@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>bayesian – Margins of Rationality</title>
+<title>Bayesian games – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -117,15 +146,65 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
+  <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
+  <li><a href="#one-example-2-type-entry-game" id="toc-one-example-2-type-entry-game" class="nav-link" data-scroll-target="#one-example-2-type-entry-game">One example (2-type entry game)</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Bayesian games</h1>
+</div>
 
 
 
+<div class="quarto-title-meta column-page-left">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<section id="what-it-is" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
+<p>A Bayesian game models <strong>incomplete information</strong>: players have private types and hold beliefs about others’ types.</p>
+<p>A Bayesian Nash equilibrium (BNE) is a strategy profile where each type best-responds given beliefs.</p>
+</section>
+<section id="whats-special" class="level2">
+<h2 class="anchored" data-anchor-id="whats-special">What’s special</h2>
+<ul>
+<li>Strategies map <strong>types to actions</strong>.</li>
+<li>Beliefs (priors/posteriors) drive behavior.</li>
+<li>Same strategic logic as normal-form games, but with expectations over types.</li>
+</ul>
+</section>
+<section id="one-example-2-type-entry-game" class="level2">
+<h2 class="anchored" data-anchor-id="one-example-2-type-entry-game">One example (2-type entry game)</h2>
+<p>Player 1 (incumbent) has type <span class="math inline">\(\theta\in\{H,L\}\)</span> with <span class="math inline">\(\mathbb{P}(H)=p\)</span>. Player 2 (entrant) chooses <span class="math inline">\(E\)</span> (enter) or <span class="math inline">\(O\)</span> (out). If entrant stays out: payoffs <span class="math inline">\((1,0)\)</span>.</p>
+<p>If entrant enters: - If type is <span class="math inline">\(H\)</span>: fight is profitable for incumbent. - If type is <span class="math inline">\(L\)</span>: accommodate is better.</p>
+<p>Toy payoff if entrant enters: - Type <span class="math inline">\(H\)</span> incumbent prefers <strong>Fight</strong>, giving entrant payoff <span class="math inline">\(-1\)</span>. - Type <span class="math inline">\(L\)</span> incumbent prefers <strong>Accommodate</strong>, giving entrant payoff <span class="math inline">\(+1\)</span>.</p>
+<p>Entrant enters if expected payoff is nonnegative: <span class="math display">\[
+\mathbb{E}[\pi_2 \mid E] = p(-1) + (1-p)(+1) = 1-2p \ge 0
+\quad\Rightarrow\quad p \le \frac12.
+\]</span></p>
+<p><strong>Solution sketch.</strong> The entrant’s decision depends on the probability the incumbent is the tough type.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

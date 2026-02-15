@@ -1,0 +1,25 @@
+---
+title: "Auctions"
+toc: true
+---
+
+## What it is
+Auctions allocate an item based on bids. Models differ by:
+- **format** (first-price, second-price, English, Dutch),
+- **values** (private values vs common values),
+- **information** (signals, asymmetries).
+
+## What’s special
+- Bidding strategies trade off winning probability vs payment.
+- In private values with risk-neutral bidders, many formats have linked outcomes (revenue equivalence under conditions).
+- In common-value settings, bidders fear the **winner’s curse**.
+
+## One example (second-price auction, private values)
+Each bidder has value $v_i$ for the item. In a second-price (Vickrey) auction, the highest bidder wins and pays the second-highest bid.
+
+A dominant strategy is:
+$$
+b_i = v_i.
+$$
+
+**Intuition:** your bid only affects whether you win, not what you pay *conditional on winning*. Overbidding risks winning at a price above your value; underbidding risks losing when you would have profited.

@@ -1,0 +1,34 @@
+---
+title: "Network games"
+toc: true
+---
+
+## What it is
+In network games, each agent’s payoff depends on their action and the actions of their neighbors in a graph.
+
+## What’s special
+- Local interactions can produce global patterns (cascades, clusters).
+- Strategic complements/substitutes on a graph lead to amplification or dampening.
+- Network position (centrality) can predict influence and equilibrium actions.
+
+## One example (linear-quadratic network game)
+Let $G$ be an adjacency matrix and actions $a\in\mathbb{R}^n$. A common form is:
+
+$$
+u_i(a)=\alpha a_i - \frac12 a_i^2 + \beta \sum_j G_{ij} a_i a_j.
+$$
+
+FOC for each $i$ gives:
+$$
+a_i = \alpha + \beta \sum_j G_{ij} a_j.
+$$
+
+In vector form:
+$$
+a = \alpha \mathbf{1} + \beta G a
+\quad\Rightarrow\quad
+a = (I-\beta G)^{-1}\alpha \mathbf{1},
+$$
+when $(I-\beta G)$ is invertible.
+
+**Intuition:** your action responds to neighbors; the network structure shapes equilibrium via the matrix inverse.

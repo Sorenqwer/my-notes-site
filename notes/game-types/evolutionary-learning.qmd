@@ -1,0 +1,21 @@
+---
+title: "Evolutionary games & learning"
+toc: true
+---
+
+## What it is
+Evolutionary game theory studies strategy change over time via selection, imitation, or learning. Instead of fully rational choice each period, strategy shares evolve.
+
+## What’s special
+- Focus shifts from equilibrium as a static concept to **stability** under dynamics.
+- Key objects: **ESS** (evolutionarily stable strategy), replicator dynamics, learning rules.
+- Useful when players are boundedly rational or populations adapt.
+
+## One example (replicator dynamics, 2 strategies)
+Let the population share using strategy 1 be $x\in[0,1]$. If payoffs are $\pi_1(x)$ and $\pi_2(x)$, replicator dynamics are:
+
+$$
+\dot{x} = x(1-x)\bigl(\pi_1(x)-\pi_2(x)\bigr).
+$$
+
+**Intuition:** the share of a strategy grows when it performs better than the alternative. Fixed points correspond to states where neither strategy has a payoff advantage.

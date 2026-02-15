@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>auctions – Margins of Rationality</title>
+<title>Auctions – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -117,15 +146,61 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
+  <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
+  <li><a href="#one-example-second-price-auction-private-values" id="toc-one-example-second-price-auction-private-values" class="nav-link" data-scroll-target="#one-example-second-price-auction-private-values">One example (second-price auction, private values)</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Auctions</h1>
+</div>
 
 
 
+<div class="quarto-title-meta column-page-left">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<section id="what-it-is" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
+<p>Auctions allocate an item based on bids. Models differ by: - <strong>format</strong> (first-price, second-price, English, Dutch), - <strong>values</strong> (private values vs common values), - <strong>information</strong> (signals, asymmetries).</p>
+</section>
+<section id="whats-special" class="level2">
+<h2 class="anchored" data-anchor-id="whats-special">What’s special</h2>
+<ul>
+<li>Bidding strategies trade off winning probability vs payment.</li>
+<li>In private values with risk-neutral bidders, many formats have linked outcomes (revenue equivalence under conditions).</li>
+<li>In common-value settings, bidders fear the <strong>winner’s curse</strong>.</li>
+</ul>
+</section>
+<section id="one-example-second-price-auction-private-values" class="level2">
+<h2 class="anchored" data-anchor-id="one-example-second-price-auction-private-values">One example (second-price auction, private values)</h2>
+<p>Each bidder has value <span class="math inline">\(v_i\)</span> for the item. In a second-price (Vickrey) auction, the highest bidder wins and pays the second-highest bid.</p>
+<p>A dominant strategy is: <span class="math display">\[
+b_i = v_i.
+\]</span></p>
+<p><strong>Intuition:</strong> your bid only affects whether you win, not what you pay <em>conditional on winning</em>. Overbidding risks winning at a price above your value; underbidding risks losing when you would have profited.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

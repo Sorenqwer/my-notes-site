@@ -1,0 +1,24 @@
+---
+title: "Repeated games"
+toc: true
+---
+
+## What it is
+A repeated game plays the same stage game over time (finitely or infinitely many periods). Strategies can condition on history.
+
+## What’s special
+- Past behavior can be rewarded/punished → enables cooperation even when the one-shot game would not.
+- Central ideas: incentives over time, credibility, and equilibrium path vs off-path threats.
+- Infinite-horizon models often use a discount factor $\delta\in(0,1)$.
+
+## One example (grim trigger in repeated Prisoner's Dilemma)
+Stage game: cooperate $C$ or defect $D$. Typical payoffs:
+- $(C,C)$ gives $(R,R)$,
+- $(D,C)$ gives $(T,S)$,
+- $(C,D)$ gives $(S,T)$,
+- $(D,D)$ gives $(P,P)$,
+with $T>R>P>S$.
+
+**Grim trigger strategy:** start with $C$, continue $C$ unless someone defects; after any defection, play $D$ forever.
+
+**Incentive condition (intuition):** cooperate today if the present temptation $T-R$ is outweighed by the discounted future loss from punishment. Cooperation can be sustained if $\delta$ is sufficiently high.

@@ -1,0 +1,17 @@
+---
+title: "Bargaining"
+toc: true
+---
+
+## What it is
+Bargaining models how parties negotiate over surplus (price, wage, division of a pie), often with disagreement or delay.
+
+## What’s special
+- Timing and outside options shape outcomes.
+- With discounting, delay is costly → early agreement is attractive.
+- Incomplete information introduces screening and strategic delay.
+
+## One example (alternating-offers, intuition)
+Two players bargain over splitting 1. In each round, one proposes a split; the other accepts or rejects. If rejected, bargaining continues next round with discount factor $\delta$.
+
+Backward induction in the infinite-horizon model yields immediate agreement: the proposer offers the responder just enough to make them indifferent between accepting now vs rejecting and waiting. More patient players (higher $\delta$) obtain better terms.
