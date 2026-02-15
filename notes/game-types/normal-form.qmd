@@ -1,34 +1,25 @@
 ---
-title: "Normal-form games"
+title: "Normal-form (simultaneous move)"
 toc: true
 ---
 
 ## What it is
-A normal-form game describes **simultaneous** choice: players pick actions without observing others’ choices.
+A normal-form game models **simultaneous** choice: players pick actions without observing others’ choices.
 
-A (finite) two-player game is often written as payoff matrices $(A,B)$.
+A finite two-player game is often represented by payoff matrices $(A,B)$.
 
 ## What’s special
-- Strategy is a complete plan: choose an action (or a mixed strategy).
-- Key solution concept: **Nash equilibrium** (possibly in mixed strategies).
-- Many applications reduce to identifying best responses and intersections.
+- Strategies are complete plans chosen at once (pure or mixed).
+- Main solution concept: **Nash equilibrium** (possibly mixed).
+- Workhorse tools: best responses, dominance, indifference.
 
-## One example (matching pennies)
-Player 1 chooses $H$ or $T$; player 2 chooses $H$ or $T$.
+## One example (Prisoner's Dilemma)
+Actions: $C$ (cooperate) or $D$ (defect).
 
-Payoffs to player 1:
+Payoffs:
+- $(C,C)=(2,2)$
+- $(D,C)=(3,0)$
+- $(C,D)=(0,3)$
+- $(D,D)=(1,1)$
 
-$$
-A=
-\begin{pmatrix}
-1 & -1\\
--1 & 1
-\end{pmatrix}.
-$$
-
-There is **no** pure-strategy Nash equilibrium.  
-In the mixed equilibrium, both players randomize:
-$$
-x=(1/2,1/2),\quad y=(1/2,1/2).
-$$
-Each player makes the other indifferent.
+**Solution sketch.** $D$ strictly dominates $C$ for each player, so the unique Nash equilibrium is $(D,D)$, even though $(C,C)$ is Pareto-better.

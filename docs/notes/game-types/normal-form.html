@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Normal-form games – Margins of Rationality</title>
+<title>Normal-form (simultaneous move) – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -153,7 +153,7 @@ window.Quarto = {
   <ul>
   <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
   <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
-  <li><a href="#one-example-matching-pennies" id="toc-one-example-matching-pennies" class="nav-link" data-scroll-target="#one-example-matching-pennies">One example (matching pennies)</a></li>
+  <li><a href="#one-example-prisoners-dilemma" id="toc-one-example-prisoners-dilemma" class="nav-link" data-scroll-target="#one-example-prisoners-dilemma">One example (Prisoner’s Dilemma)</a></li>
   </ul>
 </nav>
     </div>
@@ -162,7 +162,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Normal-form games</h1>
+<h1 class="title">Normal-form (simultaneous move)</h1>
 </div>
 
 
@@ -181,32 +181,22 @@ window.Quarto = {
 
 <section id="what-it-is" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
-<p>A normal-form game describes <strong>simultaneous</strong> choice: players pick actions without observing others’ choices.</p>
-<p>A (finite) two-player game is often written as payoff matrices <span class="math inline">\((A,B)\)</span>.</p>
+<p>A normal-form game models <strong>simultaneous</strong> choice: players pick actions without observing others’ choices.</p>
+<p>A finite two-player game is often represented by payoff matrices <span class="math inline">\((A,B)\)</span>.</p>
 </section>
 <section id="whats-special" class="level2">
 <h2 class="anchored" data-anchor-id="whats-special">What’s special</h2>
 <ul>
-<li>Strategy is a complete plan: choose an action (or a mixed strategy).</li>
-<li>Key solution concept: <strong>Nash equilibrium</strong> (possibly in mixed strategies).</li>
-<li>Many applications reduce to identifying best responses and intersections.</li>
+<li>Strategies are complete plans chosen at once (pure or mixed).</li>
+<li>Main solution concept: <strong>Nash equilibrium</strong> (possibly mixed).</li>
+<li>Workhorse tools: best responses, dominance, indifference.</li>
 </ul>
 </section>
-<section id="one-example-matching-pennies" class="level2">
-<h2 class="anchored" data-anchor-id="one-example-matching-pennies">One example (matching pennies)</h2>
-<p>Player 1 chooses <span class="math inline">\(H\)</span> or <span class="math inline">\(T\)</span>; player 2 chooses <span class="math inline">\(H\)</span> or <span class="math inline">\(T\)</span>.</p>
-<p>Payoffs to player 1:</p>
-<p><span class="math display">\[
-A=
-\begin{pmatrix}
-1 &amp; -1\\
--1 &amp; 1
-\end{pmatrix}.
-\]</span></p>
-<p>There is <strong>no</strong> pure-strategy Nash equilibrium.<br>
-In the mixed equilibrium, both players randomize: <span class="math display">\[
-x=(1/2,1/2),\quad y=(1/2,1/2).
-\]</span> Each player makes the other indifferent.</p>
+<section id="one-example-prisoners-dilemma" class="level2">
+<h2 class="anchored" data-anchor-id="one-example-prisoners-dilemma">One example (Prisoner’s Dilemma)</h2>
+<p>Actions: <span class="math inline">\(C\)</span> (cooperate) or <span class="math inline">\(D\)</span> (defect).</p>
+<p>Payoffs: - <span class="math inline">\((C,C)=(2,2)\)</span> - <span class="math inline">\((D,C)=(3,0)\)</span> - <span class="math inline">\((C,D)=(0,3)\)</span> - <span class="math inline">\((D,D)=(1,1)\)</span></p>
+<p><strong>Solution sketch.</strong> <span class="math inline">\(D\)</span> strictly dominates <span class="math inline">\(C\)</span> for each player, so the unique Nash equilibrium is <span class="math inline">\((D,D)\)</span>, even though <span class="math inline">\((C,C)\)</span> is Pareto-better.</p>
 
 
 </section>

@@ -15,7 +15,8 @@ In finite game trees with perfect information, **backward induction** solves fro
 ## A tiny game tree (diagram)
 Below is a simple sequential choice: Player 1 chooses $A$ or $B$, then Player 2 chooses $L$ or $R$.
 
-```mermaid
+```markdown
+```{mermaid}
 flowchart TD
   S((Start)) -->|P1: A| A(( ))
   S -->|P1: B| B(( ))

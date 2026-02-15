@@ -480,7 +480,7 @@
     "href": "foundations/dynamic-reasoning.html#a-tiny-game-tree-diagram",
     "title": "Dynamic reasoning",
     "section": "A tiny game tree (diagram)",
-    "text": "A tiny game tree (diagram)\nBelow is a simple sequential choice: Player 1 chooses \\(A\\) or \\(B\\), then Player 2 chooses \\(L\\) or \\(R\\).\nflowchart TD\n  S((Start)) --&gt;|P1: A| A(( ))\n  S --&gt;|P1: B| B(( ))\n  A --&gt;|P2: L| AL[\"(2,1)\"]\n  A --&gt;|P2: R| AR[\"(0,0)\"]\n  B --&gt;|P2: L| BL[\"(1,2)\"]\n  B --&gt;|P2: R| BR[\"(3,0)\"]"
+    "text": "A tiny game tree (diagram)\nBelow is a simple sequential choice: Player 1 chooses \\(A\\) or \\(B\\), then Player 2 chooses \\(L\\) or \\(R\\).\n```{mermaid}\nflowchart TD\n  S((Start)) --&gt;|P1: A| A(( ))\n  S --&gt;|P1: B| B(( ))\n  A --&gt;|P2: L| AL[\"(2,1)\"]\n  A --&gt;|P2: R| AR[\"(0,0)\"]\n  B --&gt;|P2: L| BL[\"(1,2)\"]\n  B --&gt;|P2: R| BR[\"(3,0)\"]"
   },
   {
     "objectID": "foundations/dynamic-reasoning.html#one-step-backward-induction",
@@ -562,30 +562,30 @@
   {
     "objectID": "notes/game-types/normal-form.html",
     "href": "notes/game-types/normal-form.html",
-    "title": "Normal-form games",
+    "title": "Normal-form (simultaneous move)",
     "section": "",
-    "text": "A normal-form game describes simultaneous choice: players pick actions without observing others’ choices.\nA (finite) two-player game is often written as payoff matrices \\((A,B)\\)."
+    "text": "A normal-form game models simultaneous choice: players pick actions without observing others’ choices.\nA finite two-player game is often represented by payoff matrices \\((A,B)\\)."
   },
   {
     "objectID": "notes/game-types/normal-form.html#what-it-is",
     "href": "notes/game-types/normal-form.html#what-it-is",
-    "title": "Normal-form games",
+    "title": "Normal-form (simultaneous move)",
     "section": "",
-    "text": "A normal-form game describes simultaneous choice: players pick actions without observing others’ choices.\nA (finite) two-player game is often written as payoff matrices \\((A,B)\\)."
+    "text": "A normal-form game models simultaneous choice: players pick actions without observing others’ choices.\nA finite two-player game is often represented by payoff matrices \\((A,B)\\)."
   },
   {
     "objectID": "notes/game-types/normal-form.html#whats-special",
     "href": "notes/game-types/normal-form.html#whats-special",
-    "title": "Normal-form games",
+    "title": "Normal-form (simultaneous move)",
     "section": "What’s special",
-    "text": "What’s special\n\nStrategy is a complete plan: choose an action (or a mixed strategy).\nKey solution concept: Nash equilibrium (possibly in mixed strategies).\nMany applications reduce to identifying best responses and intersections."
+    "text": "What’s special\n\nStrategies are complete plans chosen at once (pure or mixed).\nMain solution concept: Nash equilibrium (possibly mixed).\nWorkhorse tools: best responses, dominance, indifference."
   },
   {
-    "objectID": "notes/game-types/normal-form.html#one-example-matching-pennies",
-    "href": "notes/game-types/normal-form.html#one-example-matching-pennies",
-    "title": "Normal-form games",
-    "section": "One example (matching pennies)",
-    "text": "One example (matching pennies)\nPlayer 1 chooses \\(H\\) or \\(T\\); player 2 chooses \\(H\\) or \\(T\\).\nPayoffs to player 1:\n\\[\nA=\n\\begin{pmatrix}\n1 & -1\\\\\n-1 & 1\n\\end{pmatrix}.\n\\]\nThere is no pure-strategy Nash equilibrium.\nIn the mixed equilibrium, both players randomize: \\[\nx=(1/2,1/2),\\quad y=(1/2,1/2).\n\\] Each player makes the other indifferent."
+    "objectID": "notes/game-types/normal-form.html#one-example-prisoners-dilemma",
+    "href": "notes/game-types/normal-form.html#one-example-prisoners-dilemma",
+    "title": "Normal-form (simultaneous move)",
+    "section": "One example (Prisoner’s Dilemma)",
+    "text": "One example (Prisoner’s Dilemma)\nActions: \\(C\\) (cooperate) or \\(D\\) (defect).\nPayoffs: - \\((C,C)=(2,2)\\) - \\((D,C)=(3,0)\\) - \\((C,D)=(0,3)\\) - \\((D,D)=(1,1)\\)\nSolution sketch. \\(D\\) strictly dominates \\(C\\) for each player, so the unique Nash equilibrium is \\((D,D)\\), even though \\((C,C)\\) is Pareto-better."
   },
   {
     "objectID": "notes/game-types/index.html",
