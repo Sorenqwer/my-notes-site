@@ -480,7 +480,7 @@
     "href": "foundations/dynamic-reasoning.html#a-tiny-game-tree-diagram",
     "title": "Dynamic reasoning",
     "section": "A tiny game tree (diagram)",
-    "text": "A tiny game tree (diagram)\nBelow is a simple sequential choice: Player 1 chooses \\(A\\) or \\(B\\), then Player 2 chooses \\(L\\) or \\(R\\).\n```{mermaid}\nflowchart TD\n  S((Start)) --&gt;|P1: A| A(( ))\n  S --&gt;|P1: B| B(( ))\n  A --&gt;|P2: L| AL[\"(2,1)\"]\n  A --&gt;|P2: R| AR[\"(0,0)\"]\n  B --&gt;|P2: L| BL[\"(1,2)\"]\n  B --&gt;|P2: R| BR[\"(3,0)\"]"
+    "text": "A tiny game tree (diagram)\nBelow is a simple sequential choice: Player 1 chooses \\(A\\) or \\(B\\), then Player 2 chooses \\(L\\) or \\(R\\).\n\n\n\n\n\nflowchart TD\n  S((Start)) --&gt;|P1: A| A(( ))\n  S --&gt;|P1: B| B(( ))\n  A --&gt;|P2: L| AL[\"(2,1)\"]\n  A --&gt;|P2: R| AR[\"(0,0)\"]\n  B --&gt;|P2: L| BL[\"(1,2)\"]\n  B --&gt;|P2: R| BR[\"(3,0)\"]"
   },
   {
     "objectID": "foundations/dynamic-reasoning.html#one-step-backward-induction",
