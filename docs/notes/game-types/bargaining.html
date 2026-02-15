@@ -154,6 +154,10 @@ window.Quarto = {
   <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
   <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
   <li><a href="#one-example-alternating-offers-intuition" id="toc-one-example-alternating-offers-intuition" class="nav-link" data-scroll-target="#one-example-alternating-offers-intuition">One example (alternating-offers, intuition)</a></li>
+  <li><a href="#story" id="toc-story" class="nav-link" data-scroll-target="#story">Story</a></li>
+  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
+  <li><a href="#equilibrium-rubinstein-alternating-offers-symmetric-discounting" id="toc-equilibrium-rubinstein-alternating-offers-symmetric-discounting" class="nav-link" data-scroll-target="#equilibrium-rubinstein-alternating-offers-symmetric-discounting">Equilibrium (Rubinstein alternating offers, symmetric discounting)</a></li>
+  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -195,6 +199,40 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="one-example-alternating-offers-intuition">One example (alternating-offers, intuition)</h2>
 <p>Two players bargain over splitting 1. In each round, one proposes a split; the other accepts or rejects. If rejected, bargaining continues next round with discount factor <span class="math inline">\(\delta\)</span>.</p>
 <p>Backward induction in the infinite-horizon model yields immediate agreement: the proposer offers the responder just enough to make them indifferent between accepting now vs rejecting and waiting. More patient players (higher <span class="math inline">\(\delta\)</span>) obtain better terms.</p>
+</section>
+<section id="story" class="level2">
+<h2 class="anchored" data-anchor-id="story">Story</h2>
+<p>Two coauthors must decide authorship order before tomorrow’s submission deadline. Delay is costly: missing the deadline reduces the paper’s impact. One proposes a split; the other can accept or reject. If rejected, the other proposes next round.</p>
+</section>
+<section id="model" class="level2">
+<h2 class="anchored" data-anchor-id="model">Model</h2>
+<ul>
+<li>Pie size: 1</li>
+<li>Alternating offers</li>
+<li>Common discount factor: <span class="math inline">\(\delta\in(0,1)\)</span></li>
+<li>Solution concept: subgame perfect equilibrium</li>
+</ul>
+</section>
+<section id="equilibrium-rubinstein-alternating-offers-symmetric-discounting" class="level2">
+<h2 class="anchored" data-anchor-id="equilibrium-rubinstein-alternating-offers-symmetric-discounting">Equilibrium (Rubinstein alternating offers, symmetric discounting)</h2>
+<p>In the infinite-horizon alternating-offers model with the same discount factor <span class="math inline">\(\delta\)</span> for both players, the unique SPE split is:</p>
+<ul>
+<li><p>First proposer receives: <span class="math display">\[
+\frac{1}{1+\delta}
+\]</span></p></li>
+<li><p>Responder receives: <span class="math display">\[
+\frac{\delta}{1+\delta}.
+\]</span></p></li>
+</ul>
+<p><strong>Intuition:</strong> rejecting means you become proposer next round, but you discount the future by <span class="math inline">\(\delta\)</span>.</p>
+</section>
+<section id="later-on-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<ul>
+<li><strong>Asymmetric patience:</strong> if one player has higher <span class="math inline">\(\delta\)</span>, they get a larger share.</li>
+<li><strong>Outside options:</strong> disagreement payoffs shift the split.</li>
+<li><strong>Incomplete information:</strong> can generate delay, signaling, and “toughness” reputations.</li>
+</ul>
 
 
 </section>

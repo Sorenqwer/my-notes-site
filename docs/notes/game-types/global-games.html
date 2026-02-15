@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -125,6 +154,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
   <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
   <li><a href="#one-example-currency-attack-intuition" id="toc-one-example-currency-attack-intuition" class="nav-link" data-scroll-target="#one-example-currency-attack-intuition">One example (currency-attack intuition)</a></li>
+  <li><a href="#story" id="toc-story" class="nav-link" data-scroll-target="#story">Story</a></li>
+  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
+  <li><a href="#equilibrium-threshold-form-idea" id="toc-equilibrium-threshold-form-idea" class="nav-link" data-scroll-target="#equilibrium-threshold-form-idea">Equilibrium (threshold form, idea)</a></li>
+  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -166,6 +199,33 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="one-example-currency-attack-intuition">One example (currency-attack intuition)</h2>
 <p>A government defends a peg if fundamentals are strong; speculators attack if they expect others to attack.</p>
 <p>Each speculator observes a noisy signal of the fundamental. If signals are slightly noisy, an equilibrium often takes a <strong>threshold form</strong>: attack if your signal is below a cutoff. The cutoff is pinned down endogenously, yielding a unique prediction.</p>
+</section>
+<section id="story" class="level2">
+<h2 class="anchored" data-anchor-id="story">Story</h2>
+<p>A bank can survive if depositors stay calm, but fails if too many withdraw. Everyone hears rumors, each slightly noisy. If you expect others to run, running is rational; if you expect calm, staying is rational. Multiple equilibria appear.</p>
+<p>Global games add tiny private noise and often recover a single “threshold” prediction.</p>
+</section>
+<section id="model" class="level2">
+<h2 class="anchored" data-anchor-id="model">Model</h2>
+<ul>
+<li>Fundamental <span class="math inline">\(\theta\)</span> (bank strength)</li>
+<li>Private signal: <span class="math inline">\(x_i=\theta+\varepsilon_i\)</span></li>
+<li>Action: withdraw or stay</li>
+<li>Payoffs depend on the fraction withdrawing</li>
+</ul>
+</section>
+<section id="equilibrium-threshold-form-idea" class="level2">
+<h2 class="anchored" data-anchor-id="equilibrium-threshold-form-idea">Equilibrium (threshold form, idea)</h2>
+<p>A typical global-games prediction is: - withdraw iff <span class="math inline">\(x_i \le x^*\)</span></p>
+<p>The cutoff <span class="math inline">\(x^*\)</span> solves an indifference condition at which a depositor is just willing to withdraw.</p>
+</section>
+<section id="later-on-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<ul>
+<li><strong>Selection:</strong> small noise breaks multiplicity and selects one equilibrium.</li>
+<li><strong>Policy:</strong> transparency and information disclosure can move the cutoff.</li>
+<li><strong>Related models:</strong> currency attacks, coordination failures, debt rollovers.</li>
+</ul>
 
 
 </section>

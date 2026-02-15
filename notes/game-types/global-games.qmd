@@ -15,3 +15,26 @@ Global games study equilibrium selection in coordination games by adding small p
 A government defends a peg if fundamentals are strong; speculators attack if they expect others to attack.
 
 Each speculator observes a noisy signal of the fundamental. If signals are slightly noisy, an equilibrium often takes a **threshold form**: attack if your signal is below a cutoff. The cutoff is pinned down endogenously, yielding a unique prediction.
+
+
+## Story
+A bank can survive if depositors stay calm, but fails if too many withdraw. Everyone hears rumors, each slightly noisy. If you expect others to run, running is rational; if you expect calm, staying is rational. Multiple equilibria appear.
+
+Global games add tiny private noise and often recover a single “threshold” prediction.
+
+## Model
+- Fundamental $\theta$ (bank strength)
+- Private signal: $x_i=\theta+\varepsilon_i$
+- Action: withdraw or stay
+- Payoffs depend on the fraction withdrawing
+
+## Equilibrium (threshold form, idea)
+A typical global-games prediction is:
+- withdraw iff $x_i \le x^*$
+
+The cutoff $x^*$ solves an indifference condition at which a depositor is just willing to withdraw.
+
+## Later-on analysis
+- **Selection:** small noise breaks multiplicity and selects one equilibrium.
+- **Policy:** transparency and information disclosure can move the cutoff.
+- **Related models:** currency attacks, coordination failures, debt rollovers.

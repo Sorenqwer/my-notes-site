@@ -154,6 +154,10 @@ window.Quarto = {
   <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
   <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
   <li><a href="#one-example-education-as-a-signal" id="toc-one-example-education-as-a-signal" class="nav-link" data-scroll-target="#one-example-education-as-a-signal">One example (education as a signal)</a></li>
+  <li><a href="#story" id="toc-story" class="nav-link" data-scroll-target="#story">Story</a></li>
+  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
+  <li><a href="#equilibrium-separating-vs-pooling" id="toc-equilibrium-separating-vs-pooling" class="nav-link" data-scroll-target="#equilibrium-separating-vs-pooling">Equilibrium (separating vs pooling)</a></li>
+  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -202,6 +206,35 @@ c_L(e) &gt; c_H(e)\ \text{for } e&gt;0.
 <li>Employer wants to pay higher wages if they believe the worker is <span class="math inline">\(H\)</span>.</li>
 </ul>
 <p>A separating equilibrium can exist where <span class="math inline">\(H\)</span> chooses a higher <span class="math inline">\(e\)</span> and <span class="math inline">\(L\)</span> chooses a lower <span class="math inline">\(e\)</span>, because mimicking is too costly for <span class="math inline">\(L\)</span>. The signal works because it changes beliefs and is differentially costly.</p>
+</section>
+<section id="story" class="level2">
+<h2 class="anchored" data-anchor-id="story">Story</h2>
+<p>A scholarship committee can’t observe applicant ability directly. Applicants can choose to take a difficult certification exam. High-ability students find it less costly; low-ability students find it very costly. The committee conditions its funding decision on the signal.</p>
+</section>
+<section id="model" class="level2">
+<h2 class="anchored" data-anchor-id="model">Model</h2>
+<ul>
+<li>Types: <span class="math inline">\(\theta\in\{H,L\}\)</span>, prior <span class="math inline">\(p\)</span></li>
+<li>Signal: <span class="math inline">\(e\in\{0,1\}\)</span> with costs <span class="math inline">\(c_H(1)&lt;c_L(1)\)</span> and <span class="math inline">\(c_H(0)=c_L(0)=0\)</span></li>
+<li>Receiver chooses reward based on beliefs after observing <span class="math inline">\(e\)</span></li>
+</ul>
+</section>
+<section id="equilibrium-separating-vs-pooling" class="level2">
+<h2 class="anchored" data-anchor-id="equilibrium-separating-vs-pooling">Equilibrium (separating vs pooling)</h2>
+<p>Let the reward be <span class="math inline">\(w_H\)</span> if perceived high type and <span class="math inline">\(w_L\)</span> otherwise.</p>
+<p>A separating equilibrium with <span class="math inline">\(H\)</span> choosing <span class="math inline">\(e=1\)</span> and <span class="math inline">\(L\)</span> choosing <span class="math inline">\(e=0\)</span> requires: <span class="math display">\[
+w_H-c_H(1)\ge w_L
+\quad\text{and}\quad
+w_H-c_L(1)\le w_L.
+\]</span></p>
+</section>
+<section id="later-on-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<ul>
+<li><strong>Pooling:</strong> if costs aren’t different enough, both types choose the same signal (signal loses meaning).</li>
+<li><strong>Off-path beliefs:</strong> dynamic equilibrium concepts differ in how they restrict beliefs after unexpected signals.</li>
+<li><strong>Continuous effort:</strong> allowing <span class="math inline">\(e\)</span> continuous yields richer separating thresholds and comparative statics.</li>
+</ul>
 
 
 </section>

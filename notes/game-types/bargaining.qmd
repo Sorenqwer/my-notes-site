@@ -15,3 +15,33 @@ Bargaining models how parties negotiate over surplus (price, wage, division of a
 Two players bargain over splitting 1. In each round, one proposes a split; the other accepts or rejects. If rejected, bargaining continues next round with discount factor $\delta$.
 
 Backward induction in the infinite-horizon model yields immediate agreement: the proposer offers the responder just enough to make them indifferent between accepting now vs rejecting and waiting. More patient players (higher $\delta$) obtain better terms.
+
+
+## Story
+Two coauthors must decide authorship order before tomorrow’s submission deadline. Delay is costly: missing the deadline reduces the paper’s impact. One proposes a split; the other can accept or reject. If rejected, the other proposes next round.
+
+## Model
+- Pie size: 1
+- Alternating offers
+- Common discount factor: $\delta\in(0,1)$
+- Solution concept: subgame perfect equilibrium
+
+## Equilibrium (Rubinstein alternating offers, symmetric discounting)
+In the infinite-horizon alternating-offers model with the same discount factor $\delta$ for both players, the unique SPE split is:
+
+- First proposer receives:
+$$
+\frac{1}{1+\delta}
+$$
+
+- Responder receives:
+$$
+\frac{\delta}{1+\delta}.
+$$
+
+**Intuition:** rejecting means you become proposer next round, but you discount the future by $\delta$.
+
+## Later-on analysis
+- **Asymmetric patience:** if one player has higher $\delta$, they get a larger share.
+- **Outside options:** disagreement payoffs shift the split.
+- **Incomplete information:** can generate delay, signaling, and “toughness” reputations.

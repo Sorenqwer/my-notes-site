@@ -154,6 +154,11 @@ window.Quarto = {
   <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
   <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
   <li><a href="#one-example-replicator-dynamics-2-strategies" id="toc-one-example-replicator-dynamics-2-strategies" class="nav-link" data-scroll-target="#one-example-replicator-dynamics-2-strategies">One example (replicator dynamics, 2 strategies)</a></li>
+  <li><a href="#story" id="toc-story" class="nav-link" data-scroll-target="#story">Story</a></li>
+  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
+  <li><a href="#dynamics-replicator" id="toc-dynamics-replicator" class="nav-link" data-scroll-target="#dynamics-replicator">Dynamics (replicator)</a></li>
+  <li><a href="#equilibrium-stability-what-to-look-for" id="toc-equilibrium-stability-what-to-look-for" class="nav-link" data-scroll-target="#equilibrium-stability-what-to-look-for">Equilibrium / stability (what to look for)</a></li>
+  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -198,6 +203,39 @@ window.Quarto = {
 \dot{x} = x(1-x)\bigl(\pi_1(x)-\pi_2(x)\bigr).
 \]</span></p>
 <p><strong>Intuition:</strong> the share of a strategy grows when it performs better than the alternative. Fixed points correspond to states where neither strategy has a payoff advantage.</p>
+</section>
+<section id="story" class="level2">
+<h2 class="anchored" data-anchor-id="story">Story</h2>
+<p>In a large community, newcomers copy behaviors that seem to “work.” Strategies that perform better spread. Nobody solves the game explicitly, yet population patterns evolve.</p>
+</section>
+<section id="model" class="level2">
+<h2 class="anchored" data-anchor-id="model">Model</h2>
+<ul>
+<li>Strategies are held by a population</li>
+<li>Relative payoff determines growth</li>
+<li>Dynamics describe how shares change</li>
+</ul>
+</section>
+<section id="dynamics-replicator" class="level2">
+<h2 class="anchored" data-anchor-id="dynamics-replicator">Dynamics (replicator)</h2>
+<p>Let <span class="math inline">\(x\)</span> be the share playing strategy 1, payoffs <span class="math inline">\(\pi_1(x)\)</span> and <span class="math inline">\(\pi_2(x)\)</span>: <span class="math display">\[
+\dot{x}=x(1-x)\bigl(\pi_1(x)-\pi_2(x)\bigr).
+\]</span></p>
+</section>
+<section id="equilibrium-stability-what-to-look-for" class="level2">
+<h2 class="anchored" data-anchor-id="equilibrium-stability-what-to-look-for">Equilibrium / stability (what to look for)</h2>
+<ul>
+<li>Rest points satisfy <span class="math inline">\(\dot{x}=0\)</span> (often <span class="math inline">\(x=0\)</span>, <span class="math inline">\(x=1\)</span>, or where <span class="math inline">\(\pi_1(x)=\pi_2(x)\)</span>).</li>
+<li>Stability depends on whether nearby deviations push <span class="math inline">\(x\)</span> back or away.</li>
+</ul>
+</section>
+<section id="later-on-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<ul>
+<li><strong>ESS:</strong> a refinement capturing robustness to mutant invasions.</li>
+<li><strong>Learning rules:</strong> fictitious play, reinforcement learning, best-response dynamics.</li>
+<li><strong>Link to Nash:</strong> some dynamics converge to Nash in certain classes of games, but not always.</li>
+</ul>
 
 
 </section>

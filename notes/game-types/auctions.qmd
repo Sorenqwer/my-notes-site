@@ -23,3 +23,27 @@ b_i = v_i.
 $$
 
 **Intuition:** your bid only affects whether you win, not what you pay *conditional on winning*. Overbidding risks winning at a price above your value; underbidding risks losing when you would have profited.
+
+
+
+## Story
+A tutor releases one Saturday slot. Many students bid; each has private urgency. The rule for who pays what shapes bidding incentives.
+
+## Model
+- Bidders $i=1,\dots,n$
+- Private values $v_i$
+- Bids $b_i$
+- Auction format determines allocation and payment
+
+## Equilibrium (second-price auction)
+In a second-price auction, the highest bidder wins and pays the second-highest bid. A dominant strategy is:
+$$
+b_i=v_i.
+$$
+
+**Reason (one-line):** your bid affects winning, but the price conditional on winning is the opponent’s bid, not yours.
+
+## Later-on analysis
+- **First-price auctions:** equilibrium involves bid shading; risk aversion matters.
+- **Common values:** winner’s curse and information aggregation dominate.
+- **Reserve prices and optimal design:** mechanism design connects auctions to revenue maximization.

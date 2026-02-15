@@ -22,3 +22,34 @@ Principal wants higher $q$ from $H$ but must prevent $H$ from pretending to be $
 - distorts the low-type contract downward (lower $q$) to reduce information rents,
 - gives the high type a contract with higher $q$ and positive rent,
 - satisfies IC constraints: $H$ prefers $H$-contract; $L$ prefers $L$-contract.
+
+## Story
+An insurer can’t observe customer risk. It offers two plans (a menu). Customers self-select. The insurer designs the menu so each type reveals itself by choosing the plan intended for it.
+
+## Model
+- Types $\theta\in\{H,L\}$ privately known
+- Contracts $(p,q)$: premium $p$ and coverage $q$
+- Utility: $u_\theta(p,q)=v_\theta(q)-p$
+- Goal: maximize profit subject to incentive constraints
+
+## Equilibrium constraints (IC/IR)
+Incentive compatibility:
+$$
+u_H(p_H,q_H)\ge u_H(p_L,q_L),
+\qquad
+u_L(p_L,q_L)\ge u_L(p_H,q_H).
+$$
+
+Individual rationality:
+$$
+u_\theta(p_\theta,q_\theta)\ge 0 \quad (\theta\in\{H,L\}).
+$$
+
+## What the solution typically looks like (high-level)
+- Low-type contract is often **distorted** (less generous) to reduce information rents.
+- High type receives more generous terms and may earn positive information rent.
+
+## Later-on analysis
+- **Moral hazard:** if effort is hidden too, the design problem changes (adverse selection + moral hazard).
+- **Multiple dimensions:** risk + risk aversion produces richer menus.
+- **Mechanism design view:** “contract menus” are a specific mechanism; the general theory asks what outcomes are implementable.

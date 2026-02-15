@@ -154,6 +154,11 @@ window.Quarto = {
   <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
   <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
   <li><a href="#one-example-two-type-contract-menu" id="toc-one-example-two-type-contract-menu" class="nav-link" data-scroll-target="#one-example-two-type-contract-menu">One example (two-type contract menu)</a></li>
+  <li><a href="#story" id="toc-story" class="nav-link" data-scroll-target="#story">Story</a></li>
+  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
+  <li><a href="#equilibrium-constraints-icir" id="toc-equilibrium-constraints-icir" class="nav-link" data-scroll-target="#equilibrium-constraints-icir">Equilibrium constraints (IC/IR)</a></li>
+  <li><a href="#what-the-solution-typically-looks-like-high-level" id="toc-what-the-solution-typically-looks-like-high-level" class="nav-link" data-scroll-target="#what-the-solution-typically-looks-like-high-level">What the solution typically looks like (high-level)</a></li>
+  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -197,6 +202,45 @@ window.Quarto = {
 <p>Utility: <span class="math inline">\(u = w - c(q,\theta)\)</span>, where <span class="math inline">\(c(q,H) &lt; c(q,L)\)</span> (high type has lower cost).</p>
 <p>Principal wants higher <span class="math inline">\(q\)</span> from <span class="math inline">\(H\)</span> but must prevent <span class="math inline">\(H\)</span> from pretending to be <span class="math inline">\(L\)</span>.</p>
 <p><strong>Solution sketch.</strong> The optimal menu typically: - distorts the low-type contract downward (lower <span class="math inline">\(q\)</span>) to reduce information rents, - gives the high type a contract with higher <span class="math inline">\(q\)</span> and positive rent, - satisfies IC constraints: <span class="math inline">\(H\)</span> prefers <span class="math inline">\(H\)</span>-contract; <span class="math inline">\(L\)</span> prefers <span class="math inline">\(L\)</span>-contract.</p>
+</section>
+<section id="story" class="level2">
+<h2 class="anchored" data-anchor-id="story">Story</h2>
+<p>An insurer can’t observe customer risk. It offers two plans (a menu). Customers self-select. The insurer designs the menu so each type reveals itself by choosing the plan intended for it.</p>
+</section>
+<section id="model" class="level2">
+<h2 class="anchored" data-anchor-id="model">Model</h2>
+<ul>
+<li>Types <span class="math inline">\(\theta\in\{H,L\}\)</span> privately known</li>
+<li>Contracts <span class="math inline">\((p,q)\)</span>: premium <span class="math inline">\(p\)</span> and coverage <span class="math inline">\(q\)</span></li>
+<li>Utility: <span class="math inline">\(u_\theta(p,q)=v_\theta(q)-p\)</span></li>
+<li>Goal: maximize profit subject to incentive constraints</li>
+</ul>
+</section>
+<section id="equilibrium-constraints-icir" class="level2">
+<h2 class="anchored" data-anchor-id="equilibrium-constraints-icir">Equilibrium constraints (IC/IR)</h2>
+<p>Incentive compatibility: <span class="math display">\[
+u_H(p_H,q_H)\ge u_H(p_L,q_L),
+\qquad
+u_L(p_L,q_L)\ge u_L(p_H,q_H).
+\]</span></p>
+<p>Individual rationality: <span class="math display">\[
+u_\theta(p_\theta,q_\theta)\ge 0 \quad (\theta\in\{H,L\}).
+\]</span></p>
+</section>
+<section id="what-the-solution-typically-looks-like-high-level" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-solution-typically-looks-like-high-level">What the solution typically looks like (high-level)</h2>
+<ul>
+<li>Low-type contract is often <strong>distorted</strong> (less generous) to reduce information rents.</li>
+<li>High type receives more generous terms and may earn positive information rent.</li>
+</ul>
+</section>
+<section id="later-on-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<ul>
+<li><strong>Moral hazard:</strong> if effort is hidden too, the design problem changes (adverse selection + moral hazard).</li>
+<li><strong>Multiple dimensions:</strong> risk + risk aversion produces richer menus.</li>
+<li><strong>Mechanism design view:</strong> “contract menus” are a specific mechanism; the general theory asks what outcomes are implementable.</li>
+</ul>
 
 
 </section>

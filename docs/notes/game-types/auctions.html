@@ -154,6 +154,10 @@ window.Quarto = {
   <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
   <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
   <li><a href="#one-example-second-price-auction-private-values" id="toc-one-example-second-price-auction-private-values" class="nav-link" data-scroll-target="#one-example-second-price-auction-private-values">One example (second-price auction, private values)</a></li>
+  <li><a href="#story" id="toc-story" class="nav-link" data-scroll-target="#story">Story</a></li>
+  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
+  <li><a href="#equilibrium-second-price-auction" id="toc-equilibrium-second-price-auction" class="nav-link" data-scroll-target="#equilibrium-second-price-auction">Equilibrium (second-price auction)</a></li>
+  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -198,6 +202,34 @@ window.Quarto = {
 b_i = v_i.
 \]</span></p>
 <p><strong>Intuition:</strong> your bid only affects whether you win, not what you pay <em>conditional on winning</em>. Overbidding risks winning at a price above your value; underbidding risks losing when you would have profited.</p>
+</section>
+<section id="story" class="level2">
+<h2 class="anchored" data-anchor-id="story">Story</h2>
+<p>A tutor releases one Saturday slot. Many students bid; each has private urgency. The rule for who pays what shapes bidding incentives.</p>
+</section>
+<section id="model" class="level2">
+<h2 class="anchored" data-anchor-id="model">Model</h2>
+<ul>
+<li>Bidders <span class="math inline">\(i=1,\dots,n\)</span></li>
+<li>Private values <span class="math inline">\(v_i\)</span></li>
+<li>Bids <span class="math inline">\(b_i\)</span></li>
+<li>Auction format determines allocation and payment</li>
+</ul>
+</section>
+<section id="equilibrium-second-price-auction" class="level2">
+<h2 class="anchored" data-anchor-id="equilibrium-second-price-auction">Equilibrium (second-price auction)</h2>
+<p>In a second-price auction, the highest bidder wins and pays the second-highest bid. A dominant strategy is: <span class="math display">\[
+b_i=v_i.
+\]</span></p>
+<p><strong>Reason (one-line):</strong> your bid affects winning, but the price conditional on winning is the opponent’s bid, not yours.</p>
+</section>
+<section id="later-on-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<ul>
+<li><strong>First-price auctions:</strong> equilibrium involves bid shading; risk aversion matters.</li>
+<li><strong>Common values:</strong> winner’s curse and information aggregation dominate.</li>
+<li><strong>Reserve prices and optimal design:</strong> mechanism design connects auctions to revenue maximization.</li>
+</ul>
 
 
 </section>

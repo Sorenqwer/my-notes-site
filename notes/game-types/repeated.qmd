@@ -22,3 +22,39 @@ with $T>R>P>S$.
 **Grim trigger strategy:** start with $C$, continue $C$ unless someone defects; after any defection, play $D$ forever.
 
 **Incentive condition (intuition):** cooperate today if the present temptation $T-R$ is outweighed by the discounted future loss from punishment. Cooperation can be sustained if $\delta$ is sufficiently high.
+
+## Story
+Two graduate students, **Kai** and **Mira**, share an office. Each week they decide whether to clean the shared space. Cleaning is effortful; skipping is tempting. If one keeps cleaning while the other skips, resentment builds. If both skip, the office becomes miserable.
+
+Because the choice repeats, today’s action can trigger tomorrow’s response.
+
+## Model
+- Stage actions: $C$ (clean), $S$ (shirk)
+- Stage payoffs (toy): PD-like
+- Infinite horizon with discount factor $\delta\in(0,1)$
+- Strategies can condition on history
+
+## Stage payoffs (toy)
+- $(C,C)=(2,2)$
+- $(S,C)=(3,0)$
+- $(C,S)=(0,3)$
+- $(S,S)=(1,1)$
+
+## Equilibrium (cooperation via grim trigger)
+Grim trigger: play $C$ unless someone shirks; after any shirking, play $S$ forever.
+
+Compare deviating once vs cooperating on-path (player 1, symmetric):
+- Cooperate forever payoff: $\frac{2}{1-\delta}$
+- Deviate once (get 3 now, then punished with 1 forever): $3 + \frac{\delta}{1-\delta}$
+
+Cooperation is sustainable if:
+$$
+\frac{2}{1-\delta} \ge 3+\frac{\delta}{1-\delta}
+\quad\Longleftrightarrow\quad
+\delta \ge \frac12.
+$$
+
+## Later-on analysis
+- **Finite horizon:** backward induction kills cooperation near the end (unless there are other frictions).
+- **Noisy actions:** if mistakes happen, harsh punishments can be inefficient; “forgiving” strategies (tit-for-tat variants) become relevant.
+- **Multiple equilibria:** repeated games often admit many equilibrium paths; selection becomes a real question.

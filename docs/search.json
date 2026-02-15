@@ -42,6 +42,41 @@
     "text": "One example (two-type contract menu)\nAgent type \\(\\theta\\in\\{H,L\\}\\) (productivity). Principal offers contracts \\((w,q)\\): wage and required output.\nUtility: \\(u = w - c(q,\\theta)\\), where \\(c(q,H) &lt; c(q,L)\\) (high type has lower cost).\nPrincipal wants higher \\(q\\) from \\(H\\) but must prevent \\(H\\) from pretending to be \\(L\\).\nSolution sketch. The optimal menu typically: - distorts the low-type contract downward (lower \\(q\\)) to reduce information rents, - gives the high type a contract with higher \\(q\\) and positive rent, - satisfies IC constraints: \\(H\\) prefers \\(H\\)-contract; \\(L\\) prefers \\(L\\)-contract."
   },
   {
+    "objectID": "notes/game-types/screening-mechanism.html#story",
+    "href": "notes/game-types/screening-mechanism.html#story",
+    "title": "Screening & mechanism design",
+    "section": "Story",
+    "text": "Story\nAn insurer can’t observe customer risk. It offers two plans (a menu). Customers self-select. The insurer designs the menu so each type reveals itself by choosing the plan intended for it."
+  },
+  {
+    "objectID": "notes/game-types/screening-mechanism.html#model",
+    "href": "notes/game-types/screening-mechanism.html#model",
+    "title": "Screening & mechanism design",
+    "section": "Model",
+    "text": "Model\n\nTypes \\(\\theta\\in\\{H,L\\}\\) privately known\nContracts \\((p,q)\\): premium \\(p\\) and coverage \\(q\\)\nUtility: \\(u_\\theta(p,q)=v_\\theta(q)-p\\)\nGoal: maximize profit subject to incentive constraints"
+  },
+  {
+    "objectID": "notes/game-types/screening-mechanism.html#equilibrium-constraints-icir",
+    "href": "notes/game-types/screening-mechanism.html#equilibrium-constraints-icir",
+    "title": "Screening & mechanism design",
+    "section": "Equilibrium constraints (IC/IR)",
+    "text": "Equilibrium constraints (IC/IR)\nIncentive compatibility: \\[\nu_H(p_H,q_H)\\ge u_H(p_L,q_L),\n\\qquad\nu_L(p_L,q_L)\\ge u_L(p_H,q_H).\n\\]\nIndividual rationality: \\[\nu_\\theta(p_\\theta,q_\\theta)\\ge 0 \\quad (\\theta\\in\\{H,L\\}).\n\\]"
+  },
+  {
+    "objectID": "notes/game-types/screening-mechanism.html#what-the-solution-typically-looks-like-high-level",
+    "href": "notes/game-types/screening-mechanism.html#what-the-solution-typically-looks-like-high-level",
+    "title": "Screening & mechanism design",
+    "section": "What the solution typically looks like (high-level)",
+    "text": "What the solution typically looks like (high-level)\n\nLow-type contract is often distorted (less generous) to reduce information rents.\nHigh type receives more generous terms and may earn positive information rent."
+  },
+  {
+    "objectID": "notes/game-types/screening-mechanism.html#later-on-analysis",
+    "href": "notes/game-types/screening-mechanism.html#later-on-analysis",
+    "title": "Screening & mechanism design",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nMoral hazard: if effort is hidden too, the design problem changes (adverse selection + moral hazard).\nMultiple dimensions: risk + risk aversion produces richer menus.\nMechanism design view: “contract menus” are a specific mechanism; the general theory asks what outcomes are implementable."
+  },
+  {
     "objectID": "notes/game-types/cheap-talk.html",
     "href": "notes/game-types/cheap-talk.html",
     "title": "Cheap talk",
@@ -68,6 +103,41 @@
     "title": "Cheap talk",
     "section": "One example",
     "text": "One example\n\nSetup (a stylized version)\n\nState: \\(\\theta \\in [0,1]\\) is known to the sender.\nMessage: \\(m\\) is any costless statement.\nReceiver chooses action \\(a\\in[0,1]\\).\n\nPayoffs: - Receiver wants \\(a\\) close to \\(\\theta\\). - Sender wants \\(a\\) close to \\(\\theta + b\\) (bias \\(b&gt;0\\)).\n\n\nKey idea\nIf the bias \\(b\\) is small, the sender can truthfully separate states into intervals (“coarse truth”), and the receiver best-responds by choosing the expected state within the reported interval. If \\(b\\) is large, communication becomes uninformative (pooling)."
+  },
+  {
+    "objectID": "notes/game-types/cheap-talk.html#story",
+    "href": "notes/game-types/cheap-talk.html#story",
+    "title": "Cheap talk",
+    "section": "Story",
+    "text": "Story\nYou ask a friend for a restaurant recommendation in a new city. Your friend knows the options. But your tastes differ: they love loud, spicy places; you want calm and mild. They aren’t lying—they just have a bias.\nCheap talk studies whether costless messages can still transmit information when incentives aren’t perfectly aligned."
+  },
+  {
+    "objectID": "notes/game-types/cheap-talk.html#model",
+    "href": "notes/game-types/cheap-talk.html#model",
+    "title": "Cheap talk",
+    "section": "Model",
+    "text": "Model\n\nState \\(\\theta\\) known to sender\nMessage \\(m\\) is costless and non-binding\nReceiver chooses action \\(a\\)\nPreferences are biased"
+  },
+  {
+    "objectID": "notes/game-types/cheap-talk.html#core-math-quadratic-loss-bias",
+    "href": "notes/game-types/cheap-talk.html#core-math-quadratic-loss-bias",
+    "title": "Cheap talk",
+    "section": "Core math (quadratic loss, bias)",
+    "text": "Core math (quadratic loss, bias)\nLet \\(\\theta\\in[0,1]\\), \\(a\\in[0,1]\\).\nReceiver: \\[\nu_R=-(a-\\theta)^2\n\\]\nSender (bias \\(b&gt;0\\)): \\[\nu_S=-(a-(\\theta+b))^2\n\\]"
+  },
+  {
+    "objectID": "notes/game-types/cheap-talk.html#equilibrium-what-to-expect",
+    "href": "notes/game-types/cheap-talk.html#equilibrium-what-to-expect",
+    "title": "Cheap talk",
+    "section": "Equilibrium (what to expect)",
+    "text": "Equilibrium (what to expect)\n\nThere is always a babbling equilibrium: messages convey no information and the receiver chooses a constant action (based on the prior).\nWhen bias is not too large, there are partition equilibria: the sender truthfully reveals which interval \\(\\theta\\) lies in; the receiver responds with the conditional mean of that interval."
+  },
+  {
+    "objectID": "notes/game-types/cheap-talk.html#later-on-analysis",
+    "href": "notes/game-types/cheap-talk.html#later-on-analysis",
+    "title": "Cheap talk",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nMore alignment → more information: smaller bias typically supports finer partitions.\nCredibility via commitment: if the sender could commit to a rule (information design), outcomes change drastically.\nCostly messages → signaling: adding costs turns cheap talk into signaling."
   },
   {
     "objectID": "notes/game-types/signaling.html",
@@ -98,6 +168,34 @@
     "text": "One example (education as a signal)\nTypes: high ability \\(H\\) and low ability \\(L\\).\nSender chooses education level \\(e\\ge 0\\); receiver (employer) offers wage \\(w(e)\\).\n\nEducation is more costly for \\(L\\) than \\(H\\) (single-crossing idea): \\[\nc_L(e) &gt; c_H(e)\\ \\text{for } e&gt;0.\n\\]\nEmployer wants to pay higher wages if they believe the worker is \\(H\\).\n\nA separating equilibrium can exist where \\(H\\) chooses a higher \\(e\\) and \\(L\\) chooses a lower \\(e\\), because mimicking is too costly for \\(L\\). The signal works because it changes beliefs and is differentially costly."
   },
   {
+    "objectID": "notes/game-types/signaling.html#story",
+    "href": "notes/game-types/signaling.html#story",
+    "title": "Signaling games",
+    "section": "Story",
+    "text": "Story\nA scholarship committee can’t observe applicant ability directly. Applicants can choose to take a difficult certification exam. High-ability students find it less costly; low-ability students find it very costly. The committee conditions its funding decision on the signal."
+  },
+  {
+    "objectID": "notes/game-types/signaling.html#model",
+    "href": "notes/game-types/signaling.html#model",
+    "title": "Signaling games",
+    "section": "Model",
+    "text": "Model\n\nTypes: \\(\\theta\\in\\{H,L\\}\\), prior \\(p\\)\nSignal: \\(e\\in\\{0,1\\}\\) with costs \\(c_H(1)&lt;c_L(1)\\) and \\(c_H(0)=c_L(0)=0\\)\nReceiver chooses reward based on beliefs after observing \\(e\\)"
+  },
+  {
+    "objectID": "notes/game-types/signaling.html#equilibrium-separating-vs-pooling",
+    "href": "notes/game-types/signaling.html#equilibrium-separating-vs-pooling",
+    "title": "Signaling games",
+    "section": "Equilibrium (separating vs pooling)",
+    "text": "Equilibrium (separating vs pooling)\nLet the reward be \\(w_H\\) if perceived high type and \\(w_L\\) otherwise.\nA separating equilibrium with \\(H\\) choosing \\(e=1\\) and \\(L\\) choosing \\(e=0\\) requires: \\[\nw_H-c_H(1)\\ge w_L\n\\quad\\text{and}\\quad\nw_H-c_L(1)\\le w_L.\n\\]"
+  },
+  {
+    "objectID": "notes/game-types/signaling.html#later-on-analysis",
+    "href": "notes/game-types/signaling.html#later-on-analysis",
+    "title": "Signaling games",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nPooling: if costs aren’t different enough, both types choose the same signal (signal loses meaning).\nOff-path beliefs: dynamic equilibrium concepts differ in how they restrict beliefs after unexpected signals.\nContinuous effort: allowing \\(e\\) continuous yields richer separating thresholds and comparative statics."
+  },
+  {
     "objectID": "notes/game-types/evolutionary-learning.html",
     "href": "notes/game-types/evolutionary-learning.html",
     "title": "Evolutionary games & learning",
@@ -124,6 +222,41 @@
     "title": "Evolutionary games & learning",
     "section": "One example (replicator dynamics, 2 strategies)",
     "text": "One example (replicator dynamics, 2 strategies)\nLet the population share using strategy 1 be \\(x\\in[0,1]\\). If payoffs are \\(\\pi_1(x)\\) and \\(\\pi_2(x)\\), replicator dynamics are:\n\\[\n\\dot{x} = x(1-x)\\bigl(\\pi_1(x)-\\pi_2(x)\\bigr).\n\\]\nIntuition: the share of a strategy grows when it performs better than the alternative. Fixed points correspond to states where neither strategy has a payoff advantage."
+  },
+  {
+    "objectID": "notes/game-types/evolutionary-learning.html#story",
+    "href": "notes/game-types/evolutionary-learning.html#story",
+    "title": "Evolutionary games & learning",
+    "section": "Story",
+    "text": "Story\nIn a large community, newcomers copy behaviors that seem to “work.” Strategies that perform better spread. Nobody solves the game explicitly, yet population patterns evolve."
+  },
+  {
+    "objectID": "notes/game-types/evolutionary-learning.html#model",
+    "href": "notes/game-types/evolutionary-learning.html#model",
+    "title": "Evolutionary games & learning",
+    "section": "Model",
+    "text": "Model\n\nStrategies are held by a population\nRelative payoff determines growth\nDynamics describe how shares change"
+  },
+  {
+    "objectID": "notes/game-types/evolutionary-learning.html#dynamics-replicator",
+    "href": "notes/game-types/evolutionary-learning.html#dynamics-replicator",
+    "title": "Evolutionary games & learning",
+    "section": "Dynamics (replicator)",
+    "text": "Dynamics (replicator)\nLet \\(x\\) be the share playing strategy 1, payoffs \\(\\pi_1(x)\\) and \\(\\pi_2(x)\\): \\[\n\\dot{x}=x(1-x)\\bigl(\\pi_1(x)-\\pi_2(x)\\bigr).\n\\]"
+  },
+  {
+    "objectID": "notes/game-types/evolutionary-learning.html#equilibrium-stability-what-to-look-for",
+    "href": "notes/game-types/evolutionary-learning.html#equilibrium-stability-what-to-look-for",
+    "title": "Evolutionary games & learning",
+    "section": "Equilibrium / stability (what to look for)",
+    "text": "Equilibrium / stability (what to look for)\n\nRest points satisfy \\(\\dot{x}=0\\) (often \\(x=0\\), \\(x=1\\), or where \\(\\pi_1(x)=\\pi_2(x)\\)).\nStability depends on whether nearby deviations push \\(x\\) back or away."
+  },
+  {
+    "objectID": "notes/game-types/evolutionary-learning.html#later-on-analysis",
+    "href": "notes/game-types/evolutionary-learning.html#later-on-analysis",
+    "title": "Evolutionary games & learning",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nESS: a refinement capturing robustness to mutant invasions.\nLearning rules: fictitious play, reinforcement learning, best-response dynamics.\nLink to Nash: some dynamics converge to Nash in certain classes of games, but not always."
   },
   {
     "objectID": "notes/game-types/global-games.html",
@@ -154,6 +287,34 @@
     "text": "One example (currency-attack intuition)\nA government defends a peg if fundamentals are strong; speculators attack if they expect others to attack.\nEach speculator observes a noisy signal of the fundamental. If signals are slightly noisy, an equilibrium often takes a threshold form: attack if your signal is below a cutoff. The cutoff is pinned down endogenously, yielding a unique prediction."
   },
   {
+    "objectID": "notes/game-types/global-games.html#story",
+    "href": "notes/game-types/global-games.html#story",
+    "title": "Global games / equilibrium selection",
+    "section": "Story",
+    "text": "Story\nA bank can survive if depositors stay calm, but fails if too many withdraw. Everyone hears rumors, each slightly noisy. If you expect others to run, running is rational; if you expect calm, staying is rational. Multiple equilibria appear.\nGlobal games add tiny private noise and often recover a single “threshold” prediction."
+  },
+  {
+    "objectID": "notes/game-types/global-games.html#model",
+    "href": "notes/game-types/global-games.html#model",
+    "title": "Global games / equilibrium selection",
+    "section": "Model",
+    "text": "Model\n\nFundamental \\(\\theta\\) (bank strength)\nPrivate signal: \\(x_i=\\theta+\\varepsilon_i\\)\nAction: withdraw or stay\nPayoffs depend on the fraction withdrawing"
+  },
+  {
+    "objectID": "notes/game-types/global-games.html#equilibrium-threshold-form-idea",
+    "href": "notes/game-types/global-games.html#equilibrium-threshold-form-idea",
+    "title": "Global games / equilibrium selection",
+    "section": "Equilibrium (threshold form, idea)",
+    "text": "Equilibrium (threshold form, idea)\nA typical global-games prediction is: - withdraw iff \\(x_i \\le x^*\\)\nThe cutoff \\(x^*\\) solves an indifference condition at which a depositor is just willing to withdraw."
+  },
+  {
+    "objectID": "notes/game-types/global-games.html#later-on-analysis",
+    "href": "notes/game-types/global-games.html#later-on-analysis",
+    "title": "Global games / equilibrium selection",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nSelection: small noise breaks multiplicity and selects one equilibrium.\nPolicy: transparency and information disclosure can move the cutoff.\nRelated models: currency attacks, coordination failures, debt rollovers."
+  },
+  {
     "objectID": "notes/game-types/extensive-form.html",
     "href": "notes/game-types/extensive-form.html",
     "title": "Extensive-form games",
@@ -182,6 +343,41 @@
     "text": "One example (backward induction)\n\n\n\n\n\nflowchart TD\n  S((Start)) --&gt;|P1: A| A(( ))\n  S --&gt;|P1: B| B(( ))\n  A --&gt;|P2: L| AL[\"(2,1)\"]\n  A --&gt;|P2: R| AR[\"(0,0)\"]\n  B --&gt;|P2: L| BL[\"(1,2)\"]\n  B --&gt;|P2: R| BR[\"(3,0)\"]\n\n\n\n\n\n\nPlayer 2 chooses L after \\(A\\) (since \\(1&gt;0\\)) and L after \\(B\\) (since \\(2&gt;0\\)).\nAnticipating this, player 1 prefers \\(A\\) (since \\(2&gt;1\\)). Outcome: \\((A,L)\\)."
   },
   {
+    "objectID": "notes/game-types/extensive-form.html#story",
+    "href": "notes/game-types/extensive-form.html#story",
+    "title": "Extensive-form games",
+    "section": "Story",
+    "text": "Story\nA landlord, Ms. K, is renewing a lease with Rin. The neighborhood has improved, and Ms. K considers raising rent. Ms. K chooses first: a moderate raise or an aggressive one. Rin then decides: accept or move out.\nThe key is timing: Rin observes the offer before acting, and Ms. K anticipates Rin’s response."
+  },
+  {
+    "objectID": "notes/game-types/extensive-form.html#model",
+    "href": "notes/game-types/extensive-form.html#model",
+    "title": "Extensive-form games",
+    "section": "Model",
+    "text": "Model\n\nPlayer 1 (landlord): \\(L\\) (low increase) or \\(H\\) (high increase)\nPlayer 2 (tenant): after observing, \\(A\\) (accept) or \\(M\\) (move)\nInformation: perfect (tenant observes the offer)\nSolution concept: backward induction / SPE"
+  },
+  {
+    "objectID": "notes/game-types/extensive-form.html#game-tree-toy",
+    "href": "notes/game-types/extensive-form.html#game-tree-toy",
+    "title": "Extensive-form games",
+    "section": "Game tree (toy)",
+    "text": "Game tree (toy)\n\n\n\n\n\nflowchart TD\n  S((Start)) --&gt;|P1: L| L(( ))\n  S --&gt;|P1: H| H(( ))\n  L --&gt;|P2: A| LA[\"(2,2)\"]\n  L --&gt;|P2: M| LM[\"(0,1)\"]\n  H --&gt;|P2: A| HA[\"(3,0)\"]\n  H --&gt;|P2: M| HM[\"(0,1)\"]"
+  },
+  {
+    "objectID": "notes/game-types/extensive-form.html#equilibrium-backward-induction-spe",
+    "href": "notes/game-types/extensive-form.html#equilibrium-backward-induction-spe",
+    "title": "Extensive-form games",
+    "section": "Equilibrium (backward induction → SPE)",
+    "text": "Equilibrium (backward induction → SPE)\nStep 1 (tenant’s optimal actions at the second stage): - After \\(L\\): compare tenant payoff \\(2\\) (accept) vs \\(1\\) (move) → choose \\(A\\) - After \\(H\\): compare tenant payoff \\(0\\) (accept) vs \\(1\\) (move) → choose \\(M\\)\nStep 2 (landlord anticipates this): - If choose \\(L\\) → outcome \\((2,2)\\) - If choose \\(H\\) → tenant moves → outcome \\((0,1)\\)\nSo landlord chooses \\(L\\).\nSPE outcome: \\((L,A)\\)."
+  },
+  {
+    "objectID": "notes/game-types/extensive-form.html#later-on-analysis",
+    "href": "notes/game-types/extensive-form.html#later-on-analysis",
+    "title": "Extensive-form games",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nOutside option changes: if moving becomes less costly, the landlord’s ability to raise rent shrinks.\nIncomplete information: if Ms. K doesn’t know Rin’s moving cost, the game becomes Bayesian and can generate screening/signaling behavior.\nCommitment: if Rin could commit to “move if any increase,” outcomes shift again (commitment changes the tree)."
+  },
+  {
     "objectID": "notes/game-types/bargaining.html",
     "href": "notes/game-types/bargaining.html",
     "title": "Bargaining",
@@ -208,6 +404,34 @@
     "title": "Bargaining",
     "section": "One example (alternating-offers, intuition)",
     "text": "One example (alternating-offers, intuition)\nTwo players bargain over splitting 1. In each round, one proposes a split; the other accepts or rejects. If rejected, bargaining continues next round with discount factor \\(\\delta\\).\nBackward induction in the infinite-horizon model yields immediate agreement: the proposer offers the responder just enough to make them indifferent between accepting now vs rejecting and waiting. More patient players (higher \\(\\delta\\)) obtain better terms."
+  },
+  {
+    "objectID": "notes/game-types/bargaining.html#story",
+    "href": "notes/game-types/bargaining.html#story",
+    "title": "Bargaining",
+    "section": "Story",
+    "text": "Story\nTwo coauthors must decide authorship order before tomorrow’s submission deadline. Delay is costly: missing the deadline reduces the paper’s impact. One proposes a split; the other can accept or reject. If rejected, the other proposes next round."
+  },
+  {
+    "objectID": "notes/game-types/bargaining.html#model",
+    "href": "notes/game-types/bargaining.html#model",
+    "title": "Bargaining",
+    "section": "Model",
+    "text": "Model\n\nPie size: 1\nAlternating offers\nCommon discount factor: \\(\\delta\\in(0,1)\\)\nSolution concept: subgame perfect equilibrium"
+  },
+  {
+    "objectID": "notes/game-types/bargaining.html#equilibrium-rubinstein-alternating-offers-symmetric-discounting",
+    "href": "notes/game-types/bargaining.html#equilibrium-rubinstein-alternating-offers-symmetric-discounting",
+    "title": "Bargaining",
+    "section": "Equilibrium (Rubinstein alternating offers, symmetric discounting)",
+    "text": "Equilibrium (Rubinstein alternating offers, symmetric discounting)\nIn the infinite-horizon alternating-offers model with the same discount factor \\(\\delta\\) for both players, the unique SPE split is:\n\nFirst proposer receives: \\[\n\\frac{1}{1+\\delta}\n\\]\nResponder receives: \\[\n\\frac{\\delta}{1+\\delta}.\n\\]\n\nIntuition: rejecting means you become proposer next round, but you discount the future by \\(\\delta\\)."
+  },
+  {
+    "objectID": "notes/game-types/bargaining.html#later-on-analysis",
+    "href": "notes/game-types/bargaining.html#later-on-analysis",
+    "title": "Bargaining",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nAsymmetric patience: if one player has higher \\(\\delta\\), they get a larger share.\nOutside options: disagreement payoffs shift the split.\nIncomplete information: can generate delay, signaling, and “toughness” reputations."
   },
   {
     "objectID": "foundations/convexity.html",
@@ -532,6 +756,41 @@
     "text": "One example (grim trigger in repeated Prisoner’s Dilemma)\nStage game: cooperate \\(C\\) or defect \\(D\\). Typical payoffs: - \\((C,C)\\) gives \\((R,R)\\), - \\((D,C)\\) gives \\((T,S)\\), - \\((C,D)\\) gives \\((S,T)\\), - \\((D,D)\\) gives \\((P,P)\\), with \\(T&gt;R&gt;P&gt;S\\).\nGrim trigger strategy: start with \\(C\\), continue \\(C\\) unless someone defects; after any defection, play \\(D\\) forever.\nIncentive condition (intuition): cooperate today if the present temptation \\(T-R\\) is outweighed by the discounted future loss from punishment. Cooperation can be sustained if \\(\\delta\\) is sufficiently high."
   },
   {
+    "objectID": "notes/game-types/repeated.html#story",
+    "href": "notes/game-types/repeated.html#story",
+    "title": "Repeated games",
+    "section": "Story",
+    "text": "Story\nTwo graduate students, Kai and Mira, share an office. Each week they decide whether to clean the shared space. Cleaning is effortful; skipping is tempting. If one keeps cleaning while the other skips, resentment builds. If both skip, the office becomes miserable.\nBecause the choice repeats, today’s action can trigger tomorrow’s response."
+  },
+  {
+    "objectID": "notes/game-types/repeated.html#model",
+    "href": "notes/game-types/repeated.html#model",
+    "title": "Repeated games",
+    "section": "Model",
+    "text": "Model\n\nStage actions: \\(C\\) (clean), \\(S\\) (shirk)\nStage payoffs (toy): PD-like\nInfinite horizon with discount factor \\(\\delta\\in(0,1)\\)\nStrategies can condition on history"
+  },
+  {
+    "objectID": "notes/game-types/repeated.html#stage-payoffs-toy",
+    "href": "notes/game-types/repeated.html#stage-payoffs-toy",
+    "title": "Repeated games",
+    "section": "Stage payoffs (toy)",
+    "text": "Stage payoffs (toy)\n\n\\((C,C)=(2,2)\\)\n\\((S,C)=(3,0)\\)\n\\((C,S)=(0,3)\\)\n\\((S,S)=(1,1)\\)"
+  },
+  {
+    "objectID": "notes/game-types/repeated.html#equilibrium-cooperation-via-grim-trigger",
+    "href": "notes/game-types/repeated.html#equilibrium-cooperation-via-grim-trigger",
+    "title": "Repeated games",
+    "section": "Equilibrium (cooperation via grim trigger)",
+    "text": "Equilibrium (cooperation via grim trigger)\nGrim trigger: play \\(C\\) unless someone shirks; after any shirking, play \\(S\\) forever.\nCompare deviating once vs cooperating on-path (player 1, symmetric): - Cooperate forever payoff: \\(\\frac{2}{1-\\delta}\\) - Deviate once (get 3 now, then punished with 1 forever): \\(3 + \\frac{\\delta}{1-\\delta}\\)\nCooperation is sustainable if: \\[\n\\frac{2}{1-\\delta} \\ge 3+\\frac{\\delta}{1-\\delta}\n\\quad\\Longleftrightarrow\\quad\n\\delta \\ge \\frac12.\n\\]"
+  },
+  {
+    "objectID": "notes/game-types/repeated.html#later-on-analysis",
+    "href": "notes/game-types/repeated.html#later-on-analysis",
+    "title": "Repeated games",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nFinite horizon: backward induction kills cooperation near the end (unless there are other frictions).\nNoisy actions: if mistakes happen, harsh punishments can be inefficient; “forgiving” strategies (tit-for-tat variants) become relevant.\nMultiple equilibria: repeated games often admit many equilibrium paths; selection becomes a real question."
+  },
+  {
     "objectID": "notes/game-types/auctions.html",
     "href": "notes/game-types/auctions.html",
     "title": "Auctions",
@@ -560,6 +819,34 @@
     "text": "One example (second-price auction, private values)\nEach bidder has value \\(v_i\\) for the item. In a second-price (Vickrey) auction, the highest bidder wins and pays the second-highest bid.\nA dominant strategy is: \\[\nb_i = v_i.\n\\]\nIntuition: your bid only affects whether you win, not what you pay conditional on winning. Overbidding risks winning at a price above your value; underbidding risks losing when you would have profited."
   },
   {
+    "objectID": "notes/game-types/auctions.html#story",
+    "href": "notes/game-types/auctions.html#story",
+    "title": "Auctions",
+    "section": "Story",
+    "text": "Story\nA tutor releases one Saturday slot. Many students bid; each has private urgency. The rule for who pays what shapes bidding incentives."
+  },
+  {
+    "objectID": "notes/game-types/auctions.html#model",
+    "href": "notes/game-types/auctions.html#model",
+    "title": "Auctions",
+    "section": "Model",
+    "text": "Model\n\nBidders \\(i=1,\\dots,n\\)\nPrivate values \\(v_i\\)\nBids \\(b_i\\)\nAuction format determines allocation and payment"
+  },
+  {
+    "objectID": "notes/game-types/auctions.html#equilibrium-second-price-auction",
+    "href": "notes/game-types/auctions.html#equilibrium-second-price-auction",
+    "title": "Auctions",
+    "section": "Equilibrium (second-price auction)",
+    "text": "Equilibrium (second-price auction)\nIn a second-price auction, the highest bidder wins and pays the second-highest bid. A dominant strategy is: \\[\nb_i=v_i.\n\\]\nReason (one-line): your bid affects winning, but the price conditional on winning is the opponent’s bid, not yours."
+  },
+  {
+    "objectID": "notes/game-types/auctions.html#later-on-analysis",
+    "href": "notes/game-types/auctions.html#later-on-analysis",
+    "title": "Auctions",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nFirst-price auctions: equilibrium involves bid shading; risk aversion matters.\nCommon values: winner’s curse and information aggregation dominate.\nReserve prices and optimal design: mechanism design connects auctions to revenue maximization."
+  },
+  {
     "objectID": "notes/game-types/normal-form.html",
     "href": "notes/game-types/normal-form.html",
     "title": "Normal-form (simultaneous move)",
@@ -586,6 +873,41 @@
     "title": "Normal-form (simultaneous move)",
     "section": "One example (Prisoner’s Dilemma)",
     "text": "One example (Prisoner’s Dilemma)\nActions: \\(C\\) (cooperate) or \\(D\\) (defect).\nPayoffs: - \\((C,C)=(2,2)\\) - \\((D,C)=(3,0)\\) - \\((C,D)=(0,3)\\) - \\((D,D)=(1,1)\\)\nSolution sketch. \\(D\\) strictly dominates \\(C\\) for each player, so the unique Nash equilibrium is \\((D,D)\\), even though \\((C,C)\\) is Pareto-better."
+  },
+  {
+    "objectID": "notes/game-types/normal-form.html#story",
+    "href": "notes/game-types/normal-form.html#story",
+    "title": "Normal-form (simultaneous move)",
+    "section": "Story",
+    "text": "Story\nTwo independent cafés, North Bean and South Bean, sit across the same narrow street by a commuter station. Tomorrow morning there will be a marathon: heavy demand, impatient customers, and intense competition for foot traffic. Tonight, each café must decide whether to run a deep discount.\nIf only one café discounts, it steals attention and most walk-ins. If both discount, they split the crowd but both suffer thin margins. If neither discounts, both do fine—yet each fears being the only one who doesn’t discount.\nThey decide simultaneously: no café observes the other’s choice before committing."
+  },
+  {
+    "objectID": "notes/game-types/normal-form.html#model",
+    "href": "notes/game-types/normal-form.html#model",
+    "title": "Normal-form (simultaneous move)",
+    "section": "Model",
+    "text": "Model\n\nPlayers: cafés \\(1,2\\)\nActions: \\(D\\) (discount), \\(N\\) (normal)\nTiming: simultaneous\nPayoffs: profits"
+  },
+  {
+    "objectID": "notes/game-types/normal-form.html#payoffs-toy",
+    "href": "notes/game-types/normal-form.html#payoffs-toy",
+    "title": "Normal-form (simultaneous move)",
+    "section": "Payoffs (toy)",
+    "text": "Payoffs (toy)\n\\[\n\\begin{array}{c|cc}\n& D & N\\\\ \\hline\nD & (1,1) & (3,0)\\\\\nN & (0,3) & (2,2)\n\\end{array}\n\\]"
+  },
+  {
+    "objectID": "notes/game-types/normal-form.html#equilibrium-nash",
+    "href": "notes/game-types/normal-form.html#equilibrium-nash",
+    "title": "Normal-form (simultaneous move)",
+    "section": "Equilibrium (Nash)",
+    "text": "Equilibrium (Nash)\nBest responses: - If the other chooses \\(N\\), your best response is \\(D\\) (you gain market share). - If the other chooses \\(D\\), your best response is \\(D\\) (you avoid being undercut).\nSo \\(D\\) is a best response to both opponent actions: the unique Nash equilibrium is \\((D,D)\\)."
+  },
+  {
+    "objectID": "notes/game-types/normal-form.html#later-on-analysis",
+    "href": "notes/game-types/normal-form.html#later-on-analysis",
+    "title": "Normal-form (simultaneous move)",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nWhy it matters: this is the basic logic behind price wars and “race to the bottom” outcomes.\nIf repeated: repeated interaction can sustain \\((N,N)\\) via punishments (see Repeated games).\nIf asymmetric costs: one café might never discount, shifting equilibrium and welfare."
   },
   {
     "objectID": "notes/game-types/index.html",
@@ -658,6 +980,34 @@
     "text": "One example (linear-quadratic network game)\nLet \\(G\\) be an adjacency matrix and actions \\(a\\in\\mathbb{R}^n\\). A common form is:\n\\[\nu_i(a)=\\alpha a_i - \\frac12 a_i^2 + \\beta \\sum_j G_{ij} a_i a_j.\n\\]\nFOC for each \\(i\\) gives: \\[\na_i = \\alpha + \\beta \\sum_j G_{ij} a_j.\n\\]\nIn vector form: \\[\na = \\alpha \\mathbf{1} + \\beta G a\n\\quad\\Rightarrow\\quad\na = (I-\\beta G)^{-1}\\alpha \\mathbf{1},\n\\] when \\((I-\\beta G)\\) is invertible.\nIntuition: your action responds to neighbors; the network structure shapes equilibrium via the matrix inverse."
   },
   {
+    "objectID": "notes/game-types/network-games.html#story",
+    "href": "notes/game-types/network-games.html#story",
+    "title": "Network games",
+    "section": "Story",
+    "text": "Story\nStudy effort spreads through friendships: when your neighbors study more, you feel pressure and motivation. Your best response depends on your local network, and the network structure shapes the overall pattern."
+  },
+  {
+    "objectID": "notes/game-types/network-games.html#model",
+    "href": "notes/game-types/network-games.html#model",
+    "title": "Network games",
+    "section": "Model",
+    "text": "Model\n\nPlayers are nodes in a graph with adjacency matrix \\(G\\)\nEach chooses action \\(a_i\\)\nPayoff has spillovers with neighbors"
+  },
+  {
+    "objectID": "notes/game-types/network-games.html#equilibrium-linear-quadratic-network-game",
+    "href": "notes/game-types/network-games.html#equilibrium-linear-quadratic-network-game",
+    "title": "Network games",
+    "section": "Equilibrium (linear-quadratic network game)",
+    "text": "Equilibrium (linear-quadratic network game)\nUtility: \\[\nu_i(a)=\\alpha a_i-\\frac12 a_i^2+\\beta\\sum_j G_{ij}a_i a_j.\n\\]\nFOC: \\[\na_i=\\alpha+\\beta\\sum_j G_{ij}a_j.\n\\]\nVector form: \\[\na=\\alpha\\mathbf 1+\\beta G a\n\\quad\\Rightarrow\\quad\na=(I-\\beta G)^{-1}\\alpha\\mathbf 1,\n\\] provided \\((I-\\beta G)\\) is invertible (a common sufficient condition is \\(|\\beta|&lt;1/\\rho(G)\\) where \\(\\rho(G)\\) is the spectral radius)."
+  },
+  {
+    "objectID": "notes/game-types/network-games.html#later-on-analysis",
+    "href": "notes/game-types/network-games.html#later-on-analysis",
+    "title": "Network games",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nComplements vs substitutes: sign of \\(\\beta\\) changes amplification vs dampening.\nCentrality: equilibrium actions often correlate with network centrality.\nInterventions: targeted subsidies/penalties can propagate through the network."
+  },
+  {
     "objectID": "notes/game-types/bayesian.html",
     "href": "notes/game-types/bayesian.html",
     "title": "Bayesian games",
@@ -684,6 +1034,34 @@
     "title": "Bayesian games",
     "section": "One example (2-type entry game)",
     "text": "One example (2-type entry game)\nPlayer 1 (incumbent) has type \\(\\theta\\in\\{H,L\\}\\) with \\(\\mathbb{P}(H)=p\\). Player 2 (entrant) chooses \\(E\\) (enter) or \\(O\\) (out). If entrant stays out: payoffs \\((1,0)\\).\nIf entrant enters: - If type is \\(H\\): fight is profitable for incumbent. - If type is \\(L\\): accommodate is better.\nToy payoff if entrant enters: - Type \\(H\\) incumbent prefers Fight, giving entrant payoff \\(-1\\). - Type \\(L\\) incumbent prefers Accommodate, giving entrant payoff \\(+1\\).\nEntrant enters if expected payoff is nonnegative: \\[\n\\mathbb{E}[\\pi_2 \\mid E] = p(-1) + (1-p)(+1) = 1-2p \\ge 0\n\\quad\\Rightarrow\\quad p \\le \\frac12.\n\\]\nSolution sketch. The entrant’s decision depends on the probability the incumbent is the tough type."
+  },
+  {
+    "objectID": "notes/game-types/bayesian.html#story",
+    "href": "notes/game-types/bayesian.html#story",
+    "title": "Bayesian games",
+    "section": "Story",
+    "text": "Story\nA startup founder, Eden, pitches an angel investor. Eden knows whether the startup is strong or weak. The investor can’t fully verify this in one meeting. Funding a strong startup is profitable; funding a weak one is a loss.\nThe investor’s action is based on beliefs about Eden’s (hidden) type."
+  },
+  {
+    "objectID": "notes/game-types/bayesian.html#model",
+    "href": "notes/game-types/bayesian.html#model",
+    "title": "Bayesian games",
+    "section": "Model",
+    "text": "Model\n\nFounder type: \\(\\theta\\in\\{S,W\\}\\) with prior \\(\\Pr(S)=p\\)\nInvestor action: fund \\(F\\) or reject \\(R\\)\nPayoff to investor: if \\(F\\), payoff \\(+1\\) under \\(S\\) and \\(-1\\) under \\(W\\); if \\(R\\), payoff \\(0\\)"
+  },
+  {
+    "objectID": "notes/game-types/bayesian.html#equilibrium-threshold-best-response",
+    "href": "notes/game-types/bayesian.html#equilibrium-threshold-best-response",
+    "title": "Bayesian games",
+    "section": "Equilibrium (threshold best response)",
+    "text": "Equilibrium (threshold best response)\nInvestor funds iff expected payoff is nonnegative: \\[\n\\mathbb{E}[\\pi \\mid F]=p(1)+(1-p)(-1)=2p-1 \\ge 0\n\\quad\\Rightarrow\\quad\np\\ge \\tfrac12.\n\\]"
+  },
+  {
+    "objectID": "notes/game-types/bayesian.html#later-on-analysis",
+    "href": "notes/game-types/bayesian.html#later-on-analysis",
+    "title": "Bayesian games",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nSignals: if the pitch provides a signal, beliefs update via Bayes’ rule before the funding choice.\nStrategic disclosure: if the founder can choose what to reveal, this becomes a signaling/cheap-talk hybrid.\nMultiple types: richer type spaces yield cutoff strategies and comparative statics in \\(p\\)."
   },
   {
     "objectID": "notes/index.html",

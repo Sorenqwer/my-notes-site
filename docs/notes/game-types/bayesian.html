@@ -154,6 +154,10 @@ window.Quarto = {
   <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
   <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
   <li><a href="#one-example-2-type-entry-game" id="toc-one-example-2-type-entry-game" class="nav-link" data-scroll-target="#one-example-2-type-entry-game">One example (2-type entry game)</a></li>
+  <li><a href="#story" id="toc-story" class="nav-link" data-scroll-target="#story">Story</a></li>
+  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
+  <li><a href="#equilibrium-threshold-best-response" id="toc-equilibrium-threshold-best-response" class="nav-link" data-scroll-target="#equilibrium-threshold-best-response">Equilibrium (threshold best response)</a></li>
+  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -202,6 +206,35 @@ window.Quarto = {
 \quad\Rightarrow\quad p \le \frac12.
 \]</span></p>
 <p><strong>Solution sketch.</strong> The entrant’s decision depends on the probability the incumbent is the tough type.</p>
+</section>
+<section id="story" class="level2">
+<h2 class="anchored" data-anchor-id="story">Story</h2>
+<p>A startup founder, <strong>Eden</strong>, pitches an angel investor. Eden knows whether the startup is strong or weak. The investor can’t fully verify this in one meeting. Funding a strong startup is profitable; funding a weak one is a loss.</p>
+<p>The investor’s action is based on beliefs about Eden’s (hidden) type.</p>
+</section>
+<section id="model" class="level2">
+<h2 class="anchored" data-anchor-id="model">Model</h2>
+<ul>
+<li>Founder type: <span class="math inline">\(\theta\in\{S,W\}\)</span> with prior <span class="math inline">\(\Pr(S)=p\)</span></li>
+<li>Investor action: fund <span class="math inline">\(F\)</span> or reject <span class="math inline">\(R\)</span></li>
+<li>Payoff to investor: if <span class="math inline">\(F\)</span>, payoff <span class="math inline">\(+1\)</span> under <span class="math inline">\(S\)</span> and <span class="math inline">\(-1\)</span> under <span class="math inline">\(W\)</span>; if <span class="math inline">\(R\)</span>, payoff <span class="math inline">\(0\)</span></li>
+</ul>
+</section>
+<section id="equilibrium-threshold-best-response" class="level2">
+<h2 class="anchored" data-anchor-id="equilibrium-threshold-best-response">Equilibrium (threshold best response)</h2>
+<p>Investor funds iff expected payoff is nonnegative: <span class="math display">\[
+\mathbb{E}[\pi \mid F]=p(1)+(1-p)(-1)=2p-1 \ge 0
+\quad\Rightarrow\quad
+p\ge \tfrac12.
+\]</span></p>
+</section>
+<section id="later-on-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<ul>
+<li><strong>Signals:</strong> if the pitch provides a signal, beliefs update via Bayes’ rule before the funding choice.</li>
+<li><strong>Strategic disclosure:</strong> if the founder can choose what to reveal, this becomes a signaling/cheap-talk hybrid.</li>
+<li><strong>Multiple types:</strong> richer type spaces yield cutoff strategies and comparative statics in <span class="math inline">\(p\)</span>.</li>
+</ul>
 
 
 </section>

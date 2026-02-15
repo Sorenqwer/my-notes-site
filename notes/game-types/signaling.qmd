@@ -22,3 +22,27 @@ Sender chooses education level $e\ge 0$; receiver (employer) offers wage $w(e)$.
 - Employer wants to pay higher wages if they believe the worker is $H$.
 
 A separating equilibrium can exist where $H$ chooses a higher $e$ and $L$ chooses a lower $e$, because mimicking is too costly for $L$. The signal works because it changes beliefs and is differentially costly.
+
+
+## Story
+A scholarship committee can’t observe applicant ability directly. Applicants can choose to take a difficult certification exam. High-ability students find it less costly; low-ability students find it very costly. The committee conditions its funding decision on the signal.
+
+## Model
+- Types: $\theta\in\{H,L\}$, prior $p$
+- Signal: $e\in\{0,1\}$ with costs $c_H(1)<c_L(1)$ and $c_H(0)=c_L(0)=0$
+- Receiver chooses reward based on beliefs after observing $e$
+
+## Equilibrium (separating vs pooling)
+Let the reward be $w_H$ if perceived high type and $w_L$ otherwise.
+
+A separating equilibrium with $H$ choosing $e=1$ and $L$ choosing $e=0$ requires:
+$$
+w_H-c_H(1)\ge w_L
+\quad\text{and}\quad
+w_H-c_L(1)\le w_L.
+$$
+
+## Later-on analysis
+- **Pooling:** if costs aren’t different enough, both types choose the same signal (signal loses meaning).
+- **Off-path beliefs:** dynamic equilibrium concepts differ in how they restrict beliefs after unexpected signals.
+- **Continuous effort:** allowing $e$ continuous yields richer separating thresholds and comparative statics.

@@ -154,6 +154,11 @@ window.Quarto = {
   <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
   <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
   <li><a href="#one-example-prisoners-dilemma" id="toc-one-example-prisoners-dilemma" class="nav-link" data-scroll-target="#one-example-prisoners-dilemma">One example (Prisoner’s Dilemma)</a></li>
+  <li><a href="#story" id="toc-story" class="nav-link" data-scroll-target="#story">Story</a></li>
+  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
+  <li><a href="#payoffs-toy" id="toc-payoffs-toy" class="nav-link" data-scroll-target="#payoffs-toy">Payoffs (toy)</a></li>
+  <li><a href="#equilibrium-nash" id="toc-equilibrium-nash" class="nav-link" data-scroll-target="#equilibrium-nash">Equilibrium (Nash)</a></li>
+  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -197,6 +202,44 @@ window.Quarto = {
 <p>Actions: <span class="math inline">\(C\)</span> (cooperate) or <span class="math inline">\(D\)</span> (defect).</p>
 <p>Payoffs: - <span class="math inline">\((C,C)=(2,2)\)</span> - <span class="math inline">\((D,C)=(3,0)\)</span> - <span class="math inline">\((C,D)=(0,3)\)</span> - <span class="math inline">\((D,D)=(1,1)\)</span></p>
 <p><strong>Solution sketch.</strong> <span class="math inline">\(D\)</span> strictly dominates <span class="math inline">\(C\)</span> for each player, so the unique Nash equilibrium is <span class="math inline">\((D,D)\)</span>, even though <span class="math inline">\((C,C)\)</span> is Pareto-better.</p>
+</section>
+<section id="story" class="level2">
+<h2 class="anchored" data-anchor-id="story">Story</h2>
+<p>Two independent cafés, <strong>North Bean</strong> and <strong>South Bean</strong>, sit across the same narrow street by a commuter station. Tomorrow morning there will be a marathon: heavy demand, impatient customers, and intense competition for foot traffic. Tonight, each café must decide whether to run a deep discount.</p>
+<p>If only one café discounts, it steals attention and most walk-ins. If both discount, they split the crowd but both suffer thin margins. If neither discounts, both do fine—yet each fears being the only one who doesn’t discount.</p>
+<p>They decide simultaneously: no café observes the other’s choice before committing.</p>
+</section>
+<section id="model" class="level2">
+<h2 class="anchored" data-anchor-id="model">Model</h2>
+<ul>
+<li>Players: cafés <span class="math inline">\(1,2\)</span></li>
+<li>Actions: <span class="math inline">\(D\)</span> (discount), <span class="math inline">\(N\)</span> (normal)</li>
+<li>Timing: simultaneous</li>
+<li>Payoffs: profits</li>
+</ul>
+</section>
+<section id="payoffs-toy" class="level2">
+<h2 class="anchored" data-anchor-id="payoffs-toy">Payoffs (toy)</h2>
+<p><span class="math display">\[
+\begin{array}{c|cc}
+&amp; D &amp; N\\ \hline
+D &amp; (1,1) &amp; (3,0)\\
+N &amp; (0,3) &amp; (2,2)
+\end{array}
+\]</span></p>
+</section>
+<section id="equilibrium-nash" class="level2">
+<h2 class="anchored" data-anchor-id="equilibrium-nash">Equilibrium (Nash)</h2>
+<p>Best responses: - If the other chooses <span class="math inline">\(N\)</span>, your best response is <span class="math inline">\(D\)</span> (you gain market share). - If the other chooses <span class="math inline">\(D\)</span>, your best response is <span class="math inline">\(D\)</span> (you avoid being undercut).</p>
+<p>So <span class="math inline">\(D\)</span> is a best response to both opponent actions: the unique Nash equilibrium is <span class="math inline">\((D,D)\)</span>.</p>
+</section>
+<section id="later-on-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<ul>
+<li><strong>Why it matters:</strong> this is the basic logic behind price wars and “race to the bottom” outcomes.</li>
+<li><strong>If repeated:</strong> repeated interaction can sustain <span class="math inline">\((N,N)\)</span> via punishments (see Repeated games).</li>
+<li><strong>If asymmetric costs:</strong> one café might never discount, shifting equilibrium and welfare.</li>
+</ul>
 
 
 </section>

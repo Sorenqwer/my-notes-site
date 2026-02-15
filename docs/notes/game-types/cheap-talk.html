@@ -158,6 +158,11 @@ window.Quarto = {
   <li><a href="#setup-a-stylized-version" id="toc-setup-a-stylized-version" class="nav-link" data-scroll-target="#setup-a-stylized-version">Setup (a stylized version)</a></li>
   <li><a href="#key-idea" id="toc-key-idea" class="nav-link" data-scroll-target="#key-idea">Key idea</a></li>
   </ul></li>
+  <li><a href="#story" id="toc-story" class="nav-link" data-scroll-target="#story">Story</a></li>
+  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
+  <li><a href="#core-math-quadratic-loss-bias" id="toc-core-math-quadratic-loss-bias" class="nav-link" data-scroll-target="#core-math-quadratic-loss-bias">Core math (quadratic loss, bias)</a></li>
+  <li><a href="#equilibrium-what-to-expect" id="toc-equilibrium-what-to-expect" class="nav-link" data-scroll-target="#equilibrium-what-to-expect">Equilibrium (what to expect)</a></li>
+  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -209,9 +214,48 @@ window.Quarto = {
 <section id="key-idea" class="level3">
 <h3 class="anchored" data-anchor-id="key-idea">Key idea</h3>
 <p>If the bias <span class="math inline">\(b\)</span> is small, the sender can truthfully separate states into <strong>intervals</strong> (“coarse truth”), and the receiver best-responds by choosing the expected state within the reported interval. If <span class="math inline">\(b\)</span> is large, communication becomes uninformative (pooling).</p>
-
-
 </section>
+</section>
+<section id="story" class="level2">
+<h2 class="anchored" data-anchor-id="story">Story</h2>
+<p>You ask a friend for a restaurant recommendation in a new city. Your friend knows the options. But your tastes differ: they love loud, spicy places; you want calm and mild. They aren’t lying—they just have a bias.</p>
+<p>Cheap talk studies whether costless messages can still transmit information when incentives aren’t perfectly aligned.</p>
+</section>
+<section id="model" class="level2">
+<h2 class="anchored" data-anchor-id="model">Model</h2>
+<ul>
+<li>State <span class="math inline">\(\theta\)</span> known to sender</li>
+<li>Message <span class="math inline">\(m\)</span> is costless and non-binding</li>
+<li>Receiver chooses action <span class="math inline">\(a\)</span></li>
+<li>Preferences are biased</li>
+</ul>
+</section>
+<section id="core-math-quadratic-loss-bias" class="level2">
+<h2 class="anchored" data-anchor-id="core-math-quadratic-loss-bias">Core math (quadratic loss, bias)</h2>
+<p>Let <span class="math inline">\(\theta\in[0,1]\)</span>, <span class="math inline">\(a\in[0,1]\)</span>.</p>
+<p>Receiver: <span class="math display">\[
+u_R=-(a-\theta)^2
+\]</span></p>
+<p>Sender (bias <span class="math inline">\(b&gt;0\)</span>): <span class="math display">\[
+u_S=-(a-(\theta+b))^2
+\]</span></p>
+</section>
+<section id="equilibrium-what-to-expect" class="level2">
+<h2 class="anchored" data-anchor-id="equilibrium-what-to-expect">Equilibrium (what to expect)</h2>
+<ul>
+<li>There is always a <strong>babbling</strong> equilibrium: messages convey no information and the receiver chooses a constant action (based on the prior).</li>
+<li>When bias is not too large, there are <strong>partition</strong> equilibria: the sender truthfully reveals which interval <span class="math inline">\(\theta\)</span> lies in; the receiver responds with the conditional mean of that interval.</li>
+</ul>
+</section>
+<section id="later-on-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<ul>
+<li><strong>More alignment → more information:</strong> smaller bias typically supports finer partitions.</li>
+<li><strong>Credibility via commitment:</strong> if the sender could commit to a rule (information design), outcomes change drastically.</li>
+<li><strong>Costly messages → signaling:</strong> adding costs turns cheap talk into signaling.</li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->

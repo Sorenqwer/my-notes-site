@@ -23,3 +23,37 @@ Payoffs:
 
 ### Key idea
 If the bias $b$ is small, the sender can truthfully separate states into **intervals** (“coarse truth”), and the receiver best-responds by choosing the expected state within the reported interval. If $b$ is large, communication becomes uninformative (pooling).
+
+
+## Story
+You ask a friend for a restaurant recommendation in a new city. Your friend knows the options. But your tastes differ: they love loud, spicy places; you want calm and mild. They aren’t lying—they just have a bias.
+
+Cheap talk studies whether costless messages can still transmit information when incentives aren’t perfectly aligned.
+
+## Model
+- State $\theta$ known to sender
+- Message $m$ is costless and non-binding
+- Receiver chooses action $a$
+- Preferences are biased
+
+## Core math (quadratic loss, bias)
+Let $\theta\in[0,1]$, $a\in[0,1]$.
+
+Receiver:
+$$
+u_R=-(a-\theta)^2
+$$
+
+Sender (bias $b>0$):
+$$
+u_S=-(a-(\theta+b))^2
+$$
+
+## Equilibrium (what to expect)
+- There is always a **babbling** equilibrium: messages convey no information and the receiver chooses a constant action (based on the prior).
+- When bias is not too large, there are **partition** equilibria: the sender truthfully reveals which interval $\theta$ lies in; the receiver responds with the conditional mean of that interval.
+
+## Later-on analysis
+- **More alignment → more information:** smaller bias typically supports finer partitions.
+- **Credibility via commitment:** if the sender could commit to a rule (information design), outcomes change drastically.
+- **Costly messages → signaling:** adding costs turns cheap talk into signaling.

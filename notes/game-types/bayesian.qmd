@@ -31,3 +31,26 @@ $$
 $$
 
 **Solution sketch.** The entrant’s decision depends on the probability the incumbent is the tough type.
+
+## Story
+A startup founder, **Eden**, pitches an angel investor. Eden knows whether the startup is strong or weak. The investor can’t fully verify this in one meeting. Funding a strong startup is profitable; funding a weak one is a loss.
+
+The investor’s action is based on beliefs about Eden’s (hidden) type.
+
+## Model
+- Founder type: $\theta\in\{S,W\}$ with prior $\Pr(S)=p$
+- Investor action: fund $F$ or reject $R$
+- Payoff to investor: if $F$, payoff $+1$ under $S$ and $-1$ under $W$; if $R$, payoff $0$
+
+## Equilibrium (threshold best response)
+Investor funds iff expected payoff is nonnegative:
+$$
+\mathbb{E}[\pi \mid F]=p(1)+(1-p)(-1)=2p-1 \ge 0
+\quad\Rightarrow\quad
+p\ge \tfrac12.
+$$
+
+## Later-on analysis
+- **Signals:** if the pitch provides a signal, beliefs update via Bayes’ rule before the funding choice.
+- **Strategic disclosure:** if the founder can choose what to reveal, this becomes a signaling/cheap-talk hybrid.
+- **Multiple types:** richer type spaces yield cutoff strategies and comparative statics in $p$.

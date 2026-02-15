@@ -154,6 +154,10 @@ window.Quarto = {
   <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
   <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
   <li><a href="#one-example-linear-quadratic-network-game" id="toc-one-example-linear-quadratic-network-game" class="nav-link" data-scroll-target="#one-example-linear-quadratic-network-game">One example (linear-quadratic network game)</a></li>
+  <li><a href="#story" id="toc-story" class="nav-link" data-scroll-target="#story">Story</a></li>
+  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
+  <li><a href="#equilibrium-linear-quadratic-network-game" id="toc-equilibrium-linear-quadratic-network-game" class="nav-link" data-scroll-target="#equilibrium-linear-quadratic-network-game">Equilibrium (linear-quadratic network game)</a></li>
+  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -206,6 +210,40 @@ a = \alpha \mathbf{1} + \beta G a
 a = (I-\beta G)^{-1}\alpha \mathbf{1},
 \]</span> when <span class="math inline">\((I-\beta G)\)</span> is invertible.</p>
 <p><strong>Intuition:</strong> your action responds to neighbors; the network structure shapes equilibrium via the matrix inverse.</p>
+</section>
+<section id="story" class="level2">
+<h2 class="anchored" data-anchor-id="story">Story</h2>
+<p>Study effort spreads through friendships: when your neighbors study more, you feel pressure and motivation. Your best response depends on your local network, and the network structure shapes the overall pattern.</p>
+</section>
+<section id="model" class="level2">
+<h2 class="anchored" data-anchor-id="model">Model</h2>
+<ul>
+<li>Players are nodes in a graph with adjacency matrix <span class="math inline">\(G\)</span></li>
+<li>Each chooses action <span class="math inline">\(a_i\)</span></li>
+<li>Payoff has spillovers with neighbors</li>
+</ul>
+</section>
+<section id="equilibrium-linear-quadratic-network-game" class="level2">
+<h2 class="anchored" data-anchor-id="equilibrium-linear-quadratic-network-game">Equilibrium (linear-quadratic network game)</h2>
+<p>Utility: <span class="math display">\[
+u_i(a)=\alpha a_i-\frac12 a_i^2+\beta\sum_j G_{ij}a_i a_j.
+\]</span></p>
+<p>FOC: <span class="math display">\[
+a_i=\alpha+\beta\sum_j G_{ij}a_j.
+\]</span></p>
+<p>Vector form: <span class="math display">\[
+a=\alpha\mathbf 1+\beta G a
+\quad\Rightarrow\quad
+a=(I-\beta G)^{-1}\alpha\mathbf 1,
+\]</span> provided <span class="math inline">\((I-\beta G)\)</span> is invertible (a common sufficient condition is <span class="math inline">\(|\beta|&lt;1/\rho(G)\)</span> where <span class="math inline">\(\rho(G)\)</span> is the spectral radius).</p>
+</section>
+<section id="later-on-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<ul>
+<li><strong>Complements vs substitutes:</strong> sign of <span class="math inline">\(\beta\)</span> changes amplification vs dampening.</li>
+<li><strong>Centrality:</strong> equilibrium actions often correlate with network centrality.</li>
+<li><strong>Interventions:</strong> targeted subsidies/penalties can propagate through the network.</li>
+</ul>
 
 
 </section>

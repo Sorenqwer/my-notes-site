@@ -158,6 +158,11 @@ window.Quarto = {
   <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
   <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
   <li><a href="#one-example-backward-induction" id="toc-one-example-backward-induction" class="nav-link" data-scroll-target="#one-example-backward-induction">One example (backward induction)</a></li>
+  <li><a href="#story" id="toc-story" class="nav-link" data-scroll-target="#story">Story</a></li>
+  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
+  <li><a href="#game-tree-toy" id="toc-game-tree-toy" class="nav-link" data-scroll-target="#game-tree-toy">Game tree (toy)</a></li>
+  <li><a href="#equilibrium-backward-induction-spe" id="toc-equilibrium-backward-induction-spe" class="nav-link" data-scroll-target="#equilibrium-backward-induction-spe">Equilibrium (backward induction → SPE)</a></li>
+  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -216,6 +221,56 @@ window.Quarto = {
 </div>
 <p>Player 2 chooses <strong>L</strong> after <span class="math inline">\(A\)</span> (since <span class="math inline">\(1&gt;0\)</span>) and <strong>L</strong> after <span class="math inline">\(B\)</span> (since <span class="math inline">\(2&gt;0\)</span>).<br>
 Anticipating this, player 1 prefers <span class="math inline">\(A\)</span> (since <span class="math inline">\(2&gt;1\)</span>). Outcome: <span class="math inline">\((A,L)\)</span>.</p>
+</section>
+<section id="story" class="level2">
+<h2 class="anchored" data-anchor-id="story">Story</h2>
+<p>A landlord, <strong>Ms.&nbsp;K</strong>, is renewing a lease with <strong>Rin</strong>. The neighborhood has improved, and Ms.&nbsp;K considers raising rent. Ms.&nbsp;K chooses first: a moderate raise or an aggressive one. Rin then decides: accept or move out.</p>
+<p>The key is timing: Rin observes the offer before acting, and Ms.&nbsp;K anticipates Rin’s response.</p>
+</section>
+<section id="model" class="level2">
+<h2 class="anchored" data-anchor-id="model">Model</h2>
+<ul>
+<li>Player 1 (landlord): <span class="math inline">\(L\)</span> (low increase) or <span class="math inline">\(H\)</span> (high increase)</li>
+<li>Player 2 (tenant): after observing, <span class="math inline">\(A\)</span> (accept) or <span class="math inline">\(M\)</span> (move)</li>
+<li>Information: perfect (tenant observes the offer)</li>
+<li>Solution concept: backward induction / SPE</li>
+</ul>
+</section>
+<section id="game-tree-toy" class="level2">
+<h2 class="anchored" data-anchor-id="game-tree-toy">Game tree (toy)</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+  S((Start)) --&gt;|P1: L| L(( ))
+  S --&gt;|P1: H| H(( ))
+  L --&gt;|P2: A| LA["(2,2)"]
+  L --&gt;|P2: M| LM["(0,1)"]
+  H --&gt;|P2: A| HA["(3,0)"]
+  H --&gt;|P2: M| HM["(0,1)"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="equilibrium-backward-induction-spe" class="level2">
+<h2 class="anchored" data-anchor-id="equilibrium-backward-induction-spe">Equilibrium (backward induction → SPE)</h2>
+<p>Step 1 (tenant’s optimal actions at the second stage): - After <span class="math inline">\(L\)</span>: compare tenant payoff <span class="math inline">\(2\)</span> (accept) vs <span class="math inline">\(1\)</span> (move) → choose <strong><span class="math inline">\(A\)</span></strong> - After <span class="math inline">\(H\)</span>: compare tenant payoff <span class="math inline">\(0\)</span> (accept) vs <span class="math inline">\(1\)</span> (move) → choose <strong><span class="math inline">\(M\)</span></strong></p>
+<p>Step 2 (landlord anticipates this): - If choose <span class="math inline">\(L\)</span> → outcome <span class="math inline">\((2,2)\)</span> - If choose <span class="math inline">\(H\)</span> → tenant moves → outcome <span class="math inline">\((0,1)\)</span></p>
+<p>So landlord chooses <strong><span class="math inline">\(L\)</span></strong>.<br>
+<strong>SPE outcome:</strong> <span class="math inline">\((L,A)\)</span>.</p>
+</section>
+<section id="later-on-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<ul>
+<li><strong>Outside option changes:</strong> if moving becomes less costly, the landlord’s ability to raise rent shrinks.</li>
+<li><strong>Incomplete information:</strong> if Ms.&nbsp;K doesn’t know Rin’s moving cost, the game becomes Bayesian and can generate screening/signaling behavior.</li>
+<li><strong>Commitment:</strong> if Rin could commit to “move if any increase,” outcomes shift again (commitment changes the tree).</li>
+</ul>
 
 
 </section>

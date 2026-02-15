@@ -32,3 +32,36 @@ $$
 when $(I-\beta G)$ is invertible.
 
 **Intuition:** your action responds to neighbors; the network structure shapes equilibrium via the matrix inverse.
+
+
+## Story
+Study effort spreads through friendships: when your neighbors study more, you feel pressure and motivation. Your best response depends on your local network, and the network structure shapes the overall pattern.
+
+## Model
+- Players are nodes in a graph with adjacency matrix $G$
+- Each chooses action $a_i$
+- Payoff has spillovers with neighbors
+
+## Equilibrium (linear-quadratic network game)
+Utility:
+$$
+u_i(a)=\alpha a_i-\frac12 a_i^2+\beta\sum_j G_{ij}a_i a_j.
+$$
+
+FOC:
+$$
+a_i=\alpha+\beta\sum_j G_{ij}a_j.
+$$
+
+Vector form:
+$$
+a=\alpha\mathbf 1+\beta G a
+\quad\Rightarrow\quad
+a=(I-\beta G)^{-1}\alpha\mathbf 1,
+$$
+provided $(I-\beta G)$ is invertible (a common sufficient condition is $|\beta|<1/\rho(G)$ where $\rho(G)$ is the spectral radius).
+
+## Later-on analysis
+- **Complements vs substitutes:** sign of $\beta$ changes amplification vs dampening.
+- **Centrality:** equilibrium actions often correlate with network centrality.
+- **Interventions:** targeted subsidies/penalties can propagate through the network.

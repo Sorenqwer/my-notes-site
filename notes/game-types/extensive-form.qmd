@@ -26,3 +26,42 @@ flowchart TD
 Player 2 chooses **L** after $A$ (since $1>0$) and **L** after $B$ (since $2>0$).  
 Anticipating this, player 1 prefers $A$ (since $2>1$). Outcome: $(A,L)$.
 
+
+## Story
+A landlord, **Ms. K**, is renewing a lease with **Rin**. The neighborhood has improved, and Ms. K considers raising rent. Ms. K chooses first: a moderate raise or an aggressive one. Rin then decides: accept or move out.
+
+The key is timing: Rin observes the offer before acting, and Ms. K anticipates Rin’s response.
+
+## Model
+- Player 1 (landlord): $L$ (low increase) or $H$ (high increase)
+- Player 2 (tenant): after observing, $A$ (accept) or $M$ (move)
+- Information: perfect (tenant observes the offer)
+- Solution concept: backward induction / SPE
+
+## Game tree (toy)
+```{mermaid}
+flowchart TD
+  S((Start)) -->|P1: L| L(( ))
+  S -->|P1: H| H(( ))
+  L -->|P2: A| LA["(2,2)"]
+  L -->|P2: M| LM["(0,1)"]
+  H -->|P2: A| HA["(3,0)"]
+  H -->|P2: M| HM["(0,1)"]
+```
+
+## Equilibrium (backward induction → SPE)
+Step 1 (tenant’s optimal actions at the second stage):
+- After $L$: compare tenant payoff $2$ (accept) vs $1$ (move) → choose **$A$**
+- After $H$: compare tenant payoff $0$ (accept) vs $1$ (move) → choose **$M$**
+
+Step 2 (landlord anticipates this):
+- If choose $L$ → outcome $(2,2)$
+- If choose $H$ → tenant moves → outcome $(0,1)$
+
+So landlord chooses **$L$**.  
+**SPE outcome:** $(L,A)$.
+
+## Later-on analysis
+- **Outside option changes:** if moving becomes less costly, the landlord’s ability to raise rent shrinks.
+- **Incomplete information:** if Ms. K doesn’t know Rin’s moving cost, the game becomes Bayesian and can generate screening/signaling behavior.
+- **Commitment:** if Rin could commit to “move if any increase,” outcomes shift again (commitment changes the tree).

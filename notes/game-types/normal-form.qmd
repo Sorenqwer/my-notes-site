@@ -23,3 +23,38 @@ Payoffs:
 - $(D,D)=(1,1)$
 
 **Solution sketch.** $D$ strictly dominates $C$ for each player, so the unique Nash equilibrium is $(D,D)$, even though $(C,C)$ is Pareto-better.
+
+
+## Story
+Two independent cafés, **North Bean** and **South Bean**, sit across the same narrow street by a commuter station. Tomorrow morning there will be a marathon: heavy demand, impatient customers, and intense competition for foot traffic. Tonight, each café must decide whether to run a deep discount.
+
+If only one café discounts, it steals attention and most walk-ins. If both discount, they split the crowd but both suffer thin margins. If neither discounts, both do fine—yet each fears being the only one who doesn’t discount.
+
+They decide simultaneously: no café observes the other’s choice before committing.
+
+## Model
+- Players: cafés $1,2$
+- Actions: $D$ (discount), $N$ (normal)
+- Timing: simultaneous
+- Payoffs: profits
+
+## Payoffs (toy)
+$$
+\begin{array}{c|cc}
+ & D & N\\ \hline
+D & (1,1) & (3,0)\\
+N & (0,3) & (2,2)
+\end{array}
+$$
+
+## Equilibrium (Nash)
+Best responses:
+- If the other chooses $N$, your best response is $D$ (you gain market share).
+- If the other chooses $D$, your best response is $D$ (you avoid being undercut).
+
+So $D$ is a best response to both opponent actions: the unique Nash equilibrium is $(D,D)$.
+
+## Later-on analysis
+- **Why it matters:** this is the basic logic behind price wars and “race to the bottom” outcomes.
+- **If repeated:** repeated interaction can sustain $(N,N)$ via punishments (see Repeated games).
+- **If asymmetric costs:** one café might never discount, shifting equilibrium and welfare.

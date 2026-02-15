@@ -19,3 +19,27 @@ $$
 $$
 
 **Intuition:** the share of a strategy grows when it performs better than the alternative. Fixed points correspond to states where neither strategy has a payoff advantage.
+
+
+## Story
+In a large community, newcomers copy behaviors that seem to “work.” Strategies that perform better spread. Nobody solves the game explicitly, yet population patterns evolve.
+
+## Model
+- Strategies are held by a population
+- Relative payoff determines growth
+- Dynamics describe how shares change
+
+## Dynamics (replicator)
+Let $x$ be the share playing strategy 1, payoffs $\pi_1(x)$ and $\pi_2(x)$:
+$$
+\dot{x}=x(1-x)\bigl(\pi_1(x)-\pi_2(x)\bigr).
+$$
+
+## Equilibrium / stability (what to look for)
+- Rest points satisfy $\dot{x}=0$ (often $x=0$, $x=1$, or where $\pi_1(x)=\pi_2(x)$).
+- Stability depends on whether nearby deviations push $x$ back or away.
+
+## Later-on analysis
+- **ESS:** a refinement capturing robustness to mutant invasions.
+- **Learning rules:** fictitious play, reinforcement learning, best-response dynamics.
+- **Link to Nash:** some dynamics converge to Nash in certain classes of games, but not always.

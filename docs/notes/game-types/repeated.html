@@ -154,6 +154,11 @@ window.Quarto = {
   <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
   <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
   <li><a href="#one-example-grim-trigger-in-repeated-prisoners-dilemma" id="toc-one-example-grim-trigger-in-repeated-prisoners-dilemma" class="nav-link" data-scroll-target="#one-example-grim-trigger-in-repeated-prisoners-dilemma">One example (grim trigger in repeated Prisoner’s Dilemma)</a></li>
+  <li><a href="#story" id="toc-story" class="nav-link" data-scroll-target="#story">Story</a></li>
+  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
+  <li><a href="#stage-payoffs-toy" id="toc-stage-payoffs-toy" class="nav-link" data-scroll-target="#stage-payoffs-toy">Stage payoffs (toy)</a></li>
+  <li><a href="#equilibrium-cooperation-via-grim-trigger" id="toc-equilibrium-cooperation-via-grim-trigger" class="nav-link" data-scroll-target="#equilibrium-cooperation-via-grim-trigger">Equilibrium (cooperation via grim trigger)</a></li>
+  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -196,6 +201,47 @@ window.Quarto = {
 <p>Stage game: cooperate <span class="math inline">\(C\)</span> or defect <span class="math inline">\(D\)</span>. Typical payoffs: - <span class="math inline">\((C,C)\)</span> gives <span class="math inline">\((R,R)\)</span>, - <span class="math inline">\((D,C)\)</span> gives <span class="math inline">\((T,S)\)</span>, - <span class="math inline">\((C,D)\)</span> gives <span class="math inline">\((S,T)\)</span>, - <span class="math inline">\((D,D)\)</span> gives <span class="math inline">\((P,P)\)</span>, with <span class="math inline">\(T&gt;R&gt;P&gt;S\)</span>.</p>
 <p><strong>Grim trigger strategy:</strong> start with <span class="math inline">\(C\)</span>, continue <span class="math inline">\(C\)</span> unless someone defects; after any defection, play <span class="math inline">\(D\)</span> forever.</p>
 <p><strong>Incentive condition (intuition):</strong> cooperate today if the present temptation <span class="math inline">\(T-R\)</span> is outweighed by the discounted future loss from punishment. Cooperation can be sustained if <span class="math inline">\(\delta\)</span> is sufficiently high.</p>
+</section>
+<section id="story" class="level2">
+<h2 class="anchored" data-anchor-id="story">Story</h2>
+<p>Two graduate students, <strong>Kai</strong> and <strong>Mira</strong>, share an office. Each week they decide whether to clean the shared space. Cleaning is effortful; skipping is tempting. If one keeps cleaning while the other skips, resentment builds. If both skip, the office becomes miserable.</p>
+<p>Because the choice repeats, today’s action can trigger tomorrow’s response.</p>
+</section>
+<section id="model" class="level2">
+<h2 class="anchored" data-anchor-id="model">Model</h2>
+<ul>
+<li>Stage actions: <span class="math inline">\(C\)</span> (clean), <span class="math inline">\(S\)</span> (shirk)</li>
+<li>Stage payoffs (toy): PD-like</li>
+<li>Infinite horizon with discount factor <span class="math inline">\(\delta\in(0,1)\)</span></li>
+<li>Strategies can condition on history</li>
+</ul>
+</section>
+<section id="stage-payoffs-toy" class="level2">
+<h2 class="anchored" data-anchor-id="stage-payoffs-toy">Stage payoffs (toy)</h2>
+<ul>
+<li><span class="math inline">\((C,C)=(2,2)\)</span></li>
+<li><span class="math inline">\((S,C)=(3,0)\)</span></li>
+<li><span class="math inline">\((C,S)=(0,3)\)</span></li>
+<li><span class="math inline">\((S,S)=(1,1)\)</span></li>
+</ul>
+</section>
+<section id="equilibrium-cooperation-via-grim-trigger" class="level2">
+<h2 class="anchored" data-anchor-id="equilibrium-cooperation-via-grim-trigger">Equilibrium (cooperation via grim trigger)</h2>
+<p>Grim trigger: play <span class="math inline">\(C\)</span> unless someone shirks; after any shirking, play <span class="math inline">\(S\)</span> forever.</p>
+<p>Compare deviating once vs cooperating on-path (player 1, symmetric): - Cooperate forever payoff: <span class="math inline">\(\frac{2}{1-\delta}\)</span> - Deviate once (get 3 now, then punished with 1 forever): <span class="math inline">\(3 + \frac{\delta}{1-\delta}\)</span></p>
+<p>Cooperation is sustainable if: <span class="math display">\[
+\frac{2}{1-\delta} \ge 3+\frac{\delta}{1-\delta}
+\quad\Longleftrightarrow\quad
+\delta \ge \frac12.
+\]</span></p>
+</section>
+<section id="later-on-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<ul>
+<li><strong>Finite horizon:</strong> backward induction kills cooperation near the end (unless there are other frictions).</li>
+<li><strong>Noisy actions:</strong> if mistakes happen, harsh punishments can be inefficient; “forgiving” strategies (tit-for-tat variants) become relevant.</li>
+<li><strong>Multiple equilibria:</strong> repeated games often admit many equilibrium paths; selection becomes a real question.</li>
+</ul>
 
 
 </section>
