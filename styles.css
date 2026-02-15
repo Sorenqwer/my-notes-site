@@ -1,35 +1,88 @@
-/* Background (site-wide) */
-body {
+/* ---------- Fonts (put at TOP) ---------- */
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap");
+
+:root{
+  --font-script: "Great Vibes", "Snell Roundhand", "Apple Chancery", cursive;
+  --font-body: "Source Serif 4", ui-serif, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+/* Body text + default typography */
+body{
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+
+  /* Background (site-wide) */
   background: url("images/hero.png") no-repeat center center fixed;
   background-size: cover;
 }
 
-/* Book-page panel (all pages) */
-main.content {
-  background: rgba(255, 255, 255, 0.93); /* more “paper” */
-  border-radius: 14px;
+/* Navbar site title in script */
+.navbar-brand{
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: 1.55rem;
+  letter-spacing: 0.2px;
+}
 
-  /* page width like a book */
-  width: 76vw;           /* ~3/4 screen on desktop */
-  max-width: 860px;      /* book-ish line length */
-  min-height: 72vh;      /* prevents tiny panels on short pages */
+/* Page title in script */
+.quarto-title-block .title{
+  font-family: var(--font-script);
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
 
-  /* spacing */
-  padding: 1.75rem 2rem;
-  margin: 2.75rem auto;
+/* Headings stay readable (serif) */
+h1,h2,h3,h4,h5,h6{
+  font-family: var(--font-body);
+}
 
-  /* no shadow for true minimalist print feel */
-  box-shadow: none;
+/* Code stays mono */
+code, pre, kbd, samp{
+  font-family: var(--font-mono);
 }
 
 /* Keep the title area clean */
-.quarto-title-block {
+.quarto-title-block{
   background: transparent;
 }
 
-/* Mobile: full width, no forced height */
-@media (max-width: 900px) {
-  main.content {
+/* ---------- Book-page panel (all pages) ---------- */
+main.content{
+  background: rgba(255, 255, 255, 0.93); /* paper */
+  border-radius: 14px;
+
+  width: 76vw;          /* ~3/4 screen */
+  max-width: 860px;     /* book-ish line length */
+  min-height: 72vh;     /* avoids tiny panels */
+
+  padding: 1.75rem 2rem;
+  margin: 2.75rem auto;
+
+  box-shadow: none;
+}
+
+main.content p{
+  margin: 0.85rem 0;
+}
+
+/* Optional: homepage slightly lighter so background shows more */
+body.home main.content{
+  background: rgba(255, 255, 255, 0.88);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 900px){
+  body{
+    font-size: 16px;
+  }
+
+  .navbar-brand{
+    font-size: 1.35rem;
+  }
+
+  main.content{
     width: calc(100vw - 1.5rem);
     max-width: none;
     min-height: 0;
@@ -37,16 +90,4 @@ main.content {
     padding: 1.15rem 1.15rem;
     border-radius: 12px;
   }
-}
-
-/* Optional: homepage slightly lighter so background shows a bit more */
-body.home main.content {
-  background: rgba(255, 255, 255, 0.88);
-}
-main.content {
-  line-height: 1.65;
-}
-
-main.content p {
-  margin: 0.85rem 0;
 }
