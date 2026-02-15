@@ -1,47 +1,52 @@
-/* Site-wide background (all pages) */
+/* Background (site-wide) */
 body {
   background: url("images/hero.png") no-repeat center center fixed;
   background-size: cover;
 }
 
-/* Site-wide readable panel */
+/* Book-page panel (all pages) */
 main.content {
-  background: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.93); /* more “paper” */
   border-radius: 14px;
-  padding: 1.25rem 1.25rem;
-  max-width: 960px;
-  margin: 2.5rem auto;
+
+  /* page width like a book */
+  width: 76vw;           /* ~3/4 screen on desktop */
+  max-width: 860px;      /* book-ish line length */
+  min-height: 72vh;      /* prevents tiny panels on short pages */
+
+  /* spacing */
+  padding: 1.75rem 2rem;
+  margin: 2.75rem auto;
+
+  /* no shadow for true minimalist print feel */
+  box-shadow: none;
 }
 
-/* --- Homepage overrides (keep your current look) --- */
+/* Keep the title area clean */
+.quarto-title-block {
+  background: transparent;
+}
+
+/* Mobile: full width, no forced height */
+@media (max-width: 900px) {
+  main.content {
+    width: calc(100vw - 1.5rem);
+    max-width: none;
+    min-height: 0;
+    margin: 1rem auto;
+    padding: 1.15rem 1.15rem;
+    border-radius: 12px;
+  }
+}
+
+/* Optional: homepage slightly lighter so background shows a bit more */
 body.home main.content {
-  background: rgba(255, 255, 255, 0.75);
-  max-width: 860px;
-  margin: 3rem auto;
+  background: rgba(255, 255, 255, 0.88);
+}
+main.content {
+  line-height: 1.65;
 }
 
-body.home blockquote {
-  font-size: 1.05rem;
-  opacity: 0.9;
+main.content p {
+  margin: 0.85rem 0;
 }
-
-
-/* Homepage blurred formula background */
-body.home {
-  background: url("images/hero.png") no-repeat center center fixed;
-  background-size: cover;
-}
-
-/* Minimal readable panel */
-body.home main.content {
-  background: rgba(255, 255, 255, 0.75);
-  border-radius: 14px;
-  padding: 1.25rem 1.25rem;
-  max-width: 860px;
-  margin: 3rem auto;
-}
-body.home blockquote {
-  font-size: 1.05rem;
-  opacity: 0.9;
-}
-
