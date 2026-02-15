@@ -1,0 +1,73 @@
+---
+title: "Bayesian Nash equilibrium (BNE)"
+toc: true
+---
+
+## What it is
+A **Bayesian game** has private information (types). A **Bayesian Nash equilibrium** is a strategy profile where each type best-responds given beliefs about others’ types.
+
+Formally, each player $i$ has type $\theta_i$ and chooses an action via a strategy $s_i(\theta_i)$. A BNE satisfies, for each type $\theta_i$:
+$$
+s_i(\theta_i)\in \arg\max_{a_i} \mathbb{E}\left[u_i(a_i, s_{-i}(\theta_{-i}), \theta_i,\theta_{-i})\mid \theta_i\right].
+$$
+
+## Where it shows up
+- Static games of incomplete information (entry games, pricing with private costs)
+- Auctions (many auction models are BNE)
+- As the static benchmark for dynamic incomplete-information models
+
+## How to solve (recipe)
+1) List types and prior beliefs.
+2) Write strategies as functions of types: $a_i=s_i(\theta_i)$.
+3) Compute each type’s expected payoff from each action.
+4) Choose best responses by type.
+5) Verify mutual best responses given beliefs.
+
+---
+
+## Solved example (type-dependent best response)
+
+### Problem (context + question)
+An investor chooses whether to fund a startup: $F$ (fund) or $R$ (reject).
+
+The startup’s type is $\theta\in\{S,W\}$ (strong or weak), with prior $\Pr(S)=p$. If the investor funds:
+- payoff is $+1$ if $\theta=S$,
+- payoff is $-1$ if $\theta=W$.
+
+If the investor rejects, payoff is $0$.
+
+**Question:** Find the investor’s optimal action as a function of $p$ (a BNE decision rule).
+
+### Solution
+Compute expected payoff from funding:
+$$
+\mathbb{E}[\pi(F)] = p(1) + (1-p)(-1) = 2p-1.
+$$
+
+Rejecting yields:
+$$
+\mathbb{E}[\pi(R)] = 0.
+$$
+
+So the investor funds iff $2p-1\ge 0$, i.e.
+$$
+p \ge \tfrac12.
+$$
+
+**Result:** Optimal strategy is:
+- choose $F$ if $p\ge 1/2$,
+- choose $R$ if $p<1/2$,
+- indifferent at $p=1/2$.
+
+### Check
+Given beliefs (the prior), the chosen action maximizes expected payoff.
+
+### Takeaway
+BNE decisions are often threshold rules: act if expected benefit given beliefs is large enough.
+
+---
+
+## Later-on analysis
+- If a **signal** is observed before acting, beliefs update via Bayes’ rule and the threshold shifts.
+- If the informed party can **strategically choose information**, you move toward signaling or cheap talk → PBE.
+- With many types/actions, equilibrium often has cutoff strategies and monotonicity structure.

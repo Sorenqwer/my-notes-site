@@ -4,3 +4,4 @@ toc: false
 ---
 
 - [Game types](game-types/index.qmd)
+- [Equilibria](equilibriums/index.qmd)

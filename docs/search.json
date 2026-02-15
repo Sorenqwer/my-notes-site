@@ -434,6 +434,244 @@
     "text": "Later-on analysis\n\nAsymmetric patience: if one player has higher \\(\\delta\\), they get a larger share.\nOutside options: disagreement payoffs shift the split.\nIncomplete information: can generate delay, signaling, and “toughness” reputations."
   },
   {
+    "objectID": "notes/equilibriums/correlated-equilibrium.html",
+    "href": "notes/equilibriums/correlated-equilibrium.html",
+    "title": "Correlated equilibrium",
+    "section": "",
+    "text": "A correlated equilibrium (CE) allows players to condition their actions on a shared signal (a recommendation from a mediator). The signal can correlate players’ actions.\nA distribution over action profiles is a CE if, when a player receives a recommendation, they have no incentive to deviate given they believe others follow their recommendations."
+  },
+  {
+    "objectID": "notes/equilibriums/correlated-equilibrium.html#what-it-is",
+    "href": "notes/equilibriums/correlated-equilibrium.html#what-it-is",
+    "title": "Correlated equilibrium",
+    "section": "",
+    "text": "A correlated equilibrium (CE) allows players to condition their actions on a shared signal (a recommendation from a mediator). The signal can correlate players’ actions.\nA distribution over action profiles is a CE if, when a player receives a recommendation, they have no incentive to deviate given they believe others follow their recommendations."
+  },
+  {
+    "objectID": "notes/equilibriums/correlated-equilibrium.html#where-it-shows-up",
+    "href": "notes/equilibriums/correlated-equilibrium.html#where-it-shows-up",
+    "title": "Correlated equilibrium",
+    "section": "Where it shows up",
+    "text": "Where it shows up\n\nNormal-form games\nInformation and mediation (recommendation systems)\nMechanism design / persuasion / traffic routing interpretations\nComputational game theory (CE is often easier to compute than NE)"
+  },
+  {
+    "objectID": "notes/equilibriums/correlated-equilibrium.html#how-to-solve-recipe",
+    "href": "notes/equilibriums/correlated-equilibrium.html#how-to-solve-recipe",
+    "title": "Correlated equilibrium",
+    "section": "How to solve (recipe)",
+    "text": "How to solve (recipe)\n\nChoose a distribution over action profiles (a “correlation device”).\nFor each player and each recommended action, write the no-deviation (obedience) constraints:\n\nexpected payoff from following ≥ expected payoff from deviating.\n\nIf all obedience constraints hold, the distribution is a correlated equilibrium."
+  },
+  {
+    "objectID": "notes/equilibriums/correlated-equilibrium.html#solved-example-a-simple-ce-that-improves-outcomes",
+    "href": "notes/equilibriums/correlated-equilibrium.html#solved-example-a-simple-ce-that-improves-outcomes",
+    "title": "Correlated equilibrium",
+    "section": "Solved example (a simple CE that improves outcomes)",
+    "text": "Solved example (a simple CE that improves outcomes)\n\nProblem (context + question)\nTwo drivers choose routes: \\(A\\) or \\(B\\). If both choose the same route, there is congestion and each gets 0. If they choose different routes, each gets 1.\nPayoffs: - If actions differ: payoff 1 each - If same: payoff 0 each\nQuestion: Construct a correlated equilibrium that achieves expected payoff 1 for each driver.\n\n\nSolution\nConsider a mediator who flips a fair coin and privately recommends: - with probability 1/2: recommend (Driver 1: A, Driver 2: B) - with probability 1/2: recommend (Driver 1: B, Driver 2: A)\nSo the induced distribution puts probability 1/2 on (A,B) and 1/2 on (B,A).\nStep 1: Check obedience for Driver 1 - If Driver 1 is told “A”, they infer Driver 2 was told “B”, so following yields payoff 1. Deviating to “B” would match Driver 2 and yield 0. - If Driver 1 is told “B”, symmetric: follow yields 1; deviating yields 0.\nSo Driver 1 never wants to deviate. Same for Driver 2.\nResult: This recommendation device is a correlated equilibrium with payoff 1 for each.\n\n\nTakeaway\nCE allows coordination using signals, often improving welfare relative to uncoordinated play."
+  },
+  {
+    "objectID": "notes/equilibriums/correlated-equilibrium.html#later-on-analysis",
+    "href": "notes/equilibriums/correlated-equilibrium.html#later-on-analysis",
+    "title": "Correlated equilibrium",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nEvery Nash equilibrium induces a correlated equilibrium (as a special case), but CE can be larger.\nCE is closely related to “obedience constraints” in mechanism design.\nIf you ever do computation: CE can be found via linear programming in finite games."
+  },
+  {
+    "objectID": "notes/equilibriums/index.html",
+    "href": "notes/equilibriums/index.html",
+    "title": "Equilibria",
+    "section": "",
+    "text": "Equilibrium cheat sheet"
+  },
+  {
+    "objectID": "notes/equilibriums/index.html#core-most-used",
+    "href": "notes/equilibriums/index.html#core-most-used",
+    "title": "Equilibria",
+    "section": "Core (most used)",
+    "text": "Core (most used)\n\nNash equilibrium (NE)\nSubgame perfect equilibrium (SPE)\nBayesian Nash equilibrium (BNE)\nPerfect Bayesian equilibrium (PBE)\nSequential equilibrium"
+  },
+  {
+    "objectID": "notes/equilibriums/index.html#refinements-when-credibility-matters",
+    "href": "notes/equilibriums/index.html#refinements-when-credibility-matters",
+    "title": "Equilibria",
+    "section": "Refinements (when credibility matters)",
+    "text": "Refinements (when credibility matters)\n\nTrembling-hand perfect equilibrium\nProper equilibrium"
+  },
+  {
+    "objectID": "notes/equilibriums/index.html#alternatives-related-notions",
+    "href": "notes/equilibriums/index.html#alternatives-related-notions",
+    "title": "Equilibria",
+    "section": "Alternatives / related notions",
+    "text": "Alternatives / related notions\n\nCorrelated equilibrium\nRationalizability\nBabbling equilibrium (cheap talk)"
+  },
+  {
+    "objectID": "notes/equilibriums/rationalizability.html",
+    "href": "notes/equilibriums/rationalizability.html",
+    "title": "Rationalizability",
+    "section": "",
+    "text": "Rationalizability predicts which actions can be justified as best responses to some beliefs about others’ actions, assuming everyone is rational and this is common knowledge.\nIt often corresponds to iterated elimination of strictly dominated strategies (IESDS). (With weak dominance, elimination order can matter, so newcomers usually start with strict dominance.)"
+  },
+  {
+    "objectID": "notes/equilibriums/rationalizability.html#what-it-is",
+    "href": "notes/equilibriums/rationalizability.html#what-it-is",
+    "title": "Rationalizability",
+    "section": "",
+    "text": "Rationalizability predicts which actions can be justified as best responses to some beliefs about others’ actions, assuming everyone is rational and this is common knowledge.\nIt often corresponds to iterated elimination of strictly dominated strategies (IESDS). (With weak dominance, elimination order can matter, so newcomers usually start with strict dominance.)"
+  },
+  {
+    "objectID": "notes/equilibriums/rationalizability.html#where-it-shows-up",
+    "href": "notes/equilibriums/rationalizability.html#where-it-shows-up",
+    "title": "Rationalizability",
+    "section": "Where it shows up",
+    "text": "Where it shows up\n\nNormal-form games when you want predictions weaker than Nash\nSettings with equilibrium multiplicity (rationalizability gives a set of plausible actions)\nAs a foundation for epistemic game theory"
+  },
+  {
+    "objectID": "notes/equilibriums/rationalizability.html#how-to-solve-recipe-iterated-elimination-of-strictly-dominated-strategies",
+    "href": "notes/equilibriums/rationalizability.html#how-to-solve-recipe-iterated-elimination-of-strictly-dominated-strategies",
+    "title": "Rationalizability",
+    "section": "How to solve (recipe: iterated elimination of strictly dominated strategies)",
+    "text": "How to solve (recipe: iterated elimination of strictly dominated strategies)\n\nIdentify strictly dominated actions for any player and remove them.\nRecompute dominance in the reduced game.\nRepeat until no more strictly dominated actions remain.\nThe remaining actions are rationalizable."
+  },
+  {
+    "objectID": "notes/equilibriums/rationalizability.html#solved-example-iterated-deletion",
+    "href": "notes/equilibriums/rationalizability.html#solved-example-iterated-deletion",
+    "title": "Rationalizability",
+    "section": "Solved example (iterated deletion)",
+    "text": "Solved example (iterated deletion)\n\nProblem (context + question)\nPlayer 1 actions: \\(U, M, D\\). Player 2 actions: \\(L, R\\). Payoffs to player 1 are:\n\\[\n\\begin{array}{c|cc}\n& L & R\\\\ \\hline\nU & 3 & 0\\\\\nM & 2 & 1\\\\\nD & 1 & 0\n\\end{array}\n\\]\nAssume player 2’s payoffs are irrelevant for this exercise.\nQuestion: Which actions of player 1 are rationalizable by iterated elimination of strictly dominated strategies?\n\n\nSolution\nCompare player 1 actions:\n\nDoes \\(D\\) get strictly dominated by \\(M\\)?\n\nAgainst \\(L\\): \\(u_1(M)=2 &gt; u_1(D)=1\\)\nAgainst \\(R\\): \\(u_1(M)=1 &gt; u_1(D)=0\\) Yes: \\(M\\) strictly dominates \\(D\\).\n\n\nSo eliminate \\(D\\).\nNow remaining actions for player 1: \\(U\\) and \\(M\\). - Does \\(U\\) strictly dominate \\(M\\)? No: - Against \\(L\\): \\(U=3 &gt; M=2\\) - Against \\(R\\): \\(U=0 &lt; M=1\\) - Does \\(M\\) strictly dominate \\(U\\)? No, same reason.\nResult: The rationalizable actions for player 1 are \\(\\{U, M\\}\\).\n\n\nTakeaway\nRationalizability removes clearly irrational actions but may still leave multiple plausible choices."
+  },
+  {
+    "objectID": "notes/equilibriums/rationalizability.html#later-on-analysis",
+    "href": "notes/equilibriums/rationalizability.html#later-on-analysis",
+    "title": "Rationalizability",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nNash equilibrium is a stronger prediction than rationalizability.\nIn some games, iterated strict dominance leads to a unique outcome (then it’s very powerful).\nWith weak dominance, elimination can depend on order; if you include it, add a warning section."
+  },
+  {
+    "objectID": "notes/equilibriums/proper-equilibrium.html",
+    "href": "notes/equilibriums/proper-equilibrium.html",
+    "title": "Proper equilibrium",
+    "section": "",
+    "text": "A proper equilibrium is a refinement of trembling-hand perfection. It assumes players can make mistakes, but very bad mistakes are much less likely than slightly bad ones.\nIntuition: if an action yields a much lower payoff than another, the chance you mistakenly choose it should be much smaller."
+  },
+  {
+    "objectID": "notes/equilibriums/proper-equilibrium.html#what-it-is",
+    "href": "notes/equilibriums/proper-equilibrium.html#what-it-is",
+    "title": "Proper equilibrium",
+    "section": "",
+    "text": "A proper equilibrium is a refinement of trembling-hand perfection. It assumes players can make mistakes, but very bad mistakes are much less likely than slightly bad ones.\nIntuition: if an action yields a much lower payoff than another, the chance you mistakenly choose it should be much smaller."
+  },
+  {
+    "objectID": "notes/equilibriums/proper-equilibrium.html#where-it-shows-up",
+    "href": "notes/equilibriums/proper-equilibrium.html#where-it-shows-up",
+    "title": "Proper equilibrium",
+    "section": "Where it shows up",
+    "text": "Where it shows up\n\nNormal-form games with multiple perfect equilibria\nEquilibrium selection arguments based on “plausible mistakes”\nAdvanced micro/game theory refinements"
+  },
+  {
+    "objectID": "notes/equilibriums/proper-equilibrium.html#how-to-solve-recipe",
+    "href": "notes/equilibriums/proper-equilibrium.html#how-to-solve-recipe",
+    "title": "Proper equilibrium",
+    "section": "How to solve (recipe)",
+    "text": "How to solve (recipe)\n\nStart from candidate equilibria (usually Nash / perfect).\nCompare payoffs of different deviations.\nImpose the idea: probability of a worse deviation is tiny relative to a better deviation.\nCheck whether the equilibrium can be supported as the limit of such “proper” trembles.\n\n(For most newcomer notes, the key is the intuition, not the full formal definition.)"
+  },
+  {
+    "objectID": "notes/equilibriums/proper-equilibrium.html#solved-example-intuition-with-unequal-mistakes",
+    "href": "notes/equilibriums/proper-equilibrium.html#solved-example-intuition-with-unequal-mistakes",
+    "title": "Proper equilibrium",
+    "section": "Solved example (intuition with unequal mistakes)",
+    "text": "Solved example (intuition with unequal mistakes)\n\nProblem (context + question)\nPlayer 1 is choosing between three actions \\(A,B,C\\) against a fixed opponent strategy. Payoffs to player 1 are:\n\n\\(u_1(A)=10\\) (best)\n\\(u_1(B)=9\\) (slightly worse)\n\\(u_1(C)=0\\) (much worse)\n\nQuestion: Under the “proper” idea of trembles, which mistake is more plausible: choosing \\(B\\) or choosing \\(C\\)?\n\n\nSolution\nProper equilibrium assumes that when players tremble: - they might mistakenly choose \\(B\\) instead of \\(A\\) with small probability, - but choosing \\(C\\) (which is drastically worse) should be far less likely than choosing \\(B\\).\nSo “proper trembles” treat worse errors as exponentially rarer than mild errors.\nResult: A proper refinement would allow small probability on \\(B\\) but push the probability on \\(C\\) to be negligible relative to \\(B\\) as trembles vanish.\n\n\nCheck\nThis matches the guiding principle: the likelihood of mistakes respects payoff ranking and payoff gaps.\n\n\nTakeaway\nProper equilibrium captures “bounded rationality with common sense”: huge blunders are rarer than small slips."
+  },
+  {
+    "objectID": "notes/equilibriums/proper-equilibrium.html#later-on-analysis",
+    "href": "notes/equilibriums/proper-equilibrium.html#later-on-analysis",
+    "title": "Proper equilibrium",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nProper equilibrium ⟹ trembling-hand perfect ⟹ Nash (in finite games).\nIn practice, proper equilibrium is used when you want a sharper selection than perfection provides.\nIf you later want a fully formal statement, we can add it as an appendix section."
+  },
+  {
+    "objectID": "notes/equilibriums/sequential-equilibrium.html",
+    "href": "notes/equilibriums/sequential-equilibrium.html",
+    "title": "Sequential equilibrium",
+    "section": "",
+    "text": "A sequential equilibrium is a refinement of PBE. It is a pair (strategies, beliefs) such that:\n\nSequential rationality: strategies are optimal at every information set given beliefs.\nConsistency: beliefs come from strategies via Bayes’ rule as limits of fully mixed (“trembling”) strategies.\n\nThis “tremble” requirement disciplines off-path beliefs: beliefs must be justifiable by small mistakes."
+  },
+  {
+    "objectID": "notes/equilibriums/sequential-equilibrium.html#what-it-is",
+    "href": "notes/equilibriums/sequential-equilibrium.html#what-it-is",
+    "title": "Sequential equilibrium",
+    "section": "",
+    "text": "A sequential equilibrium is a refinement of PBE. It is a pair (strategies, beliefs) such that:\n\nSequential rationality: strategies are optimal at every information set given beliefs.\nConsistency: beliefs come from strategies via Bayes’ rule as limits of fully mixed (“trembling”) strategies.\n\nThis “tremble” requirement disciplines off-path beliefs: beliefs must be justifiable by small mistakes."
+  },
+  {
+    "objectID": "notes/equilibriums/sequential-equilibrium.html#where-it-shows-up",
+    "href": "notes/equilibriums/sequential-equilibrium.html#where-it-shows-up",
+    "title": "Sequential equilibrium",
+    "section": "Where it shows up",
+    "text": "Where it shows up\n\nSignaling games and dynamic games with imperfect information\nAny setting where PBE has many equilibria due to arbitrary off-path beliefs\nRefinement discussions in micro theory / game theory texts"
+  },
+  {
+    "objectID": "notes/equilibriums/sequential-equilibrium.html#how-to-solve-recipe",
+    "href": "notes/equilibriums/sequential-equilibrium.html#how-to-solve-recipe",
+    "title": "Sequential equilibrium",
+    "section": "How to solve (recipe)",
+    "text": "How to solve (recipe)\n\nStart from a candidate PBE.\nAdd small probabilities (trembles) so every action is played with positive probability.\nCompute beliefs via Bayes’ rule under the perturbed strategy.\nTake limits as trembles go to zero:\n\nif beliefs converge, they are consistent.\n\nCheck sequential rationality with those beliefs."
+  },
+  {
+    "objectID": "notes/equilibriums/sequential-equilibrium.html#solved-example-why-some-off-path-beliefs-are-not-credible",
+    "href": "notes/equilibriums/sequential-equilibrium.html#solved-example-why-some-off-path-beliefs-are-not-credible",
+    "title": "Sequential equilibrium",
+    "section": "Solved example (why some off-path beliefs are not credible)",
+    "text": "Solved example (why some off-path beliefs are not credible)\n\nProblem (context + question)\nConsider the pooling PBE from the PBE page: - Both types choose \\(e=0\\). - Off-path belief after \\(e=1\\) is \\(\\Pr(H\\mid e=1)=0\\).\nQuestion: Explain the consistency idea: what must be true for such an off-path belief to be allowed under sequential equilibrium?\n\n\nSolution\nSequential equilibrium requires off-path beliefs to be limits of Bayes-updated beliefs from fully mixed strategies.\nSo imagine a perturbed (trembling) strategy where: - Type \\(H\\) plays \\(e=1\\) with small probability \\(\\varepsilon_H&gt;0\\), - Type \\(L\\) plays \\(e=1\\) with small probability \\(\\varepsilon_L&gt;0\\).\nThen, upon observing \\(e=1\\), Bayes’ rule gives: \\[\n\\Pr(H\\mid e=1)=\\frac{p\\,\\varepsilon_H}{p\\,\\varepsilon_H+(1-p)\\,\\varepsilon_L}.\n\\]\nNow consider the limit as trembles vanish. The limiting belief depends on the relative rate at which \\(\\varepsilon_H\\) and \\(\\varepsilon_L\\) go to zero.\n\nIf \\(\\varepsilon_H/\\varepsilon_L \\to 0\\), then \\(\\Pr(H\\mid e=1)\\to 0\\).\nIf \\(\\varepsilon_H/\\varepsilon_L \\to \\infty\\), then \\(\\Pr(H\\mid e=1)\\to 1\\).\nIf \\(\\varepsilon_H/\\varepsilon_L \\to k\\in(0,\\infty)\\), then the limit is an interior number in \\((0,1)\\).\n\nResult: The off-path belief \\(\\Pr(H\\mid e=1)=0\\) is consistent only if the perturbations imply that, in the limit, type \\(H\\) is vanishingly less likely than type \\(L\\) to make that mistake.\n\n\nCheck\nThis belief is not “free”: it must be explainable by a sequence of fully mixed strategies.\n\n\nTakeaway\nSequential equilibrium restricts off-path beliefs by requiring them to arise from plausible small mistakes."
+  },
+  {
+    "objectID": "notes/equilibriums/sequential-equilibrium.html#later-on-analysis",
+    "href": "notes/equilibriums/sequential-equilibrium.html#later-on-analysis",
+    "title": "Sequential equilibrium",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nSequential equilibrium is often closer to how theorists think about “reasonable beliefs” off-path.\nStronger refinements (e.g., intuitive criterion) impose additional structure.\nFor applied work, PBE is common; for selection arguments, sequential equilibrium is a useful upgrade."
+  },
+  {
+    "objectID": "notes/equilibriums/nash.html",
+    "href": "notes/equilibriums/nash.html",
+    "title": "Nash equilibrium (NE)",
+    "section": "",
+    "text": "A Nash equilibrium is a strategy profile where no player can gain by deviating unilaterally.\nIn a finite game with strategy sets \\(S_i\\) and payoffs \\(u_i\\), a profile \\(s^*=(s_1^*,\\dots,s_n^*)\\) is a Nash equilibrium if for every player \\(i\\): \\[\nu_i(s_i^*,s_{-i}^*) \\ge u_i(s_i,s_{-i}^*) \\quad \\forall s_i\\in S_i.\n\\]"
+  },
+  {
+    "objectID": "notes/equilibriums/nash.html#what-it-is",
+    "href": "notes/equilibriums/nash.html#what-it-is",
+    "title": "Nash equilibrium (NE)",
+    "section": "",
+    "text": "A Nash equilibrium is a strategy profile where no player can gain by deviating unilaterally.\nIn a finite game with strategy sets \\(S_i\\) and payoffs \\(u_i\\), a profile \\(s^*=(s_1^*,\\dots,s_n^*)\\) is a Nash equilibrium if for every player \\(i\\): \\[\nu_i(s_i^*,s_{-i}^*) \\ge u_i(s_i,s_{-i}^*) \\quad \\forall s_i\\in S_i.\n\\]"
+  },
+  {
+    "objectID": "notes/equilibriums/nash.html#where-it-shows-up",
+    "href": "notes/equilibriums/nash.html#where-it-shows-up",
+    "title": "Nash equilibrium (NE)",
+    "section": "Where it shows up",
+    "text": "Where it shows up\n\nNormal-form games (simultaneous move)\nAny finite game once written in normal form (including mixed strategies)\nAs a building block inside more advanced equilibrium concepts"
+  },
+  {
+    "objectID": "notes/equilibriums/nash.html#how-to-solve-recipe",
+    "href": "notes/equilibriums/nash.html#how-to-solve-recipe",
+    "title": "Nash equilibrium (NE)",
+    "section": "How to solve (recipe)",
+    "text": "How to solve (recipe)\n\nPure strategies\n\n(Optional) Check for strict dominance and eliminate dominated actions.\nCompute each player’s best response to every opponent action.\nNash equilibria are intersections of best responses.\n\n\n\nMixed strategies (2×2 or small games)\n\nGuess supports (which actions get positive probability).\nImpose indifference conditions: each player mixes only if the opponent makes them indifferent over actions in support.\nSolve probabilities + verify they lie in \\([0,1]\\) and no excluded action yields higher payoff."
+  },
+  {
+    "objectID": "notes/equilibriums/nash.html#solved-example-pure-ne",
+    "href": "notes/equilibriums/nash.html#solved-example-pure-ne",
+    "title": "Nash equilibrium (NE)",
+    "section": "Solved example (pure NE)",
+    "text": "Solved example (pure NE)\n\nProblem (context + question)\nTwo cafés simultaneously choose discount \\(D\\) or normal pricing \\(N\\). Payoffs are:\n\\[\n\\begin{array}{c|cc}\n& D & N\\\\ \\hline\nD & (1,1) & (3,0)\\\\\nN & (0,3) & (2,2)\n\\end{array}\n\\]\nQuestion: Find all pure-strategy Nash equilibria.\n\n\nSolution\nStep 1 (player 1 best responses): - If player 2 plays \\(D\\), player 1 compares \\(1\\) (play \\(D\\)) vs \\(0\\) (play \\(N\\)) → best response is \\(D\\). - If player 2 plays \\(N\\), player 1 compares \\(3\\) (play \\(D\\)) vs \\(2\\) (play \\(N\\)) → best response is \\(D\\).\nSo player 1’s best response is always \\(D\\).\nStep 2 (player 2 best responses): By symmetry, player 2’s best response is always \\(D\\).\nResult: The unique pure-strategy Nash equilibrium is \\((D,D)\\).\n\n\nCheck\nAt \\((D,D)\\), deviating to \\(N\\) reduces each café’s payoff from \\(1\\) to \\(0\\).\n\n\nTakeaway\nNE can be inefficient: both cafés would prefer \\((N,N)\\), but strategic incentives push them to discount."
+  },
+  {
+    "objectID": "notes/equilibriums/nash.html#later-on-analysis",
+    "href": "notes/equilibriums/nash.html#later-on-analysis",
+    "title": "Nash equilibrium (NE)",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nMultiple equilibria: some games have multiple Nash equilibria; then you need selection ideas.\nRefinements: in dynamic games, Nash can allow non-credible threats → motivates SPE.\nCorrelated equilibrium: enlarges the solution concept by allowing correlation devices."
+  },
+  {
     "objectID": "foundations/convexity.html",
     "href": "foundations/convexity.html",
     "title": "Convexity & concavity",
@@ -726,6 +964,314 @@
     "title": "About",
     "section": "",
     "text": "About this blog"
+  },
+  {
+    "objectID": "notes/equilibriums/bayesian-nash.html",
+    "href": "notes/equilibriums/bayesian-nash.html",
+    "title": "Bayesian Nash equilibrium (BNE)",
+    "section": "",
+    "text": "A Bayesian game has private information (types). A Bayesian Nash equilibrium is a strategy profile where each type best-responds given beliefs about others’ types.\nFormally, each player \\(i\\) has type \\(\\theta_i\\) and chooses an action via a strategy \\(s_i(\\theta_i)\\). A BNE satisfies, for each type \\(\\theta_i\\): \\[\ns_i(\\theta_i)\\in \\arg\\max_{a_i} \\mathbb{E}\\left[u_i(a_i, s_{-i}(\\theta_{-i}), \\theta_i,\\theta_{-i})\\mid \\theta_i\\right].\n\\]"
+  },
+  {
+    "objectID": "notes/equilibriums/bayesian-nash.html#what-it-is",
+    "href": "notes/equilibriums/bayesian-nash.html#what-it-is",
+    "title": "Bayesian Nash equilibrium (BNE)",
+    "section": "",
+    "text": "A Bayesian game has private information (types). A Bayesian Nash equilibrium is a strategy profile where each type best-responds given beliefs about others’ types.\nFormally, each player \\(i\\) has type \\(\\theta_i\\) and chooses an action via a strategy \\(s_i(\\theta_i)\\). A BNE satisfies, for each type \\(\\theta_i\\): \\[\ns_i(\\theta_i)\\in \\arg\\max_{a_i} \\mathbb{E}\\left[u_i(a_i, s_{-i}(\\theta_{-i}), \\theta_i,\\theta_{-i})\\mid \\theta_i\\right].\n\\]"
+  },
+  {
+    "objectID": "notes/equilibriums/bayesian-nash.html#where-it-shows-up",
+    "href": "notes/equilibriums/bayesian-nash.html#where-it-shows-up",
+    "title": "Bayesian Nash equilibrium (BNE)",
+    "section": "Where it shows up",
+    "text": "Where it shows up\n\nStatic games of incomplete information (entry games, pricing with private costs)\nAuctions (many auction models are BNE)\nAs the static benchmark for dynamic incomplete-information models"
+  },
+  {
+    "objectID": "notes/equilibriums/bayesian-nash.html#how-to-solve-recipe",
+    "href": "notes/equilibriums/bayesian-nash.html#how-to-solve-recipe",
+    "title": "Bayesian Nash equilibrium (BNE)",
+    "section": "How to solve (recipe)",
+    "text": "How to solve (recipe)\n\nList types and prior beliefs.\nWrite strategies as functions of types: \\(a_i=s_i(\\theta_i)\\).\nCompute each type’s expected payoff from each action.\nChoose best responses by type.\nVerify mutual best responses given beliefs."
+  },
+  {
+    "objectID": "notes/equilibriums/bayesian-nash.html#solved-example-type-dependent-best-response",
+    "href": "notes/equilibriums/bayesian-nash.html#solved-example-type-dependent-best-response",
+    "title": "Bayesian Nash equilibrium (BNE)",
+    "section": "Solved example (type-dependent best response)",
+    "text": "Solved example (type-dependent best response)\n\nProblem (context + question)\nAn investor chooses whether to fund a startup: \\(F\\) (fund) or \\(R\\) (reject).\nThe startup’s type is \\(\\theta\\in\\{S,W\\}\\) (strong or weak), with prior \\(\\Pr(S)=p\\). If the investor funds: - payoff is \\(+1\\) if \\(\\theta=S\\), - payoff is \\(-1\\) if \\(\\theta=W\\).\nIf the investor rejects, payoff is \\(0\\).\nQuestion: Find the investor’s optimal action as a function of \\(p\\) (a BNE decision rule).\n\n\nSolution\nCompute expected payoff from funding: \\[\n\\mathbb{E}[\\pi(F)] = p(1) + (1-p)(-1) = 2p-1.\n\\]\nRejecting yields: \\[\n\\mathbb{E}[\\pi(R)] = 0.\n\\]\nSo the investor funds iff \\(2p-1\\ge 0\\), i.e. \\[\np \\ge \\tfrac12.\n\\]\nResult: Optimal strategy is: - choose \\(F\\) if \\(p\\ge 1/2\\), - choose \\(R\\) if \\(p&lt;1/2\\), - indifferent at \\(p=1/2\\).\n\n\nCheck\nGiven beliefs (the prior), the chosen action maximizes expected payoff.\n\n\nTakeaway\nBNE decisions are often threshold rules: act if expected benefit given beliefs is large enough."
+  },
+  {
+    "objectID": "notes/equilibriums/bayesian-nash.html#later-on-analysis",
+    "href": "notes/equilibriums/bayesian-nash.html#later-on-analysis",
+    "title": "Bayesian Nash equilibrium (BNE)",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nIf a signal is observed before acting, beliefs update via Bayes’ rule and the threshold shifts.\nIf the informed party can strategically choose information, you move toward signaling or cheap talk → PBE.\nWith many types/actions, equilibrium often has cutoff strategies and monotonicity structure."
+  },
+  {
+    "objectID": "notes/equilibriums/trembling-hand-perfect.html",
+    "href": "notes/equilibriums/trembling-hand-perfect.html",
+    "title": "Trembling-hand perfect equilibrium",
+    "section": "",
+    "text": "A trembling-hand perfect equilibrium (perfect equilibrium) is a Nash equilibrium that remains optimal when every player might make tiny mistakes (“trembles”).\nFormally (intuition-level): a strategy profile is perfect if it is the limit of a sequence of fully mixed strategy profiles (every action played with positive probability) where each player’s strategy is a best response to the others in that sequence."
+  },
+  {
+    "objectID": "notes/equilibriums/trembling-hand-perfect.html#what-it-is",
+    "href": "notes/equilibriums/trembling-hand-perfect.html#what-it-is",
+    "title": "Trembling-hand perfect equilibrium",
+    "section": "",
+    "text": "A trembling-hand perfect equilibrium (perfect equilibrium) is a Nash equilibrium that remains optimal when every player might make tiny mistakes (“trembles”).\nFormally (intuition-level): a strategy profile is perfect if it is the limit of a sequence of fully mixed strategy profiles (every action played with positive probability) where each player’s strategy is a best response to the others in that sequence."
+  },
+  {
+    "objectID": "notes/equilibriums/trembling-hand-perfect.html#where-it-shows-up",
+    "href": "notes/equilibriums/trembling-hand-perfect.html#where-it-shows-up",
+    "title": "Trembling-hand perfect equilibrium",
+    "section": "Where it shows up",
+    "text": "Where it shows up\n\nNormal-form games where Nash equilibria include weakly dominated or non-robust behavior\nRefinement arguments: “Would this equilibrium survive small mistakes?”\nOften discussed alongside proper equilibrium and sequential equilibrium"
+  },
+  {
+    "objectID": "notes/equilibriums/trembling-hand-perfect.html#why-it-exists-intuition",
+    "href": "notes/equilibriums/trembling-hand-perfect.html#why-it-exists-intuition",
+    "title": "Trembling-hand perfect equilibrium",
+    "section": "Why it exists (intuition)",
+    "text": "Why it exists (intuition)\nIf an equilibrium relies on assigning zero probability to “unlikely” actions, trembles force you to confront those actions. Strategies that are only optimal because some opponent action is assumed impossible may fail perfection."
+  },
+  {
+    "objectID": "notes/equilibriums/trembling-hand-perfect.html#how-to-solve-recipe",
+    "href": "notes/equilibriums/trembling-hand-perfect.html#how-to-solve-recipe",
+    "title": "Trembling-hand perfect equilibrium",
+    "section": "How to solve (recipe)",
+    "text": "How to solve (recipe)\n\nFind Nash equilibria.\nCheck whether an equilibrium uses weakly dominated strategies or fragile best responses.\nConsider small trembles: assume each player plays every action with tiny probability.\nAsk: is the equilibrium strategy still a best response when opponents sometimes tremble?\nIf yes (as a limit), it’s perfect."
+  },
+  {
+    "objectID": "notes/equilibriums/trembling-hand-perfect.html#solved-example-eliminating-a-weakly-dominated-equilibrium",
+    "href": "notes/equilibriums/trembling-hand-perfect.html#solved-example-eliminating-a-weakly-dominated-equilibrium",
+    "title": "Trembling-hand perfect equilibrium",
+    "section": "Solved example (eliminating a weakly dominated equilibrium)",
+    "text": "Solved example (eliminating a weakly dominated equilibrium)\n\nProblem (context + question)\nConsider this 2×2 game (payoffs shown as (player 1, player 2)):\n\\[\n\\begin{array}{c|cc}\n& L & R\\\\ \\hline\nU & (1,1) & (0,1)\\\\\nD & (1,0) & (0,0)\n\\end{array}\n\\]\nQuestion: (i) Find all Nash equilibria. (ii) Which are trembling-hand perfect?\n\n\nSolution\nStep 1: Best responses - Player 1: - If player 2 plays \\(L\\): payoff from \\(U\\) is 1, from \\(D\\) is 1 → both \\(U\\) and \\(D\\) are best responses. - If player 2 plays \\(R\\): payoff from \\(U\\) is 0, from \\(D\\) is 0 → both are best responses. - Player 2: - If player 1 plays \\(U\\): payoffs are 1 from \\(L\\) and 1 from \\(R\\) → both best responses. - If player 1 plays \\(D\\): payoffs are 0 from \\(L\\) and 0 from \\(R\\) → both best responses.\nSo every pure profile is a Nash equilibrium (players are indifferent everywhere).\nStep 2: Add trembles Suppose player 2 trembles: plays \\(L\\) with probability \\(1-\\varepsilon\\) and \\(R\\) with probability \\(\\varepsilon&gt;0\\).\nPlayer 1’s expected payoff from: - \\(U\\): \\((1-\\varepsilon)\\cdot 1 + \\varepsilon\\cdot 0 = 1-\\varepsilon\\) - \\(D\\): \\((1-\\varepsilon)\\cdot 1 + \\varepsilon\\cdot 0 = 1-\\varepsilon\\)\nStill indifferent. So trembles do not break player 1’s indifference.\nNow suppose player 1 trembles: plays \\(U\\) with probability \\(1-\\delta\\) and \\(D\\) with probability \\(\\delta&gt;0\\).\nPlayer 2’s expected payoff from: - \\(L\\): \\((1-\\delta)\\cdot 1 + \\delta\\cdot 0 = 1-\\delta\\) - \\(R\\): \\((1-\\delta)\\cdot 1 + \\delta\\cdot 0 = 1-\\delta\\)\nStill indifferent.\nResult: In this particular game, trembles do not select: equilibria are robust because payoffs create genuine indifference.\n\n\nTakeaway\nPerfection rules out equilibria that only work by assuming “impossible” actions never happen. But if the game truly makes players indifferent, perfection won’t refine further."
+  },
+  {
+    "objectID": "notes/equilibriums/trembling-hand-perfect.html#later-on-analysis",
+    "href": "notes/equilibriums/trembling-hand-perfect.html#later-on-analysis",
+    "title": "Trembling-hand perfect equilibrium",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nProper equilibrium strengthens perfection by making “worse mistakes” exponentially less likely.\nIn extensive-form games, sequential equilibrium is the tremble-based refinement with beliefs.\nIn many applied models, perfection is used to exclude equilibria involving weakly dominated actions."
+  },
+  {
+    "objectID": "notes/equilibriums/cheat-sheet.html",
+    "href": "notes/equilibriums/cheat-sheet.html",
+    "title": "Equilibrium cheat sheet",
+    "section": "",
+    "text": "Simultaneous move, complete info → NE (and refinements if needed)\nSequential, perfect information → SPE (backward induction)\nIncomplete information, static → BNE\nDynamic + beliefs needed (signaling/screening) → PBE\nOff-path beliefs feel arbitrary → Sequential equilibrium (trembles discipline beliefs)\nCheap talk baseline → Babbling equilibrium always exists\nNeed “robust to mistakes” → Trembling-hand perfect / proper\nWant coordination via signals → Correlated equilibrium\nWant weak prediction set → Rationalizability"
+  },
+  {
+    "objectID": "notes/equilibriums/cheat-sheet.html#how-to-choose-the-right-concept",
+    "href": "notes/equilibriums/cheat-sheet.html#how-to-choose-the-right-concept",
+    "title": "Equilibrium cheat sheet",
+    "section": "",
+    "text": "Simultaneous move, complete info → NE (and refinements if needed)\nSequential, perfect information → SPE (backward induction)\nIncomplete information, static → BNE\nDynamic + beliefs needed (signaling/screening) → PBE\nOff-path beliefs feel arbitrary → Sequential equilibrium (trembles discipline beliefs)\nCheap talk baseline → Babbling equilibrium always exists\nNeed “robust to mistakes” → Trembling-hand perfect / proper\nWant coordination via signals → Correlated equilibrium\nWant weak prediction set → Rationalizability"
+  },
+  {
+    "objectID": "notes/equilibriums/cheat-sheet.html#recipe-card-nash-equilibrium-ne",
+    "href": "notes/equilibriums/cheat-sheet.html#recipe-card-nash-equilibrium-ne",
+    "title": "Equilibrium cheat sheet",
+    "section": "Recipe card: Nash equilibrium (NE)",
+    "text": "Recipe card: Nash equilibrium (NE)\n\nPure NE\n\n(Optional) Remove strictly dominated actions.\nCompute best responses.\nIntersections of best responses = pure NE.\n\n\n\nMixed NE (quick 2×2 method)\nLet player 1 mix \\(p\\) on \\(U\\) (and \\(1-p\\) on \\(D\\)). Let player 2 mix \\(q\\) on \\(L\\) (and \\(1-q\\) on \\(R\\)). 1) Make player 1 indifferent between \\(U\\) and \\(D\\) → solve for \\(q\\). 2) Make player 2 indifferent between \\(L\\) and \\(R\\) → solve for \\(p\\). 3) Check \\(p,q\\in[0,1]\\) and supports are consistent.\nCommon pitfall: mixing is only required when the opponent is indifferent among the actions in their support."
+  },
+  {
+    "objectID": "notes/equilibriums/cheat-sheet.html#recipe-card-subgame-perfect-equilibrium-spe",
+    "href": "notes/equilibriums/cheat-sheet.html#recipe-card-subgame-perfect-equilibrium-spe",
+    "title": "Equilibrium cheat sheet",
+    "section": "Recipe card: Subgame perfect equilibrium (SPE)",
+    "text": "Recipe card: Subgame perfect equilibrium (SPE)\n\nBackward induction (finite perfect-information trees)\n\nStart at the last decision nodes.\nChoose optimal action there.\nReplace that subgame with its continuation payoff.\nMove backward until the root.\n\nCommon pitfall: using non-credible threats (actions that wouldn’t be optimal if reached)."
+  },
+  {
+    "objectID": "notes/equilibriums/cheat-sheet.html#recipe-card-bayesian-nash-equilibrium-bne",
+    "href": "notes/equilibriums/cheat-sheet.html#recipe-card-bayesian-nash-equilibrium-bne",
+    "title": "Equilibrium cheat sheet",
+    "section": "Recipe card: Bayesian Nash equilibrium (BNE)",
+    "text": "Recipe card: Bayesian Nash equilibrium (BNE)\n\nWrite types and prior \\(\\Pr(\\theta)\\).\nStrategy is type-contingent: \\(a_i=s_i(\\theta_i)\\).\nFor each type, compute expected payoff for each action.\nChoose best responses for each type; verify consistency across players.\n\nCommon pitfall: forgetting strategies are functions of type, not single actions."
+  },
+  {
+    "objectID": "notes/equilibriums/cheat-sheet.html#recipe-card-perfect-bayesian-equilibrium-pbe",
+    "href": "notes/equilibriums/cheat-sheet.html#recipe-card-perfect-bayesian-equilibrium-pbe",
+    "title": "Equilibrium cheat sheet",
+    "section": "Recipe card: Perfect Bayesian equilibrium (PBE)",
+    "text": "Recipe card: Perfect Bayesian equilibrium (PBE)\nA PBE is (strategies, beliefs) satisfying: - Sequential rationality: actions optimal at every information set. - Bayes consistency on-path: update beliefs using Bayes’ rule where possible.\n\nStandard workflow (signaling/screening)\n\nGuess form: separating / pooling / semi-separating.\nPropose strategies for sender types + receiver actions.\nCompute on-path posteriors via Bayes.\nCheck receiver best responses given beliefs.\nCheck each sender type’s incentive constraints (no profitable deviations).\nSpecify off-path beliefs (carefully) and re-check deviations.\n\nCommon pitfall: not stating off-path beliefs, or using off-path beliefs that “magically” punish deviations without justification (sequential equilibrium addresses this)."
+  },
+  {
+    "objectID": "notes/equilibriums/cheat-sheet.html#recipe-card-sequential-equilibrium-se",
+    "href": "notes/equilibriums/cheat-sheet.html#recipe-card-sequential-equilibrium-se",
+    "title": "Equilibrium cheat sheet",
+    "section": "Recipe card: Sequential equilibrium (SE)",
+    "text": "Recipe card: Sequential equilibrium (SE)\nSequential equilibrium is PBE + a discipline on beliefs: - Beliefs must be limits of Bayes-updated beliefs from fully mixed trembles.\n\nPractical use\nIf your PBE relies heavily on off-path beliefs: 1) Add tiny tremble probabilities to every action. 2) Compute implied posteriors. 3) Take limits → see which beliefs are justifiable. 4) Re-check optimality.\nCommon pitfall: treating off-path beliefs as completely free."
+  },
+  {
+    "objectID": "notes/equilibriums/cheat-sheet.html#recipe-card-babbling-equilibrium-cheap-talk",
+    "href": "notes/equilibriums/cheat-sheet.html#recipe-card-babbling-equilibrium-cheap-talk",
+    "title": "Equilibrium cheat sheet",
+    "section": "Recipe card: Babbling equilibrium (cheap talk)",
+    "text": "Recipe card: Babbling equilibrium (cheap talk)\n\nReceiver ignores message: same action after every message.\nBeliefs stay at the prior (or any belief consistent with ignoring).\nSender is indifferent over messages because messages don’t affect actions.\n\nUse: baseline; compare informative equilibria against it."
+  },
+  {
+    "objectID": "notes/equilibriums/cheat-sheet.html#recipe-card-trembling-hand-perfect-equilibrium",
+    "href": "notes/equilibriums/cheat-sheet.html#recipe-card-trembling-hand-perfect-equilibrium",
+    "title": "Equilibrium cheat sheet",
+    "section": "Recipe card: Trembling-hand perfect equilibrium",
+    "text": "Recipe card: Trembling-hand perfect equilibrium\n\nStart from a Nash equilibrium.\nAsk whether it survives when opponents sometimes make small mistakes.\nEquilibria relying on “impossible” actions not happening can fail.\n\nHeuristic: if an equilibrium uses weakly dominated actions or fragile indifference, perfection may eliminate it."
+  },
+  {
+    "objectID": "notes/equilibriums/cheat-sheet.html#recipe-card-proper-equilibrium",
+    "href": "notes/equilibriums/cheat-sheet.html#recipe-card-proper-equilibrium",
+    "title": "Equilibrium cheat sheet",
+    "section": "Recipe card: Proper equilibrium",
+    "text": "Recipe card: Proper equilibrium\nLike perfect equilibrium, but: - very bad mistakes are much less likely than slightly bad mistakes.\nUse: sharper selection when perfection is not selective enough."
+  },
+  {
+    "objectID": "notes/equilibriums/cheat-sheet.html#recipe-card-correlated-equilibrium-ce",
+    "href": "notes/equilibriums/cheat-sheet.html#recipe-card-correlated-equilibrium-ce",
+    "title": "Equilibrium cheat sheet",
+    "section": "Recipe card: Correlated equilibrium (CE)",
+    "text": "Recipe card: Correlated equilibrium (CE)\n\nSpecify a distribution over action profiles (recommendations).\nFor each player and each recommendation, write obedience constraints: following ≥ deviating.\nIf all constraints hold, it’s a CE.\n\nMemory aid: “Follow the recommendation because conditional on it, deviating doesn’t help.”"
+  },
+  {
+    "objectID": "notes/equilibriums/cheat-sheet.html#recipe-card-rationalizability",
+    "href": "notes/equilibriums/cheat-sheet.html#recipe-card-rationalizability",
+    "title": "Equilibrium cheat sheet",
+    "section": "Recipe card: Rationalizability",
+    "text": "Recipe card: Rationalizability\n\nIteratively delete strictly dominated actions.\nRepeat in the reduced game until no more deletions.\nRemaining actions are rationalizable.\n\nCommon pitfall: weak dominance deletion can be order-dependent (start with strict)."
+  },
+  {
+    "objectID": "notes/equilibriums/cheat-sheet.html#mini-glossary-quick",
+    "href": "notes/equilibriums/cheat-sheet.html#mini-glossary-quick",
+    "title": "Equilibrium cheat sheet",
+    "section": "Mini glossary (quick)",
+    "text": "Mini glossary (quick)\n\nNE: best response to best response.\nSPE: NE in every subgame (credible).\nBNE: NE with types; best response in expectation.\nPBE: strategies + beliefs; Bayes on-path; sequentially rational.\nSE: PBE + tremble-consistent beliefs.\nCE: equilibrium over distributions; “obey the signal.”\nRationalizability: what survives iterated strict dominance."
+  },
+  {
+    "objectID": "notes/equilibriums/babbling.html",
+    "href": "notes/equilibriums/babbling.html",
+    "title": "Babbling equilibrium (cheap talk)",
+    "section": "",
+    "text": "In cheap talk, messages are costless and non-binding. A babbling equilibrium is one in which messages convey no information: the receiver’s action does not depend on the message, and the sender is indifferent across messages.\nBabbling equilibria exist very generally and serve as a baseline."
+  },
+  {
+    "objectID": "notes/equilibriums/babbling.html#what-it-is",
+    "href": "notes/equilibriums/babbling.html#what-it-is",
+    "title": "Babbling equilibrium (cheap talk)",
+    "section": "",
+    "text": "In cheap talk, messages are costless and non-binding. A babbling equilibrium is one in which messages convey no information: the receiver’s action does not depend on the message, and the sender is indifferent across messages.\nBabbling equilibria exist very generally and serve as a baseline."
+  },
+  {
+    "objectID": "notes/equilibriums/babbling.html#where-it-shows-up",
+    "href": "notes/equilibriums/babbling.html#where-it-shows-up",
+    "title": "Babbling equilibrium (cheap talk)",
+    "section": "Where it shows up",
+    "text": "Where it shows up\n\nCheap talk models (sender–receiver)\nCommunication settings with strong preference misalignment\nAs the “uninformative” benchmark when discussing informative equilibria (partition, separating)"
+  },
+  {
+    "objectID": "notes/equilibriums/babbling.html#how-to-solve-recipe",
+    "href": "notes/equilibriums/babbling.html#how-to-solve-recipe",
+    "title": "Babbling equilibrium (cheap talk)",
+    "section": "How to solve (recipe)",
+    "text": "How to solve (recipe)\n\nMake the receiver ignore messages: choose the same action after any message.\nSet receiver beliefs equal to the prior (or any belief consistent with ignoring messages).\nVerify receiver optimality under those beliefs.\nVerify sender indifference: since messages don’t affect actions, any message is optimal."
+  },
+  {
+    "objectID": "notes/equilibriums/babbling.html#solved-example-fully-worked",
+    "href": "notes/equilibriums/babbling.html#solved-example-fully-worked",
+    "title": "Babbling equilibrium (cheap talk)",
+    "section": "Solved example (fully worked)",
+    "text": "Solved example (fully worked)\n\nProblem (context + question)\nA sender observes \\(\\theta\\in\\{0,1\\}\\) with prior \\(\\Pr(\\theta=1)=1/2\\). Sender sends costless message \\(m\\in\\{\\text{low},\\text{high}\\}\\). Receiver chooses action \\(a\\in\\{0,1\\}\\).\nReceiver payoff: \\[\nu_R(a,\\theta)=\\mathbf{1}\\{a=\\theta\\}.\n\\]\nSender payoff (biased toward \\(a=1\\)): \\[\nu_S(a,\\theta)=\\mathbf{1}\\{a=1\\}.\n\\]\nQuestion: Exhibit a babbling equilibrium (strategies + beliefs) and verify it.\n\n\nSolution\nA babbling equilibrium has receiver ignore the message.\nStep 1 (receiver best response when ignoring messages): Under the prior, \\(\\Pr(\\theta=1)=1/2\\). Then - payoff from \\(a=1\\) is \\(1/2\\), - payoff from \\(a=0\\) is \\(1/2\\).\nReceiver is indifferent, so a valid best response is: \\[\na=0 \\quad \\text{after both messages}.\n\\]\nStep 2 (sender incentives): If the receiver always plays \\(a=0\\), sender payoff is always \\(0\\) regardless of message. So the sender is indifferent and can send any message.\nLet sender strategy be: always send “high”.\nStep 3 (beliefs): Receiver beliefs do not depend on the message (since messages are ignored). Keep the prior: \\[\n\\Pr(\\theta=1\\mid m)=1/2 \\quad \\text{for both } m\\in\\{\\text{low},\\text{high}\\}.\n\\]\nResult (babbling equilibrium): - Sender: always send “high”. - Receiver: always choose \\(a=0\\). - Beliefs: posterior equals prior after any message.\n\n\nCheck\n\nReceiver optimality: given prior, \\(a=0\\) is a best response (ties).\nSender optimality: given receiver ignores messages, any message is optimal.\nBeliefs are consistent with the equilibrium (receiver does not condition on \\(m\\)).\n\n\n\nTakeaway\nBabbling equilibria always exist because cheap messages can be ignored."
+  },
+  {
+    "objectID": "notes/equilibriums/babbling.html#later-on-analysis",
+    "href": "notes/equilibriums/babbling.html#later-on-analysis",
+    "title": "Babbling equilibrium (cheap talk)",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nInformative equilibria require structure: partial alignment, restrictions on message space, or repeated interaction.\nAdding costs converts cheap talk into signaling, where credibility can be restored.\nMany refinements aim to rule out “unreasonable” beliefs or equilibria, but babbling is a genuine equilibrium prediction in many environments."
+  },
+  {
+    "objectID": "notes/equilibriums/perfect-bayesian.html",
+    "href": "notes/equilibriums/perfect-bayesian.html",
+    "title": "Perfect Bayesian equilibrium (PBE)",
+    "section": "",
+    "text": "A Perfect Bayesian equilibrium is a pair (strategies, beliefs) in a dynamic game with incomplete information such that:\n\nSequential rationality: at every information set, each player’s action is optimal given their beliefs and others’ strategies.\nBelief consistency (Bayes on-path): beliefs are updated using Bayes’ rule wherever possible along the equilibrium path.\n\nOff-path (zero-probability) histories require beliefs to be specified; this can create multiple PBEs."
+  },
+  {
+    "objectID": "notes/equilibriums/perfect-bayesian.html#what-it-is",
+    "href": "notes/equilibriums/perfect-bayesian.html#what-it-is",
+    "title": "Perfect Bayesian equilibrium (PBE)",
+    "section": "",
+    "text": "A Perfect Bayesian equilibrium is a pair (strategies, beliefs) in a dynamic game with incomplete information such that:\n\nSequential rationality: at every information set, each player’s action is optimal given their beliefs and others’ strategies.\nBelief consistency (Bayes on-path): beliefs are updated using Bayes’ rule wherever possible along the equilibrium path.\n\nOff-path (zero-probability) histories require beliefs to be specified; this can create multiple PBEs."
+  },
+  {
+    "objectID": "notes/equilibriums/perfect-bayesian.html#where-it-shows-up",
+    "href": "notes/equilibriums/perfect-bayesian.html#where-it-shows-up",
+    "title": "Perfect Bayesian equilibrium (PBE)",
+    "section": "Where it shows up",
+    "text": "Where it shows up\n\nSignaling games (education, quality signals)\nScreening models with dynamic interaction\nAny extensive-form game with imperfect information"
+  },
+  {
+    "objectID": "notes/equilibriums/perfect-bayesian.html#how-to-solve-recipe",
+    "href": "notes/equilibriums/perfect-bayesian.html#how-to-solve-recipe",
+    "title": "Perfect Bayesian equilibrium (PBE)",
+    "section": "How to solve (recipe)",
+    "text": "How to solve (recipe)\n\nGuess an equilibrium form (separating / pooling / semi-separating).\nSpecify strategies for all players.\nDerive beliefs using Bayes’ rule on-path.\nCheck sequential rationality at every information set:\n\nreceiver best-responds given beliefs,\nsender type best-responds given receiver strategy.\n\nSpecify off-path beliefs and verify no profitable deviations."
+  },
+  {
+    "objectID": "notes/equilibriums/perfect-bayesian.html#solved-example-pooling-pbe-in-a-signaling-game",
+    "href": "notes/equilibriums/perfect-bayesian.html#solved-example-pooling-pbe-in-a-signaling-game",
+    "title": "Perfect Bayesian equilibrium (PBE)",
+    "section": "Solved example (pooling PBE in a signaling game)",
+    "text": "Solved example (pooling PBE in a signaling game)\n\nProblem (context + question)\nTypes: worker \\(\\theta\\in\\{H,L\\}\\) with \\(\\Pr(H)=p\\).\nWorker chooses education \\(e\\in\\{0,1\\}\\). Employer observes \\(e\\) and offers wage \\(w\\in\\{w_H,w_L\\}\\).\nProductivity: - If type \\(H\\): output value is \\(2\\) - If type \\(L\\): output value is \\(1\\)\nEmployer is competitive and pays expected productivity given beliefs: - pay \\(w_H=2\\) if believes \\(H\\) for sure, - pay \\(w_L=1\\) if believes \\(L\\) for sure, - pay \\(w=p\\cdot 2+(1-p)\\cdot 1 = 1+p\\) if belief is \\(\\Pr(H)=p\\).\nEducation costs: - \\(c_H(1)=0.2\\), \\(c_L(1)=0.8\\), and \\(c_H(0)=c_L(0)=0\\).\nQuestion: Construct a pooling PBE where both types choose \\(e=0\\).\n\n\nSolution\nWe propose a pooling strategy: - Worker: \\(e(\\theta)=0\\) for both \\(\\theta\\in\\{H,L\\}\\). - Employer: after observing \\(e=0\\), pay \\(w(0)=1+p\\) (belief equals prior); after \\(e=1\\), specify an off-path belief.\nStep 1 (beliefs on-path): Since both types choose \\(e=0\\), observing \\(e=0\\) yields posterior \\(\\Pr(H\\mid e=0)=p\\). So paying \\(w(0)=1+p\\) is consistent.\nStep 2 (employer sequential rationality): Given belief \\(p\\) after \\(e=0\\), competitive wage is \\(1+p\\). Good.\nNow choose an off-path belief after \\(e=1\\). Let employer believe \\(\\Pr(H\\mid e=1)=0\\) (i.e., “only low types deviate”), so employer pays \\(w(1)=1\\).\nStep 3 (worker incentive constraints): - Type \\(H\\) payoff if follow pooling (\\(e=0\\)): \\(1+p\\). If deviate to \\(e=1\\): wage \\(1\\) minus cost \\(0.2\\) → \\(1-0.2=0.8\\). So \\(H\\) does not deviate if \\(1+p \\ge 0.8\\), which holds for all \\(p\\in[0,1]\\).\n\nType \\(L\\) payoff if follow pooling: \\(1+p\\). If deviate to \\(e=1\\): wage \\(1\\) minus cost \\(0.8\\) → \\(0.2\\). So \\(L\\) never deviates.\n\nResult (pooling PBE): - Worker: both types choose \\(e=0\\). - Employer beliefs: \\(\\Pr(H\\mid e=0)=p\\); off-path set \\(\\Pr(H\\mid e=1)=0\\). - Employer wages: \\(w(0)=1+p\\), \\(w(1)=1\\).\n\n\nCheck\n\nBeliefs on-path follow Bayes’ rule.\nActions are optimal at each information set given beliefs. So it is a PBE.\n\n\n\nTakeaway\nPBE requires beliefs; off-path beliefs can support pooling by punishing deviations."
+  },
+  {
+    "objectID": "notes/equilibriums/perfect-bayesian.html#later-on-analysis",
+    "href": "notes/equilibriums/perfect-bayesian.html#later-on-analysis",
+    "title": "Perfect Bayesian equilibrium (PBE)",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nPooling PBEs can be fragile: refinements (sequential equilibrium, intuitive criterion) restrict off-path beliefs.\nSeparating PBEs require incentive compatibility inequalities (high type willing to signal; low type not).\nPBE is a practical workhorse; just be explicit about beliefs and on/off-path behavior."
+  },
+  {
+    "objectID": "notes/equilibriums/subgame-perfect.html",
+    "href": "notes/equilibriums/subgame-perfect.html",
+    "title": "Subgame perfect equilibrium (SPE)",
+    "section": "",
+    "text": "A subgame perfect equilibrium is a Nash equilibrium of an extensive-form game that induces a Nash equilibrium in every subgame.\nIntuition: strategies must be credible not only along the equilibrium path but also after any possible history."
+  },
+  {
+    "objectID": "notes/equilibriums/subgame-perfect.html#what-it-is",
+    "href": "notes/equilibriums/subgame-perfect.html#what-it-is",
+    "title": "Subgame perfect equilibrium (SPE)",
+    "section": "",
+    "text": "A subgame perfect equilibrium is a Nash equilibrium of an extensive-form game that induces a Nash equilibrium in every subgame.\nIntuition: strategies must be credible not only along the equilibrium path but also after any possible history."
+  },
+  {
+    "objectID": "notes/equilibriums/subgame-perfect.html#where-it-shows-up",
+    "href": "notes/equilibriums/subgame-perfect.html#where-it-shows-up",
+    "title": "Subgame perfect equilibrium (SPE)",
+    "section": "Where it shows up",
+    "text": "Where it shows up\n\nExtensive-form games with perfect information (classic backward induction)\nDynamic games where credibility of threats/promises matters\nBargaining models (alternating offers) are solved using SPE"
+  },
+  {
+    "objectID": "notes/equilibriums/subgame-perfect.html#how-to-solve-recipe",
+    "href": "notes/equilibriums/subgame-perfect.html#how-to-solve-recipe",
+    "title": "Subgame perfect equilibrium (SPE)",
+    "section": "How to solve (recipe)",
+    "text": "How to solve (recipe)\n\nIdentify subgames (in perfect-information games, every decision node typically starts a subgame).\nSolve the last subgames first (optimize at terminal decision nodes).\nReplace each solved subgame by its continuation payoff.\nContinue backward until the start: this is backward induction.\nThe resulting strategy profile is an SPE (in finite perfect-information games)."
+  },
+  {
+    "objectID": "notes/equilibriums/subgame-perfect.html#solved-example-backward-induction",
+    "href": "notes/equilibriums/subgame-perfect.html#solved-example-backward-induction",
+    "title": "Subgame perfect equilibrium (SPE)",
+    "section": "Solved example (backward induction)",
+    "text": "Solved example (backward induction)\n\nProblem (context + question)\nA landlord (player 1) offers a rent increase: \\(L\\) (low) or \\(H\\) (high). The tenant (player 2) observes and chooses accept \\(A\\) or move \\(M\\).\nPayoffs: - \\((L,A)=(2,2)\\), \\((L,M)=(0,1)\\) - \\((H,A)=(3,0)\\), \\((H,M)=(0,1)\\)\nQuestion: Find the SPE.\n\n\nSolution\nStep 1 (solve tenant’s decision in each subgame): - After \\(L\\): tenant compares payoff \\(2\\) (accept) vs \\(1\\) (move) → chooses \\(A\\). - After \\(H\\): tenant compares payoff \\(0\\) (accept) vs \\(1\\) (move) → chooses \\(M\\).\nSo tenant strategy is: after \\(L\\) play \\(A\\), after \\(H\\) play \\(M\\).\nStep 2 (landlord anticipates tenant’s response): - If landlord chooses \\(L\\), outcome is \\((2,2)\\). - If landlord chooses \\(H\\), tenant moves, outcome is \\((0,1)\\).\nLandlord prefers \\(L\\) because \\(2&gt;0\\).\nResult (SPE): - Landlord plays \\(L\\). - Tenant plays \\(A\\) after \\(L\\) and \\(M\\) after \\(H\\). - Outcome: \\((L,A)\\).\n\n\nCheck\n\nTenant’s actions are optimal in each subgame.\nGiven tenant’s strategy, landlord’s choice is optimal at the start. So the strategy profile is Nash in every subgame.\n\n\n\nTakeaway\nSPE rules out non-credible threats by requiring optimal behavior after every history."
+  },
+  {
+    "objectID": "notes/equilibriums/subgame-perfect.html#later-on-analysis",
+    "href": "notes/equilibriums/subgame-perfect.html#later-on-analysis",
+    "title": "Subgame perfect equilibrium (SPE)",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\n\nWith imperfect information, “subgame” may not be well-defined → PBE / sequential equilibrium.\nWith multiple SPE, equilibrium selection becomes a separate question.\nIn repeated games, SPE sets are large; punishments must still be credible."
   },
   {
     "objectID": "notes/game-types/repeated.html",
@@ -1068,7 +1614,7 @@
     "href": "notes/index.html",
     "title": "Notes",
     "section": "",
-    "text": "Game types"
+    "text": "Game types\nEquilibria"
   },
   {
     "objectID": "notes/metrics.html",

@@ -1,0 +1,81 @@
+---
+title: "Trembling-hand perfect equilibrium"
+toc: true
+---
+
+## What it is
+A **trembling-hand perfect equilibrium** (perfect equilibrium) is a Nash equilibrium that remains optimal when every player might make tiny mistakes (“trembles”).
+
+Formally (intuition-level): a strategy profile is perfect if it is the limit of a sequence of **fully mixed** strategy profiles (every action played with positive probability) where each player’s strategy is a best response to the others in that sequence.
+
+## Where it shows up
+- Normal-form games where Nash equilibria include weakly dominated or non-robust behavior
+- Refinement arguments: “Would this equilibrium survive small mistakes?”
+- Often discussed alongside proper equilibrium and sequential equilibrium
+
+## Why it exists (intuition)
+If an equilibrium relies on assigning zero probability to “unlikely” actions, trembles force you to confront those actions. Strategies that are only optimal because some opponent action is assumed impossible may fail perfection.
+
+## How to solve (recipe)
+1) Find Nash equilibria.
+2) Check whether an equilibrium uses weakly dominated strategies or fragile best responses.
+3) Consider small trembles: assume each player plays every action with tiny probability.
+4) Ask: is the equilibrium strategy still a best response when opponents sometimes tremble?
+5) If yes (as a limit), it’s perfect.
+
+---
+
+## Solved example (eliminating a weakly dominated equilibrium)
+
+### Problem (context + question)
+Consider this 2×2 game (payoffs shown as (player 1, player 2)):
+
+$$
+\begin{array}{c|cc}
+ & L & R\\ \hline
+U & (1,1) & (0,1)\\
+D & (1,0) & (0,0)
+\end{array}
+$$
+
+**Question:** (i) Find all Nash equilibria. (ii) Which are trembling-hand perfect?
+
+### Solution
+**Step 1: Best responses**
+- Player 1:
+  - If player 2 plays $L$: payoff from $U$ is 1, from $D$ is 1 → both $U$ and $D$ are best responses.
+  - If player 2 plays $R$: payoff from $U$ is 0, from $D$ is 0 → both are best responses.
+- Player 2:
+  - If player 1 plays $U$: payoffs are 1 from $L$ and 1 from $R$ → both best responses.
+  - If player 1 plays $D$: payoffs are 0 from $L$ and 0 from $R$ → both best responses.
+
+So **every pure profile** is a Nash equilibrium (players are indifferent everywhere).
+
+**Step 2: Add trembles**
+Suppose player 2 trembles: plays $L$ with probability $1-\varepsilon$ and $R$ with probability $\varepsilon>0$.
+
+Player 1’s expected payoff from:
+- $U$: $(1-\varepsilon)\cdot 1 + \varepsilon\cdot 0 = 1-\varepsilon$
+- $D$: $(1-\varepsilon)\cdot 1 + \varepsilon\cdot 0 = 1-\varepsilon$
+
+Still indifferent. So trembles do not break player 1’s indifference.
+
+Now suppose player 1 trembles: plays $U$ with probability $1-\delta$ and $D$ with probability $\delta>0$.
+
+Player 2’s expected payoff from:
+- $L$: $(1-\delta)\cdot 1 + \delta\cdot 0 = 1-\delta$
+- $R$: $(1-\delta)\cdot 1 + \delta\cdot 0 = 1-\delta$
+
+Still indifferent.
+
+**Result:** In this particular game, trembles do not select: equilibria are robust because payoffs create genuine indifference.
+
+### Takeaway
+Perfection rules out equilibria that only work by assuming “impossible” actions never happen. But if the game truly makes players indifferent, perfection won’t refine further.
+
+---
+
+## Later-on analysis
+- Proper equilibrium strengthens perfection by making “worse mistakes” exponentially less likely.
+- In extensive-form games, sequential equilibrium is the tremble-based refinement with beliefs.
+- In many applied models, perfection is used to exclude equilibria involving weakly dominated actions.

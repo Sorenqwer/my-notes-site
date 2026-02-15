@@ -1,0 +1,57 @@
+---
+title: "Proper equilibrium"
+toc: true
+---
+
+## What it is
+A **proper equilibrium** is a refinement of trembling-hand perfection. It assumes players can make mistakes, but **very bad mistakes are much less likely than slightly bad ones**.
+
+Intuition: if an action yields a much lower payoff than another, the chance you mistakenly choose it should be much smaller.
+
+## Where it shows up
+- Normal-form games with multiple perfect equilibria
+- Equilibrium selection arguments based on “plausible mistakes”
+- Advanced micro/game theory refinements
+
+## How to solve (recipe)
+1) Start from candidate equilibria (usually Nash / perfect).
+2) Compare payoffs of different deviations.
+3) Impose the idea: probability of a worse deviation is tiny relative to a better deviation.
+4) Check whether the equilibrium can be supported as the limit of such “proper” trembles.
+
+(For most newcomer notes, the key is the **intuition**, not the full formal definition.)
+
+---
+
+## Solved example (intuition with unequal mistakes)
+
+### Problem (context + question)
+Player 1 is choosing between three actions $A,B,C$ against a fixed opponent strategy. Payoffs to player 1 are:
+
+- $u_1(A)=10$ (best)
+- $u_1(B)=9$ (slightly worse)
+- $u_1(C)=0$ (much worse)
+
+**Question:** Under the “proper” idea of trembles, which mistake is more plausible: choosing $B$ or choosing $C$?
+
+### Solution
+Proper equilibrium assumes that when players tremble:
+- they might mistakenly choose $B$ instead of $A$ with small probability,
+- but choosing $C$ (which is drastically worse) should be **far** less likely than choosing $B$.
+
+So “proper trembles” treat **worse errors as exponentially rarer** than mild errors.
+
+**Result:** A proper refinement would allow small probability on $B$ but push the probability on $C$ to be negligible relative to $B$ as trembles vanish.
+
+### Check
+This matches the guiding principle: the likelihood of mistakes respects payoff ranking and payoff gaps.
+
+### Takeaway
+Proper equilibrium captures “bounded rationality with common sense”: huge blunders are rarer than small slips.
+
+---
+
+## Later-on analysis
+- Proper equilibrium ⟹ trembling-hand perfect ⟹ Nash (in finite games).
+- In practice, proper equilibrium is used when you want a sharper selection than perfection provides.
+- If you later want a fully formal statement, we can add it as an appendix section.

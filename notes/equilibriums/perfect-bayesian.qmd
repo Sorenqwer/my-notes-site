@@ -1,0 +1,91 @@
+---
+title: "Perfect Bayesian equilibrium (PBE)"
+toc: true
+---
+
+## What it is
+A **Perfect Bayesian equilibrium** is a pair **(strategies, beliefs)** in a dynamic game with incomplete information such that:
+
+1) **Sequential rationality:** at every information set, each player’s action is optimal given their beliefs and others’ strategies.
+2) **Belief consistency (Bayes on-path):** beliefs are updated using Bayes’ rule wherever possible along the equilibrium path.
+
+Off-path (zero-probability) histories require beliefs to be specified; this can create multiple PBEs.
+
+## Where it shows up
+- Signaling games (education, quality signals)
+- Screening models with dynamic interaction
+- Any extensive-form game with imperfect information
+
+## How to solve (recipe)
+1) Guess an equilibrium form (separating / pooling / semi-separating).
+2) Specify strategies for all players.
+3) Derive beliefs using Bayes’ rule **on-path**.
+4) Check sequential rationality at every information set:
+   - receiver best-responds given beliefs,
+   - sender type best-responds given receiver strategy.
+5) Specify off-path beliefs and verify no profitable deviations.
+
+---
+
+## Solved example (pooling PBE in a signaling game)
+
+### Problem (context + question)
+Types: worker $\theta\in\{H,L\}$ with $\Pr(H)=p$.
+
+Worker chooses education $e\in\{0,1\}$. Employer observes $e$ and offers wage $w\in\{w_H,w_L\}$.
+
+Productivity:
+- If type $H$: output value is $2$
+- If type $L$: output value is $1$
+
+Employer is competitive and pays expected productivity given beliefs:
+- pay $w_H=2$ if believes $H$ for sure,
+- pay $w_L=1$ if believes $L$ for sure,
+- pay $w=p\cdot 2+(1-p)\cdot 1 = 1+p$ if belief is $\Pr(H)=p$.
+
+Education costs:
+- $c_H(1)=0.2$, $c_L(1)=0.8$, and $c_H(0)=c_L(0)=0$.
+
+**Question:** Construct a pooling PBE where both types choose $e=0$.
+
+### Solution
+We propose a pooling strategy:
+- Worker: $e(\theta)=0$ for both $\theta\in\{H,L\}$.
+- Employer: after observing $e=0$, pay $w(0)=1+p$ (belief equals prior); after $e=1$, specify an off-path belief.
+
+**Step 1 (beliefs on-path):**
+Since both types choose $e=0$, observing $e=0$ yields posterior $\Pr(H\mid e=0)=p$. So paying $w(0)=1+p$ is consistent.
+
+**Step 2 (employer sequential rationality):**
+Given belief $p$ after $e=0$, competitive wage is $1+p$. Good.
+
+Now choose an off-path belief after $e=1$. Let employer believe $\Pr(H\mid e=1)=0$ (i.e., “only low types deviate”), so employer pays $w(1)=1$.
+
+**Step 3 (worker incentive constraints):**
+- Type $H$ payoff if follow pooling ($e=0$): $1+p$.
+  If deviate to $e=1$: wage $1$ minus cost $0.2$ → $1-0.2=0.8$.
+  So $H$ does not deviate if $1+p \ge 0.8$, which holds for all $p\in[0,1]$.
+
+- Type $L$ payoff if follow pooling: $1+p$.
+  If deviate to $e=1$: wage $1$ minus cost $0.8$ → $0.2$.
+  So $L$ never deviates.
+
+**Result (pooling PBE):**
+- Worker: both types choose $e=0$.
+- Employer beliefs: $\Pr(H\mid e=0)=p$; off-path set $\Pr(H\mid e=1)=0$.
+- Employer wages: $w(0)=1+p$, $w(1)=1$.
+
+### Check
+- Beliefs on-path follow Bayes’ rule.
+- Actions are optimal at each information set given beliefs.
+So it is a PBE.
+
+### Takeaway
+PBE requires beliefs; off-path beliefs can support pooling by punishing deviations.
+
+---
+
+## Later-on analysis
+- Pooling PBEs can be fragile: refinements (sequential equilibrium, intuitive criterion) restrict off-path beliefs.
+- Separating PBEs require incentive compatibility inequalities (high type willing to signal; low type not).
+- PBE is a practical workhorse; just be explicit about beliefs and on/off-path behavior.

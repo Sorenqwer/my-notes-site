@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notes – Margins of Rationality</title>
+<title>Equilibrium cheat sheet – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ff63373b1067ca6f91cf1456aa1f00a2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-ff63373b1067ca6f91cf1456aa1f00a2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,8 +69,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -80,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Margins of Rationality</span>
     </a>
   </div>
@@ -91,19 +120,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../notes/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../notes/index.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../foundations/index.html"> 
+    <a class="nav-link" href="../../foundations/index.html"> 
 <span class="menu-text">Foundations</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../pdfs/index.html"> 
+    <a class="nav-link" href="../../pdfs/index.html"> 
 <span class="menu-text">PDFs</span></a>
   </li>  
 </ul>
@@ -117,18 +146,50 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#how-to-choose-the-right-concept" id="toc-how-to-choose-the-right-concept" class="nav-link active" data-scroll-target="#how-to-choose-the-right-concept">How to choose the right concept</a></li>
+  <li><a href="#recipe-card-nash-equilibrium-ne" id="toc-recipe-card-nash-equilibrium-ne" class="nav-link" data-scroll-target="#recipe-card-nash-equilibrium-ne">Recipe card: Nash equilibrium (NE)</a>
+  <ul class="collapse">
+  <li><a href="#pure-ne" id="toc-pure-ne" class="nav-link" data-scroll-target="#pure-ne">Pure NE</a></li>
+  <li><a href="#mixed-ne-quick-22-method" id="toc-mixed-ne-quick-22-method" class="nav-link" data-scroll-target="#mixed-ne-quick-22-method">Mixed NE (quick 2×2 method)</a></li>
+  </ul></li>
+  <li><a href="#recipe-card-subgame-perfect-equilibrium-spe" id="toc-recipe-card-subgame-perfect-equilibrium-spe" class="nav-link" data-scroll-target="#recipe-card-subgame-perfect-equilibrium-spe">Recipe card: Subgame perfect equilibrium (SPE)</a>
+  <ul class="collapse">
+  <li><a href="#backward-induction-finite-perfect-information-trees" id="toc-backward-induction-finite-perfect-information-trees" class="nav-link" data-scroll-target="#backward-induction-finite-perfect-information-trees">Backward induction (finite perfect-information trees)</a></li>
+  </ul></li>
+  <li><a href="#recipe-card-bayesian-nash-equilibrium-bne" id="toc-recipe-card-bayesian-nash-equilibrium-bne" class="nav-link" data-scroll-target="#recipe-card-bayesian-nash-equilibrium-bne">Recipe card: Bayesian Nash equilibrium (BNE)</a></li>
+  <li><a href="#recipe-card-perfect-bayesian-equilibrium-pbe" id="toc-recipe-card-perfect-bayesian-equilibrium-pbe" class="nav-link" data-scroll-target="#recipe-card-perfect-bayesian-equilibrium-pbe">Recipe card: Perfect Bayesian equilibrium (PBE)</a>
+  <ul class="collapse">
+  <li><a href="#standard-workflow-signalingscreening" id="toc-standard-workflow-signalingscreening" class="nav-link" data-scroll-target="#standard-workflow-signalingscreening">Standard workflow (signaling/screening)</a></li>
+  </ul></li>
+  <li><a href="#recipe-card-sequential-equilibrium-se" id="toc-recipe-card-sequential-equilibrium-se" class="nav-link" data-scroll-target="#recipe-card-sequential-equilibrium-se">Recipe card: Sequential equilibrium (SE)</a>
+  <ul class="collapse">
+  <li><a href="#practical-use" id="toc-practical-use" class="nav-link" data-scroll-target="#practical-use">Practical use</a></li>
+  </ul></li>
+  <li><a href="#recipe-card-babbling-equilibrium-cheap-talk" id="toc-recipe-card-babbling-equilibrium-cheap-talk" class="nav-link" data-scroll-target="#recipe-card-babbling-equilibrium-cheap-talk">Recipe card: Babbling equilibrium (cheap talk)</a></li>
+  <li><a href="#recipe-card-trembling-hand-perfect-equilibrium" id="toc-recipe-card-trembling-hand-perfect-equilibrium" class="nav-link" data-scroll-target="#recipe-card-trembling-hand-perfect-equilibrium">Recipe card: Trembling-hand perfect equilibrium</a></li>
+  <li><a href="#recipe-card-proper-equilibrium" id="toc-recipe-card-proper-equilibrium" class="nav-link" data-scroll-target="#recipe-card-proper-equilibrium">Recipe card: Proper equilibrium</a></li>
+  <li><a href="#recipe-card-correlated-equilibrium-ce" id="toc-recipe-card-correlated-equilibrium-ce" class="nav-link" data-scroll-target="#recipe-card-correlated-equilibrium-ce">Recipe card: Correlated equilibrium (CE)</a></li>
+  <li><a href="#recipe-card-rationalizability" id="toc-recipe-card-rationalizability" class="nav-link" data-scroll-target="#recipe-card-rationalizability">Recipe card: Rationalizability</a></li>
+  <li><a href="#mini-glossary-quick" id="toc-mini-glossary-quick" class="nav-link" data-scroll-target="#mini-glossary-quick">Mini glossary (quick)</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Notes</h1>
+<h1 class="title">Equilibrium cheat sheet</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -140,12 +201,150 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="how-to-choose-the-right-concept" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-choose-the-right-concept">How to choose the right concept</h2>
 <ul>
-<li><a href="../notes/game-types/index.html">Game types</a></li>
-<li><a href="../notes/equilibriums/index.html">Equilibria</a></li>
+<li><strong>Simultaneous move, complete info</strong> → NE (and refinements if needed)</li>
+<li><strong>Sequential, perfect information</strong> → SPE (backward induction)</li>
+<li><strong>Incomplete information, static</strong> → BNE</li>
+<li><strong>Dynamic + beliefs needed</strong> (signaling/screening) → PBE</li>
+<li><strong>Off-path beliefs feel arbitrary</strong> → Sequential equilibrium (trembles discipline beliefs)</li>
+<li><strong>Cheap talk baseline</strong> → Babbling equilibrium always exists</li>
+<li><strong>Need “robust to mistakes”</strong> → Trembling-hand perfect / proper</li>
+<li><strong>Want coordination via signals</strong> → Correlated equilibrium</li>
+<li><strong>Want weak prediction set</strong> → Rationalizability</li>
+</ul>
+<hr>
+</section>
+<section id="recipe-card-nash-equilibrium-ne" class="level2">
+<h2 class="anchored" data-anchor-id="recipe-card-nash-equilibrium-ne">Recipe card: Nash equilibrium (NE)</h2>
+<section id="pure-ne" class="level3">
+<h3 class="anchored" data-anchor-id="pure-ne">Pure NE</h3>
+<ol type="1">
+<li>(Optional) Remove strictly dominated actions.</li>
+<li>Compute best responses.</li>
+<li>Intersections of best responses = pure NE.</li>
+</ol>
+</section>
+<section id="mixed-ne-quick-22-method" class="level3">
+<h3 class="anchored" data-anchor-id="mixed-ne-quick-22-method">Mixed NE (quick 2×2 method)</h3>
+<p>Let player 1 mix <span class="math inline">\(p\)</span> on <span class="math inline">\(U\)</span> (and <span class="math inline">\(1-p\)</span> on <span class="math inline">\(D\)</span>). Let player 2 mix <span class="math inline">\(q\)</span> on <span class="math inline">\(L\)</span> (and <span class="math inline">\(1-q\)</span> on <span class="math inline">\(R\)</span>). 1) Make player 1 indifferent between <span class="math inline">\(U\)</span> and <span class="math inline">\(D\)</span> → solve for <span class="math inline">\(q\)</span>. 2) Make player 2 indifferent between <span class="math inline">\(L\)</span> and <span class="math inline">\(R\)</span> → solve for <span class="math inline">\(p\)</span>. 3) Check <span class="math inline">\(p,q\in[0,1]\)</span> and supports are consistent.</p>
+<p><strong>Common pitfall:</strong> mixing is only required when the opponent is indifferent among the actions in their support.</p>
+<hr>
+</section>
+</section>
+<section id="recipe-card-subgame-perfect-equilibrium-spe" class="level2">
+<h2 class="anchored" data-anchor-id="recipe-card-subgame-perfect-equilibrium-spe">Recipe card: Subgame perfect equilibrium (SPE)</h2>
+<section id="backward-induction-finite-perfect-information-trees" class="level3">
+<h3 class="anchored" data-anchor-id="backward-induction-finite-perfect-information-trees">Backward induction (finite perfect-information trees)</h3>
+<ol type="1">
+<li>Start at the last decision nodes.</li>
+<li>Choose optimal action there.</li>
+<li>Replace that subgame with its continuation payoff.</li>
+<li>Move backward until the root.</li>
+</ol>
+<p><strong>Common pitfall:</strong> using non-credible threats (actions that wouldn’t be optimal if reached).</p>
+<hr>
+</section>
+</section>
+<section id="recipe-card-bayesian-nash-equilibrium-bne" class="level2">
+<h2 class="anchored" data-anchor-id="recipe-card-bayesian-nash-equilibrium-bne">Recipe card: Bayesian Nash equilibrium (BNE)</h2>
+<ol type="1">
+<li>Write types and prior <span class="math inline">\(\Pr(\theta)\)</span>.</li>
+<li>Strategy is type-contingent: <span class="math inline">\(a_i=s_i(\theta_i)\)</span>.</li>
+<li>For each type, compute expected payoff for each action.</li>
+<li>Choose best responses for each type; verify consistency across players.</li>
+</ol>
+<p><strong>Common pitfall:</strong> forgetting strategies are functions of type, not single actions.</p>
+<hr>
+</section>
+<section id="recipe-card-perfect-bayesian-equilibrium-pbe" class="level2">
+<h2 class="anchored" data-anchor-id="recipe-card-perfect-bayesian-equilibrium-pbe">Recipe card: Perfect Bayesian equilibrium (PBE)</h2>
+<p>A PBE is <strong>(strategies, beliefs)</strong> satisfying: - <strong>Sequential rationality:</strong> actions optimal at every information set. - <strong>Bayes consistency on-path:</strong> update beliefs using Bayes’ rule where possible.</p>
+<section id="standard-workflow-signalingscreening" class="level3">
+<h3 class="anchored" data-anchor-id="standard-workflow-signalingscreening">Standard workflow (signaling/screening)</h3>
+<ol type="1">
+<li>Guess form: <strong>separating / pooling / semi-separating</strong>.</li>
+<li>Propose strategies for sender types + receiver actions.</li>
+<li>Compute on-path posteriors via Bayes.</li>
+<li>Check receiver best responses given beliefs.</li>
+<li>Check each sender type’s incentive constraints (no profitable deviations).</li>
+<li>Specify off-path beliefs (carefully) and re-check deviations.</li>
+</ol>
+<p><strong>Common pitfall:</strong> not stating off-path beliefs, or using off-path beliefs that “magically” punish deviations without justification (sequential equilibrium addresses this).</p>
+<hr>
+</section>
+</section>
+<section id="recipe-card-sequential-equilibrium-se" class="level2">
+<h2 class="anchored" data-anchor-id="recipe-card-sequential-equilibrium-se">Recipe card: Sequential equilibrium (SE)</h2>
+<p>Sequential equilibrium is PBE + a discipline on beliefs: - Beliefs must be limits of Bayes-updated beliefs from <strong>fully mixed trembles</strong>.</p>
+<section id="practical-use" class="level3">
+<h3 class="anchored" data-anchor-id="practical-use">Practical use</h3>
+<p>If your PBE relies heavily on off-path beliefs: 1) Add tiny tremble probabilities to every action. 2) Compute implied posteriors. 3) Take limits → see which beliefs are justifiable. 4) Re-check optimality.</p>
+<p><strong>Common pitfall:</strong> treating off-path beliefs as completely free.</p>
+<hr>
+</section>
+</section>
+<section id="recipe-card-babbling-equilibrium-cheap-talk" class="level2">
+<h2 class="anchored" data-anchor-id="recipe-card-babbling-equilibrium-cheap-talk">Recipe card: Babbling equilibrium (cheap talk)</h2>
+<ol type="1">
+<li>Receiver ignores message: same action after every message.</li>
+<li>Beliefs stay at the prior (or any belief consistent with ignoring).</li>
+<li>Sender is indifferent over messages because messages don’t affect actions.</li>
+</ol>
+<p><strong>Use:</strong> baseline; compare informative equilibria against it.</p>
+<hr>
+</section>
+<section id="recipe-card-trembling-hand-perfect-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="recipe-card-trembling-hand-perfect-equilibrium">Recipe card: Trembling-hand perfect equilibrium</h2>
+<ol type="1">
+<li>Start from a Nash equilibrium.</li>
+<li>Ask whether it survives when opponents sometimes make small mistakes.</li>
+<li>Equilibria relying on “impossible” actions not happening can fail.</li>
+</ol>
+<p><strong>Heuristic:</strong> if an equilibrium uses weakly dominated actions or fragile indifference, perfection may eliminate it.</p>
+<hr>
+</section>
+<section id="recipe-card-proper-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="recipe-card-proper-equilibrium">Recipe card: Proper equilibrium</h2>
+<p>Like perfect equilibrium, but: - very bad mistakes are <strong>much</strong> less likely than slightly bad mistakes.</p>
+<p><strong>Use:</strong> sharper selection when perfection is not selective enough.</p>
+<hr>
+</section>
+<section id="recipe-card-correlated-equilibrium-ce" class="level2">
+<h2 class="anchored" data-anchor-id="recipe-card-correlated-equilibrium-ce">Recipe card: Correlated equilibrium (CE)</h2>
+<ol type="1">
+<li>Specify a distribution over action profiles (recommendations).</li>
+<li>For each player and each recommendation, write obedience constraints: following ≥ deviating.</li>
+<li>If all constraints hold, it’s a CE.</li>
+</ol>
+<p><strong>Memory aid:</strong> “Follow the recommendation because conditional on it, deviating doesn’t help.”</p>
+<hr>
+</section>
+<section id="recipe-card-rationalizability" class="level2">
+<h2 class="anchored" data-anchor-id="recipe-card-rationalizability">Recipe card: Rationalizability</h2>
+<ol type="1">
+<li>Iteratively delete <strong>strictly dominated</strong> actions.</li>
+<li>Repeat in the reduced game until no more deletions.</li>
+<li>Remaining actions are rationalizable.</li>
+</ol>
+<p><strong>Common pitfall:</strong> weak dominance deletion can be order-dependent (start with strict).</p>
+<hr>
+</section>
+<section id="mini-glossary-quick" class="level2">
+<h2 class="anchored" data-anchor-id="mini-glossary-quick">Mini glossary (quick)</h2>
+<ul>
+<li><strong>NE:</strong> best response to best response.</li>
+<li><strong>SPE:</strong> NE in every subgame (credible).</li>
+<li><strong>BNE:</strong> NE with types; best response in expectation.</li>
+<li><strong>PBE:</strong> strategies + beliefs; Bayes on-path; sequentially rational.</li>
+<li><strong>SE:</strong> PBE + tremble-consistent beliefs.</li>
+<li><strong>CE:</strong> equilibrium over distributions; “obey the signal.”</li>
+<li><strong>Rationalizability:</strong> what survives iterated strict dominance.</li>
 </ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

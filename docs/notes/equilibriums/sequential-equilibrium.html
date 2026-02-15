@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notes – Margins of Rationality</title>
+<title>Sequential equilibrium – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ff63373b1067ca6f91cf1456aa1f00a2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-ff63373b1067ca6f91cf1456aa1f00a2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,8 +69,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -80,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Margins of Rationality</span>
     </a>
   </div>
@@ -91,19 +120,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../notes/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../notes/index.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../foundations/index.html"> 
+    <a class="nav-link" href="../../foundations/index.html"> 
 <span class="menu-text">Foundations</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../pdfs/index.html"> 
+    <a class="nav-link" href="../../pdfs/index.html"> 
 <span class="menu-text">PDFs</span></a>
   </li>  
 </ul>
@@ -117,18 +146,36 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
+  <li><a href="#where-it-shows-up" id="toc-where-it-shows-up" class="nav-link" data-scroll-target="#where-it-shows-up">Where it shows up</a></li>
+  <li><a href="#how-to-solve-recipe" id="toc-how-to-solve-recipe" class="nav-link" data-scroll-target="#how-to-solve-recipe">How to solve (recipe)</a></li>
+  <li><a href="#solved-example-why-some-off-path-beliefs-are-not-credible" id="toc-solved-example-why-some-off-path-beliefs-are-not-credible" class="nav-link" data-scroll-target="#solved-example-why-some-off-path-beliefs-are-not-credible">Solved example (why some off-path beliefs are not credible)</a>
+  <ul class="collapse">
+  <li><a href="#problem-context-question" id="toc-problem-context-question" class="nav-link" data-scroll-target="#problem-context-question">Problem (context + question)</a></li>
+  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
+  <li><a href="#check" id="toc-check" class="nav-link" data-scroll-target="#check">Check</a></li>
+  <li><a href="#takeaway" id="toc-takeaway" class="nav-link" data-scroll-target="#takeaway">Takeaway</a></li>
+  </ul></li>
+  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Notes</h1>
+<h1 class="title">Sequential equilibrium</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -140,12 +187,79 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="what-it-is" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
+<p>A <strong>sequential equilibrium</strong> is a refinement of PBE. It is a pair <strong>(strategies, beliefs)</strong> such that:</p>
+<ol type="1">
+<li><strong>Sequential rationality:</strong> strategies are optimal at every information set given beliefs.</li>
+<li><strong>Consistency:</strong> beliefs come from strategies via Bayes’ rule <strong>as limits of fully mixed (“trembling”) strategies</strong>.</li>
+</ol>
+<p>This “tremble” requirement disciplines off-path beliefs: beliefs must be justifiable by small mistakes.</p>
+</section>
+<section id="where-it-shows-up" class="level2">
+<h2 class="anchored" data-anchor-id="where-it-shows-up">Where it shows up</h2>
 <ul>
-<li><a href="../notes/game-types/index.html">Game types</a></li>
-<li><a href="../notes/equilibriums/index.html">Equilibria</a></li>
+<li>Signaling games and dynamic games with imperfect information</li>
+<li>Any setting where PBE has many equilibria due to arbitrary off-path beliefs</li>
+<li>Refinement discussions in micro theory / game theory texts</li>
+</ul>
+</section>
+<section id="how-to-solve-recipe" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-solve-recipe">How to solve (recipe)</h2>
+<ol type="1">
+<li>Start from a candidate PBE.</li>
+<li>Add small probabilities (trembles) so every action is played with positive probability.</li>
+<li>Compute beliefs via Bayes’ rule under the perturbed strategy.</li>
+<li>Take limits as trembles go to zero:
+<ul>
+<li>if beliefs converge, they are consistent.</li>
+</ul></li>
+<li>Check sequential rationality with those beliefs.</li>
+</ol>
+<hr>
+</section>
+<section id="solved-example-why-some-off-path-beliefs-are-not-credible" class="level2">
+<h2 class="anchored" data-anchor-id="solved-example-why-some-off-path-beliefs-are-not-credible">Solved example (why some off-path beliefs are not credible)</h2>
+<section id="problem-context-question" class="level3">
+<h3 class="anchored" data-anchor-id="problem-context-question">Problem (context + question)</h3>
+<p>Consider the pooling PBE from the PBE page: - Both types choose <span class="math inline">\(e=0\)</span>. - Off-path belief after <span class="math inline">\(e=1\)</span> is <span class="math inline">\(\Pr(H\mid e=1)=0\)</span>.</p>
+<p><strong>Question:</strong> Explain the consistency idea: what must be true for such an off-path belief to be allowed under sequential equilibrium?</p>
+</section>
+<section id="solution" class="level3">
+<h3 class="anchored" data-anchor-id="solution">Solution</h3>
+<p>Sequential equilibrium requires off-path beliefs to be limits of Bayes-updated beliefs from <strong>fully mixed</strong> strategies.</p>
+<p>So imagine a perturbed (trembling) strategy where: - Type <span class="math inline">\(H\)</span> plays <span class="math inline">\(e=1\)</span> with small probability <span class="math inline">\(\varepsilon_H&gt;0\)</span>, - Type <span class="math inline">\(L\)</span> plays <span class="math inline">\(e=1\)</span> with small probability <span class="math inline">\(\varepsilon_L&gt;0\)</span>.</p>
+<p>Then, upon observing <span class="math inline">\(e=1\)</span>, Bayes’ rule gives: <span class="math display">\[
+\Pr(H\mid e=1)=\frac{p\,\varepsilon_H}{p\,\varepsilon_H+(1-p)\,\varepsilon_L}.
+\]</span></p>
+<p>Now consider the limit as trembles vanish. The limiting belief depends on the <em>relative</em> rate at which <span class="math inline">\(\varepsilon_H\)</span> and <span class="math inline">\(\varepsilon_L\)</span> go to zero.</p>
+<ul>
+<li>If <span class="math inline">\(\varepsilon_H/\varepsilon_L \to 0\)</span>, then <span class="math inline">\(\Pr(H\mid e=1)\to 0\)</span>.</li>
+<li>If <span class="math inline">\(\varepsilon_H/\varepsilon_L \to \infty\)</span>, then <span class="math inline">\(\Pr(H\mid e=1)\to 1\)</span>.</li>
+<li>If <span class="math inline">\(\varepsilon_H/\varepsilon_L \to k\in(0,\infty)\)</span>, then the limit is an interior number in <span class="math inline">\((0,1)\)</span>.</li>
+</ul>
+<p><strong>Result:</strong> The off-path belief <span class="math inline">\(\Pr(H\mid e=1)=0\)</span> is consistent only if the perturbations imply that, in the limit, type <span class="math inline">\(H\)</span> is vanishingly less likely than type <span class="math inline">\(L\)</span> to make that mistake.</p>
+</section>
+<section id="check" class="level3">
+<h3 class="anchored" data-anchor-id="check">Check</h3>
+<p>This belief is not “free”: it must be explainable by a sequence of fully mixed strategies.</p>
+</section>
+<section id="takeaway" class="level3">
+<h3 class="anchored" data-anchor-id="takeaway">Takeaway</h3>
+<p>Sequential equilibrium restricts off-path beliefs by requiring them to arise from plausible small mistakes.</p>
+<hr>
+</section>
+</section>
+<section id="later-on-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<ul>
+<li>Sequential equilibrium is often closer to how theorists think about “reasonable beliefs” off-path.</li>
+<li>Stronger refinements (e.g., intuitive criterion) impose additional structure.</li>
+<li>For applied work, PBE is common; for selection arguments, sequential equilibrium is a useful upgrade.</li>
 </ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

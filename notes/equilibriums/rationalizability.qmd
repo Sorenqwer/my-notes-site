@@ -1,0 +1,68 @@
+---
+title: "Rationalizability"
+toc: true
+---
+
+## What it is
+**Rationalizability** predicts which actions can be justified as best responses to some beliefs about others’ actions, assuming everyone is rational and this is common knowledge.
+
+It often corresponds to **iterated elimination of strictly dominated strategies** (IESDS). (With weak dominance, elimination order can matter, so newcomers usually start with strict dominance.)
+
+## Where it shows up
+- Normal-form games when you want predictions weaker than Nash
+- Settings with equilibrium multiplicity (rationalizability gives a set of plausible actions)
+- As a foundation for epistemic game theory
+
+## How to solve (recipe: iterated elimination of strictly dominated strategies)
+1) Identify strictly dominated actions for any player and remove them.
+2) Recompute dominance in the reduced game.
+3) Repeat until no more strictly dominated actions remain.
+4) The remaining actions are rationalizable.
+
+---
+
+## Solved example (iterated deletion)
+
+### Problem (context + question)
+Player 1 actions: $U, M, D$. Player 2 actions: $L, R$. Payoffs to player 1 are:
+
+$$
+\begin{array}{c|cc}
+ & L & R\\ \hline
+U & 3 & 0\\
+M & 2 & 1\\
+D & 1 & 0
+\end{array}
+$$
+
+Assume player 2’s payoffs are irrelevant for this exercise.
+
+**Question:** Which actions of player 1 are rationalizable by iterated elimination of strictly dominated strategies?
+
+### Solution
+Compare player 1 actions:
+
+- Does $D$ get strictly dominated by $M$?
+  - Against $L$: $u_1(M)=2 > u_1(D)=1$
+  - Against $R$: $u_1(M)=1 > u_1(D)=0$
+  Yes: $M$ strictly dominates $D$.
+
+So eliminate $D$.
+
+Now remaining actions for player 1: $U$ and $M$.
+- Does $U$ strictly dominate $M$? No:
+  - Against $L$: $U=3 > M=2$
+  - Against $R$: $U=0 < M=1$
+- Does $M$ strictly dominate $U$? No, same reason.
+
+**Result:** The rationalizable actions for player 1 are $\{U, M\}$.
+
+### Takeaway
+Rationalizability removes clearly irrational actions but may still leave multiple plausible choices.
+
+---
+
+## Later-on analysis
+- Nash equilibrium is a stronger prediction than rationalizability.
+- In some games, iterated strict dominance leads to a unique outcome (then it’s very powerful).
+- With weak dominance, elimination can depend on order; if you include it, add a warning section.

@@ -1,0 +1,140 @@
+---
+title: "Equilibrium cheat sheet"
+toc: true
+---
+
+## How to choose the right concept
+- **Simultaneous move, complete info** → NE (and refinements if needed)
+- **Sequential, perfect information** → SPE (backward induction)
+- **Incomplete information, static** → BNE
+- **Dynamic + beliefs needed** (signaling/screening) → PBE
+- **Off-path beliefs feel arbitrary** → Sequential equilibrium (trembles discipline beliefs)
+- **Cheap talk baseline** → Babbling equilibrium always exists
+- **Need “robust to mistakes”** → Trembling-hand perfect / proper
+- **Want coordination via signals** → Correlated equilibrium
+- **Want weak prediction set** → Rationalizability
+
+---
+
+## Recipe card: Nash equilibrium (NE)
+### Pure NE
+1) (Optional) Remove strictly dominated actions.
+2) Compute best responses.
+3) Intersections of best responses = pure NE.
+
+### Mixed NE (quick 2×2 method)
+Let player 1 mix $p$ on $U$ (and $1-p$ on $D$). Let player 2 mix $q$ on $L$ (and $1-q$ on $R$).
+1) Make player 1 indifferent between $U$ and $D$ → solve for $q$.
+2) Make player 2 indifferent between $L$ and $R$ → solve for $p$.
+3) Check $p,q\in[0,1]$ and supports are consistent.
+
+**Common pitfall:** mixing is only required when the opponent is indifferent among the actions in their support.
+
+---
+
+## Recipe card: Subgame perfect equilibrium (SPE)
+### Backward induction (finite perfect-information trees)
+1) Start at the last decision nodes.
+2) Choose optimal action there.
+3) Replace that subgame with its continuation payoff.
+4) Move backward until the root.
+
+**Common pitfall:** using non-credible threats (actions that wouldn’t be optimal if reached).
+
+---
+
+## Recipe card: Bayesian Nash equilibrium (BNE)
+1) Write types and prior $\Pr(\theta)$.
+2) Strategy is type-contingent: $a_i=s_i(\theta_i)$.
+3) For each type, compute expected payoff for each action.
+4) Choose best responses for each type; verify consistency across players.
+
+**Common pitfall:** forgetting strategies are functions of type, not single actions.
+
+---
+
+## Recipe card: Perfect Bayesian equilibrium (PBE)
+A PBE is **(strategies, beliefs)** satisfying:
+- **Sequential rationality:** actions optimal at every information set.
+- **Bayes consistency on-path:** update beliefs using Bayes’ rule where possible.
+
+### Standard workflow (signaling/screening)
+1) Guess form: **separating / pooling / semi-separating**.
+2) Propose strategies for sender types + receiver actions.
+3) Compute on-path posteriors via Bayes.
+4) Check receiver best responses given beliefs.
+5) Check each sender type’s incentive constraints (no profitable deviations).
+6) Specify off-path beliefs (carefully) and re-check deviations.
+
+**Common pitfall:** not stating off-path beliefs, or using off-path beliefs that “magically” punish deviations without justification (sequential equilibrium addresses this).
+
+---
+
+## Recipe card: Sequential equilibrium (SE)
+Sequential equilibrium is PBE + a discipline on beliefs:
+- Beliefs must be limits of Bayes-updated beliefs from **fully mixed trembles**.
+
+### Practical use
+If your PBE relies heavily on off-path beliefs:
+1) Add tiny tremble probabilities to every action.
+2) Compute implied posteriors.
+3) Take limits → see which beliefs are justifiable.
+4) Re-check optimality.
+
+**Common pitfall:** treating off-path beliefs as completely free.
+
+---
+
+## Recipe card: Babbling equilibrium (cheap talk)
+1) Receiver ignores message: same action after every message.
+2) Beliefs stay at the prior (or any belief consistent with ignoring).
+3) Sender is indifferent over messages because messages don’t affect actions.
+
+**Use:** baseline; compare informative equilibria against it.
+
+---
+
+## Recipe card: Trembling-hand perfect equilibrium
+1) Start from a Nash equilibrium.
+2) Ask whether it survives when opponents sometimes make small mistakes.
+3) Equilibria relying on “impossible” actions not happening can fail.
+
+**Heuristic:** if an equilibrium uses weakly dominated actions or fragile indifference, perfection may eliminate it.
+
+---
+
+## Recipe card: Proper equilibrium
+Like perfect equilibrium, but:
+- very bad mistakes are **much** less likely than slightly bad mistakes.
+
+**Use:** sharper selection when perfection is not selective enough.
+
+---
+
+## Recipe card: Correlated equilibrium (CE)
+1) Specify a distribution over action profiles (recommendations).
+2) For each player and each recommendation, write obedience constraints:
+   following ≥ deviating.
+3) If all constraints hold, it’s a CE.
+
+**Memory aid:** “Follow the recommendation because conditional on it, deviating doesn’t help.”
+
+---
+
+## Recipe card: Rationalizability
+1) Iteratively delete **strictly dominated** actions.
+2) Repeat in the reduced game until no more deletions.
+3) Remaining actions are rationalizable.
+
+**Common pitfall:** weak dominance deletion can be order-dependent (start with strict).
+
+---
+
+## Mini glossary (quick)
+- **NE:** best response to best response.
+- **SPE:** NE in every subgame (credible).
+- **BNE:** NE with types; best response in expectation.
+- **PBE:** strategies + beliefs; Bayes on-path; sequentially rational.
+- **SE:** PBE + tremble-consistent beliefs.
+- **CE:** equilibrium over distributions; “obey the signal.”
+- **Rationalizability:** what survives iterated strict dominance.

@@ -1,0 +1,67 @@
+---
+title: "Subgame perfect equilibrium (SPE)"
+toc: true
+---
+
+## What it is
+A **subgame perfect equilibrium** is a Nash equilibrium of an extensive-form game that induces a Nash equilibrium **in every subgame**.
+
+Intuition: strategies must be credible not only along the equilibrium path but also after any possible history.
+
+## Where it shows up
+- Extensive-form games with perfect information (classic backward induction)
+- Dynamic games where credibility of threats/promises matters
+- Bargaining models (alternating offers) are solved using SPE
+
+## How to solve (recipe)
+1) Identify subgames (in perfect-information games, every decision node typically starts a subgame).
+2) Solve the last subgames first (optimize at terminal decision nodes).
+3) Replace each solved subgame by its continuation payoff.
+4) Continue backward until the start: this is **backward induction**.
+5) The resulting strategy profile is an SPE (in finite perfect-information games).
+
+---
+
+## Solved example (backward induction)
+
+### Problem (context + question)
+A landlord (player 1) offers a rent increase: $L$ (low) or $H$ (high). The tenant (player 2) observes and chooses accept $A$ or move $M$.
+
+Payoffs:
+- $(L,A)=(2,2)$, $(L,M)=(0,1)$
+- $(H,A)=(3,0)$, $(H,M)=(0,1)$
+
+**Question:** Find the SPE.
+
+### Solution
+**Step 1 (solve tenant’s decision in each subgame):**
+- After $L$: tenant compares payoff $2$ (accept) vs $1$ (move) → chooses **$A$**.
+- After $H$: tenant compares payoff $0$ (accept) vs $1$ (move) → chooses **$M$**.
+
+So tenant strategy is: after $L$ play $A$, after $H$ play $M$.
+
+**Step 2 (landlord anticipates tenant’s response):**
+- If landlord chooses $L$, outcome is $(2,2)$.
+- If landlord chooses $H$, tenant moves, outcome is $(0,1)$.
+
+Landlord prefers $L$ because $2>0$.
+
+**Result (SPE):**
+- Landlord plays $L$.
+- Tenant plays $A$ after $L$ and $M$ after $H$.
+- Outcome: $(L,A)$.
+
+### Check
+- Tenant’s actions are optimal in each subgame.
+- Given tenant’s strategy, landlord’s choice is optimal at the start.
+So the strategy profile is Nash in every subgame.
+
+### Takeaway
+SPE rules out non-credible threats by requiring optimal behavior after every history.
+
+---
+
+## Later-on analysis
+- With **imperfect information**, “subgame” may not be well-defined → PBE / sequential equilibrium.
+- With **multiple SPE**, equilibrium selection becomes a separate question.
+- In **repeated games**, SPE sets are large; punishments must still be credible.

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notes – Margins of Rationality</title>
+<title>Bayesian Nash equilibrium (BNE) – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ff63373b1067ca6f91cf1456aa1f00a2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-ff63373b1067ca6f91cf1456aa1f00a2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,8 +69,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -80,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Margins of Rationality</span>
     </a>
   </div>
@@ -91,19 +120,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../notes/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../notes/index.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../foundations/index.html"> 
+    <a class="nav-link" href="../../foundations/index.html"> 
 <span class="menu-text">Foundations</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../pdfs/index.html"> 
+    <a class="nav-link" href="../../pdfs/index.html"> 
 <span class="menu-text">PDFs</span></a>
   </li>  
 </ul>
@@ -117,18 +146,36 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
+  <li><a href="#where-it-shows-up" id="toc-where-it-shows-up" class="nav-link" data-scroll-target="#where-it-shows-up">Where it shows up</a></li>
+  <li><a href="#how-to-solve-recipe" id="toc-how-to-solve-recipe" class="nav-link" data-scroll-target="#how-to-solve-recipe">How to solve (recipe)</a></li>
+  <li><a href="#solved-example-type-dependent-best-response" id="toc-solved-example-type-dependent-best-response" class="nav-link" data-scroll-target="#solved-example-type-dependent-best-response">Solved example (type-dependent best response)</a>
+  <ul class="collapse">
+  <li><a href="#problem-context-question" id="toc-problem-context-question" class="nav-link" data-scroll-target="#problem-context-question">Problem (context + question)</a></li>
+  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
+  <li><a href="#check" id="toc-check" class="nav-link" data-scroll-target="#check">Check</a></li>
+  <li><a href="#takeaway" id="toc-takeaway" class="nav-link" data-scroll-target="#takeaway">Takeaway</a></li>
+  </ul></li>
+  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Notes</h1>
+<h1 class="title">Bayesian Nash equilibrium (BNE)</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -140,12 +187,74 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="what-it-is" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
+<p>A <strong>Bayesian game</strong> has private information (types). A <strong>Bayesian Nash equilibrium</strong> is a strategy profile where each type best-responds given beliefs about others’ types.</p>
+<p>Formally, each player <span class="math inline">\(i\)</span> has type <span class="math inline">\(\theta_i\)</span> and chooses an action via a strategy <span class="math inline">\(s_i(\theta_i)\)</span>. A BNE satisfies, for each type <span class="math inline">\(\theta_i\)</span>: <span class="math display">\[
+s_i(\theta_i)\in \arg\max_{a_i} \mathbb{E}\left[u_i(a_i, s_{-i}(\theta_{-i}), \theta_i,\theta_{-i})\mid \theta_i\right].
+\]</span></p>
+</section>
+<section id="where-it-shows-up" class="level2">
+<h2 class="anchored" data-anchor-id="where-it-shows-up">Where it shows up</h2>
 <ul>
-<li><a href="../notes/game-types/index.html">Game types</a></li>
-<li><a href="../notes/equilibriums/index.html">Equilibria</a></li>
+<li>Static games of incomplete information (entry games, pricing with private costs)</li>
+<li>Auctions (many auction models are BNE)</li>
+<li>As the static benchmark for dynamic incomplete-information models</li>
+</ul>
+</section>
+<section id="how-to-solve-recipe" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-solve-recipe">How to solve (recipe)</h2>
+<ol type="1">
+<li>List types and prior beliefs.</li>
+<li>Write strategies as functions of types: <span class="math inline">\(a_i=s_i(\theta_i)\)</span>.</li>
+<li>Compute each type’s expected payoff from each action.</li>
+<li>Choose best responses by type.</li>
+<li>Verify mutual best responses given beliefs.</li>
+</ol>
+<hr>
+</section>
+<section id="solved-example-type-dependent-best-response" class="level2">
+<h2 class="anchored" data-anchor-id="solved-example-type-dependent-best-response">Solved example (type-dependent best response)</h2>
+<section id="problem-context-question" class="level3">
+<h3 class="anchored" data-anchor-id="problem-context-question">Problem (context + question)</h3>
+<p>An investor chooses whether to fund a startup: <span class="math inline">\(F\)</span> (fund) or <span class="math inline">\(R\)</span> (reject).</p>
+<p>The startup’s type is <span class="math inline">\(\theta\in\{S,W\}\)</span> (strong or weak), with prior <span class="math inline">\(\Pr(S)=p\)</span>. If the investor funds: - payoff is <span class="math inline">\(+1\)</span> if <span class="math inline">\(\theta=S\)</span>, - payoff is <span class="math inline">\(-1\)</span> if <span class="math inline">\(\theta=W\)</span>.</p>
+<p>If the investor rejects, payoff is <span class="math inline">\(0\)</span>.</p>
+<p><strong>Question:</strong> Find the investor’s optimal action as a function of <span class="math inline">\(p\)</span> (a BNE decision rule).</p>
+</section>
+<section id="solution" class="level3">
+<h3 class="anchored" data-anchor-id="solution">Solution</h3>
+<p>Compute expected payoff from funding: <span class="math display">\[
+\mathbb{E}[\pi(F)] = p(1) + (1-p)(-1) = 2p-1.
+\]</span></p>
+<p>Rejecting yields: <span class="math display">\[
+\mathbb{E}[\pi(R)] = 0.
+\]</span></p>
+<p>So the investor funds iff <span class="math inline">\(2p-1\ge 0\)</span>, i.e. <span class="math display">\[
+p \ge \tfrac12.
+\]</span></p>
+<p><strong>Result:</strong> Optimal strategy is: - choose <span class="math inline">\(F\)</span> if <span class="math inline">\(p\ge 1/2\)</span>, - choose <span class="math inline">\(R\)</span> if <span class="math inline">\(p&lt;1/2\)</span>, - indifferent at <span class="math inline">\(p=1/2\)</span>.</p>
+</section>
+<section id="check" class="level3">
+<h3 class="anchored" data-anchor-id="check">Check</h3>
+<p>Given beliefs (the prior), the chosen action maximizes expected payoff.</p>
+</section>
+<section id="takeaway" class="level3">
+<h3 class="anchored" data-anchor-id="takeaway">Takeaway</h3>
+<p>BNE decisions are often threshold rules: act if expected benefit given beliefs is large enough.</p>
+<hr>
+</section>
+</section>
+<section id="later-on-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<ul>
+<li>If a <strong>signal</strong> is observed before acting, beliefs update via Bayes’ rule and the threshold shifts.</li>
+<li>If the informed party can <strong>strategically choose information</strong>, you move toward signaling or cheap talk → PBE.</li>
+<li>With many types/actions, equilibrium often has cutoff strategies and monotonicity structure.</li>
 </ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -1,0 +1,21 @@
+---
+title: "Equilibria"
+toc: true
+---
+- [Equilibrium cheat sheet](cheat-sheet.qmd)
+
+## Core (most used)
+- [Nash equilibrium (NE)](nash.qmd)
+- [Subgame perfect equilibrium (SPE)](subgame-perfect.qmd)
+- [Bayesian Nash equilibrium (BNE)](bayesian-nash.qmd)
+- [Perfect Bayesian equilibrium (PBE)](perfect-bayesian.qmd)
+- [Sequential equilibrium](sequential-equilibrium.qmd)
+
+## Refinements (when credibility matters)
+- [Trembling-hand perfect equilibrium](trembling-hand-perfect.qmd)
+- [Proper equilibrium](proper-equilibrium.qmd)
+
+## Alternatives / related notions
+- [Correlated equilibrium](correlated-equilibrium.qmd)
+- [Rationalizability](rationalizability.qmd)
+- [Babbling equilibrium (cheap talk)](babbling.qmd)

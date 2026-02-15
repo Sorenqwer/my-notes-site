@@ -1,0 +1,60 @@
+---
+title: "Correlated equilibrium"
+toc: true
+---
+
+## What it is
+A **correlated equilibrium (CE)** allows players to condition their actions on a shared signal (a recommendation from a mediator). The signal can correlate players’ actions.
+
+A distribution over action profiles is a CE if, when a player receives a recommendation, they have no incentive to deviate given they believe others follow their recommendations.
+
+## Where it shows up
+- Normal-form games
+- Information and mediation (recommendation systems)
+- Mechanism design / persuasion / traffic routing interpretations
+- Computational game theory (CE is often easier to compute than NE)
+
+## How to solve (recipe)
+1) Choose a distribution over action profiles (a “correlation device”).
+2) For each player and each recommended action, write the **no-deviation** (obedience) constraints:
+   - expected payoff from following ≥ expected payoff from deviating.
+3) If all obedience constraints hold, the distribution is a correlated equilibrium.
+
+---
+
+## Solved example (a simple CE that improves outcomes)
+
+### Problem (context + question)
+Two drivers choose routes: $A$ or $B$. If both choose the same route, there is congestion and each gets 0. If they choose different routes, each gets 1.
+
+Payoffs:
+- If actions differ: payoff 1 each
+- If same: payoff 0 each
+
+**Question:** Construct a correlated equilibrium that achieves expected payoff 1 for each driver.
+
+### Solution
+Consider a mediator who flips a fair coin and privately recommends:
+- with probability 1/2: recommend (Driver 1: A, Driver 2: B)
+- with probability 1/2: recommend (Driver 1: B, Driver 2: A)
+
+So the induced distribution puts probability 1/2 on (A,B) and 1/2 on (B,A).
+
+**Step 1: Check obedience for Driver 1**
+- If Driver 1 is told “A”, they infer Driver 2 was told “B”, so following yields payoff 1.
+  Deviating to “B” would match Driver 2 and yield 0.
+- If Driver 1 is told “B”, symmetric: follow yields 1; deviating yields 0.
+
+So Driver 1 never wants to deviate. Same for Driver 2.
+
+**Result:** This recommendation device is a correlated equilibrium with payoff 1 for each.
+
+### Takeaway
+CE allows coordination using signals, often improving welfare relative to uncoordinated play.
+
+---
+
+## Later-on analysis
+- Every Nash equilibrium induces a correlated equilibrium (as a special case), but CE can be larger.
+- CE is closely related to “obedience constraints” in mechanism design.
+- If you ever do computation: CE can be found via linear programming in finite games.

@@ -1,0 +1,83 @@
+---
+title: "Babbling equilibrium (cheap talk)"
+toc: true
+---
+
+## What it is
+In cheap talk, messages are costless and non-binding. A **babbling equilibrium** is one in which messages convey no information: the receiver’s action does not depend on the message, and the sender is indifferent across messages.
+
+Babbling equilibria exist very generally and serve as a baseline.
+
+## Where it shows up
+- Cheap talk models (sender–receiver)
+- Communication settings with strong preference misalignment
+- As the “uninformative” benchmark when discussing informative equilibria (partition, separating)
+
+## How to solve (recipe)
+1) Make the receiver ignore messages: choose the same action after any message.
+2) Set receiver beliefs equal to the prior (or any belief consistent with ignoring messages).
+3) Verify receiver optimality under those beliefs.
+4) Verify sender indifference: since messages don’t affect actions, any message is optimal.
+
+---
+
+## Solved example (fully worked)
+
+### Problem (context + question)
+A sender observes $\theta\in\{0,1\}$ with prior $\Pr(\theta=1)=1/2$. Sender sends costless message $m\in\{\text{low},\text{high}\}$. Receiver chooses action $a\in\{0,1\}$.
+
+Receiver payoff:
+$$
+u_R(a,\theta)=\mathbf{1}\{a=\theta\}.
+$$
+
+Sender payoff (biased toward $a=1$):
+$$
+u_S(a,\theta)=\mathbf{1}\{a=1\}.
+$$
+
+**Question:** Exhibit a babbling equilibrium (strategies + beliefs) and verify it.
+
+### Solution
+A babbling equilibrium has receiver ignore the message.
+
+**Step 1 (receiver best response when ignoring messages):**
+Under the prior, $\Pr(\theta=1)=1/2$. Then
+- payoff from $a=1$ is $1/2$,
+- payoff from $a=0$ is $1/2$.
+
+Receiver is indifferent, so a valid best response is:
+$$
+a=0 \quad \text{after both messages}.
+$$
+
+**Step 2 (sender incentives):**
+If the receiver always plays $a=0$, sender payoff is always $0$ regardless of message. So the sender is indifferent and can send any message.
+
+Let sender strategy be: always send “high”.
+
+**Step 3 (beliefs):**
+Receiver beliefs do not depend on the message (since messages are ignored). Keep the prior:
+$$
+\Pr(\theta=1\mid m)=1/2 \quad \text{for both } m\in\{\text{low},\text{high}\}.
+$$
+
+**Result (babbling equilibrium):**
+- Sender: always send “high”.
+- Receiver: always choose $a=0$.
+- Beliefs: posterior equals prior after any message.
+
+### Check
+- Receiver optimality: given prior, $a=0$ is a best response (ties).
+- Sender optimality: given receiver ignores messages, any message is optimal.
+- Beliefs are consistent with the equilibrium (receiver does not condition on $m$).
+
+### Takeaway
+Babbling equilibria always exist because cheap messages can be ignored.
+
+---
+
+## Later-on analysis
+- Informative equilibria require structure: partial alignment, restrictions on message space, or repeated interaction.
+- Adding costs converts cheap talk into signaling, where credibility can be restored.
+- Many refinements aim to rule out “unreasonable” beliefs or equilibria, but babbling is a genuine equilibrium prediction in many environments.
