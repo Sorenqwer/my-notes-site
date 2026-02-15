@@ -50,7 +50,20 @@ code, pre, kbd, samp{
 
 /* ---------- Book-page panel (all pages) ---------- */
 main.content{
-  background: rgba(255, 255, 255, 0.93); /* paper */
+  /* Paper look: warm tone + subtle grain */
+  background-color: rgba(255, 255, 255, 0.93);
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(0,0,0,0.03), transparent 55%),
+    radial-gradient(circle at 82% 72%, rgba(0,0,0,0.02), transparent 60%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(0,0,0,0.012),
+      rgba(0,0,0,0.012) 1px,
+      transparent 1px,
+      transparent 7px
+    );
+
+  border: 1px solid rgba(0,0,0,0.07);
   border-radius: 14px;
 
   width: 76vw;          /* ~3/4 screen */
@@ -60,7 +73,8 @@ main.content{
   padding: 1.75rem 2rem;
   margin: 2.75rem auto;
 
-  box-shadow: none;
+  /* Optional page-edge highlight (subtle, not a drop shadow) */
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.65);
 }
 
 main.content p{
@@ -69,7 +83,30 @@ main.content p{
 
 /* Optional: homepage slightly lighter so background shows more */
 body.home main.content{
-  background: rgba(255, 255, 255, 0.88);
+  background-color: rgba(255, 255, 255, 0.88);
+}
+
+/* ---------- Margin rails (wide screens) ---------- */
+body::before,
+body::after{
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(0,0,0,0.08);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before{ left: 6vw; }
+body::after{ right: 6vw; }
+
+/* Keep content above the rails */
+main.content,
+.quarto-title-block{
+  position: relative;
+  z-index: 1;
 }
 
 /* ---------- Mobile ---------- */
@@ -81,6 +118,9 @@ body.home main.content{
   .navbar-brand{
     font-size: 1.35rem;
   }
+
+  /* Rails off on mobile */
+  body::before, body::after{ display: none; }
 
   main.content{
     width: calc(100vw - 1.5rem);
