@@ -1,10 +1,9 @@
 ---
 title: "Foundations"
-toc: true
+toc: false
 ---
 
 
-## Topics
 - [Linear algebra](linear-algebra.qmd)
 - [Probability](probability.qmd)
 - [Optimization](optimization.qmd)
