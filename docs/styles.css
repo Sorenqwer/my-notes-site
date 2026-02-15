@@ -1,3 +1,31 @@
+/* Site-wide background (all pages) */
+body {
+  background: url("images/hero.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Site-wide readable panel */
+main.content {
+  background: rgba(255, 255, 255, 0.86);
+  border-radius: 14px;
+  padding: 1.25rem 1.25rem;
+  max-width: 960px;
+  margin: 2.5rem auto;
+}
+
+/* --- Homepage overrides (keep your current look) --- */
+body.home main.content {
+  background: rgba(255, 255, 255, 0.75);
+  max-width: 860px;
+  margin: 3rem auto;
+}
+
+body.home blockquote {
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+
 /* Homepage blurred formula background */
 body.home {
   background: url("images/hero.png") no-repeat center center fixed;
