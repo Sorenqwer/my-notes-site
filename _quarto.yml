@@ -17,7 +17,7 @@ website:
       - href: pdfs/index.qmd
         text: PDFs
       - href: criminology/index.qmd
-        text: criminology
+        text: Criminology
 
 format:
   html:
