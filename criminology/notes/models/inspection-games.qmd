@@ -67,17 +67,17 @@ Interior mixing requires $0<k<h$.
 
 ## Connections
 ### Mechanisms
-- Incentives & deterrence → [Incentives-deterrences →](criminology/notes/mechanisms/incentives-deterrence.qmd)
-- Opportunity & routine activity (affects $b$ and effective $q$) → opportunity-routine.qmd
-- Legitimacy & compliance (endogenous detection/reporting) → `criminology/notes/mechanisms/legitimacy-compliance.qmd`
-- Self-control (perceived risk, present bias) → `.criminology/notes/mechanisms/self-control.qmd`
+- Incentives & deterrence [Incentives-Deterrences](../mechanisms/incentives-deterrence.qmd)
+- Opportunity & routine activity [Affects $b$ and Effective $q$](../mechanisms/opportunity-routine.qmd)
+- Legitimacy & compliance [Endogenous Detection/Reporting](../mechanisms/legitimacy-compliance.qmd)
+- Self-control [Perceived Risk, Present Bias](../mechanisms/self-control.qmd)
 
 ### Institutions
-- Policing [monitoring allocation](../institutions/policing.qmd)
-- Corrections (supervision as monitoring) → `../institutions/corrections.qmd`
+- Policing [Monitoring Allocation](../institutions/policing.qmd)
+- Corrections [Supervision as Monitoring](../institutions/corrections.qmd)
 
 ### Foundations
-- Recorded vs incidence (detection/reporting stages) → `../foundations/key-definitions.qmd`
+- Recorded vs incidence [Detection/Reporting Stages](../foundations/key-definitions.qmd)
 
 ---
 
