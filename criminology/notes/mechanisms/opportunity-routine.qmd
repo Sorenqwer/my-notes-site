@@ -1,0 +1,33 @@
+---
+title: "Opportunity & routine activity"
+toc: true
+---
+
+## Motivation (stylized facts)
+::: {.callout-note title="Stylized facts this mechanism aims to match"}
+- Crime is concentrated in places (hotspots) and changes with routine patterns and guardianship.
+- Some interventions reduce crime by reducing opportunity rather than changing preferences.
+:::
+
+## Mechanism
+The opportunity perspective treats crime as requiring:
+- a motivated offender,
+- a suitable target,
+- absence of capable guardianship.
+
+Academic implication: you can reduce crime by changing the **environment of opportunity** (visibility, access, guardianship), even holding preferences fixed.
+
+## Canonical modeling primitives
+- offenders choose where/when to search (location choice)
+- guardianship shifts detection risk
+- targets differ in attractiveness
+- displacement is possible (crime moves rather than disappears)
+
+## Predictions (qualitative)
+- increasing guardianship in a place reduces expected returns and shifts activity elsewhere unless there are frictions
+- policies can change measured crime mechanically through visibility/reporting changes
+- hotspot concentration can arise from heterogeneity in target density and guardianship
+
+## Later-on analysis
+- combine with deterrence: opportunity changes the benefit side ($b$) and/or detection probability ($q$)
+- add spatial equilibrium: offenders allocate across locations until expected payoffs equalize (with frictions)

@@ -1,0 +1,56 @@
+---
+title: "Self-control and present bias (behavioral microfoundations)"
+toc: true
+---
+
+## Motivation (stylized facts)
+::: {.callout-note title="Stylized facts this mechanism aims to match"}
+- Some offending appears impulsive or myopic rather than forward-looking.
+- Short-run temptations and situational triggers can matter even when long-run costs are large.
+:::
+
+---
+
+## Mechanism (core idea)
+Behavioral approaches model departures from fully forward-looking choice:
+- **present bias** (overweight immediate payoff),
+- limited attention to detection risk,
+- self-control constraints.
+
+This does not replace incentive-based models; it changes *how* incentives are processed.
+
+---
+
+## Canonical modeling primitives
+### A) Present-biased utility
+A simple representation:
+- immediate gain from crime is weighted heavily relative to future costs
+- sanction $s$ that arrives later is discounted more than “standard” exponential discounting would imply
+
+### B) Attention and perceived risk
+Perceived detection probability $\tilde q$ may differ from objective $q$ due to salience, experience, and misinformation.
+
+### C) Commitment and environment
+Guardianship/opportunity changes can serve as “commitment devices” by reducing temptations.
+
+---
+
+## Predictions (qualitative)
+- Increasing sanction severity may have weaker deterrent effects when behavior is present-biased (especially if punishment is delayed or uncertain).
+- Making detection risk **salient and immediate** can matter more than increasing severity.
+- Situational prevention (reducing opportunities) can be effective even without changing preferences.
+
+---
+
+## What would count as evidence? (conceptual)
+Studies often focus on:
+- timing of consequences (immediate vs delayed),
+- salience interventions (visibility of police, warnings),
+- measures of impulsivity/self-control correlated with offending.
+
+---
+
+## Later-on analysis (model links)
+- Combine with deterrence: replace $q$ by perceived $\tilde q$, or change discounting of $s$.
+- Combine with opportunity: changes in environment affect temptation and attention.
+- Dynamic models: repeated experiences update perceived risk and behavior.

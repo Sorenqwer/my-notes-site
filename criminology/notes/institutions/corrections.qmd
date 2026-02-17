@@ -1,0 +1,58 @@
+---
+title: "Corrections (incarceration, supervision, reentry)"
+toc: true
+---
+
+## Scope
+Corrections includes incarceration, probation/parole, and reentry.  
+Academic analysis separates three channels:
+
+- **incapacitation** (reduces opportunity to offend),
+- **deterrence** (incentives via expected punishment),
+- **rehabilitation / dynamic effects** (future states: skills, stigma, networks).
+
+---
+
+## Core research questions
+- What are short-run vs long-run effects of incarceration?
+- How do supervision intensity and conditions affect compliance?
+- How do reentry constraints (employment, housing, stigma) shape recidivism?
+
+---
+
+## Institutional primitives (what to model)
+### A) Dynamic states
+Let a person’s state include:
+- employability/human capital,
+- stigma/record,
+- network exposure,
+- addiction/mental health constraints.
+
+Punishment can shift these states (positively or negatively).
+
+### B) Supervision as monitoring
+Probation/parole can be modeled as:
+- a monitoring probability,
+- a rule system (violations),
+- and sanctions for violation.
+
+### C) Capacity constraints
+Crowding, budgets, and staff ratios matter for rehabilitation quality and supervision.
+
+---
+
+## Canonical modeling approaches
+1) **Dynamic choice / Markov decision** (crime vs work; state transitions)  
+2) **Monitoring games** (supervision as inspection)  
+3) **Stigma/labeling dynamics** (system contact changes outside options)
+
+(Links)
+- Life-course dynamics mechanism → `../mechanisms/life-course.qmd`
+- Labeling & stigma → `../mechanisms/labeling-stigma.qmd`
+- Allocation dynamics (resources) → `../models/allocation-dynamics.qmd`
+
+---
+
+## Later-on analysis
+For a theory-first program, corrections is where “static deterrence” becomes **dynamic**:
+policies can reduce crime today yet worsen future states (or the opposite).

@@ -1,0 +1,13 @@
+---
+title: "Topics"
+toc: true
+---
+
+Topic pages are “application hubs” that connect mechanisms and models to specific crime domains.
+
+- `violent-crime.qmd` *(planned)*
+- `property-crime.qmd` *(planned)*
+- `organized-crime.qmd` *(planned)*
+- `white-collar.qmd` *(planned)*
+- `cybercrime.qmd` *(planned)*
+- `drug-markets.qmd` *(planned)*

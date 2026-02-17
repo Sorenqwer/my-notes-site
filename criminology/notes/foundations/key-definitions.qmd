@@ -1,0 +1,69 @@
+---
+title: "Key definitions"
+toc: true
+---
+
+## Scope
+This page fixes terminology so later theory is precise. Many disputes in criminology are partly about **what is being measured**.
+
+---
+
+## Crime, harm, and illegality
+- **Crime**: an act defined as illegal by law (jurisdiction-specific and time-varying).
+- **Harm**: a broader concept including non-criminal harms (e.g., some corporate/environmental harms).
+- Academic work often distinguishes: legal definitions (crime) vs normative/social definitions (harm).
+
+**Implication for theory:** specify whether your model targets **illegal behavior** or **harmful behavior** more broadly.
+
+---
+
+## Incidence vs recorded crime
+- **Incidence**: underlying events that occur (often unobserved).
+- **Recorded crime**: events that appear in administrative data.
+
+A stylized decomposition is:
+
+1) Incidence occurs  
+2) Victim/witness chooses to **report** (or not)  
+3) Agency chooses to **record/classify** and may **clear** a case  
+4) Courts/corrections outcomes follow
+
+**Implication:** changes in policing or trust can change recorded crime even if incidence changes less (or differently).
+
+---
+
+## Offending, victimization, and events
+- **Offending**: the behavior of potential offenders.
+- **Victimization**: the experience of victims (often measured via victimization surveys).
+- **Event**: a single incident; may involve multiple offenders/victims.
+
+**Implication:** your unit of analysis matters (person vs event vs place).
+
+---
+
+## Deterrence, incapacitation, rehabilitation
+Three distinct channels by which punishment/policy can reduce harm:
+- **Deterrence**: changes incentives (expected costs/benefits).
+- **Incapacitation**: reduces ability to offend (e.g., incarceration).
+- **Rehabilitation**: changes future preferences/skills/constraints (dynamic effects).
+
+**Implication:** don’t conflate them—models usually represent one channel at a time.
+
+---
+
+## Compliance and legitimacy
+- **Compliance**: following rules/law.
+- **Legitimacy**: perceived rightfulness of authorities; affects cooperation, reporting, and voluntary compliance.
+
+**Implication:** legitimacy can be modeled as shifting participation constraints (reporting/cooperation) or utility from compliance.
+
+---
+
+## A minimal “data caution” note
+Administrative outcomes (arrests, convictions) combine:
+- behavior,
+- reporting decisions,
+- enforcement allocation,
+- legal processing rules.
+
+When you interpret facts, always ask: “Is this about incidence, recording, or processing?”

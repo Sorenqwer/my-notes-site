@@ -1,0 +1,9 @@
+---
+title: "Foundations"
+toc: true
+---
+
+Foundations clarify **definitions**, **units of analysis**, and **measurement caveats** (recorded crime vs incidence). These are the conceptual primitives used throughout criminology research.
+
+- [Key definitions](key-definitions.qmd)
+- [Units of analysis](units-of-analysis.qmd)

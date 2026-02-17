@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Criminology notes – Margins of Rationality</title>
+<title>Network crime (diffusion and strategic complements) – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-ff63373b1067ca6f91cf1456aa1f00a2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-ff63373b1067ca6f91cf1456aa1f00a2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,8 +69,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -80,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Margins of Rationality</span>
     </a>
   </div>
@@ -91,23 +120,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../notes/index.html"> 
+    <a class="nav-link" href="../../../notes/index.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../foundations/index.html"> 
+    <a class="nav-link" href="../../../foundations/index.html"> 
 <span class="menu-text">Foundations</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../pdfs/index.html"> 
+    <a class="nav-link" href="../../../pdfs/index.html"> 
 <span class="menu-text">PDFs</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../criminology/index.html"> 
+    <a class="nav-link" href="../../../criminology/index.html"> 
 <span class="menu-text">criminology</span></a>
   </li>  
 </ul>
@@ -126,8 +155,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#start-here" id="toc-start-here" class="nav-link active" data-scroll-target="#start-here">Start here</a></li>
-  <li><a href="#how-this-section-is-organized" id="toc-how-this-section-is-organized" class="nav-link" data-scroll-target="#how-this-section-is-organized">How this section is organized</a></li>
+  <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
+  <li><a href="#canonical-linear-quadratic-network-game-template" id="toc-canonical-linear-quadratic-network-game-template" class="nav-link" data-scroll-target="#canonical-linear-quadratic-network-game-template">Canonical linear-quadratic network game (template)</a></li>
+  <li><a href="#predictions-qualitative" id="toc-predictions-qualitative" class="nav-link" data-scroll-target="#predictions-qualitative">Predictions (qualitative)</a></li>
+  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -136,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Criminology notes</h1>
+<h1 class="title">Network crime (diffusion and strategic complements)</h1>
 </div>
 
 
@@ -153,30 +184,46 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="start-here" class="level2">
-<h2 class="anchored" data-anchor-id="start-here">Start here</h2>
+<section id="what-it-is" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
+<p>Network models study how behavior depends on peers and connections: - peer influence and learning, - diffusion of tactics, - complementarities (my payoff rises when neighbors participate).</p>
+<hr>
+</section>
+<section id="canonical-linear-quadratic-network-game-template" class="level2">
+<h2 class="anchored" data-anchor-id="canonical-linear-quadratic-network-game-template">Canonical linear-quadratic network game (template)</h2>
+<p>Let each agent <span class="math inline">\(i\)</span> choose participation level <span class="math inline">\(x_i\ge 0\)</span>. Utility: <span class="math display">\[
+u_i(x)= a_i x_i - \frac{1}{2}x_i^2 + \beta x_i \sum_j g_{ij}x_j,
+\]</span> where: - <span class="math inline">\(a_i\)</span> is an individual incentive term (outside option, opportunities), - <span class="math inline">\(g_{ij}\)</span> is the network adjacency/weight matrix, - <span class="math inline">\(\beta\)</span> measures strategic complementarity.</p>
+<p>Best response (FOC): <span class="math display">\[
+a_i - x_i + \beta \sum_j g_{ij}x_j = 0
+\quad\Rightarrow\quad
+x_i = a_i + \beta \sum_j g_{ij}x_j.
+\]</span></p>
+<p>In vector form: <span class="math display">\[
+x = a + \beta Gx
+\quad\Rightarrow\quad
+(I-\beta G)x = a
+\quad\Rightarrow\quad
+x = (I-\beta G)^{-1}a
+\]</span> when <span class="math inline">\((I-\beta G)\)</span> is invertible (e.g., <span class="math inline">\(\beta\)</span> small enough).</p>
+<hr>
+</section>
+<section id="predictions-qualitative" class="level2">
+<h2 class="anchored" data-anchor-id="predictions-qualitative">Predictions (qualitative)</h2>
 <ul>
-<li><a href="../../criminology/notes/foundations/index.html">Foundations</a></li>
-<li><a href="../../criminology/notes/mechanisms/index.html">Mechanisms</a></li>
-<li><a href="../../criminology/notes/institutions/index.html">Institutions</a></li>
-<li><a href="../../criminology/notes/topics/index.html">Topics</a></li>
-<li><a href="../../criminology/notes/models/index.html">Models</a></li>
+<li>Shocks to incentives <span class="math inline">\(a_i\)</span> propagate through the network (“multiplier” effect).</li>
+<li>Targeting central nodes can have outsized effects.</li>
+<li>Strong complements (<span class="math inline">\(\beta\)</span> high) can generate large clustering and persistence.</li>
 </ul>
 <hr>
 </section>
-<section id="how-this-section-is-organized" class="level2">
-<h2 class="anchored" data-anchor-id="how-this-section-is-organized">How this section is organized</h2>
-<ol type="1">
-<li><strong>Foundations</strong>: definitions + units of analysis + measurement caveats<br>
-</li>
-<li><strong>Mechanisms</strong>: theory families (channels)<br>
-</li>
-<li><strong>Institutions</strong>: policing/courts/corrections as strategic systems<br>
-</li>
-<li><strong>Topics</strong>: substantive crime domains<br>
-</li>
-<li><strong>Models</strong>: canonical strategic/dynamic representations</li>
-</ol>
+<section id="later-on-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<ul>
+<li>Add enforcement targeted by network position.</li>
+<li>Add diffusion/learning dynamics (time-varying <span class="math inline">\(a_i\)</span> and beliefs).</li>
+<li>Link to co-offending equilibrium selection.</li>
+</ul>
 
 
 </section>

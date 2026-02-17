@@ -1,0 +1,35 @@
+---
+title: "Legitimacy, trust & compliance"
+toc: true
+---
+
+## Motivation (stylized facts)
+::: {.callout-note title="Stylized facts this mechanism aims to match"}
+- Reporting and cooperation vary with trust in institutions.
+- Enforcement can backfire if it reduces perceived legitimacy (lower cooperation).
+:::
+
+## Mechanism
+Legitimacy affects:
+- willingness to report victimization,
+- willingness to cooperate as witness,
+- voluntary compliance with rules.
+
+This can be modeled as:
+- a participation constraint (report/cooperate only if expected benefit exceeds cost),
+- a utility component (disutility from cooperating with an illegitimate authority),
+- or a belief channel (expectations of fair treatment).
+
+## Canonical modeling primitives
+- reporting stage: victim decides to report; police decide effort; offender anticipates
+- informational asymmetry: police need community cooperation to identify offenders
+- dynamic trust: policies today affect future cooperation
+
+## Predictions (qualitative)
+- higher legitimacy increases reporting and clearance rates (even holding incidence fixed)
+- aggressive policies can reduce cooperation, lowering detection and potentially increasing incidence in the long run
+- measured crime can rise when trust improves (more reporting), even if incidence falls
+
+## Later-on analysis
+- links naturally to signaling and dynamic games (reputation of institutions)
+- connects to “recorded vs incidence” measurement: reporting is endogenous

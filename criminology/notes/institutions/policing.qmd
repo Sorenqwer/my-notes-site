@@ -1,0 +1,91 @@
+---
+title: "Policing"
+toc: true
+---
+
+## Scope
+This page treats policing as an institution with:
+- **objectives** (harm reduction, clearance, legitimacy),
+- **constraints** (budget, staffing, information),
+- **strategic interactions** (offender adaptation, community cooperation).
+
+The aim is not a program-evaluation catalogue, but an academic map of how policing is analyzed.
+
+---
+
+## Core research questions
+- How does police presence/effort change offending (deterrence) vs recorded outcomes (reporting/recording)?
+- How should scarce resources be allocated across places and times (hotspots, patrol allocation)?
+- How does legitimacy affect cooperation (reporting, witnessing), and thereby detection?
+
+---
+
+## Institutional primitives (what to model)
+### A) Capacity and allocation
+Policing is constrained: effort must be allocated across:
+- locations (hotspots vs non-hotspots),
+- time (day/night; weekends),
+- tasks (patrol vs investigation).
+
+### B) Information and targeting
+Police learn from:
+- calls for service (endogenous reporting),
+- observed incidents,
+- intelligence networks,
+- past allocation outcomes.
+
+### C) Performance measures and incentives
+Observed metrics may include:
+- recorded crime rates,
+- arrest/clearance rates,
+- response times,
+- complaint rates.
+
+These metrics can shape behavior (sometimes away from welfare-maximizing choices).
+
+---
+
+## Strategic responses (equilibrium thinking)
+### Offender adaptation
+Policies can trigger substitution:
+- location displacement,
+- temporal displacement,
+- target substitution,
+- tactic substitution.
+
+### Community cooperation
+Reporting and witness cooperation are endogenous and depend on:
+- expected responsiveness,
+- perceived fairness,
+- fear of retaliation,
+- legitimacy.
+
+---
+
+## Canonical modeling approaches
+1) **Inspection / deterrence games** (monitoring vs offending)  
+2) **Spatial equilibrium models** (offenders choose locations; police allocate patrol)  
+3) **Dynamic allocation** (learning, updating beliefs, two-period/multi-period allocation)  
+4) **Reporting & trust games** (victims decide to report; police decide effort; offenders anticipate)
+
+(Links)
+- Inspection games → `../models/inspection-games.qmd`
+- Allocation dynamics → `../models/allocation-dynamics.qmd`
+- Reporting & trust → `../models/reporting-trust.qmd`
+
+---
+
+## What counts as evidence? (conceptual)
+Policing claims typically require separating:
+- incidence vs recorded crime,
+- police response vs underlying trends,
+- short-run deterrence vs long-run adaptation.
+
+---
+
+## Later-on analysis
+A clean theory program often writes policing as a player with:
+- a budget constraint,
+- an allocation decision,
+- an outcome function (detection, harm),
+- and a legitimacy/cooperation channel.

@@ -1,0 +1,57 @@
+---
+title: "Life-course dynamics (onset and desistance)"
+toc: true
+---
+
+## Motivation (stylized facts)
+::: {.callout-note title="Stylized facts this mechanism aims to match"}
+- Offending often shows strong age patterns: onset, persistence, and eventual desistance for many individuals.
+- Turning points (school, work, relationships) and system contact can change trajectories.
+:::
+
+---
+
+## Mechanism (core idea)
+Life-course criminology emphasizes that offending is **dynamic**:
+- people’s constraints, opportunities, and social ties evolve;
+- past behavior can affect future options (e.g., stigma, skill loss);
+- interventions can have different short-run vs long-run effects.
+
+A theory-first approach treats these as **state variables**.
+
+---
+
+## Canonical modeling primitives
+### A) States and transitions
+Let state $x_t$ capture employability, social ties, addiction, stigma, etc.
+Choices (crime vs no crime) affect:
+- immediate payoff,
+- transition of $x_{t+1}$.
+
+### B) Dynamic incentives
+- “crime today” may increase short-run payoff but worsen future states (stigma, incarceration).
+- “no crime” may build human capital or relationships, improving future payoffs.
+
+### C) Heterogeneity
+Different types (impulsive vs patient; high-skill vs low-skill) create persistence and concentration.
+
+---
+
+## Predictions (qualitative)
+- Policies that raise short-run costs (sanctions) can deter some behavior but may increase long-run crime if they worsen future states (e.g., incarceration reduces future legal options).
+- Interventions that improve transitions (training, reentry support) can shift long-run equilibria even if short-run deterrence is unchanged.
+- Stigma channels can create “path dependence”: early system contact changes the trajectory.
+
+---
+
+## What would count as evidence? (conceptual)
+Evidence often aims to distinguish:
+- selection (who gets system contact) vs causal impact (contact changes the person),
+- short-run incapacitation vs long-run dynamic effects.
+
+---
+
+## Later-on analysis (model links)
+- Dynamic games / Markov decision models fit naturally here.
+- Courts/corrections pages will connect: punishment policies affect state transitions.
+- “Labeling & stigma” is a specific mechanism that often lives inside life-course dynamics.

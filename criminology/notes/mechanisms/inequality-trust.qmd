@@ -1,0 +1,60 @@
+---
+title: "Inequality, deprivation & social trust"
+toc: true
+---
+
+## Motivation (stylized facts)
+::: {.callout-note title="Stylized facts this mechanism aims to match"}
+- Violence and disorder often co-move with deprivation and low social trust (interpretations differ across theories).
+- Communities with stronger informal social control tend to sustain lower levels of violence and fear.
+:::
+
+---
+
+## Mechanism (core idea)
+This mechanism family links macro social conditions to micro behavior through:
+- **outside options** (returns to legal work vs illegal gain),
+- **social trust / social capital** (willingness to cooperate and enforce norms),
+- **collective efficacy** (informal guardianship and community capacity),
+- **stress/strain** (pressure and constraints that affect choices).
+
+In theory-first notes, it’s useful to treat inequality/deprivation not as a single cause but as a **bundle of parameter shifts** affecting incentives and cooperation.
+
+---
+
+## Canonical modeling primitives
+### A) Opportunity cost and outside options
+- legal income option $w$ vs illegal gain $b$
+- unemployment or low wages reduce $w$, raising relative attractiveness of crime
+
+### B) Trust and collective action
+- community cooperation increases detection probability $q$ (through reporting/witnessing)
+- social capital reduces coordination costs of informal prevention
+
+### C) Equilibrium feedback
+- low trust reduces reporting → lower detection → higher crime → further erosion of trust
+This can generate multiple equilibria (high-trust/low-crime vs low-trust/high-crime).
+
+---
+
+## Predictions (qualitative)
+- Lower outside options ($w$ down) increase participation in illegal activity when deterrence is unchanged.
+- Lower trust reduces cooperation and reporting, potentially lowering recorded crime in the short run but raising incidence in the long run.
+- If trust enters detection, policies that improve legitimacy can shift the system to a different equilibrium.
+
+---
+
+## What would count as evidence? (conceptual, not a full review)
+To support this mechanism, studies typically look for variation in:
+- labor-market shocks (outside options),
+- interventions that change community trust/collective efficacy,
+- exogenous changes in reporting or guardianship.
+
+The main caution is separating **behavior** from **recorded outcomes** when reporting changes.
+
+---
+
+## Later-on analysis (model links)
+- Inspection/deterrence: inequality shifts $w$ and $b$ (returns), and trust shifts $q$.
+- Reporting & legitimacy: trust directly enters reporting decisions.
+- Network effects: deprivation can interact with peer complementarities, amplifying clustering.

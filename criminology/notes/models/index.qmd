@@ -1,0 +1,13 @@
+---
+title: "Models"
+toc: true
+---
+
+These pages provide canonical strategic/dynamic representations used in theory-first criminology.
+
+- [Inspection games (deterrence & monitoring)](inspection-games.qmd)
+- [Plea bargaining (asymmetric information)](plea-bargaining.qmd)
+- [Reporting & trust (legitimacy and cooperation)](reporting-trust.qmd)
+- [Co-offending games (coordination and betrayal)](co-offending-games.qmd)
+- [Network crime (diffusion and complements)](network-crime.qmd)
+- [Allocation dynamics (hotspots and resource allocation)](allocation-dynamics.qmd)

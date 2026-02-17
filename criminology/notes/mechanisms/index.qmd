@@ -1,0 +1,18 @@
+---
+title: "Mechanisms"
+toc: true
+---
+
+Mechanism pages present theory families as **channels** that generate crime patterns. Each page follows:
+
+**stylized facts → mechanism → canonical primitives → predictions → later-on analysis (model links)**
+
+## Core mechanisms
+- [Incentives & deterrence](incentives-deterrence.qmd)
+- [Opportunity & routine activity](opportunity-routine.qmd)
+- [Social interactions & networks](social-interactions.qmd)
+- [Legitimacy, trust & compliance](legitimacy-compliance.qmd)
+- [Inequality, deprivation & social trust](inequality-trust.qmd)
+- [Life-course dynamics (onset and desistance)](life-course.qmd)
+- [Self-control and present bias (behavioral microfoundations)](self-control.qmd)
+- [Labeling, stigma & system contact](labeling-stigma.qmd)

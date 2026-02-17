@@ -1,0 +1,113 @@
+---
+title: "Incentives & deterrence"
+toc: true
+---
+
+## Motivation (stylized facts)
+::: {.callout-note title="Stylized facts this mechanism aims to match"}
+- Enforcement changes can shift offending and/or shift *recorded* crime through reporting/processing.
+- Deterrence depends on detection risk and sanction severity, with strategic adaptation.
+:::
+
+---
+
+## Mechanism (core idea)
+Potential offenders compare expected benefits of offending with expected costs:
+- probability of detection,
+- severity of sanction,
+- opportunity costs (legal work, stigma, future).
+
+In academic work this is often called **rational choice** or **deterrence** logic. It does not imply perfect rationality; it is a modeling language for incentives.
+
+---
+
+## Canonical model: a simple inspection game
+### Story
+A shop owner chooses how intensively to monitor (e.g., cameras/guards). A potential offender chooses whether to steal.
+
+### Players and actions
+- Offender chooses: **Crime** ($C$) or **No crime** ($N$).
+- Enforcer chooses: **Inspect** ($I$) or **Not inspect** ($\bar I$).
+
+### Payoffs (reduced form)
+Let:
+- offender benefit from crime be $b>0$ if not caught,
+- sanction (net cost) be $s>0$ if caught,
+- inspection cost be $k>0$ to the enforcer,
+- harm from a successful crime be $h>0$ to the enforcer.
+
+Payoffs:
+- If offender chooses $N$: offender gets $0$; enforcer gets $0$ (regardless of inspection).
+- If offender chooses $C$:
+  - if $I$: offender is caught → payoff $-s$; enforcer payoff $-k$ (prevents harm)
+  - if $\bar I$: offender succeeds → payoff $b$; enforcer payoff $-h$
+
+So the normal-form game is:
+
+$$
+\begin{array}{c|cc}
+ & I & \bar I\\ \hline
+C & (-s,\,-k) & (b,\,-h)\\
+N & (0,\,0) & (0,\,0)
+\end{array}
+$$
+
+---
+
+## Solved example (mixed-strategy equilibrium)
+### Problem
+Find the mixed-strategy Nash equilibrium (inspection probability and crime probability).
+
+### Solution
+Let the enforcer inspect with probability $q$ and the offender commit crime with probability $p$.
+
+**Step 1 (offender indifference condition).**  
+Offender’s expected payoff from $C$:
+$$
+\mathbb{E}[u_O(C)] = q(-s) + (1-q)b = b - q(b+s).
+$$
+Offender’s payoff from $N$ is $0$.  
+In a mixed equilibrium where offender randomizes, set:
+$$
+b - q(b+s)=0 \quad \Rightarrow \quad q^*=\frac{b}{b+s}.
+$$
+
+**Step 2 (enforcer indifference condition).**  
+Enforcer’s expected payoff from $I$:
+$$
+\mathbb{E}[u_E(I)] = p(-k) + (1-p)0 = -pk.
+$$
+From $\bar I$:
+$$
+\mathbb{E}[u_E(\bar I)] = p(-h) + (1-p)0 = -ph.
+$$
+In a mixed equilibrium where enforcer randomizes, set:
+$$
+-pk = -ph \quad \Rightarrow \quad k=h.
+$$
+
+This shows an important fact: **with this payoff structure, a true interior mixed equilibrium exists only when** $k=h$.
+Otherwise, the enforcer has a strict preference:
+- If $k<h$: inspection is cheaper than expected harm → enforcer prefers **inspect**.
+- If $k>h$: inspection is too costly → enforcer prefers **not inspect**.
+
+### Interpreting the equilibrium cases
+- If $k<h$ (inspection relatively effective/cheap): enforcer chooses $I$, offender chooses $N$ if $-s<0$ (always). Crime is deterred.
+- If $k>h$ (inspection expensive/ineffective): enforcer chooses $\bar I$, offender chooses $C$ if $b>0$ (always). Crime occurs.
+
+**Takeaway:** even in a tiny model, deterrence depends on the enforcement cost–harm tradeoff.
+
+---
+
+## Comparative statics (predictions)
+- Increasing sanction $s$ reduces the inspection probability needed to deter crime because $q^*=\frac{b}{b+s}$ decreases in $s$.
+- Increasing benefit $b$ makes deterrence harder (raises $q^*$).
+- Increasing harm $h$ makes inspection more attractive; increasing cost $k$ makes it less attractive.
+
+---
+
+## Later-on analysis (where criminology becomes richer)
+1) **Adaptation/substitution:** offenders can switch targets, locations, or tactics → model multiple actions and substitution.  
+2) **Endogenous detection:** detection probability depends on offender effort and police allocation (dynamic).  
+3) **Reporting & legitimacy:** observed crime depends on victim reporting and trust.  
+4) **Heterogeneity:** different types (opportunistic vs persistent offenders) generate concentration.

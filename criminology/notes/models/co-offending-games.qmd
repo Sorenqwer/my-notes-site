@@ -1,0 +1,49 @@
+---
+title: "Co-offending games (coordination and betrayal)"
+toc: true
+---
+
+## What it is
+Co-offending can be modeled as a coordination/trust problem:
+- acting in a group can increase returns or reduce risk,
+- but introduces betrayal risk and coordination failure.
+
+---
+
+## Canonical setup (stag-hunt style)
+Two potential offenders choose:
+- Join ($J$) a co-offense plan, or
+- Stay out ($O$).
+
+If both join: successful group offense yields payoff $G>0$ each, but increases exposure risk (netted into $G$).  
+If one joins alone: payoff is $-d<0$ (fails / gets exposed).  
+If stay out: payoff is $0$.
+
+Payoff matrix for each player:
+- $(J,J)$: $(G,G)$
+- $(J,O)$ or $(O,J)$: joiner gets $-d$, other gets $0$
+- $(O,O)$: $(0,0)$
+
+---
+
+## Equilibria
+Best responses:
+- If the other joins, joining gives $G>0$ which beats $0$ → join is best response.
+- If the other stays out, joining gives $-d<0$ → staying out is best response.
+
+So there are two pure Nash equilibria:
+- $(J,J)$ (high-crime coordination)
+- $(O,O)$ (low-crime coordination)
+
+---
+
+## Interpretation
+- Co-offending can be self-reinforcing: once a network expects participation, joining is rational.
+- Interventions that increase perceived downside $d$ (risk of betrayal, detection) can shift equilibrium selection toward $(O,O)$.
+- Network structure matters: local coordination can sustain pockets of $(J,J)$.
+
+---
+
+## Later-on analysis
+- Add asymmetric roles (leader/follower), monitoring within the group, betrayal incentives.
+- Embed in networks to explain clustering and diffusion.

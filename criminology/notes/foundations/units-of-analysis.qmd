@@ -1,0 +1,81 @@
+---
+title: "Units of analysis"
+toc: true
+---
+
+## Why units matter
+Criminology claims look different depending on whether you study:
+- **persons**, **places**, **networks**, **institutions**, or **time**.
+
+A good academic note states its unit explicitly.
+
+---
+
+## Person-level (micro)
+Typical questions:
+- Why do some individuals offend repeatedly?
+- What predicts onset/desistance?
+
+Model primitives:
+- types, constraints, dynamic states (employment, stigma), discounting/self-control.
+
+Pitfall:
+- selection into arrest/conviction is not identical to selection into offending.
+
+---
+
+## Place-level (spatial)
+Typical questions:
+- Why do hotspots exist?
+- Do interventions displace crime?
+
+Model primitives:
+- opportunity/guardianship, spatial choice, congestion, displacement.
+
+Pitfall:
+- shifting crime across blocks can look like “success” locally but not globally.
+
+---
+
+## Network-level (social)
+Typical questions:
+- Why co-offending clusters?
+- How do tactics diffuse?
+
+Model primitives:
+- strategic complements, learning, partner choice, trust/betrayal, diffusion.
+
+Pitfall:
+- peer effects vs sorting (who befriends whom) are easy to confuse empirically.
+
+---
+
+## Institutional level (police/courts/corrections)
+Typical questions:
+- How do agencies allocate scarce resources?
+- How do discretion and incentives shape outcomes?
+
+Model primitives:
+- objectives, constraints, information, capacity, performance measures.
+
+Pitfall:
+- “crime falls after more policing” can reflect recording/classification changes too.
+
+---
+
+## Time / dynamics
+Typical questions:
+- When does policy have short-run vs long-run effects?
+- How do offenders adapt?
+
+Model primitives:
+- dynamic games, Markov states, learning, reputation, equilibrium adjustment.
+
+Pitfall:
+- ignoring adaptation can overstate policy impact.
+
+---
+
+## Practical rule
+If your theory prediction is about **behavior**, say so.  
+If your prediction is about **recorded outcomes**, say which stage (reporting, recording, clearance, conviction) is affected.

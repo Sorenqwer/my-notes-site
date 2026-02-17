@@ -1,0 +1,54 @@
+---
+title: "Network crime (diffusion and strategic complements)"
+toc: true
+---
+
+## What it is
+Network models study how behavior depends on peers and connections:
+- peer influence and learning,
+- diffusion of tactics,
+- complementarities (my payoff rises when neighbors participate).
+
+---
+
+## Canonical linear-quadratic network game (template)
+Let each agent $i$ choose participation level $x_i\ge 0$.
+Utility:
+$$
+u_i(x)= a_i x_i - \frac{1}{2}x_i^2 + \beta x_i \sum_j g_{ij}x_j,
+$$
+where:
+- $a_i$ is an individual incentive term (outside option, opportunities),
+- $g_{ij}$ is the network adjacency/weight matrix,
+- $\beta$ measures strategic complementarity.
+
+Best response (FOC):
+$$
+a_i - x_i + \beta \sum_j g_{ij}x_j = 0
+\quad\Rightarrow\quad
+x_i = a_i + \beta \sum_j g_{ij}x_j.
+$$
+
+In vector form:
+$$
+x = a + \beta Gx
+\quad\Rightarrow\quad
+(I-\beta G)x = a
+\quad\Rightarrow\quad
+x = (I-\beta G)^{-1}a
+$$
+when $(I-\beta G)$ is invertible (e.g., $\beta$ small enough).
+
+---
+
+## Predictions (qualitative)
+- Shocks to incentives $a_i$ propagate through the network (“multiplier” effect).
+- Targeting central nodes can have outsized effects.
+- Strong complements ($\beta$ high) can generate large clustering and persistence.
+
+---
+
+## Later-on analysis
+- Add enforcement targeted by network position.
+- Add diffusion/learning dynamics (time-varying $a_i$ and beliefs).
+- Link to co-offending equilibrium selection.

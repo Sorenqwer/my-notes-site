@@ -1,0 +1,55 @@
+---
+title: "Courts (charging, plea bargaining, sentencing)"
+toc: true
+---
+
+## Scope
+Courts convert suspected offending into formal outcomes: charges, pleas/trials, and sentences.  
+Academic analysis focuses on **information, bargaining, discretion, and incentives**.
+
+---
+
+## Core research questions
+- How do prosecutors and defendants bargain under asymmetric information?
+- How do plea offers trade off certainty vs severity (and trial costs)?
+- Where can disparities arise (discretion, bargaining power, information gaps)?
+
+---
+
+## Institutional primitives (what to model)
+### A) Actors and payoffs
+- Prosecutor: conviction/sentence objectives, workload, trial cost.
+- Defendant: expected sentence, risk preferences, legal costs, collateral consequences.
+
+### B) Information
+- Strength of evidence, probability of conviction, defendant type (risk, priors).
+- Observability differs across parties → classic asymmetric information.
+
+### C) Process
+Charging → plea offer(s) → accept/reject → trial → sentencing.
+
+---
+
+## Canonical theoretical lenses
+1) **Bargaining models** (Nash bargaining, Rubinstein bargaining variants)
+2) **Screening/signaling** (plea offers as screening device)
+3) **Mechanism design** (rules shaping incentives and revelation)
+4) **Dynamic reputation** (repeat players: prosecutors, defense counsel)
+
+(Links)
+- Plea bargaining model → `../models/plea-bargaining.qmd`
+
+---
+
+## Key conceptual distinctions
+- **Case strength vs outcomes**: observed plea rates can reflect bargaining under uncertainty, not only guilt.
+- **Selection into trial**: trials are not random; they are chosen endogenously.
+- **Sentencing severity vs certainty**: deterrence can operate through either margin.
+
+---
+
+## Later-on analysis
+A theory-first approach can treat the court system as:
+- a bargaining stage under asymmetric information,
+- with selection and signaling,
+- embedded in a broader deterrence equilibrium.

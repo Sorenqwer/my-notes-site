@@ -1,0 +1,48 @@
+---
+title: "Labeling, stigma & system contact"
+toc: true
+---
+
+## Motivation (stylized facts)
+::: {.callout-note title="Stylized facts this mechanism aims to match"}
+- System contact (arrest, conviction, incarceration) can change future outcomes beyond the immediate punishment.
+- Stigma can alter employment, schooling, social ties, and incentives.
+:::
+
+---
+
+## Mechanism (core idea)
+Labeling theories emphasize that formal control can produce **secondary effects**:
+- stigma changes opportunities (labor-market access, housing),
+- social identity and peer grouping can shift,
+- repeated contact can become self-reinforcing.
+
+In a theory-first framework, stigma is modeled as a **state** that affects payoffs and constraints going forward.
+
+---
+
+## Canonical modeling primitives
+- stigma state $z\in\{0,1\}$ (or continuous) that increases after system contact
+- stigma reduces legal option $w(z)$ and/or increases network exposure to crime
+- feedback loop: stigma → lower $w$ → higher crime incentives → more contact → more stigma
+
+---
+
+## Predictions (qualitative)
+- Policies increasing detection/arrest can reduce crime short-run but may increase long-run crime if stigma harms future legal options.
+- Diversion programs and record-sealing can improve long-run outcomes by weakening the stigma transition.
+- The effect depends on who is marginally affected: high-risk vs low-risk populations.
+
+---
+
+## What would count as evidence? (conceptual)
+Empirical work often tries to separate:
+- selection into system contact vs causal impact of contact on later employment/offending,
+- short-run deterrence/incapacitation vs long-run stigma effects.
+
+---
+
+## Later-on analysis (model links)
+- Fits naturally inside life-course dynamics and dynamic choice.
+- Links to courts/corrections: sentencing policies determine stigma transitions.
+- Provides a theory channel for observed persistence beyond stable “types.”

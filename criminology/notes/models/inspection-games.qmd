@@ -1,0 +1,84 @@
+---
+title: "Inspection games (deterrence & monitoring)"
+toc: true
+---
+
+## What it is
+Inspection games model strategic interaction between:
+- an agent who may violate (offend), and
+- an enforcer who can monitor/inspect at a cost.
+
+They are used to formalize deterrence when enforcement resources are scarce.
+
+---
+
+## Canonical setup
+Offender chooses $C$ (crime) or $N$ (no crime).  
+Enforcer chooses $I$ (inspect) or $\bar I$ (not inspect).
+
+Parameters:
+- offender benefit if successful: $b>0$
+- sanction if caught: $s>0$
+- harm to enforcer if crime succeeds: $h>0$
+- inspection cost to enforcer: $k>0$
+
+Payoffs:
+- If $N$: offender $0$; enforcer gets $-k$ if inspecting, $0$ otherwise.
+- If $C$ and $I$: offender caught $\to -s$; enforcer pays inspection cost $\to -k$.
+- If $C$ and $\bar I$: offender succeeds $\to b$; enforcer suffers harm $\to -h$.
+
+---
+
+## Solved equilibrium (mixed strategies)
+Let enforcer inspect with probability $q$. Let offender commit crime with probability $p$.
+
+### Step 1: offender indifference
+Expected payoff from crime:
+$$
+\mathbb{E}[u_O(C)] = q(-s) + (1-q)b = b - q(b+s).
+$$
+Indifference with $N$ (payoff 0) gives:
+$$
+b - q(b+s)=0 \quad\Rightarrow\quad q^*=\frac{b}{b+s}.
+$$
+
+### Step 2: enforcer indifference
+Enforcer payoff from inspecting:
+$$
+\mathbb{E}[u_E(I)] = -k
+$$
+(since inspection cost is paid regardless of offender action)
+
+Enforcer payoff from not inspecting:
+$$
+\mathbb{E}[u_E(\bar I)] = -ph.
+$$
+Indifference gives:
+$$
+-k=-ph \quad\Rightarrow\quad p^*=\frac{k}{h}.
+$$
+
+### Conditions
+A true interior mixed equilibrium requires $0<p^*<1$, i.e.:
+$$
+0<\frac{k}{h}<1 \quad \Leftrightarrow \quad 0<k<h.
+$$
+
+---
+
+## Comparative statics (predictions)
+- Higher sanctions $s$ reduce the inspection probability needed for deterrence:
+  $q^*=\frac{b}{b+s}$ decreases in $s$.
+- Higher illegal gain $b$ increases required inspection intensity.
+- Higher inspection cost $k$ increases crime probability $p^*=k/h$.
+- Higher harm $h$ decreases crime probability (enforcement becomes more willing to deter).
+
+---
+
+## Interpretation and links
+- This is the cleanest “deterrence as equilibrium” baseline.
+- Extensions:
+  - multiple crime types (substitution),
+  - heterogeneous offenders (concentration),
+  - reporting stage (endogenous detection),
+  - dynamic enforcement with learning.

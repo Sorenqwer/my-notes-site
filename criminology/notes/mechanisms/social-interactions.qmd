@@ -1,0 +1,32 @@
+---
+title: "Social interactions & networks"
+toc: true
+---
+
+## Motivation (stylized facts)
+::: {.callout-note title="Stylized facts this mechanism aims to match"}
+- Co-offending and clustering: offending is often socially embedded.
+- Tactics and norms can diffuse through networks.
+:::
+
+## Mechanism
+Peers affect behavior through:
+- learning (information about opportunities, enforcement),
+- complementarity (crime is easier or safer in groups),
+- reputation and trust (partner choice),
+- diffusion (new tactics spread).
+
+## Canonical modeling primitives
+- network structure (who meets whom)
+- strategic complements vs substitutes in participation
+- partner choice and betrayal risk
+- dynamic learning and diffusion
+
+## Predictions (qualitative)
+- network clustering can amplify shocks (policy or opportunity changes)
+- targeted interventions on central nodes can have outsized effects
+- co-offending can be stable even when individual incentives are weak if complementarities are strong
+
+## Later-on analysis
+- connect to equilibrium selection: multiple stable participation levels
+- connect to policing: enforcement on one node can displace to adjacent nodes (network displacement)

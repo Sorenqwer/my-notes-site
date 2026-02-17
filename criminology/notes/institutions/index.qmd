@@ -1,0 +1,10 @@
+---
+title: "Institutions"
+toc: true
+---
+
+Institutions are **strategic actors** (objectives, constraints, incentives). This section treats policing, courts, and corrections as part of an equilibrium system.
+
+- [Policing](policing.qmd)
+- [Courts (charging, plea bargaining, sentencing)](courts.qmd)
+- [Corrections (incarceration, supervision, reentry)](corrections.qmd)

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Criminology notes – Margins of Rationality</title>
+<title>Co-offending games (coordination and betrayal) – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-ff63373b1067ca6f91cf1456aa1f00a2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-ff63373b1067ca6f91cf1456aa1f00a2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,8 +69,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -80,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Margins of Rationality</span>
     </a>
   </div>
@@ -91,23 +120,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../notes/index.html"> 
+    <a class="nav-link" href="../../../notes/index.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../foundations/index.html"> 
+    <a class="nav-link" href="../../../foundations/index.html"> 
 <span class="menu-text">Foundations</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../pdfs/index.html"> 
+    <a class="nav-link" href="../../../pdfs/index.html"> 
 <span class="menu-text">PDFs</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../criminology/index.html"> 
+    <a class="nav-link" href="../../../criminology/index.html"> 
 <span class="menu-text">criminology</span></a>
   </li>  
 </ul>
@@ -126,8 +155,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#start-here" id="toc-start-here" class="nav-link active" data-scroll-target="#start-here">Start here</a></li>
-  <li><a href="#how-this-section-is-organized" id="toc-how-this-section-is-organized" class="nav-link" data-scroll-target="#how-this-section-is-organized">How this section is organized</a></li>
+  <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
+  <li><a href="#canonical-setup-stag-hunt-style" id="toc-canonical-setup-stag-hunt-style" class="nav-link" data-scroll-target="#canonical-setup-stag-hunt-style">Canonical setup (stag-hunt style)</a></li>
+  <li><a href="#equilibria" id="toc-equilibria" class="nav-link" data-scroll-target="#equilibria">Equilibria</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
+  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -136,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Criminology notes</h1>
+<h1 class="title">Co-offending games (coordination and betrayal)</h1>
 </div>
 
 
@@ -153,30 +185,41 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="start-here" class="level2">
-<h2 class="anchored" data-anchor-id="start-here">Start here</h2>
+<section id="what-it-is" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
+<p>Co-offending can be modeled as a coordination/trust problem: - acting in a group can increase returns or reduce risk, - but introduces betrayal risk and coordination failure.</p>
+<hr>
+</section>
+<section id="canonical-setup-stag-hunt-style" class="level2">
+<h2 class="anchored" data-anchor-id="canonical-setup-stag-hunt-style">Canonical setup (stag-hunt style)</h2>
+<p>Two potential offenders choose: - Join (<span class="math inline">\(J\)</span>) a co-offense plan, or - Stay out (<span class="math inline">\(O\)</span>).</p>
+<p>If both join: successful group offense yields payoff <span class="math inline">\(G&gt;0\)</span> each, but increases exposure risk (netted into <span class="math inline">\(G\)</span>).<br>
+If one joins alone: payoff is <span class="math inline">\(-d&lt;0\)</span> (fails / gets exposed).<br>
+If stay out: payoff is <span class="math inline">\(0\)</span>.</p>
+<p>Payoff matrix for each player: - <span class="math inline">\((J,J)\)</span>: <span class="math inline">\((G,G)\)</span> - <span class="math inline">\((J,O)\)</span> or <span class="math inline">\((O,J)\)</span>: joiner gets <span class="math inline">\(-d\)</span>, other gets <span class="math inline">\(0\)</span> - <span class="math inline">\((O,O)\)</span>: <span class="math inline">\((0,0)\)</span></p>
+<hr>
+</section>
+<section id="equilibria" class="level2">
+<h2 class="anchored" data-anchor-id="equilibria">Equilibria</h2>
+<p>Best responses: - If the other joins, joining gives <span class="math inline">\(G&gt;0\)</span> which beats <span class="math inline">\(0\)</span> → join is best response. - If the other stays out, joining gives <span class="math inline">\(-d&lt;0\)</span> → staying out is best response.</p>
+<p>So there are two pure Nash equilibria: - <span class="math inline">\((J,J)\)</span> (high-crime coordination) - <span class="math inline">\((O,O)\)</span> (low-crime coordination)</p>
+<hr>
+</section>
+<section id="interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="interpretation">Interpretation</h2>
 <ul>
-<li><a href="../../criminology/notes/foundations/index.html">Foundations</a></li>
-<li><a href="../../criminology/notes/mechanisms/index.html">Mechanisms</a></li>
-<li><a href="../../criminology/notes/institutions/index.html">Institutions</a></li>
-<li><a href="../../criminology/notes/topics/index.html">Topics</a></li>
-<li><a href="../../criminology/notes/models/index.html">Models</a></li>
+<li>Co-offending can be self-reinforcing: once a network expects participation, joining is rational.</li>
+<li>Interventions that increase perceived downside <span class="math inline">\(d\)</span> (risk of betrayal, detection) can shift equilibrium selection toward <span class="math inline">\((O,O)\)</span>.</li>
+<li>Network structure matters: local coordination can sustain pockets of <span class="math inline">\((J,J)\)</span>.</li>
 </ul>
 <hr>
 </section>
-<section id="how-this-section-is-organized" class="level2">
-<h2 class="anchored" data-anchor-id="how-this-section-is-organized">How this section is organized</h2>
-<ol type="1">
-<li><strong>Foundations</strong>: definitions + units of analysis + measurement caveats<br>
-</li>
-<li><strong>Mechanisms</strong>: theory families (channels)<br>
-</li>
-<li><strong>Institutions</strong>: policing/courts/corrections as strategic systems<br>
-</li>
-<li><strong>Topics</strong>: substantive crime domains<br>
-</li>
-<li><strong>Models</strong>: canonical strategic/dynamic representations</li>
-</ol>
+<section id="later-on-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<ul>
+<li>Add asymmetric roles (leader/follower), monitoring within the group, betrayal incentives.</li>
+<li>Embed in networks to explain clustering and diffusion.</li>
+</ul>
 
 
 </section>
