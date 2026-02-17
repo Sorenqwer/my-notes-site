@@ -16,6 +16,8 @@ website:
         text: Foundations
       - href: pdfs/index.qmd
         text: PDFs
+      - href: criminology/index.qmd
+        text: criminology
 
 format:
   html:

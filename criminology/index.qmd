@@ -1,0 +1,67 @@
+---
+title: "Criminology"
+page-layout: full
+toc: false
+---
+
+Criminology studies **crime, victimization, and social control**: why harmful/illegal acts occur, how they concentrate across people and places, and how institutions (police, courts, corrections) shape incentives, behavior, and legitimacy.
+
+This section is **theory-first**. Empirical findings appear mainly as **stylized facts** and as motivation for mechanisms and models.
+
+---
+
+## How the subject is studied (academic map)
+
+Criminology is typically organized around three kinds of questions:
+
+1) **Descriptive**: What patterns exist? (who/where/when crime occurs; concentration; trends)  
+2) **Explanatory / causal**: Why do these patterns arise? (mechanisms; incentives; social interactions; opportunity)  
+3) **Evaluative / policy**: What interventions change outcomes? (deterrence, prevention, rehabilitation, legitimacy)
+
+Across these questions, research commonly moves between:
+- **Mechanisms (theory)** → clear behavioral or social channels
+- **Evidence (empirics)** → measurement, identification, evaluation
+- **Institutions (policy context)** → how rules and enforcement operate in practice
+
+---
+
+## Start here
+
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### How to study criminology
+A compact guide to the discipline’s structure: questions, levels of analysis, evidence, and typical pitfalls.
+
+[Open →](how-to-study.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Notes
+Theory and models: mechanisms → predictions. Organized like a syllabus (foundations → mechanisms → institutions → topics → models).
+
+[Open →](notes/index.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Stylized facts (light empirics)
+A short list of robust regularities that theories should aim to explain.
+
+[Open →](stylized-facts.qmd)
+:::
+:::
+
+:::
+
+---
+
+## What to expect in these notes
+- Definitions and units of analysis (individual, place, network, institutions)
+- Mechanism-based theory (deterrence, opportunity, peer effects, legitimacy, inequality)
+- Canonical models (inspection games, bargaining, reporting & trust, co-offending, networks)
+- Equilibrium reasoning and comparative statics (what shifts when parameters change)

@@ -1,0 +1,115 @@
+---
+title: "Stylized facts"
+toc: true
+---
+
+## Scope
+This page lists **stylized facts**: recurring empirical regularities widely discussed in criminology and related social-science literatures.  
+They are not meant as a complete empirical review, but as **constraints for theory**: mechanisms and models should be able to reproduce (at least qualitatively) these patterns.
+
+A recurring caution: many “crime facts” depend on **measurement** (reporting, enforcement, recording practices). When relevant, the fact is stated as a pattern about *recorded crime*, *victimization*, or *behavior*.
+
+---
+
+## 1) Concentration in people and places
+- **A small share of people account for a large share of offending** (repeat offending / persistence).  
+  Theory implication: heterogeneity and dynamics (states, types, or learning) matter.
+- **Crime concentrates spatially** (hotspots: small areas produce disproportionate incidents).  
+  Theory implication: opportunity and guardianship are place-specific; equilibrium responses can relocate activity.
+
+(Links that will eventually connect)
+- Opportunity / routine activity → `notes/mechanisms/opportunity-routine.qmd`
+- Policing allocation / hotspots → `notes/institutions/policing.qmd`
+
+---
+
+## 2) Recorded crime is not the same as incidence
+- **Not all victimization is reported**, and reporting varies by offense type, victim characteristics, and trust in institutions.  
+  Theory implication: include a reporting stage; observed data may reflect participation constraints.
+- **Enforcement is selective**: arrest/case data reflect policing choices and capacity, not just offending.  
+  Theory implication: strategic interaction can change observables even when underlying behavior changes less.
+
+(Links)
+- Legitimacy & compliance → `notes/mechanisms/legitimacy-compliance.qmd`
+- Reporting & trust model → `notes/models/reporting-trust.qmd`
+
+---
+
+## 3) Opportunity and routine predict timing
+- Crime risk often shifts with **routine activity patterns** (crowding, guardianship, mobility, visibility).  
+  Theory implication: “technology of opportunity” matters; policies can change opportunity without changing preferences.
+
+(Links)
+- Opportunity / routine activity → `notes/mechanisms/opportunity-routine.qmd`
+
+---
+
+## 4) Sanctions: detection vs severity (and strategic adaptation)
+- The deterrent effect of punishment is often discussed as depending on both **probability of detection** and **severity of sanction**; in practice, offenders may **adapt** (switch targets, tactics, locations, or timing).  
+  Theory implication: model deterrence as a game (inspection/monitoring) and allow substitution across actions.
+
+(Links)
+- Incentives & deterrence → `notes/mechanisms/incentives-deterrence.qmd`
+- Inspection games → `notes/models/inspection-games.qmd`
+
+---
+
+## 5) Social interactions and networks matter
+- Offending can be **socially embedded**: co-offending, peer effects, clustering within networks, diffusion of tactics.  
+  Theory implication: strategic complements, learning, and partner choice can generate clustering and persistence.
+
+(Links)
+- Social interactions → `notes/mechanisms/social-interactions.qmd`
+- Co-offending games → `notes/models/co-offending-games.qmd`
+- Network crime → `notes/models/network-crime.qmd`
+
+---
+
+## 6) Inequality, deprivation, and trust appear repeatedly
+- Many literatures link violence and disorder to **deprivation, inequality, and low social trust/collective efficacy** (interpretations differ across theories).  
+  Theory implication: these factors can enter as outside options, returns to legitimate work, enforcement cooperation, or social capital.
+
+(Links)
+- Inequality & trust → `notes/mechanisms/inequality-trust.qmd`
+
+---
+
+## 7) Life-course dynamics: onset and desistance
+- Offending is often described as following a **life-course pattern** (onset, persistence, desistance), with strong roles for transitions (schooling, work, relationships) and system contact (stigma).  
+  Theory implication: dynamic incentives and state dependence; consider reputational/stigma channels.
+
+(Links)
+- Life-course dynamics → `notes/mechanisms/life-course.qmd`
+
+---
+
+## 8) Institutions are strategic actors, not passive rules
+- Policing, courts, and corrections have objectives, constraints, and incentives; policy changes can produce **equilibrium responses** (by offenders, victims, and agencies).  
+  Theory implication: model institutions as players with limited capacity and endogenous targeting.
+
+(Links)
+- Policing → `notes/institutions/policing.qmd`
+- Courts / bargaining → `notes/institutions/courts.qmd`
+- Corrections → `notes/institutions/corrections.qmd`
+- Allocation dynamics → `notes/models/allocation-dynamics.qmd`
+
+---
+
+## How to use these facts in theory notes
+When writing a mechanism/model page, include a small box:
+
+::: {.callout-note title="Stylized facts this model aims to match"}
+- (Pick 2–4 from above that your model speaks to.)
+:::
+
+Then state: **which outcomes are “behavior” vs “recorded data”**, and where measurement enters.
+
+---
+
+## Minimal “theory constraints” (what your models should be able to explain)
+A theory-first criminology note set is especially strong if it can generate:
+- concentration (people/places),
+- substitution/adaptation under enforcement,
+- the role of reporting and legitimacy,
+- network clustering/co-offending,
+- dynamics (persistence and desistance).

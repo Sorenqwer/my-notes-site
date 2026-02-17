@@ -1,0 +1,112 @@
+---
+title: "How criminology is studied"
+toc: true
+---
+
+## Scope
+Criminology is not only “crime statistics.” As an academic field, it combines:
+- **Concepts and measurement** (what is counted as crime; why measurement is difficult)
+- **Theories of mechanism** (why behavior occurs; how social structure matters)
+- **Institutional analysis** (police/courts/corrections; legitimacy and compliance)
+- **Evaluation and identification** (what changes outcomes; how we infer causality)
+
+This page provides a discipline map so readers can locate a topic within the broader research program.
+
+---
+
+## Core question types
+### 1) Descriptive (pattern-finding)
+Typical objects:
+- concentration by **person** (repeat offending/victimization),
+- concentration by **place** (hotspots),
+- temporal patterns (seasonality, routine changes),
+- network clustering (co-offending, gangs).
+
+The descriptive layer also flags the **measurement problem**: recorded crime depends on reporting and enforcement.
+
+### 2) Explanatory / causal (mechanism)
+Mechanism-based questions:
+- How do incentives and detection risk affect offending?
+- When does opportunity/guardianship reduce crime without displacement?
+- How do peer effects and networks amplify or dampen crime?
+- How does legitimacy affect reporting and compliance?
+
+### 3) Evaluative / policy (interventions)
+Interventions include:
+- policing strategies (hotspots, visibility, patrol allocation),
+- sanctions and sentencing policies,
+- prevention programs,
+- rehabilitation and reentry policies,
+- institutional reforms targeting trust and cooperation.
+
+---
+
+## Levels of analysis (what unit the theory “lives on”)
+Criminological explanations often differ by unit:
+
+- **Individual**: preferences, beliefs, constraints, self-control, human capital  
+- **Interaction / network**: strategic complements, trust, co-offending, diffusion  
+- **Place**: opportunities, guardianship, environmental design, spatial displacement  
+- **Institution**: rules, legitimacy, capacity, incentives within organizations
+
+A good academic write-up states its unit explicitly and clarifies what is taken as primitive.
+
+---
+
+## Evidence types (what “counts” in the literature)
+Even if you focus on theory, it helps to know what kinds of evidence usually support claims:
+
+- **Administrative data**: police incidents, arrests, court records, corrections  
+- **Surveys / self-reports**: victimization surveys, self-reported offending  
+- **Field experiments / RCTs**: randomized patrol or program assignment  
+- **Quasi-experiments**: policy changes, discontinuities, natural experiments  
+- **Qualitative**: interviews, ethnography, case studies (mechanism discovery)
+
+---
+
+## Common threats to inference (why crime data is hard)
+These issues appear repeatedly in criminology papers:
+
+- **Underreporting** (many crimes never enter official data)  
+- **Enforcement selection** (arrests reflect policing choices)  
+- **Simultaneity** (police respond to crime; crime responds to police)  
+- **Displacement** (crime moves across space/time/type)  
+- **Equilibrium adaptation** (offenders change tactics when policy changes)
+
+For theory, these threats matter because they influence what is “observable” and how one interprets patterns.
+
+---
+
+## Theory families (mechanism organizers)
+A practical academic taxonomy:
+
+1) **Incentives / deterrence**  
+2) **Opportunity / routine activity**  
+3) **Social interactions and networks**  
+4) **Legitimacy, trust, and compliance**  
+5) **Inequality, deprivation, and social capital**  
+6) **Life-course dynamics and stigma**  
+7) **Behavioral microfoundations** (present bias, impulsivity; optional)
+
+These map cleanly into models: inspection games, bargaining, dynamic choice, network games.
+
+---
+
+## How to read a criminology paper (fast checklist)
+When skimming:
+1) What is the unit of analysis? (person/place/network/institution)  
+2) What outcome is used? (incidence vs recorded vs victimization)  
+3) What mechanism is proposed?  
+4) What is the identification strategy (if empirical)?  
+5) What equilibrium or adaptation effects could offset the policy?  
+6) What predictions are robust across plausible measurement choices?
+
+---
+
+## Where these notes fit
+This site leans toward:
+- explicit **mechanisms**,
+- model-based clarity (players, information, incentives),
+- and “what would the model predict if parameter X increases?”
+
+Empirical content is used selectively as stylized facts and as constraints on theory.

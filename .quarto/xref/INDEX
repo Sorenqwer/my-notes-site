@@ -127,5 +127,116 @@
   },
   "notes/equilibriums/subgame-perfect.qmd": {
     "subgame-perfect.html": "cd21d76c"
+  },
+  "criminology/institutions/policing.qmd": {
+    "policing.html": "2b99e09e"
+  },
+  "criminology/institutions/corrections.qmd": {
+    "corrections.html": "624917da"
+  },
+  "criminology/institutions/index.qmd": {
+    "index.html": "aefcd8a6"
+  },
+  "criminology/institutions/courts.qmd": {
+    "courts.html": "072801f0"
+  },
+  "criminology/mechanisms/self-control.qmd": {
+    "self-control.html": "04648890"
+  },
+  "criminology/mechanisms/opportunity-routine.qmd": {
+    "opportunity-routine.html": "4aeb128b"
+  },
+  "criminology/mechanisms/incentives-deterrence.qmd": {
+    "incentives-deterrence.html": "da67aea5"
+  },
+  "criminology/mechanisms/index.qmd": {
+    "index.html": "85ad7396"
+  },
+  "criminology/mechanisms/social-interactions.qmd": {
+    "social-interactions.html": "782e5e54"
+  },
+  "criminology/mechanisms/inequality-trust.qmd": {
+    "inequality-trust.html": "38742a29"
+  },
+  "criminology/mechanisms/legitimacy-compliance.qmd": {
+    "legitimacy-compliance.html": "9d3df09f"
+  },
+  "criminology/mechanisms/life-course.qmd": {
+    "life-course.html": "b330de5f"
+  },
+  "criminology/stylized-facts.qmd": {
+    "stylized-facts.html": "504421a8"
+  },
+  "criminology/models/inspection-games.qmd": {
+    "inspection-games.html": "0da5559c"
+  },
+  "criminology/models/network-crime.qmd": {
+    "network-crime.html": "a59057fe"
+  },
+  "criminology/models/allocation-dynamics.qmd": {
+    "allocation-dynamics.html": "e4f59462"
+  },
+  "criminology/models/plea-bargaining.qmd": {
+    "plea-bargaining.html": "d614913c"
+  },
+  "criminology/models/reporting-trust.qmd": {
+    "reporting-trust.html": "b397ae8c"
+  },
+  "criminology/models/index.qmd": {
+    "index.html": "d289bcba"
+  },
+  "criminology/models/co-offending-games.qmd": {
+    "co-offending-games.html": "1b248305"
+  },
+  "criminology/index.qmd": {
+    "index.html": "ed396497"
+  },
+  "criminology/foundations/units-of-analysis.qmd": {
+    "units-of-analysis.html": "99f6c704"
+  },
+  "criminology/foundations/index.qmd": {
+    "index.html": "f20cd6a8"
+  },
+  "criminology/foundations/key-definitions.qmd": {
+    "key-definitions.html": "827cc69b"
+  },
+  "criminology/notes/index.qmd": {
+    "index.html": "6251bd47"
+  },
+  "criminology/how-to-study.qmd": {
+    "how-to-study.html": "0802a01a"
+  },
+  "criminology/toolkit/index.qmd": {
+    "index.html": "9aa7b2f4"
+  },
+  "criminology/toolkit/glossary.qmd": {
+    "glossary.html": "781a1df9"
+  },
+  "criminology/toolkit/modeling-checklist.qmd": {
+    "modeling-checklist.html": "9c63c939"
+  },
+  "criminology/toolkit/methods-map.qmd": {
+    "methods-map.html": "a0287920"
+  },
+  "criminology/topics/cybercrime.qmd": {
+    "cybercrime.html": "5d0e88a2"
+  },
+  "criminology/topics/white-collar.qmd": {
+    "white-collar.html": "a3a1212a"
+  },
+  "criminology/topics/violent-crime.qmd": {
+    "violent-crime.html": "ce66323a"
+  },
+  "criminology/topics/index.qmd": {
+    "index.html": "ae57ed7a"
+  },
+  "criminology/topics/property-crime.qmd": {
+    "property-crime.html": "4c30ba1d"
+  },
+  "criminology/topics/drug-markets.qmd": {
+    "drug-markets.html": "6dded971"
+  },
+  "criminology/topics/organized-crime.qmd": {
+    "organized-crime.html": "c40bf359"
   }
 }

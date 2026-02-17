@@ -1,0 +1,92 @@
+---
+title: "Criminology notes"
+page-layout: full
+toc: true
+---
+
+## How this section is organized
+These notes are structured like an academic syllabus:
+
+1) **Foundations**: definitions, units of analysis, and what is “measured”  
+2) **Mechanisms**: theory families (channels) that generate patterns  
+3) **Institutions**: policing, courts, corrections (rules and incentives)  
+4) **Topics**: substantive crime domains (violent, property, cyber, etc.)  
+5) **Models**: canonical strategic/dynamic representations (your “toolkit”)
+
+---
+
+## Foundations
+- **Key definitions** (crime vs harm; offender/victim/event; reporting vs incidence)
+- **Units of analysis** (person/place/network/institution) and why they change conclusions
+- **Measurement caveats** (underreporting, enforcement selection, equilibrium adaptation)
+
+(Planned pages)
+- `foundations/key-definitions.qmd`
+- `foundations/units-of-analysis.qmd`
+
+---
+
+## Mechanisms (theory families)
+(Planned pages)
+- `mechanisms/incentives-deterrence.qmd`
+- `mechanisms/opportunity-routine.qmd`
+- `mechanisms/social-interactions.qmd`
+- `mechanisms/legitimacy-compliance.qmd`
+- `mechanisms/inequality-trust.qmd`
+- `mechanisms/life-course.qmd`
+- `mechanisms/self-control.qmd` (optional)
+
+Each mechanism page will include:
+- a short motivation block (stylized facts),
+- a clean mechanism statement,
+- a canonical model sketch,
+- equilibrium/predictions + comparative statics,
+- links to institutions/topics where the mechanism matters.
+
+---
+
+## Institutions (criminal justice system)
+(Planned pages)
+- `institutions/policing.qmd`
+- `institutions/courts.qmd`
+- `institutions/corrections.qmd`
+
+Each institution page will focus on:
+- incentives, constraints, and strategic response,
+- how institutional design affects behavior and measurement,
+- and how policies shift equilibria (including unintended effects).
+
+---
+
+## Topics (substantive domains)
+(Planned pages)
+- `topics/violent-crime.qmd`
+- `topics/property-crime.qmd`
+- `topics/organized-crime.qmd`
+- `topics/white-collar.qmd`
+- `topics/cybercrime.qmd`
+- `topics/drug-markets.qmd`
+
+Topic pages will act as “application hubs” linking back to mechanisms and models.
+
+---
+
+## Models (canonical representations)
+(Planned pages)
+- `models/inspection-games.qmd` (deterrence and monitoring)
+- `models/plea-bargaining.qmd` (bargaining + asymmetric info)
+- `models/reporting-trust.qmd` (victim reporting + legitimacy)
+- `models/co-offending-games.qmd` (coordination/trust/betrayal)
+- `models/network-crime.qmd` (diffusion, strategic complements)
+- `models/allocation-dynamics.qmd` (dynamic resource allocation)
+
+Model pages will be written as:
+**story → formalization → equilibrium → comparative statics → interpretation**.
+
+---
+
+## Next writing priorities (suggested)
+1) Incentives & deterrence (inspection game)
+2) Policing (hotspots + strategic adaptation)
+3) Reporting & trust (legitimacy mechanism)
+4) Co-offending (coordination + partner choice)
