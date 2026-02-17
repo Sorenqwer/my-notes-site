@@ -73,7 +73,7 @@ Interior mixing requires $0<k<h$.
 - Self-control (perceived risk, present bias) → `.criminology/notes/mechanisms/self-control.qmd`
 
 ### Institutions
-- Policing (monitoring allocation) → `../institutions/policing.qmd`
+- Policing [monitoring allocation](../institutions/policing.qmd)
 - Corrections (supervision as monitoring) → `../institutions/corrections.qmd`
 
 ### Foundations
