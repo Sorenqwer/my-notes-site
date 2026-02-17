@@ -157,9 +157,15 @@ window.Quarto = {
   <ul>
   <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
   <li><a href="#canonical-setup-two-types" id="toc-canonical-setup-two-types" class="nav-link" data-scroll-target="#canonical-setup-two-types">Canonical setup (two types)</a></li>
-  <li><a href="#solved-equilibrium-pattern-separating-via-one-offer-screening" id="toc-solved-equilibrium-pattern-separating-via-one-offer-screening" class="nav-link" data-scroll-target="#solved-equilibrium-pattern-separating-via-one-offer-screening">Solved equilibrium pattern: separating via one offer (screening)</a></li>
+  <li><a href="#screening-pattern-one-offer" id="toc-screening-pattern-one-offer" class="nav-link" data-scroll-target="#screening-pattern-one-offer">Screening pattern (one offer)</a></li>
   <li><a href="#predictions-qualitative" id="toc-predictions-qualitative" class="nav-link" data-scroll-target="#predictions-qualitative">Predictions (qualitative)</a></li>
-  <li><a href="#interpretation-and-links" id="toc-interpretation-and-links" class="nav-link" data-scroll-target="#interpretation-and-links">Interpretation and links</a></li>
+  <li><a href="#connections" id="toc-connections" class="nav-link" data-scroll-target="#connections">Connections</a>
+  <ul class="collapse">
+  <li><a href="#mechanisms" id="toc-mechanisms" class="nav-link" data-scroll-target="#mechanisms">Mechanisms</a></li>
+  <li><a href="#institutions" id="toc-institutions" class="nav-link" data-scroll-target="#institutions">Institutions</a></li>
+  <li><a href="#foundations" id="toc-foundations" class="nav-link" data-scroll-target="#foundations">Foundations</a></li>
+  </ul></li>
+  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -187,53 +193,68 @@ window.Quarto = {
 
 <section id="what-it-is" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
-<p>Plea bargaining is modeled as bargaining under uncertainty: - prosecutor offers a plea sentence, - defendant accepts or goes to trial, - trial outcomes are uncertain and costly.</p>
-<p>A core academic theme: <strong>selection into trial</strong> and <strong>asymmetric information</strong>.</p>
+<p>Plea bargaining is bargaining under uncertainty: - prosecutor offers a plea sentence, - defendant accepts or goes to trial, - trial outcomes are uncertain and costly.</p>
+<p>A core theme is <strong>selection into trial</strong>.</p>
 <hr>
 </section>
 <section id="canonical-setup-two-types" class="level2">
 <h2 class="anchored" data-anchor-id="canonical-setup-two-types">Canonical setup (two types)</h2>
-<p>Defendant type <span class="math inline">\(\theta\in\{L,H\}\)</span> with prior <span class="math inline">\(\Pr(H)=\pi\)</span>. Type affects probability of conviction at trial: - <span class="math inline">\(\Pr(\text{conviction}|\theta=L)=p_L\)</span> - <span class="math inline">\(\Pr(\text{conviction}|\theta=H)=p_H\)</span> with <span class="math inline">\(0&lt;p_L&lt;p_H&lt;1\)</span>.</p>
+<p>Defendant type <span class="math inline">\(\theta\in\{L,H\}\)</span> with prior <span class="math inline">\(\Pr(H)=\pi\)</span>. Type affects conviction probability: <span class="math inline">\(0&lt;p_L&lt;p_H&lt;1\)</span>.</p>
 <p>Trial sentence if convicted: <span class="math inline">\(T&gt;0\)</span>.<br>
-Prosecutor offers plea sentence <span class="math inline">\(x\)</span> (certain if accepted).<br>
-Trial cost to prosecutor: <span class="math inline">\(c_P&gt;0\)</span>. Trial cost to defendant: <span class="math inline">\(c_D&gt;0\)</span>.</p>
-<p>Defendant expected cost of trial (type <span class="math inline">\(\theta\)</span>): <span class="math display">\[
-\text{TrialCost}(\theta)=p_\theta T + c_D.
-\]</span> Accept plea iff: <span class="math display">\[
+Plea offer: <span class="math inline">\(x\)</span>.<br>
+Trial costs: prosecutor <span class="math inline">\(c_P&gt;0\)</span>, defendant <span class="math inline">\(c_D&gt;0\)</span>.</p>
+<p>Defendant accepts iff: <span class="math display">\[
 x \le p_\theta T + c_D.
 \]</span></p>
-<p>Prosecutor payoff: - if plea accepted: <span class="math inline">\(x\)</span> - if trial: expected sentence <span class="math inline">\(p_\theta T\)</span> minus cost <span class="math inline">\(c_P\)</span>.</p>
 <hr>
 </section>
-<section id="solved-equilibrium-pattern-separating-via-one-offer-screening" class="level2">
-<h2 class="anchored" data-anchor-id="solved-equilibrium-pattern-separating-via-one-offer-screening">Solved equilibrium pattern: separating via one offer (screening)</h2>
-<p>Suppose prosecutor wants: - type <span class="math inline">\(H\)</span> to accept the plea, - type <span class="math inline">\(L\)</span> to reject and go to trial.</p>
-<p>For this to happen, choose <span class="math inline">\(x\)</span> such that: - <span class="math inline">\(H\)</span> accepts: <span class="math inline">\(x \le p_H T + c_D\)</span> - <span class="math inline">\(L\)</span> rejects: <span class="math inline">\(x &gt; p_L T + c_D\)</span></p>
-<p>So any <span class="math inline">\(x\)</span> in: <span class="math display">\[
-(p_L T + c_D,\; p_H T + c_D]
-\]</span> induces the intended separation.</p>
-<p>Prosecutor then compares expected payoff under this policy: - From type <span class="math inline">\(H\)</span>: gets <span class="math inline">\(x\)</span> - From type <span class="math inline">\(L\)</span> (trial): gets <span class="math inline">\(p_L T - c_P\)</span></p>
-<p>Expected payoff: <span class="math display">\[
+<section id="screening-pattern-one-offer" class="level2">
+<h2 class="anchored" data-anchor-id="screening-pattern-one-offer">Screening pattern (one offer)</h2>
+<p>To induce <span class="math inline">\(H\)</span> accept and <span class="math inline">\(L\)</span> reject: <span class="math display">\[
+x \in (p_L T + c_D,\; p_H T + c_D].
+\]</span></p>
+<p>Expected payoff to prosecutor under this policy: - Type <span class="math inline">\(H\)</span>: <span class="math inline">\(x\)</span> - Type <span class="math inline">\(L\)</span> (trial): <span class="math inline">\(p_L T - c_P\)</span></p>
+<p>So: <span class="math display">\[
 \pi x + (1-\pi)(p_L T - c_P).
 \]</span></p>
-<p>A common selection result: when the gap <span class="math inline">\(p_H-p_L\)</span> is large enough, a single plea offer can screen types.</p>
 <hr>
 </section>
 <section id="predictions-qualitative" class="level2">
 <h2 class="anchored" data-anchor-id="predictions-qualitative">Predictions (qualitative)</h2>
 <ul>
-<li>Higher defendant trial cost <span class="math inline">\(c_D\)</span> increases acceptance of pleas (both types).</li>
-<li>Higher prosecutor trial cost <span class="math inline">\(c_P\)</span> increases reliance on plea offers (lower <span class="math inline">\(x\)</span> may still be attractive).</li>
-<li>Stronger evidence (higher <span class="math inline">\(p_\theta\)</span>) increases willingness to accept pleas (especially high type).</li>
+<li>Higher <span class="math inline">\(c_D\)</span> increases plea acceptance.</li>
+<li>Higher <span class="math inline">\(c_P\)</span> increases reliance on pleas.</li>
+<li>Stronger evidence (higher <span class="math inline">\(p_\theta\)</span>) increases acceptance.</li>
 </ul>
 <hr>
 </section>
-<section id="interpretation-and-links" class="level2">
-<h2 class="anchored" data-anchor-id="interpretation-and-links">Interpretation and links</h2>
+<section id="connections" class="level2">
+<h2 class="anchored" data-anchor-id="connections">Connections</h2>
+<section id="mechanisms" class="level3">
+<h3 class="anchored" data-anchor-id="mechanisms">Mechanisms</h3>
 <ul>
-<li>Observed trial cases are selected: they are not “random disputes.”</li>
-<li>Plea policy can change recorded outcomes (conviction rates, sentence distributions) without changing underlying behavior.</li>
+<li>Incentives &amp; deterrence (certainty vs severity) → <code>../mechanisms/incentives-deterrence.qmd</code></li>
+<li>Labeling &amp; stigma (collateral consequences) → <code>../mechanisms/labeling-stigma.qmd</code></li>
+<li>Life-course dynamics (dynamic effects) → <code>../mechanisms/life-course.qmd</code></li>
 </ul>
+</section>
+<section id="institutions" class="level3">
+<h3 class="anchored" data-anchor-id="institutions">Institutions</h3>
+<ul>
+<li>Courts → <code>../institutions/courts.qmd</code></li>
+</ul>
+</section>
+<section id="foundations" class="level3">
+<h3 class="anchored" data-anchor-id="foundations">Foundations</h3>
+<ul>
+<li>Recorded outcomes vs behavior → <code>../foundations/key-definitions.qmd</code></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="later-on-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<p>Extensions: risk aversion, bargaining power, repeated play (prosecutors/defense), endogenous charging.</p>
 
 
 </section>

@@ -4,54 +4,58 @@ toc: true
 ---
 
 ## What it is
-Allocation models study how an enforcer distributes scarce resources across:
-- places (hotspots),
-- times,
-- tasks (patrol vs investigation),
-under uncertainty and strategic response.
+Allocation models study how an enforcer distributes scarce resources across space and time, under uncertainty and strategic response.
 
 ---
 
-## Canonical two-location allocation (static baseline)
-Two locations $A$ and $B$ with latent crime intensities.
-Enforcer allocates patrol effort $e_A,e_B\ge 0$ with budget:
+## Canonical two-location baseline
+Allocate effort $e_A,e_B\ge 0$ with:
 $$
 e_A + e_B \le E.
 $$
-Crime incidence in location $\ell$ is decreasing in effort:
-$$
-\lambda_\ell(e_\ell) \downarrow
-$$
+Crime intensity in location $\ell$ decreases in effort: $\lambda_\ell(e_\ell)\downarrow$,
 but offenders may substitute across locations.
-
-A simple equilibrium angle:
-- Offenders choose location with higher expected return (lower detection / higher opportunity).
-- Enforcer anticipates this and reallocates.
 
 ---
 
-## Dynamic extension (why “dynamics” matters)
+## Why dynamics matters
 In practice:
 - the enforcer learns where problems are (updating beliefs),
 - offenders adapt to allocation patterns,
 - recorded crime reflects both incidence and reporting.
 
 Dynamic primitives:
-- belief state about each location’s intensity,
-- learning/updating rule,
-- adaptation rule for offenders,
-- objective function (harm reduction vs recorded metrics).
+- belief state about each location,
+- learning/updating,
+- offender adaptation,
+- objective function (harm vs recorded metrics).
 
 ---
 
 ## Predictions (qualitative)
-- Optimal allocation often prioritizes “high marginal return” hotspots, but can create displacement if substitution is easy.
-- Learning creates exploration–exploitation tradeoffs (patrol to learn vs patrol to deter).
-- If metrics reward recorded outcomes, incentives can distort allocation.
+- allocate to high marginal return hotspots, but displacement can occur when substitution is easy
+- exploration–exploitation arises when learning is valuable
+- metrics can distort allocation if they reward recorded outcomes
+
+---
+
+## Connections
+### Mechanisms
+- Opportunity & routine activity (place-based returns) → `../mechanisms/opportunity-routine.qmd`
+- Incentives & deterrence (effort changes detection) → `../mechanisms/incentives-deterrence.qmd`
+- Legitimacy & compliance (signals via reporting) → `../mechanisms/legitimacy-compliance.qmd`
+
+### Institutions
+- Policing (allocation and constraints) → `../institutions/policing.qmd`
+
+### Models
+- Reporting & trust (endogenous signals) → `reporting-trust.qmd`
+- Network crime (spatial/network displacement) → `network-crime.qmd`
+
+### Foundations
+- Units of analysis (place/time) → `../foundations/units-of-analysis.qmd`
 
 ---
 
 ## Later-on analysis
-- Connect to network models (hotspots linked by mobility).
-- Connect to reporting/trust (calls for service are endogenous signals).
-- Connect to institutions: internal incentives and constraints.
+Embed in networks; endogenize reporting; treat offenders as strategic agents with multiple crime types and substitution.

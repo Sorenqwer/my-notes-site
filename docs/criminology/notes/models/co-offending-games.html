@@ -156,9 +156,14 @@ window.Quarto = {
    
   <ul>
   <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
-  <li><a href="#canonical-setup-stag-hunt-style" id="toc-canonical-setup-stag-hunt-style" class="nav-link" data-scroll-target="#canonical-setup-stag-hunt-style">Canonical setup (stag-hunt style)</a></li>
+  <li><a href="#canonical-stag-hunt-setup" id="toc-canonical-stag-hunt-setup" class="nav-link" data-scroll-target="#canonical-stag-hunt-setup">Canonical stag-hunt setup</a></li>
   <li><a href="#equilibria" id="toc-equilibria" class="nav-link" data-scroll-target="#equilibria">Equilibria</a></li>
-  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
+  <li><a href="#connections" id="toc-connections" class="nav-link" data-scroll-target="#connections">Connections</a>
+  <ul class="collapse">
+  <li><a href="#mechanisms" id="toc-mechanisms" class="nav-link" data-scroll-target="#mechanisms">Mechanisms</a></li>
+  <li><a href="#institutions" id="toc-institutions" class="nav-link" data-scroll-target="#institutions">Institutions</a></li>
+  <li><a href="#models" id="toc-models" class="nav-link" data-scroll-target="#models">Models</a></li>
+  </ul></li>
   <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
   </ul>
 </nav>
@@ -187,39 +192,53 @@ window.Quarto = {
 
 <section id="what-it-is" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
-<p>Co-offending can be modeled as a coordination/trust problem: - acting in a group can increase returns or reduce risk, - but introduces betrayal risk and coordination failure.</p>
+<p>Co-offending can be modeled as a coordination/trust problem: - group action increases returns or reduces risk, - but creates betrayal and coordination failure risks.</p>
 <hr>
 </section>
-<section id="canonical-setup-stag-hunt-style" class="level2">
-<h2 class="anchored" data-anchor-id="canonical-setup-stag-hunt-style">Canonical setup (stag-hunt style)</h2>
-<p>Two potential offenders choose: - Join (<span class="math inline">\(J\)</span>) a co-offense plan, or - Stay out (<span class="math inline">\(O\)</span>).</p>
-<p>If both join: successful group offense yields payoff <span class="math inline">\(G&gt;0\)</span> each, but increases exposure risk (netted into <span class="math inline">\(G\)</span>).<br>
-If one joins alone: payoff is <span class="math inline">\(-d&lt;0\)</span> (fails / gets exposed).<br>
-If stay out: payoff is <span class="math inline">\(0\)</span>.</p>
-<p>Payoff matrix for each player: - <span class="math inline">\((J,J)\)</span>: <span class="math inline">\((G,G)\)</span> - <span class="math inline">\((J,O)\)</span> or <span class="math inline">\((O,J)\)</span>: joiner gets <span class="math inline">\(-d\)</span>, other gets <span class="math inline">\(0\)</span> - <span class="math inline">\((O,O)\)</span>: <span class="math inline">\((0,0)\)</span></p>
+<section id="canonical-stag-hunt-setup" class="level2">
+<h2 class="anchored" data-anchor-id="canonical-stag-hunt-setup">Canonical stag-hunt setup</h2>
+<p>Two agents choose Join (<span class="math inline">\(J\)</span>) or Stay out (<span class="math inline">\(O\)</span>).</p>
+<ul>
+<li>If both join: <span class="math inline">\((J,J)\)</span> yields <span class="math inline">\(G&gt;0\)</span> each.</li>
+<li>If one joins alone: joiner gets <span class="math inline">\(-d&lt;0\)</span>, other gets <span class="math inline">\(0\)</span>.</li>
+<li>If both stay out: <span class="math inline">\((0,0)\)</span>.</li>
+</ul>
 <hr>
 </section>
 <section id="equilibria" class="level2">
 <h2 class="anchored" data-anchor-id="equilibria">Equilibria</h2>
-<p>Best responses: - If the other joins, joining gives <span class="math inline">\(G&gt;0\)</span> which beats <span class="math inline">\(0\)</span> → join is best response. - If the other stays out, joining gives <span class="math inline">\(-d&lt;0\)</span> → staying out is best response.</p>
-<p>So there are two pure Nash equilibria: - <span class="math inline">\((J,J)\)</span> (high-crime coordination) - <span class="math inline">\((O,O)\)</span> (low-crime coordination)</p>
+<p>Two pure Nash equilibria: - <span class="math inline">\((J,J)\)</span> (high-participation) - <span class="math inline">\((O,O)\)</span> (low-participation)</p>
+<p>Interpretation: co-offending can be self-reinforcing; small shifts in risk/coordination can change equilibrium selection.</p>
 <hr>
 </section>
-<section id="interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="interpretation">Interpretation</h2>
+<section id="connections" class="level2">
+<h2 class="anchored" data-anchor-id="connections">Connections</h2>
+<section id="mechanisms" class="level3">
+<h3 class="anchored" data-anchor-id="mechanisms">Mechanisms</h3>
 <ul>
-<li>Co-offending can be self-reinforcing: once a network expects participation, joining is rational.</li>
-<li>Interventions that increase perceived downside <span class="math inline">\(d\)</span> (risk of betrayal, detection) can shift equilibrium selection toward <span class="math inline">\((O,O)\)</span>.</li>
-<li>Network structure matters: local coordination can sustain pockets of <span class="math inline">\((J,J)\)</span>.</li>
+<li>Social interactions &amp; networks → <code>../mechanisms/social-interactions.qmd</code></li>
+<li>Self-control (impulsivity, myopia) → <code>../mechanisms/self-control.qmd</code></li>
+<li>Inequality &amp; outside options → <code>../mechanisms/inequality-trust.qmd</code></li>
+</ul>
+</section>
+<section id="institutions" class="level3">
+<h3 class="anchored" data-anchor-id="institutions">Institutions</h3>
+<ul>
+<li>Policing (disruption, informants) → <code>../institutions/policing.qmd</code></li>
+<li>Corrections (disrupting networks, reentry) → <code>../institutions/corrections.qmd</code></li>
+</ul>
+</section>
+<section id="models" class="level3">
+<h3 class="anchored" data-anchor-id="models">Models</h3>
+<ul>
+<li>Network crime (diffusion, complements) → <code>network-crime.qmd</code></li>
 </ul>
 <hr>
+</section>
 </section>
 <section id="later-on-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
-<ul>
-<li>Add asymmetric roles (leader/follower), monitoring within the group, betrayal incentives.</li>
-<li>Embed in networks to explain clustering and diffusion.</li>
-</ul>
+<p>Add asymmetric roles, betrayal incentives, repeated interaction, and embedded networks.</p>
 
 
 </section>

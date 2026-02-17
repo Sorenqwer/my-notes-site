@@ -161,10 +161,15 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#step-1-offender-indifference" id="toc-step-1-offender-indifference" class="nav-link" data-scroll-target="#step-1-offender-indifference">Step 1: offender indifference</a></li>
   <li><a href="#step-2-enforcer-indifference" id="toc-step-2-enforcer-indifference" class="nav-link" data-scroll-target="#step-2-enforcer-indifference">Step 2: enforcer indifference</a></li>
-  <li><a href="#conditions" id="toc-conditions" class="nav-link" data-scroll-target="#conditions">Conditions</a></li>
   </ul></li>
-  <li><a href="#comparative-statics-predictions" id="toc-comparative-statics-predictions" class="nav-link" data-scroll-target="#comparative-statics-predictions">Comparative statics (predictions)</a></li>
-  <li><a href="#interpretation-and-links" id="toc-interpretation-and-links" class="nav-link" data-scroll-target="#interpretation-and-links">Interpretation and links</a></li>
+  <li><a href="#predictions-comparative-statics" id="toc-predictions-comparative-statics" class="nav-link" data-scroll-target="#predictions-comparative-statics">Predictions (comparative statics)</a></li>
+  <li><a href="#connections" id="toc-connections" class="nav-link" data-scroll-target="#connections">Connections</a>
+  <ul class="collapse">
+  <li><a href="#mechanisms" id="toc-mechanisms" class="nav-link" data-scroll-target="#mechanisms">Mechanisms</a></li>
+  <li><a href="#institutions" id="toc-institutions" class="nav-link" data-scroll-target="#institutions">Institutions</a></li>
+  <li><a href="#foundations" id="toc-foundations" class="nav-link" data-scroll-target="#foundations">Foundations</a></li>
+  </ul></li>
+  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -193,69 +198,78 @@ window.Quarto = {
 <section id="what-it-is" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
 <p>Inspection games model strategic interaction between: - an agent who may violate (offend), and - an enforcer who can monitor/inspect at a cost.</p>
-<p>They are used to formalize deterrence when enforcement resources are scarce.</p>
+<p>They formalize deterrence under scarce enforcement resources.</p>
 <hr>
 </section>
 <section id="canonical-setup" class="level2">
 <h2 class="anchored" data-anchor-id="canonical-setup">Canonical setup</h2>
 <p>Offender chooses <span class="math inline">\(C\)</span> (crime) or <span class="math inline">\(N\)</span> (no crime).<br>
 Enforcer chooses <span class="math inline">\(I\)</span> (inspect) or <span class="math inline">\(\bar I\)</span> (not inspect).</p>
-<p>Parameters: - offender benefit if successful: <span class="math inline">\(b&gt;0\)</span> - sanction if caught: <span class="math inline">\(s&gt;0\)</span> - harm to enforcer if crime succeeds: <span class="math inline">\(h&gt;0\)</span> - inspection cost to enforcer: <span class="math inline">\(k&gt;0\)</span></p>
-<p>Payoffs: - If <span class="math inline">\(N\)</span>: offender <span class="math inline">\(0\)</span>; enforcer gets <span class="math inline">\(-k\)</span> if inspecting, <span class="math inline">\(0\)</span> otherwise. - If <span class="math inline">\(C\)</span> and <span class="math inline">\(I\)</span>: offender caught <span class="math inline">\(\to -s\)</span>; enforcer pays inspection cost <span class="math inline">\(\to -k\)</span>. - If <span class="math inline">\(C\)</span> and <span class="math inline">\(\bar I\)</span>: offender succeeds <span class="math inline">\(\to b\)</span>; enforcer suffers harm <span class="math inline">\(\to -h\)</span>.</p>
+<p>Parameters: - illegal gain if successful: <span class="math inline">\(b&gt;0\)</span> - sanction if caught: <span class="math inline">\(s&gt;0\)</span> - harm to enforcer if crime succeeds: <span class="math inline">\(h&gt;0\)</span> - inspection cost: <span class="math inline">\(k&gt;0\)</span></p>
+<p>Payoffs: - If <span class="math inline">\(N\)</span>: offender <span class="math inline">\(0\)</span>; enforcer pays <span class="math inline">\(-k\)</span> if inspecting, <span class="math inline">\(0\)</span> otherwise. - If <span class="math inline">\(C\)</span> and <span class="math inline">\(I\)</span>: offender caught <span class="math inline">\(\to -s\)</span>; enforcer pays <span class="math inline">\(-k\)</span>. - If <span class="math inline">\(C\)</span> and <span class="math inline">\(\bar I\)</span>: offender succeeds <span class="math inline">\(\to b\)</span>; enforcer suffers <span class="math inline">\(-h\)</span>.</p>
 <hr>
 </section>
 <section id="solved-equilibrium-mixed-strategies" class="level2">
 <h2 class="anchored" data-anchor-id="solved-equilibrium-mixed-strategies">Solved equilibrium (mixed strategies)</h2>
-<p>Let enforcer inspect with probability <span class="math inline">\(q\)</span>. Let offender commit crime with probability <span class="math inline">\(p\)</span>.</p>
+<p>Let enforcer inspect with probability <span class="math inline">\(q\)</span> and offender commit crime with probability <span class="math inline">\(p\)</span>.</p>
 <section id="step-1-offender-indifference" class="level3">
 <h3 class="anchored" data-anchor-id="step-1-offender-indifference">Step 1: offender indifference</h3>
-<p>Expected payoff from crime: <span class="math display">\[
+<p><span class="math display">\[
 \mathbb{E}[u_O(C)] = q(-s) + (1-q)b = b - q(b+s).
 \]</span> Indifference with <span class="math inline">\(N\)</span> (payoff 0) gives: <span class="math display">\[
-b - q(b+s)=0 \quad\Rightarrow\quad q^*=\frac{b}{b+s}.
+q^*=\frac{b}{b+s}.
 \]</span></p>
 </section>
 <section id="step-2-enforcer-indifference" class="level3">
 <h3 class="anchored" data-anchor-id="step-2-enforcer-indifference">Step 2: enforcer indifference</h3>
 <p>Enforcer payoff from inspecting: <span class="math display">\[
 \mathbb{E}[u_E(I)] = -k
-\]</span> (since inspection cost is paid regardless of offender action)</p>
-<p>Enforcer payoff from not inspecting: <span class="math display">\[
+\]</span> Enforcer payoff from not inspecting: <span class="math display">\[
 \mathbb{E}[u_E(\bar I)] = -ph.
-\]</span> Indifference gives: <span class="math display">\[
--k=-ph \quad\Rightarrow\quad p^*=\frac{k}{h}.
+\]</span> Indifference yields: <span class="math display">\[
+p^*=\frac{k}{h}.
 \]</span></p>
-</section>
-<section id="conditions" class="level3">
-<h3 class="anchored" data-anchor-id="conditions">Conditions</h3>
-<p>A true interior mixed equilibrium requires <span class="math inline">\(0&lt;p^*&lt;1\)</span>, i.e.: <span class="math display">\[
-0&lt;\frac{k}{h}&lt;1 \quad \Leftrightarrow \quad 0&lt;k&lt;h.
-\]</span></p>
+<p>Interior mixing requires <span class="math inline">\(0&lt;k&lt;h\)</span>.</p>
 <hr>
 </section>
 </section>
-<section id="comparative-statics-predictions" class="level2">
-<h2 class="anchored" data-anchor-id="comparative-statics-predictions">Comparative statics (predictions)</h2>
+<section id="predictions-comparative-statics" class="level2">
+<h2 class="anchored" data-anchor-id="predictions-comparative-statics">Predictions (comparative statics)</h2>
 <ul>
-<li>Higher sanctions <span class="math inline">\(s\)</span> reduce the inspection probability needed for deterrence: <span class="math inline">\(q^*=\frac{b}{b+s}\)</span> decreases in <span class="math inline">\(s\)</span>.</li>
-<li>Higher illegal gain <span class="math inline">\(b\)</span> increases required inspection intensity.</li>
-<li>Higher inspection cost <span class="math inline">\(k\)</span> increases crime probability <span class="math inline">\(p^*=k/h\)</span>.</li>
-<li>Higher harm <span class="math inline">\(h\)</span> decreases crime probability (enforcement becomes more willing to deter).</li>
+<li><span class="math inline">\(q^*\)</span> decreases in <span class="math inline">\(s\)</span> and increases in <span class="math inline">\(b\)</span>.</li>
+<li><span class="math inline">\(p^*\)</span> increases in <span class="math inline">\(k\)</span> and decreases in <span class="math inline">\(h\)</span>.</li>
 </ul>
 <hr>
 </section>
-<section id="interpretation-and-links" class="level2">
-<h2 class="anchored" data-anchor-id="interpretation-and-links">Interpretation and links</h2>
+<section id="connections" class="level2">
+<h2 class="anchored" data-anchor-id="connections">Connections</h2>
+<section id="mechanisms" class="level3">
+<h3 class="anchored" data-anchor-id="mechanisms">Mechanisms</h3>
 <ul>
-<li>This is the cleanest “deterrence as equilibrium” baseline.</li>
-<li>Extensions:
-<ul>
-<li>multiple crime types (substitution),</li>
-<li>heterogeneous offenders (concentration),</li>
-<li>reporting stage (endogenous detection),</li>
-<li>dynamic enforcement with learning.</li>
-</ul></li>
+<li>Incentives &amp; deterrence → <code>../mechanisms/incentives-deterrence.qmd</code></li>
+<li>Opportunity &amp; routine activity (affects <span class="math inline">\(b\)</span> and effective <span class="math inline">\(q\)</span>) → <code>../mechanisms/opportunity-routine.qmd</code></li>
+<li>Legitimacy &amp; compliance (endogenous detection/reporting) → <code>../mechanisms/legitimacy-compliance.qmd</code></li>
+<li>Self-control (perceived risk, present bias) → <code>../mechanisms/self-control.qmd</code></li>
 </ul>
+</section>
+<section id="institutions" class="level3">
+<h3 class="anchored" data-anchor-id="institutions">Institutions</h3>
+<ul>
+<li>Policing (monitoring allocation) → <code>../institutions/policing.qmd</code></li>
+<li>Corrections (supervision as monitoring) → <code>../institutions/corrections.qmd</code></li>
+</ul>
+</section>
+<section id="foundations" class="level3">
+<h3 class="anchored" data-anchor-id="foundations">Foundations</h3>
+<ul>
+<li>Recorded vs incidence (detection/reporting stages) → <code>../foundations/key-definitions.qmd</code></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="later-on-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<p>Extensions: multiple crime types (substitution), heterogeneous offenders (concentration), reporting stages, dynamic learning.</p>
 
 
 </section>

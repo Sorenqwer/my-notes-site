@@ -5,45 +5,43 @@ toc: true
 
 ## What it is
 Co-offending can be modeled as a coordination/trust problem:
-- acting in a group can increase returns or reduce risk,
-- but introduces betrayal risk and coordination failure.
+- group action increases returns or reduces risk,
+- but creates betrayal and coordination failure risks.
 
 ---
 
-## Canonical setup (stag-hunt style)
-Two potential offenders choose:
-- Join ($J$) a co-offense plan, or
-- Stay out ($O$).
+## Canonical stag-hunt setup
+Two agents choose Join ($J$) or Stay out ($O$).
 
-If both join: successful group offense yields payoff $G>0$ each, but increases exposure risk (netted into $G$).  
-If one joins alone: payoff is $-d<0$ (fails / gets exposed).  
-If stay out: payoff is $0$.
-
-Payoff matrix for each player:
-- $(J,J)$: $(G,G)$
-- $(J,O)$ or $(O,J)$: joiner gets $-d$, other gets $0$
-- $(O,O)$: $(0,0)$
+- If both join: $(J,J)$ yields $G>0$ each.
+- If one joins alone: joiner gets $-d<0$, other gets $0$.
+- If both stay out: $(0,0)$.
 
 ---
 
 ## Equilibria
-Best responses:
-- If the other joins, joining gives $G>0$ which beats $0$ → join is best response.
-- If the other stays out, joining gives $-d<0$ → staying out is best response.
+Two pure Nash equilibria:
+- $(J,J)$ (high-participation)
+- $(O,O)$ (low-participation)
 
-So there are two pure Nash equilibria:
-- $(J,J)$ (high-crime coordination)
-- $(O,O)$ (low-crime coordination)
+Interpretation: co-offending can be self-reinforcing; small shifts in risk/coordination can change equilibrium selection.
 
 ---
 
-## Interpretation
-- Co-offending can be self-reinforcing: once a network expects participation, joining is rational.
-- Interventions that increase perceived downside $d$ (risk of betrayal, detection) can shift equilibrium selection toward $(O,O)$.
-- Network structure matters: local coordination can sustain pockets of $(J,J)$.
+## Connections
+### Mechanisms
+- Social interactions & networks → `../mechanisms/social-interactions.qmd`
+- Self-control (impulsivity, myopia) → `../mechanisms/self-control.qmd`
+- Inequality & outside options → `../mechanisms/inequality-trust.qmd`
+
+### Institutions
+- Policing (disruption, informants) → `../institutions/policing.qmd`
+- Corrections (disrupting networks, reentry) → `../institutions/corrections.qmd`
+
+### Models
+- Network crime (diffusion, complements) → `network-crime.qmd`
 
 ---
 
 ## Later-on analysis
-- Add asymmetric roles (leader/follower), monitoring within the group, betrayal incentives.
-- Embed in networks to explain clustering and diffusion.
+Add asymmetric roles, betrayal incentives, repeated interaction, and embedded networks.

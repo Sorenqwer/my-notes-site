@@ -156,9 +156,16 @@ window.Quarto = {
    
   <ul>
   <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
-  <li><a href="#canonical-two-location-allocation-static-baseline" id="toc-canonical-two-location-allocation-static-baseline" class="nav-link" data-scroll-target="#canonical-two-location-allocation-static-baseline">Canonical two-location allocation (static baseline)</a></li>
-  <li><a href="#dynamic-extension-why-dynamics-matters" id="toc-dynamic-extension-why-dynamics-matters" class="nav-link" data-scroll-target="#dynamic-extension-why-dynamics-matters">Dynamic extension (why “dynamics” matters)</a></li>
+  <li><a href="#canonical-two-location-baseline" id="toc-canonical-two-location-baseline" class="nav-link" data-scroll-target="#canonical-two-location-baseline">Canonical two-location baseline</a></li>
+  <li><a href="#why-dynamics-matters" id="toc-why-dynamics-matters" class="nav-link" data-scroll-target="#why-dynamics-matters">Why dynamics matters</a></li>
   <li><a href="#predictions-qualitative" id="toc-predictions-qualitative" class="nav-link" data-scroll-target="#predictions-qualitative">Predictions (qualitative)</a></li>
+  <li><a href="#connections" id="toc-connections" class="nav-link" data-scroll-target="#connections">Connections</a>
+  <ul class="collapse">
+  <li><a href="#mechanisms" id="toc-mechanisms" class="nav-link" data-scroll-target="#mechanisms">Mechanisms</a></li>
+  <li><a href="#institutions" id="toc-institutions" class="nav-link" data-scroll-target="#institutions">Institutions</a></li>
+  <li><a href="#models" id="toc-models" class="nav-link" data-scroll-target="#models">Models</a></li>
+  <li><a href="#foundations" id="toc-foundations" class="nav-link" data-scroll-target="#foundations">Foundations</a></li>
+  </ul></li>
   <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
   </ul>
 </nav>
@@ -187,41 +194,65 @@ window.Quarto = {
 
 <section id="what-it-is" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
-<p>Allocation models study how an enforcer distributes scarce resources across: - places (hotspots), - times, - tasks (patrol vs investigation), under uncertainty and strategic response.</p>
+<p>Allocation models study how an enforcer distributes scarce resources across space and time, under uncertainty and strategic response.</p>
 <hr>
 </section>
-<section id="canonical-two-location-allocation-static-baseline" class="level2">
-<h2 class="anchored" data-anchor-id="canonical-two-location-allocation-static-baseline">Canonical two-location allocation (static baseline)</h2>
-<p>Two locations <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> with latent crime intensities. Enforcer allocates patrol effort <span class="math inline">\(e_A,e_B\ge 0\)</span> with budget: <span class="math display">\[
+<section id="canonical-two-location-baseline" class="level2">
+<h2 class="anchored" data-anchor-id="canonical-two-location-baseline">Canonical two-location baseline</h2>
+<p>Allocate effort <span class="math inline">\(e_A,e_B\ge 0\)</span> with: <span class="math display">\[
 e_A + e_B \le E.
-\]</span> Crime incidence in location <span class="math inline">\(\ell\)</span> is decreasing in effort: <span class="math display">\[
-\lambda_\ell(e_\ell) \downarrow
-\]</span> but offenders may substitute across locations.</p>
-<p>A simple equilibrium angle: - Offenders choose location with higher expected return (lower detection / higher opportunity). - Enforcer anticipates this and reallocates.</p>
+\]</span> Crime intensity in location <span class="math inline">\(\ell\)</span> decreases in effort: <span class="math inline">\(\lambda_\ell(e_\ell)\downarrow\)</span>, but offenders may substitute across locations.</p>
 <hr>
 </section>
-<section id="dynamic-extension-why-dynamics-matters" class="level2">
-<h2 class="anchored" data-anchor-id="dynamic-extension-why-dynamics-matters">Dynamic extension (why “dynamics” matters)</h2>
+<section id="why-dynamics-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-dynamics-matters">Why dynamics matters</h2>
 <p>In practice: - the enforcer learns where problems are (updating beliefs), - offenders adapt to allocation patterns, - recorded crime reflects both incidence and reporting.</p>
-<p>Dynamic primitives: - belief state about each location’s intensity, - learning/updating rule, - adaptation rule for offenders, - objective function (harm reduction vs recorded metrics).</p>
+<p>Dynamic primitives: - belief state about each location, - learning/updating, - offender adaptation, - objective function (harm vs recorded metrics).</p>
 <hr>
 </section>
 <section id="predictions-qualitative" class="level2">
 <h2 class="anchored" data-anchor-id="predictions-qualitative">Predictions (qualitative)</h2>
 <ul>
-<li>Optimal allocation often prioritizes “high marginal return” hotspots, but can create displacement if substitution is easy.</li>
-<li>Learning creates exploration–exploitation tradeoffs (patrol to learn vs patrol to deter).</li>
-<li>If metrics reward recorded outcomes, incentives can distort allocation.</li>
+<li>allocate to high marginal return hotspots, but displacement can occur when substitution is easy</li>
+<li>exploration–exploitation arises when learning is valuable</li>
+<li>metrics can distort allocation if they reward recorded outcomes</li>
 </ul>
 <hr>
 </section>
+<section id="connections" class="level2">
+<h2 class="anchored" data-anchor-id="connections">Connections</h2>
+<section id="mechanisms" class="level3">
+<h3 class="anchored" data-anchor-id="mechanisms">Mechanisms</h3>
+<ul>
+<li>Opportunity &amp; routine activity (place-based returns) → <code>../mechanisms/opportunity-routine.qmd</code></li>
+<li>Incentives &amp; deterrence (effort changes detection) → <code>../mechanisms/incentives-deterrence.qmd</code></li>
+<li>Legitimacy &amp; compliance (signals via reporting) → <code>../mechanisms/legitimacy-compliance.qmd</code></li>
+</ul>
+</section>
+<section id="institutions" class="level3">
+<h3 class="anchored" data-anchor-id="institutions">Institutions</h3>
+<ul>
+<li>Policing (allocation and constraints) → <code>../institutions/policing.qmd</code></li>
+</ul>
+</section>
+<section id="models" class="level3">
+<h3 class="anchored" data-anchor-id="models">Models</h3>
+<ul>
+<li>Reporting &amp; trust (endogenous signals) → <code>reporting-trust.qmd</code></li>
+<li>Network crime (spatial/network displacement) → <code>network-crime.qmd</code></li>
+</ul>
+</section>
+<section id="foundations" class="level3">
+<h3 class="anchored" data-anchor-id="foundations">Foundations</h3>
+<ul>
+<li>Units of analysis (place/time) → <code>../foundations/units-of-analysis.qmd</code></li>
+</ul>
+<hr>
+</section>
+</section>
 <section id="later-on-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
-<ul>
-<li>Connect to network models (hotspots linked by mobility).</li>
-<li>Connect to reporting/trust (calls for service are endogenous signals).</li>
-<li>Connect to institutions: internal incentives and constraints.</li>
-</ul>
+<p>Embed in networks; endogenize reporting; treat offenders as strategic agents with multiple crime types and substitution.</p>
 
 
 </section>

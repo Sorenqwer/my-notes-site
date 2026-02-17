@@ -156,10 +156,14 @@ window.Quarto = {
    
   <ul>
   <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
-  <li><a href="#canonical-setup-three-stage" id="toc-canonical-setup-three-stage" class="nav-link" data-scroll-target="#canonical-setup-three-stage">Canonical setup (three-stage)</a></li>
-  <li><a href="#solving-the-victim-decision-threshold" id="toc-solving-the-victim-decision-threshold" class="nav-link" data-scroll-target="#solving-the-victim-decision-threshold">Solving the victim decision (threshold)</a></li>
+  <li><a href="#canonical-three-stage-setup" id="toc-canonical-three-stage-setup" class="nav-link" data-scroll-target="#canonical-three-stage-setup">Canonical three-stage setup</a></li>
   <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
-  <li><a href="#linking-back-to-deterrence" id="toc-linking-back-to-deterrence" class="nav-link" data-scroll-target="#linking-back-to-deterrence">Linking back to deterrence</a></li>
+  <li><a href="#connections" id="toc-connections" class="nav-link" data-scroll-target="#connections">Connections</a>
+  <ul class="collapse">
+  <li><a href="#mechanisms" id="toc-mechanisms" class="nav-link" data-scroll-target="#mechanisms">Mechanisms</a></li>
+  <li><a href="#institutions" id="toc-institutions" class="nav-link" data-scroll-target="#institutions">Institutions</a></li>
+  <li><a href="#foundations" id="toc-foundations" class="nav-link" data-scroll-target="#foundations">Foundations</a></li>
+  </ul></li>
   <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
   </ul>
 </nav>
@@ -188,37 +192,25 @@ window.Quarto = {
 
 <section id="what-it-is" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
-<p>Many crime outcomes depend on whether victims/witnesses: - report incidents, - cooperate with investigation.</p>
-<p>Legitimacy/trust affects reporting and cooperation, which affects detection and deterrence.</p>
+<p>Many outcomes depend on whether victims/witnesses: - report incidents, - cooperate with investigation.</p>
+<p>Legitimacy and trust affect reporting, which affects detection and deterrence.</p>
 <hr>
 </section>
-<section id="canonical-setup-three-stage" class="level2">
-<h2 class="anchored" data-anchor-id="canonical-setup-three-stage">Canonical setup (three-stage)</h2>
+<section id="canonical-three-stage-setup" class="level2">
+<h2 class="anchored" data-anchor-id="canonical-three-stage-setup">Canonical three-stage setup</h2>
 <ol type="1">
 <li>Offender chooses <span class="math inline">\(C\)</span> or <span class="math inline">\(N\)</span>.</li>
-<li>If <span class="math inline">\(C\)</span>, victim decides report <span class="math inline">\(R\)</span> or not <span class="math inline">\(\bar R\)</span>.</li>
-<li>If report, police choose effort <span class="math inline">\(e\in\{0,1\}\)</span> (low/high). Detection occurs with probability: <span class="math display">\[
-q = q_0 + \alpha e
-\]</span> with <span class="math inline">\(q_0\in(0,1)\)</span>, <span class="math inline">\(\alpha&gt;0\)</span>, and <span class="math inline">\(q\le 1\)</span>.</li>
+<li>If <span class="math inline">\(C\)</span>, victim chooses report <span class="math inline">\(R\)</span> or not <span class="math inline">\(\bar R\)</span>.</li>
+<li>If report, police choose effort <span class="math inline">\(e\in\{0,1\}\)</span> and detection probability is: <span class="math display">\[
+q = q_0 + \alpha e,\quad q\le 1,
+\]</span> with <span class="math inline">\(q_0\in(0,1)\)</span> and <span class="math inline">\(\alpha&gt;0\)</span>.</li>
 </ol>
-<p>Victim reporting has cost <span class="math inline">\(c_R&gt;0\)</span>.<br>
-Victim benefit from successful detection is <span class="math inline">\(B&gt;0\)</span> (justice, safety).<br>
-Police effort cost is <span class="math inline">\(k&gt;0\)</span>.<br>
-Legitimacy/trust parameter <span class="math inline">\(L\)</span> increases perceived benefit (or reduces reporting cost). Use: <span class="math display">\[
-B(L)=B_0 + \lambda L,\quad \lambda&gt;0.
+<p>Reporting cost: <span class="math inline">\(c_R&gt;0\)</span>.<br>
+Victim benefit from detection: <span class="math inline">\(B(L)=B_0+\lambda L\)</span> with <span class="math inline">\(\lambda&gt;0\)</span>.</p>
+<p>Victim reports iff: <span class="math display">\[
+(q_0+\alpha e)B(L) \ge c_R.
 \]</span></p>
-<hr>
-</section>
-<section id="solving-the-victim-decision-threshold" class="level2">
-<h2 class="anchored" data-anchor-id="solving-the-victim-decision-threshold">Solving the victim decision (threshold)</h2>
-<p>If crime occurs and victim anticipates police effort choice <span class="math inline">\(e\)</span>, expected benefit from reporting: <span class="math display">\[
-\text{Benefit} = q \cdot B(L) = (q_0+\alpha e)\,B(L).
-\]</span> Victim reports iff: <span class="math display">\[
-(q_0+\alpha e)\,B(L) \ge c_R.
-\]</span></p>
-<p>This yields a threshold legitimacy level <span class="math inline">\(L^*\)</span> when <span class="math inline">\(B(L)\)</span> is linear: <span class="math display">\[
-(q_0+\alpha e)(B_0+\lambda L)\ge c_R
-\quad\Rightarrow\quad
+<p>Threshold: <span class="math display">\[
 L \ge \frac{c_R}{\lambda(q_0+\alpha e)} - \frac{B_0}{\lambda}.
 \]</span></p>
 <hr>
@@ -226,24 +218,40 @@ L \ge \frac{c_R}{\lambda(q_0+\alpha e)} - \frac{B_0}{\lambda}.
 <section id="interpretation" class="level2">
 <h2 class="anchored" data-anchor-id="interpretation">Interpretation</h2>
 <ul>
-<li>Higher legitimacy <span class="math inline">\(L\)</span> increases reporting.</li>
-<li>Higher police effort effectiveness <span class="math inline">\(\alpha\)</span> increases the value of reporting (complements).</li>
-<li>If legitimacy rises, <strong>recorded crime may rise</strong> (more reporting) even if incidence falls.</li>
+<li>Higher legitimacy increases reporting.</li>
+<li>Reporting can increase recorded crime even if incidence is unchanged.</li>
+<li>Deterrence can strengthen via higher anticipated detection.</li>
 </ul>
 <hr>
 </section>
-<section id="linking-back-to-deterrence" class="level2">
-<h2 class="anchored" data-anchor-id="linking-back-to-deterrence">Linking back to deterrence</h2>
-<p>If offenders anticipate higher reporting and higher detection, the expected cost of crime rises: deterrence can strengthen without changing formal sanctions.</p>
+<section id="connections" class="level2">
+<h2 class="anchored" data-anchor-id="connections">Connections</h2>
+<section id="mechanisms" class="level3">
+<h3 class="anchored" data-anchor-id="mechanisms">Mechanisms</h3>
+<ul>
+<li>Legitimacy, trust &amp; compliance → <code>../mechanisms/legitimacy-compliance.qmd</code></li>
+<li>Incentives &amp; deterrence (expected costs) → <code>../mechanisms/incentives-deterrence.qmd</code></li>
+<li>Inequality &amp; trust (social capital channel) → <code>../mechanisms/inequality-trust.qmd</code></li>
+</ul>
+</section>
+<section id="institutions" class="level3">
+<h3 class="anchored" data-anchor-id="institutions">Institutions</h3>
+<ul>
+<li>Policing (effort/capacity) → <code>../institutions/policing.qmd</code></li>
+<li>Courts (processing after reporting) → <code>../institutions/courts.qmd</code></li>
+</ul>
+</section>
+<section id="foundations" class="level3">
+<h3 class="anchored" data-anchor-id="foundations">Foundations</h3>
+<ul>
+<li>Incidence vs recorded outcomes → <code>../foundations/key-definitions.qmd</code></li>
+</ul>
 <hr>
+</section>
 </section>
 <section id="later-on-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
-<ul>
-<li>Allow police effort <span class="math inline">\(e\)</span> to depend on workload/capacity.</li>
-<li>Add strategic police incentives (recording vs clearance metrics).</li>
-<li>Add offender adaptation (switch to low-reporting offenses).</li>
-</ul>
+<p>Endogenize police effort with workload; add strategic incentives; add retaliation/fear costs to reporting.</p>
 
 
 </section>

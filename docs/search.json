@@ -46,77 +46,91 @@
     "href": "criminology/notes/models/plea-bargaining.html",
     "title": "Plea bargaining (asymmetric information)",
     "section": "",
-    "text": "Plea bargaining is modeled as bargaining under uncertainty: - prosecutor offers a plea sentence, - defendant accepts or goes to trial, - trial outcomes are uncertain and costly.\nA core academic theme: selection into trial and asymmetric information."
+    "text": "Plea bargaining is bargaining under uncertainty: - prosecutor offers a plea sentence, - defendant accepts or goes to trial, - trial outcomes are uncertain and costly.\nA core theme is selection into trial."
   },
   {
     "objectID": "criminology/notes/models/plea-bargaining.html#what-it-is",
     "href": "criminology/notes/models/plea-bargaining.html#what-it-is",
     "title": "Plea bargaining (asymmetric information)",
     "section": "",
-    "text": "Plea bargaining is modeled as bargaining under uncertainty: - prosecutor offers a plea sentence, - defendant accepts or goes to trial, - trial outcomes are uncertain and costly.\nA core academic theme: selection into trial and asymmetric information."
+    "text": "Plea bargaining is bargaining under uncertainty: - prosecutor offers a plea sentence, - defendant accepts or goes to trial, - trial outcomes are uncertain and costly.\nA core theme is selection into trial."
   },
   {
     "objectID": "criminology/notes/models/plea-bargaining.html#canonical-setup-two-types",
     "href": "criminology/notes/models/plea-bargaining.html#canonical-setup-two-types",
     "title": "Plea bargaining (asymmetric information)",
     "section": "Canonical setup (two types)",
-    "text": "Canonical setup (two types)\nDefendant type \\(\\theta\\in\\{L,H\\}\\) with prior \\(\\Pr(H)=\\pi\\). Type affects probability of conviction at trial: - \\(\\Pr(\\text{conviction}|\\theta=L)=p_L\\) - \\(\\Pr(\\text{conviction}|\\theta=H)=p_H\\) with \\(0&lt;p_L&lt;p_H&lt;1\\).\nTrial sentence if convicted: \\(T&gt;0\\).\nProsecutor offers plea sentence \\(x\\) (certain if accepted).\nTrial cost to prosecutor: \\(c_P&gt;0\\). Trial cost to defendant: \\(c_D&gt;0\\).\nDefendant expected cost of trial (type \\(\\theta\\)): \\[\n\\text{TrialCost}(\\theta)=p_\\theta T + c_D.\n\\] Accept plea iff: \\[\nx \\le p_\\theta T + c_D.\n\\]\nProsecutor payoff: - if plea accepted: \\(x\\) - if trial: expected sentence \\(p_\\theta T\\) minus cost \\(c_P\\)."
+    "text": "Canonical setup (two types)\nDefendant type \\(\\theta\\in\\{L,H\\}\\) with prior \\(\\Pr(H)=\\pi\\). Type affects conviction probability: \\(0&lt;p_L&lt;p_H&lt;1\\).\nTrial sentence if convicted: \\(T&gt;0\\).\nPlea offer: \\(x\\).\nTrial costs: prosecutor \\(c_P&gt;0\\), defendant \\(c_D&gt;0\\).\nDefendant accepts iff: \\[\nx \\le p_\\theta T + c_D.\n\\]"
   },
   {
-    "objectID": "criminology/notes/models/plea-bargaining.html#solved-equilibrium-pattern-separating-via-one-offer-screening",
-    "href": "criminology/notes/models/plea-bargaining.html#solved-equilibrium-pattern-separating-via-one-offer-screening",
+    "objectID": "criminology/notes/models/plea-bargaining.html#screening-pattern-one-offer",
+    "href": "criminology/notes/models/plea-bargaining.html#screening-pattern-one-offer",
     "title": "Plea bargaining (asymmetric information)",
-    "section": "Solved equilibrium pattern: separating via one offer (screening)",
-    "text": "Solved equilibrium pattern: separating via one offer (screening)\nSuppose prosecutor wants: - type \\(H\\) to accept the plea, - type \\(L\\) to reject and go to trial.\nFor this to happen, choose \\(x\\) such that: - \\(H\\) accepts: \\(x \\le p_H T + c_D\\) - \\(L\\) rejects: \\(x &gt; p_L T + c_D\\)\nSo any \\(x\\) in: \\[\n(p_L T + c_D,\\; p_H T + c_D]\n\\] induces the intended separation.\nProsecutor then compares expected payoff under this policy: - From type \\(H\\): gets \\(x\\) - From type \\(L\\) (trial): gets \\(p_L T - c_P\\)\nExpected payoff: \\[\n\\pi x + (1-\\pi)(p_L T - c_P).\n\\]\nA common selection result: when the gap \\(p_H-p_L\\) is large enough, a single plea offer can screen types."
+    "section": "Screening pattern (one offer)",
+    "text": "Screening pattern (one offer)\nTo induce \\(H\\) accept and \\(L\\) reject: \\[\nx \\in (p_L T + c_D,\\; p_H T + c_D].\n\\]\nExpected payoff to prosecutor under this policy: - Type \\(H\\): \\(x\\) - Type \\(L\\) (trial): \\(p_L T - c_P\\)\nSo: \\[\n\\pi x + (1-\\pi)(p_L T - c_P).\n\\]"
   },
   {
     "objectID": "criminology/notes/models/plea-bargaining.html#predictions-qualitative",
     "href": "criminology/notes/models/plea-bargaining.html#predictions-qualitative",
     "title": "Plea bargaining (asymmetric information)",
     "section": "Predictions (qualitative)",
-    "text": "Predictions (qualitative)\n\nHigher defendant trial cost \\(c_D\\) increases acceptance of pleas (both types).\nHigher prosecutor trial cost \\(c_P\\) increases reliance on plea offers (lower \\(x\\) may still be attractive).\nStronger evidence (higher \\(p_\\theta\\)) increases willingness to accept pleas (especially high type)."
+    "text": "Predictions (qualitative)\n\nHigher \\(c_D\\) increases plea acceptance.\nHigher \\(c_P\\) increases reliance on pleas.\nStronger evidence (higher \\(p_\\theta\\)) increases acceptance."
   },
   {
-    "objectID": "criminology/notes/models/plea-bargaining.html#interpretation-and-links",
-    "href": "criminology/notes/models/plea-bargaining.html#interpretation-and-links",
+    "objectID": "criminology/notes/models/plea-bargaining.html#connections",
+    "href": "criminology/notes/models/plea-bargaining.html#connections",
     "title": "Plea bargaining (asymmetric information)",
-    "section": "Interpretation and links",
-    "text": "Interpretation and links\n\nObserved trial cases are selected: they are not “random disputes.”\nPlea policy can change recorded outcomes (conviction rates, sentence distributions) without changing underlying behavior."
+    "section": "Connections",
+    "text": "Connections\n\nMechanisms\n\nIncentives & deterrence (certainty vs severity) → ../mechanisms/incentives-deterrence.qmd\nLabeling & stigma (collateral consequences) → ../mechanisms/labeling-stigma.qmd\nLife-course dynamics (dynamic effects) → ../mechanisms/life-course.qmd\n\n\n\nInstitutions\n\nCourts → ../institutions/courts.qmd\n\n\n\nFoundations\n\nRecorded outcomes vs behavior → ../foundations/key-definitions.qmd"
+  },
+  {
+    "objectID": "criminology/notes/models/plea-bargaining.html#later-on-analysis",
+    "href": "criminology/notes/models/plea-bargaining.html#later-on-analysis",
+    "title": "Plea bargaining (asymmetric information)",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\nExtensions: risk aversion, bargaining power, repeated play (prosecutors/defense), endogenous charging."
   },
   {
     "objectID": "criminology/notes/models/network-crime.html",
     "href": "criminology/notes/models/network-crime.html",
     "title": "Network crime (diffusion and strategic complements)",
     "section": "",
-    "text": "Network models study how behavior depends on peers and connections: - peer influence and learning, - diffusion of tactics, - complementarities (my payoff rises when neighbors participate)."
+    "text": "Network models study how behavior depends on peers and connections: learning, diffusion, and strategic complementarities."
   },
   {
     "objectID": "criminology/notes/models/network-crime.html#what-it-is",
     "href": "criminology/notes/models/network-crime.html#what-it-is",
     "title": "Network crime (diffusion and strategic complements)",
     "section": "",
-    "text": "Network models study how behavior depends on peers and connections: - peer influence and learning, - diffusion of tactics, - complementarities (my payoff rises when neighbors participate)."
+    "text": "Network models study how behavior depends on peers and connections: learning, diffusion, and strategic complementarities."
   },
   {
-    "objectID": "criminology/notes/models/network-crime.html#canonical-linear-quadratic-network-game-template",
-    "href": "criminology/notes/models/network-crime.html#canonical-linear-quadratic-network-game-template",
+    "objectID": "criminology/notes/models/network-crime.html#canonical-linear-quadratic-network-game",
+    "href": "criminology/notes/models/network-crime.html#canonical-linear-quadratic-network-game",
     "title": "Network crime (diffusion and strategic complements)",
-    "section": "Canonical linear-quadratic network game (template)",
-    "text": "Canonical linear-quadratic network game (template)\nLet each agent \\(i\\) choose participation level \\(x_i\\ge 0\\). Utility: \\[\nu_i(x)= a_i x_i - \\frac{1}{2}x_i^2 + \\beta x_i \\sum_j g_{ij}x_j,\n\\] where: - \\(a_i\\) is an individual incentive term (outside option, opportunities), - \\(g_{ij}\\) is the network adjacency/weight matrix, - \\(\\beta\\) measures strategic complementarity.\nBest response (FOC): \\[\na_i - x_i + \\beta \\sum_j g_{ij}x_j = 0\n\\quad\\Rightarrow\\quad\nx_i = a_i + \\beta \\sum_j g_{ij}x_j.\n\\]\nIn vector form: \\[\nx = a + \\beta Gx\n\\quad\\Rightarrow\\quad\n(I-\\beta G)x = a\n\\quad\\Rightarrow\\quad\nx = (I-\\beta G)^{-1}a\n\\] when \\((I-\\beta G)\\) is invertible (e.g., \\(\\beta\\) small enough)."
+    "section": "Canonical linear-quadratic network game",
+    "text": "Canonical linear-quadratic network game\nAgent \\(i\\) chooses \\(x_i\\ge 0\\) and: \\[\nu_i(x)= a_i x_i - \\frac{1}{2}x_i^2 + \\beta x_i \\sum_j g_{ij}x_j.\n\\]\nBest response: \\[\nx_i = a_i + \\beta \\sum_j g_{ij}x_j.\n\\]\nVector form: \\[\nx = (I-\\beta G)^{-1}a\n\\] when invertible."
   },
   {
     "objectID": "criminology/notes/models/network-crime.html#predictions-qualitative",
     "href": "criminology/notes/models/network-crime.html#predictions-qualitative",
     "title": "Network crime (diffusion and strategic complements)",
     "section": "Predictions (qualitative)",
-    "text": "Predictions (qualitative)\n\nShocks to incentives \\(a_i\\) propagate through the network (“multiplier” effect).\nTargeting central nodes can have outsized effects.\nStrong complements (\\(\\beta\\) high) can generate large clustering and persistence."
+    "text": "Predictions (qualitative)\n\nshocks to incentives propagate through a network multiplier\ntargeting central nodes has outsized effects\nstrong complements generate clustering and persistence"
+  },
+  {
+    "objectID": "criminology/notes/models/network-crime.html#connections",
+    "href": "criminology/notes/models/network-crime.html#connections",
+    "title": "Network crime (diffusion and strategic complements)",
+    "section": "Connections",
+    "text": "Connections\n\nMechanisms\n\nSocial interactions & networks → ../mechanisms/social-interactions.qmd\nInequality & trust (shifts \\(a_i\\)) → ../mechanisms/inequality-trust.qmd\nOpportunity (local environment enters \\(a_i\\)) → ../mechanisms/opportunity-routine.qmd\n\n\n\nInstitutions\n\nPolicing (targeting, disruption) → ../institutions/policing.qmd\nCorrections (network disruption and reentry) → ../institutions/corrections.qmd\n\n\n\nModels\n\nCo-offending games → co-offending-games.qmd\nAllocation dynamics → allocation-dynamics.qmd"
   },
   {
     "objectID": "criminology/notes/models/network-crime.html#later-on-analysis",
     "href": "criminology/notes/models/network-crime.html#later-on-analysis",
     "title": "Network crime (diffusion and strategic complements)",
     "section": "Later-on analysis",
-    "text": "Later-on analysis\n\nAdd enforcement targeted by network position.\nAdd diffusion/learning dynamics (time-varying \\(a_i\\) and beliefs).\nLink to co-offending equilibrium selection."
+    "text": "Later-on analysis\nAdd enforcement targeted by network position; add diffusion dynamics; add endogenous network formation/sorting."
   },
   {
     "objectID": "criminology/notes/mechanisms/life-course.html",
@@ -368,28 +382,28 @@
     "href": "criminology/notes/institutions/policing.html",
     "title": "Policing",
     "section": "",
-    "text": "This page treats policing as an institution with: - objectives (harm reduction, clearance, legitimacy), - constraints (budget, staffing, information), - strategic interactions (offender adaptation, community cooperation).\nThe aim is not a program-evaluation catalogue, but an academic map of how policing is analyzed."
+    "text": "This page treats policing as an institution with: - objectives (harm reduction, clearance, legitimacy), - constraints (budget, staffing, information), - strategic interactions (offender adaptation, community cooperation).\nThe aim is an academic map of how policing is analyzed, not a program-evaluation catalogue."
   },
   {
     "objectID": "criminology/notes/institutions/policing.html#scope",
     "href": "criminology/notes/institutions/policing.html#scope",
     "title": "Policing",
     "section": "",
-    "text": "This page treats policing as an institution with: - objectives (harm reduction, clearance, legitimacy), - constraints (budget, staffing, information), - strategic interactions (offender adaptation, community cooperation).\nThe aim is not a program-evaluation catalogue, but an academic map of how policing is analyzed."
+    "text": "This page treats policing as an institution with: - objectives (harm reduction, clearance, legitimacy), - constraints (budget, staffing, information), - strategic interactions (offender adaptation, community cooperation).\nThe aim is an academic map of how policing is analyzed, not a program-evaluation catalogue."
   },
   {
     "objectID": "criminology/notes/institutions/policing.html#core-research-questions",
     "href": "criminology/notes/institutions/policing.html#core-research-questions",
     "title": "Policing",
     "section": "Core research questions",
-    "text": "Core research questions\n\nHow does police presence/effort change offending (deterrence) vs recorded outcomes (reporting/recording)?\nHow should scarce resources be allocated across places and times (hotspots, patrol allocation)?\nHow does legitimacy affect cooperation (reporting, witnessing), and thereby detection?"
+    "text": "Core research questions\n\nHow does police presence/effort change incidence vs recorded outcomes (reporting/recording)?\nHow should scarce resources be allocated across places and times (hotspots, patrol allocation)?\nHow does legitimacy affect cooperation (reporting, witnessing), and thereby detection?"
   },
   {
     "objectID": "criminology/notes/institutions/policing.html#institutional-primitives-what-to-model",
     "href": "criminology/notes/institutions/policing.html#institutional-primitives-what-to-model",
     "title": "Policing",
     "section": "Institutional primitives (what to model)",
-    "text": "Institutional primitives (what to model)\n\nA) Capacity and allocation\nPolicing is constrained: effort must be allocated across: - locations (hotspots vs non-hotspots), - time (day/night; weekends), - tasks (patrol vs investigation).\n\n\nB) Information and targeting\nPolice learn from: - calls for service (endogenous reporting), - observed incidents, - intelligence networks, - past allocation outcomes.\n\n\nC) Performance measures and incentives\nObserved metrics may include: - recorded crime rates, - arrest/clearance rates, - response times, - complaint rates.\nThese metrics can shape behavior (sometimes away from welfare-maximizing choices)."
+    "text": "Institutional primitives (what to model)\n\nA) Capacity and allocation\nPolicing is constrained: effort must be allocated across: - locations (hotspots vs non-hotspots), - time (day/night; weekends), - tasks (patrol vs investigation).\n\n\nB) Information and targeting\nPolice learn from: - calls for service (endogenous reporting), - observed incidents, - intelligence, - past allocation outcomes.\n\n\nC) Performance measures and incentives\nObserved metrics may include: - recorded crime rates, - arrests/clearance rates, - response times, - complaints.\nThese metrics can shape agency behavior (sometimes away from welfare-maximizing choices)."
   },
   {
     "objectID": "criminology/notes/institutions/policing.html#strategic-responses-equilibrium-thinking",
@@ -403,21 +417,21 @@
     "href": "criminology/notes/institutions/policing.html#canonical-modeling-approaches",
     "title": "Policing",
     "section": "Canonical modeling approaches",
-    "text": "Canonical modeling approaches\n\nInspection / deterrence games (monitoring vs offending)\n\nSpatial equilibrium models (offenders choose locations; police allocate patrol)\n\nDynamic allocation (learning, updating beliefs, two-period/multi-period allocation)\n\nReporting & trust games (victims decide to report; police decide effort; offenders anticipate)\n\n(Links) - Inspection games → ../models/inspection-games.qmd - Allocation dynamics → ../models/allocation-dynamics.qmd - Reporting & trust → ../models/reporting-trust.qmd"
+    "text": "Canonical modeling approaches\n\nInspection/deterrence (monitoring vs offending)\n\nSpatial equilibrium (offenders choose locations; police allocate patrol)\n\nDynamic allocation (learning, belief-updating, capacity constraints)\n\nReporting & trust (victims decide to report; police decide effort; offenders anticipate)"
   },
   {
-    "objectID": "criminology/notes/institutions/policing.html#what-counts-as-evidence-conceptual",
-    "href": "criminology/notes/institutions/policing.html#what-counts-as-evidence-conceptual",
+    "objectID": "criminology/notes/institutions/policing.html#connections-where-to-go-next",
+    "href": "criminology/notes/institutions/policing.html#connections-where-to-go-next",
     "title": "Policing",
-    "section": "What counts as evidence? (conceptual)",
-    "text": "What counts as evidence? (conceptual)\nPolicing claims typically require separating: - incidence vs recorded crime, - police response vs underlying trends, - short-run deterrence vs long-run adaptation."
+    "section": "Connections (where to go next)",
+    "text": "Connections (where to go next)\n\nMechanisms\n\nIncentives & deterrence → ../mechanisms/incentives-deterrence.qmd\nOpportunity & routine activity → ../mechanisms/opportunity-routine.qmd\nLegitimacy, trust & compliance → ../mechanisms/legitimacy-compliance.qmd\nSocial interactions & networks → ../mechanisms/social-interactions.qmd\n\n\n\nModels\n\nInspection games → ../models/inspection-games.qmd\nReporting & trust → ../models/reporting-trust.qmd\nAllocation dynamics (hotspots) → ../models/allocation-dynamics.qmd\nNetwork crime (diffusion) → ../models/network-crime.qmd\n\n\n\nFoundations\n\nDefinitions: recorded vs incidence → ../foundations/key-definitions.qmd\nUnits of analysis: place vs network → ../foundations/units-of-analysis.qmd"
   },
   {
     "objectID": "criminology/notes/institutions/policing.html#later-on-analysis",
     "href": "criminology/notes/institutions/policing.html#later-on-analysis",
     "title": "Policing",
     "section": "Later-on analysis",
-    "text": "Later-on analysis\nA clean theory program often writes policing as a player with: - a budget constraint, - an allocation decision, - an outcome function (detection, harm), - and a legitimacy/cooperation channel."
+    "text": "Later-on analysis\nA theory-first program often treats policing as a player with: - budget constraint, - allocation decision, - outcome function (detection/harm), - legitimacy/cooperation channel."
   },
   {
     "objectID": "criminology/stylized-facts.html",
@@ -2167,70 +2181,84 @@
     "href": "criminology/notes/institutions/corrections.html#institutional-primitives-what-to-model",
     "title": "Corrections (incarceration, supervision, reentry)",
     "section": "Institutional primitives (what to model)",
-    "text": "Institutional primitives (what to model)\n\nA) Dynamic states\nLet a person’s state include: - employability/human capital, - stigma/record, - network exposure, - addiction/mental health constraints.\nPunishment can shift these states (positively or negatively).\n\n\nB) Supervision as monitoring\nProbation/parole can be modeled as: - a monitoring probability, - a rule system (violations), - and sanctions for violation.\n\n\nC) Capacity constraints\nCrowding, budgets, and staff ratios matter for rehabilitation quality and supervision."
+    "text": "Institutional primitives (what to model)\n\nA) Dynamic states\nLet a person’s state include employability, stigma/record, network exposure, addiction constraints.\nPunishment can shift these states (positively or negatively).\n\n\nB) Supervision as monitoring\nProbation/parole can be modeled as: - monitoring probability, - rule system (violations), - sanctions for violation.\n\n\nC) Capacity constraints\nCrowding, budgets, and staff ratios matter for rehabilitation quality and supervision."
   },
   {
     "objectID": "criminology/notes/institutions/corrections.html#canonical-modeling-approaches",
     "href": "criminology/notes/institutions/corrections.html#canonical-modeling-approaches",
     "title": "Corrections (incarceration, supervision, reentry)",
     "section": "Canonical modeling approaches",
-    "text": "Canonical modeling approaches\n\nDynamic choice / Markov decision (crime vs work; state transitions)\n\nMonitoring games (supervision as inspection)\n\nStigma/labeling dynamics (system contact changes outside options)\n\n(Links) - Life-course dynamics mechanism → ../mechanisms/life-course.qmd - Labeling & stigma → ../mechanisms/labeling-stigma.qmd - Allocation dynamics (resources) → ../models/allocation-dynamics.qmd"
+    "text": "Canonical modeling approaches\n\nDynamic choice / Markov decision (crime vs work; state transitions)\n\nMonitoring games (supervision as inspection)\n\nStigma/labeling dynamics (system contact changes outside options)"
+  },
+  {
+    "objectID": "criminology/notes/institutions/corrections.html#connections-where-to-go-next",
+    "href": "criminology/notes/institutions/corrections.html#connections-where-to-go-next",
+    "title": "Corrections (incarceration, supervision, reentry)",
+    "section": "Connections (where to go next)",
+    "text": "Connections (where to go next)\n\nMechanisms\n\nLife-course dynamics → ../mechanisms/life-course.qmd\nLabeling, stigma & system contact → ../mechanisms/labeling-stigma.qmd\nSelf-control / present bias (short-run temptation) → ../mechanisms/self-control.qmd\nInequality & outside options (reentry constraints) → ../mechanisms/inequality-trust.qmd\n\n\n\nModels\n\nInspection games (monitoring) → ../models/inspection-games.qmd\nAllocation dynamics (capacity constraints) → ../models/allocation-dynamics.qmd\n\n\n\nFoundations\n\nUnits of analysis (person vs institution) → ../foundations/units-of-analysis.qmd"
   },
   {
     "objectID": "criminology/notes/institutions/corrections.html#later-on-analysis",
     "href": "criminology/notes/institutions/corrections.html#later-on-analysis",
     "title": "Corrections (incarceration, supervision, reentry)",
     "section": "Later-on analysis",
-    "text": "Later-on analysis\nFor a theory-first program, corrections is where “static deterrence” becomes dynamic: policies can reduce crime today yet worsen future states (or the opposite)."
+    "text": "Later-on analysis\nCorrections is where static deterrence becomes dynamic: policies can reduce crime today yet worsen (or improve) future states."
   },
   {
     "objectID": "criminology/notes/institutions/courts.html",
     "href": "criminology/notes/institutions/courts.html",
     "title": "Courts (charging, plea bargaining, sentencing)",
     "section": "",
-    "text": "Courts convert suspected offending into formal outcomes: charges, pleas/trials, and sentences.\nAcademic analysis focuses on information, bargaining, discretion, and incentives."
+    "text": "Courts convert suspected offending into formal outcomes: charges, pleas/trials, and sentences.\nAcademic analysis emphasizes information, bargaining, discretion, incentives, and selection."
   },
   {
     "objectID": "criminology/notes/institutions/courts.html#scope",
     "href": "criminology/notes/institutions/courts.html#scope",
     "title": "Courts (charging, plea bargaining, sentencing)",
     "section": "",
-    "text": "Courts convert suspected offending into formal outcomes: charges, pleas/trials, and sentences.\nAcademic analysis focuses on information, bargaining, discretion, and incentives."
+    "text": "Courts convert suspected offending into formal outcomes: charges, pleas/trials, and sentences.\nAcademic analysis emphasizes information, bargaining, discretion, incentives, and selection."
   },
   {
     "objectID": "criminology/notes/institutions/courts.html#core-research-questions",
     "href": "criminology/notes/institutions/courts.html#core-research-questions",
     "title": "Courts (charging, plea bargaining, sentencing)",
     "section": "Core research questions",
-    "text": "Core research questions\n\nHow do prosecutors and defendants bargain under asymmetric information?\nHow do plea offers trade off certainty vs severity (and trial costs)?\nWhere can disparities arise (discretion, bargaining power, information gaps)?"
+    "text": "Core research questions\n\nHow do prosecutors and defendants bargain under asymmetric information?\nHow do plea offers trade off certainty vs severity (and trial costs)?\nWhere do disparities arise (discretion, bargaining power, information gaps)?"
   },
   {
     "objectID": "criminology/notes/institutions/courts.html#institutional-primitives-what-to-model",
     "href": "criminology/notes/institutions/courts.html#institutional-primitives-what-to-model",
     "title": "Courts (charging, plea bargaining, sentencing)",
     "section": "Institutional primitives (what to model)",
-    "text": "Institutional primitives (what to model)\n\nA) Actors and payoffs\n\nProsecutor: conviction/sentence objectives, workload, trial cost.\nDefendant: expected sentence, risk preferences, legal costs, collateral consequences.\n\n\n\nB) Information\n\nStrength of evidence, probability of conviction, defendant type (risk, priors).\nObservability differs across parties → classic asymmetric information.\n\n\n\nC) Process\nCharging → plea offer(s) → accept/reject → trial → sentencing."
+    "text": "Institutional primitives (what to model)\n\nA) Actors and payoffs\n\nProsecutor: sentencing/conviction objectives, workload, trial cost.\nDefendant: expected sentence, risk attitudes, legal costs, collateral consequences.\n\n\n\nB) Information\n\nStrength of evidence, conviction probability, defendant type (risk, priors).\nObservability differs across parties → asymmetric information.\n\n\n\nC) Process\nCharging → plea offer(s) → accept/reject → trial → sentencing."
   },
   {
     "objectID": "criminology/notes/institutions/courts.html#canonical-theoretical-lenses",
     "href": "criminology/notes/institutions/courts.html#canonical-theoretical-lenses",
     "title": "Courts (charging, plea bargaining, sentencing)",
     "section": "Canonical theoretical lenses",
-    "text": "Canonical theoretical lenses\n\nBargaining models (Nash bargaining, Rubinstein bargaining variants)\nScreening/signaling (plea offers as screening device)\nMechanism design (rules shaping incentives and revelation)\nDynamic reputation (repeat players: prosecutors, defense counsel)\n\n(Links) - Plea bargaining model → ../models/plea-bargaining.qmd"
+    "text": "Canonical theoretical lenses\n\nBargaining (Nash/Rubinstein variants)\n\nScreening/signaling (plea offers as screening devices)\n\nMechanism design (rules shaping incentives and revelation)\n\nSelection into trial (observed trials are endogenously chosen)"
   },
   {
     "objectID": "criminology/notes/institutions/courts.html#key-conceptual-distinctions",
     "href": "criminology/notes/institutions/courts.html#key-conceptual-distinctions",
     "title": "Courts (charging, plea bargaining, sentencing)",
     "section": "Key conceptual distinctions",
-    "text": "Key conceptual distinctions\n\nCase strength vs outcomes: observed plea rates can reflect bargaining under uncertainty, not only guilt.\nSelection into trial: trials are not random; they are chosen endogenously.\nSentencing severity vs certainty: deterrence can operate through either margin."
+    "text": "Key conceptual distinctions\n\nCase strength vs outcomes: plea rates reflect bargaining under uncertainty, not only guilt.\nSelection into trial: trials are not random; they are selected.\nSeverity vs certainty: deterrence can operate through either margin."
+  },
+  {
+    "objectID": "criminology/notes/institutions/courts.html#connections-where-to-go-next",
+    "href": "criminology/notes/institutions/courts.html#connections-where-to-go-next",
+    "title": "Courts (charging, plea bargaining, sentencing)",
+    "section": "Connections (where to go next)",
+    "text": "Connections (where to go next)\n\nMechanisms\n\nIncentives & deterrence (certainty vs severity) → ../mechanisms/incentives-deterrence.qmd\nLabeling & stigma (collateral consequences) → ../mechanisms/labeling-stigma.qmd\nLife-course dynamics (dynamic effects of conviction) → ../mechanisms/life-course.qmd\n\n\n\nModels\n\nPlea bargaining (screening) → ../models/plea-bargaining.qmd\n\n\n\nFoundations\n\nRecorded outcomes vs behavior → ../foundations/key-definitions.qmd"
   },
   {
     "objectID": "criminology/notes/institutions/courts.html#later-on-analysis",
     "href": "criminology/notes/institutions/courts.html#later-on-analysis",
     "title": "Courts (charging, plea bargaining, sentencing)",
     "section": "Later-on analysis",
-    "text": "Later-on analysis\nA theory-first approach can treat the court system as: - a bargaining stage under asymmetric information, - with selection and signaling, - embedded in a broader deterrence equilibrium."
+    "text": "Later-on analysis\nA clean theory-first approach embeds the court stage inside a broader system: bargaining affects expected punishment, which affects offending, reporting, and enforcement incentives."
   },
   {
     "objectID": "criminology/notes/mechanisms/opportunity-routine.html",
@@ -2384,175 +2412,182 @@
     "href": "criminology/notes/models/inspection-games.html",
     "title": "Inspection games (deterrence & monitoring)",
     "section": "",
-    "text": "Inspection games model strategic interaction between: - an agent who may violate (offend), and - an enforcer who can monitor/inspect at a cost.\nThey are used to formalize deterrence when enforcement resources are scarce."
+    "text": "Inspection games model strategic interaction between: - an agent who may violate (offend), and - an enforcer who can monitor/inspect at a cost.\nThey formalize deterrence under scarce enforcement resources."
   },
   {
     "objectID": "criminology/notes/models/inspection-games.html#what-it-is",
     "href": "criminology/notes/models/inspection-games.html#what-it-is",
     "title": "Inspection games (deterrence & monitoring)",
     "section": "",
-    "text": "Inspection games model strategic interaction between: - an agent who may violate (offend), and - an enforcer who can monitor/inspect at a cost.\nThey are used to formalize deterrence when enforcement resources are scarce."
+    "text": "Inspection games model strategic interaction between: - an agent who may violate (offend), and - an enforcer who can monitor/inspect at a cost.\nThey formalize deterrence under scarce enforcement resources."
   },
   {
     "objectID": "criminology/notes/models/inspection-games.html#canonical-setup",
     "href": "criminology/notes/models/inspection-games.html#canonical-setup",
     "title": "Inspection games (deterrence & monitoring)",
     "section": "Canonical setup",
-    "text": "Canonical setup\nOffender chooses \\(C\\) (crime) or \\(N\\) (no crime).\nEnforcer chooses \\(I\\) (inspect) or \\(\\bar I\\) (not inspect).\nParameters: - offender benefit if successful: \\(b&gt;0\\) - sanction if caught: \\(s&gt;0\\) - harm to enforcer if crime succeeds: \\(h&gt;0\\) - inspection cost to enforcer: \\(k&gt;0\\)\nPayoffs: - If \\(N\\): offender \\(0\\); enforcer gets \\(-k\\) if inspecting, \\(0\\) otherwise. - If \\(C\\) and \\(I\\): offender caught \\(\\to -s\\); enforcer pays inspection cost \\(\\to -k\\). - If \\(C\\) and \\(\\bar I\\): offender succeeds \\(\\to b\\); enforcer suffers harm \\(\\to -h\\)."
+    "text": "Canonical setup\nOffender chooses \\(C\\) (crime) or \\(N\\) (no crime).\nEnforcer chooses \\(I\\) (inspect) or \\(\\bar I\\) (not inspect).\nParameters: - illegal gain if successful: \\(b&gt;0\\) - sanction if caught: \\(s&gt;0\\) - harm to enforcer if crime succeeds: \\(h&gt;0\\) - inspection cost: \\(k&gt;0\\)\nPayoffs: - If \\(N\\): offender \\(0\\); enforcer pays \\(-k\\) if inspecting, \\(0\\) otherwise. - If \\(C\\) and \\(I\\): offender caught \\(\\to -s\\); enforcer pays \\(-k\\). - If \\(C\\) and \\(\\bar I\\): offender succeeds \\(\\to b\\); enforcer suffers \\(-h\\)."
   },
   {
     "objectID": "criminology/notes/models/inspection-games.html#solved-equilibrium-mixed-strategies",
     "href": "criminology/notes/models/inspection-games.html#solved-equilibrium-mixed-strategies",
     "title": "Inspection games (deterrence & monitoring)",
     "section": "Solved equilibrium (mixed strategies)",
-    "text": "Solved equilibrium (mixed strategies)\nLet enforcer inspect with probability \\(q\\). Let offender commit crime with probability \\(p\\).\n\nStep 1: offender indifference\nExpected payoff from crime: \\[\n\\mathbb{E}[u_O(C)] = q(-s) + (1-q)b = b - q(b+s).\n\\] Indifference with \\(N\\) (payoff 0) gives: \\[\nb - q(b+s)=0 \\quad\\Rightarrow\\quad q^*=\\frac{b}{b+s}.\n\\]\n\n\nStep 2: enforcer indifference\nEnforcer payoff from inspecting: \\[\n\\mathbb{E}[u_E(I)] = -k\n\\] (since inspection cost is paid regardless of offender action)\nEnforcer payoff from not inspecting: \\[\n\\mathbb{E}[u_E(\\bar I)] = -ph.\n\\] Indifference gives: \\[\n-k=-ph \\quad\\Rightarrow\\quad p^*=\\frac{k}{h}.\n\\]\n\n\nConditions\nA true interior mixed equilibrium requires \\(0&lt;p^*&lt;1\\), i.e.: \\[\n0&lt;\\frac{k}{h}&lt;1 \\quad \\Leftrightarrow \\quad 0&lt;k&lt;h.\n\\]"
+    "text": "Solved equilibrium (mixed strategies)\nLet enforcer inspect with probability \\(q\\) and offender commit crime with probability \\(p\\).\n\nStep 1: offender indifference\n\\[\n\\mathbb{E}[u_O(C)] = q(-s) + (1-q)b = b - q(b+s).\n\\] Indifference with \\(N\\) (payoff 0) gives: \\[\nq^*=\\frac{b}{b+s}.\n\\]\n\n\nStep 2: enforcer indifference\nEnforcer payoff from inspecting: \\[\n\\mathbb{E}[u_E(I)] = -k\n\\] Enforcer payoff from not inspecting: \\[\n\\mathbb{E}[u_E(\\bar I)] = -ph.\n\\] Indifference yields: \\[\np^*=\\frac{k}{h}.\n\\]\nInterior mixing requires \\(0&lt;k&lt;h\\)."
   },
   {
-    "objectID": "criminology/notes/models/inspection-games.html#comparative-statics-predictions",
-    "href": "criminology/notes/models/inspection-games.html#comparative-statics-predictions",
+    "objectID": "criminology/notes/models/inspection-games.html#predictions-comparative-statics",
+    "href": "criminology/notes/models/inspection-games.html#predictions-comparative-statics",
     "title": "Inspection games (deterrence & monitoring)",
-    "section": "Comparative statics (predictions)",
-    "text": "Comparative statics (predictions)\n\nHigher sanctions \\(s\\) reduce the inspection probability needed for deterrence: \\(q^*=\\frac{b}{b+s}\\) decreases in \\(s\\).\nHigher illegal gain \\(b\\) increases required inspection intensity.\nHigher inspection cost \\(k\\) increases crime probability \\(p^*=k/h\\).\nHigher harm \\(h\\) decreases crime probability (enforcement becomes more willing to deter)."
+    "section": "Predictions (comparative statics)",
+    "text": "Predictions (comparative statics)\n\n\\(q^*\\) decreases in \\(s\\) and increases in \\(b\\).\n\\(p^*\\) increases in \\(k\\) and decreases in \\(h\\)."
   },
   {
-    "objectID": "criminology/notes/models/inspection-games.html#interpretation-and-links",
-    "href": "criminology/notes/models/inspection-games.html#interpretation-and-links",
+    "objectID": "criminology/notes/models/inspection-games.html#connections",
+    "href": "criminology/notes/models/inspection-games.html#connections",
     "title": "Inspection games (deterrence & monitoring)",
-    "section": "Interpretation and links",
-    "text": "Interpretation and links\n\nThis is the cleanest “deterrence as equilibrium” baseline.\nExtensions:\n\nmultiple crime types (substitution),\nheterogeneous offenders (concentration),\nreporting stage (endogenous detection),\ndynamic enforcement with learning."
+    "section": "Connections",
+    "text": "Connections\n\nMechanisms\n\nIncentives & deterrence → ../mechanisms/incentives-deterrence.qmd\nOpportunity & routine activity (affects \\(b\\) and effective \\(q\\)) → ../mechanisms/opportunity-routine.qmd\nLegitimacy & compliance (endogenous detection/reporting) → ../mechanisms/legitimacy-compliance.qmd\nSelf-control (perceived risk, present bias) → ../mechanisms/self-control.qmd\n\n\n\nInstitutions\n\nPolicing (monitoring allocation) → ../institutions/policing.qmd\nCorrections (supervision as monitoring) → ../institutions/corrections.qmd\n\n\n\nFoundations\n\nRecorded vs incidence (detection/reporting stages) → ../foundations/key-definitions.qmd"
+  },
+  {
+    "objectID": "criminology/notes/models/inspection-games.html#later-on-analysis",
+    "href": "criminology/notes/models/inspection-games.html#later-on-analysis",
+    "title": "Inspection games (deterrence & monitoring)",
+    "section": "Later-on analysis",
+    "text": "Later-on analysis\nExtensions: multiple crime types (substitution), heterogeneous offenders (concentration), reporting stages, dynamic learning."
   },
   {
     "objectID": "criminology/notes/models/allocation-dynamics.html",
     "href": "criminology/notes/models/allocation-dynamics.html",
     "title": "Allocation dynamics (hotspots and resource allocation)",
     "section": "",
-    "text": "Allocation models study how an enforcer distributes scarce resources across: - places (hotspots), - times, - tasks (patrol vs investigation), under uncertainty and strategic response."
+    "text": "Allocation models study how an enforcer distributes scarce resources across space and time, under uncertainty and strategic response."
   },
   {
     "objectID": "criminology/notes/models/allocation-dynamics.html#what-it-is",
     "href": "criminology/notes/models/allocation-dynamics.html#what-it-is",
     "title": "Allocation dynamics (hotspots and resource allocation)",
     "section": "",
-    "text": "Allocation models study how an enforcer distributes scarce resources across: - places (hotspots), - times, - tasks (patrol vs investigation), under uncertainty and strategic response."
+    "text": "Allocation models study how an enforcer distributes scarce resources across space and time, under uncertainty and strategic response."
   },
   {
-    "objectID": "criminology/notes/models/allocation-dynamics.html#canonical-two-location-allocation-static-baseline",
-    "href": "criminology/notes/models/allocation-dynamics.html#canonical-two-location-allocation-static-baseline",
+    "objectID": "criminology/notes/models/allocation-dynamics.html#canonical-two-location-baseline",
+    "href": "criminology/notes/models/allocation-dynamics.html#canonical-two-location-baseline",
     "title": "Allocation dynamics (hotspots and resource allocation)",
-    "section": "Canonical two-location allocation (static baseline)",
-    "text": "Canonical two-location allocation (static baseline)\nTwo locations \\(A\\) and \\(B\\) with latent crime intensities. Enforcer allocates patrol effort \\(e_A,e_B\\ge 0\\) with budget: \\[\ne_A + e_B \\le E.\n\\] Crime incidence in location \\(\\ell\\) is decreasing in effort: \\[\n\\lambda_\\ell(e_\\ell) \\downarrow\n\\] but offenders may substitute across locations.\nA simple equilibrium angle: - Offenders choose location with higher expected return (lower detection / higher opportunity). - Enforcer anticipates this and reallocates."
+    "section": "Canonical two-location baseline",
+    "text": "Canonical two-location baseline\nAllocate effort \\(e_A,e_B\\ge 0\\) with: \\[\ne_A + e_B \\le E.\n\\] Crime intensity in location \\(\\ell\\) decreases in effort: \\(\\lambda_\\ell(e_\\ell)\\downarrow\\), but offenders may substitute across locations."
   },
   {
-    "objectID": "criminology/notes/models/allocation-dynamics.html#dynamic-extension-why-dynamics-matters",
-    "href": "criminology/notes/models/allocation-dynamics.html#dynamic-extension-why-dynamics-matters",
+    "objectID": "criminology/notes/models/allocation-dynamics.html#why-dynamics-matters",
+    "href": "criminology/notes/models/allocation-dynamics.html#why-dynamics-matters",
     "title": "Allocation dynamics (hotspots and resource allocation)",
-    "section": "Dynamic extension (why “dynamics” matters)",
-    "text": "Dynamic extension (why “dynamics” matters)\nIn practice: - the enforcer learns where problems are (updating beliefs), - offenders adapt to allocation patterns, - recorded crime reflects both incidence and reporting.\nDynamic primitives: - belief state about each location’s intensity, - learning/updating rule, - adaptation rule for offenders, - objective function (harm reduction vs recorded metrics)."
+    "section": "Why dynamics matters",
+    "text": "Why dynamics matters\nIn practice: - the enforcer learns where problems are (updating beliefs), - offenders adapt to allocation patterns, - recorded crime reflects both incidence and reporting.\nDynamic primitives: - belief state about each location, - learning/updating, - offender adaptation, - objective function (harm vs recorded metrics)."
   },
   {
     "objectID": "criminology/notes/models/allocation-dynamics.html#predictions-qualitative",
     "href": "criminology/notes/models/allocation-dynamics.html#predictions-qualitative",
     "title": "Allocation dynamics (hotspots and resource allocation)",
     "section": "Predictions (qualitative)",
-    "text": "Predictions (qualitative)\n\nOptimal allocation often prioritizes “high marginal return” hotspots, but can create displacement if substitution is easy.\nLearning creates exploration–exploitation tradeoffs (patrol to learn vs patrol to deter).\nIf metrics reward recorded outcomes, incentives can distort allocation."
+    "text": "Predictions (qualitative)\n\nallocate to high marginal return hotspots, but displacement can occur when substitution is easy\nexploration–exploitation arises when learning is valuable\nmetrics can distort allocation if they reward recorded outcomes"
+  },
+  {
+    "objectID": "criminology/notes/models/allocation-dynamics.html#connections",
+    "href": "criminology/notes/models/allocation-dynamics.html#connections",
+    "title": "Allocation dynamics (hotspots and resource allocation)",
+    "section": "Connections",
+    "text": "Connections\n\nMechanisms\n\nOpportunity & routine activity (place-based returns) → ../mechanisms/opportunity-routine.qmd\nIncentives & deterrence (effort changes detection) → ../mechanisms/incentives-deterrence.qmd\nLegitimacy & compliance (signals via reporting) → ../mechanisms/legitimacy-compliance.qmd\n\n\n\nInstitutions\n\nPolicing (allocation and constraints) → ../institutions/policing.qmd\n\n\n\nModels\n\nReporting & trust (endogenous signals) → reporting-trust.qmd\nNetwork crime (spatial/network displacement) → network-crime.qmd\n\n\n\nFoundations\n\nUnits of analysis (place/time) → ../foundations/units-of-analysis.qmd"
   },
   {
     "objectID": "criminology/notes/models/allocation-dynamics.html#later-on-analysis",
     "href": "criminology/notes/models/allocation-dynamics.html#later-on-analysis",
     "title": "Allocation dynamics (hotspots and resource allocation)",
     "section": "Later-on analysis",
-    "text": "Later-on analysis\n\nConnect to network models (hotspots linked by mobility).\nConnect to reporting/trust (calls for service are endogenous signals).\nConnect to institutions: internal incentives and constraints."
+    "text": "Later-on analysis\nEmbed in networks; endogenize reporting; treat offenders as strategic agents with multiple crime types and substitution."
   },
   {
     "objectID": "criminology/notes/models/reporting-trust.html",
     "href": "criminology/notes/models/reporting-trust.html",
     "title": "Reporting & trust (legitimacy and cooperation)",
     "section": "",
-    "text": "Many crime outcomes depend on whether victims/witnesses: - report incidents, - cooperate with investigation.\nLegitimacy/trust affects reporting and cooperation, which affects detection and deterrence."
+    "text": "Many outcomes depend on whether victims/witnesses: - report incidents, - cooperate with investigation.\nLegitimacy and trust affect reporting, which affects detection and deterrence."
   },
   {
     "objectID": "criminology/notes/models/reporting-trust.html#what-it-is",
     "href": "criminology/notes/models/reporting-trust.html#what-it-is",
     "title": "Reporting & trust (legitimacy and cooperation)",
     "section": "",
-    "text": "Many crime outcomes depend on whether victims/witnesses: - report incidents, - cooperate with investigation.\nLegitimacy/trust affects reporting and cooperation, which affects detection and deterrence."
+    "text": "Many outcomes depend on whether victims/witnesses: - report incidents, - cooperate with investigation.\nLegitimacy and trust affect reporting, which affects detection and deterrence."
   },
   {
-    "objectID": "criminology/notes/models/reporting-trust.html#canonical-setup-three-stage",
-    "href": "criminology/notes/models/reporting-trust.html#canonical-setup-three-stage",
+    "objectID": "criminology/notes/models/reporting-trust.html#canonical-three-stage-setup",
+    "href": "criminology/notes/models/reporting-trust.html#canonical-three-stage-setup",
     "title": "Reporting & trust (legitimacy and cooperation)",
-    "section": "Canonical setup (three-stage)",
-    "text": "Canonical setup (three-stage)\n\nOffender chooses \\(C\\) or \\(N\\).\nIf \\(C\\), victim decides report \\(R\\) or not \\(\\bar R\\).\nIf report, police choose effort \\(e\\in\\{0,1\\}\\) (low/high). Detection occurs with probability: \\[\nq = q_0 + \\alpha e\n\\] with \\(q_0\\in(0,1)\\), \\(\\alpha&gt;0\\), and \\(q\\le 1\\).\n\nVictim reporting has cost \\(c_R&gt;0\\).\nVictim benefit from successful detection is \\(B&gt;0\\) (justice, safety).\nPolice effort cost is \\(k&gt;0\\).\nLegitimacy/trust parameter \\(L\\) increases perceived benefit (or reduces reporting cost). Use: \\[\nB(L)=B_0 + \\lambda L,\\quad \\lambda&gt;0.\n\\]"
-  },
-  {
-    "objectID": "criminology/notes/models/reporting-trust.html#solving-the-victim-decision-threshold",
-    "href": "criminology/notes/models/reporting-trust.html#solving-the-victim-decision-threshold",
-    "title": "Reporting & trust (legitimacy and cooperation)",
-    "section": "Solving the victim decision (threshold)",
-    "text": "Solving the victim decision (threshold)\nIf crime occurs and victim anticipates police effort choice \\(e\\), expected benefit from reporting: \\[\n\\text{Benefit} = q \\cdot B(L) = (q_0+\\alpha e)\\,B(L).\n\\] Victim reports iff: \\[\n(q_0+\\alpha e)\\,B(L) \\ge c_R.\n\\]\nThis yields a threshold legitimacy level \\(L^*\\) when \\(B(L)\\) is linear: \\[\n(q_0+\\alpha e)(B_0+\\lambda L)\\ge c_R\n\\quad\\Rightarrow\\quad\nL \\ge \\frac{c_R}{\\lambda(q_0+\\alpha e)} - \\frac{B_0}{\\lambda}.\n\\]"
+    "section": "Canonical three-stage setup",
+    "text": "Canonical three-stage setup\n\nOffender chooses \\(C\\) or \\(N\\).\nIf \\(C\\), victim chooses report \\(R\\) or not \\(\\bar R\\).\nIf report, police choose effort \\(e\\in\\{0,1\\}\\) and detection probability is: \\[\nq = q_0 + \\alpha e,\\quad q\\le 1,\n\\] with \\(q_0\\in(0,1)\\) and \\(\\alpha&gt;0\\).\n\nReporting cost: \\(c_R&gt;0\\).\nVictim benefit from detection: \\(B(L)=B_0+\\lambda L\\) with \\(\\lambda&gt;0\\).\nVictim reports iff: \\[\n(q_0+\\alpha e)B(L) \\ge c_R.\n\\]\nThreshold: \\[\nL \\ge \\frac{c_R}{\\lambda(q_0+\\alpha e)} - \\frac{B_0}{\\lambda}.\n\\]"
   },
   {
     "objectID": "criminology/notes/models/reporting-trust.html#interpretation",
     "href": "criminology/notes/models/reporting-trust.html#interpretation",
     "title": "Reporting & trust (legitimacy and cooperation)",
     "section": "Interpretation",
-    "text": "Interpretation\n\nHigher legitimacy \\(L\\) increases reporting.\nHigher police effort effectiveness \\(\\alpha\\) increases the value of reporting (complements).\nIf legitimacy rises, recorded crime may rise (more reporting) even if incidence falls."
+    "text": "Interpretation\n\nHigher legitimacy increases reporting.\nReporting can increase recorded crime even if incidence is unchanged.\nDeterrence can strengthen via higher anticipated detection."
   },
   {
-    "objectID": "criminology/notes/models/reporting-trust.html#linking-back-to-deterrence",
-    "href": "criminology/notes/models/reporting-trust.html#linking-back-to-deterrence",
+    "objectID": "criminology/notes/models/reporting-trust.html#connections",
+    "href": "criminology/notes/models/reporting-trust.html#connections",
     "title": "Reporting & trust (legitimacy and cooperation)",
-    "section": "Linking back to deterrence",
-    "text": "Linking back to deterrence\nIf offenders anticipate higher reporting and higher detection, the expected cost of crime rises: deterrence can strengthen without changing formal sanctions."
+    "section": "Connections",
+    "text": "Connections\n\nMechanisms\n\nLegitimacy, trust & compliance → ../mechanisms/legitimacy-compliance.qmd\nIncentives & deterrence (expected costs) → ../mechanisms/incentives-deterrence.qmd\nInequality & trust (social capital channel) → ../mechanisms/inequality-trust.qmd\n\n\n\nInstitutions\n\nPolicing (effort/capacity) → ../institutions/policing.qmd\nCourts (processing after reporting) → ../institutions/courts.qmd\n\n\n\nFoundations\n\nIncidence vs recorded outcomes → ../foundations/key-definitions.qmd"
   },
   {
     "objectID": "criminology/notes/models/reporting-trust.html#later-on-analysis",
     "href": "criminology/notes/models/reporting-trust.html#later-on-analysis",
     "title": "Reporting & trust (legitimacy and cooperation)",
     "section": "Later-on analysis",
-    "text": "Later-on analysis\n\nAllow police effort \\(e\\) to depend on workload/capacity.\nAdd strategic police incentives (recording vs clearance metrics).\nAdd offender adaptation (switch to low-reporting offenses)."
+    "text": "Later-on analysis\nEndogenize police effort with workload; add strategic incentives; add retaliation/fear costs to reporting."
   },
   {
     "objectID": "criminology/notes/models/co-offending-games.html",
     "href": "criminology/notes/models/co-offending-games.html",
     "title": "Co-offending games (coordination and betrayal)",
     "section": "",
-    "text": "Co-offending can be modeled as a coordination/trust problem: - acting in a group can increase returns or reduce risk, - but introduces betrayal risk and coordination failure."
+    "text": "Co-offending can be modeled as a coordination/trust problem: - group action increases returns or reduces risk, - but creates betrayal and coordination failure risks."
   },
   {
     "objectID": "criminology/notes/models/co-offending-games.html#what-it-is",
     "href": "criminology/notes/models/co-offending-games.html#what-it-is",
     "title": "Co-offending games (coordination and betrayal)",
     "section": "",
-    "text": "Co-offending can be modeled as a coordination/trust problem: - acting in a group can increase returns or reduce risk, - but introduces betrayal risk and coordination failure."
+    "text": "Co-offending can be modeled as a coordination/trust problem: - group action increases returns or reduces risk, - but creates betrayal and coordination failure risks."
   },
   {
-    "objectID": "criminology/notes/models/co-offending-games.html#canonical-setup-stag-hunt-style",
-    "href": "criminology/notes/models/co-offending-games.html#canonical-setup-stag-hunt-style",
+    "objectID": "criminology/notes/models/co-offending-games.html#canonical-stag-hunt-setup",
+    "href": "criminology/notes/models/co-offending-games.html#canonical-stag-hunt-setup",
     "title": "Co-offending games (coordination and betrayal)",
-    "section": "Canonical setup (stag-hunt style)",
-    "text": "Canonical setup (stag-hunt style)\nTwo potential offenders choose: - Join (\\(J\\)) a co-offense plan, or - Stay out (\\(O\\)).\nIf both join: successful group offense yields payoff \\(G&gt;0\\) each, but increases exposure risk (netted into \\(G\\)).\nIf one joins alone: payoff is \\(-d&lt;0\\) (fails / gets exposed).\nIf stay out: payoff is \\(0\\).\nPayoff matrix for each player: - \\((J,J)\\): \\((G,G)\\) - \\((J,O)\\) or \\((O,J)\\): joiner gets \\(-d\\), other gets \\(0\\) - \\((O,O)\\): \\((0,0)\\)"
+    "section": "Canonical stag-hunt setup",
+    "text": "Canonical stag-hunt setup\nTwo agents choose Join (\\(J\\)) or Stay out (\\(O\\)).\n\nIf both join: \\((J,J)\\) yields \\(G&gt;0\\) each.\nIf one joins alone: joiner gets \\(-d&lt;0\\), other gets \\(0\\).\nIf both stay out: \\((0,0)\\)."
   },
   {
     "objectID": "criminology/notes/models/co-offending-games.html#equilibria",
     "href": "criminology/notes/models/co-offending-games.html#equilibria",
     "title": "Co-offending games (coordination and betrayal)",
     "section": "Equilibria",
-    "text": "Equilibria\nBest responses: - If the other joins, joining gives \\(G&gt;0\\) which beats \\(0\\) → join is best response. - If the other stays out, joining gives \\(-d&lt;0\\) → staying out is best response.\nSo there are two pure Nash equilibria: - \\((J,J)\\) (high-crime coordination) - \\((O,O)\\) (low-crime coordination)"
+    "text": "Equilibria\nTwo pure Nash equilibria: - \\((J,J)\\) (high-participation) - \\((O,O)\\) (low-participation)\nInterpretation: co-offending can be self-reinforcing; small shifts in risk/coordination can change equilibrium selection."
   },
   {
-    "objectID": "criminology/notes/models/co-offending-games.html#interpretation",
-    "href": "criminology/notes/models/co-offending-games.html#interpretation",
+    "objectID": "criminology/notes/models/co-offending-games.html#connections",
+    "href": "criminology/notes/models/co-offending-games.html#connections",
     "title": "Co-offending games (coordination and betrayal)",
-    "section": "Interpretation",
-    "text": "Interpretation\n\nCo-offending can be self-reinforcing: once a network expects participation, joining is rational.\nInterventions that increase perceived downside \\(d\\) (risk of betrayal, detection) can shift equilibrium selection toward \\((O,O)\\).\nNetwork structure matters: local coordination can sustain pockets of \\((J,J)\\)."
+    "section": "Connections",
+    "text": "Connections\n\nMechanisms\n\nSocial interactions & networks → ../mechanisms/social-interactions.qmd\nSelf-control (impulsivity, myopia) → ../mechanisms/self-control.qmd\nInequality & outside options → ../mechanisms/inequality-trust.qmd\n\n\n\nInstitutions\n\nPolicing (disruption, informants) → ../institutions/policing.qmd\nCorrections (disrupting networks, reentry) → ../institutions/corrections.qmd\n\n\n\nModels\n\nNetwork crime (diffusion, complements) → network-crime.qmd"
   },
   {
     "objectID": "criminology/notes/models/co-offending-games.html#later-on-analysis",
     "href": "criminology/notes/models/co-offending-games.html#later-on-analysis",
     "title": "Co-offending games (coordination and betrayal)",
     "section": "Later-on analysis",
-    "text": "Later-on analysis\n\nAdd asymmetric roles (leader/follower), monitoring within the group, betrayal incentives.\nEmbed in networks to explain clustering and diffusion."
+    "text": "Later-on analysis\nAdd asymmetric roles, betrayal incentives, repeated interaction, and embedded networks."
   },
   {
     "objectID": "criminology/notes/foundations/units-of-analysis.html",

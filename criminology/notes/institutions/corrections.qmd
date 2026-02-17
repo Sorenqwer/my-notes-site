@@ -22,19 +22,14 @@ Academic analysis separates three channels:
 
 ## Institutional primitives (what to model)
 ### A) Dynamic states
-Let a person’s state include:
-- employability/human capital,
-- stigma/record,
-- network exposure,
-- addiction/mental health constraints.
-
+Let a person’s state include employability, stigma/record, network exposure, addiction constraints.  
 Punishment can shift these states (positively or negatively).
 
 ### B) Supervision as monitoring
 Probation/parole can be modeled as:
-- a monitoring probability,
-- a rule system (violations),
-- and sanctions for violation.
+- monitoring probability,
+- rule system (violations),
+- sanctions for violation.
 
 ### C) Capacity constraints
 Crowding, budgets, and staff ratios matter for rehabilitation quality and supervision.
@@ -46,13 +41,23 @@ Crowding, budgets, and staff ratios matter for rehabilitation quality and superv
 2) **Monitoring games** (supervision as inspection)  
 3) **Stigma/labeling dynamics** (system contact changes outside options)
 
-(Links)
-- Life-course dynamics mechanism → `../mechanisms/life-course.qmd`
-- Labeling & stigma → `../mechanisms/labeling-stigma.qmd`
-- Allocation dynamics (resources) → `../models/allocation-dynamics.qmd`
+---
+
+## Connections (where to go next)
+### Mechanisms
+- Life-course dynamics → `../mechanisms/life-course.qmd`
+- Labeling, stigma & system contact → `../mechanisms/labeling-stigma.qmd`
+- Self-control / present bias (short-run temptation) → `../mechanisms/self-control.qmd`
+- Inequality & outside options (reentry constraints) → `../mechanisms/inequality-trust.qmd`
+
+### Models
+- Inspection games (monitoring) → `../models/inspection-games.qmd`
+- Allocation dynamics (capacity constraints) → `../models/allocation-dynamics.qmd`
+
+### Foundations
+- Units of analysis (person vs institution) → `../foundations/units-of-analysis.qmd`
 
 ---
 
 ## Later-on analysis
-For a theory-first program, corrections is where “static deterrence” becomes **dynamic**:
-policies can reduce crime today yet worsen future states (or the opposite).
+Corrections is where static deterrence becomes dynamic: policies can reduce crime today yet worsen (or improve) future states.

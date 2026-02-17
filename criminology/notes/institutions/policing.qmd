@@ -9,12 +9,12 @@ This page treats policing as an institution with:
 - **constraints** (budget, staffing, information),
 - **strategic interactions** (offender adaptation, community cooperation).
 
-The aim is not a program-evaluation catalogue, but an academic map of how policing is analyzed.
+The aim is an academic map of how policing is analyzed, not a program-evaluation catalogue.
 
 ---
 
 ## Core research questions
-- How does police presence/effort change offending (deterrence) vs recorded outcomes (reporting/recording)?
+- How does police presence/effort change **incidence** vs **recorded** outcomes (reporting/recording)?
 - How should scarce resources be allocated across places and times (hotspots, patrol allocation)?
 - How does legitimacy affect cooperation (reporting, witnessing), and thereby detection?
 
@@ -31,17 +31,17 @@ Policing is constrained: effort must be allocated across:
 Police learn from:
 - calls for service (endogenous reporting),
 - observed incidents,
-- intelligence networks,
+- intelligence,
 - past allocation outcomes.
 
 ### C) Performance measures and incentives
 Observed metrics may include:
 - recorded crime rates,
-- arrest/clearance rates,
+- arrests/clearance rates,
 - response times,
-- complaint rates.
+- complaints.
 
-These metrics can shape behavior (sometimes away from welfare-maximizing choices).
+These metrics can shape agency behavior (sometimes away from welfare-maximizing choices).
 
 ---
 
@@ -63,29 +63,35 @@ Reporting and witness cooperation are endogenous and depend on:
 ---
 
 ## Canonical modeling approaches
-1) **Inspection / deterrence games** (monitoring vs offending)  
-2) **Spatial equilibrium models** (offenders choose locations; police allocate patrol)  
-3) **Dynamic allocation** (learning, updating beliefs, two-period/multi-period allocation)  
-4) **Reporting & trust games** (victims decide to report; police decide effort; offenders anticipate)
-
-(Links)
-- Inspection games → `../models/inspection-games.qmd`
-- Allocation dynamics → `../models/allocation-dynamics.qmd`
-- Reporting & trust → `../models/reporting-trust.qmd`
+1) **Inspection/deterrence** (monitoring vs offending)  
+2) **Spatial equilibrium** (offenders choose locations; police allocate patrol)  
+3) **Dynamic allocation** (learning, belief-updating, capacity constraints)  
+4) **Reporting & trust** (victims decide to report; police decide effort; offenders anticipate)
 
 ---
 
-## What counts as evidence? (conceptual)
-Policing claims typically require separating:
-- incidence vs recorded crime,
-- police response vs underlying trends,
-- short-run deterrence vs long-run adaptation.
+## Connections (where to go next)
+### Mechanisms
+- Incentives & deterrence → `../mechanisms/incentives-deterrence.qmd`
+- Opportunity & routine activity → `../mechanisms/opportunity-routine.qmd`
+- Legitimacy, trust & compliance → `../mechanisms/legitimacy-compliance.qmd`
+- Social interactions & networks → `../mechanisms/social-interactions.qmd`
+
+### Models
+- Inspection games → `../models/inspection-games.qmd`
+- Reporting & trust → `../models/reporting-trust.qmd`
+- Allocation dynamics (hotspots) → `../models/allocation-dynamics.qmd`
+- Network crime (diffusion) → `../models/network-crime.qmd`
+
+### Foundations
+- Definitions: recorded vs incidence → `../foundations/key-definitions.qmd`
+- Units of analysis: place vs network → `../foundations/units-of-analysis.qmd`
 
 ---
 
 ## Later-on analysis
-A clean theory program often writes policing as a player with:
-- a budget constraint,
-- an allocation decision,
-- an outcome function (detection, harm),
-- and a legitimacy/cooperation channel.
+A theory-first program often treats policing as a player with:
+- budget constraint,
+- allocation decision,
+- outcome function (detection/harm),
+- legitimacy/cooperation channel.

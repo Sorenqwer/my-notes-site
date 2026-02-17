@@ -4,66 +4,59 @@ toc: true
 ---
 
 ## What it is
-Many crime outcomes depend on whether victims/witnesses:
+Many outcomes depend on whether victims/witnesses:
 - report incidents,
 - cooperate with investigation.
 
-Legitimacy/trust affects reporting and cooperation, which affects detection and deterrence.
+Legitimacy and trust affect reporting, which affects detection and deterrence.
 
 ---
 
-## Canonical setup (three-stage)
+## Canonical three-stage setup
 1) Offender chooses $C$ or $N$.
-2) If $C$, victim decides report $R$ or not $\bar R$.
-3) If report, police choose effort $e\in\{0,1\}$ (low/high). Detection occurs with probability:
+2) If $C$, victim chooses report $R$ or not $\bar R$.
+3) If report, police choose effort $e\in\{0,1\}$ and detection probability is:
 $$
-q = q_0 + \alpha e
+q = q_0 + \alpha e,\quad q\le 1,
 $$
-with $q_0\in(0,1)$, $\alpha>0$, and $q\le 1$.
+with $q_0\in(0,1)$ and $\alpha>0$.
 
-Victim reporting has cost $c_R>0$.  
-Victim benefit from successful detection is $B>0$ (justice, safety).  
-Police effort cost is $k>0$.  
-Legitimacy/trust parameter $L$ increases perceived benefit (or reduces reporting cost). Use:
-$$
-B(L)=B_0 + \lambda L,\quad \lambda>0.
-$$
+Reporting cost: $c_R>0$.  
+Victim benefit from detection: $B(L)=B_0+\lambda L$ with $\lambda>0$.
 
----
-
-## Solving the victim decision (threshold)
-If crime occurs and victim anticipates police effort choice $e$, expected benefit from reporting:
-$$
-\text{Benefit} = q \cdot B(L) = (q_0+\alpha e)\,B(L).
-$$
 Victim reports iff:
 $$
-(q_0+\alpha e)\,B(L) \ge c_R.
+(q_0+\alpha e)B(L) \ge c_R.
 $$
 
-This yields a threshold legitimacy level $L^*$ when $B(L)$ is linear:
+Threshold:
 $$
-(q_0+\alpha e)(B_0+\lambda L)\ge c_R
-\quad\Rightarrow\quad
 L \ge \frac{c_R}{\lambda(q_0+\alpha e)} - \frac{B_0}{\lambda}.
 $$
 
 ---
 
 ## Interpretation
-- Higher legitimacy $L$ increases reporting.
-- Higher police effort effectiveness $\alpha$ increases the value of reporting (complements).
-- If legitimacy rises, **recorded crime may rise** (more reporting) even if incidence falls.
+- Higher legitimacy increases reporting.
+- Reporting can increase recorded crime even if incidence is unchanged.
+- Deterrence can strengthen via higher anticipated detection.
 
 ---
 
-## Linking back to deterrence
-If offenders anticipate higher reporting and higher detection, the expected cost of crime rises:
-deterrence can strengthen without changing formal sanctions.
+## Connections
+### Mechanisms
+- Legitimacy, trust & compliance → `../mechanisms/legitimacy-compliance.qmd`
+- Incentives & deterrence (expected costs) → `../mechanisms/incentives-deterrence.qmd`
+- Inequality & trust (social capital channel) → `../mechanisms/inequality-trust.qmd`
+
+### Institutions
+- Policing (effort/capacity) → `../institutions/policing.qmd`
+- Courts (processing after reporting) → `../institutions/courts.qmd`
+
+### Foundations
+- Incidence vs recorded outcomes → `../foundations/key-definitions.qmd`
 
 ---
 
 ## Later-on analysis
-- Allow police effort $e$ to depend on workload/capacity.
-- Add strategic police incentives (recording vs clearance metrics).
-- Add offender adaptation (switch to low-reporting offenses).
+Endogenize police effort with workload; add strategic incentives; add retaliation/fear costs to reporting.

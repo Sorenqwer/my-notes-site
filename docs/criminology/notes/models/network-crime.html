@@ -156,8 +156,14 @@ window.Quarto = {
    
   <ul>
   <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
-  <li><a href="#canonical-linear-quadratic-network-game-template" id="toc-canonical-linear-quadratic-network-game-template" class="nav-link" data-scroll-target="#canonical-linear-quadratic-network-game-template">Canonical linear-quadratic network game (template)</a></li>
+  <li><a href="#canonical-linear-quadratic-network-game" id="toc-canonical-linear-quadratic-network-game" class="nav-link" data-scroll-target="#canonical-linear-quadratic-network-game">Canonical linear-quadratic network game</a></li>
   <li><a href="#predictions-qualitative" id="toc-predictions-qualitative" class="nav-link" data-scroll-target="#predictions-qualitative">Predictions (qualitative)</a></li>
+  <li><a href="#connections" id="toc-connections" class="nav-link" data-scroll-target="#connections">Connections</a>
+  <ul class="collapse">
+  <li><a href="#mechanisms" id="toc-mechanisms" class="nav-link" data-scroll-target="#mechanisms">Mechanisms</a></li>
+  <li><a href="#institutions" id="toc-institutions" class="nav-link" data-scroll-target="#institutions">Institutions</a></li>
+  <li><a href="#models" id="toc-models" class="nav-link" data-scroll-target="#models">Models</a></li>
+  </ul></li>
   <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
   </ul>
 </nav>
@@ -186,44 +192,60 @@ window.Quarto = {
 
 <section id="what-it-is" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
-<p>Network models study how behavior depends on peers and connections: - peer influence and learning, - diffusion of tactics, - complementarities (my payoff rises when neighbors participate).</p>
+<p>Network models study how behavior depends on peers and connections: learning, diffusion, and strategic complementarities.</p>
 <hr>
 </section>
-<section id="canonical-linear-quadratic-network-game-template" class="level2">
-<h2 class="anchored" data-anchor-id="canonical-linear-quadratic-network-game-template">Canonical linear-quadratic network game (template)</h2>
-<p>Let each agent <span class="math inline">\(i\)</span> choose participation level <span class="math inline">\(x_i\ge 0\)</span>. Utility: <span class="math display">\[
-u_i(x)= a_i x_i - \frac{1}{2}x_i^2 + \beta x_i \sum_j g_{ij}x_j,
-\]</span> where: - <span class="math inline">\(a_i\)</span> is an individual incentive term (outside option, opportunities), - <span class="math inline">\(g_{ij}\)</span> is the network adjacency/weight matrix, - <span class="math inline">\(\beta\)</span> measures strategic complementarity.</p>
-<p>Best response (FOC): <span class="math display">\[
-a_i - x_i + \beta \sum_j g_{ij}x_j = 0
-\quad\Rightarrow\quad
+<section id="canonical-linear-quadratic-network-game" class="level2">
+<h2 class="anchored" data-anchor-id="canonical-linear-quadratic-network-game">Canonical linear-quadratic network game</h2>
+<p>Agent <span class="math inline">\(i\)</span> chooses <span class="math inline">\(x_i\ge 0\)</span> and: <span class="math display">\[
+u_i(x)= a_i x_i - \frac{1}{2}x_i^2 + \beta x_i \sum_j g_{ij}x_j.
+\]</span></p>
+<p>Best response: <span class="math display">\[
 x_i = a_i + \beta \sum_j g_{ij}x_j.
 \]</span></p>
-<p>In vector form: <span class="math display">\[
-x = a + \beta Gx
-\quad\Rightarrow\quad
-(I-\beta G)x = a
-\quad\Rightarrow\quad
+<p>Vector form: <span class="math display">\[
 x = (I-\beta G)^{-1}a
-\]</span> when <span class="math inline">\((I-\beta G)\)</span> is invertible (e.g., <span class="math inline">\(\beta\)</span> small enough).</p>
+\]</span> when invertible.</p>
 <hr>
 </section>
 <section id="predictions-qualitative" class="level2">
 <h2 class="anchored" data-anchor-id="predictions-qualitative">Predictions (qualitative)</h2>
 <ul>
-<li>Shocks to incentives <span class="math inline">\(a_i\)</span> propagate through the network (“multiplier” effect).</li>
-<li>Targeting central nodes can have outsized effects.</li>
-<li>Strong complements (<span class="math inline">\(\beta\)</span> high) can generate large clustering and persistence.</li>
+<li>shocks to incentives propagate through a network multiplier</li>
+<li>targeting central nodes has outsized effects</li>
+<li>strong complements generate clustering and persistence</li>
 </ul>
 <hr>
 </section>
+<section id="connections" class="level2">
+<h2 class="anchored" data-anchor-id="connections">Connections</h2>
+<section id="mechanisms" class="level3">
+<h3 class="anchored" data-anchor-id="mechanisms">Mechanisms</h3>
+<ul>
+<li>Social interactions &amp; networks → <code>../mechanisms/social-interactions.qmd</code></li>
+<li>Inequality &amp; trust (shifts <span class="math inline">\(a_i\)</span>) → <code>../mechanisms/inequality-trust.qmd</code></li>
+<li>Opportunity (local environment enters <span class="math inline">\(a_i\)</span>) → <code>../mechanisms/opportunity-routine.qmd</code></li>
+</ul>
+</section>
+<section id="institutions" class="level3">
+<h3 class="anchored" data-anchor-id="institutions">Institutions</h3>
+<ul>
+<li>Policing (targeting, disruption) → <code>../institutions/policing.qmd</code></li>
+<li>Corrections (network disruption and reentry) → <code>../institutions/corrections.qmd</code></li>
+</ul>
+</section>
+<section id="models" class="level3">
+<h3 class="anchored" data-anchor-id="models">Models</h3>
+<ul>
+<li>Co-offending games → <code>co-offending-games.qmd</code></li>
+<li>Allocation dynamics → <code>allocation-dynamics.qmd</code></li>
+</ul>
+<hr>
+</section>
+</section>
 <section id="later-on-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
-<ul>
-<li>Add enforcement targeted by network position.</li>
-<li>Add diffusion/learning dynamics (time-varying <span class="math inline">\(a_i\)</span> and beliefs).</li>
-<li>Link to co-offending equilibrium selection.</li>
-</ul>
+<p>Add enforcement targeted by network position; add diffusion dynamics; add endogenous network formation/sorting.</p>
 
 
 </section>

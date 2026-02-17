@@ -5,25 +5,25 @@ toc: true
 
 ## Scope
 Courts convert suspected offending into formal outcomes: charges, pleas/trials, and sentences.  
-Academic analysis focuses on **information, bargaining, discretion, and incentives**.
+Academic analysis emphasizes **information, bargaining, discretion, incentives, and selection**.
 
 ---
 
 ## Core research questions
 - How do prosecutors and defendants bargain under asymmetric information?
 - How do plea offers trade off certainty vs severity (and trial costs)?
-- Where can disparities arise (discretion, bargaining power, information gaps)?
+- Where do disparities arise (discretion, bargaining power, information gaps)?
 
 ---
 
 ## Institutional primitives (what to model)
 ### A) Actors and payoffs
-- Prosecutor: conviction/sentence objectives, workload, trial cost.
-- Defendant: expected sentence, risk preferences, legal costs, collateral consequences.
+- Prosecutor: sentencing/conviction objectives, workload, trial cost.
+- Defendant: expected sentence, risk attitudes, legal costs, collateral consequences.
 
 ### B) Information
-- Strength of evidence, probability of conviction, defendant type (risk, priors).
-- Observability differs across parties → classic asymmetric information.
+- Strength of evidence, conviction probability, defendant type (risk, priors).
+- Observability differs across parties → asymmetric information.
 
 ### C) Process
 Charging → plea offer(s) → accept/reject → trial → sentencing.
@@ -31,25 +31,34 @@ Charging → plea offer(s) → accept/reject → trial → sentencing.
 ---
 
 ## Canonical theoretical lenses
-1) **Bargaining models** (Nash bargaining, Rubinstein bargaining variants)
-2) **Screening/signaling** (plea offers as screening device)
-3) **Mechanism design** (rules shaping incentives and revelation)
-4) **Dynamic reputation** (repeat players: prosecutors, defense counsel)
-
-(Links)
-- Plea bargaining model → `../models/plea-bargaining.qmd`
+1) **Bargaining** (Nash/Rubinstein variants)  
+2) **Screening/signaling** (plea offers as screening devices)  
+3) **Mechanism design** (rules shaping incentives and revelation)  
+4) **Selection into trial** (observed trials are endogenously chosen)
 
 ---
 
 ## Key conceptual distinctions
-- **Case strength vs outcomes**: observed plea rates can reflect bargaining under uncertainty, not only guilt.
-- **Selection into trial**: trials are not random; they are chosen endogenously.
-- **Sentencing severity vs certainty**: deterrence can operate through either margin.
+- **Case strength vs outcomes**: plea rates reflect bargaining under uncertainty, not only guilt.
+- **Selection into trial**: trials are not random; they are selected.
+- **Severity vs certainty**: deterrence can operate through either margin.
+
+---
+
+## Connections (where to go next)
+### Mechanisms
+- Incentives & deterrence (certainty vs severity) → `../mechanisms/incentives-deterrence.qmd`
+- Labeling & stigma (collateral consequences) → `../mechanisms/labeling-stigma.qmd`
+- Life-course dynamics (dynamic effects of conviction) → `../mechanisms/life-course.qmd`
+
+### Models
+- Plea bargaining (screening) → `../models/plea-bargaining.qmd`
+
+### Foundations
+- Recorded outcomes vs behavior → `../foundations/key-definitions.qmd`
 
 ---
 
 ## Later-on analysis
-A theory-first approach can treat the court system as:
-- a bargaining stage under asymmetric information,
-- with selection and signaling,
-- embedded in a broader deterrence equilibrium.
+A clean theory-first approach embeds the court stage inside a broader system:
+bargaining affects expected punishment, which affects offending, reporting, and enforcement incentives.

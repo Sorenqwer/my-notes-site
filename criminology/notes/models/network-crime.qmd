@@ -5,50 +5,51 @@ toc: true
 
 ## What it is
 Network models study how behavior depends on peers and connections:
-- peer influence and learning,
-- diffusion of tactics,
-- complementarities (my payoff rises when neighbors participate).
+learning, diffusion, and strategic complementarities.
 
 ---
 
-## Canonical linear-quadratic network game (template)
-Let each agent $i$ choose participation level $x_i\ge 0$.
-Utility:
+## Canonical linear-quadratic network game
+Agent $i$ chooses $x_i\ge 0$ and:
 $$
-u_i(x)= a_i x_i - \frac{1}{2}x_i^2 + \beta x_i \sum_j g_{ij}x_j,
+u_i(x)= a_i x_i - \frac{1}{2}x_i^2 + \beta x_i \sum_j g_{ij}x_j.
 $$
-where:
-- $a_i$ is an individual incentive term (outside option, opportunities),
-- $g_{ij}$ is the network adjacency/weight matrix,
-- $\beta$ measures strategic complementarity.
 
-Best response (FOC):
+Best response:
 $$
-a_i - x_i + \beta \sum_j g_{ij}x_j = 0
-\quad\Rightarrow\quad
 x_i = a_i + \beta \sum_j g_{ij}x_j.
 $$
 
-In vector form:
+Vector form:
 $$
-x = a + \beta Gx
-\quad\Rightarrow\quad
-(I-\beta G)x = a
-\quad\Rightarrow\quad
 x = (I-\beta G)^{-1}a
 $$
-when $(I-\beta G)$ is invertible (e.g., $\beta$ small enough).
+when invertible.
 
 ---
 
 ## Predictions (qualitative)
-- Shocks to incentives $a_i$ propagate through the network (“multiplier” effect).
-- Targeting central nodes can have outsized effects.
-- Strong complements ($\beta$ high) can generate large clustering and persistence.
+- shocks to incentives propagate through a network multiplier
+- targeting central nodes has outsized effects
+- strong complements generate clustering and persistence
+
+---
+
+## Connections
+### Mechanisms
+- Social interactions & networks → `../mechanisms/social-interactions.qmd`
+- Inequality & trust (shifts $a_i$) → `../mechanisms/inequality-trust.qmd`
+- Opportunity (local environment enters $a_i$) → `../mechanisms/opportunity-routine.qmd`
+
+### Institutions
+- Policing (targeting, disruption) → `../institutions/policing.qmd`
+- Corrections (network disruption and reentry) → `../institutions/corrections.qmd`
+
+### Models
+- Co-offending games → `co-offending-games.qmd`
+- Allocation dynamics → `allocation-dynamics.qmd`
 
 ---
 
 ## Later-on analysis
-- Add enforcement targeted by network position.
-- Add diffusion/learning dynamics (time-varying $a_i$ and beliefs).
-- Link to co-offending equilibrium selection.
+Add enforcement targeted by network position; add diffusion dynamics; add endogenous network formation/sorting.

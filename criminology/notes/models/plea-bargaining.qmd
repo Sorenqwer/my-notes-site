@@ -4,76 +4,68 @@ toc: true
 ---
 
 ## What it is
-Plea bargaining is modeled as bargaining under uncertainty:
+Plea bargaining is bargaining under uncertainty:
 - prosecutor offers a plea sentence,
 - defendant accepts or goes to trial,
 - trial outcomes are uncertain and costly.
 
-A core academic theme: **selection into trial** and **asymmetric information**.
+A core theme is **selection into trial**.
 
 ---
 
 ## Canonical setup (two types)
 Defendant type $\theta\in\{L,H\}$ with prior $\Pr(H)=\pi$.
-Type affects probability of conviction at trial:
-- $\Pr(\text{conviction}|\theta=L)=p_L$
-- $\Pr(\text{conviction}|\theta=H)=p_H$
-with $0<p_L<p_H<1$.
+Type affects conviction probability:
+$0<p_L<p_H<1$.
 
 Trial sentence if convicted: $T>0$.  
-Prosecutor offers plea sentence $x$ (certain if accepted).  
-Trial cost to prosecutor: $c_P>0$. Trial cost to defendant: $c_D>0$.
+Plea offer: $x$.  
+Trial costs: prosecutor $c_P>0$, defendant $c_D>0$.
 
-Defendant expected cost of trial (type $\theta$):
-$$
-\text{TrialCost}(\theta)=p_\theta T + c_D.
-$$
-Accept plea iff:
+Defendant accepts iff:
 $$
 x \le p_\theta T + c_D.
 $$
 
-Prosecutor payoff:
-- if plea accepted: $x$
-- if trial: expected sentence $p_\theta T$ minus cost $c_P$.
-
 ---
 
-## Solved equilibrium pattern: separating via one offer (screening)
-Suppose prosecutor wants:
-- type $H$ to accept the plea,
-- type $L$ to reject and go to trial.
-
-For this to happen, choose $x$ such that:
-- $H$ accepts: $x \le p_H T + c_D$
-- $L$ rejects: $x > p_L T + c_D$
-
-So any $x$ in:
+## Screening pattern (one offer)
+To induce $H$ accept and $L$ reject:
 $$
-(p_L T + c_D,\; p_H T + c_D]
+x \in (p_L T + c_D,\; p_H T + c_D].
 $$
-induces the intended separation.
 
-Prosecutor then compares expected payoff under this policy:
-- From type $H$: gets $x$
-- From type $L$ (trial): gets $p_L T - c_P$
+Expected payoff to prosecutor under this policy:
+- Type $H$: $x$
+- Type $L$ (trial): $p_L T - c_P$
 
-Expected payoff:
+So:
 $$
 \pi x + (1-\pi)(p_L T - c_P).
 $$
 
-A common selection result: when the gap $p_H-p_L$ is large enough, a single plea offer can screen types.
-
 ---
 
 ## Predictions (qualitative)
-- Higher defendant trial cost $c_D$ increases acceptance of pleas (both types).
-- Higher prosecutor trial cost $c_P$ increases reliance on plea offers (lower $x$ may still be attractive).
-- Stronger evidence (higher $p_\theta$) increases willingness to accept pleas (especially high type).
+- Higher $c_D$ increases plea acceptance.
+- Higher $c_P$ increases reliance on pleas.
+- Stronger evidence (higher $p_\theta$) increases acceptance.
 
 ---
 
-## Interpretation and links
-- Observed trial cases are selected: they are not “random disputes.”
-- Plea policy can change recorded outcomes (conviction rates, sentence distributions) without changing underlying behavior.
+## Connections
+### Mechanisms
+- Incentives & deterrence (certainty vs severity) → `../mechanisms/incentives-deterrence.qmd`
+- Labeling & stigma (collateral consequences) → `../mechanisms/labeling-stigma.qmd`
+- Life-course dynamics (dynamic effects) → `../mechanisms/life-course.qmd`
+
+### Institutions
+- Courts → `../institutions/courts.qmd`
+
+### Foundations
+- Recorded outcomes vs behavior → `../foundations/key-definitions.qmd`
+
+---
+
+## Later-on analysis
+Extensions: risk aversion, bargaining power, repeated play (prosecutors/defense), endogenous charging.
