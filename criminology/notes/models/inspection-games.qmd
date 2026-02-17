@@ -67,7 +67,7 @@ Interior mixing requires $0<k<h$.
 
 ## Connections
 ### Mechanisms
-- Incentives & deterrence → criminology/notes/mechanisms/incentives-deterrence.qmd
+- Incentives & deterrence → [Incentives-deterrences →](criminology/notes/mechanisms/incentives-deterrence.qmd)
 - Opportunity & routine activity (affects $b$ and effective $q$) → opportunity-routine.qmd
 - Legitimacy & compliance (endogenous detection/reporting) → `criminology/notes/mechanisms/legitimacy-compliance.qmd`
 - Self-control (perceived risk, present bias) → `.criminology/notes/mechanisms/self-control.qmd`
