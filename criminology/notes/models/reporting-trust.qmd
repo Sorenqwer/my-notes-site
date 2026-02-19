@@ -44,17 +44,18 @@ $$
 ---
 
 ## Connections
+
 ### Mechanisms
-- Legitimacy, trust & compliance → `../mechanisms/legitimacy-compliance.qmd`
-- Incentives & deterrence (expected costs) → `../mechanisms/incentives-deterrence.qmd`
-- Inequality & trust (social capital channel) → `../mechanisms/inequality-trust.qmd`
+- [Legitimacy, trust & compliance](../mechanisms/legitimacy-compliance.qmd)
+- [Incentives & deterrence (expected costs)](../mechanisms/incentives-deterrence.qmd)
+- [Inequality & social trust (social capital channel)](../mechanisms/inequality-trust.qmd)
 
 ### Institutions
-- Policing (effort/capacity) → `../institutions/policing.qmd`
-- Courts (processing after reporting) → `../institutions/courts.qmd`
+- [Policing (effort/capacity)](../institutions/policing.qmd)
+- [Courts (processing after reporting)](../institutions/courts.qmd)
 
 ### Foundations
-- Incidence vs recorded outcomes → `../foundations/key-definitions.qmd`
+- [Incidence vs recorded outcomes](../foundations/key-definitions.qmd)
 
 ---
 

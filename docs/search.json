@@ -18,21 +18,33 @@
     "href": "criminology/notes/index.html",
     "title": "Criminology notes",
     "section": "",
-    "text": "Foundations\nMechanisms\nInstitutions\nTopics\nModels"
+    "text": "Foundations\nMechanisms\nInstitutions\nTopics\nModels",
+    "crumbs": [
+      "Criminology",
+      "Criminology notes"
+    ]
   },
   {
     "objectID": "criminology/notes/index.html#start-here",
     "href": "criminology/notes/index.html#start-here",
     "title": "Criminology notes",
     "section": "",
-    "text": "Foundations\nMechanisms\nInstitutions\nTopics\nModels"
+    "text": "Foundations\nMechanisms\nInstitutions\nTopics\nModels",
+    "crumbs": [
+      "Criminology",
+      "Criminology notes"
+    ]
   },
   {
     "objectID": "criminology/notes/index.html#how-this-section-is-organized",
     "href": "criminology/notes/index.html#how-this-section-is-organized",
     "title": "Criminology notes",
     "section": "How this section is organized",
-    "text": "How this section is organized\n\nFoundations: definitions + units of analysis + measurement caveats\n\nMechanisms: theory families (channels)\n\nInstitutions: policing/courts/corrections as strategic systems\n\nTopics: substantive crime domains\n\nModels: canonical strategic/dynamic representations"
+    "text": "How this section is organized\n\nFoundations: definitions + units of analysis + measurement caveats\n\nMechanisms: theory families (channels)\n\nInstitutions: policing/courts/corrections as strategic systems\n\nTopics: substantive crime domains\n\nModels: canonical strategic/dynamic representations",
+    "crumbs": [
+      "Criminology",
+      "Criminology notes"
+    ]
   },
   {
     "objectID": "criminology/notes/models/index.html",
@@ -81,7 +93,7 @@
     "href": "criminology/notes/models/plea-bargaining.html#connections",
     "title": "Plea bargaining (asymmetric information)",
     "section": "Connections",
-    "text": "Connections\n\nMechanisms\n\nIncentives & deterrence (certainty vs severity) → ../mechanisms/incentives-deterrence.qmd\nLabeling & stigma (collateral consequences) → ../mechanisms/labeling-stigma.qmd\nLife-course dynamics (dynamic effects) → ../mechanisms/life-course.qmd\n\n\n\nInstitutions\n\nCourts → ../institutions/courts.qmd\n\n\n\nFoundations\n\nRecorded outcomes vs behavior → ../foundations/key-definitions.qmd"
+    "text": "Connections\n\nMechanisms\n\nIncentives & deterrence (certainty vs severity)\nLabeling & stigma (collateral consequences)\nLife-course dynamics (dynamic effects)\n\n\n\nInstitutions\n\nCourts\n\n\n\nFoundations\n\nRecorded outcomes vs behavior"
   },
   {
     "objectID": "criminology/notes/models/plea-bargaining.html#later-on-analysis",
@@ -123,7 +135,7 @@
     "href": "criminology/notes/models/network-crime.html#connections",
     "title": "Network crime (diffusion and strategic complements)",
     "section": "Connections",
-    "text": "Connections\n\nMechanisms\n\nSocial interactions & networks → ../mechanisms/social-interactions.qmd\nInequality & trust (shifts \\(a_i\\)) → ../mechanisms/inequality-trust.qmd\nOpportunity (local environment enters \\(a_i\\)) → ../mechanisms/opportunity-routine.qmd\n\n\n\nInstitutions\n\nPolicing (targeting, disruption) → ../institutions/policing.qmd\nCorrections (network disruption and reentry) → ../institutions/corrections.qmd\n\n\n\nModels\n\nCo-offending games → co-offending-games.qmd\nAllocation dynamics → allocation-dynamics.qmd"
+    "text": "Connections\n\nMechanisms\n\nSocial interactions & networks\nInequality & social trust (shifts \\(a_i\\))\nOpportunity & routine activity (local environment enters \\(a_i\\))\n\n\n\nInstitutions\n\nPolicing (targeting, disruption)\nCorrections (network disruption and reentry)\n\n\n\nModels\n\nCo-offending games\nAllocation dynamics"
   },
   {
     "objectID": "criminology/notes/models/network-crime.html#later-on-analysis",
@@ -438,84 +450,132 @@
     "href": "criminology/stylized-facts.html",
     "title": "Stylized facts",
     "section": "",
-    "text": "This page lists stylized facts: recurring empirical regularities widely discussed in criminology and related social-science literatures.\nThey are not meant as a complete empirical review, but as constraints for theory: mechanisms and models should be able to reproduce (at least qualitatively) these patterns.\nA recurring caution: many “crime facts” depend on measurement (reporting, enforcement, recording practices). When relevant, the fact is stated as a pattern about recorded crime, victimization, or behavior."
+    "text": "This page lists stylized facts: recurring empirical regularities widely discussed in criminology and related social-science literatures.\nThey are not meant as a complete empirical review, but as constraints for theory: mechanisms and models should be able to reproduce (at least qualitatively) these patterns.\nA recurring caution: many “crime facts” depend on measurement (reporting, enforcement, recording practices). When relevant, the fact is stated as a pattern about recorded crime, victimization, or behavior.",
+    "crumbs": [
+      "Criminology",
+      "Stylized facts"
+    ]
   },
   {
     "objectID": "criminology/stylized-facts.html#scope",
     "href": "criminology/stylized-facts.html#scope",
     "title": "Stylized facts",
     "section": "",
-    "text": "This page lists stylized facts: recurring empirical regularities widely discussed in criminology and related social-science literatures.\nThey are not meant as a complete empirical review, but as constraints for theory: mechanisms and models should be able to reproduce (at least qualitatively) these patterns.\nA recurring caution: many “crime facts” depend on measurement (reporting, enforcement, recording practices). When relevant, the fact is stated as a pattern about recorded crime, victimization, or behavior."
+    "text": "This page lists stylized facts: recurring empirical regularities widely discussed in criminology and related social-science literatures.\nThey are not meant as a complete empirical review, but as constraints for theory: mechanisms and models should be able to reproduce (at least qualitatively) these patterns.\nA recurring caution: many “crime facts” depend on measurement (reporting, enforcement, recording practices). When relevant, the fact is stated as a pattern about recorded crime, victimization, or behavior.",
+    "crumbs": [
+      "Criminology",
+      "Stylized facts"
+    ]
   },
   {
     "objectID": "criminology/stylized-facts.html#concentration-in-people-and-places",
     "href": "criminology/stylized-facts.html#concentration-in-people-and-places",
     "title": "Stylized facts",
     "section": "1) Concentration in people and places",
-    "text": "1) Concentration in people and places\n\nA small share of people account for a large share of offending (repeat offending / persistence).\nTheory implication: heterogeneity and dynamics (states, types, or learning) matter.\nCrime concentrates spatially (hotspots: small areas produce disproportionate incidents).\nTheory implication: opportunity and guardianship are place-specific; equilibrium responses can relocate activity.\n\n(Links that will eventually connect) - Opportunity / routine activity → notes/mechanisms/opportunity-routine.qmd - Policing allocation / hotspots → notes/institutions/policing.qmd"
+    "text": "1) Concentration in people and places\n\nA small share of people account for a large share of offending (repeat offending / persistence).\nTheory implication: heterogeneity and dynamics (states, types, or learning) matter.\nCrime concentrates spatially (hotspots: small areas produce disproportionate incidents).\nTheory implication: opportunity and guardianship are place-specific; equilibrium responses can relocate activity.\n\n(Links that will eventually connect) - Opportunity / routine activity → notes/mechanisms/opportunity-routine.qmd - Policing allocation / hotspots → notes/institutions/policing.qmd",
+    "crumbs": [
+      "Criminology",
+      "Stylized facts"
+    ]
   },
   {
     "objectID": "criminology/stylized-facts.html#recorded-crime-is-not-the-same-as-incidence",
     "href": "criminology/stylized-facts.html#recorded-crime-is-not-the-same-as-incidence",
     "title": "Stylized facts",
     "section": "2) Recorded crime is not the same as incidence",
-    "text": "2) Recorded crime is not the same as incidence\n\nNot all victimization is reported, and reporting varies by offense type, victim characteristics, and trust in institutions.\nTheory implication: include a reporting stage; observed data may reflect participation constraints.\nEnforcement is selective: arrest/case data reflect policing choices and capacity, not just offending.\nTheory implication: strategic interaction can change observables even when underlying behavior changes less.\n\n(Links) - Legitimacy & compliance → notes/mechanisms/legitimacy-compliance.qmd - Reporting & trust model → notes/models/reporting-trust.qmd"
+    "text": "2) Recorded crime is not the same as incidence\n\nNot all victimization is reported, and reporting varies by offense type, victim characteristics, and trust in institutions.\nTheory implication: include a reporting stage; observed data may reflect participation constraints.\nEnforcement is selective: arrest/case data reflect policing choices and capacity, not just offending.\nTheory implication: strategic interaction can change observables even when underlying behavior changes less.\n\n(Links) - Legitimacy & compliance → notes/mechanisms/legitimacy-compliance.qmd - Reporting & trust model → notes/models/reporting-trust.qmd",
+    "crumbs": [
+      "Criminology",
+      "Stylized facts"
+    ]
   },
   {
     "objectID": "criminology/stylized-facts.html#opportunity-and-routine-predict-timing",
     "href": "criminology/stylized-facts.html#opportunity-and-routine-predict-timing",
     "title": "Stylized facts",
     "section": "3) Opportunity and routine predict timing",
-    "text": "3) Opportunity and routine predict timing\n\nCrime risk often shifts with routine activity patterns (crowding, guardianship, mobility, visibility).\nTheory implication: “technology of opportunity” matters; policies can change opportunity without changing preferences.\n\n(Links) - Opportunity / routine activity → notes/mechanisms/opportunity-routine.qmd"
+    "text": "3) Opportunity and routine predict timing\n\nCrime risk often shifts with routine activity patterns (crowding, guardianship, mobility, visibility).\nTheory implication: “technology of opportunity” matters; policies can change opportunity without changing preferences.\n\n(Links) - Opportunity / routine activity → notes/mechanisms/opportunity-routine.qmd",
+    "crumbs": [
+      "Criminology",
+      "Stylized facts"
+    ]
   },
   {
     "objectID": "criminology/stylized-facts.html#sanctions-detection-vs-severity-and-strategic-adaptation",
     "href": "criminology/stylized-facts.html#sanctions-detection-vs-severity-and-strategic-adaptation",
     "title": "Stylized facts",
     "section": "4) Sanctions: detection vs severity (and strategic adaptation)",
-    "text": "4) Sanctions: detection vs severity (and strategic adaptation)\n\nThe deterrent effect of punishment is often discussed as depending on both probability of detection and severity of sanction; in practice, offenders may adapt (switch targets, tactics, locations, or timing).\nTheory implication: model deterrence as a game (inspection/monitoring) and allow substitution across actions.\n\n(Links) - Incentives & deterrence → notes/mechanisms/incentives-deterrence.qmd - Inspection games → notes/models/inspection-games.qmd"
+    "text": "4) Sanctions: detection vs severity (and strategic adaptation)\n\nThe deterrent effect of punishment is often discussed as depending on both probability of detection and severity of sanction; in practice, offenders may adapt (switch targets, tactics, locations, or timing).\nTheory implication: model deterrence as a game (inspection/monitoring) and allow substitution across actions.\n\n(Links) - Incentives & deterrence → notes/mechanisms/incentives-deterrence.qmd - Inspection games → notes/models/inspection-games.qmd",
+    "crumbs": [
+      "Criminology",
+      "Stylized facts"
+    ]
   },
   {
     "objectID": "criminology/stylized-facts.html#social-interactions-and-networks-matter",
     "href": "criminology/stylized-facts.html#social-interactions-and-networks-matter",
     "title": "Stylized facts",
     "section": "5) Social interactions and networks matter",
-    "text": "5) Social interactions and networks matter\n\nOffending can be socially embedded: co-offending, peer effects, clustering within networks, diffusion of tactics.\nTheory implication: strategic complements, learning, and partner choice can generate clustering and persistence.\n\n(Links) - Social interactions → notes/mechanisms/social-interactions.qmd - Co-offending games → notes/models/co-offending-games.qmd - Network crime → notes/models/network-crime.qmd"
+    "text": "5) Social interactions and networks matter\n\nOffending can be socially embedded: co-offending, peer effects, clustering within networks, diffusion of tactics.\nTheory implication: strategic complements, learning, and partner choice can generate clustering and persistence.\n\n(Links) - Social interactions → notes/mechanisms/social-interactions.qmd - Co-offending games → notes/models/co-offending-games.qmd - Network crime → notes/models/network-crime.qmd",
+    "crumbs": [
+      "Criminology",
+      "Stylized facts"
+    ]
   },
   {
     "objectID": "criminology/stylized-facts.html#inequality-deprivation-and-trust-appear-repeatedly",
     "href": "criminology/stylized-facts.html#inequality-deprivation-and-trust-appear-repeatedly",
     "title": "Stylized facts",
     "section": "6) Inequality, deprivation, and trust appear repeatedly",
-    "text": "6) Inequality, deprivation, and trust appear repeatedly\n\nMany literatures link violence and disorder to deprivation, inequality, and low social trust/collective efficacy (interpretations differ across theories).\nTheory implication: these factors can enter as outside options, returns to legitimate work, enforcement cooperation, or social capital.\n\n(Links) - Inequality & trust → notes/mechanisms/inequality-trust.qmd"
+    "text": "6) Inequality, deprivation, and trust appear repeatedly\n\nMany literatures link violence and disorder to deprivation, inequality, and low social trust/collective efficacy (interpretations differ across theories).\nTheory implication: these factors can enter as outside options, returns to legitimate work, enforcement cooperation, or social capital.\n\n(Links) - Inequality & trust → notes/mechanisms/inequality-trust.qmd",
+    "crumbs": [
+      "Criminology",
+      "Stylized facts"
+    ]
   },
   {
     "objectID": "criminology/stylized-facts.html#life-course-dynamics-onset-and-desistance",
     "href": "criminology/stylized-facts.html#life-course-dynamics-onset-and-desistance",
     "title": "Stylized facts",
     "section": "7) Life-course dynamics: onset and desistance",
-    "text": "7) Life-course dynamics: onset and desistance\n\nOffending is often described as following a life-course pattern (onset, persistence, desistance), with strong roles for transitions (schooling, work, relationships) and system contact (stigma).\nTheory implication: dynamic incentives and state dependence; consider reputational/stigma channels.\n\n(Links) - Life-course dynamics → notes/mechanisms/life-course.qmd"
+    "text": "7) Life-course dynamics: onset and desistance\n\nOffending is often described as following a life-course pattern (onset, persistence, desistance), with strong roles for transitions (schooling, work, relationships) and system contact (stigma).\nTheory implication: dynamic incentives and state dependence; consider reputational/stigma channels.\n\n(Links) - Life-course dynamics → notes/mechanisms/life-course.qmd",
+    "crumbs": [
+      "Criminology",
+      "Stylized facts"
+    ]
   },
   {
     "objectID": "criminology/stylized-facts.html#institutions-are-strategic-actors-not-passive-rules",
     "href": "criminology/stylized-facts.html#institutions-are-strategic-actors-not-passive-rules",
     "title": "Stylized facts",
     "section": "8) Institutions are strategic actors, not passive rules",
-    "text": "8) Institutions are strategic actors, not passive rules\n\nPolicing, courts, and corrections have objectives, constraints, and incentives; policy changes can produce equilibrium responses (by offenders, victims, and agencies).\nTheory implication: model institutions as players with limited capacity and endogenous targeting.\n\n(Links) - Policing → notes/institutions/policing.qmd - Courts / bargaining → notes/institutions/courts.qmd - Corrections → notes/institutions/corrections.qmd - Allocation dynamics → notes/models/allocation-dynamics.qmd"
+    "text": "8) Institutions are strategic actors, not passive rules\n\nPolicing, courts, and corrections have objectives, constraints, and incentives; policy changes can produce equilibrium responses (by offenders, victims, and agencies).\nTheory implication: model institutions as players with limited capacity and endogenous targeting.\n\n(Links) - Policing → notes/institutions/policing.qmd - Courts / bargaining → notes/institutions/courts.qmd - Corrections → notes/institutions/corrections.qmd - Allocation dynamics → notes/models/allocation-dynamics.qmd",
+    "crumbs": [
+      "Criminology",
+      "Stylized facts"
+    ]
   },
   {
     "objectID": "criminology/stylized-facts.html#how-to-use-these-facts-in-theory-notes",
     "href": "criminology/stylized-facts.html#how-to-use-these-facts-in-theory-notes",
     "title": "Stylized facts",
     "section": "How to use these facts in theory notes",
-    "text": "How to use these facts in theory notes\nWhen writing a mechanism/model page, include a small box:\n\n\n\n\n\n\nNoteStylized facts this model aims to match\n\n\n\n\n(Pick 2–4 from above that your model speaks to.)\n\n\n\nThen state: which outcomes are “behavior” vs “recorded data”, and where measurement enters."
+    "text": "How to use these facts in theory notes\nWhen writing a mechanism/model page, include a small box:\n\n\n\n\n\n\nNoteStylized facts this model aims to match\n\n\n\n\n(Pick 2–4 from above that your model speaks to.)\n\n\n\nThen state: which outcomes are “behavior” vs “recorded data”, and where measurement enters.",
+    "crumbs": [
+      "Criminology",
+      "Stylized facts"
+    ]
   },
   {
     "objectID": "criminology/stylized-facts.html#minimal-theory-constraints-what-your-models-should-be-able-to-explain",
     "href": "criminology/stylized-facts.html#minimal-theory-constraints-what-your-models-should-be-able-to-explain",
     "title": "Stylized facts",
     "section": "Minimal “theory constraints” (what your models should be able to explain)",
-    "text": "Minimal “theory constraints” (what your models should be able to explain)\nA theory-first criminology note set is especially strong if it can generate: - concentration (people/places), - substitution/adaptation under enforcement, - the role of reporting and legitimacy, - network clustering/co-offending, - dynamics (persistence and desistance)."
+    "text": "Minimal “theory constraints” (what your models should be able to explain)\nA theory-first criminology note set is especially strong if it can generate: - concentration (people/places), - substitution/adaptation under enforcement, - the role of reporting and legitimacy, - network clustering/co-offending, - dynamics (persistence and desistance).",
+    "crumbs": [
+      "Criminology",
+      "Stylized facts"
+    ]
   },
   {
     "objectID": "notes/game-theory.html",
@@ -2118,7 +2178,10 @@
     "href": "notes/index.html",
     "title": "Notes",
     "section": "",
-    "text": "Game types\nEquilibria"
+    "text": "Game types\nEquilibria",
+    "crumbs": [
+      "Notes"
+    ]
   },
   {
     "objectID": "notes/metrics.html",
@@ -2132,28 +2195,40 @@
     "href": "criminology/index.html",
     "title": "Criminology",
     "section": "",
-    "text": "Criminology studies crime, victimization, and social control: why harmful/illegal acts occur, how they concentrate across people and places, and how institutions (police, courts, corrections) shape incentives, behavior, and legitimacy.\nThis section is theory-first. Empirical findings appear mainly as stylized facts and as motivation for mechanisms and models."
+    "text": "Criminology studies crime, victimization, and social control: why harmful/illegal acts occur, how they concentrate across people and places, and how institutions (police, courts, corrections) shape incentives, behavior, and legitimacy.\nThis section is theory-first. Empirical findings appear mainly as stylized facts and as motivation for mechanisms and models.",
+    "crumbs": [
+      "Criminology"
+    ]
   },
   {
     "objectID": "criminology/index.html#how-the-subject-is-studied-academic-map",
     "href": "criminology/index.html#how-the-subject-is-studied-academic-map",
     "title": "Criminology",
     "section": "How the subject is studied (academic map)",
-    "text": "How the subject is studied (academic map)\nCriminology is typically organized around three kinds of questions:\n\nDescriptive: What patterns exist? (who/where/when crime occurs; concentration; trends)\n\nExplanatory / causal: Why do these patterns arise? (mechanisms; incentives; social interactions; opportunity)\n\nEvaluative / policy: What interventions change outcomes? (deterrence, prevention, rehabilitation, legitimacy)\n\nAcross these questions, research commonly moves between: - Mechanisms (theory) → clear behavioral or social channels - Evidence (empirics) → measurement, identification, evaluation - Institutions (policy context) → how rules and enforcement operate in practice"
+    "text": "How the subject is studied (academic map)\nCriminology is typically organized around three kinds of questions:\n\nDescriptive: What patterns exist? (who/where/when crime occurs; concentration; trends)\n\nExplanatory / causal: Why do these patterns arise? (mechanisms; incentives; social interactions; opportunity)\n\nEvaluative / policy: What interventions change outcomes? (deterrence, prevention, rehabilitation, legitimacy)\n\nAcross these questions, research commonly moves between: - Mechanisms (theory) → clear behavioral or social channels - Evidence (empirics) → measurement, identification, evaluation - Institutions (policy context) → how rules and enforcement operate in practice",
+    "crumbs": [
+      "Criminology"
+    ]
   },
   {
     "objectID": "criminology/index.html#start-here",
     "href": "criminology/index.html#start-here",
     "title": "Criminology",
     "section": "Start here",
-    "text": "Start here\n\n\n\nHow to study criminology\nA compact guide to the discipline’s structure: questions, levels of analysis, evidence, and typical pitfalls.\nOpen →\n\n\n\n\nNotes\nTheory and models: mechanisms → predictions. Organized like a syllabus (foundations → mechanisms → institutions → topics → models).\nOpen →\n\n\n\n\nStylized facts (light empirics)\nA short list of robust regularities that theories should aim to explain.\nOpen →"
+    "text": "Start here\n\n\n\nHow to study criminology\nA compact guide to the discipline’s structure: questions, levels of analysis, evidence, and typical pitfalls.\nOpen →\n\n\n\n\nNotes\nTheory and models: mechanisms → predictions. Organized like a syllabus (foundations → mechanisms → institutions → topics → models).\nOpen →\n\n\n\n\nStylized facts (light empirics)\nA short list of robust regularities that theories should aim to explain.\nOpen →",
+    "crumbs": [
+      "Criminology"
+    ]
   },
   {
     "objectID": "criminology/index.html#what-to-expect-in-these-notes",
     "href": "criminology/index.html#what-to-expect-in-these-notes",
     "title": "Criminology",
     "section": "What to expect in these notes",
-    "text": "What to expect in these notes\n\nDefinitions and units of analysis (individual, place, network, institutions)\nMechanism-based theory (deterrence, opportunity, peer effects, legitimacy, inequality)\nCanonical models (inspection games, bargaining, reporting & trust, co-offending, networks)\nEquilibrium reasoning and comparative statics (what shifts when parameters change)"
+    "text": "What to expect in these notes\n\nDefinitions and units of analysis (individual, place, network, institutions)\nMechanism-based theory (deterrence, opportunity, peer effects, legitimacy, inequality)\nCanonical models (inspection games, bargaining, reporting & trust, co-offending, networks)\nEquilibrium reasoning and comparative statics (what shifts when parameters change)",
+    "crumbs": [
+      "Criminology"
+    ]
   },
   {
     "objectID": "criminology/notes/institutions/corrections.html",
@@ -2496,7 +2571,7 @@
     "href": "criminology/notes/models/allocation-dynamics.html#connections",
     "title": "Allocation dynamics (hotspots and resource allocation)",
     "section": "Connections",
-    "text": "Connections\n\nMechanisms\n\nOpportunity & routine activity (place-based returns) → ../mechanisms/opportunity-routine.qmd\nIncentives & deterrence (effort changes detection) → ../mechanisms/incentives-deterrence.qmd\nLegitimacy & compliance (signals via reporting) → ../mechanisms/legitimacy-compliance.qmd\n\n\n\nInstitutions\n\nPolicing (allocation and constraints) → ../institutions/policing.qmd\n\n\n\nModels\n\nReporting & trust (endogenous signals) → reporting-trust.qmd\nNetwork crime (spatial/network displacement) → network-crime.qmd\n\n\n\nFoundations\n\nUnits of analysis (place/time) → ../foundations/units-of-analysis.qmd"
+    "text": "Connections\n\nMechanisms\n\nOpportunity & routine activity (place-based returns)\nIncentives & deterrence (effort changes detection)\nLegitimacy, trust & compliance (signals via reporting)\n\n\n\nInstitutions\n\nPolicing (allocation and constraints)\n\n\n\nModels\n\nReporting & trust (endogenous signals)\nNetwork crime (spatial/network displacement)\n\n\n\nFoundations\n\nUnits of analysis (place/time)"
   },
   {
     "objectID": "criminology/notes/models/allocation-dynamics.html#later-on-analysis",
@@ -2538,7 +2613,7 @@
     "href": "criminology/notes/models/reporting-trust.html#connections",
     "title": "Reporting & trust (legitimacy and cooperation)",
     "section": "Connections",
-    "text": "Connections\n\nMechanisms\n\nLegitimacy, trust & compliance → ../mechanisms/legitimacy-compliance.qmd\nIncentives & deterrence (expected costs) → ../mechanisms/incentives-deterrence.qmd\nInequality & trust (social capital channel) → ../mechanisms/inequality-trust.qmd\n\n\n\nInstitutions\n\nPolicing (effort/capacity) → ../institutions/policing.qmd\nCourts (processing after reporting) → ../institutions/courts.qmd\n\n\n\nFoundations\n\nIncidence vs recorded outcomes → ../foundations/key-definitions.qmd"
+    "text": "Connections\n\nMechanisms\n\nLegitimacy, trust & compliance\nIncentives & deterrence (expected costs)\nInequality & social trust (social capital channel)\n\n\n\nInstitutions\n\nPolicing (effort/capacity)\nCourts (processing after reporting)\n\n\n\nFoundations\n\nIncidence vs recorded outcomes"
   },
   {
     "objectID": "criminology/notes/models/reporting-trust.html#later-on-analysis",
@@ -2580,7 +2655,7 @@
     "href": "criminology/notes/models/co-offending-games.html#connections",
     "title": "Co-offending games (coordination and betrayal)",
     "section": "Connections",
-    "text": "Connections\n\nMechanisms\n\nSocial interactions & networks → ../mechanisms/social-interactions.qmd\nSelf-control (impulsivity, myopia) → ../mechanisms/self-control.qmd\nInequality & outside options → ../mechanisms/inequality-trust.qmd\n\n\n\nInstitutions\n\nPolicing (disruption, informants) → ../institutions/policing.qmd\nCorrections (disrupting networks, reentry) → ../institutions/corrections.qmd\n\n\n\nModels\n\nNetwork crime (diffusion, complements) → network-crime.qmd"
+    "text": "Connections\n\nMechanisms\n\nSocial interactions & networks\nSelf-control (impulsivity, myopia)\nInequality & outside options\n\n\n\nInstitutions\n\nPolicing (disruption, informants)\nCorrections (disrupting networks, reentry)\n\n\n\nModels\n\nNetwork crime (diffusion, complements)"
   },
   {
     "objectID": "criminology/notes/models/co-offending-games.html#later-on-analysis",
@@ -2713,62 +2788,98 @@
     "href": "criminology/how-to-study.html",
     "title": "How criminology is studied",
     "section": "",
-    "text": "Criminology is not only “crime statistics.” As an academic field, it combines: - Concepts and measurement (what is counted as crime; why measurement is difficult) - Theories of mechanism (why behavior occurs; how social structure matters) - Institutional analysis (police/courts/corrections; legitimacy and compliance) - Evaluation and identification (what changes outcomes; how we infer causality)\nThis page provides a discipline map so readers can locate a topic within the broader research program."
+    "text": "Criminology is not only “crime statistics.” As an academic field, it combines: - Concepts and measurement (what is counted as crime; why measurement is difficult) - Theories of mechanism (why behavior occurs; how social structure matters) - Institutional analysis (police/courts/corrections; legitimacy and compliance) - Evaluation and identification (what changes outcomes; how we infer causality)\nThis page provides a discipline map so readers can locate a topic within the broader research program.",
+    "crumbs": [
+      "Criminology",
+      "How criminology is studied"
+    ]
   },
   {
     "objectID": "criminology/how-to-study.html#scope",
     "href": "criminology/how-to-study.html#scope",
     "title": "How criminology is studied",
     "section": "",
-    "text": "Criminology is not only “crime statistics.” As an academic field, it combines: - Concepts and measurement (what is counted as crime; why measurement is difficult) - Theories of mechanism (why behavior occurs; how social structure matters) - Institutional analysis (police/courts/corrections; legitimacy and compliance) - Evaluation and identification (what changes outcomes; how we infer causality)\nThis page provides a discipline map so readers can locate a topic within the broader research program."
+    "text": "Criminology is not only “crime statistics.” As an academic field, it combines: - Concepts and measurement (what is counted as crime; why measurement is difficult) - Theories of mechanism (why behavior occurs; how social structure matters) - Institutional analysis (police/courts/corrections; legitimacy and compliance) - Evaluation and identification (what changes outcomes; how we infer causality)\nThis page provides a discipline map so readers can locate a topic within the broader research program.",
+    "crumbs": [
+      "Criminology",
+      "How criminology is studied"
+    ]
   },
   {
     "objectID": "criminology/how-to-study.html#core-question-types",
     "href": "criminology/how-to-study.html#core-question-types",
     "title": "How criminology is studied",
     "section": "Core question types",
-    "text": "Core question types\n\n1) Descriptive (pattern-finding)\nTypical objects: - concentration by person (repeat offending/victimization), - concentration by place (hotspots), - temporal patterns (seasonality, routine changes), - network clustering (co-offending, gangs).\nThe descriptive layer also flags the measurement problem: recorded crime depends on reporting and enforcement.\n\n\n2) Explanatory / causal (mechanism)\nMechanism-based questions: - How do incentives and detection risk affect offending? - When does opportunity/guardianship reduce crime without displacement? - How do peer effects and networks amplify or dampen crime? - How does legitimacy affect reporting and compliance?\n\n\n3) Evaluative / policy (interventions)\nInterventions include: - policing strategies (hotspots, visibility, patrol allocation), - sanctions and sentencing policies, - prevention programs, - rehabilitation and reentry policies, - institutional reforms targeting trust and cooperation."
+    "text": "Core question types\n\n1) Descriptive (pattern-finding)\nTypical objects: - concentration by person (repeat offending/victimization), - concentration by place (hotspots), - temporal patterns (seasonality, routine changes), - network clustering (co-offending, gangs).\nThe descriptive layer also flags the measurement problem: recorded crime depends on reporting and enforcement.\n\n\n2) Explanatory / causal (mechanism)\nMechanism-based questions: - How do incentives and detection risk affect offending? - When does opportunity/guardianship reduce crime without displacement? - How do peer effects and networks amplify or dampen crime? - How does legitimacy affect reporting and compliance?\n\n\n3) Evaluative / policy (interventions)\nInterventions include: - policing strategies (hotspots, visibility, patrol allocation), - sanctions and sentencing policies, - prevention programs, - rehabilitation and reentry policies, - institutional reforms targeting trust and cooperation.",
+    "crumbs": [
+      "Criminology",
+      "How criminology is studied"
+    ]
   },
   {
     "objectID": "criminology/how-to-study.html#levels-of-analysis-what-unit-the-theory-lives-on",
     "href": "criminology/how-to-study.html#levels-of-analysis-what-unit-the-theory-lives-on",
     "title": "How criminology is studied",
     "section": "Levels of analysis (what unit the theory “lives on”)",
-    "text": "Levels of analysis (what unit the theory “lives on”)\nCriminological explanations often differ by unit:\n\nIndividual: preferences, beliefs, constraints, self-control, human capital\n\nInteraction / network: strategic complements, trust, co-offending, diffusion\n\nPlace: opportunities, guardianship, environmental design, spatial displacement\n\nInstitution: rules, legitimacy, capacity, incentives within organizations\n\nA good academic write-up states its unit explicitly and clarifies what is taken as primitive."
+    "text": "Levels of analysis (what unit the theory “lives on”)\nCriminological explanations often differ by unit:\n\nIndividual: preferences, beliefs, constraints, self-control, human capital\n\nInteraction / network: strategic complements, trust, co-offending, diffusion\n\nPlace: opportunities, guardianship, environmental design, spatial displacement\n\nInstitution: rules, legitimacy, capacity, incentives within organizations\n\nA good academic write-up states its unit explicitly and clarifies what is taken as primitive.",
+    "crumbs": [
+      "Criminology",
+      "How criminology is studied"
+    ]
   },
   {
     "objectID": "criminology/how-to-study.html#evidence-types-what-counts-in-the-literature",
     "href": "criminology/how-to-study.html#evidence-types-what-counts-in-the-literature",
     "title": "How criminology is studied",
     "section": "Evidence types (what “counts” in the literature)",
-    "text": "Evidence types (what “counts” in the literature)\nEven if you focus on theory, it helps to know what kinds of evidence usually support claims:\n\nAdministrative data: police incidents, arrests, court records, corrections\n\nSurveys / self-reports: victimization surveys, self-reported offending\n\nField experiments / RCTs: randomized patrol or program assignment\n\nQuasi-experiments: policy changes, discontinuities, natural experiments\n\nQualitative: interviews, ethnography, case studies (mechanism discovery)"
+    "text": "Evidence types (what “counts” in the literature)\nEven if you focus on theory, it helps to know what kinds of evidence usually support claims:\n\nAdministrative data: police incidents, arrests, court records, corrections\n\nSurveys / self-reports: victimization surveys, self-reported offending\n\nField experiments / RCTs: randomized patrol or program assignment\n\nQuasi-experiments: policy changes, discontinuities, natural experiments\n\nQualitative: interviews, ethnography, case studies (mechanism discovery)",
+    "crumbs": [
+      "Criminology",
+      "How criminology is studied"
+    ]
   },
   {
     "objectID": "criminology/how-to-study.html#common-threats-to-inference-why-crime-data-is-hard",
     "href": "criminology/how-to-study.html#common-threats-to-inference-why-crime-data-is-hard",
     "title": "How criminology is studied",
     "section": "Common threats to inference (why crime data is hard)",
-    "text": "Common threats to inference (why crime data is hard)\nThese issues appear repeatedly in criminology papers:\n\nUnderreporting (many crimes never enter official data)\n\nEnforcement selection (arrests reflect policing choices)\n\nSimultaneity (police respond to crime; crime responds to police)\n\nDisplacement (crime moves across space/time/type)\n\nEquilibrium adaptation (offenders change tactics when policy changes)\n\nFor theory, these threats matter because they influence what is “observable” and how one interprets patterns."
+    "text": "Common threats to inference (why crime data is hard)\nThese issues appear repeatedly in criminology papers:\n\nUnderreporting (many crimes never enter official data)\n\nEnforcement selection (arrests reflect policing choices)\n\nSimultaneity (police respond to crime; crime responds to police)\n\nDisplacement (crime moves across space/time/type)\n\nEquilibrium adaptation (offenders change tactics when policy changes)\n\nFor theory, these threats matter because they influence what is “observable” and how one interprets patterns.",
+    "crumbs": [
+      "Criminology",
+      "How criminology is studied"
+    ]
   },
   {
     "objectID": "criminology/how-to-study.html#theory-families-mechanism-organizers",
     "href": "criminology/how-to-study.html#theory-families-mechanism-organizers",
     "title": "How criminology is studied",
     "section": "Theory families (mechanism organizers)",
-    "text": "Theory families (mechanism organizers)\nA practical academic taxonomy:\n\nIncentives / deterrence\n\nOpportunity / routine activity\n\nSocial interactions and networks\n\nLegitimacy, trust, and compliance\n\nInequality, deprivation, and social capital\n\nLife-course dynamics and stigma\n\nBehavioral microfoundations (present bias, impulsivity; optional)\n\nThese map cleanly into models: inspection games, bargaining, dynamic choice, network games."
+    "text": "Theory families (mechanism organizers)\nA practical academic taxonomy:\n\nIncentives / deterrence\n\nOpportunity / routine activity\n\nSocial interactions and networks\n\nLegitimacy, trust, and compliance\n\nInequality, deprivation, and social capital\n\nLife-course dynamics and stigma\n\nBehavioral microfoundations (present bias, impulsivity; optional)\n\nThese map cleanly into models: inspection games, bargaining, dynamic choice, network games.",
+    "crumbs": [
+      "Criminology",
+      "How criminology is studied"
+    ]
   },
   {
     "objectID": "criminology/how-to-study.html#how-to-read-a-criminology-paper-fast-checklist",
     "href": "criminology/how-to-study.html#how-to-read-a-criminology-paper-fast-checklist",
     "title": "How criminology is studied",
     "section": "How to read a criminology paper (fast checklist)",
-    "text": "How to read a criminology paper (fast checklist)\nWhen skimming: 1) What is the unit of analysis? (person/place/network/institution)\n2) What outcome is used? (incidence vs recorded vs victimization)\n3) What mechanism is proposed?\n4) What is the identification strategy (if empirical)?\n5) What equilibrium or adaptation effects could offset the policy?\n6) What predictions are robust across plausible measurement choices?"
+    "text": "How to read a criminology paper (fast checklist)\nWhen skimming: 1) What is the unit of analysis? (person/place/network/institution)\n2) What outcome is used? (incidence vs recorded vs victimization)\n3) What mechanism is proposed?\n4) What is the identification strategy (if empirical)?\n5) What equilibrium or adaptation effects could offset the policy?\n6) What predictions are robust across plausible measurement choices?",
+    "crumbs": [
+      "Criminology",
+      "How criminology is studied"
+    ]
   },
   {
     "objectID": "criminology/how-to-study.html#where-these-notes-fit",
     "href": "criminology/how-to-study.html#where-these-notes-fit",
     "title": "How criminology is studied",
     "section": "Where these notes fit",
-    "text": "Where these notes fit\nThis site leans toward: - explicit mechanisms, - model-based clarity (players, information, incentives), - and “what would the model predict if parameter X increases?”\nEmpirical content is used selectively as stylized facts and as constraints on theory."
+    "text": "Where these notes fit\nThis site leans toward: - explicit mechanisms, - model-based clarity (players, information, incentives), - and “what would the model predict if parameter X increases?”\nEmpirical content is used selectively as stylized facts and as constraints on theory.",
+    "crumbs": [
+      "Criminology",
+      "How criminology is studied"
+    ]
   }
 ]

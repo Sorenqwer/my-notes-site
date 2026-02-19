@@ -40,20 +40,21 @@ Dynamic primitives:
 ---
 
 ## Connections
+
 ### Mechanisms
-- Opportunity & routine activity (place-based returns) → `../mechanisms/opportunity-routine.qmd`
-- Incentives & deterrence (effort changes detection) → `../mechanisms/incentives-deterrence.qmd`
-- Legitimacy & compliance (signals via reporting) → `../mechanisms/legitimacy-compliance.qmd`
+- [Opportunity & routine activity (place-based returns)](../mechanisms/opportunity-routine.qmd)
+- [Incentives & deterrence (effort changes detection)](../mechanisms/incentives-deterrence.qmd)
+- [Legitimacy, trust & compliance (signals via reporting)](../mechanisms/legitimacy-compliance.qmd)
 
 ### Institutions
-- Policing (allocation and constraints) → `../institutions/policing.qmd`
+- [Policing (allocation and constraints)](../institutions/policing.qmd)
 
 ### Models
-- Reporting & trust (endogenous signals) → `reporting-trust.qmd`
-- Network crime (spatial/network displacement) → `network-crime.qmd`
+- [Reporting & trust (endogenous signals)](reporting-trust.qmd)
+- [Network crime (spatial/network displacement)](network-crime.qmd)
 
 ### Foundations
-- Units of analysis (place/time) → `../foundations/units-of-analysis.qmd`
+- [Units of analysis (place/time)](../foundations/units-of-analysis.qmd)
 
 ---
 

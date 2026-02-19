@@ -29,17 +29,18 @@ Interpretation: co-offending can be self-reinforcing; small shifts in risk/coord
 ---
 
 ## Connections
+
 ### Mechanisms
-- Social interactions & networks → `../mechanisms/social-interactions.qmd`
-- Self-control (impulsivity, myopia) → `../mechanisms/self-control.qmd`
-- Inequality & outside options → `../mechanisms/inequality-trust.qmd`
+- [Social interactions & networks](../mechanisms/social-interactions.qmd)
+- [Self-control (impulsivity, myopia)](../mechanisms/self-control.qmd)
+- [Inequality & outside options](../mechanisms/inequality-trust.qmd)
 
 ### Institutions
-- Policing (disruption, informants) → `../institutions/policing.qmd`
-- Corrections (disrupting networks, reentry) → `../institutions/corrections.qmd`
+- [Policing (disruption, informants)](../institutions/policing.qmd)
+- [Corrections (disrupting networks, reentry)](../institutions/corrections.qmd)
 
 ### Models
-- Network crime (diffusion, complements) → `network-crime.qmd`
+- [Network crime (diffusion, complements)](network-crime.qmd)
 
 ---
 

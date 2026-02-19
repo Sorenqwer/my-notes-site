@@ -18,6 +18,31 @@ website:
         text: PDFs
       - href: criminology/index.qmd
         text: Criminology
+  sidebar:
+    - title: "Notes"
+      contents:
+        - notes/index.qmd
+        - notes/game-types.qmd
+        - notes/equilibria/index.qmd
+        - notes/equilibria/nash.qmd
+        - notes/equilibria/subgame-perfect.qmd
+        - notes/equilibria/perfect-bayes.qmd
+        - notes/equilibria/sequential.qmd
+        - notes/equilibria/trembling-hand-perfect.qmd
+        - notes/equilibria/proper.qmd
+        - notes/equilibria/correlated.qmd
+        - notes/equilibria/rationalizability.qmd
+        - notes/equilibria/cheat-sheet.qmd
+
+    - title: "Criminology"
+      contents:
+        - criminology/index.qmd
+        - criminology/how-to-study.qmd
+        - criminology/notes/index.qmd
+        - criminology/stylized-facts.qmd
+        - criminology/mechanisms.qmd
+        - criminology/institutions.qmd
+        - criminology/models.qmd
 
 format:
   html:

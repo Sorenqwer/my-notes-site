@@ -36,18 +36,19 @@ when invertible.
 ---
 
 ## Connections
+
 ### Mechanisms
-- Social interactions & networks → `../mechanisms/social-interactions.qmd`
-- Inequality & trust (shifts $a_i$) → `../mechanisms/inequality-trust.qmd`
-- Opportunity (local environment enters $a_i$) → `../mechanisms/opportunity-routine.qmd`
+- [Social interactions & networks](../mechanisms/social-interactions.qmd)
+- [Inequality & social trust (shifts $a_i$)](../mechanisms/inequality-trust.qmd)
+- [Opportunity & routine activity (local environment enters $a_i$)](../mechanisms/opportunity-routine.qmd)
 
 ### Institutions
-- Policing (targeting, disruption) → `../institutions/policing.qmd`
-- Corrections (network disruption and reentry) → `../institutions/corrections.qmd`
+- [Policing (targeting, disruption)](../institutions/policing.qmd)
+- [Corrections (network disruption and reentry)](../institutions/corrections.qmd)
 
 ### Models
-- Co-offending games → `co-offending-games.qmd`
-- Allocation dynamics → `allocation-dynamics.qmd`
+- [Co-offending games](co-offending-games.qmd)
+- [Allocation dynamics](allocation-dynamics.qmd)
 
 ---
 

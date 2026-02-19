@@ -54,16 +54,17 @@ $$
 ---
 
 ## Connections
+
 ### Mechanisms
-- Incentives & deterrence (certainty vs severity) → `../mechanisms/incentives-deterrence.qmd`
-- Labeling & stigma (collateral consequences) → `../mechanisms/labeling-stigma.qmd`
-- Life-course dynamics (dynamic effects) → `../mechanisms/life-course.qmd`
+- [Incentives & deterrence (certainty vs severity)](../mechanisms/incentives-deterrence.qmd)
+- [Labeling & stigma (collateral consequences)](../mechanisms/labeling-stigma.qmd)
+- [Life-course dynamics (dynamic effects)](../mechanisms/life-course.qmd)
 
 ### Institutions
-- Courts → `../institutions/courts.qmd`
+- [Courts](../institutions/courts.qmd)
 
 ### Foundations
-- Recorded outcomes vs behavior → `../foundations/key-definitions.qmd`
+- [Recorded outcomes vs behavior](../foundations/key-definitions.qmd)
 
 ---
 
