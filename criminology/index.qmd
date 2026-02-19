@@ -58,6 +58,7 @@ A short list of robust regularities that theories should aim to explain.
 
 :::
 
+
 ---
 
 ## What to expect in these notes

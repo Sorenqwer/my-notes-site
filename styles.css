@@ -131,3 +131,21 @@ main.content,
     border-radius: 12px;
   }
 }
+
+/* --- Card grid helpers (Quarto/Bootstrap) --- */
+.grid .card {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Keep the last paragraph (typically your Open link) pinned to the bottom */
+.grid .card p:last-child {
+  margin-top: auto;
+}
+
+/* Optional: remove the "indent" look of list/paragraph spacing inside cards */
+.grid .card > *:last-child {
+  margin-bottom: 0;
+}
