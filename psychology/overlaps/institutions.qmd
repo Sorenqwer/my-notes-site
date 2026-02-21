@@ -1,0 +1,158 @@
+---
+title: "Psychology × institutions"
+toc: true
+---
+
+Institutions (rules, procedures, organizations) shape behavior partly through incentives,
+but also by shaping **attention, identity, emotion, and learning**.
+
+This page gives a psych-first lens for why institutions work (or fail).
+
+## What institutions do psychologically
+Institutions don’t just change payoffs; they change:
+- what people notice,
+- what feels normal,
+- what feels legitimate,
+- what feels safe,
+- what actions become habitual.
+
+A practical schema:
+
+1) **Rules** (formal constraints and permissions)  
+2) **Signals** (what the institution communicates about norms and authority)  
+3) **Procedures** (how decisions are made and enforced)  
+4) **Experiences** (how people are treated)  
+5) **Learning** (what gets reinforced over time)
+
+---
+
+## Mechanism 1: Salience and attention management
+Institutions decide what is visible:
+- signage, reminders, forms, checkpoints, public metrics, dashboards.
+
+**Prediction patterns**
+- Small, well-placed cues can change behavior more than weak penalties.
+- If a rule is not salient at the decision moment, compliance falls.
+- Overloading people with information can reduce compliance (attention collapse).
+
+**Design lever:** fewer, clearer cues at the point of action.
+
+---
+
+## Mechanism 2: Defaults, friction, and choice architecture
+Institutional design often creates defaults:
+- opt-in vs opt-out,
+- required steps, forms, waiting times,
+- access costs.
+
+**Prediction patterns**
+- Defaults dominate behavior when attention is scarce.
+- “Hassle costs” can exclude the most vulnerable users.
+- Reducing friction can increase participation even without changing preferences.
+
+**Design lever:** align default paths with desired behavior, but monitor fairness.
+
+---
+
+## Mechanism 3: Legitimacy and procedural justice
+People obey rules more when they believe the institution is legitimate.
+
+Legitimacy is strongly affected by:
+- respectful treatment,
+- neutrality and consistency,
+- transparency and voice,
+- competence and good faith.
+
+**Prediction patterns**
+- Procedural fairness increases cooperation and compliance beyond material incentives.
+- Harsh but inconsistent enforcement reduces legitimacy and can backfire.
+
+**Design lever:** make procedures explainable and respectful; reduce arbitrary discretion.
+
+---
+
+## Mechanism 4: Identity and role scripts
+Institutions create roles:
+- student/teacher, patient/doctor, citizen/police, worker/manager.
+
+Roles come with scripts:
+- what is expected,
+- what is allowed,
+- what is shameful or praiseworthy.
+
+**Prediction patterns**
+- Making a prosocial identity salient increases prosocial choices.
+- Role ambiguity increases conflict, blame, and withdrawal.
+- Stigmatizing roles increase concealment and noncooperation.
+
+**Design lever:** clarify roles; avoid stigmatizing classifications.
+
+---
+
+## Mechanism 5: Emotion regulation via safety and threat
+Institutions shape emotional climate:
+- safety, predictability, and dignity reduce threat responses,
+- uncertainty and humiliation increase anger and defensiveness.
+
+**Prediction patterns**
+- Stressful institutional encounters reduce cognitive capacity and increase reactive behavior.
+- Fear and humiliation amplify “us vs them” dynamics.
+
+**Design lever:** reduce unnecessary threat cues; create face-saving pathways.
+
+---
+
+## Mechanism 6: Learning, feedback, and adaptation
+Institutions create feedback loops:
+- what is rewarded/punished,
+- what is noticed,
+- what is recorded.
+
+When feedback is noisy or delayed, people learn wrong lessons.
+
+**Prediction patterns**
+- If compliance is rarely acknowledged but noncompliance is punished, cynicism can grow.
+- If enforcement is predictable, actors adapt to evade it (avoidance learning).
+- Early experiences can anchor long-run trust or distrust.
+
+**Design lever:** provide timely, credible feedback; monitor adaptation and spillovers.
+
+---
+
+## A psych-first institutional analysis template
+For any institution (policy, organization, rule system), ask:
+
+1) **Attention:** what does it make salient at decision time?  
+2) **Friction/defaults:** what is the path of least resistance?  
+3) **Legitimacy:** do people experience it as fair and respectful?  
+4) **Identity:** what roles and group boundaries does it activate?  
+5) **Emotion:** does it create safety or threat?  
+6) **Learning:** what behavior is reinforced? what adaptations emerge?  
+7) **Distribution:** who bears the hassle costs or enforcement burden?
+
+---
+
+## Canonical examples (stubs you can expand)
+### Example A: Compliance without enforcement
+A rule is followed because it is:
+- salient,
+- identity-consistent,
+- socially approved,
+- supported by respectful institutions.
+
+**Mechanisms:** norms + legitimacy + reputation.
+
+### Example B: Backfire from harsh enforcement
+Harsh enforcement reduces compliance over time because it:
+- damages legitimacy,
+- increases oppositional identity,
+- increases avoidance learning.
+
+**Mechanisms:** reactance + distrust + adaptation.
+
+---
+
+## Links
+- Foundations: **methods** (measurement/inference), **social cognition**, **emotion & motivation**, **learning**
+- Topics: **norms & groups**, **biases**
+- Criminology: institutions, legitimacy & trust, reporting and cooperation

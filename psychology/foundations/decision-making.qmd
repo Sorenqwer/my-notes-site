@@ -1,0 +1,70 @@
+---
+title: "Decision-making"
+toc: true
+---
+
+Decision-making is about how people map **uncertainty + preferences + constraints** into choices.
+Psychology differs from “textbook rational choice” mainly by emphasizing:
+- limited attention,
+- limited computation,
+- context effects,
+- emotion and motivation,
+- social and moral preferences.
+
+## Map of this topic
+Use this page as the **overview**, and branch out when you want more detail:
+
+- **Risk & uncertainty** → reference points, loss sensitivity, probability weighting  
+- **Time & self-control** → present focus, temptation, commitment  
+- **Judgment & heuristics** → shortcuts, cue-use, framing, bounded computation  
+- **Choice architecture** → defaults, friction, salience, ordering effects  
+- **Social decision-making** → fairness, reciprocity, identity, norms *(can live here or under Social cognition / Topics)*
+
+*(Create subpages later if you want; this overview stays stable.)*
+
+## A minimal decomposition
+A decision process can be separated into:
+1) **Representation**: what options do I even *see*?
+2) **Evaluation**: how do I assign value (including risk and time)?
+3) **Choice rule**: how do I select (maximization vs satisficing vs habits)?
+4) **Learning**: how do I update after feedback?
+
+A lot of disagreement across theories is really disagreement about (1) and (3).
+
+## Risk: why people don’t behave like expected utility
+Common psychological regularities (high-level):
+- **Reference dependence**: outcomes feel like gains/losses relative to a reference point.
+- **Loss sensitivity**: losses tend to loom larger than equally-sized gains.
+- **Probability weighting**: small probabilities may be overweighted; moderate/large may be underweighted.
+- **Framing effects**: equivalent descriptions can change choice by changing representation.
+
+**Pitfall:** calling this “irrational” too early. Often it’s a mismatch between the analyst’s representation and the subject’s.
+
+## Time: present bias and self-control
+When decisions involve time (study now vs game now; save vs spend):
+- People often behave as if they put **extra weight on the present**.
+- This creates “planner vs doer” conflicts: preferences differ across time.
+
+**Prediction pattern:** commitment devices can increase follow-through even without changing incentives.
+
+## Heuristics: not just shortcuts, but strategies
+Heuristics are often:
+- **fast**,
+- **robust** under noise,
+- **adapted** to common environments.
+
+Useful lens: heuristics trade off *accuracy* vs *cost* (attention, time, computation).
+
+## Canonical example template (reuse later)
+When you add examples, write them in this form:
+- **Task**: what is being decided?
+- **Normative benchmark**: what would a standard rational model predict?
+- **Observed behavior**: what pattern appears?
+- **Mechanism**: what cognitive/emotional/social process explains it?
+- **Intervention**: what changes the behavior (information, framing, incentives, commitment)?
+
+## Where this connects to the rest of the site
+- **Social cognition**: decisions depend on perceived intentions, norms, identity, and reputation.
+- **Learning**: feedback changes preferences, habits, and beliefs over time.
+- **Criminology**: risk/time preferences and self-control show up in offending, compliance, and deterrence responses.
+- **Overlap with strategic interaction**: depth limits, miscalibration about others, and social emotions change outcomes in interactive settings.

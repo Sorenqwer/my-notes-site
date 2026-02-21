@@ -1,0 +1,92 @@
+---
+title: "Person perception"
+toc: true
+---
+
+Person perception is how we form impressions: who is trustworthy, dangerous, competent, or worth listening to.
+It drives hiring, friendship, conflict, stigma, authority legitimacy, and persuasion.
+
+This page is about **rapid inference under uncertainty**.
+
+## Two core dimensions (practical, not absolute)
+A lot of impressions can be summarized as:
+- **Warmth**: intent toward me/us (friend or threat?)
+- **Competence**: ability to act (capable or ineffective?)
+
+These shape:
+- trust and cooperation (warmth),
+- deference and reliance (competence).
+
+**Prediction pattern:** changing perceived intent often moves behavior more than changing perceived ability.
+
+---
+
+## Thin slices and cue use
+People infer from:
+- facial expression, tone, posture,
+- clothing, group markers,
+- fluency and confidence,
+- context (roles: “police”, “doctor”, “student”).
+
+Thin-slice inference can be useful but error-prone.
+
+**Prediction pattern:** under time pressure, people rely more on surface cues and stereotypes.
+
+---
+
+## Attribution: intent vs constraint
+Judgment often depends on:
+- perceived intentionality,
+- perceived constraints,
+- perceived controllability.
+
+**Prediction pattern:** providing situational constraints reduces blame and moralized judgment.
+
+---
+
+## Stereotypes as low-cost representations
+Stereotypes reduce cognitive load but can become self-reinforcing:
+- selective attention to confirming evidence,
+- misinterpretation of ambiguous behavior,
+- avoidance reduces counter-evidence.
+
+**Prediction pattern:** increasing cross-group contact under safe conditions reduces reliance on stereotypes.
+
+---
+
+## Trust cues and credibility heuristics
+People judge credibility using:
+- track record, expertise, institutional role,
+- confidence and fluency,
+- in-group membership.
+
+**Pitfall:** fluency and confidence can be mistaken for truth.
+
+**Prediction pattern:** trusted messengers outperform stronger arguments from distrusted messengers.
+
+---
+
+## Error patterns to watch
+- **Halo effect**: one positive trait colors others.
+- **Negativity dominance**: one bad signal outweighs many good ones.
+- **Fundamental attribution tendency**: trait-blame over situation.
+- **Out-group homogeneity**: “they are all the same.”
+
+---
+
+## A reusable template
+When analyzing person perception, specify:
+
+1) What cues are visible and salient  
+2) Warmth/intent inference vs competence/ability inference  
+3) Situational constraints that are ignored or unseen  
+4) Group boundaries (identity)  
+5) Prediction: what shifts with more time, more context, or different messenger?
+
+---
+
+## Connections
+- **Social cognition**: theory of mind + attribution.
+- **Communication**: credibility, persuasion, distrust.
+- **Norms & groups**: identity shapes interpretation.
+- **Criminology**: legitimacy, threat interpretation, escalation.

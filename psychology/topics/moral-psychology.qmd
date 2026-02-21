@@ -1,0 +1,143 @@
+---
+title: "Moral psychology"
+toc: true
+---
+
+Moral psychology studies how people judge right and wrong, and why they enforce norms.
+It connects directly to:
+- punishment and forgiveness,
+- legitimacy and compliance,
+- polarization and “moralized” conflict.
+
+This page uses a mechanism-first approach: **moral intuitions + emotion + identity → judgments and enforcement**.
+
+## Two systems (a useful simplification)
+Moral judgment often reflects interaction between:
+- **fast intuitions** (emotion and gut reactions),
+- **slower reasoning** (justification, consistency checks).
+
+Reasoning is important, but often functions as:
+- clarification and coherence,
+- persuasion,
+- post-hoc explanation.
+
+**Pitfall:** assuming that moral disagreement is mostly about facts. Often it’s about values, identity, and perceived intent.
+
+---
+
+## Key objects in moral cognition
+### Harm and care
+People react strongly to perceived harm, especially intentional harm.
+
+**Prediction pattern:** perceived intentionality increases blame and punishment.
+
+### Fairness and reciprocity
+Unfairness triggers anger and punitive motivation.
+Reciprocity supports cooperation.
+
+**Prediction pattern:** people punish unfairness even when punishment is costly.
+
+### Loyalty and group-boundaries
+Group membership shapes whose suffering is salient and whose claims are credible.
+
+**Prediction pattern:** moral judgments become harsher when out-groups are seen as threatening or disrespectful.
+
+### Authority and legitimacy
+People often treat legitimate authority as morally relevant:
+- “rules exist for a reason”
+- “respect the process”
+
+**Prediction pattern:** procedural fairness increases voluntary compliance.
+
+### Purity and contamination (where relevant)
+Some moral judgments are linked to disgust and boundary maintenance.
+
+**Prediction pattern:** disgust can increase harshness even when harm is unclear.
+
+---
+
+## Emotion as the engine of moral enforcement
+Moral emotions drive action:
+- **anger** → punishment and confrontation
+- **disgust** → exclusion and distancing
+- **shame** → concealment and conformity pressure
+- **guilt** → repair and apology
+- **contempt** → status downgrading and dehumanization risk
+
+**Prediction pattern:** when anger is high, people over-attribute intentionality and demand harsher sanctions.
+
+---
+
+## Intentions matter (often more than outcomes)
+People judge harm differently based on:
+- intentional vs accidental,
+- negligent vs unavoidable,
+- provoked vs unprovoked,
+- foreseeable vs unforeseeable.
+
+**Prediction pattern:** giving clear evidence of constraints reduces blame (shifts from “bad person” to “bad situation”).
+
+---
+
+## Moralization: when preferences become sacred
+Some issues become “moralized”:
+- disagreement feels like betrayal,
+- compromise feels dirty,
+- opponents feel dangerous.
+
+**Prediction patterns**
+- moralized issues polarize more strongly than non-moral issues,
+- punishment and exclusion become more acceptable,
+- factual debate becomes less effective.
+
+**Intervention lever:** de-moralize where possible by shifting from blame to shared goals and tradeoffs.
+
+---
+
+## Norm enforcement: formal and informal
+People enforce norms through:
+- gossip and reputation,
+- praise and shame,
+- exclusion,
+- punishment (private or public),
+- institutional enforcement (police, courts, HR, schools).
+
+**Prediction patterns**
+- observability increases compliance and norm enforcement,
+- selective enforcement damages legitimacy,
+- unclear norms invite conflict over interpretation and power.
+
+---
+
+## A reusable moral analysis template
+When analyzing a moral conflict, specify:
+
+1) **What norm is at stake?** (harm, fairness, loyalty, authority, purity?)  
+2) **What intention is attributed?** (hostile, negligent, accidental?)  
+3) **What emotions are active?** (anger, disgust, shame, guilt?)  
+4) **What identity boundary is salient?** (us vs them?)  
+5) **What enforcement channel exists?** (informal vs institutional)  
+6) **Prediction:** what changes if you change transparency, fairness, or face-saving options?
+
+---
+
+## Canonical examples (stubs you can expand)
+### Example A: Punishment demand after perceived disrespect
+- small disrespect is interpreted as intentional threat,
+- anger rises,
+- punitive preference increases.
+
+**Mechanisms:** threat interpretation + anger + status concern.
+
+### Example B: Legitimacy-based compliance
+- people comply because noncompliance feels wrong,
+- not just because punishment is feared.
+
+**Mechanisms:** authority legitimacy + moral identity + guilt/shame.
+
+---
+
+## Connections
+- Foundations: **emotion & motivation**, **social cognition**, **communication** (moral framing), **methods** (avoid story-driven claims)
+- Topics: **norms & groups** (in-group favoritism), **relationships** (repair and forgiveness), **biases** (intent attribution errors)
+- Overlaps: **institutions** (procedural justice), **criminology** (punishment, legitimacy, retaliation)

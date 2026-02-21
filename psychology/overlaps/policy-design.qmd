@@ -1,0 +1,99 @@
+---
+title: "Psychology × policy design"
+toc: true
+---
+
+Policy design changes behavior through:
+- incentives and constraints,
+- attention and salience,
+- norms and identity,
+- legitimacy and trust,
+- learning and adaptation.
+
+This page is a psych-first checklist for designing interventions that work and don’t backfire.
+
+## Step 1: Identify the mechanism, not just the outcome
+Ask: what is the bottleneck?
+- attention problem?
+- misinformation / low trust?
+- habit and cue problem?
+- emotion/threat problem?
+- norm and identity problem?
+- structural constraint (time, money, access)?
+
+**Rule:** don’t use incentives to solve attention problems.
+
+---
+
+## Step 2: Choose the lever that matches the mechanism
+### Attention/salience levers
+- reminders at decision time,
+- simpler choice sets,
+- clear defaults.
+
+### Habit/cue levers
+- friction for harmful routines,
+- substitution routines,
+- environmental redesign.
+
+### Norm/identity levers
+- show descriptive norms carefully,
+- use in-group messengers,
+- identity-safe framing.
+
+### Legitimacy levers
+- procedural fairness,
+- transparency and voice,
+- consistent enforcement.
+
+### Learning levers
+- timely feedback,
+- clear causal links,
+- avoid noisy or delayed signals when possible.
+
+---
+
+## Step 3: Watch for predictable backfires
+### Reactance
+If people feel controlled, they may resist.
+
+### Crowding out
+Extrinsic incentives can reduce intrinsic or moral motives if they change meaning.
+
+### Stigma and concealment
+Punitive designs can reduce truthful reporting and help-seeking.
+
+### Selection and measurement artifacts
+If your measurement depends on reporting/enforcement, your “effect” may be reporting change, not behavior change.
+
+### Adaptation
+People strategically adapt to predictable enforcement or rules.
+
+---
+
+## Step 4: Build evaluation into the design
+Before deployment:
+- define outcomes (including spillovers),
+- anticipate displacement and substitution,
+- measure trust and legitimacy if relevant,
+- plan for heterogeneous effects (who benefits, who is burdened).
+
+**Rule:** if you don’t measure trust/legitimacy, you may miss the main mechanism.
+
+---
+
+## A reusable policy analysis template
+1) Target behavior and context  
+2) Mechanism bottleneck (attention, habit, norms, legitimacy, constraints)  
+3) Lever choice and why it matches mechanism  
+4) Predicted side effects (reactance, stigma, displacement)  
+5) Measurement plan (validity, selection, invariance)  
+6) Adaptation risk and monitoring plan  
+7) Equity/distribution (who bears friction/enforcement burden?)
+
+---
+
+## Connections
+- Foundations: methods, measurement, cognition, self-control
+- Topics: norms & groups, biases, moral psychology
+- Overlaps: institutions, criminology, communication

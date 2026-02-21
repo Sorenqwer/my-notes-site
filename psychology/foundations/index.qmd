@@ -1,0 +1,35 @@
+---
+title: "Foundations"
+toc: true
+---
+
+Foundations are the “parts list” of psychological explanation: a small set of mechanisms that, combined, generate a wide variety of behaviors.
+
+### Map
+- **Cognition**: perception, attention, memory, and mental representations.
+- **Learning**: reinforcement, habit formation, and associative learning.
+- **Decision-making**: risk, time, heuristics, and judgment under uncertainty.
+- **Emotion & motivation**: affect as information, goals, self-control, arousal.
+- **Social cognition**: theory of mind, attribution, norms, identity.
+- **Methods**: experiments, measurement, reliability, causal inference.
+
+## What counts as an explanation?
+A good psychological explanation typically specifies:
+1. **Input** (what information/stimuli the person receives),
+2. **Process** (what computation / association / appraisal happens),
+3. **Output** (choice, belief, emotion, or action),
+4. **Constraints** (limits: attention, working memory, stress, incentives),
+5. **Predictions** (what changes when the environment changes).
+
+## Why “mechanisms → predictions”?
+Because it forces falsifiability:
+- If the mechanism is correct, changing *X* should shift behavior in *Y* direction.
+- If it doesn’t, either the mechanism is wrong or incomplete.
+
+## Suggested starting order
+1) Decision-making  
+2) Learning  
+3) Social cognition  
+4) Emotion & motivation  
+5) Cognition  
+6) Methods (keep updating as you build pages)

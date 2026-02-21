@@ -1,0 +1,68 @@
+---
+title: "Overlaps"
+toc: true
+---
+
+This section collects places where psychology interfaces with other toolkits on the site.
+
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Psychology × strategic interaction
+Strategic behavior as a cognitive + social-emotional task: depth limits, trust, norms, reputation, learning.
+
+[Open →](game-theory.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Psychology × criminology
+Compliance, legitimacy, retaliation loops, peer effects, perceived risk vs objective risk.
+
+[Open →](criminology.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Psychology × institutions
+How rules and authority shape attention, identity, emotion, and learning.
+
+[Open →](institutions.qmd)
+:::
+:::
+
+:::
+
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Psychology × communication
+Credibility, framing, motivated reasoning, deception, common knowledge.
+
+[Open →](communication.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Psychology × economics
+Preferences vs construction, belief formation, time inconsistency, social motives.
+
+[Open →](economics.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Psychology × policy design
+Mechanism-matched levers, predictable backfires, measurement and adaptation.
+
+[Open →](policy-design.qmd)
+:::
+:::
+
+:::

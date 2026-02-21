@@ -1,0 +1,136 @@
+---
+title: "Personality"
+toc: true
+---
+
+Personality is about **stable individual differences** in how people think, feel, and behave across time and situations.
+
+A clean stance for notes:
+- People differ (traits are real and predictive),
+- Situations matter (context can amplify or suppress traits),
+- The interesting part is **person × situation**.
+
+## What personality is (in practice)
+Personality is typically measured using:
+- questionnaires (self-report),
+- informant reports,
+- behavioral tasks,
+- digital traces (with caution).
+
+Traits are not “destiny,” but they are:
+- moderately stable,
+- meaningfully predictive,
+- useful for explaining heterogeneity.
+
+---
+
+## The Big Five (high-level map)
+A common organizing framework uses five broad dimensions:
+
+- **Openness**: curiosity, imagination, preference for novelty/complexity
+- **Conscientiousness**: self-control, planning, persistence, reliability
+- **Extraversion**: social energy, assertiveness, positive affect
+- **Agreeableness**: cooperation, empathy, conflict avoidance
+- **Neuroticism** (emotional instability): sensitivity to threat, negative affect
+
+These are not the only model, but they’re a practical baseline.
+
+**Prediction pattern:** these traits correlate with typical life outcomes (health behaviors, relationship stability, work patterns), but effects depend strongly on environment.
+
+---
+
+## Traits vs states vs skills (avoid a common confusion)
+- **Trait**: stable tendency (baseline).
+- **State**: temporary condition (stress, fatigue, mood).
+- **Skill**: learned capability (self-regulation strategies, social skills).
+
+A person can have:
+- low baseline self-control (trait),
+- but strong self-regulation skills (skill),
+- and still fail under extreme stress (state).
+
+---
+
+## Person × situation: why “traits sometimes disappear”
+Behavior is shaped by:
+- trait tendencies,
+- incentives and constraints,
+- norms and roles,
+- salience and emotional state.
+
+Two environments can produce different behavior from the same person:
+- in one setting, the trait is expressed,
+- in another, it’s suppressed by norms or constraints.
+
+**Prediction pattern:** strong situations (strict rules, high surveillance, high stakes) reduce observed personality differences.
+
+---
+
+## Mechanisms: how personality “shows up”
+Traits influence behavior through:
+- **attention** (what cues you notice),
+- **interpretation** (what stories you tell about events),
+- **emotion** (how strongly you react),
+- **habits** (default routines),
+- **social strategy** (approach/avoid conflict, seek status, seek belonging).
+
+This keeps personality from being “just labels.”
+
+---
+
+## Conscientiousness as the workhorse trait (often)
+Conscientiousness is especially linked to:
+- long-run planning,
+- persistence,
+- reliability,
+- lower impulsivity.
+
+**Prediction pattern:** in many domains, conscientiousness moderates the impact of present bias and temptation.
+
+**Interventions note:** skills + environment often outperform “changing the trait.”
+Examples:
+- reminders, checklists, friction reduction,
+- commitment devices,
+- predictable routines.
+
+---
+
+## Dark-side traits and antisocial patterns (careful framing)
+Some personality patterns are associated with:
+- low empathy,
+- impulsivity,
+- antagonism,
+- thrill-seeking,
+- manipulativeness.
+
+Use caution:
+- avoid moralizing labels as explanations,
+- specify mechanisms (emotion regulation, threat perception, reinforcement history),
+- distinguish trait disposition from situational triggers.
+
+---
+
+## Measurement cautions (methods-minded)
+- Self-report is sensitive to self-image and social desirability.
+- Traits can be distorted by current mood/state.
+- Cross-cultural measurement invariance matters (same questions may not mean the same thing).
+
+**Rule of thumb:** treat trait measures as informative but noisy; triangulate when possible.
+
+---
+
+## A reusable explanation template
+When using personality in an explanation:
+
+1) **Which trait dimension** is relevant?  
+2) **Which mechanism** connects the trait to behavior (attention, emotion, habit, strategy)?  
+3) **What situation features** amplify/suppress expression (rules, monitoring, threat, incentives)?  
+4) **What prediction** follows (who changes behavior under which intervention)?  
+
+---
+
+## Connections
+- **Decision-making**: personality affects risk tolerance, patience, and self-control expression.
+- **Emotion & motivation**: neuroticism relates to threat sensitivity; extraversion relates to positive affect and approach.
+- **Social cognition**: agreeableness affects trust and conflict interpretation.
+- **Criminology**: trait heterogeneity matters (impulsivity, self-control, antagonism), but should be modeled alongside environment and institutions.

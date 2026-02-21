@@ -1,0 +1,56 @@
+---
+title: "Psychology"
+toc: true
+---
+
+Psychology here is treated as a **toolkit for explaining behavior**: how people perceive, learn, decide, and coordinate with others.
+
+This section is organized in three layers:
+
+1) **Foundations** — core mechanisms (cognition, learning, decision-making, emotion, social cognition, methods).  
+2) **Topics** — reusable patterns (biases, personality, norms, groups, mental health if needed).  
+3) **Overlaps** — where psychology connects to other sections (e.g., strategic interaction, institutions, crime).
+
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### How to study psychology
+A compact guide: mechanisms, evidence, and a clean reading order.
+
+[Open →](how-to-study.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-3}
+::: {.card}
+### Foundations
+Mechanisms first: cognition → learning → decision-making → emotion → social cognition → methods.
+
+[Open →](foundations/index.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Topics
+Biases, personality, norms & groups, and other applied themes.
+
+[Open →](topics/index.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Overlaps
+Strategic interaction, criminology, institutions, communication, economics, and policy design.
+
+[Open →](overlaps/index.qmd)
+:::
+:::
+
+:::
+
+## Design principle
+- Prefer **mechanisms → predictions → evidence** over encyclopedic summaries.
+- Keep every page usable as a **teaching note**: definitions, intuitions, common pitfalls, and one canonical example.

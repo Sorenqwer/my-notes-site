@@ -1,0 +1,121 @@
+---
+title: "Attention & memory"
+toc: true
+---
+
+This page zooms in on two bottlenecks that explain a huge amount of behavior:
+- **attention** (what gets selected for processing),
+- **memory** (what gets stored and what gets retrieved later).
+
+A recurring theme:
+> People often fail not because they “prefer” something, but because they **never processed** the relevant information, or **can’t retrieve** it when needed.
+
+## Attention: selection under scarcity
+Attention is limited. It is pulled by:
+- **goal relevance** (what you’re trying to do),
+- **novelty** (what’s new),
+- **threat** (what might harm you),
+- **emotion** (what feels intense),
+- **social cues** (faces, status signals).
+
+### Selective attention
+People focus on a subset of information and ignore the rest.
+
+**Prediction patterns**
+- Making a cue visually prominent changes choices even if nothing “objective” changes.
+- Under time pressure, attention narrows and “second-order” considerations drop out.
+- When information is spread across screens/pages, integration fails.
+
+**Design lever:** place the key cue at the point of action; reduce competing salience.
+
+### Inattentional blindness (practical takeaway)
+People can miss obvious signals when attention is elsewhere.
+
+**Prediction pattern:** adding more information can worsen outcomes if it increases clutter.
+
+### Divided attention
+Multitasking reduces performance on tasks needing working memory.
+
+**Prediction pattern:** errors rise sharply when tasks require integration across steps.
+
+---
+
+## Memory: storage and retrieval are both active processes
+Memory is not a recording device. It is:
+- selective in encoding,
+- reconstructive in retrieval,
+- shaped by emotion and meaning.
+
+### Encoding: what gets stored
+Encoding is stronger when:
+- attention is focused,
+- information is meaningful or structured,
+- there is repetition,
+- emotional salience tags it.
+
+**Prediction pattern:** “I read it but forgot” often means it was never encoded well (attention/structure issue).
+
+### Retrieval: what comes to mind drives judgment
+Retrieval is cue-dependent.
+What is easiest to retrieve feels:
+- more common,
+- more important,
+- more true.
+
+This underlies availability-driven judgments.
+
+**Prediction pattern:** recent or vivid events disproportionately shape perceived risk.
+
+### Reconstruction and distortion
+When recalling, people fill gaps with:
+- schemas (“what usually happens”),
+- identity-consistent narratives,
+- emotion-consistent interpretations.
+
+**Prediction pattern:** confidence in memory can be high even when details are wrong.
+
+---
+
+## Working memory: the small scratchpad behind reasoning
+Working memory supports:
+- holding goals active,
+- comparing options,
+- multi-step reasoning (“if A then B then C”).
+
+It is small and fragile.
+
+**Prediction patterns**
+- As reasoning steps increase, accuracy drops quickly.
+- Stress, sleep loss, and threat reduce working memory capacity.
+- People switch to simpler heuristics when working memory is overloaded.
+
+---
+
+## The “attention → memory → choice” chain
+Many interventions work because they modify this chain:
+- attention determines what gets encoded,
+- memory determines what gets retrieved,
+- retrieved content shapes judgment and choice.
+
+**Example pattern**
+- Reminder cues improve behavior not by changing preferences, but by changing retrieval.
+
+---
+
+## A reusable analysis template
+When someone “should have known better,” ask:
+
+1) **Attention:** did they notice the relevant cue at the moment?  
+2) **Encoding:** was it stored in memory (repetition/meaning)?  
+3) **Retrieval:** was the right memory available (correct cue)?  
+4) **Working memory:** was the task too multi-step?  
+5) **Prediction:** what happens if you reduce clutter, add reminders, or simplify steps?
+
+---
+
+## Connections
+- **Cognition**: this is the “detailed mechanics” layer.
+- **Decision-making**: salience and retrieval shift perceived probabilities and values.
+- **Learning**: encoding/retrieval determine what gets reinforced and generalized.
+- **Sleep & stress**: strongly modulate attention and memory.
+- **Methods**: measurement of memory and attention is sensitive to task design and demand effects.

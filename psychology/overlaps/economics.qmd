@@ -1,0 +1,73 @@
+---
+title: "Psychology × economics"
+toc: true
+---
+
+Economics and psychology overlap wherever models require assumptions about:
+- preferences,
+- beliefs,
+- attention and information processing,
+- learning and adaptation,
+- social motives (fairness, norms, identity).
+
+This page keeps economics in the background and uses psychology to clarify *where standard assumptions work and where they break*.
+
+## Bridge 1: Preferences vs construction
+In many contexts, preferences are not fully “pre-existing.”
+They are constructed from:
+- attention and salience,
+- framing and reference points,
+- emotion and identity.
+
+**Prediction pattern:** change the frame or default, and choice shifts without “preference change” in a deep sense.
+
+---
+
+## Bridge 2: Beliefs and confidence
+Economic models often assume coherent belief updating.
+Psychology emphasizes:
+- trust and source filtering,
+- motivated reasoning,
+- salience and memory,
+- miscalibration of confidence.
+
+**Prediction pattern:** interventions that increase trust and feedback quality move behavior as much as incentives do.
+
+---
+
+## Bridge 3: Time inconsistency and self-control
+Present focus and cue-triggered habits create:
+- procrastination,
+- under-saving,
+- relapse.
+
+**Prediction pattern:** commitment devices and automation are high-leverage.
+
+---
+
+## Bridge 4: Social preferences and norm utility
+People care about:
+- fairness,
+- reciprocity,
+- shame/guilt,
+- status,
+- identity.
+
+**Prediction pattern:** “pure incentives” can backfire if they signal distrust or crowd out moral motives.
+
+---
+
+## Bridge 5: Learning in markets and repeated settings
+Learning is shaped by:
+- noisy feedback,
+- endogenous adaptation,
+- selective observation.
+
+**Prediction pattern:** early experiences can anchor beliefs and risk-taking, even if objectively irrelevant.
+
+---
+
+## Connections
+- Foundations: decision-making, beliefs, learning, self-control, methods
+- Topics: biases, norms & groups, moral psychology
+- Overlaps: institutions and policy design

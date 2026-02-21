@@ -1,0 +1,164 @@
+---
+title: "Cognition"
+toc: true
+---
+
+Cognition is how people **take in information, represent it mentally, and use it to guide action**. It includes perception, attention, memory, and the limited “workspace” that supports reasoning.
+
+A useful theme for the whole site:
+> Many “biases” are not mysterious preferences — they are **consequences of cognitive constraints**.
+
+## The pipeline view
+You can often explain behavior by locating where things break in this pipeline:
+
+1) **Perception** (what is detected)
+2) **Attention** (what is selected)
+3) **Encoding** (what gets stored)
+4) **Memory & retrieval** (what comes back to mind)
+5) **Working memory & reasoning** (what can be manipulated)
+6) **Decision output** (judgment and choice)
+
+Different tasks fail at different stages.
+
+---
+
+## Perception: we don’t experience the world directly
+Perception is an inference process: the mind reconstructs reality from partial input.
+
+Key implications:
+- people can miss obvious signals when they are not attended to,
+- ambiguous stimuli are interpreted using context and expectations,
+- repeated exposure changes what feels “normal.”
+
+**Prediction pattern:** the same event can be perceived differently depending on prior beliefs, stress, identity, and what is salient.
+
+---
+
+## Attention: the scarce resource
+Attention is limited; it is allocated based on:
+- novelty,
+- threat,
+- goal relevance,
+- emotional salience,
+- social relevance (faces, status cues).
+
+### Selective attention
+People focus on some cues and ignore others.
+
+**Prediction pattern:** changing what is salient (layout, framing, order, visual prominence) changes judgment and behavior even when information content is unchanged.
+
+### Divided attention and multitasking
+Multitasking typically reduces performance and increases errors, especially for tasks requiring working memory.
+
+**Prediction pattern:** under distraction, people rely more on defaults, habits, and simple heuristics.
+
+---
+
+## Memory: storage is not recording
+Memory is reconstructive.
+It is shaped by:
+- emotion (strong tagging),
+- repetition (availability),
+- meaning (schema-consistency),
+- recency and vividness.
+
+### Working memory vs long-term memory
+- **Working memory**: small, active “scratch space.”
+- **Long-term memory**: large but retrieval is cue-dependent.
+
+**Prediction pattern:** tasks requiring multiple steps of reasoning fail when working memory load increases.
+
+### Retrieval and availability
+What comes to mind easily feels more likely or more important.
+
+**Prediction pattern:** vivid, recent, or emotionally salient examples dominate judgment of frequency and risk.
+
+---
+
+## Mental representations: the hidden structure behind choices
+People do not store full details; they store structured representations:
+- categories (“type of person” / “type of situation”),
+- causal stories (“X causes Y”),
+- scripts (“what happens next here”).
+
+Representations are useful but also create systematic errors:
+- you may ignore out-of-category evidence,
+- you may force events into familiar scripts.
+
+**Prediction pattern:** changing category labels changes interpretation, even with identical behavior.
+
+---
+
+## Reasoning: computation under constraints
+Reasoning is costly and often:
+- stops early (satisficing),
+- uses shortcuts (heuristics),
+- depends on attention and working memory.
+
+A practical way to write this:
+- **depth** (how many steps you can carry),
+- **breadth** (how many possibilities you can compare),
+- **precision** (how error-free your steps are).
+
+Stress, time pressure, and fatigue reduce all three.
+
+---
+
+## Errors that look like “bias” but are cognitive mechanics
+When people appear biased, check whether it could be explained by:
+- limited attention (missed information),
+- limited working memory (can’t integrate many cues),
+- cue-dependent retrieval (what comes to mind drives judgment),
+- schema-driven interpretation (story beats statistics),
+- default reliance (choice overload).
+
+**Rule of thumb:** if an intervention that changes salience, load, or feedback changes behavior, the mechanism is likely cognitive.
+
+---
+
+## A reusable explanation template
+To explain a cognition-driven pattern, specify:
+
+1) **Task**: what must the person compute/remember?
+2) **Bottleneck**: perception, attention, memory, or working memory?
+3) **Cue structure**: what cues are salient vs hidden?
+4) **Representation**: what categories/scripts are activated?
+5) **Prediction**: what changes if you reduce load or change salience?
+
+---
+
+## Canonical examples (stubs you can expand)
+### Example A: “They had the information but didn’t use it”
+- info exists but is not salient,
+- attention is captured by another cue,
+- working memory is overloaded.
+
+**Mechanisms:** selective attention + working memory limits.
+
+### Example B: Miscommunication in complex tasks
+- speaker assumes shared context,
+- listener lacks the same representation,
+- misunderstanding persists because feedback is delayed or weak.
+
+**Mechanisms:** different mental models + reconstruction + weak error signals.
+
+---
+
+## Connections to other sections
+### Decision-making
+Many “preference anomalies” are actually representation and attention effects.
+
+### Learning
+Cues and memory determine what gets reinforced and what generalizes.
+
+### Social cognition
+Mentalizing depth is constrained by working memory; stereotypes are low-cost representations.
+
+### Criminology
+Witness memory, stress in high-stakes encounters, and selective attention to threat cues are cognition-sensitive.
+
+### Overlaps (later)
+In strategic environments, cognition limits:
+- depth of “I think you think…”
+- ability to compute contingencies,
+- ability to detect deception.

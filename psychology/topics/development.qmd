@@ -1,0 +1,121 @@
+---
+title: "Development"
+toc: true
+---
+
+Development is about how psychological mechanisms change across the life course:
+- cognitive capacity and control,
+- learning styles and sensitivity to reward/punishment,
+- social reasoning and identity,
+- emotion regulation and stress reactivity.
+
+This page is a **mechanism map** you can reuse when thinking about age, cohorts, schooling, family, and peer environments.
+
+## A practical stance
+Instead of treating “age” as a label, treat it as a bundle of changing parameters:
+
+- **capacity** (attention, working memory, executive control)
+- **experience** (learned scripts, habits, domain knowledge)
+- **motivation** (goals, identity, status)
+- **context** (family, school/work, peers, institutions)
+- **plasticity** (how quickly learning happens; sensitivity to feedback)
+
+---
+
+## Mechanism 1: Executive function and self-control develop (then decline later)
+Self-control is strongly linked to:
+- attention regulation,
+- inhibition,
+- planning,
+- working memory.
+
+In many people:
+- executive control increases through childhood/adolescence into early adulthood,
+- then can decline later with aging, depending on health and context.
+
+**Prediction patterns**
+- impulsive choices are more common when executive control is still developing, especially under stress.
+- structure and routines help when control capacity is limited.
+- environments with strong cues and temptations amplify control differences.
+
+---
+
+## Mechanism 2: Reward sensitivity and novelty seeking
+Many adolescent/young-adult environments involve:
+- heightened sensitivity to social reward,
+- stronger status incentives,
+- stronger novelty seeking.
+
+This is not only “immaturity”; it can be adaptive for exploration, but risky under certain environments.
+
+**Prediction patterns**
+- peer presence increases risk-taking more for younger individuals than older adults.
+- interventions that change social reward (status, approval) can be more effective than purely informational warnings.
+
+---
+
+## Mechanism 3: Social cognition and identity formation
+Social cognition becomes more sophisticated over time, but identity pressures also rise:
+- belonging and status needs can dominate,
+- group norms become highly salient.
+
+**Prediction patterns**
+- identity threats amplify motivated reasoning and conformity.
+- in-group messengers and identity-safe framing matter more in identity-sensitive periods.
+
+---
+
+## Mechanism 4: Learning and habit formation across stages
+People learn through reinforcement, imitation, instruction, and practice.
+But:
+- early experiences can set durable scripts (“what relationships are like,” “what authority is like”),
+- repeated environments create habits that persist even after beliefs change.
+
+**Prediction patterns**
+- early consistent feedback shapes stable expectations (trust vs threat).
+- inconsistent or unpredictable environments increase vigilance and short-horizon choice.
+- habit change is harder when environments remain cue-rich.
+
+---
+
+## Mechanism 5: Family, peers, and institutions as developmental environments
+Development is not only “inside the person”; it is shaped by:
+- parenting styles and family stability,
+- peer networks and norms,
+- school/work structures,
+- exposure to stress and safety,
+- institutional legitimacy and fairness.
+
+**Prediction patterns**
+- stable, predictable environments support long-horizon planning and emotion regulation.
+- chronic threat environments increase vigilance, distrust, and reactive responses.
+
+---
+
+## Mechanism 6: Sensitive periods and plasticity (high-level)
+Some skills and patterns are easier to shape during windows when:
+- learning rates are high,
+- scripts are not yet rigid,
+- identity is still forming.
+
+**Prediction patterns**
+- early interventions can have high returns when they change routines and peer norms.
+- later change is still possible, but often requires environment redesign and sustained practice.
+
+---
+
+## A reusable development analysis template
+When age or life stage matters, specify:
+
+1) **Which capacity is changing?** (control, attention, social cognition, reward sensitivity)  
+2) **Which environment dominates?** (family, peers, school/work, institutions)  
+3) **What feedback loops exist?** (reward, punishment, reputation, stigma)  
+4) **What is the predicted direction?** (more exploration? more conformity? more threat sensitivity?)  
+5) **Which intervention lever fits the stage?** (structure, peer norms, identity, commitment, support)
+
+---
+
+## Connections
+- Foundations: **cognition**, **learning**, **self-control**, **emotion & motivation**, **social cognition**
+- Topics: **norms & groups**, **relationships**, **sleep & stress**
+- Overlaps: **institutions** (schools, justice systems), **criminology** (peer effects, life-course patterns, hot states)

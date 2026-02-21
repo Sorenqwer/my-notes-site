@@ -1,0 +1,168 @@
+---
+title: "Learning"
+toc: true
+---
+
+Learning explains how behavior changes with experience. It is not just “updating beliefs” in a rational sense; it includes **associations, habits, reinforcement, imitation, and memory distortions**.
+
+A helpful split:
+
+- **Learning what is true** (belief learning, causal learning)
+- **Learning what works** (reinforcement learning, habit)
+- **Learning what is acceptable** (social learning, norms)
+
+## A minimal decomposition
+Most learning processes can be described as:
+
+1) **Signal**: what feedback arrives (reward, punishment, approval, outcome)?
+2) **Credit assignment**: what action/cue is blamed or credited?
+3) **Update rule**: how strongly do we change behavior/belief?
+4) **Generalization**: do we apply the lesson to similar situations?
+5) **Persistence**: do we forget, decay, or form a habit?
+
+Many “irrational” outcomes are really failures at (2) or distortions in (4).
+
+---
+
+## Reinforcement learning: behavior shaped by reward and punishment
+In reinforcement learning, choices are strengthened by outcomes:
+- actions followed by reward become more likely,
+- actions followed by punishment become less likely.
+
+**Key feature:** reinforcement can shape behavior even when people cannot fully articulate why.
+
+### Prediction patterns
+- **Variable rewards** (unpredictable rewards) can create persistent behavior (strong habit formation).
+- **Immediate feedback** produces faster learning than delayed feedback.
+- **Sparse feedback** increases superstition-like associations (“it worked once, so it must work”).
+
+### Common pitfall
+Assuming punishment always reduces behavior. In many social settings punishment can also:
+- increase attention and status,
+- increase resentment and retaliation,
+- teach avoidance rather than compliance.
+
+---
+
+## Habit: when actions become automatic
+Habits are learned action patterns triggered by cues, not by deliberation.
+
+A useful formula:
+**cue → routine → reward**
+
+Habits are often:
+- fast,
+- effort-saving,
+- stable under stress,
+- insensitive to new information.
+
+**Prediction pattern:** people can “know better” but still repeat the behavior because the cue triggers the routine.
+
+### Changing habits
+Interventions that work:
+- remove or change cues,
+- replace the routine (substitute behavior),
+- keep some reward (so substitution is sustainable),
+- reshape the environment (friction, defaults).
+
+---
+
+## Belief learning: updating what you think is true
+Belief learning includes:
+- learning base rates and frequencies,
+- causal learning (what causes what),
+- social belief learning (what others will do / what norms are).
+
+Belief updating is often asymmetric:
+- people accept confirming evidence too easily,
+- scrutinize disconfirming evidence too harshly,
+- overweight vivid experiences relative to statistics.
+
+**Prediction pattern:** vivid personal experiences can dominate statistical evidence, even when objectively less informative.
+
+---
+
+## Social learning: imitation, norms, and “what people like us do”
+A large share of human learning comes from others:
+- imitation,
+- instruction,
+- conformity,
+- prestige-biased copying (“copy the successful/high-status person”).
+
+Two important norm channels:
+- **descriptive norms**: what most people do
+- **injunctive norms**: what people approve/disapprove
+
+**Prediction pattern:** showing that “most people comply” can increase compliance more than moral appeals, but can backfire if noncompliance is framed as common.
+
+---
+
+## Learning under uncertainty: exploration vs exploitation
+Learners trade off:
+- **exploitation** (do what already seems best),
+- **exploration** (try alternatives to learn more).
+
+People often explore too little when:
+- feedback is noisy,
+- losses feel especially salient,
+- evaluation and reputation pressure are high.
+
+**Prediction pattern:** when failure is publicly punished, exploration drops and systems stagnate.
+
+---
+
+## Credit assignment: the hidden driver of bad learning
+Credit assignment asks: *what exactly caused the outcome?*
+
+Failures occur when:
+- multiple factors change at once,
+- outcomes are delayed,
+- the environment is strategic (others respond),
+- feedback is selective (you only see some outcomes).
+
+**Prediction pattern:** in strategic environments, naive learners can misattribute outcomes to their own action instead of to opponents’ adaptation.
+
+---
+
+## A reusable explanation template
+To explain a learned behavior, write:
+
+1) **Environment**: what feedback structure exists (immediate/delayed, noisy, sparse)?
+2) **Cues**: what triggers action?
+3) **Update mechanism**: reinforcement, habit, belief updating, social learning?
+4) **Bias point**: where does it go wrong (credit assignment, generalization, forgetting)?
+5) **Intervention**: what changes learning (feedback timing, salience, norms, friction)?
+
+---
+
+## Canonical examples (stubs you can expand)
+### Example A: “I keep doing it even though I know it’s bad”
+- behavior is cued automatically,
+- reward is immediate (relief, pleasure),
+- costs are delayed.
+
+**Mechanisms:** habit + reinforcement + present focus.
+
+### Example B: Learning in social conflict
+- one side escalates, other side responds,
+- each interprets response as confirmation of hostility,
+- both update toward distrust.
+
+**Mechanisms:** biased attribution + reinforcement of defensive routines + selective memory.
+
+---
+
+## Connections to other sections
+### Decision-making
+Learning shapes what options feel available and what outcomes feel likely.
+
+### Social cognition
+Social learning depends on identity, trust, and perceived credibility.
+
+### Emotion & motivation
+Emotional arousal changes learning rates and generalization; stress strengthens habit expression.
+
+### Criminology
+- deterrence depends on experienced and observed consequences,
+- peer effects and neighborhood norms shape learning,
+- enforcement can teach avoidance rather than compliance.

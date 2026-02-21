@@ -1,0 +1,116 @@
+---
+title: "How to study psychology"
+toc: true
+---
+
+Psychology is a discipline about **mechanisms**: how minds and social systems generate behavior.
+To study it well, you want to avoid two traps:
+
+- **Trap A (storytelling):** “That sounds plausible” without testable predictions.
+- **Trap B (list memorization):** collecting terms without understanding mechanisms.
+
+This guide gives a workflow for reading, note-making, and building explanations that connect to the rest of your site.
+
+## 1) The core objects psychology tries to explain
+Most psychological explanations target one (or more) of:
+
+- **Behavior**: actions, choices, habits, compliance, aggression, helping
+- **Beliefs**: what people think is true; confidence; uncertainty; trust in sources
+- **Emotion**: fear, anger, shame, guilt, motivation, arousal
+- **Cognition**: attention, memory, mental models, reasoning limits
+- **Social interaction**: trust, norms, identity, reputation, conflict and repair
+
+When reading, ask: *which object is this paper actually explaining?*
+
+## 2) Mechanisms first: a reusable template
+Write every explanation in the same skeleton:
+
+1) **Input**: what information / stimulus / context is present?
+2) **Representation**: what does the person *think* the situation is?
+3) **Process**: what mechanism runs? (attention, habit, appraisal, attribution, etc.)
+4) **Constraint**: what limits apply? (working memory, stress, incentives, identity threat)
+5) **Output**: what behavior/belief/emotion results?
+6) **Prediction**: what changes if you vary the input or constraints?
+
+If a claim has no (6), it’s not yet a good explanation.
+
+## 3) Evidence hierarchy (practical, not dogmatic)
+Different questions need different evidence:
+
+- **Experiments**: strongest for causality (if design is clean)
+- **Field / natural experiments**: causality + realism (but messy)
+- **Observational studies**: broad coverage (but confounding risks)
+- **Qualitative / case evidence**: mechanisms and context (weak on magnitude)
+
+Your default should be: **start with mechanism + prediction**, then ask what evidence type can test it.
+
+## 4) Always separate three things
+Many confusions disappear if you keep these separate:
+
+### (i) Trait vs state vs skill
+- Trait: stable tendency
+- State: temporary condition (stress, fatigue)
+- Skill: learned capability (reappraisal, planning)
+
+### (ii) Preference vs cognition
+Is the person choosing differently because they *want* something different,
+or because they *represent/compute* differently (attention, memory, framing)?
+
+### (iii) Bias vs noise
+Is the pattern directional and systematic (bias),
+or just variability (noise)?
+
+## 5) A minimal reading order (the “spine”)
+If you want a clean progression:
+
+1) **Cognition** → attention, memory, working memory limits  
+2) **Learning** → reinforcement, habit, feedback, adaptation  
+3) **Decision-making** → risk, time, heuristics, choice architecture  
+4) **Emotion & motivation** → threat, anger, shame/guilt, goal priority  
+5) **Social cognition** → mentalizing, attribution, identity, norms  
+6) **Methods + measurement** → what counts as evidence; validity/reliability  
+
+Then branch into Topics:
+- biases, norms & groups, moral psychology, relationships, development, etc.
+
+## 6) How to take notes that remain useful
+For every page you write, include:
+
+- **Definitions** (short and operational)
+- **Mechanism** (what actually runs in the mind/system)
+- **Predictions** (2–5 bullets)
+- **Failure modes** (when it won’t apply)
+- **One canonical example** (worked, not vague)
+- **Interventions** (what moves behavior and why)
+- **Links** to other pages (foundations ↔ topics ↔ overlaps)
+
+If you do this, your notes won’t become a glossary.
+
+## 7) Common pitfalls (and how to avoid them)
+### “Just-so” explanations
+If the explanation can fit any outcome, it explains nothing.
+**Fix:** force counterfactual predictions (what would falsify it?).
+
+### Overgeneralizing from one study
+Single results are fragile.
+**Fix:** look for replications and boundary conditions.
+
+### Confusing labels with mechanisms
+“Self-control” or “trust” is not an explanation.
+**Fix:** specify the process (cue-triggered habit? threat appraisal? credibility heuristic?).
+
+### Ignoring measurement and selection
+Especially with self-report and institutional data.
+**Fix:** ask how the variable is constructed; what’s missing; who is unobserved.
+
+## 8) How this connects to the rest of the site
+- **Criminology:** psychology explains reporting, compliance, escalation, legitimacy, peer effects.
+- **Strategic interaction:** psychology explains depth limits, credibility, norms, and emotion-as-commitment.
+- **Institutions & policy:** psychology explains salience, defaults, legitimacy, and adaptation.
+
+## Suggested “Start here” path
+- Foundations: `psychology/foundations/index.qmd`
+- Then: `psychology/foundations/cognition.qmd`
+- Then: `psychology/foundations/learning.qmd`
+- Then: decision-making, emotion & motivation, social cognition
+- Keep methods/measurement updated as you add pages

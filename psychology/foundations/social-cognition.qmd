@@ -1,0 +1,154 @@
+---
+title: "Social cognition"
+toc: true
+---
+
+Social cognition studies how people **perceive, interpret, and predict other people**—their beliefs, intentions, emotions, and future actions. It is the psychological machinery behind coordination, conflict, trust, stigma, reputation, and norms.
+
+A useful way to think about it:  
+**social cognition = inference about minds + inference about situations + inference about groups**.
+
+## Core questions
+- *What is this person like?* (traits, character, identity)
+- *What does this person want?* (goals, incentives, motives)
+- *What does this person know or believe?* (information, ignorance, uncertainty)
+- *What will they do next?* (prediction, forecasting, response)
+- *What do “people like us” do here?* (norms, roles, scripts)
+
+## Mechanisms map
+### 1) Theory of mind (mentalizing)
+**Theory of mind** is the capacity to represent others’ beliefs and intentions, including the possibility that others hold **false beliefs**.
+
+- Low mentalizing: “They see what I see.”
+- Higher mentalizing: “They think I think …” (recursive reasoning, but limited depth in practice).
+
+**Prediction pattern:** when tasks require more steps of “I think you think,” performance drops sharply, especially under time pressure or stress.
+
+**Common pitfall:** treating theory of mind as all-or-nothing. In reality it varies by context, load, familiarity, and incentives.
+
+### 2) Attribution: person vs situation
+When explaining behavior, people often choose between:
+- **dispositional** explanations (“that’s who they are”), and
+- **situational** explanations (“that’s what the environment made likely”).
+
+A classic regularity: people often overweight dispositions relative to situations, especially when judging others.
+
+**Prediction pattern:** providing salient situational information (constraints, incentives, background) shifts judgments and reduces moralized blame.
+
+### 3) Social perception: rapid, low-data inference
+Humans make fast judgments from sparse cues (face, tone, posture, labels). This can be adaptive but error-prone.
+
+Two recurring dimensions in impressions:
+- **Warmth** (intentions: friend or threat?)
+- **Competence** (ability: can they act on intentions?)
+
+These map naturally into many social outcomes: trust, fear, respect, pity, contempt.
+
+### 4) Identity and self-categorization
+People do not only think as individuals; they also think as members of groups:
+- “people like me”
+- “people like them”
+- “what we do”
+
+Identity changes what is salient:
+- what evidence feels credible,
+- what behavior feels appropriate,
+- what costs feel worth paying.
+
+**Prediction pattern:** making a shared identity salient increases cooperation; making subgroup divisions salient increases conflict and misinterpretation.
+
+### 5) Norms and social scripts
+A huge amount of behavior is “rule-following” without explicit deliberation.
+Norms specify:
+- what is typical (*descriptive norms*),
+- what is approved (*injunctive norms*).
+
+Scripts specify “what happens next” in familiar settings (classrooms, clinics, police stops, interviews).
+
+**Prediction pattern:** changing perceived descriptive norms can change behavior even when incentives do not (people follow what they think most others do).
+
+### 6) Reputation and indirect reciprocity
+People care about how they are seen. Reputation can substitute for direct enforcement.
+
+Key ingredients:
+- observability (who sees what),
+- interpretability (what the action means),
+- memory (how long it sticks),
+- audience incentives (who benefits from punishing or praising).
+
+**Prediction pattern:** making actions public increases pro-social behavior, but can also create performative or status-seeking distortions.
+
+---
+
+## Limits and distortions (important)
+Social cognition is powerful but systematically constrained.
+
+### Cognitive load and stress
+Under load, people:
+- mentalize less deeply,
+- rely more on stereotypes and scripts,
+- become more sensitive to threat cues.
+
+### Motivated reasoning
+When identity, emotion, or self-image is at stake, beliefs can shift toward what is psychologically comfortable:
+- selective attention to confirming evidence,
+- asymmetric skepticism (harsh on “their” claims, lenient on “ours”),
+- post-hoc rationalization.
+
+### Miscalibration about others
+Common misbeliefs include:
+- **false consensus** (“most people think like me”),
+- **pluralistic ignorance** (“others privately disagree but go along”),
+- **spotlight effects** (overestimating how much others notice us),
+- **fundamental attribution tendency** (over-blaming traits for others).
+
+---
+
+## A reusable explanation template
+When you explain a social outcome, try:
+
+1) **Situation:** what is the environment (stakes, time, observability, roles)?  
+2) **Inference:** what does each side think the other believes/wants?  
+3) **Identity & norms:** what categories and norms are active?  
+4) **Emotion:** what affective state is present (fear, anger, shame)?  
+5) **Action:** what behavior follows (cooperate, punish, withdraw, attack)?  
+6) **Feedback:** what is learned; what reputation update occurs?
+
+---
+
+## Canonical examples (stubs you can expand)
+### Example A: Misinterpretation cascade
+- A ambiguous action is interpreted as hostile.
+- That interpretation triggers defensive behavior.
+- The defensive behavior is interpreted as confirmation.
+- The relationship locks into conflict.
+
+**Mechanisms:** attribution bias + threat sensitivity + reputation concerns.
+
+### Example B: Norm enforcement without police
+- People punish or shame norm violators even at personal cost.
+- Observers cooperate more when punishment is visible.
+
+**Mechanisms:** injunctive norms + reputation + indirect reciprocity.
+
+---
+
+## Connections to other sections on the site
+### Criminology
+- **Legitimacy and compliance:** trust in authorities depends on perceived intentions (warmth/fairness) and competence.
+- **Reporting and cooperation:** social identity, fear of retaliation, and perceived norms shape willingness to report.
+- **Violence and escalation:** misattribution plus threat sensitivity can produce rapid escalation.
+
+### Game-theory overlap (kept light here)
+Social cognition supplies the psychological primitives behind strategic interaction:
+- depth-limited belief reasoning,
+- reputation and signaling,
+- norm-based preferences (approval, shame, guilt),
+- audience effects and public observability.
+
+---
+
+## What to read next (within this notes system)
+- *Emotion & motivation* (how anger, guilt, shame, and threat shape social inference)
+- *Decision-making* (how heuristics and framing distort interpersonal judgment)
+- *Methods* (how to test social cognition claims without falling into “storytelling”)

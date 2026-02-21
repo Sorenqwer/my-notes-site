@@ -1,0 +1,184 @@
+---
+title: "Methods"
+toc: true
+---
+
+Methods are the discipline’s **error-correction system**: how we decide whether a psychological claim is true, how big the effect is, and when it generalizes.
+
+This page is intentionally practical: it’s a checklist for evaluating evidence while you read papers or build arguments.
+
+## The basic problem
+Psychology studies internal states (beliefs, emotions, motives) using external signals (choices, reports, physiology, behavior).  
+That creates two recurring challenges:
+
+1) **Measurement**: are we measuring what we think we’re measuring?
+2) **Inference**: does the evidence support causality or only association?
+
+---
+
+## Study types (and what each can and can’t do)
+### 1) Experiments (randomized)
+**Strength:** best for causal inference (if implemented well).  
+**Weakness:** may be artificial; limited generalization; demand effects.
+
+Questions to ask:
+- Was assignment truly random?
+- Was there attrition (dropout) correlated with treatment?
+- Was the manipulation strong and specific (not confounded)?
+- Are outcomes pre-specified or cherry-picked?
+
+### 2) Observational studies
+**Strength:** real-world behavior, larger samples, external validity.  
+**Weakness:** confounding, selection, reverse causality.
+
+Questions to ask:
+- What could cause both X and Y?
+- Could Y influence X?
+- Are there omitted variables that change interpretation?
+
+### 3) Field experiments / natural experiments
+**Strength:** causal inference in real settings.  
+**Weakness:** messy implementation; compliance issues; spillovers.
+
+Questions to ask:
+- Was treatment actually delivered (compliance)?
+- Were there spillovers or displacement effects?
+- Was the identification assumption plausible?
+
+### 4) Qualitative / case-based evidence
+**Strength:** mechanisms, context, meaning, hypothesis generation.  
+**Weakness:** hard to estimate size; risks confirmation bias.
+
+Questions to ask:
+- Is the case chosen systematically or selectively?
+- Are rival explanations considered?
+
+---
+
+## Measurement: validity beats vibes
+### Construct validity
+Are we measuring the intended construct (e.g., “anxiety”, “trust”, “self-control”)?
+
+- Many constructs have multiple operationalizations.
+- Single-item measures are fragile.
+- Self-reports capture *self-perception* and *presentation*, not pure internal state.
+
+**Red flags:** vague constructs + weak operational definition + strong conclusions.
+
+### Reliability
+Do we get similar results if we measure again (or with equivalent items)?
+
+- Low reliability attenuates effects and creates noisy findings.
+- If measurement is unstable, inference becomes unstable.
+
+A practical reading rule:
+> If reliability is not discussed for a key measure, treat estimates as fragile.
+
+### Demand characteristics and experimenter effects
+People sometimes behave the way they think the experiment “wants.”
+
+Mitigation ideas:
+- deception (when ethical),
+- cover stories,
+- unobtrusive behavioral measures,
+- double-blind procedures.
+
+---
+
+## Causal inference: the minimum you need
+### Confounding (omitted variables)
+If a third factor drives both X and Y, the association can be misleading.
+
+Example schema:
+- trait T → both X and Y  
+So X and Y correlate even if X does not cause Y.
+
+### Selection
+People choose into conditions (schools, jobs, groups). That choice is informative.
+
+Example schema:
+- motivation → program participation + later success  
+So participation appears to “work” even if it’s selection.
+
+### Reverse causality
+Y can cause X (or they co-evolve).
+
+### Mediation vs moderation (common confusion)
+- **Mediator:** X changes M, which changes Y (mechanism pathway).
+- **Moderator:** the effect of X on Y differs by Z (heterogeneity).
+
+**Quick test:**  
+Mediator is “how”; moderator is “when/for whom.”
+
+---
+
+## Effect sizes: “statistically significant” is not “important”
+Always separate:
+- **direction** (positive/negative),
+- **magnitude** (how big),
+- **precision** (confidence interval),
+- **practical relevance** (does it matter in the real world?).
+
+**Reading habit:** if a paper only reports p-values without effect sizes and uncertainty, downgrade confidence.
+
+---
+
+## Replicability and generalization (the two big filters)
+### Replication
+Can the effect be reproduced in a new sample with the same procedure?
+
+Treat “one study” as:
+- suggestive evidence,
+not a conclusion.
+
+### Generalization
+Does it hold across:
+- populations (age, culture),
+- settings (lab vs field),
+- measurement (different instruments),
+- incentives/stakes?
+
+A useful mental model:
+> Effects can be real but local.
+
+---
+
+## Common failure modes (how to spot weak evidence)
+- Many outcomes tested, only the “wins” reported (multiple comparisons).
+- Researcher degrees of freedom (flexible stopping rules, model choices).
+- Post-hoc storytelling (hypotheses invented after results are known).
+- Small samples with big claims.
+- Convenience samples presented as universal human psychology.
+
+This does not mean “ignore everything,” but it means “calibrate confidence.”
+
+---
+
+## A practical checklist for any claim
+When you read a claim, ask:
+
+1) **What exactly is the construct?**  
+2) **How is it measured?** reliable? valid?  
+3) **What is the identification strategy?** randomization? controls? instruments?  
+4) **What are alternative explanations?** confounding? selection? reverse causality?  
+5) **How big is the effect?** and is it meaningful?  
+6) **Does it replicate?**  
+7) **Where does it generalize?**
+
+If a paper passes (1)–(4), it’s already unusually strong.
+
+---
+
+## Connections to other sections
+### Decision-making, learning, social cognition
+Methods tell you which behavioral patterns are robust and which are artifacts of measurement or sampling.
+
+### Criminology
+Measurement and selection issues are central (reporting bias, enforcement bias, displacement/spillovers).  
+A methods mindset prevents “policy conclusions” from being driven by selection.
+
+### Overlaps (later)
+Many strategic-behavior claims (trust, deterrence, cooperation) hinge on whether you can distinguish:
+- beliefs vs preferences,
+- selection vs treatment,
+- correlation vs causality.

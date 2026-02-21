@@ -1,0 +1,140 @@
+---
+title: "Psychology × strategic interaction"
+toc: true
+---
+
+This page treats “game theory” as a **language for interaction**, and psychology as the **engine of behavior**.
+The goal is to explain how real strategic behavior differs from idealized assumptions, using psychological mechanisms.
+
+## The simplest bridge
+Strategic interaction requires four psychological capacities:
+
+1) **Represent the situation** (what are the options and payoffs?)
+2) **Represent other minds** (what do they know, want, believe?)
+3) **Regulate emotion** (threat, anger, shame, pride)
+4) **Learn from feedback** (what worked, what didn’t, what others will do next)
+
+Any breakdown in (1)–(4) changes outcomes.
+
+---
+
+## Mechanism 1: Limited depth of reasoning
+Many interactions require recursive thought:
+- “I think you think I think…”
+
+But depth is constrained by:
+- working memory,
+- time pressure,
+- stress,
+- familiarity.
+
+**Prediction patterns**
+- In complex games, people often behave as if they reason only a few steps.
+- Simplifying the environment (fewer actions, clearer incentives) increases strategic sophistication.
+- Under stress, behavior becomes more habitual and less model-based.
+
+**Useful takeaway:** what looks like “naive strategy” can be a cognitive-load response.
+
+---
+
+## Mechanism 2: Beliefs are shaped by identity and trust
+In strategic settings, information is rarely neutral. People filter evidence through:
+- source credibility,
+- group identity,
+- prior narratives,
+- motivated reasoning.
+
+**Prediction patterns**
+- Messages from in-group sources are believed more readily.
+- Identical evidence is discounted when it comes from distrusted sources.
+- Attempts at correction can backfire if they signal dominance or disrespect.
+
+**Implication:** communication failures can persist even when incentives favor agreement.
+
+---
+
+## Mechanism 3: Social preferences and moral motives
+People often care about more than material payoff:
+- fairness and inequity,
+- reciprocity,
+- status,
+- guilt and shame,
+- norm compliance.
+
+**Prediction patterns**
+- People punish unfairness even at personal cost.
+- Cooperation increases when actions are observable and reputational.
+- Small perceived disrespect can trigger disproportionate retaliation.
+
+**Interpretation:** outcomes can look “non-equilibrium” if you assume the wrong utility function.
+
+---
+
+## Mechanism 4: Emotion as commitment (and as escalation fuel)
+Emotions can function like commitment devices:
+- anger makes retaliation credible,
+- pride makes backing down costly,
+- shame makes concealment likely,
+- guilt makes repair likely.
+
+**Prediction patterns**
+- If retaliation is expected, deterrence can emerge without formal enforcement.
+- Misattribution + anger can produce escalation spirals.
+- Public audiences amplify commitment and reputational stakes.
+
+**Implication:** credibility is not only about calculation; it’s also about affect and identity.
+
+---
+
+## Mechanism 5: Learning in interactive environments is tricky
+Strategic environments generate feedback that is:
+- **endogenous** (others adapt),
+- **selective** (you see only some outcomes),
+- **confounded** (many things change at once).
+
+**Prediction patterns**
+- People can learn the “wrong lesson” because credit assignment is hard.
+- Early random outcomes can lock in persistent mistrust.
+- Policies can create adaptation that offsets intended effects.
+
+**Bridge to criminology:** enforcement and deterrence can change behavior *and* change the environment.
+
+---
+
+## A reusable “psych-first” analysis template
+When analyzing a strategic situation, write:
+
+1) **Situation**: what are the actions and constraints?  
+2) **Beliefs**: what does each side think the other will do?  
+3) **Mind-reading**: how well can they infer intentions/information?  
+4) **Motives**: beyond payoffs—fairness, status, norms, identity?  
+5) **Emotion**: fear/anger/shame/guilt shaping action?  
+6) **Learning**: what feedback occurs, and what gets reinforced?  
+7) **Prediction**: what changes if you alter salience, observability, identity, or feedback?
+
+---
+
+## Canonical examples (stubs you can expand)
+### Example A: Cooperation collapse
+- people start cooperative,
+- a few defections occur (noise or misunderstanding),
+- trust drops, retaliation increases,
+- cooperation collapses.
+
+**Mechanisms:** attribution bias + negative reciprocity + learning from salient losses.
+
+### Example B: Cheap talk becomes informative
+- some senders value honesty or reputational integrity,
+- some receivers trust in-group sources more,
+- even costless messages can predict behavior.
+
+**Mechanisms:** norms + identity + credibility heuristics.
+
+---
+
+## Links outward
+- **Cognition**: depth limits and representation errors
+- **Social cognition**: theory of mind and attribution
+- **Emotion & motivation**: commitment, escalation, repair
+- **Learning**: adaptation and feedback in interaction
+- **Criminology**: legitimacy, reporting, enforcement, retaliation, displacement

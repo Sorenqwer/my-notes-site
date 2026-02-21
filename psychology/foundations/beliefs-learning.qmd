@@ -1,0 +1,139 @@
+---
+title: "Beliefs, uncertainty, and confidence"
+toc: true
+---
+
+Beliefs are internal models of the world: what is true, how likely it is, and what causes what.  
+This page focuses on how beliefs form and change under limited information, limited attention, and social influence.
+
+A key theme:
+> People update beliefs using evidence **and** psychological constraints (salience, identity, emotion, trust).
+
+## Three objects to track
+When discussing beliefs, separate:
+
+1) **Level**: what do I think is true?  
+2) **Uncertainty**: how sure am I?  
+3) **Calibration**: does confidence match accuracy?
+
+Many disputes are really disputes about (2) and (3).
+
+---
+
+## Sources of belief
+Beliefs come from:
+- personal experience,
+- testimony and communication,
+- institutions (official reports, rules, signals),
+- social networks and norms,
+- memory (which is reconstructive).
+
+**Prediction pattern:** beliefs become “sticky” when they are tied to identity or repeated through social reinforcement.
+
+---
+
+## Updating under uncertainty: why it deviates from ideal Bayesian updating
+Even when people try to be rational, updating is constrained by:
+
+### 1) Salience and availability
+Evidence that is vivid, recent, or emotionally charged is overweighted.
+
+**Prediction pattern:** salient events produce spikes in perceived risk that decay over time.
+
+### 2) Selective attention and selective exposure
+People seek information that fits goals and identity, and avoid costly dissonance.
+
+**Prediction pattern:** information diets become polarized even without explicit propaganda.
+
+### 3) Asymmetric skepticism
+People scrutinize disconfirming evidence more harshly than confirming evidence.
+
+**Prediction pattern:** mixed evidence can increase confidence rather than reduce it (biased assimilation).
+
+### 4) Trust and source credibility
+People treat sources as part of the data:
+- “Is this person competent?”
+- “Are they honest?”
+- “Are they on my side?”
+
+**Prediction pattern:** same facts produce different belief change across trust groups.
+
+---
+
+## Causal beliefs: stories beat statistics
+People strongly prefer causal narratives:
+- “X caused Y because …”
+- “This type of person does …”
+- “This policy leads to …”
+
+Causal learning is hard when:
+- multiple causes move together,
+- feedback is delayed,
+- systems adapt strategically.
+
+**Prediction pattern:** people overinfer causality from small samples and salient coincidences.
+
+---
+
+## Confidence: the underappreciated variable
+Confidence drives behavior:
+- willingness to act,
+- willingness to punish,
+- willingness to speak,
+- openness to learning.
+
+But confidence is often miscalibrated.
+
+### Overconfidence and underconfidence
+- Overconfidence can produce excessive risk-taking or premature commitment.
+- Underconfidence can produce paralysis and overreliance on authority.
+
+**Prediction pattern:** reducing uncertainty (clearer feedback, better measurement) changes behavior even if belief levels don’t move much.
+
+---
+
+## Metacognition: knowing what you know
+Metacognition is the ability to monitor:
+- how accurate you are,
+- when you’re guessing,
+- when you need more information.
+
+Metacognition degrades under:
+- stress,
+- time pressure,
+- strong emotion,
+- social threat.
+
+**Prediction pattern:** hostile environments reduce honest uncertainty expression (“everyone must sound certain”).
+
+---
+
+## Social belief dynamics: cascades and pluralistic ignorance
+Beliefs spread socially, sometimes creating:
+- **information cascades**: people copy others because they assume others know more.
+- **pluralistic ignorance**: people privately disagree but assume others agree, so they stay silent.
+
+**Prediction patterns**
+- Public signals can trigger rapid belief shifts.
+- Small visible minorities can shape perceived norms disproportionately.
+
+---
+
+## A reusable belief analysis template
+When explaining belief formation or change, specify:
+
+1) **Evidence**: what information exists and who sees it?  
+2) **Trust**: which sources are credible to whom?  
+3) **Salience**: what is vivid vs statistical?  
+4) **Identity**: what beliefs are socially rewarded?  
+5) **Uncertainty**: how confident are people, and is it calibrated?  
+6) **Feedback**: is correction fast, slow, or absent?  
+7) **Prediction**: what changes if you change visibility, messenger, or feedback?
+
+---
+
+## Connections
+- **Learning**: beliefs update differently from habits; both matter.
+- **Decision-making**: confidence and uncertainty shape risk and action.
+- **Communication overlap**: trust, framing, and identity determine belief change.
+- **Criminology overlap**: perceived risk, legitimacy, and rumor dynamics drive cooperation and compliance.

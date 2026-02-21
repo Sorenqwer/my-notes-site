@@ -18,7 +18,8 @@ website:
         text: PDFs
       - href: criminology/index.qmd
         text: Criminology
-
+      - href: psychology/index.qmd
+        text: Psychology
 
 format:
   html:

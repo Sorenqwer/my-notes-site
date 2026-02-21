@@ -1,0 +1,163 @@
+---
+title: "Relationships"
+toc: true
+---
+
+Relationships are repeated interaction under uncertainty:
+- you infer intentions from ambiguous signals,
+- you learn from feedback that is noisy and emotionally charged,
+- you coordinate norms, roles, and expectations over time.
+
+This page is mechanism-first: **attachment + trust + conflict cycles → predictions**.
+
+## A compact map
+Relationships often hinge on four systems:
+
+1) **Attachment / security** (how safe connection feels)  
+2) **Trust and expectations** (beliefs about reliability and goodwill)  
+3) **Communication and repair** (how errors are handled)  
+4) **Conflict regulation** (how threat and anger are managed)
+
+---
+
+## Mechanism 1: Attachment as a threat-regulation system (high-level)
+Attachment can be treated as a system for managing:
+- closeness vs autonomy,
+- safety vs threat,
+- seeking support vs self-reliance.
+
+When security is high:
+- ambiguity is interpreted more benignly,
+- repair is easier,
+- cooperation is more resilient.
+
+When security is low:
+- threat interpretation increases,
+- reassurance-seeking or withdrawal increases,
+- conflict escalates faster.
+
+**Prediction pattern:** increasing perceived safety reduces reactive cycles more reliably than “better arguments.”
+
+*(This is a descriptive mechanism lens, not a clinical taxonomy.)*
+
+---
+
+## Mechanism 2: Trust is learned, but fragile
+Trust is a belief about:
+- competence (“can they do it?”),
+- goodwill (“do they intend good?”),
+- predictability (“will they act consistently?”).
+
+Trust updates asymmetrically:
+- one betrayal can outweigh many cooperative acts (negativity dominance),
+- ambiguous signals are interpreted through prior trust levels.
+
+**Prediction patterns**
+- low-trust relationships interpret ambiguity as hostile,
+- high-trust relationships interpret ambiguity as error/noise,
+- public accountability (clear commitments) stabilizes trust.
+
+---
+
+## Mechanism 3: Expectations and scripts
+Relationships create scripts:
+- who does what,
+- what counts as respect,
+- what “normal” conflict looks like,
+- what repair looks like.
+
+Scripts reduce cognitive load, but:
+- mismatched scripts create chronic misunderstanding,
+- unspoken expectations create resentment.
+
+**Prediction pattern:** making expectations explicit reduces conflict more than increasing “effort.”
+
+---
+
+## Mechanism 4: Conflict cycles (the interaction loop)
+Many conflicts follow a loop:
+
+1) ambiguous cue → negative interpretation  
+2) emotion (anger/fear/shame) rises  
+3) defensive behavior (attack/withdraw)  
+4) partner responds defensively  
+5) loop confirms the negative model
+
+Two common defensive styles:
+- **pursue/attack** (demand, criticize, escalate)
+- **withdraw/avoid** (silence, delay, disengage)
+
+Neither is “the problem” alone; the **loop** is the problem.
+
+**Prediction patterns**
+- under stress, loops intensify (less mentalizing, more habit),
+- small face-saving opportunities reduce escalation,
+- repair attempts work only if perceived as sincere and timely.
+
+---
+
+## Mechanism 5: Repair as a high-leverage move
+Repair includes:
+- acknowledgment of harm,
+- credible explanation (not excuse),
+- commitment to change,
+- restitution/compensation,
+- emotional validation.
+
+Repair works by shifting:
+- beliefs (“they care / they understand”),
+- emotions (reduced threat),
+- norms (“we fix things like this”).
+
+**Prediction pattern:** repair is most effective when it happens early (before narratives harden).
+
+---
+
+## Mechanism 6: Power, dependence, and asymmetry
+Dependence shapes behavior:
+- the more dependent partner may accommodate more,
+- the less dependent partner may set norms.
+
+Power differences can distort communication:
+- fear of consequences reduces honesty,
+- disagreement becomes costly,
+- concealment and resentment grow.
+
+**Prediction pattern:** reducing fear and increasing safe voice increases truth-telling and cooperation.
+
+---
+
+## A reusable relationship analysis template
+To analyze a relationship dynamic, specify:
+
+1) **Uncertainty:** what is ambiguous and how is it interpreted?  
+2) **Security:** does the system feel safe or threatening?  
+3) **Trust:** competence, goodwill, predictability—where is it weak?  
+4) **Scripts:** what expectations are implicit vs explicit?  
+5) **Cycle:** what is the repeating loop (attack/withdraw, criticism/defense)?  
+6) **Repair:** what intervention would interrupt the loop?
+
+---
+
+## Canonical examples (stubs you can expand)
+### Example A: Misinterpretation → escalation
+- one side interprets delay as disrespect,
+- responds with criticism,
+- other withdraws,
+- criticism increases.
+
+**Mechanisms:** attribution + threat sensitivity + pursue/withdraw loop.
+
+### Example B: Trust stabilization via commitments
+- clear commitments reduce ambiguity,
+- follow-through produces predictable feedback,
+- trust increases over time.
+
+**Mechanisms:** credibility + learning + norm stabilization.
+
+---
+
+## Connections
+- Foundations: **social cognition** (intent inference), **emotion & motivation** (anger/shame/guilt), **communication** (credibility/repair), **learning** (trust updates), **sleep & stress** (amplifier)
+- Topics: **norms & groups** (relationship norms), **personality** (heterogeneity), **biases** (interpretation errors)
+- Overlaps: **institutions** (procedural fairness is “relationship repair” at scale), **criminology** (conflict escalation, retaliation loops)

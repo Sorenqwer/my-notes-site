@@ -1,0 +1,155 @@
+---
+title: "Psychology × criminology"
+toc: true
+---
+
+This page treats criminology as a domain where psychological mechanisms are unusually visible:
+- behavior is often **high-stakes**,
+- environments are **strategic** (offenders, victims, police, communities adapt),
+- outcomes depend on **perceptions** (risk, legitimacy, threat) as much as objective facts.
+
+The goal is to link psychology to criminology in the same “mechanisms → predictions” style.
+
+## A compact bridge
+Many criminology outcomes can be expressed as:
+
+1) **Opportunities** (situations, routines, guardianship)
+2) **Incentives** (expected benefits/costs)
+3) **Perceptions** (salience, threat, legitimacy, identity)
+4) **Control** (self-regulation, impulsivity, stress)
+5) **Social context** (peers, norms, reputations)
+6) **Learning/adaptation** (feedback loops, displacement, retaliation)
+
+Criminology differs from “pure incentives” mainly because (3)–(6) are decisive.
+
+---
+
+## Mechanism 1: Perceived risk is not objective risk
+Deterrence depends on **perceived** probability and severity, not just actual enforcement.
+
+Psychological channels:
+- availability (recent police presence feels like higher risk),
+- salience (visible patrols change attention),
+- probability weighting (small risks can feel big or be ignored),
+- miscalibration (overconfidence, “it won’t happen to me”).
+
+**Prediction patterns**
+- Highly visible enforcement changes behavior more than equally effective but invisible enforcement.
+- After salient events (arrests, crackdowns), risk perception spikes temporarily.
+- If enforcement feels arbitrary or illegitimate, it can reduce compliance through reactance.
+
+---
+
+## Mechanism 2: Self-control, impulsivity, and “hot states”
+Under stress, arousal, intoxication, or peer pressure:
+- attention narrows,
+- habit dominates deliberation,
+- time horizon shortens,
+- threat interpretation becomes more pessimistic.
+
+**Prediction patterns**
+- Many harmful acts cluster in “hot” contexts (crowds, nightlife, conflict episodes).
+- Small situational changes (friction, pacing, guardianship) can reduce incidents disproportionately.
+- Policies that reduce acute triggers (alcohol availability, crowd management) can work even without changing long-run preferences.
+
+---
+
+## Mechanism 3: Social identity, stigma, and legitimacy
+People comply not only from fear of sanction but because:
+- rules feel legitimate,
+- compliance is identity-consistent,
+- noncompliance risks shame/exclusion,
+- authorities are trusted.
+
+Legitimacy depends on:
+- perceived fairness,
+- respect and voice,
+- consistent procedure,
+- competence + benevolent intention (warmth/competence impressions).
+
+**Prediction patterns**
+- Procedural fairness increases cooperation (reporting, testimony, compliance) even if outcomes are not favorable.
+- Heavy-handed enforcement can reduce trust, lowering reporting and creating measurement illusions (“crime fell” vs “reporting fell”).
+- Stigma increases concealment, reduces help-seeking, and can create oppositional identity (“they’re against us anyway”).
+
+---
+
+## Mechanism 4: Peer effects and norms
+Peers matter through:
+- imitation (what others do),
+- descriptive norms (what seems common),
+- injunctive norms (what is approved),
+- reputation incentives (status, toughness, loyalty).
+
+**Prediction patterns**
+- Small changes in perceived norms can move behavior (especially in adolescence/young adulthood).
+- Public, visible actions (retaliation, defiance) can spread via reputational dynamics.
+- Networks create clustering: “hot people” and “hot places” can amplify each other.
+
+---
+
+## Mechanism 5: Conflict escalation and retaliation loops
+Violence and conflict often follow feedback loops:
+
+- ambiguous cue → hostile attribution
+- anger/fear → defensive act
+- defensive act → interpreted as confirmation
+- retaliation becomes normatively justified
+
+**Prediction patterns**
+- Interventions that reduce ambiguity and increase face-saving off-ramps reduce escalation.
+- Visible retaliation can shift local norms toward aggression.
+- Trust-building and credible dispute resolution reduce the perceived need for self-help violence.
+
+---
+
+## Mechanism 6: Learning and adaptation to enforcement
+Enforcement changes behavior, but behavior also changes enforcement conditions.
+
+Learning channels:
+- reinforcement (what “worked” last time),
+- avoidance learning (how to evade detection),
+- social learning (how peers adapt),
+- selective feedback (you only see successful evasion).
+
+**Prediction patterns**
+- Crackdowns can produce displacement (activity shifts) rather than pure reduction.
+- If enforcement targets visible behaviors, actors substitute to less visible strategies.
+- Early random experiences can lock in long-run distrust or deterrence sensitivity.
+
+---
+
+## A psych-first analysis template for criminology questions
+When reading a criminology claim, ask:
+
+1) **Perception:** what do actors *believe* about risk, legitimacy, and others’ intentions?  
+2) **State:** are actors in “cold” or “hot” states (stress, intoxication, threat)?  
+3) **Norms/networks:** what do peers reward or punish?  
+4) **Feedback:** what gets reinforced (compliance, avoidance, retaliation)?  
+5) **Measurement:** are we observing true incidence or reporting/enforcement artifacts?  
+6) **Prediction:** what changes if you alter salience, fairness, cues, or feedback timing?
+
+---
+
+## Canonical examples (stubs you can expand)
+### Example A: Deterrence with legitimacy
+Two neighborhoods have equal enforcement intensity.
+- In one, police are trusted; reporting is high; compliance rises.
+- In the other, police are distrusted; reporting drops; conflicts are handled privately.
+
+**Mechanisms:** legitimacy + social identity + reporting incentives.
+
+### Example B: Violence as a reputational equilibrium (psych lens)
+Retaliation is not only strategic; it is emotionally and normatively reinforced:
+- anger supports commitment,
+- status norms reward toughness,
+- shame punishes backing down.
+
+**Mechanisms:** emotion-as-commitment + norms + reputation.
+
+---
+
+## Links
+- Foundations: **cognition**, **emotion & motivation**, **learning**, **social cognition**
+- Topics: **norms & groups**, **biases**
+- Criminology section: mechanisms, institutions, models, stylized facts

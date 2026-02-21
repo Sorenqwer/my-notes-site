@@ -1,0 +1,160 @@
+---
+title: "Self-control"
+toc: true
+---
+
+Self-control is the capacity to align behavior with goals when there is conflict:
+- short-run temptation vs long-run plan,
+- impulse vs norm,
+- habit vs deliberate intention.
+
+A useful stance:
+> Self-control is not just “willpower.” It is a system involving **attention**, **emotion regulation**, **habits**, and **environment design**.
+
+## The conflict view
+Many self-control failures can be framed as:
+
+- **Competing motivations** at different time scales  
+  (comfort now vs outcomes later)
+- **State-dependence**  
+  (what you want when calm differs from what you want when stressed)
+- **Cue-triggered habits**  
+  (automatic behavior initiated before deliberation starts)
+
+---
+
+## Mechanism 1: Executive function (the control machinery)
+Executive function supports:
+- sustaining attention,
+- inhibiting responses,
+- switching tasks,
+- holding goals in working memory.
+
+It is limited and sensitive to:
+- fatigue,
+- stress,
+- sleep loss,
+- cognitive load.
+
+**Prediction pattern:** when executive load rises, people rely more on defaults and habits.
+
+---
+
+## Mechanism 2: Temptation is often cue-driven
+Temptation is not random; it is triggered by cues:
+- places,
+- people,
+- time of day,
+- emotions,
+- devices and notifications.
+
+**Prediction pattern:** changing cues often outperforms “trying harder.”
+
+**Practical lever:** remove cues or introduce friction at the cue stage.
+
+---
+
+## Mechanism 3: Emotion regulation
+Many self-control failures are attempts to regulate feelings:
+- anxiety → avoidance,
+- anger → confrontation,
+- sadness → withdrawal,
+- shame → concealment,
+- stress → immediate relief seeking.
+
+**Prediction pattern:** improving emotion regulation reduces impulsive choices even without changing incentives.
+
+---
+
+## Mechanism 4: Habits: the silent competitor
+Habits are automatic routines learned through reinforcement.
+They dominate under stress and time pressure.
+
+**Prediction pattern:** people can endorse a plan but still act habitually when triggered.
+
+A useful distinction:
+- **Goal intention:** “I want to do X.”
+- **Implementation intention:** “If situation S happens, I will do X.”
+
+Implementation intentions work by linking cues to actions.
+
+---
+
+## Mechanism 5: Present focus (time inconsistency)
+People often treat immediate outcomes as disproportionately important.
+This creates:
+- procrastination,
+- under-saving,
+- relapse dynamics.
+
+**Prediction pattern:** commitment devices increase follow-through.
+
+---
+
+## Commitment devices: designing around the problem
+Commitment is any intervention that changes future choices by altering:
+- access (removing temptation),
+- incentives (deposits, penalties),
+- observability (public deadlines),
+- defaults (pre-scheduled actions),
+- identity (role and norm salience).
+
+**Prediction pattern:** low-cost commitments can have large effects if they operate at the cue stage.
+
+---
+
+## A practical self-control toolkit (mechanism → lever)
+### If the bottleneck is attention
+- remove distractions, reduce choice overload,
+- use checklists and single-task blocks.
+
+### If the bottleneck is cues/habit
+- change environment, remove triggers,
+- substitute routine rather than “stop cold.”
+
+### If the bottleneck is emotion
+- reappraisal, naming emotions, time-outs,
+- social support and safe disclosure.
+
+### If the bottleneck is time inconsistency
+- pre-commit (deadlines, deposits),
+- automate good actions (savings, scheduling).
+
+---
+
+## A reusable explanation template
+When explaining self-control outcomes, specify:
+
+1) **Goal conflict:** what is short-run vs long-run?  
+2) **Cues:** what triggers the impulsive routine?  
+3) **State:** stress, fatigue, sleep, social pressure?  
+4) **Control capacity:** executive load and attention?  
+5) **Habit strength:** how reinforced is the routine?  
+6) **Intervention:** change cues, add friction, add commitment, add support.
+
+---
+
+## Canonical examples (stubs you can expand)
+### Example A: Procrastination
+- long-run goal is valued,
+- task is aversive now,
+- avoidance yields immediate relief.
+
+**Mechanisms:** present focus + negative reinforcement (relief) + attention avoidance.
+
+### Example B: Relapse dynamics
+- stress increases,
+- cue exposure returns,
+- habit triggers before deliberation,
+- guilt/shame may worsen avoidance.
+
+**Mechanisms:** cue-triggered habit + emotion regulation failure + shame loop.
+
+---
+
+## Connections
+- **Cognition**: self-control depends on working memory and attention.
+- **Learning**: habits form through reinforcement; change requires new learning.
+- **Emotion & motivation**: many failures are regulation attempts.
+- **Decision-making**: time preferences and present focus.
+- **Criminology**: impulsivity under hot states, deterrence sensitivity, and situational triggers.

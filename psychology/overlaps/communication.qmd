@@ -1,0 +1,180 @@
+---
+title: "Psychology × communication"
+toc: true
+---
+
+Communication is not just transmitting information. It is also:
+- managing impressions,
+- coordinating beliefs,
+- negotiating identity and status,
+- regulating emotion,
+- shaping norms.
+
+This page focuses on **psychological mechanisms** that determine whether messages persuade, mislead, coordinate, or polarize.
+
+## A minimal model of communication
+Any message outcome depends on:
+
+1) **Source** (who is speaking; credibility; identity)
+2) **Content** (what is said; evidence; framing)
+3) **Channel** (face-to-face, text, public vs private; permanence)
+4) **Receiver** (goals, beliefs, attention, emotional state)
+5) **Context** (stakes, norms, incentives, audiences)
+6) **Feedback** (what happens after the message)
+
+Many communication failures come from misalignment in (1), (4), or (5), not from “bad arguments.”
+
+---
+
+## Mechanism 1: Credibility and trust heuristics
+People rarely verify everything. They use credibility heuristics:
+- expertise,
+- track record,
+- confidence signals,
+- group membership (“in-group messenger”),
+- institutional legitimacy.
+
+**Prediction patterns**
+- The same evidence persuades more when delivered by a trusted in-group source.
+- Low trust environments produce “evidence-resistant” audiences.
+- Apparent confidence can substitute for evidence (sometimes misleadingly).
+
+**Intervention lever:** credibility can be built via consistent procedure and transparency, not just rhetoric.
+
+---
+
+## Mechanism 2: Framing and representation
+Frames change what the message “is about”:
+- gains vs losses,
+- moral language (“harm”, “fairness”, “betrayal”),
+- concrete stories vs abstract statistics,
+- naming and categorization (“victim” vs “suspect”, “aid” vs “handout”).
+
+**Prediction patterns**
+- Changing labels changes perceived intent and moral judgment.
+- Concrete cases move emotion more than base rates (“identifiable victim effect”).
+- Order and salience change which reasons are remembered.
+
+**Intervention lever:** align frames with the audience’s goals without distorting truth.
+
+---
+
+## Mechanism 3: Motivated reasoning and identity protection
+People often treat belief as identity-relevant:
+- accepting some claims signals loyalty,
+- rejecting others signals independence or status.
+
+**Prediction patterns**
+- Corrections can backfire when they imply “your group is wrong.”
+- Mixed evidence can increase polarization (biased assimilation).
+- People discount out-group sources even when content is strong.
+
+**Intervention levers**
+- identity-safe framing (“this doesn’t threaten who you are”),
+- trusted in-group messengers,
+- focus on shared goals and outcomes rather than blame.
+
+---
+
+## Mechanism 4: Emotion and arousal as amplifiers
+Emotion changes:
+- attention,
+- memory,
+- perceived urgency,
+- willingness to share.
+
+High-arousal content spreads more, but can reduce nuance.
+
+**Prediction patterns**
+- Fear increases threat-focused interpretation and avoidance.
+- Anger increases perceived intentionality and punitive preferences.
+- Shame increases concealment and reduced disclosure.
+
+**Intervention lever:** reduce threat cues if the goal is learning; increase safety and dignity if the goal is cooperation.
+
+---
+
+## Mechanism 5: Persuasion as constraint satisfaction
+Many receivers ask implicitly:
+- “Does this fit my world model?”
+- “Does accepting this create social costs?”
+- “Does it help me act?”
+
+A message can fail even if it is true because it:
+- conflicts with a stable narrative,
+- increases social risk,
+- lacks actionable implication.
+
+**Prediction patterns**
+- Messages that offer a coherent story + actionable steps persuade more than pure data dumps.
+- Ambiguous evidence is absorbed into existing narratives.
+
+---
+
+## Mechanism 6: Deception and self-deception (mechanism lens)
+Deception is not only strategic; it has psychological components:
+- impression management,
+- guilt/shame regulation,
+- motivated forgetting,
+- rationalization.
+
+Receivers detect deception imperfectly because:
+- cognitive load limits inference,
+- trust heuristics dominate,
+- people avoid the social cost of accusing others.
+
+**Prediction patterns**
+- Deception increases when verification is costly and accountability is weak.
+- Receivers are more skeptical when incentives conflict is obvious.
+- Public accountability reduces deception by raising reputational costs.
+
+---
+
+## Mechanism 7: Common knowledge and coordination
+Some messages work by creating shared awareness:
+- “everyone knows that everyone knows…”
+
+Public statements can shift behavior even without new factual content.
+
+**Prediction patterns**
+- Public announcements change coordination more than private messages.
+- Ambiguous public signals can create instability (multiple interpretations).
+
+---
+
+## A reusable communication analysis template
+When you analyze a message campaign or interaction, specify:
+
+1) **Who is speaking** and what credibility cues exist  
+2) **Audience identity** and whether belief is identity-threatening  
+3) **Frame** (what is salient; what is the moral lens)  
+4) **Emotional state** (fear/anger/shame)  
+5) **Incentives** (what does each side gain by persuasion or resistance?)  
+6) **Verification** (how easy is fact-checking?)  
+7) **Prediction** (what changes if you switch messenger, frame, or channel?)
+
+---
+
+## Canonical examples (stubs you can expand)
+### Example A: “Facts don’t work”
+Evidence fails because the listener hears:
+- status threat,
+- group attack,
+- identity challenge.
+
+**Mechanisms:** motivated reasoning + source credibility filtering.
+
+### Example B: Rumor spread in low-trust settings
+- uncertainty is high,
+- official sources are distrusted,
+- vivid stories spread quickly,
+- corrections are ignored.
+
+**Mechanisms:** availability + distrust + emotional arousal.
+
+---
+
+## Links
+- Foundations: **cognition** (attention/memory), **emotion & motivation**, **social cognition**
+- Topics: **norms & groups**, **biases**
+- Overlaps: strategic interaction (credibility), institutions (legitimacy), criminology (reporting/cooperation)

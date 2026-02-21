@@ -1,0 +1,95 @@
+---
+title: "Tools for behavior change"
+toc: true
+---
+
+This page collects **non-clinical, skills-based tools** that reliably change behavior through mechanisms you’ve already covered:
+attention, learning, emotion regulation, and environment design.
+
+It is not therapy advice or diagnosis. It’s a toolkit of methods that show up in many evidence-based approaches.
+
+## Tool 1: Implementation intentions (if–then plans)
+Format:
+- “If situation S happens, then I will do action A.”
+
+Why it works:
+- links cues to desired actions,
+- reduces working-memory demand at the moment of choice.
+
+**Prediction pattern:** works best when S is specific and A is small and feasible.
+
+---
+
+## Tool 2: Behavioral activation (do first, feel later)
+When mood is low, waiting for motivation often fails.
+Behavioral activation:
+- schedules small rewarding/meaningful actions,
+- rebuilds reinforcement and routine.
+
+**Mechanism:** learning + reward + breaking withdrawal loops.
+
+---
+
+## Tool 3: Reappraisal (change the interpretation)
+Reappraisal changes how an event is construed:
+- from insult → misunderstanding,
+- from catastrophe → challenge,
+- from personal failure → information.
+
+**Mechanism:** emotion regulation via appraisal shifts.
+
+**Prediction pattern:** reappraisal is easier before arousal peaks.
+
+---
+
+## Tool 4: Exposure (reduce avoidance loops)
+Avoidance reduces anxiety short-run but maintains it long-run.
+Exposure:
+- safely faces the cue in graded steps,
+- allows prediction errors (“I can tolerate this”).
+
+**Mechanism:** learning under uncertainty; updating threat associations.
+
+---
+
+## Tool 5: Friction and defaults (environment design)
+If a behavior is cue-driven, modify the environment:
+- add friction to harmful routines,
+- make desired routines the default.
+
+**Mechanism:** attention + habit control.
+
+---
+
+## Tool 6: Values and identity alignment
+Change sticks when behavior is identity-consistent:
+- “I’m the kind of person who…”
+- tie actions to meaning rather than only outcomes.
+
+**Mechanism:** motivation + norms + self-concept.
+
+---
+
+## Tool 7: Repair scripts (for relationships and institutions)
+Repair is structured:
+- acknowledge → validate → explain → commit → compensate (when appropriate)
+
+**Mechanism:** reduces threat, restores trust, resets norms.
+
+---
+
+## A reusable behavior-change plan template
+1) Identify the **cue** (when/where/with whom)  
+2) Identify the **loop** (urge → action → reward/relief)  
+3) Pick one **lever**: cues, friction, substitute routine, reappraisal, exposure, support  
+4) Define one measurable **micro-action**  
+5) Add feedback: tracking, accountability, or public commitment  
+6) Plan for slips: “slip ≠ collapse” script
+
+---
+
+## Connections
+- **Self-control**: cue management and commitment.
+- **Learning**: habit substitution and reinforcement.
+- **Emotion & motivation**: reappraisal and avoidance loops.
+- **Relationships / institutions**: repair and legitimacy.

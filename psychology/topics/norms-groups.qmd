@@ -1,0 +1,163 @@
+---
+title: "Norms & groups"
+toc: true
+---
+
+Groups change psychology. People do not only act as individuals; they act as members of “us” and “them,” under shared expectations about what is normal and what is acceptable.
+
+This page is organized as: **identity + norms + social dynamics → predictions**.
+
+## Core concepts
+### Groups and identity
+A *group* can be defined by:
+- membership (formal or informal),
+- shared symbols (language, style, rituals),
+- shared fate (common outcomes),
+- shared narratives (“who we are”).
+
+**Identity** is the psychological meaning of group membership:
+- it shapes attention (what matters),
+- it shapes belief credibility (who is trusted),
+- it shapes motivation (what feels worth doing),
+- it shapes emotion (pride, shame, anger).
+
+### Norms
+Norms are shared expectations about behavior.
+
+Two useful types:
+- **Descriptive norms**: what people *actually do* (“most people recycle”).
+- **Injunctive norms**: what people *approve* (“people should recycle”).
+
+They can move in different directions.
+
+**Pitfall:** using one as evidence for the other.
+
+---
+
+## Mechanism 1: Conformity and informational reliance
+People conform for at least two reasons:
+- **Informational**: “Others probably know something I don’t.”
+- **Social**: “I want approval / I want to avoid rejection.”
+
+**Prediction patterns**
+- Conformity increases with uncertainty and ambiguity.
+- Conformity increases when the group is cohesive and salient.
+- Conformity decreases when private dissent feels safe.
+
+**Intervention levers**
+- make independent judgment easier (private responses),
+- increase clarity (reduce ambiguity),
+- highlight diversity of behavior (break false consensus).
+
+---
+
+## Mechanism 2: Social identity and in-group favoritism
+Once “us vs them” is salient, people often:
+- interpret in-group behavior more charitably,
+- interpret out-group behavior more suspiciously,
+- allocate benefits to in-group members,
+- enforce harsher standards on out-groups.
+
+**Prediction patterns**
+- Shared identity salience increases cooperation inside the group.
+- Strong subgroup identity can increase intergroup hostility.
+- Threat cues amplify “us vs them” categorization.
+
+**Intervention levers**
+- superordinate identity (“we are all part of …”),
+- cross-cutting ties (friendships across groups),
+- institutional norms that reward fairness across boundaries.
+
+---
+
+## Mechanism 3: Polarization and motivated reasoning (group-based)
+Group identity can shape beliefs:
+- People accept in-group narratives more readily.
+- Evidence from out-group sources is discounted.
+- Mixed evidence can increase confidence rather than reduce it (biased assimilation).
+
+**Prediction patterns**
+- Polarization rises when status or moral identity is threatened.
+- Argument quality matters less than source identity in highly polarized contexts.
+- “Correcting misinformation” can backfire if it signals out-group dominance.
+
+**Intervention levers**
+- trusted in-group messengers,
+- identity-safe framing (“you can believe X and still be one of us”),
+- shared goals that reorient attention to outcomes.
+
+---
+
+## Mechanism 4: Norm enforcement and punishment
+Groups often sustain norms through:
+- gossip,
+- praise/shame,
+- exclusion,
+- punishment.
+
+This can support prosocial behavior, but it can also produce rigidity and scapegoating.
+
+**Prediction patterns**
+- Enforcement increases when behavior is observable.
+- Enforcement is stronger when violations signal disrespect or threat.
+- If institutions are seen as illegitimate, informal enforcement rises (sometimes violently).
+
+**Intervention levers**
+- increase procedural fairness (legitimacy),
+- make pro-social behavior visible,
+- reduce ambiguous “gray-zone” rules that invite selective punishment.
+
+---
+
+## Mechanism 5: Social dilemmas (cooperation problems)
+Many group outcomes involve:
+- individual incentives to free-ride,
+- collective need for cooperation,
+- difficulty monitoring contributions.
+
+**Prediction patterns**
+- Cooperation increases with repeated interaction and observability.
+- Cooperation increases when norms are salient and shared identity is strong.
+- Cooperation collapses when people believe others are defecting (expectation cascades).
+
+**Intervention levers**
+- transparency (credible monitoring),
+- low-cost signals of commitment,
+- “conditional cooperation” design (make cooperation the default once enough others do).
+
+---
+
+## A reusable explanation template
+To explain a group outcome, specify:
+
+1) **Group boundaries**: who is “us” vs “them”?  
+2) **Norms**: what is descriptive vs injunctive?  
+3) **Observability**: who sees what?  
+4) **Sanctions**: how are norms enforced (formal vs informal)?  
+5) **Threat & status**: is identity/status at stake?  
+6) **Prediction**: what shifts if identity/norm salience changes?
+
+---
+
+## Canonical examples (stubs you can expand)
+### Example A: False consensus / pluralistic ignorance
+- Many privately disagree with a norm.
+- Everyone believes others support it.
+- Public conformity persists.
+
+**Mechanisms:** social fear + misperceived descriptive norms.
+
+### Example B: Escalation between groups
+- ambiguous act → hostile interpretation,
+- retaliation → confirms hostility,
+- norms shift toward aggression.
+
+**Mechanisms:** threat sensitivity + attribution + norm enforcement.
+
+---
+
+## Connections
+- **Social cognition**: identity shapes inference and trust.
+- **Emotion & motivation**: shame, pride, anger drive norm enforcement.
+- **Criminology**: legitimacy, trust, reporting, retaliation, and community enforcement all hinge on norms and group identity.
+- **Overlap pages**: strategic interaction becomes psychologically richer once identity and norms enter the utility function.

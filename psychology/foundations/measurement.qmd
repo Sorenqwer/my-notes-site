@@ -1,0 +1,136 @@
+---
+title: "Measurement"
+toc: true
+---
+
+Measurement is where many psychological arguments succeed or fail.
+
+If you want to claim “X affects Y,” you must know:
+- what X and Y mean operationally,
+- whether they are measured reliably,
+- whether your measure captures the construct rather than noise.
+
+This page is deeper than **Methods**: it’s about **how variables are built**.
+
+## Constructs vs measures
+A **construct** is the idea (e.g., “trust”, “self-control”, “anxiety”).  
+A **measure** is the operational tool (survey items, tasks, behavior logs).
+
+One construct can have many measures, and one measure can mix constructs.
+
+**Rule:** never argue from labels. Argue from operational definitions.
+
+---
+
+## Validity: are you measuring what you think?
+### Content validity
+Does the measure cover the construct’s important aspects?
+
+### Convergent / discriminant validity
+- Convergent: does it correlate with other measures of the same construct?
+- Discriminant: does it avoid correlating with unrelated constructs?
+
+### Predictive validity
+Does it predict outcomes the construct should predict?
+
+**Red flag:** a measure is used because it is popular, not because it is justified for the specific argument.
+
+---
+
+## Reliability: is the measure stable enough to be useful?
+### Internal consistency (for multi-item scales)
+Are items measuring the same underlying thing?
+
+### Test–retest reliability
+Does the measure remain similar over time (when it should)?
+
+### Inter-rater reliability
+When humans rate behavior, do they agree?
+
+**Practical implication:** low reliability makes effects look unstable and encourages overfitting.
+
+---
+
+## Self-report: useful but not “direct access”
+Self-report captures:
+- introspection,
+- self-image,
+- social desirability,
+- memory reconstruction.
+
+It can be excellent for private experiences, but it also has predictable distortions.
+
+**Prediction patterns**
+- sensitive topics are underreported in low-trust settings.
+- social desirability rises when anonymity is low.
+- current mood biases reports (“state contamination”).
+
+**Design levers**
+- anonymity and privacy,
+- neutral wording,
+- indirect questioning when appropriate,
+- multiple methods (triangulation).
+
+---
+
+## Behavioral tasks: what you gain and what you risk
+Tasks can reduce self-presentation bias but may be sensitive to:
+- instructions and framing,
+- motivation and effort,
+- learning during the task,
+- “task impurity” (multiple mechanisms affect performance).
+
+**Rule of thumb:** interpret tasks as measures of *performance under specific conditions*, not pure traits.
+
+---
+
+## Physiological measures: strong signals, hard interpretation
+Physiology (heart rate, skin conductance, etc.) can indicate arousal but rarely maps 1:1 to a single emotion.
+
+**Pitfall:** “arousal = fear” (often false).
+
+---
+
+## Measurement invariance (cross-group comparability)
+If you compare groups (cultures, genders, age), ask:
+- do items mean the same thing?
+- do response styles differ (acquiescence, extremity, modesty)?
+
+**Prediction pattern:** apparent group differences can be measurement artifacts.
+
+---
+
+## Common measurement errors (and fixes)
+### Range restriction
+If everyone scores near the top or bottom, correlations shrink.
+
+### Floor/ceiling effects
+The measure can’t detect change.
+
+### Reactivity
+Measuring behavior changes behavior (people perform for the measure).
+
+### Demand characteristics
+People infer the hypothesis and comply or resist.
+
+**Fix set:** pretest, blind conditions, unobtrusive outcomes, manipulate checks, and triangulate.
+
+---
+
+## A practical checklist
+Before using a variable, write:
+
+1) Construct definition (one sentence)  
+2) Operationalization (exact items/task/behavior)  
+3) Reliability evidence (or why it’s acceptable without it)  
+4) Validity argument (why this measure matches the construct)  
+5) Likely biases (social desirability, reactivity, invariance)  
+6) A robustness plan (alternate measures or sensitivity tests)
+
+---
+
+## Connections
+- **Methods**: measurement quality determines inference quality.
+- **Mental health / stigma**: self-report is especially fragile under shame/fear.
+- **Criminology**: reporting and enforcement are measurement systems with selection bias.
+- **Institutions**: procedural justice shapes willingness to report truthfully.

@@ -1,0 +1,140 @@
+---
+title: "Biases & heuristics"
+toc: true
+---
+
+Biases are systematic patterns in judgment and choice. A useful framing:
+
+> Many biases are not “bad preferences”; they are **side-effects of cognition under constraints**  
+> (limited attention, limited memory, limited computation, noisy feedback).
+
+This page is organized as **mechanism → prediction** rather than a long list.
+
+## Two categories that prevent confusion
+### Judgment vs choice
+- **Judgment biases**: errors in beliefs (probabilities, frequencies, causal stories).
+- **Choice biases**: shifts in preferences or decisions due to framing, defaults, and context.
+
+A pattern can be both.
+
+### Bias vs noise
+- **Bias**: systematic direction (predictable).
+- **Noise**: randomness (unpredictable variability).
+
+Reducing noise is often easier than “removing” bias.
+
+---
+
+## Mechanism 1: Availability (retrieval-driven judgment)
+People judge frequency/risk by what comes to mind easily.
+
+**Prediction patterns**
+- vivid events feel more common than they are,
+- recent events dominate risk perception,
+- repeated exposure increases perceived truth (“familiarity = credibility”).
+
+**Common pitfall:** interpreting availability as “irrational” when the environment is genuinely changing (recency may be informative).
+
+---
+
+## Mechanism 2: Representativeness (pattern-matching)
+People assess likelihood by similarity to a stereotype or prototype.
+
+**Prediction patterns**
+- base rates are neglected when similarity cues are strong,
+- small samples are treated as representative (overconfidence),
+- people see “streaks” in randomness.
+
+**Testable intervention:** making base rates salient reduces the effect.
+
+---
+
+## Mechanism 3: Anchoring (starting-point dependence)
+Numerical judgments are pulled toward an initial value, even if arbitrary.
+
+**Prediction patterns**
+- first numbers in negotiation or estimation shape outcomes,
+- adjustments are insufficient, especially under time pressure.
+
+**Intervention:** generate your own anchor first, or force multiple independent estimates.
+
+---
+
+## Mechanism 4: Framing (representation changes choice)
+Equivalent descriptions can change the perceived problem.
+
+**Prediction patterns**
+- gains vs losses change risk-taking,
+- “per 100 people” vs “percentage” changes intuitions,
+- order and grouping of options change perceived attractiveness.
+
+**Practical note:** framing is often more about attention and categorization than deep preference change.
+
+---
+
+## Mechanism 5: Confirmation and asymmetric skepticism
+People search for evidence that supports what they already think, and scrutinize opposing evidence more harshly.
+
+**Prediction patterns**
+- polarization increases with identity-relevant topics,
+- mixed evidence leads to stronger prior beliefs (biased assimilation),
+- people become more confident after consuming selective information.
+
+**Intervention:** force consideration of strong counterarguments; pre-commit to what evidence would change your mind.
+
+---
+
+## Mechanism 6: Overconfidence and miscalibration
+People often overestimate accuracy and underestimate uncertainty.
+
+**Prediction patterns**
+- too-narrow confidence intervals,
+- “illusion of control” in noisy environments,
+- planning fallacy (systematic underestimation of time/cost).
+
+**Intervention:** reference class forecasting (use similar past projects as priors).
+
+---
+
+## Mechanism 7: Status quo, defaults, and friction
+Doing nothing is often a decision rule.
+
+**Prediction patterns**
+- defaults dominate choices when attention is scarce,
+- small “hassle costs” change behavior a lot,
+- opt-in vs opt-out designs shift participation dramatically.
+
+**Interpretation:** not necessarily preference; often an attention/effort allocation outcome.
+
+---
+
+## Mechanism 8: Affect and arousal (emotion as a driver)
+Feelings shape what seems risky, urgent, or morally acceptable.
+
+**Prediction patterns**
+- fear increases threat sensitivity and avoidance,
+- anger increases punitive choices and perceived intentionality,
+- stress increases habit reliance and narrows attention.
+
+**Links:** this connects directly to **Emotion & motivation**.
+
+---
+
+## A compact “bias debugging” checklist
+When you see a bias-like pattern, ask:
+1) **Attention**: what information is salient vs hidden?
+2) **Memory**: what examples come to mind?
+3) **Computation**: is the task too complex for working memory?
+4) **Feedback**: is learning noisy, delayed, or selective?
+5) **Identity/emotion**: is the topic threatening or status-relevant?
+6) **Choice architecture**: are defaults/friction doing the work?
+
+If changing (1), (3), or (5) changes behavior, it’s likely not a stable preference.
+
+---
+
+## Connections to other pages
+- **Cognition**: biases often come from attention, memory, and representation limits.
+- **Decision-making**: biases shape both judgment and choice.
+- **Social cognition**: identity and norms amplify confirmation and attribution patterns.
+- **Criminology**: measurement, reporting, and enforcement contexts interact with bias and salience.

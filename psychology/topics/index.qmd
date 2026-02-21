@@ -1,0 +1,46 @@
+---
+title: "Topics"
+toc: true
+---
+
+Topics are reusable “modules” you can plug into many explanations.  
+They sit on top of Foundations (cognition, learning, decision-making, emotion, social cognition, methods).
+
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Biases & heuristics
+Systematic patterns in judgment and choice: mechanisms → predictions.
+
+[Open →](biases.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Norms & groups
+Identity, conformity, polarization, cooperation, and conflict.
+
+[Open →](norms-groups.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Personality
+Stable individual differences, traits, and how context interacts with them.
+
+[Open →](personality.qmd)
+:::
+:::
+
+:::
+
+## How to use Topics
+For any topic page, try the same template:
+1) **Mechanism(s)**  
+2) **Predictions** (what changes when the environment changes?)  
+3) **Failure modes** (when the explanation breaks)  
+4) **Interventions** (what reliably shifts behavior?)  
+5) **Links** to Foundations and Overlaps

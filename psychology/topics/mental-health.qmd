@@ -1,0 +1,142 @@
+---
+title: "Mental health"
+toc: true
+---
+
+This page is a **foundational, non-clinical** map of mental health topics that matter for understanding behavior.
+It is not a diagnostic guide. The goal is to organize mechanisms and predictions in a way that is useful for study and for linking to other parts of the site (decision-making, learning, emotion, social cognition).
+
+A helpful framing:
+> Mental health patterns often reflect **interactions** between vulnerabilities, environments, and coping strategies.
+
+## Core dimensions (a practical map)
+Many symptoms can be grouped by a few dimensions:
+
+- **Negative affect**: persistent sadness, anxiety, guilt, irritability
+- **Threat sensitivity**: hypervigilance, avoidance, panic responses
+- **Reward processing**: reduced pleasure, low motivation, anhedonia
+- **Cognitive control**: attention, impulsivity, rumination, executive function
+- **Sleep and arousal**: insomnia, fatigue, agitation
+- **Social functioning**: isolation, mistrust, rejection sensitivity
+
+Different “disorders” often share dimensions. That’s part of why comorbidity is common.
+
+---
+
+## Stress and vulnerability: a general mechanism
+A broad mechanism often used is:
+
+- **Vulnerability** (traits, history, genetics, learned patterns)
+- **Stressors** (acute shocks, chronic strain, social conflict)
+- **Protective factors** (support, coping skills, stable routines)
+
+**Prediction pattern:** the same stressor affects people differently depending on vulnerability and protection.
+
+---
+
+## Anxiety: threat and uncertainty
+Anxiety is often characterized by:
+- heightened threat perception,
+- intolerance of uncertainty,
+- avoidance behavior,
+- safety-seeking behaviors that reduce anxiety short-run but maintain it long-run.
+
+**Learning loop (common):**
+- uncertainty → anxiety → avoidance → temporary relief → stronger avoidance habit
+
+**Prediction pattern:** reducing avoidance and increasing safe exposure often weakens the loop over time (mechanism: learning + prediction error).
+
+---
+
+## Depression: reward, energy, and self-evaluation
+Depressive patterns often involve:
+- reduced motivation and energy,
+- diminished reward sensitivity (things feel less rewarding),
+- negative self-evaluation,
+- rumination (repetitive negative thinking).
+
+**Behavioral loop (common):**
+- low mood → withdrawal → fewer rewarding experiences → lower mood
+
+**Prediction pattern:** small increases in structured rewarding activity can have outsized effects because they interrupt the loop (mechanism: reinforcement and habit).
+
+---
+
+## Rumination: repetitive thought as a trap
+Rumination feels like problem-solving but often functions as:
+- attention capture,
+- negative memory retrieval,
+- threat rehearsal,
+- reduced action initiation.
+
+**Prediction pattern:** interventions that shift attention (structured activity, reappraisal skills, sleep stabilization) reduce rumination frequency.
+
+---
+
+## Trauma-related patterns: memory, threat, and triggers
+After extreme stress, some people develop:
+- intrusive memories,
+- hypervigilance,
+- avoidance of reminders,
+- emotional numbing,
+- sleep disruption.
+
+**Mechanism lens:** emotion-tagged memory + threat system sensitization + avoidance learning.
+
+**Prediction pattern:** unpredictable triggers and uncertain environments maintain hypervigilance.
+
+---
+
+## ADHD-like patterns (non-diagnostic framing)
+Common behavioral dimensions include:
+- inattention under low stimulation,
+- difficulty sustaining effort,
+- impulsivity (short-horizon choice),
+- strong sensitivity to immediate rewards.
+
+**Mechanism lens:** attention regulation + reinforcement sensitivity + executive control load.
+
+**Prediction pattern:** structure, feedback frequency, and reduced friction can help performance even without changing “traits.”
+
+---
+
+## Substance use and compulsive behavior (mechanism lens)
+A compact mechanism view:
+- strong immediate reward/relief,
+- habit formation,
+- cue-triggered craving,
+- withdrawal/negative reinforcement,
+- social context and norms.
+
+**Prediction pattern:** changing cue environments and social networks often matters as much as willpower.
+
+---
+
+## Stigma and social context (often overlooked)
+Mental health is shaped by:
+- perceived acceptance vs rejection,
+- shame and concealment,
+- access to support and care,
+- institutional treatment (school, workplace, legal system).
+
+**Prediction pattern:** reducing stigma and increasing safe disclosure channels increases help-seeking and reduces isolation loops.
+
+---
+
+## A reusable explanation template
+When discussing a mental health-related behavior, specify:
+
+1) **Dimension(s)** involved (threat, reward, control, sleep, social)
+2) **Loop** (avoidance loop? withdrawal loop? rumination loop?)
+3) **Context** (stressors, stability, social support)
+4) **Prediction** (what change would interrupt the loop?)
+5) **Boundaries** (what you are *not* claiming; avoid diagnosis)
+
+---
+
+## Connections
+- **Emotion & motivation**: affective systems and action tendencies are central.
+- **Learning**: avoidance and reinforcement loops maintain patterns.
+- **Cognition**: attention and memory biases shape symptoms.
+- **Norms & groups**: stigma and identity can worsen or buffer outcomes.
+- **Criminology (later link)**: trauma exposure, substance use, and stress can affect compliance, escalation, and institutional interactions.

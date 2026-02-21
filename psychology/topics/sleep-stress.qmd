@@ -1,0 +1,120 @@
+---
+title: "Sleep & stress"
+toc: true
+---
+
+Sleep and stress modulate almost every mechanism in psychology:
+- attention and working memory,
+- emotion regulation,
+- threat sensitivity,
+- learning and habit expression,
+- social interpretation.
+
+This page treats them as **system-wide parameters** rather than niche health topics.
+
+## Sleep: the cognitive and emotional regulator
+Sleep influences:
+- **attention** (vigilance, sustained focus),
+- **working memory** (multi-step reasoning),
+- **emotion regulation** (reactivity and recovery),
+- **learning** (consolidation of memories and skills).
+
+**Prediction patterns**
+- sleep loss increases errors and impulsivity,
+- sleep loss increases negative affect and threat sensitivity,
+- complex reasoning and self-control degrade earlier than simple tasks.
+
+**Practical implication:** if behavior looks “irrational” under sleep loss, it may be capacity limits rather than preference change.
+
+---
+
+## Stress: acute vs chronic
+### Acute stress
+Acute stress often produces:
+- narrowed attention (“tunnel vision”),
+- faster but less flexible action,
+- reliance on habits and scripts,
+- increased threat interpretation.
+
+**Prediction pattern:** under acute stress, people choose simpler strategies and show less deep mentalizing.
+
+### Chronic stress
+Chronic stress often produces:
+- fatigue and reduced executive function,
+- irritability and negative affect,
+- reduced exploratory behavior,
+- stronger avoidance and withdrawal loops.
+
+**Prediction pattern:** chronic stress shifts behavior toward short-run relief strategies.
+
+---
+
+## Threat sensitivity: the amplifier channel
+A key pathway is threat detection:
+- when threat systems are activated, ambiguity is interpreted pessimistically,
+- social cues are read as hostile more often,
+- retaliation and defensiveness increase.
+
+**Prediction patterns**
+- minor provocations escalate faster under stress,
+- distrust spreads more quickly in low-safety environments,
+- institutions that feel threatening reduce cooperation.
+
+---
+
+## Stress and learning: habit dominance
+Stress often increases:
+- reliance on well-learned routines,
+- avoidance learning,
+- reinforcement of immediate relief behaviors.
+
+**Prediction pattern:** in stressful environments, behavior becomes more habitual and less responsive to abstract information.
+
+---
+
+## Stress and social cognition: attribution shifts
+Under stress, people:
+- mentalize less deeply,
+- rely more on stereotypes and categories,
+- commit more attribution errors (trait-blame vs situation).
+
+**Prediction pattern:** conflict and polarization rise when stress is high and identity boundaries are salient.
+
+---
+
+## Interventions: what reliably helps (mechanism-first)
+### Reduce load
+- simplify tasks and choices,
+- reduce multitasking,
+- restructure environments to make the desired action easy.
+
+### Increase predictability and safety
+- clear procedures, stable rules,
+- respectful treatment (legitimacy),
+- face-saving options to reduce humiliation-driven escalation.
+
+### Improve recovery and regulation
+- consistent sleep routines,
+- downtime after conflict exposure,
+- supportive social ties and safe disclosure.
+
+**Note:** these are not “motivational slogans”; they change cognitive capacity and emotional reactivity.
+
+---
+
+## A reusable analysis template
+When sleep/stress may matter, ask:
+
+1) **State:** acute vs chronic?  
+2) **Capacity:** attention/working memory reduced?  
+3) **Emotion:** threat sensitivity elevated?  
+4) **Habit:** are routines dominating?  
+5) **Social inference:** more hostile attribution likely?  
+6) **Prediction:** what changes if you reduce load or increase safety?
+
+---
+
+## Connections
+- Foundations: **cognition**, **emotion & motivation**, **learning**, **self-control**, **social cognition**
+- Topics: **norms & groups** (stress amplifies group threat dynamics)
+- Overlaps: **institutions** (procedural justice reduces threat), **criminology** (hot spots, escalation, legitimacy), **communication** (arousal-driven spread)

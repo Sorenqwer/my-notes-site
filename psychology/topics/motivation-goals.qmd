@@ -1,0 +1,90 @@
+---
+title: "Motivation & goals"
+toc: true
+---
+
+Motivation determines what people *try* to do, how much effort they invest, and what tradeoffs they accept.
+Goals don’t just guide action — they also guide **attention, memory, and interpretation**.
+
+## Goal types
+### Approach vs avoidance
+- **Approach**: pursue desirable outcomes.
+- **Avoidance**: prevent negative outcomes.
+
+Avoidance goals can dominate attention and produce short-horizon “relief” strategies.
+
+### Mastery vs performance
+- **Mastery**: improve competence, learn.
+- **Performance**: look competent, avoid looking bad.
+
+**Prediction pattern:** performance focus increases anxiety and risk-avoidance; mastery focus increases persistence and learning.
+
+---
+
+## Intrinsic vs extrinsic motivation
+- **Intrinsic**: doing the task is rewarding.
+- **Extrinsic**: task is a means to an external reward.
+
+**Prediction pattern:** heavy external control can reduce intrinsic engagement when it changes the meaning from “I choose” to “I’m being controlled.”
+
+---
+
+## Goal conflict and self-regulation
+People often hold multiple goals that conflict:
+- study vs social media,
+- fairness vs self-interest,
+- honesty vs reputation.
+
+Conflict resolution depends on:
+- salience (which goal is active),
+- state (stress/fatigue),
+- identity (what kind of person I am),
+- environment (friction/defaults).
+
+**Prediction pattern:** making long-run goals salient at decision time improves alignment without changing values.
+
+---
+
+## Motivation under uncertainty: expectancy × value (practical lens)
+Effort tends to rise with:
+- **expectancy** (belief that effort helps),
+- **value** (importance of the outcome).
+
+Failures often come from:
+- low expectancy (“it won’t matter”),
+- unclear value (“why do this?”),
+- high immediate costs.
+
+**Intervention levers**
+- increase expectancy via feedback and progress signals,
+- increase value via meaning/identity framing,
+- reduce immediate costs via environment design.
+
+---
+
+## Social motivation: status, belonging, and norms
+People are motivated by:
+- approval and belonging,
+- status and respect,
+- avoidance of shame.
+
+**Prediction pattern:** peer environments can outpower individual incentives.
+
+---
+
+## A reusable template
+To explain motivated behavior, specify:
+
+1) Which goal is active (approach/avoidance; mastery/performance)  
+2) Expectancy and value (why try?)  
+3) Immediate costs (effort, fear, shame, opportunity cost)  
+4) Identity and norms (who am I here?)  
+5) Prediction: what shifts if you change salience, feedback, or social audience?
+
+---
+
+## Connections
+- **Self-control**: motivation interacts with cues and commitment.
+- **Emotion & motivation**: emotions shift goal priority.
+- **Norms & groups**: identity and belonging shape goal choice.
+- **Institutions**: incentives work better when they align with identity and legitimacy.

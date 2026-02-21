@@ -1,0 +1,168 @@
+---
+title: "Emotion & motivation"
+toc: true
+---
+
+Emotion and motivation are not “noise.” They are **control systems**: they prioritize goals, allocate attention, trigger action tendencies, and shape what evidence feels persuasive.
+
+A clean mental model:
+
+- **Motivation** answers: *What do I want? What matters right now?*  
+- **Emotion** answers: *What is happening relative to my goals? What should I do next?*
+
+## Core functions
+### 1) Value and priority
+Emotions change the *felt value* of outcomes and the *urgency* of action.
+- Fear prioritizes safety and threat monitoring.
+- Anger prioritizes confrontation and norm enforcement.
+- Sadness often reduces effort and shifts attention to loss and withdrawal.
+- Joy can broaden attention and exploration.
+
+**Prediction pattern:** same incentives can yield different behavior depending on the affective state because the *objective function* is effectively reweighted.
+
+### 2) Attention and memory
+Emotion acts like a spotlight:
+- it makes certain cues more salient,
+- it increases rehearsal and recall for emotionally tagged events,
+- it can narrow attention under threat.
+
+**Prediction pattern:** after emotionally intense events, people remember “the gist” and key cues, but details can be distorted.
+
+### 3) Action readiness
+Emotions prepare the body and mind for classes of actions:
+- fear → avoidance / vigilance,
+- anger → approach / punishment,
+- shame → concealment / withdrawal,
+- guilt → repair / apology.
+
+This makes emotions especially important in social settings.
+
+---
+
+## Motivation: what drives goal selection
+### Intrinsic vs extrinsic motivation
+- **Intrinsic**: activity is rewarding itself (curiosity, mastery, meaning).
+- **Extrinsic**: activity is a means to an end (money, grades, approval).
+
+**Prediction pattern:** heavy extrinsic control can sometimes reduce intrinsic engagement, especially when it shifts the meaning from “I choose” to “I’m being controlled.”
+
+### Approach vs avoidance
+A useful simplification:
+- **Approach** goals: obtain valued outcomes.
+- **Avoidance** goals: prevent negative outcomes.
+
+Avoidance motivation can be extremely powerful and can dominate attention (e.g., threat monitoring).
+
+### Self-control and conflict
+Self-control problems often reflect conflicts between:
+- **short-run drives** (comfort, impulses, immediate relief),
+- **long-run goals** (health, reputation, mastery).
+
+**Prediction pattern:** commitment devices (pre-commitment, removing temptation, public deadlines) increase goal-consistent behavior without “changing personality.”
+
+---
+
+## Emotion as information (and when it misleads)
+People often use feelings as a signal:
+- “I feel bad about it, so it must be risky.”
+- “I feel good about it, so it must be right.”
+
+This can be adaptive, but it also creates systematic errors when feelings are driven by irrelevant cues.
+
+**Pitfall:** confusing *arousal* with *evidence*.
+
+---
+
+## Social emotions: the bridge to norms, institutions, and conflict
+Some emotions are inherently social: they depend on how one is seen, judged, or related to others.
+
+### Shame vs guilt (useful distinction)
+- **Shame**: “I am bad” → conceal, withdraw, avoid exposure.
+- **Guilt**: “I did something bad” → repair, apologize, compensate.
+
+**Prediction pattern:** environments emphasizing public exposure increase shame; environments emphasizing repair increase guilt-driven pro-social behavior.
+
+### Anger and punishment
+Anger is strongly tied to perceived norm violation and unfairness.
+It supports:
+- deterrence via credible retaliation,
+- norm enforcement in groups,
+- escalation in conflicts when misattributions occur.
+
+**Prediction pattern:** increasing perceived intentionality of harm increases anger and punitive choices.
+
+### Empathy and compassion
+Empathy can increase helping, but also:
+- be biased toward identifiable individuals,
+- be stronger for in-group members,
+- lead to burnout without boundaries.
+
+**Prediction pattern:** abstract statistics move behavior less than vivid individual stories, even with identical expected harm.
+
+---
+
+## Threat, stress, and “narrowing”
+Under threat/stress:
+- people rely more on habits and scripts,
+- mentalizing depth decreases,
+- attention narrows to salient cues,
+- ambiguity is interpreted more pessimistically.
+
+This is a key mechanism linking environment → cognition → behavior.
+
+**Prediction pattern:** time pressure and threat cues increase reliance on stereotypes and reduce careful reasoning.
+
+---
+
+## A reusable explanation template
+When you explain a behavior using emotion/motivation, specify:
+
+1) **Trigger/appraisal**: what is the event interpreted as?
+2) **Goal relevance**: what goal is threatened or advanced?
+3) **Affect**: what emotion is generated (valence, arousal)?
+4) **Action tendency**: approach, avoid, punish, repair, withdraw?
+5) **Regulation**: reappraisal, suppression, distraction, rumination?
+6) **Outcome**: choice, social response, learning, reputation update.
+
+---
+
+## Canonical examples (stubs you can expand)
+### Example A: “Hot” decisions
+- In a calm state, a person plans to act prudently.
+- In a hot state (anger, arousal), they choose confrontation or risk.
+- Later, regret and rationalization appear.
+
+**Mechanisms:** state-dependent valuation + narrowed attention + action readiness.
+
+### Example B: Compliance via legitimacy
+- People comply not only because of expected punishment, but because noncompliance feels wrong.
+- Emotions like guilt/shame and moral identity reinforce compliance.
+
+**Mechanisms:** norm internalization + social emotions + identity.
+
+---
+
+## Connections to other sections
+### Social cognition
+Emotion shapes attribution:
+- anger increases intentionality judgments,
+- fear increases threat interpretation,
+- shame increases self-focused attention.
+
+### Decision-making
+Emotion changes perceived risk and time:
+- fear increases risk aversion in some settings,
+- anger can increase optimism and risk-taking,
+- stress increases present focus.
+
+### Criminology
+- escalation and retaliation,
+- legitimacy and procedural justice,
+- self-control and situational triggers,
+- crowd dynamics, peer influence, and identity.
+
+### Overlaps (later)
+This page is the psychological backbone for:
+- strategic commitment (anger/reputation),
+- punishment and deterrence,
+- signaling via costly emotional displays.

@@ -1,0 +1,129 @@
+---
+title: "Addiction & compulsion"
+toc: true
+---
+
+This page is a **mechanism map** for persistent behaviors that feel hard to stop:
+substance use, gambling-like reinforcement patterns, compulsive checking, and other cue-driven cycles.
+
+It is not a diagnostic guide. The goal is to understand loops:
+**cue → craving/urge → action → reward/relief → learning → stronger cue control**.
+
+## The core loop
+A compact loop that explains many compulsive patterns:
+
+1) **Cue** (place, emotion, people, device, time)  
+2) **Urge/craving** (state shift: attention narrows)  
+3) **Action** (routine)  
+4) **Reward or relief** (positive or negative reinforcement)  
+5) **Learning** (habit strengthens; cues gain power)  
+6) **Aftermath** (guilt/shame/stress may create new cues)
+
+Many interventions work by breaking the loop at (1) or (2), not at (4).
+
+---
+
+## Mechanism 1: Reinforcement (reward and relief)
+Two reinforcement channels matter:
+
+- **Positive reinforcement**: behavior produces pleasure/reward.
+- **Negative reinforcement**: behavior removes discomfort (stress, anxiety, withdrawal, boredom).
+
+Negative reinforcement is often the “stickiness engine” because relief is immediate.
+
+**Prediction patterns**
+- stress increases craving and relapse risk (more need for relief).
+- delayed costs are discounted; immediate relief dominates.
+- inconsistent rewards can create persistent repetition.
+
+---
+
+## Mechanism 2: Cue reactivity and attentional capture
+Over time, cues become powerful:
+- they trigger urges automatically,
+- they capture attention (“tunnel vision”),
+- they reduce working memory available for self-control.
+
+**Prediction patterns**
+- exposure to cues increases cravings even without conscious intent.
+- “willpower” fails more in cue-rich environments.
+
+---
+
+## Mechanism 3: Habit dominance under stress
+Under stress, fatigue, and sleep loss:
+- executive function decreases,
+- habits dominate,
+- people revert to default routines.
+
+**Prediction pattern:** relapse often follows stress spikes or depletion states, even if motivation remains high.
+
+---
+
+## Mechanism 4: Identity and shame loops
+After repeated failure, people can form an identity narrative:
+- “this is who I am,”
+- “I can’t change,”
+- “people will judge me.”
+
+Shame often increases concealment and isolation, which reduces support and increases stress.
+
+**Prediction patterns**
+- stigma reduces help-seeking.
+- social support and identity-safe environments increase sustained change.
+
+---
+
+## Mechanism 5: Social networks and norms
+Behavior is shaped by:
+- peer availability and models,
+- shared routines,
+- norms about use and “what counts as normal.”
+
+**Prediction pattern:** changing social context can matter as much as changing individual motivation.
+
+---
+
+## Interventions as loop-breaking (mechanism → lever)
+### Break at cues (1)
+- remove triggers,
+- change routes, routines, environments,
+- add friction (extra steps),
+- block access during vulnerable times.
+
+### Break at urge (2)
+- urge-surfing (delay the action),
+- emotion regulation strategies,
+- alternative relief (exercise, connection, structured activity),
+- “if-then” implementation intentions.
+
+### Break at action-to-reward mapping (3–4)
+- reduce reward intensity/availability,
+- increase immediate costs (commitment contracts),
+- replace routine with a lower-harm substitute.
+
+### Break at aftermath (6)
+- reduce shame and isolation,
+- build repair scripts (“slip ≠ collapse”),
+- increase support and accountability.
+
+**Key principle:** if an intervention relies only on motivation, it will fail in cue-rich + high-stress environments.
+
+---
+
+## A reusable analysis template
+When analyzing a compulsive pattern, specify:
+
+1) **Cues:** what triggers it (external + internal states)?  
+2) **Reinforcement:** reward or relief? immediate or delayed?  
+3) **Habit strength:** how automatic is the routine?  
+4) **Stress/sleep:** what states amplify it?  
+5) **Social context:** who/what environment sustains it?  
+6) **Loop break:** which link can realistically be weakened?
+
+---
+
+## Connections
+- Foundations: **learning**, **self-control**, **sleep & stress**, **emotion & motivation**, **cognition**
+- Topics: **mental health** (anxiety/stress loops), **relationships** (support vs conflict)
+- Overlaps: **institutions** (treatment access, stigma), **criminology** (substance use, enforcement, rehabilitation dynamics)
