@@ -1,0 +1,169 @@
+---
+title: "Conceptual & historical issues"
+toc: true
+---
+
+Psychology has recurring debates about:
+- what counts as explanation,
+- how to connect mind, brain, and society,
+- how to measure invisible constructs,
+- how to interpret evidence and replication.
+
+Many UG programs include “conceptual and historical issues” because it prevents two failures:
+- treating today’s terms as eternal truths,
+- mistaking methods for theories.
+
+This page is a **toolkit** for thinking clearly, not a timeline quiz.
+
+## 1) The “big moves” in psychology (high-level)
+### Introspection and early measurement
+Early psychology tried to study experience directly (introspection), but found limits:
+- reports are biased by language, memory, and social desirability.
+
+**Lesson:** self-report is informative but not a transparent window.
+
+### Behaviorism (behavior as the object)
+Behaviorism emphasized:
+- observable behavior,
+- learning via reinforcement,
+- skepticism about unobservables.
+
+**Contribution:** rigorous learning theory, experimental discipline.  
+**Limit:** struggles with representation, language, and flexible reasoning.
+
+### The cognitive revolution (representation returns)
+Cognitive approaches reintroduced:
+- mental representations,
+- information processing,
+- attention and memory limits.
+
+**Contribution:** mechanisms for thinking and perception.  
+**Limit:** risk of treating humans like disembodied computers unless emotion and social context are included.
+
+### Social and cultural turns
+Social psychology emphasized:
+- norms, identity, roles,
+- institutions and group processes,
+- meaning and context.
+
+**Contribution:** behavior is embedded in social systems.  
+**Limit:** risk of context-specific findings unless boundary conditions are made explicit.
+
+### Biological and neuroscientific integration
+Biopsychology and neuroscience added:
+- implementation constraints (brain/body),
+- physiology of stress, sleep, arousal,
+- causal tests via lesion/perturbation.
+
+**Lesson:** biology constrains and enables psychology, but does not replace it.
+
+---
+
+## 2) Levels of explanation (the anti-confusion framework)
+A single phenomenon can be explained at multiple levels:
+
+- **Functional:** what problem does this solve? (e.g., detect threat)
+- **Algorithmic:** what process runs? (attention narrowing, appraisal)
+- **Implementation:** what supports it biologically? (arousal circuits, hormones)
+
+**Rule:** don’t treat a lower level as “more real.”
+Better explanations connect levels.
+
+---
+
+## 3) The “construct problem”
+Psychology studies unobservables (trust, anxiety, self-control).
+The danger is reification:
+- treating the label as the thing.
+
+**Rule:** every construct must have:
+- operational definition,
+- measurement plan,
+- prediction commitments.
+
+This links directly to your **Measurement** page.
+
+---
+
+## 4) Nature vs nurture (mostly a bad question)
+A better framing:
+- behavior arises from **gene × environment × development** interactions.
+
+Most interesting questions are:
+- which environments amplify a vulnerability?
+- which experiences build resilience?
+- what interventions change trajectories?
+
+**Practical note:** “biological” does not mean “fixed.”
+
+---
+
+## 5) Person vs situation (why both are true)
+Two statements can both be true:
+- people differ (traits matter),
+- situations shape behavior strongly.
+
+The key is:
+> Person × situation interactions explain when traits show up.
+
+Strong situations (high surveillance, strong norms, high stakes) compress individual differences.
+
+---
+
+## 6) What is a “good” psychological theory?
+A useful theory should provide:
+1) clear constructs,
+2) mechanism specification,
+3) testable predictions,
+4) boundary conditions,
+5) ability to integrate with neighboring domains (bio, social, institutions).
+
+**Red flag:** a theory that “explains” everything explains nothing.
+
+---
+
+## 7) Replication, generalization, and why psychology argues about it
+Modern psychology has emphasized:
+- replication (does the effect reproduce?),
+- generalization (does it hold across contexts?),
+- transparency (preregistration, open data, robust reporting).
+
+You don’t need to be technical to apply the lesson:
+- treat single studies as suggestive,
+- look for converging evidence,
+- prioritize mechanisms and boundary conditions.
+
+**Practical rule:** prefer claims that survive changes in measurement, sample, and setting.
+
+---
+
+## 8) Ethics and the subjectivity of participants
+Psych research is unusually sensitive to:
+- demand characteristics,
+- deception and consent,
+- power dynamics,
+- stigma.
+
+**Lesson:** ethics is not only moral; it affects data quality.
+
+---
+
+## 9) A reusable “conceptual check” for any claim
+When you read or write a claim, ask:
+
+1) **What is the construct?** operational definition?  
+2) **What is the mechanism?** not just a label?  
+3) **What is the evidence?** and what are its limits?  
+4) **What would falsify it?**  
+5) **Where does it generalize?** and where not?  
+6) **What level is this claim at?** (functional/algorithmic/implementation)  
+7) **What are the ethical/measurement confounds?**
+
+If you can answer these, your notes will look “university-level.”
+
+---
+
+## Connections
+- Foundations: **methods**, **measurement**, **biopsychology**, **cognition**
+- Topics: **biases**, **personality**, **cultural psychology** (later)
+- Overlaps: **institutions** (power, legitimacy), **communication** (demand effects), **policy design** (external validity)

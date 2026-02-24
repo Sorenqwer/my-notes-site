@@ -1,0 +1,159 @@
+---
+title: "Sensation & perception"
+toc: true
+---
+
+Sensation is the detection of physical energy (light, sound, pressure).  
+Perception is the brain’s **inference** about what is out there.
+
+A useful stance:
+> Perception is not recording. It is **construction under uncertainty**.
+
+This page gives the core ideas commonly taught in UG psychology: bottom-up vs top-down, attention, and why perception can be systematically wrong.
+
+## 1) The perception pipeline (minimal)
+1) **Input** (stimulus)
+2) **Transduction** (sense organs convert energy into neural signals)
+3) **Early processing** (basic features)
+4) **Integration** (objects, scenes, meaning)
+5) **Interpretation** (inference using context and expectations)
+6) **Action** (what you do with it)
+
+Many “errors” are predictable consequences of step (5).
+
+---
+
+## 2) Bottom-up vs top-down processing
+### Bottom-up (data-driven)
+Perception is driven by the stimulus:
+- contrast, edges, loudness, motion, timing.
+
+### Top-down (model-driven)
+Perception is shaped by:
+- expectations,
+- goals,
+- context,
+- prior knowledge,
+- emotion and threat.
+
+**Prediction patterns**
+- ambiguity increases top-down influence (people “see” what they expect).
+- stress and threat bias interpretation toward danger.
+- labels and categories change what is perceived (not only what is reported).
+
+---
+
+## 3) Signal detection: sensitivity vs decision criterion (conceptual)
+In many tasks, perception involves distinguishing signal from noise.
+
+Two separable things:
+- **Sensitivity:** how well you can detect differences
+- **Criterion:** how willing you are to say “I detect it”
+
+**Prediction patterns**
+- when costs of misses are high, people adopt a “liberal” criterion (report more detections, more false alarms)
+- when costs of false alarms are high, people adopt a “conservative” criterion (fewer reports, more misses)
+
+This is a key bridge to:
+- threat detection,
+- eyewitness identification,
+- security screening,
+- clinical symptom reporting.
+
+---
+
+## 4) Attention and perception: what you don’t attend to, you don’t perceive
+Attention selects information for deeper processing.
+
+**Prediction patterns**
+- inattentional blindness: people miss salient events when attention is elsewhere
+- change blindness: large changes can go unnoticed without attention
+- divided attention reduces integration and increases reliance on heuristics
+
+**Design implication:** if something is critical, make it salient at the moment it matters.
+
+---
+
+## 5) Perceptual constancies (why perception seems stable)
+The world changes (lighting, distance), but perception often remains stable:
+- size constancy,
+- color constancy,
+- loudness constancy.
+
+These are achievements of inference systems that correct for context.
+
+**Prediction pattern:** constancies can produce systematic illusions in unusual contexts.
+
+---
+
+## 6) Illusions as diagnostics
+Illusions matter because they show:
+- what assumptions the perceptual system is using,
+- when top-down inference dominates.
+
+**Takeaway:** perception is optimized for typical environments, not for perfect accuracy in all cases.
+
+---
+
+## 7) Multisensory integration (how senses combine)
+The brain integrates signals across modalities:
+- vision + hearing for speech perception,
+- touch + vision for object inference.
+
+Integration depends on:
+- timing alignment,
+- spatial alignment,
+- prior expectation that the sources belong together.
+
+**Prediction pattern:** when signals conflict, perception can be dominated by the modality treated as more reliable in context.
+
+---
+
+## 8) Perception, emotion, and threat
+Perception is biased by affective state:
+- threat increases vigilance and pessimistic interpretation of ambiguity
+- anxiety increases attention to threat cues
+- anger increases perceived intentionality and hostility
+
+**Prediction pattern:** safety and predictability widen attention and improve discrimination.
+
+This is the bridge to:
+- stress & hot states in criminology,
+- institutional encounters and legitimacy,
+- interpersonal conflict escalation.
+
+---
+
+## A reusable perception explanation template
+When analyzing a perceptual phenomenon, specify:
+
+1) **Stimulus ambiguity:** how noisy or unclear is the input?  
+2) **Goal state:** what does the person want/avoid?  
+3) **Context:** what expectations are activated?  
+4) **Attention:** what is attended vs ignored?  
+5) **Criterion:** is the person set to detect more (false alarms) or less (misses)?  
+6) **Prediction:** what changes if you change costs, salience, or safety?
+
+---
+
+## Canonical examples (stubs you can expand)
+### Example A: Threat detection in ambiguous environments
+- ambiguity is high,
+- costs of missing threat feel huge,
+- criterion shifts toward “better safe than sorry.”
+
+**Mechanisms:** criterion shift + top-down threat bias
+
+### Example B: Eyewitness perception under stress
+- high arousal narrows attention,
+- encoding is selective,
+- later recall is reconstructive.
+
+**Mechanisms:** attention narrowing + memory reconstruction
+
+---
+
+## Connections
+- Foundations: **attention & memory**, **cognition**, **social cognition** (perceiving intentions), **biopsychology** (sensory systems), **sleep & stress**
+- Topics: **biases** (availability and framing start with attention), **person perception**
+- Overlaps: **criminology** (witnessing, threat), **institutions** (procedures reduce ambiguity), **communication** (framing changes perception)

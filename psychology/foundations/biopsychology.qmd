@@ -1,0 +1,201 @@
+---
+title: "Biopsychology"
+toc: true
+---
+
+Biopsychology (biological psychology / psychobiology) studies how **brain, body, and behavior** connect.
+It does **not** replace psychological explanation; it adds a second layer:
+
+- **Psych level:** representations, learning, emotion, norms, choices  
+- **Bio level:** neural circuits, neurotransmitters, hormones, physiology
+
+A good biopsych explanation links:
+> mechanism in the mind ↔ mechanism in the body ↔ observable behavior
+
+This page is a non-technical foundation: enough to read university-level material without getting lost.
+
+## The core idea: levels of explanation
+You can often explain the same behavior at multiple levels:
+
+- **Computational / functional:** what problem is being solved? (e.g., detect threat)
+- **Algorithmic:** what process implements it? (attention narrowing, habit)
+- **Implementation:** what biological system supports it? (circuits, hormones)
+
+None of these levels alone is “the real one.” They are complementary.
+
+---
+
+## 1) Neurons, signals, and plasticity (what you minimally need)
+### Neurons and communication (high-level)
+Neurons communicate via:
+- electrical signals (spikes),
+- chemical signaling at synapses.
+
+The important part for psychology:
+- **which signals get strengthened with experience?** (learning)
+- **which systems modulate alertness, reward, and threat?** (motivation/emotion)
+
+### Plasticity: how experience changes biology
+Learning corresponds to changes in:
+- synaptic strength,
+- network activation patterns,
+- cue associations.
+
+**Prediction pattern:** repeated, consistent feedback strengthens circuits supporting the repeated behavior (habit formation).
+
+---
+
+## 2) Brain organization (a practical map)
+You do not need full neuroanatomy, but you need a working map:
+
+- **Cortex** (outer layer): perception, attention, planning, language, flexible reasoning  
+- **Limbic-related systems** (broad umbrella): emotion, motivation, memory tagging  
+- **Basal ganglia**: action selection, habit, reinforcement learning  
+- **Hippocampal system**: memory for episodes and context; building “maps” of situations  
+- **Amygdala-related threat processing**: rapid relevance/threat tagging (not a “fear center” only)  
+- **Brainstem/arousal systems**: wakefulness, arousal, stress responses
+
+**Pitfall:** “one region = one function.”
+Most behaviors are distributed network outcomes.
+
+---
+
+## 3) Neurotransmitters (conceptual, not memorization)
+Neurotransmitters are chemical messengers that shape signaling patterns.
+For behavioral interpretation, you mostly need functional roles:
+
+### Dopamine (reward prediction and learning signals)
+Often linked to:
+- reward learning,
+- motivation/approach,
+- updating expected value.
+
+**Prediction patterns**
+- behaviors reinforced by unpredictable rewards become persistent (ties to compulsion/addiction loops).
+- dopamine-linked learning signals are sensitive to surprise (prediction error).
+
+**Pitfall:** “dopamine = pleasure.”
+It’s better to think “dopamine supports learning and pursuit.”
+
+### Serotonin (broad regulation; caution)
+Often discussed in relation to:
+- mood regulation,
+- patience/impulsivity (context-dependent),
+- inhibition and flexibility.
+
+**Note:** serotonin is complex; avoid one-line explanations.
+
+### Norepinephrine (alertness and attention allocation)
+Often linked to:
+- arousal,
+- vigilance,
+- shifting attention under uncertainty.
+
+**Prediction pattern:** under arousal, attention becomes more selective and action becomes faster but less flexible.
+
+### GABA / glutamate (inhibition/excitation balance)
+These are foundational excitatory/inhibitory systems.
+In notes, you can treat them as:
+- “stability and control of neural activity.”
+
+---
+
+## 4) Stress physiology (HPA axis lens, high-level)
+Stress is not only “mental.” It is also physiological regulation.
+
+A common high-level pathway:
+- stressor → threat appraisal → arousal + hormonal response → attention narrowing + habit dominance
+
+Key ideas:
+- **Acute stress** can be adaptive (mobilize action).
+- **Chronic stress** can degrade sleep, control, and mood regulation.
+
+**Prediction patterns**
+- acute threat increases vigilance and reduces deep reasoning (links to self-control and social cognition limits).
+- chronic stress increases short-horizon choices and avoidance loops.
+
+---
+
+## 5) Emotion and the body: arousal as a system parameter
+Arousal changes:
+- reaction speed,
+- attention breadth,
+- memory tagging,
+- aggression/avoidance readiness.
+
+**Prediction pattern:** high arousal makes behavior more “scripted,” more cue-driven, and less reflective.
+
+This is why environment design (safety, predictability) matters.
+
+---
+
+## 6) Sleep as biological maintenance and cognitive control support
+Sleep supports:
+- memory consolidation,
+- emotion regulation,
+- executive control stability.
+
+**Prediction pattern:** sleep loss increases impulsivity, threat sensitivity, and memory distortions (ties to your Sleep & stress page).
+
+---
+
+## 7) Biological constraints in social behavior
+Social interaction is not disembodied. Social threat activates:
+- stress systems,
+- vigilance,
+- shame/anger pathways.
+
+**Prediction patterns**
+- humiliation and status threat can produce outsized retaliation or withdrawal.
+- legitimacy and respect reduce threat activation and increase cooperation (bridges to institutions/criminology overlap pages).
+
+---
+
+## 8) Neuro methods (conceptual preview; details can be a separate page)
+Different tools answer different questions:
+
+- **Lesions / patient studies:** what breaks when a system is damaged? (strong constraints, low control)
+- **EEG/ERP:** timing of processes (fast temporal resolution)
+- **fMRI:** where activity correlates with tasks (good spatial resolution; correlational)
+- **TMS:** perturbation to test causal roles (limited scope)
+- **Psychophysiology:** arousal and stress markers (not emotion labels)
+
+**Pitfall:** treating neuro images as “proof of causality.”
+Most neuro measures are correlational unless combined with strong designs.
+
+---
+
+## A reusable biopsych explanation template
+When adding biological content, write:
+
+1) **Behavior:** what is the phenomenon?  
+2) **Psych mechanism:** attention? habit? appraisal? identity?  
+3) **Bio support:** what system plausibly implements/modulates it (arousal, reward learning, stress)?  
+4) **Prediction:** what changes under sleep loss, stress, intoxication, or pharmacological modulation?  
+5) **Boundary:** what this does *not* explain alone (avoid one-region stories)
+
+---
+
+## Canonical examples (stubs you can expand)
+### Example A: Habit under stress
+- stress increases arousal,
+- executive control decreases,
+- habitual routines dominate.
+
+**Psych:** self-control + cue-triggered habit  
+**Bio:** arousal/stress systems modulate control networks
+
+### Example B: Addiction loop reinforcement
+- cue triggers craving and attention capture,
+- action produces reward/relief,
+- learning strengthens cue-action mapping.
+
+**Psych:** reinforcement + negative reinforcement  
+**Bio:** reward-learning signals + stress relief mechanisms
+
+---
+
+## Connections
+- Foundations: **cognition**, **attention & memory**, **learning**, **emotion & motivation**, **sleep & stress**, **self-control**
+- Topics: **addiction & compulsion**, **mental health**
+- Overlaps: **criminology** (hot states, threat), **institutions** (procedural justice reduces threat), **policy design** (mechanism-matched interventions)

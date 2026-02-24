@@ -1,0 +1,193 @@
+---
+title: "Psychopathology"
+toc: true
+---
+
+Psychopathology (often taught as *abnormal psychology*) studies patterns of suffering and impairment:
+- how symptoms cluster,
+- what mechanisms maintain them,
+- how context and development shape them,
+- what interventions tend to work (at a high level).
+
+This page is **non-diagnostic**: it does not teach you to label people or self-diagnose.
+It is a mechanism map useful for understanding behavior, stigma, and institutions.
+
+A good stance:
+> Many clinical patterns are **loops**: cognition + emotion + behavior + reinforcement + social context.
+
+## 1) Models and levels of explanation
+### Categorical vs dimensional views
+- **Categorical:** disorders as distinct boxes (useful for services and communication).
+- **Dimensional:** symptoms vary continuously (often closer to reality).
+
+**Practical note:** comorbidity is common because dimensions overlap.
+
+### Stress–vulnerability (diathesis–stress) model
+Outcomes depend on interaction between:
+- vulnerabilities (traits, history, biology),
+- stressors (acute shocks, chronic strain),
+- protective factors (support, routines, safety).
+
+**Prediction pattern:** reducing chronic stress and increasing stability can reduce symptoms even without “changing personality.”
+
+---
+
+## 2) Anxiety-related patterns (mechanism lens)
+### Threat appraisal and intolerance of uncertainty
+Anxiety often involves:
+- overestimating threat probability or cost,
+- treating uncertainty as unacceptable,
+- hypervigilance to threat cues.
+
+### Avoidance learning loop
+A common maintaining loop:
+- cue → anxiety → avoidance → immediate relief → stronger avoidance
+
+**Prediction patterns**
+- anxiety persists when avoidance prevents corrective learning.
+- graded exposure can weaken anxiety over time by generating prediction errors.
+
+---
+
+## 3) Depressive patterns (mechanism lens)
+### Reward processing and withdrawal
+Depressive patterns often include:
+- low energy,
+- reduced reward sensitivity (anhedonia),
+- withdrawal from activities and people.
+
+### Rumination and negative retrieval
+Rumination captures attention and biases memory retrieval toward negative material.
+
+A common loop:
+- low mood → withdrawal/rumination → fewer rewards + more negative retrieval → lower mood
+
+**Prediction patterns**
+- structured activity (behavioral activation) can interrupt withdrawal loops.
+- sleep stabilization can reduce emotional volatility and improve control.
+
+---
+
+## 4) Trauma-related patterns (mechanism lens)
+After extreme stress, some people develop:
+- intrusive memories,
+- hypervigilance,
+- avoidance of reminders,
+- emotion numbing,
+- sleep disruption.
+
+Mechanism sketch:
+- emotion-tagged memory + threat sensitization + avoidance learning
+
+**Prediction patterns**
+- unpredictable cues maintain hypervigilance.
+- environments that feel unsafe sustain symptoms.
+- strong stigma increases concealment and reduces help-seeking.
+
+---
+
+## 5) Obsessions, compulsions, and checking loops
+Compulsive patterns often resemble:
+- intrusive thought → distress → ritual/checking → temporary relief → stronger ritual
+
+**Prediction patterns**
+- reducing reassurance/checking can be difficult short-run but improves long-run via learning.
+- stress increases urges and habit dominance.
+
+(Links strongly to your Addiction & compulsion page.)
+
+---
+
+## 6) Substance use and dual reinforcement
+Substance use can be maintained by:
+- positive reinforcement (pleasure),
+- negative reinforcement (relief from stress/withdrawal).
+
+**Prediction patterns**
+- stress spikes predict relapse risk.
+- cue exposure predicts craving independent of “motivation.”
+
+---
+
+## 7) Psychosis-spectrum concepts (high-level, cautious)
+Some symptom patterns involve:
+- unusual beliefs or interpretations,
+- altered salience (neutral events feel meaningful),
+- disruptions in reality testing.
+
+**Important stance:** these are not “just irrationality.” They can be understood as altered inference under extreme uncertainty, stress, or biological vulnerability.
+
+**Prediction patterns**
+- sleep disruption and stress can worsen symptoms.
+- supportive, predictable environments can reduce distress even if beliefs do not fully change.
+
+---
+
+## 8) Personality pathology (conceptual lens)
+Rather than labels, focus on:
+- chronic maladaptive interpersonal patterns,
+- emotion regulation instability,
+- rigid scripts and attribution styles,
+- threat sensitivity and distrust.
+
+**Prediction pattern:** stable relationships, clear boundaries, and predictable feedback reduce escalation cycles.
+
+---
+
+## 9) Stigma, shame, and concealment (social context matters)
+Stigma changes the symptom trajectory by:
+- reducing disclosure and help-seeking,
+- increasing shame and isolation,
+- increasing stress and avoidance.
+
+**Prediction pattern:** increasing safe disclosure pathways increases treatment access and reduces harmful loops.
+
+---
+
+## 10) Treatment families (high-level map, non-clinical)
+This is a conceptual map of common approaches:
+
+- **CBT-family:** change thoughts/behaviors; exposure; skills (mechanism: learning + reappraisal)
+- **Behavioral activation:** rebuild reward loops (mechanism: reinforcement)
+- **Skills-based regulation approaches:** distress tolerance, emotion regulation (mechanism: control + reappraisal)
+- **Interpersonal/systemic approaches:** relationship patterns and roles (mechanism: scripts + repair)
+- **Medication:** modulates underlying physiology (mechanism: arousal/mood systems; varies by condition)
+
+**Pitfall:** assuming “one treatment fits all.” Match mechanism to loop.
+
+---
+
+## A reusable psychopathology analysis template
+When reading about a condition or case, specify:
+
+1) **Symptom dimension(s):** threat, reward, control, sleep, social trust  
+2) **Maintaining loop:** avoidance loop? withdrawal loop? compulsion loop?  
+3) **Context:** stressors, safety, support, stigma  
+4) **Development:** when did it start and what reinforced it?  
+5) **Intervention lever:** exposure, activation, skills, environment change, support  
+6) **Prediction:** what would break the loop first?
+
+---
+
+## Canonical examples (stubs you can expand)
+### Example A: Panic–avoidance cycle
+- bodily cue interpreted as threat,
+- panic rises,
+- avoidance and safety behaviors increase,
+- sensitivity increases.
+
+**Mechanisms:** threat appraisal + avoidance learning
+
+### Example B: Depression withdrawal loop
+- low mood reduces action,
+- fewer rewarding experiences occur,
+- mood drops further.
+
+**Mechanisms:** reduced reinforcement + rumination + sleep disruption
+
+---
+
+## Connections
+- Foundations: **emotion & motivation**, **learning**, **self-control**, **sleep & stress**, **attention & memory**, **measurement**
+- Topics: **mental health**, **addiction & compulsion**, **relationships**, **therapy tools**
+- Overlaps: **institutions** (access, legitimacy), **criminology** (stress/trauma exposure), **policy design** (stigma and measurement artifacts)

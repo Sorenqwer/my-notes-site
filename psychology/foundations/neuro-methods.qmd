@@ -1,0 +1,198 @@
+---
+title: "Neuroscience methods"
+toc: true
+---
+
+This page explains what common neuroscience methods can and cannot tell you, in a way that stays useful even if specific technologies change.
+
+A simple rule:
+> Methods answer different questions: **where**, **when**, **what correlates**, **what causes**, **what is necessary**.
+
+Neuro evidence is powerful when it constrains theories — not when it replaces them with “brain pictures.”
+
+## 1) What neuro methods are for (the question map)
+Neuroscience methods are often used to answer:
+
+- **Localization:** where in the brain does activity relate to a task?
+- **Timing:** when do processes occur (early perception vs later evaluation)?
+- **Necessity:** is a region/system required for a function?
+- **Causality:** what happens when we perturb a system?
+- **Mechanism constraints:** does the brain implement your theory in a plausible way?
+
+A good paper makes clear which of these it’s claiming.
+
+---
+
+## 2) fMRI (functional magnetic resonance imaging)
+### What it measures (conceptually)
+fMRI measures changes related to blood oxygenation (a proxy for neural activity), with a delay.
+
+### What it is good for
+- spatial patterns (rough “where”)
+- comparing conditions (task A vs task B)
+- linking networks to tasks
+
+### What it is not good for
+- fine-grained timing (“when exactly”)
+- proving causality by itself
+- reading thoughts (in general use)
+
+**Pitfalls**
+- reverse inference: “region X lit up, so emotion Y happened”
+- ignoring that many processes share the same regions
+
+**Best use:** constrain competing psychological theories by showing which network patterns align with which processes.
+
+---
+
+## 3) EEG / ERP (electroencephalography / event-related potentials)
+### What it measures
+Electrical activity at the scalp, reflecting synchronous neural activity.
+
+### What it is good for
+- timing (“when” processes occur)
+- differentiating early sensory processing vs later decision stages
+- studying attention and error monitoring
+
+### Limits
+- localization is coarse (harder to say exactly “where”)
+- sensitive to noise (movement, environment)
+
+**Best use:** connect cognitive stages (perception → attention → evaluation) to time.
+
+---
+
+## 4) MEG (magnetoencephalography) (conceptual note)
+MEG measures magnetic fields from neural activity.
+It is often treated as:
+- timing like EEG,
+- localization better than EEG (still not perfect).
+
+You don’t need to emphasize it unless you later want a “methods completeness” section.
+
+---
+
+## 5) Lesion and patient studies
+### What they are
+Study behavior after brain injury or neurological conditions.
+
+### What they are good for
+- necessity claims: “when this system is damaged, function F is impaired”
+- dissociations: one ability can break while another remains intact
+
+### Limits
+- lesions are rarely clean or identical across people
+- compensation and reorganization can occur
+- interpretation needs careful cognitive modeling
+
+**Best use:** demonstrate constraints and dissociations that any theory must respect.
+
+---
+
+## 6) TMS / tDCS (brain stimulation and modulation)
+### TMS (transcranial magnetic stimulation)
+Uses magnetic pulses to temporarily disrupt or alter neural activity.
+
+**Good for**
+- causal tests: what changes when region/system is perturbed?
+- mapping functional roles under controlled tasks
+
+**Limits**
+- limited depth (mostly cortex)
+- effects can be variable across people
+- “where” and “how” claims must be careful
+
+### tDCS (transcranial direct current stimulation)
+Applies weak currents; effects are often smaller and more variable.
+
+**Best use:** treat as “modulatory evidence,” not decisive proof.
+
+---
+
+## 7) Psychophysiology (body measures)
+Includes:
+- heart rate variability, skin conductance, pupil dilation
+- hormone sampling (e.g., cortisol)
+- breathing patterns, startle reflex
+
+**Good for**
+- arousal and stress responses
+- threat sensitivity and regulation dynamics
+
+**Limits**
+- arousal ≠ one specific emotion
+- social context changes physiology strongly
+
+**Best use:** connect stress/arousal to attention narrowing, habit dominance, and emotional reactivity.
+
+---
+
+## 8) Pharmacology (conceptual)
+Studying behavior under substances that modulate neurotransmitter systems.
+
+**Good for**
+- suggesting causal involvement of neurotransmitter systems
+- understanding mechanism plausibility
+
+**Limits**
+- drugs have broad effects (not clean single-lever interventions)
+- individual differences and context matter
+
+**Best use:** triangulate with behavioral and neural evidence.
+
+---
+
+## 9) Animal and comparative methods (conceptual note)
+Animal models allow:
+- invasive measurement,
+- precise control,
+- causal circuit interventions.
+
+But translation to human cognition:
+- is strongest for basic learning, reward, threat, and physiology
+- is weaker for language, complex social institutions, and moral reasoning.
+
+**Best use:** use animal evidence to support foundational mechanisms, not to “explain society.”
+
+---
+
+## 10) What makes neuro evidence persuasive? (triangulation)
+Neuroscience is most convincing when:
+- behavioral findings replicate,
+- neural evidence matches the predicted mechanism,
+- perturbation/lesion evidence supports necessity/causality,
+- results generalize across tasks and samples.
+
+**Rule:** one fMRI result is rarely decisive; converging evidence is.
+
+---
+
+## Common interpretive errors (quick list)
+- **Reverse inference:** region activation → specific mental state (too strong)
+- **Neuro-essentialism:** “because brain, it’s more real”
+- **Overlocalization:** treating networks as isolated modules
+- **Ignoring task impurity:** tasks rarely measure only one mechanism
+- **Causality leap:** correlational neural evidence treated as causal
+
+---
+
+## A reusable method-selection template
+When you want to study a psychological mechanism, write:
+
+1) Mechanism hypothesis (algorithmic level)  
+2) Behavioral predictions  
+3) What would count as evidence against it  
+4) Choose method by question:
+   - where? fMRI
+   - when? EEG/ERP
+   - necessary? lesions
+   - causal perturbation? TMS
+   - arousal/stress? physiology/hormones
+5) Triangulate across at least two methods
+
+---
+
+## Connections
+- Foundations: **biopsychology**, **cognition**, **attention & memory**, **measurement**, **methods**
+- Topics: **sensation & perception**, **addiction & compulsion**, **mental health**
+- Overlaps: **policy design** (interpretation caution), **criminology** (stress physiology, threat)

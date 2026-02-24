@@ -1,6 +1,6 @@
 ---
 title: "Psychology"
-toc: true
+toc: False
 ---
 
 Psychology here is treated as a **toolkit for explaining behavior**: how people perceive, learn, decide, and coordinate with others.

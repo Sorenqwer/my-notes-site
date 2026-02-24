@@ -1,0 +1,145 @@
+---
+title: "Health psychology"
+toc: true
+---
+
+*Common UG elective.*
+
+Health psychology studies how psychological mechanisms shape:
+- health behaviors (sleep, exercise, diet, substance use),
+- stress and coping,
+- adherence to treatment,
+- risk perception and health communication.
+
+A useful framing:
+> Many “health problems” are behavior + environment problems, mediated by attention, habit, emotion, and social norms.
+
+## 1) A simple model of health behavior
+Health behavior is shaped by:
+
+1) **Capabilities** (skills, executive control, knowledge)
+2) **Opportunities** (access, time, cost, environment cues)
+3) **Motivation** (goals, identity, reward/relief)
+4) **Feedback** (immediate vs delayed consequences)
+5) **Social context** (norms, support, stigma)
+
+If you ignore opportunities and feedback timing, you’ll over-blame “willpower.”
+
+---
+
+## 2) Stress and coping
+Stress changes:
+- attention (tunnel vision),
+- time horizon (short-run relief dominates),
+- emotion regulation (irritability, avoidance),
+- habit expression (defaults take over).
+
+Coping strategies often split into:
+- **problem-focused** (change the situation),
+- **emotion-focused** (change how it feels),
+- **avoidant** (escape, short-run relief).
+
+**Prediction patterns**
+- avoidant coping reduces distress short-run but maintains long-run problems (avoidance loops).
+- stable routines reduce stress reactivity over time.
+
+---
+
+## 3) Health beliefs and risk perception
+People do not perceive risk objectively. Risk perception is shaped by:
+- availability (vivid cases dominate),
+- framing (relative vs absolute risk),
+- trust in source,
+- emotion (fear/anger),
+- numeracy and comprehension (without blaming individuals).
+
+**Prediction patterns**
+- narratives move behavior more than statistics when trust is low.
+- trust in institutions predicts compliance with guidance.
+
+**Intervention lever:** improve *clarity + credibility* rather than only increasing information volume.
+
+---
+
+## 4) Adherence: why people don’t follow treatment plans
+Non-adherence can arise from:
+- forgetting (attention/retrieval failure),
+- low expectancy (“this won’t help”),
+- side effects and immediate costs,
+- stigma and identity threat,
+- lack of access (structural constraint),
+- mistrust in providers/institutions.
+
+**Prediction patterns**
+- reminders at the right time increase adherence even without changing beliefs.
+- respectful treatment and voice increase adherence through legitimacy.
+
+---
+
+## 5) Habit and cue control (the real workhorse)
+Health behaviors are strongly cue-driven:
+- time-of-day routines,
+- location cues (kitchen, bed, phone),
+- emotional cues (stress → snack, anxiety → avoidance).
+
+**Prediction patterns**
+- environment redesign outperforms motivation-only interventions.
+- small frictions (e.g., making unhealthy choices harder) have large effects.
+
+---
+
+## 6) Behavior change tools (evidence-aligned, non-clinical)
+Linking to your toolkit page, common high-leverage tools include:
+
+- **Implementation intentions** (“If it’s 10pm, I start wind-down.”)
+- **Defaults and automation** (pre-scheduling, subscriptions, medication organizers)
+- **Commitment devices** (public plans, deposits, accountability)
+- **Self-monitoring** (tracking as attention support, not moral judgment)
+- **Social support** (norms and belonging)
+- **Choice architecture** (reduce choice overload; reduce friction for desired action)
+
+**Prediction pattern:** tools work best when they act at the **cue stage**, not at the “willpower stage.”
+
+---
+
+## 7) Placebo, expectations, and meaning (high-level)
+Expectations can change:
+- perceived symptoms,
+- pain and discomfort,
+- engagement and adherence.
+
+This is not “fake”; it reflects how brain/body interpret signals under uncertainty.
+
+**Prediction pattern:** credible rituals and trusted providers increase expectancy effects.
+
+---
+
+## 8) Health inequalities (environment + stress + access)
+Health outcomes correlate with:
+- chronic stress exposure,
+- neighborhood environment,
+- access to care,
+- time scarcity,
+- stigma and institutional trust.
+
+**Prediction pattern:** interventions that ignore structural constraints may widen inequality (only the well-resourced can comply).
+
+---
+
+## A reusable health-psych analysis template
+When analyzing a health behavior, specify:
+
+1) **Behavior** (what exactly?)  
+2) **Cue** (when/where/with whom/which emotion)  
+3) **Reinforcement** (reward or relief; immediate vs delayed)  
+4) **Constraints** (time, money, access, stigma)  
+5) **Beliefs** (expectancy, trust, risk perception)  
+6) **Social context** (norms, support)  
+7) **Intervention** (which lever acts earliest in the loop?)
+
+---
+
+## Connections
+- Foundations: **self-control**, **sleep & stress**, **learning**, **emotion & motivation**, **measurement**
+- Topics: **addiction & compulsion**, **mental health**, **therapy tools**
+- Overlaps: **institutions** (trust and access), **policy design** (friction/defaults), **criminology** (substance use, stress exposure)
