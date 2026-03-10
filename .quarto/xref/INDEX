@@ -427,5 +427,26 @@
   },
   "psychology/topics/norms-groups.qmd": {
     "norms-groups.html": "9078f975"
+  },
+  "psychology/foundations/biopsychology.qmd": {
+    "biopsychology.html": "62a3a27e"
+  },
+  "psychology/foundations/sensation-perception.qmd": {
+    "sensation-perception.html": "b6e6312c"
+  },
+  "psychology/foundations/neuro-methods.qmd": {
+    "neuro-methods.html": "0f7e15e0"
+  },
+  "psychology/foundations/history-philosophy.qmd": {
+    "history-philosophy.html": "086d1548"
+  },
+  "psychology/topics/addiction-compulsion.qmd": {
+    "addiction-compulsion.html": "57954ea9"
+  },
+  "psychology/topics/health-psychology.qmd": {
+    "health-psychology.html": "d798eead"
+  },
+  "psychology/topics/educational-psychology.qmd": {
+    "educational-psychology.html": "a393f8a9"
   }
 }

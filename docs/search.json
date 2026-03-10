@@ -1505,130 +1505,235 @@
     "text": "Connections\n\nFoundations: cognition, emotion & motivation, learning, self-control, social cognition\nTopics: norms & groups (stress amplifies group threat dynamics)\nOverlaps: institutions (procedural justice reduces threat), criminology (hot spots, escalation, legitimacy), communication (arousal-driven spread)"
   },
   {
-    "objectID": "psychology/topics/addition-compulsion.html",
-    "href": "psychology/topics/addition-compulsion.html",
+    "objectID": "psychology/topics/mental-health.html",
+    "href": "psychology/topics/mental-health.html",
+    "title": "Mental health",
+    "section": "",
+    "text": "This page is a foundational, non-clinical map of mental health topics that matter for understanding behavior. It is not a diagnostic guide. The goal is to organize mechanisms and predictions in a way that is useful for study and for linking to other parts of the site (decision-making, learning, emotion, social cognition).\nA helpful framing: &gt; Mental health patterns often reflect interactions between vulnerabilities, environments, and coping strategies."
+  },
+  {
+    "objectID": "psychology/topics/mental-health.html#core-dimensions-a-practical-map",
+    "href": "psychology/topics/mental-health.html#core-dimensions-a-practical-map",
+    "title": "Mental health",
+    "section": "Core dimensions (a practical map)",
+    "text": "Core dimensions (a practical map)\nMany symptoms can be grouped by a few dimensions:\n\nNegative affect: persistent sadness, anxiety, guilt, irritability\nThreat sensitivity: hypervigilance, avoidance, panic responses\nReward processing: reduced pleasure, low motivation, anhedonia\nCognitive control: attention, impulsivity, rumination, executive function\nSleep and arousal: insomnia, fatigue, agitation\nSocial functioning: isolation, mistrust, rejection sensitivity\n\nDifferent “disorders” often share dimensions. That’s part of why comorbidity is common."
+  },
+  {
+    "objectID": "psychology/topics/mental-health.html#stress-and-vulnerability-a-general-mechanism",
+    "href": "psychology/topics/mental-health.html#stress-and-vulnerability-a-general-mechanism",
+    "title": "Mental health",
+    "section": "Stress and vulnerability: a general mechanism",
+    "text": "Stress and vulnerability: a general mechanism\nA broad mechanism often used is:\n\nVulnerability (traits, history, genetics, learned patterns)\nStressors (acute shocks, chronic strain, social conflict)\nProtective factors (support, coping skills, stable routines)\n\nPrediction pattern: the same stressor affects people differently depending on vulnerability and protection."
+  },
+  {
+    "objectID": "psychology/topics/mental-health.html#anxiety-threat-and-uncertainty",
+    "href": "psychology/topics/mental-health.html#anxiety-threat-and-uncertainty",
+    "title": "Mental health",
+    "section": "Anxiety: threat and uncertainty",
+    "text": "Anxiety: threat and uncertainty\nAnxiety is often characterized by: - heightened threat perception, - intolerance of uncertainty, - avoidance behavior, - safety-seeking behaviors that reduce anxiety short-run but maintain it long-run.\nLearning loop (common): - uncertainty → anxiety → avoidance → temporary relief → stronger avoidance habit\nPrediction pattern: reducing avoidance and increasing safe exposure often weakens the loop over time (mechanism: learning + prediction error)."
+  },
+  {
+    "objectID": "psychology/topics/mental-health.html#depression-reward-energy-and-self-evaluation",
+    "href": "psychology/topics/mental-health.html#depression-reward-energy-and-self-evaluation",
+    "title": "Mental health",
+    "section": "Depression: reward, energy, and self-evaluation",
+    "text": "Depression: reward, energy, and self-evaluation\nDepressive patterns often involve: - reduced motivation and energy, - diminished reward sensitivity (things feel less rewarding), - negative self-evaluation, - rumination (repetitive negative thinking).\nBehavioral loop (common): - low mood → withdrawal → fewer rewarding experiences → lower mood\nPrediction pattern: small increases in structured rewarding activity can have outsized effects because they interrupt the loop (mechanism: reinforcement and habit)."
+  },
+  {
+    "objectID": "psychology/topics/mental-health.html#rumination-repetitive-thought-as-a-trap",
+    "href": "psychology/topics/mental-health.html#rumination-repetitive-thought-as-a-trap",
+    "title": "Mental health",
+    "section": "Rumination: repetitive thought as a trap",
+    "text": "Rumination: repetitive thought as a trap\nRumination feels like problem-solving but often functions as: - attention capture, - negative memory retrieval, - threat rehearsal, - reduced action initiation.\nPrediction pattern: interventions that shift attention (structured activity, reappraisal skills, sleep stabilization) reduce rumination frequency."
+  },
+  {
+    "objectID": "psychology/topics/mental-health.html#trauma-related-patterns-memory-threat-and-triggers",
+    "href": "psychology/topics/mental-health.html#trauma-related-patterns-memory-threat-and-triggers",
+    "title": "Mental health",
+    "section": "Trauma-related patterns: memory, threat, and triggers",
+    "text": "Trauma-related patterns: memory, threat, and triggers\nAfter extreme stress, some people develop: - intrusive memories, - hypervigilance, - avoidance of reminders, - emotional numbing, - sleep disruption.\nMechanism lens: emotion-tagged memory + threat system sensitization + avoidance learning.\nPrediction pattern: unpredictable triggers and uncertain environments maintain hypervigilance."
+  },
+  {
+    "objectID": "psychology/topics/mental-health.html#adhd-like-patterns-non-diagnostic-framing",
+    "href": "psychology/topics/mental-health.html#adhd-like-patterns-non-diagnostic-framing",
+    "title": "Mental health",
+    "section": "ADHD-like patterns (non-diagnostic framing)",
+    "text": "ADHD-like patterns (non-diagnostic framing)\nCommon behavioral dimensions include: - inattention under low stimulation, - difficulty sustaining effort, - impulsivity (short-horizon choice), - strong sensitivity to immediate rewards.\nMechanism lens: attention regulation + reinforcement sensitivity + executive control load.\nPrediction pattern: structure, feedback frequency, and reduced friction can help performance even without changing “traits.”"
+  },
+  {
+    "objectID": "psychology/topics/mental-health.html#substance-use-and-compulsive-behavior-mechanism-lens",
+    "href": "psychology/topics/mental-health.html#substance-use-and-compulsive-behavior-mechanism-lens",
+    "title": "Mental health",
+    "section": "Substance use and compulsive behavior (mechanism lens)",
+    "text": "Substance use and compulsive behavior (mechanism lens)\nA compact mechanism view: - strong immediate reward/relief, - habit formation, - cue-triggered craving, - withdrawal/negative reinforcement, - social context and norms.\nPrediction pattern: changing cue environments and social networks often matters as much as willpower."
+  },
+  {
+    "objectID": "psychology/topics/mental-health.html#stigma-and-social-context-often-overlooked",
+    "href": "psychology/topics/mental-health.html#stigma-and-social-context-often-overlooked",
+    "title": "Mental health",
+    "section": "Stigma and social context (often overlooked)",
+    "text": "Stigma and social context (often overlooked)\nMental health is shaped by: - perceived acceptance vs rejection, - shame and concealment, - access to support and care, - institutional treatment (school, workplace, legal system).\nPrediction pattern: reducing stigma and increasing safe disclosure channels increases help-seeking and reduces isolation loops."
+  },
+  {
+    "objectID": "psychology/topics/mental-health.html#a-reusable-explanation-template",
+    "href": "psychology/topics/mental-health.html#a-reusable-explanation-template",
+    "title": "Mental health",
+    "section": "A reusable explanation template",
+    "text": "A reusable explanation template\nWhen discussing a mental health-related behavior, specify:\n\nDimension(s) involved (threat, reward, control, sleep, social)\nLoop (avoidance loop? withdrawal loop? rumination loop?)\nContext (stressors, stability, social support)\nPrediction (what change would interrupt the loop?)\nBoundaries (what you are not claiming; avoid diagnosis)"
+  },
+  {
+    "objectID": "psychology/topics/mental-health.html#connections",
+    "href": "psychology/topics/mental-health.html#connections",
+    "title": "Mental health",
+    "section": "Connections",
+    "text": "Connections\n\nEmotion & motivation: affective systems and action tendencies are central.\nLearning: avoidance and reinforcement loops maintain patterns.\nCognition: attention and memory biases shape symptoms.\nNorms & groups: stigma and identity can worsen or buffer outcomes.\nCriminology (later link): trauma exposure, substance use, and stress can affect compliance, escalation, and institutional interactions."
+  },
+  {
+    "objectID": "psychology/topics/health-psychology.html",
+    "href": "psychology/topics/health-psychology.html",
+    "title": "Health psychology",
+    "section": "",
+    "text": "Common UG elective.\nHealth psychology studies how psychological mechanisms shape: - health behaviors (sleep, exercise, diet, substance use), - stress and coping, - adherence to treatment, - risk perception and health communication.\nA useful framing: &gt; Many “health problems” are behavior + environment problems, mediated by attention, habit, emotion, and social norms."
+  },
+  {
+    "objectID": "psychology/topics/health-psychology.html#a-simple-model-of-health-behavior",
+    "href": "psychology/topics/health-psychology.html#a-simple-model-of-health-behavior",
+    "title": "Health psychology",
+    "section": "1) A simple model of health behavior",
+    "text": "1) A simple model of health behavior\nHealth behavior is shaped by:\n\nCapabilities (skills, executive control, knowledge)\nOpportunities (access, time, cost, environment cues)\nMotivation (goals, identity, reward/relief)\nFeedback (immediate vs delayed consequences)\nSocial context (norms, support, stigma)\n\nIf you ignore opportunities and feedback timing, you’ll over-blame “willpower.”"
+  },
+  {
+    "objectID": "psychology/topics/health-psychology.html#stress-and-coping",
+    "href": "psychology/topics/health-psychology.html#stress-and-coping",
+    "title": "Health psychology",
+    "section": "2) Stress and coping",
+    "text": "2) Stress and coping\nStress changes: - attention (tunnel vision), - time horizon (short-run relief dominates), - emotion regulation (irritability, avoidance), - habit expression (defaults take over).\nCoping strategies often split into: - problem-focused (change the situation), - emotion-focused (change how it feels), - avoidant (escape, short-run relief).\nPrediction patterns - avoidant coping reduces distress short-run but maintains long-run problems (avoidance loops). - stable routines reduce stress reactivity over time."
+  },
+  {
+    "objectID": "psychology/topics/health-psychology.html#health-beliefs-and-risk-perception",
+    "href": "psychology/topics/health-psychology.html#health-beliefs-and-risk-perception",
+    "title": "Health psychology",
+    "section": "3) Health beliefs and risk perception",
+    "text": "3) Health beliefs and risk perception\nPeople do not perceive risk objectively. Risk perception is shaped by: - availability (vivid cases dominate), - framing (relative vs absolute risk), - trust in source, - emotion (fear/anger), - numeracy and comprehension (without blaming individuals).\nPrediction patterns - narratives move behavior more than statistics when trust is low. - trust in institutions predicts compliance with guidance.\nIntervention lever: improve clarity + credibility rather than only increasing information volume."
+  },
+  {
+    "objectID": "psychology/topics/health-psychology.html#adherence-why-people-dont-follow-treatment-plans",
+    "href": "psychology/topics/health-psychology.html#adherence-why-people-dont-follow-treatment-plans",
+    "title": "Health psychology",
+    "section": "4) Adherence: why people don’t follow treatment plans",
+    "text": "4) Adherence: why people don’t follow treatment plans\nNon-adherence can arise from: - forgetting (attention/retrieval failure), - low expectancy (“this won’t help”), - side effects and immediate costs, - stigma and identity threat, - lack of access (structural constraint), - mistrust in providers/institutions.\nPrediction patterns - reminders at the right time increase adherence even without changing beliefs. - respectful treatment and voice increase adherence through legitimacy."
+  },
+  {
+    "objectID": "psychology/topics/health-psychology.html#habit-and-cue-control-the-real-workhorse",
+    "href": "psychology/topics/health-psychology.html#habit-and-cue-control-the-real-workhorse",
+    "title": "Health psychology",
+    "section": "5) Habit and cue control (the real workhorse)",
+    "text": "5) Habit and cue control (the real workhorse)\nHealth behaviors are strongly cue-driven: - time-of-day routines, - location cues (kitchen, bed, phone), - emotional cues (stress → snack, anxiety → avoidance).\nPrediction patterns - environment redesign outperforms motivation-only interventions. - small frictions (e.g., making unhealthy choices harder) have large effects."
+  },
+  {
+    "objectID": "psychology/topics/health-psychology.html#behavior-change-tools-evidence-aligned-non-clinical",
+    "href": "psychology/topics/health-psychology.html#behavior-change-tools-evidence-aligned-non-clinical",
+    "title": "Health psychology",
+    "section": "6) Behavior change tools (evidence-aligned, non-clinical)",
+    "text": "6) Behavior change tools (evidence-aligned, non-clinical)\nLinking to your toolkit page, common high-leverage tools include:\n\nImplementation intentions (“If it’s 10pm, I start wind-down.”)\nDefaults and automation (pre-scheduling, subscriptions, medication organizers)\nCommitment devices (public plans, deposits, accountability)\nSelf-monitoring (tracking as attention support, not moral judgment)\nSocial support (norms and belonging)\nChoice architecture (reduce choice overload; reduce friction for desired action)\n\nPrediction pattern: tools work best when they act at the cue stage, not at the “willpower stage.”"
+  },
+  {
+    "objectID": "psychology/topics/health-psychology.html#placebo-expectations-and-meaning-high-level",
+    "href": "psychology/topics/health-psychology.html#placebo-expectations-and-meaning-high-level",
+    "title": "Health psychology",
+    "section": "7) Placebo, expectations, and meaning (high-level)",
+    "text": "7) Placebo, expectations, and meaning (high-level)\nExpectations can change: - perceived symptoms, - pain and discomfort, - engagement and adherence.\nThis is not “fake”; it reflects how brain/body interpret signals under uncertainty.\nPrediction pattern: credible rituals and trusted providers increase expectancy effects."
+  },
+  {
+    "objectID": "psychology/topics/health-psychology.html#health-inequalities-environment-stress-access",
+    "href": "psychology/topics/health-psychology.html#health-inequalities-environment-stress-access",
+    "title": "Health psychology",
+    "section": "8) Health inequalities (environment + stress + access)",
+    "text": "8) Health inequalities (environment + stress + access)\nHealth outcomes correlate with: - chronic stress exposure, - neighborhood environment, - access to care, - time scarcity, - stigma and institutional trust.\nPrediction pattern: interventions that ignore structural constraints may widen inequality (only the well-resourced can comply)."
+  },
+  {
+    "objectID": "psychology/topics/health-psychology.html#a-reusable-health-psych-analysis-template",
+    "href": "psychology/topics/health-psychology.html#a-reusable-health-psych-analysis-template",
+    "title": "Health psychology",
+    "section": "A reusable health-psych analysis template",
+    "text": "A reusable health-psych analysis template\nWhen analyzing a health behavior, specify:\n\nBehavior (what exactly?)\n\nCue (when/where/with whom/which emotion)\n\nReinforcement (reward or relief; immediate vs delayed)\n\nConstraints (time, money, access, stigma)\n\nBeliefs (expectancy, trust, risk perception)\n\nSocial context (norms, support)\n\nIntervention (which lever acts earliest in the loop?)"
+  },
+  {
+    "objectID": "psychology/topics/health-psychology.html#connections",
+    "href": "psychology/topics/health-psychology.html#connections",
+    "title": "Health psychology",
+    "section": "Connections",
+    "text": "Connections\n\nFoundations: self-control, sleep & stress, learning, emotion & motivation, measurement\nTopics: addiction & compulsion, mental health, therapy tools\nOverlaps: institutions (trust and access), policy design (friction/defaults), criminology (substance use, stress exposure)"
+  },
+  {
+    "objectID": "psychology/topics/addiction-compulsion.html",
+    "href": "psychology/topics/addiction-compulsion.html",
     "title": "Addiction & compulsion",
     "section": "",
     "text": "This page is a mechanism map for persistent behaviors that feel hard to stop: substance use, gambling-like reinforcement patterns, compulsive checking, and other cue-driven cycles.\nIt is not a diagnostic guide. The goal is to understand loops: cue → craving/urge → action → reward/relief → learning → stronger cue control."
   },
   {
-    "objectID": "psychology/topics/addition-compulsion.html#the-core-loop",
-    "href": "psychology/topics/addition-compulsion.html#the-core-loop",
+    "objectID": "psychology/topics/addiction-compulsion.html#the-core-loop",
+    "href": "psychology/topics/addiction-compulsion.html#the-core-loop",
     "title": "Addiction & compulsion",
     "section": "The core loop",
     "text": "The core loop\nA compact loop that explains many compulsive patterns:\n\nCue (place, emotion, people, device, time)\n\nUrge/craving (state shift: attention narrows)\n\nAction (routine)\n\nReward or relief (positive or negative reinforcement)\n\nLearning (habit strengthens; cues gain power)\n\nAftermath (guilt/shame/stress may create new cues)\n\nMany interventions work by breaking the loop at (1) or (2), not at (4)."
   },
   {
-    "objectID": "psychology/topics/addition-compulsion.html#mechanism-1-reinforcement-reward-and-relief",
-    "href": "psychology/topics/addition-compulsion.html#mechanism-1-reinforcement-reward-and-relief",
+    "objectID": "psychology/topics/addiction-compulsion.html#mechanism-1-reinforcement-reward-and-relief",
+    "href": "psychology/topics/addiction-compulsion.html#mechanism-1-reinforcement-reward-and-relief",
     "title": "Addiction & compulsion",
     "section": "Mechanism 1: Reinforcement (reward and relief)",
     "text": "Mechanism 1: Reinforcement (reward and relief)\nTwo reinforcement channels matter:\n\nPositive reinforcement: behavior produces pleasure/reward.\nNegative reinforcement: behavior removes discomfort (stress, anxiety, withdrawal, boredom).\n\nNegative reinforcement is often the “stickiness engine” because relief is immediate.\nPrediction patterns - stress increases craving and relapse risk (more need for relief). - delayed costs are discounted; immediate relief dominates. - inconsistent rewards can create persistent repetition."
   },
   {
-    "objectID": "psychology/topics/addition-compulsion.html#mechanism-2-cue-reactivity-and-attentional-capture",
-    "href": "psychology/topics/addition-compulsion.html#mechanism-2-cue-reactivity-and-attentional-capture",
+    "objectID": "psychology/topics/addiction-compulsion.html#mechanism-2-cue-reactivity-and-attentional-capture",
+    "href": "psychology/topics/addiction-compulsion.html#mechanism-2-cue-reactivity-and-attentional-capture",
     "title": "Addiction & compulsion",
     "section": "Mechanism 2: Cue reactivity and attentional capture",
     "text": "Mechanism 2: Cue reactivity and attentional capture\nOver time, cues become powerful: - they trigger urges automatically, - they capture attention (“tunnel vision”), - they reduce working memory available for self-control.\nPrediction patterns - exposure to cues increases cravings even without conscious intent. - “willpower” fails more in cue-rich environments."
   },
   {
-    "objectID": "psychology/topics/addition-compulsion.html#mechanism-3-habit-dominance-under-stress",
-    "href": "psychology/topics/addition-compulsion.html#mechanism-3-habit-dominance-under-stress",
+    "objectID": "psychology/topics/addiction-compulsion.html#mechanism-3-habit-dominance-under-stress",
+    "href": "psychology/topics/addiction-compulsion.html#mechanism-3-habit-dominance-under-stress",
     "title": "Addiction & compulsion",
     "section": "Mechanism 3: Habit dominance under stress",
     "text": "Mechanism 3: Habit dominance under stress\nUnder stress, fatigue, and sleep loss: - executive function decreases, - habits dominate, - people revert to default routines.\nPrediction pattern: relapse often follows stress spikes or depletion states, even if motivation remains high."
   },
   {
-    "objectID": "psychology/topics/addition-compulsion.html#mechanism-4-identity-and-shame-loops",
-    "href": "psychology/topics/addition-compulsion.html#mechanism-4-identity-and-shame-loops",
+    "objectID": "psychology/topics/addiction-compulsion.html#mechanism-4-identity-and-shame-loops",
+    "href": "psychology/topics/addiction-compulsion.html#mechanism-4-identity-and-shame-loops",
     "title": "Addiction & compulsion",
     "section": "Mechanism 4: Identity and shame loops",
     "text": "Mechanism 4: Identity and shame loops\nAfter repeated failure, people can form an identity narrative: - “this is who I am,” - “I can’t change,” - “people will judge me.”\nShame often increases concealment and isolation, which reduces support and increases stress.\nPrediction patterns - stigma reduces help-seeking. - social support and identity-safe environments increase sustained change."
   },
   {
-    "objectID": "psychology/topics/addition-compulsion.html#mechanism-5-social-networks-and-norms",
-    "href": "psychology/topics/addition-compulsion.html#mechanism-5-social-networks-and-norms",
+    "objectID": "psychology/topics/addiction-compulsion.html#mechanism-5-social-networks-and-norms",
+    "href": "psychology/topics/addiction-compulsion.html#mechanism-5-social-networks-and-norms",
     "title": "Addiction & compulsion",
     "section": "Mechanism 5: Social networks and norms",
     "text": "Mechanism 5: Social networks and norms\nBehavior is shaped by: - peer availability and models, - shared routines, - norms about use and “what counts as normal.”\nPrediction pattern: changing social context can matter as much as changing individual motivation."
   },
   {
-    "objectID": "psychology/topics/addition-compulsion.html#interventions-as-loop-breaking-mechanism-lever",
-    "href": "psychology/topics/addition-compulsion.html#interventions-as-loop-breaking-mechanism-lever",
+    "objectID": "psychology/topics/addiction-compulsion.html#interventions-as-loop-breaking-mechanism-lever",
+    "href": "psychology/topics/addiction-compulsion.html#interventions-as-loop-breaking-mechanism-lever",
     "title": "Addiction & compulsion",
     "section": "Interventions as loop-breaking (mechanism → lever)",
     "text": "Interventions as loop-breaking (mechanism → lever)\n\nBreak at cues (1)\n\nremove triggers,\nchange routes, routines, environments,\nadd friction (extra steps),\nblock access during vulnerable times.\n\n\n\nBreak at urge (2)\n\nurge-surfing (delay the action),\nemotion regulation strategies,\nalternative relief (exercise, connection, structured activity),\n“if-then” implementation intentions.\n\n\n\nBreak at action-to-reward mapping (3–4)\n\nreduce reward intensity/availability,\nincrease immediate costs (commitment contracts),\nreplace routine with a lower-harm substitute.\n\n\n\nBreak at aftermath (6)\n\nreduce shame and isolation,\nbuild repair scripts (“slip ≠ collapse”),\nincrease support and accountability.\n\nKey principle: if an intervention relies only on motivation, it will fail in cue-rich + high-stress environments."
   },
   {
-    "objectID": "psychology/topics/addition-compulsion.html#a-reusable-analysis-template",
-    "href": "psychology/topics/addition-compulsion.html#a-reusable-analysis-template",
+    "objectID": "psychology/topics/addiction-compulsion.html#a-reusable-analysis-template",
+    "href": "psychology/topics/addiction-compulsion.html#a-reusable-analysis-template",
     "title": "Addiction & compulsion",
     "section": "A reusable analysis template",
     "text": "A reusable analysis template\nWhen analyzing a compulsive pattern, specify:\n\nCues: what triggers it (external + internal states)?\n\nReinforcement: reward or relief? immediate or delayed?\n\nHabit strength: how automatic is the routine?\n\nStress/sleep: what states amplify it?\n\nSocial context: who/what environment sustains it?\n\nLoop break: which link can realistically be weakened?"
   },
   {
-    "objectID": "psychology/topics/addition-compulsion.html#connections",
-    "href": "psychology/topics/addition-compulsion.html#connections",
+    "objectID": "psychology/topics/addiction-compulsion.html#connections",
+    "href": "psychology/topics/addiction-compulsion.html#connections",
     "title": "Addiction & compulsion",
     "section": "Connections",
     "text": "Connections\n\nFoundations: learning, self-control, sleep & stress, emotion & motivation, cognition\nTopics: mental health (anxiety/stress loops), relationships (support vs conflict)\nOverlaps: institutions (treatment access, stigma), criminology (substance use, enforcement, rehabilitation dynamics)"
-  },
-  {
-    "objectID": "psychology/topics/motivation-goals.html",
-    "href": "psychology/topics/motivation-goals.html",
-    "title": "Motivation & goals",
-    "section": "",
-    "text": "Motivation determines what people try to do, how much effort they invest, and what tradeoffs they accept. Goals don’t just guide action — they also guide attention, memory, and interpretation."
-  },
-  {
-    "objectID": "psychology/topics/motivation-goals.html#goal-types",
-    "href": "psychology/topics/motivation-goals.html#goal-types",
-    "title": "Motivation & goals",
-    "section": "Goal types",
-    "text": "Goal types\n\nApproach vs avoidance\n\nApproach: pursue desirable outcomes.\nAvoidance: prevent negative outcomes.\n\nAvoidance goals can dominate attention and produce short-horizon “relief” strategies.\n\n\nMastery vs performance\n\nMastery: improve competence, learn.\nPerformance: look competent, avoid looking bad.\n\nPrediction pattern: performance focus increases anxiety and risk-avoidance; mastery focus increases persistence and learning."
-  },
-  {
-    "objectID": "psychology/topics/motivation-goals.html#intrinsic-vs-extrinsic-motivation",
-    "href": "psychology/topics/motivation-goals.html#intrinsic-vs-extrinsic-motivation",
-    "title": "Motivation & goals",
-    "section": "Intrinsic vs extrinsic motivation",
-    "text": "Intrinsic vs extrinsic motivation\n\nIntrinsic: doing the task is rewarding.\nExtrinsic: task is a means to an external reward.\n\nPrediction pattern: heavy external control can reduce intrinsic engagement when it changes the meaning from “I choose” to “I’m being controlled.”"
-  },
-  {
-    "objectID": "psychology/topics/motivation-goals.html#goal-conflict-and-self-regulation",
-    "href": "psychology/topics/motivation-goals.html#goal-conflict-and-self-regulation",
-    "title": "Motivation & goals",
-    "section": "Goal conflict and self-regulation",
-    "text": "Goal conflict and self-regulation\nPeople often hold multiple goals that conflict: - study vs social media, - fairness vs self-interest, - honesty vs reputation.\nConflict resolution depends on: - salience (which goal is active), - state (stress/fatigue), - identity (what kind of person I am), - environment (friction/defaults).\nPrediction pattern: making long-run goals salient at decision time improves alignment without changing values."
-  },
-  {
-    "objectID": "psychology/topics/motivation-goals.html#motivation-under-uncertainty-expectancy-value-practical-lens",
-    "href": "psychology/topics/motivation-goals.html#motivation-under-uncertainty-expectancy-value-practical-lens",
-    "title": "Motivation & goals",
-    "section": "Motivation under uncertainty: expectancy × value (practical lens)",
-    "text": "Motivation under uncertainty: expectancy × value (practical lens)\nEffort tends to rise with: - expectancy (belief that effort helps), - value (importance of the outcome).\nFailures often come from: - low expectancy (“it won’t matter”), - unclear value (“why do this?”), - high immediate costs.\nIntervention levers - increase expectancy via feedback and progress signals, - increase value via meaning/identity framing, - reduce immediate costs via environment design."
-  },
-  {
-    "objectID": "psychology/topics/motivation-goals.html#social-motivation-status-belonging-and-norms",
-    "href": "psychology/topics/motivation-goals.html#social-motivation-status-belonging-and-norms",
-    "title": "Motivation & goals",
-    "section": "Social motivation: status, belonging, and norms",
-    "text": "Social motivation: status, belonging, and norms\nPeople are motivated by: - approval and belonging, - status and respect, - avoidance of shame.\nPrediction pattern: peer environments can outpower individual incentives."
-  },
-  {
-    "objectID": "psychology/topics/motivation-goals.html#a-reusable-template",
-    "href": "psychology/topics/motivation-goals.html#a-reusable-template",
-    "title": "Motivation & goals",
-    "section": "A reusable template",
-    "text": "A reusable template\nTo explain motivated behavior, specify:\n\nWhich goal is active (approach/avoidance; mastery/performance)\n\nExpectancy and value (why try?)\n\nImmediate costs (effort, fear, shame, opportunity cost)\n\nIdentity and norms (who am I here?)\n\nPrediction: what shifts if you change salience, feedback, or social audience?"
-  },
-  {
-    "objectID": "psychology/topics/motivation-goals.html#connections",
-    "href": "psychology/topics/motivation-goals.html#connections",
-    "title": "Motivation & goals",
-    "section": "Connections",
-    "text": "Connections\n\nSelf-control: motivation interacts with cues and commitment.\nEmotion & motivation: emotions shift goal priority.\nNorms & groups: identity and belonging shape goal choice.\nInstitutions: incentives work better when they align with identity and legitimacy."
   },
   {
     "objectID": "psychology/topics/relationships.html",
@@ -1776,6 +1881,83 @@
     "title": "How to study psychology",
     "section": "Suggested “Start here” path",
     "text": "Suggested “Start here” path\n\nFoundations: psychology/foundations/index.qmd\nThen: psychology/foundations/cognition.qmd\nThen: psychology/foundations/learning.qmd\nThen: decision-making, emotion & motivation, social cognition\nKeep methods/measurement updated as you add pages"
+  },
+  {
+    "objectID": "psychology/foundations/measurement.html",
+    "href": "psychology/foundations/measurement.html",
+    "title": "Measurement",
+    "section": "",
+    "text": "Measurement is where many psychological arguments succeed or fail.\nIf you want to claim “X affects Y,” you must know: - what X and Y mean operationally, - whether they are measured reliably, - whether your measure captures the construct rather than noise.\nThis page is deeper than Methods: it’s about how variables are built."
+  },
+  {
+    "objectID": "psychology/foundations/measurement.html#constructs-vs-measures",
+    "href": "psychology/foundations/measurement.html#constructs-vs-measures",
+    "title": "Measurement",
+    "section": "Constructs vs measures",
+    "text": "Constructs vs measures\nA construct is the idea (e.g., “trust”, “self-control”, “anxiety”).\nA measure is the operational tool (survey items, tasks, behavior logs).\nOne construct can have many measures, and one measure can mix constructs.\nRule: never argue from labels. Argue from operational definitions."
+  },
+  {
+    "objectID": "psychology/foundations/measurement.html#validity-are-you-measuring-what-you-think",
+    "href": "psychology/foundations/measurement.html#validity-are-you-measuring-what-you-think",
+    "title": "Measurement",
+    "section": "Validity: are you measuring what you think?",
+    "text": "Validity: are you measuring what you think?\n\nContent validity\nDoes the measure cover the construct’s important aspects?\n\n\nConvergent / discriminant validity\n\nConvergent: does it correlate with other measures of the same construct?\nDiscriminant: does it avoid correlating with unrelated constructs?\n\n\n\nPredictive validity\nDoes it predict outcomes the construct should predict?\nRed flag: a measure is used because it is popular, not because it is justified for the specific argument."
+  },
+  {
+    "objectID": "psychology/foundations/measurement.html#reliability-is-the-measure-stable-enough-to-be-useful",
+    "href": "psychology/foundations/measurement.html#reliability-is-the-measure-stable-enough-to-be-useful",
+    "title": "Measurement",
+    "section": "Reliability: is the measure stable enough to be useful?",
+    "text": "Reliability: is the measure stable enough to be useful?\n\nInternal consistency (for multi-item scales)\nAre items measuring the same underlying thing?\n\n\nTest–retest reliability\nDoes the measure remain similar over time (when it should)?\n\n\nInter-rater reliability\nWhen humans rate behavior, do they agree?\nPractical implication: low reliability makes effects look unstable and encourages overfitting."
+  },
+  {
+    "objectID": "psychology/foundations/measurement.html#self-report-useful-but-not-direct-access",
+    "href": "psychology/foundations/measurement.html#self-report-useful-but-not-direct-access",
+    "title": "Measurement",
+    "section": "Self-report: useful but not “direct access”",
+    "text": "Self-report: useful but not “direct access”\nSelf-report captures: - introspection, - self-image, - social desirability, - memory reconstruction.\nIt can be excellent for private experiences, but it also has predictable distortions.\nPrediction patterns - sensitive topics are underreported in low-trust settings. - social desirability rises when anonymity is low. - current mood biases reports (“state contamination”).\nDesign levers - anonymity and privacy, - neutral wording, - indirect questioning when appropriate, - multiple methods (triangulation)."
+  },
+  {
+    "objectID": "psychology/foundations/measurement.html#behavioral-tasks-what-you-gain-and-what-you-risk",
+    "href": "psychology/foundations/measurement.html#behavioral-tasks-what-you-gain-and-what-you-risk",
+    "title": "Measurement",
+    "section": "Behavioral tasks: what you gain and what you risk",
+    "text": "Behavioral tasks: what you gain and what you risk\nTasks can reduce self-presentation bias but may be sensitive to: - instructions and framing, - motivation and effort, - learning during the task, - “task impurity” (multiple mechanisms affect performance).\nRule of thumb: interpret tasks as measures of performance under specific conditions, not pure traits."
+  },
+  {
+    "objectID": "psychology/foundations/measurement.html#physiological-measures-strong-signals-hard-interpretation",
+    "href": "psychology/foundations/measurement.html#physiological-measures-strong-signals-hard-interpretation",
+    "title": "Measurement",
+    "section": "Physiological measures: strong signals, hard interpretation",
+    "text": "Physiological measures: strong signals, hard interpretation\nPhysiology (heart rate, skin conductance, etc.) can indicate arousal but rarely maps 1:1 to a single emotion.\nPitfall: “arousal = fear” (often false)."
+  },
+  {
+    "objectID": "psychology/foundations/measurement.html#measurement-invariance-cross-group-comparability",
+    "href": "psychology/foundations/measurement.html#measurement-invariance-cross-group-comparability",
+    "title": "Measurement",
+    "section": "Measurement invariance (cross-group comparability)",
+    "text": "Measurement invariance (cross-group comparability)\nIf you compare groups (cultures, genders, age), ask: - do items mean the same thing? - do response styles differ (acquiescence, extremity, modesty)?\nPrediction pattern: apparent group differences can be measurement artifacts."
+  },
+  {
+    "objectID": "psychology/foundations/measurement.html#common-measurement-errors-and-fixes",
+    "href": "psychology/foundations/measurement.html#common-measurement-errors-and-fixes",
+    "title": "Measurement",
+    "section": "Common measurement errors (and fixes)",
+    "text": "Common measurement errors (and fixes)\n\nRange restriction\nIf everyone scores near the top or bottom, correlations shrink.\n\n\nFloor/ceiling effects\nThe measure can’t detect change.\n\n\nReactivity\nMeasuring behavior changes behavior (people perform for the measure).\n\n\nDemand characteristics\nPeople infer the hypothesis and comply or resist.\nFix set: pretest, blind conditions, unobtrusive outcomes, manipulate checks, and triangulate."
+  },
+  {
+    "objectID": "psychology/foundations/measurement.html#a-practical-checklist",
+    "href": "psychology/foundations/measurement.html#a-practical-checklist",
+    "title": "Measurement",
+    "section": "A practical checklist",
+    "text": "A practical checklist\nBefore using a variable, write:\n\nConstruct definition (one sentence)\n\nOperationalization (exact items/task/behavior)\n\nReliability evidence (or why it’s acceptable without it)\n\nValidity argument (why this measure matches the construct)\n\nLikely biases (social desirability, reactivity, invariance)\n\nA robustness plan (alternate measures or sensitivity tests)"
+  },
+  {
+    "objectID": "psychology/foundations/measurement.html#connections",
+    "href": "psychology/foundations/measurement.html#connections",
+    "title": "Measurement",
+    "section": "Connections",
+    "text": "Connections\n\nMethods: measurement quality determines inference quality.\nMental health / stigma: self-report is especially fragile under shame/fear.\nCriminology: reporting and enforcement are measurement systems with selection bias.\nInstitutions: procedural justice shapes willingness to report truthfully."
   },
   {
     "objectID": "psychology/foundations/methods.html",
@@ -1953,109 +2135,228 @@
     "text": "Connections to other sections\n\nDecision-making\nLearning shapes what options feel available and what outcomes feel likely.\n\n\nSocial cognition\nSocial learning depends on identity, trust, and perceived credibility.\n\n\nEmotion & motivation\nEmotional arousal changes learning rates and generalization; stress strengthens habit expression.\n\n\nCriminology\n\ndeterrence depends on experienced and observed consequences,\npeer effects and neighborhood norms shape learning,\nenforcement can teach avoidance rather than compliance."
   },
   {
-    "objectID": "psychology/foundations/decision-making.html",
-    "href": "psychology/foundations/decision-making.html",
-    "title": "Decision-making",
+    "objectID": "psychology/foundations/emotion-motivation.html",
+    "href": "psychology/foundations/emotion-motivation.html",
+    "title": "Emotion & motivation",
     "section": "",
-    "text": "Decision-making is about how people map uncertainty + preferences + constraints into choices. Psychology differs from “textbook rational choice” mainly by emphasizing: - limited attention, - limited computation, - context effects, - emotion and motivation, - social and moral preferences."
+    "text": "Emotion and motivation are not “noise.” They are control systems: they prioritize goals, allocate attention, trigger action tendencies, and shape what evidence feels persuasive.\nA clean mental model:"
   },
   {
-    "objectID": "psychology/foundations/decision-making.html#map-of-this-topic",
-    "href": "psychology/foundations/decision-making.html#map-of-this-topic",
-    "title": "Decision-making",
-    "section": "Map of this topic",
-    "text": "Map of this topic\nUse this page as the overview, and branch out when you want more detail:\n\nRisk & uncertainty → reference points, loss sensitivity, probability weighting\n\nTime & self-control → present focus, temptation, commitment\n\nJudgment & heuristics → shortcuts, cue-use, framing, bounded computation\n\nChoice architecture → defaults, friction, salience, ordering effects\n\nSocial decision-making → fairness, reciprocity, identity, norms (can live here or under Social cognition / Topics)\n\n(Create subpages later if you want; this overview stays stable.)"
+    "objectID": "psychology/foundations/emotion-motivation.html#core-functions",
+    "href": "psychology/foundations/emotion-motivation.html#core-functions",
+    "title": "Emotion & motivation",
+    "section": "Core functions",
+    "text": "Core functions\n\n1) Value and priority\nEmotions change the felt value of outcomes and the urgency of action. - Fear prioritizes safety and threat monitoring. - Anger prioritizes confrontation and norm enforcement. - Sadness often reduces effort and shifts attention to loss and withdrawal. - Joy can broaden attention and exploration.\nPrediction pattern: same incentives can yield different behavior depending on the affective state because the objective function is effectively reweighted.\n\n\n2) Attention and memory\nEmotion acts like a spotlight: - it makes certain cues more salient, - it increases rehearsal and recall for emotionally tagged events, - it can narrow attention under threat.\nPrediction pattern: after emotionally intense events, people remember “the gist” and key cues, but details can be distorted.\n\n\n3) Action readiness\nEmotions prepare the body and mind for classes of actions: - fear → avoidance / vigilance, - anger → approach / punishment, - shame → concealment / withdrawal, - guilt → repair / apology.\nThis makes emotions especially important in social settings."
   },
   {
-    "objectID": "psychology/foundations/decision-making.html#a-minimal-decomposition",
-    "href": "psychology/foundations/decision-making.html#a-minimal-decomposition",
-    "title": "Decision-making",
-    "section": "A minimal decomposition",
-    "text": "A minimal decomposition\nA decision process can be separated into: 1) Representation: what options do I even see? 2) Evaluation: how do I assign value (including risk and time)? 3) Choice rule: how do I select (maximization vs satisficing vs habits)? 4) Learning: how do I update after feedback?\nA lot of disagreement across theories is really disagreement about (1) and (3)."
+    "objectID": "psychology/foundations/emotion-motivation.html#motivation-what-drives-goal-selection",
+    "href": "psychology/foundations/emotion-motivation.html#motivation-what-drives-goal-selection",
+    "title": "Emotion & motivation",
+    "section": "Motivation: what drives goal selection",
+    "text": "Motivation: what drives goal selection\n\nIntrinsic vs extrinsic motivation\n\nIntrinsic: activity is rewarding itself (curiosity, mastery, meaning).\nExtrinsic: activity is a means to an end (money, grades, approval).\n\nPrediction pattern: heavy extrinsic control can sometimes reduce intrinsic engagement, especially when it shifts the meaning from “I choose” to “I’m being controlled.”\n\n\nApproach vs avoidance\nA useful simplification: - Approach goals: obtain valued outcomes. - Avoidance goals: prevent negative outcomes.\nAvoidance motivation can be extremely powerful and can dominate attention (e.g., threat monitoring).\n\n\nSelf-control and conflict\nSelf-control problems often reflect conflicts between: - short-run drives (comfort, impulses, immediate relief), - long-run goals (health, reputation, mastery).\nPrediction pattern: commitment devices (pre-commitment, removing temptation, public deadlines) increase goal-consistent behavior without “changing personality.”"
   },
   {
-    "objectID": "psychology/foundations/decision-making.html#risk-why-people-dont-behave-like-expected-utility",
-    "href": "psychology/foundations/decision-making.html#risk-why-people-dont-behave-like-expected-utility",
-    "title": "Decision-making",
-    "section": "Risk: why people don’t behave like expected utility",
-    "text": "Risk: why people don’t behave like expected utility\nCommon psychological regularities (high-level): - Reference dependence: outcomes feel like gains/losses relative to a reference point. - Loss sensitivity: losses tend to loom larger than equally-sized gains. - Probability weighting: small probabilities may be overweighted; moderate/large may be underweighted. - Framing effects: equivalent descriptions can change choice by changing representation.\nPitfall: calling this “irrational” too early. Often it’s a mismatch between the analyst’s representation and the subject’s."
+    "objectID": "psychology/foundations/emotion-motivation.html#emotion-as-information-and-when-it-misleads",
+    "href": "psychology/foundations/emotion-motivation.html#emotion-as-information-and-when-it-misleads",
+    "title": "Emotion & motivation",
+    "section": "Emotion as information (and when it misleads)",
+    "text": "Emotion as information (and when it misleads)\nPeople often use feelings as a signal: - “I feel bad about it, so it must be risky.” - “I feel good about it, so it must be right.”\nThis can be adaptive, but it also creates systematic errors when feelings are driven by irrelevant cues.\nPitfall: confusing arousal with evidence."
   },
   {
-    "objectID": "psychology/foundations/decision-making.html#time-present-bias-and-self-control",
-    "href": "psychology/foundations/decision-making.html#time-present-bias-and-self-control",
-    "title": "Decision-making",
-    "section": "Time: present bias and self-control",
-    "text": "Time: present bias and self-control\nWhen decisions involve time (study now vs game now; save vs spend): - People often behave as if they put extra weight on the present. - This creates “planner vs doer” conflicts: preferences differ across time.\nPrediction pattern: commitment devices can increase follow-through even without changing incentives."
+    "objectID": "psychology/foundations/emotion-motivation.html#social-emotions-the-bridge-to-norms-institutions-and-conflict",
+    "href": "psychology/foundations/emotion-motivation.html#social-emotions-the-bridge-to-norms-institutions-and-conflict",
+    "title": "Emotion & motivation",
+    "section": "Social emotions: the bridge to norms, institutions, and conflict",
+    "text": "Social emotions: the bridge to norms, institutions, and conflict\nSome emotions are inherently social: they depend on how one is seen, judged, or related to others.\n\nShame vs guilt (useful distinction)\n\nShame: “I am bad” → conceal, withdraw, avoid exposure.\nGuilt: “I did something bad” → repair, apologize, compensate.\n\nPrediction pattern: environments emphasizing public exposure increase shame; environments emphasizing repair increase guilt-driven pro-social behavior.\n\n\nAnger and punishment\nAnger is strongly tied to perceived norm violation and unfairness. It supports: - deterrence via credible retaliation, - norm enforcement in groups, - escalation in conflicts when misattributions occur.\nPrediction pattern: increasing perceived intentionality of harm increases anger and punitive choices.\n\n\nEmpathy and compassion\nEmpathy can increase helping, but also: - be biased toward identifiable individuals, - be stronger for in-group members, - lead to burnout without boundaries.\nPrediction pattern: abstract statistics move behavior less than vivid individual stories, even with identical expected harm."
   },
   {
-    "objectID": "psychology/foundations/decision-making.html#heuristics-not-just-shortcuts-but-strategies",
-    "href": "psychology/foundations/decision-making.html#heuristics-not-just-shortcuts-but-strategies",
-    "title": "Decision-making",
-    "section": "Heuristics: not just shortcuts, but strategies",
-    "text": "Heuristics: not just shortcuts, but strategies\nHeuristics are often: - fast, - robust under noise, - adapted to common environments.\nUseful lens: heuristics trade off accuracy vs cost (attention, time, computation)."
+    "objectID": "psychology/foundations/emotion-motivation.html#threat-stress-and-narrowing",
+    "href": "psychology/foundations/emotion-motivation.html#threat-stress-and-narrowing",
+    "title": "Emotion & motivation",
+    "section": "Threat, stress, and “narrowing”",
+    "text": "Threat, stress, and “narrowing”\nUnder threat/stress: - people rely more on habits and scripts, - mentalizing depth decreases, - attention narrows to salient cues, - ambiguity is interpreted more pessimistically.\nThis is a key mechanism linking environment → cognition → behavior.\nPrediction pattern: time pressure and threat cues increase reliance on stereotypes and reduce careful reasoning."
   },
   {
-    "objectID": "psychology/foundations/decision-making.html#canonical-example-template-reuse-later",
-    "href": "psychology/foundations/decision-making.html#canonical-example-template-reuse-later",
-    "title": "Decision-making",
-    "section": "Canonical example template (reuse later)",
-    "text": "Canonical example template (reuse later)\nWhen you add examples, write them in this form: - Task: what is being decided? - Normative benchmark: what would a standard rational model predict? - Observed behavior: what pattern appears? - Mechanism: what cognitive/emotional/social process explains it? - Intervention: what changes the behavior (information, framing, incentives, commitment)?"
+    "objectID": "psychology/foundations/emotion-motivation.html#a-reusable-explanation-template",
+    "href": "psychology/foundations/emotion-motivation.html#a-reusable-explanation-template",
+    "title": "Emotion & motivation",
+    "section": "A reusable explanation template",
+    "text": "A reusable explanation template\nWhen you explain a behavior using emotion/motivation, specify:\n\nTrigger/appraisal: what is the event interpreted as?\nGoal relevance: what goal is threatened or advanced?\nAffect: what emotion is generated (valence, arousal)?\nAction tendency: approach, avoid, punish, repair, withdraw?\nRegulation: reappraisal, suppression, distraction, rumination?\nOutcome: choice, social response, learning, reputation update."
   },
   {
-    "objectID": "psychology/foundations/decision-making.html#where-this-connects-to-the-rest-of-the-site",
-    "href": "psychology/foundations/decision-making.html#where-this-connects-to-the-rest-of-the-site",
-    "title": "Decision-making",
-    "section": "Where this connects to the rest of the site",
-    "text": "Where this connects to the rest of the site\n\nSocial cognition: decisions depend on perceived intentions, norms, identity, and reputation.\nLearning: feedback changes preferences, habits, and beliefs over time.\nCriminology: risk/time preferences and self-control show up in offending, compliance, and deterrence responses.\nOverlap with strategic interaction: depth limits, miscalibration about others, and social emotions change outcomes in interactive settings."
+    "objectID": "psychology/foundations/emotion-motivation.html#canonical-examples-stubs-you-can-expand",
+    "href": "psychology/foundations/emotion-motivation.html#canonical-examples-stubs-you-can-expand",
+    "title": "Emotion & motivation",
+    "section": "Canonical examples (stubs you can expand)",
+    "text": "Canonical examples (stubs you can expand)\n\nExample A: “Hot” decisions\n\nIn a calm state, a person plans to act prudently.\nIn a hot state (anger, arousal), they choose confrontation or risk.\nLater, regret and rationalization appear.\n\nMechanisms: state-dependent valuation + narrowed attention + action readiness.\n\n\nExample B: Compliance via legitimacy\n\nPeople comply not only because of expected punishment, but because noncompliance feels wrong.\nEmotions like guilt/shame and moral identity reinforce compliance.\n\nMechanisms: norm internalization + social emotions + identity."
   },
   {
-    "objectID": "psychology/foundations/attention-memory.html",
-    "href": "psychology/foundations/attention-memory.html",
-    "title": "Attention & memory",
+    "objectID": "psychology/foundations/emotion-motivation.html#connections-to-other-sections",
+    "href": "psychology/foundations/emotion-motivation.html#connections-to-other-sections",
+    "title": "Emotion & motivation",
+    "section": "Connections to other sections",
+    "text": "Connections to other sections\n\nSocial cognition\nEmotion shapes attribution: - anger increases intentionality judgments, - fear increases threat interpretation, - shame increases self-focused attention.\n\n\nDecision-making\nEmotion changes perceived risk and time: - fear increases risk aversion in some settings, - anger can increase optimism and risk-taking, - stress increases present focus.\n\n\nCriminology\n\nescalation and retaliation,\nlegitimacy and procedural justice,\nself-control and situational triggers,\ncrowd dynamics, peer influence, and identity.\n\n\n\nOverlaps (later)\nThis page is the psychological backbone for: - strategic commitment (anger/reputation), - punishment and deterrence, - signaling via costly emotional displays."
+  },
+  {
+    "objectID": "psychology/foundations/cognition.html",
+    "href": "psychology/foundations/cognition.html",
+    "title": "Cognition",
     "section": "",
-    "text": "This page zooms in on two bottlenecks that explain a huge amount of behavior: - attention (what gets selected for processing), - memory (what gets stored and what gets retrieved later).\nA recurring theme: &gt; People often fail not because they “prefer” something, but because they never processed the relevant information, or can’t retrieve it when needed."
+    "text": "Cognition is how people take in information, represent it mentally, and use it to guide action. It includes perception, attention, memory, and the limited “workspace” that supports reasoning.\nA useful theme for the whole site: &gt; Many “biases” are not mysterious preferences — they are consequences of cognitive constraints."
   },
   {
-    "objectID": "psychology/foundations/attention-memory.html#attention-selection-under-scarcity",
-    "href": "psychology/foundations/attention-memory.html#attention-selection-under-scarcity",
-    "title": "Attention & memory",
-    "section": "Attention: selection under scarcity",
-    "text": "Attention: selection under scarcity\nAttention is limited. It is pulled by: - goal relevance (what you’re trying to do), - novelty (what’s new), - threat (what might harm you), - emotion (what feels intense), - social cues (faces, status signals).\n\nSelective attention\nPeople focus on a subset of information and ignore the rest.\nPrediction patterns - Making a cue visually prominent changes choices even if nothing “objective” changes. - Under time pressure, attention narrows and “second-order” considerations drop out. - When information is spread across screens/pages, integration fails.\nDesign lever: place the key cue at the point of action; reduce competing salience.\n\n\nInattentional blindness (practical takeaway)\nPeople can miss obvious signals when attention is elsewhere.\nPrediction pattern: adding more information can worsen outcomes if it increases clutter.\n\n\nDivided attention\nMultitasking reduces performance on tasks needing working memory.\nPrediction pattern: errors rise sharply when tasks require integration across steps."
+    "objectID": "psychology/foundations/cognition.html#the-pipeline-view",
+    "href": "psychology/foundations/cognition.html#the-pipeline-view",
+    "title": "Cognition",
+    "section": "The pipeline view",
+    "text": "The pipeline view\nYou can often explain behavior by locating where things break in this pipeline:\n\nPerception (what is detected)\nAttention (what is selected)\nEncoding (what gets stored)\nMemory & retrieval (what comes back to mind)\nWorking memory & reasoning (what can be manipulated)\nDecision output (judgment and choice)\n\nDifferent tasks fail at different stages."
   },
   {
-    "objectID": "psychology/foundations/attention-memory.html#memory-storage-and-retrieval-are-both-active-processes",
-    "href": "psychology/foundations/attention-memory.html#memory-storage-and-retrieval-are-both-active-processes",
-    "title": "Attention & memory",
-    "section": "Memory: storage and retrieval are both active processes",
-    "text": "Memory: storage and retrieval are both active processes\nMemory is not a recording device. It is: - selective in encoding, - reconstructive in retrieval, - shaped by emotion and meaning.\n\nEncoding: what gets stored\nEncoding is stronger when: - attention is focused, - information is meaningful or structured, - there is repetition, - emotional salience tags it.\nPrediction pattern: “I read it but forgot” often means it was never encoded well (attention/structure issue).\n\n\nRetrieval: what comes to mind drives judgment\nRetrieval is cue-dependent. What is easiest to retrieve feels: - more common, - more important, - more true.\nThis underlies availability-driven judgments.\nPrediction pattern: recent or vivid events disproportionately shape perceived risk.\n\n\nReconstruction and distortion\nWhen recalling, people fill gaps with: - schemas (“what usually happens”), - identity-consistent narratives, - emotion-consistent interpretations.\nPrediction pattern: confidence in memory can be high even when details are wrong."
+    "objectID": "psychology/foundations/cognition.html#perception-we-dont-experience-the-world-directly",
+    "href": "psychology/foundations/cognition.html#perception-we-dont-experience-the-world-directly",
+    "title": "Cognition",
+    "section": "Perception: we don’t experience the world directly",
+    "text": "Perception: we don’t experience the world directly\nPerception is an inference process: the mind reconstructs reality from partial input.\nKey implications: - people can miss obvious signals when they are not attended to, - ambiguous stimuli are interpreted using context and expectations, - repeated exposure changes what feels “normal.”\nPrediction pattern: the same event can be perceived differently depending on prior beliefs, stress, identity, and what is salient."
   },
   {
-    "objectID": "psychology/foundations/attention-memory.html#working-memory-the-small-scratchpad-behind-reasoning",
-    "href": "psychology/foundations/attention-memory.html#working-memory-the-small-scratchpad-behind-reasoning",
-    "title": "Attention & memory",
-    "section": "Working memory: the small scratchpad behind reasoning",
-    "text": "Working memory: the small scratchpad behind reasoning\nWorking memory supports: - holding goals active, - comparing options, - multi-step reasoning (“if A then B then C”).\nIt is small and fragile.\nPrediction patterns - As reasoning steps increase, accuracy drops quickly. - Stress, sleep loss, and threat reduce working memory capacity. - People switch to simpler heuristics when working memory is overloaded."
+    "objectID": "psychology/foundations/cognition.html#attention-the-scarce-resource",
+    "href": "psychology/foundations/cognition.html#attention-the-scarce-resource",
+    "title": "Cognition",
+    "section": "Attention: the scarce resource",
+    "text": "Attention: the scarce resource\nAttention is limited; it is allocated based on: - novelty, - threat, - goal relevance, - emotional salience, - social relevance (faces, status cues).\n\nSelective attention\nPeople focus on some cues and ignore others.\nPrediction pattern: changing what is salient (layout, framing, order, visual prominence) changes judgment and behavior even when information content is unchanged.\n\n\nDivided attention and multitasking\nMultitasking typically reduces performance and increases errors, especially for tasks requiring working memory.\nPrediction pattern: under distraction, people rely more on defaults, habits, and simple heuristics."
   },
   {
-    "objectID": "psychology/foundations/attention-memory.html#the-attention-memory-choice-chain",
-    "href": "psychology/foundations/attention-memory.html#the-attention-memory-choice-chain",
-    "title": "Attention & memory",
-    "section": "The “attention → memory → choice” chain",
-    "text": "The “attention → memory → choice” chain\nMany interventions work because they modify this chain: - attention determines what gets encoded, - memory determines what gets retrieved, - retrieved content shapes judgment and choice.\nExample pattern - Reminder cues improve behavior not by changing preferences, but by changing retrieval."
+    "objectID": "psychology/foundations/cognition.html#memory-storage-is-not-recording",
+    "href": "psychology/foundations/cognition.html#memory-storage-is-not-recording",
+    "title": "Cognition",
+    "section": "Memory: storage is not recording",
+    "text": "Memory: storage is not recording\nMemory is reconstructive. It is shaped by: - emotion (strong tagging), - repetition (availability), - meaning (schema-consistency), - recency and vividness.\n\nWorking memory vs long-term memory\n\nWorking memory: small, active “scratch space.”\nLong-term memory: large but retrieval is cue-dependent.\n\nPrediction pattern: tasks requiring multiple steps of reasoning fail when working memory load increases.\n\n\nRetrieval and availability\nWhat comes to mind easily feels more likely or more important.\nPrediction pattern: vivid, recent, or emotionally salient examples dominate judgment of frequency and risk."
   },
   {
-    "objectID": "psychology/foundations/attention-memory.html#a-reusable-analysis-template",
-    "href": "psychology/foundations/attention-memory.html#a-reusable-analysis-template",
-    "title": "Attention & memory",
-    "section": "A reusable analysis template",
-    "text": "A reusable analysis template\nWhen someone “should have known better,” ask:\n\nAttention: did they notice the relevant cue at the moment?\n\nEncoding: was it stored in memory (repetition/meaning)?\n\nRetrieval: was the right memory available (correct cue)?\n\nWorking memory: was the task too multi-step?\n\nPrediction: what happens if you reduce clutter, add reminders, or simplify steps?"
+    "objectID": "psychology/foundations/cognition.html#mental-representations-the-hidden-structure-behind-choices",
+    "href": "psychology/foundations/cognition.html#mental-representations-the-hidden-structure-behind-choices",
+    "title": "Cognition",
+    "section": "Mental representations: the hidden structure behind choices",
+    "text": "Mental representations: the hidden structure behind choices\nPeople do not store full details; they store structured representations: - categories (“type of person” / “type of situation”), - causal stories (“X causes Y”), - scripts (“what happens next here”).\nRepresentations are useful but also create systematic errors: - you may ignore out-of-category evidence, - you may force events into familiar scripts.\nPrediction pattern: changing category labels changes interpretation, even with identical behavior."
   },
   {
-    "objectID": "psychology/foundations/attention-memory.html#connections",
-    "href": "psychology/foundations/attention-memory.html#connections",
-    "title": "Attention & memory",
+    "objectID": "psychology/foundations/cognition.html#reasoning-computation-under-constraints",
+    "href": "psychology/foundations/cognition.html#reasoning-computation-under-constraints",
+    "title": "Cognition",
+    "section": "Reasoning: computation under constraints",
+    "text": "Reasoning: computation under constraints\nReasoning is costly and often: - stops early (satisficing), - uses shortcuts (heuristics), - depends on attention and working memory.\nA practical way to write this: - depth (how many steps you can carry), - breadth (how many possibilities you can compare), - precision (how error-free your steps are).\nStress, time pressure, and fatigue reduce all three."
+  },
+  {
+    "objectID": "psychology/foundations/cognition.html#errors-that-look-like-bias-but-are-cognitive-mechanics",
+    "href": "psychology/foundations/cognition.html#errors-that-look-like-bias-but-are-cognitive-mechanics",
+    "title": "Cognition",
+    "section": "Errors that look like “bias” but are cognitive mechanics",
+    "text": "Errors that look like “bias” but are cognitive mechanics\nWhen people appear biased, check whether it could be explained by: - limited attention (missed information), - limited working memory (can’t integrate many cues), - cue-dependent retrieval (what comes to mind drives judgment), - schema-driven interpretation (story beats statistics), - default reliance (choice overload).\nRule of thumb: if an intervention that changes salience, load, or feedback changes behavior, the mechanism is likely cognitive."
+  },
+  {
+    "objectID": "psychology/foundations/cognition.html#a-reusable-explanation-template",
+    "href": "psychology/foundations/cognition.html#a-reusable-explanation-template",
+    "title": "Cognition",
+    "section": "A reusable explanation template",
+    "text": "A reusable explanation template\nTo explain a cognition-driven pattern, specify:\n\nTask: what must the person compute/remember?\nBottleneck: perception, attention, memory, or working memory?\nCue structure: what cues are salient vs hidden?\nRepresentation: what categories/scripts are activated?\nPrediction: what changes if you reduce load or change salience?"
+  },
+  {
+    "objectID": "psychology/foundations/cognition.html#canonical-examples-stubs-you-can-expand",
+    "href": "psychology/foundations/cognition.html#canonical-examples-stubs-you-can-expand",
+    "title": "Cognition",
+    "section": "Canonical examples (stubs you can expand)",
+    "text": "Canonical examples (stubs you can expand)\n\nExample A: “They had the information but didn’t use it”\n\ninfo exists but is not salient,\nattention is captured by another cue,\nworking memory is overloaded.\n\nMechanisms: selective attention + working memory limits.\n\n\nExample B: Miscommunication in complex tasks\n\nspeaker assumes shared context,\nlistener lacks the same representation,\nmisunderstanding persists because feedback is delayed or weak.\n\nMechanisms: different mental models + reconstruction + weak error signals."
+  },
+  {
+    "objectID": "psychology/foundations/cognition.html#connections-to-other-sections",
+    "href": "psychology/foundations/cognition.html#connections-to-other-sections",
+    "title": "Cognition",
+    "section": "Connections to other sections",
+    "text": "Connections to other sections\n\nDecision-making\nMany “preference anomalies” are actually representation and attention effects.\n\n\nLearning\nCues and memory determine what gets reinforced and what generalizes.\n\n\nSocial cognition\nMentalizing depth is constrained by working memory; stereotypes are low-cost representations.\n\n\nCriminology\nWitness memory, stress in high-stakes encounters, and selective attention to threat cues are cognition-sensitive.\n\n\nOverlaps (later)\nIn strategic environments, cognition limits: - depth of “I think you think…” - ability to compute contingencies, - ability to detect deception."
+  },
+  {
+    "objectID": "psychology/foundations/self-control.html",
+    "href": "psychology/foundations/self-control.html",
+    "title": "Self-control",
+    "section": "",
+    "text": "Self-control is the capacity to align behavior with goals when there is conflict: - short-run temptation vs long-run plan, - impulse vs norm, - habit vs deliberate intention.\nA useful stance: &gt; Self-control is not just “willpower.” It is a system involving attention, emotion regulation, habits, and environment design."
+  },
+  {
+    "objectID": "psychology/foundations/self-control.html#the-conflict-view",
+    "href": "psychology/foundations/self-control.html#the-conflict-view",
+    "title": "Self-control",
+    "section": "The conflict view",
+    "text": "The conflict view\nMany self-control failures can be framed as:\n\nCompeting motivations at different time scales\n(comfort now vs outcomes later)\nState-dependence\n(what you want when calm differs from what you want when stressed)\nCue-triggered habits\n(automatic behavior initiated before deliberation starts)"
+  },
+  {
+    "objectID": "psychology/foundations/self-control.html#mechanism-1-executive-function-the-control-machinery",
+    "href": "psychology/foundations/self-control.html#mechanism-1-executive-function-the-control-machinery",
+    "title": "Self-control",
+    "section": "Mechanism 1: Executive function (the control machinery)",
+    "text": "Mechanism 1: Executive function (the control machinery)\nExecutive function supports: - sustaining attention, - inhibiting responses, - switching tasks, - holding goals in working memory.\nIt is limited and sensitive to: - fatigue, - stress, - sleep loss, - cognitive load.\nPrediction pattern: when executive load rises, people rely more on defaults and habits."
+  },
+  {
+    "objectID": "psychology/foundations/self-control.html#mechanism-2-temptation-is-often-cue-driven",
+    "href": "psychology/foundations/self-control.html#mechanism-2-temptation-is-often-cue-driven",
+    "title": "Self-control",
+    "section": "Mechanism 2: Temptation is often cue-driven",
+    "text": "Mechanism 2: Temptation is often cue-driven\nTemptation is not random; it is triggered by cues: - places, - people, - time of day, - emotions, - devices and notifications.\nPrediction pattern: changing cues often outperforms “trying harder.”\nPractical lever: remove cues or introduce friction at the cue stage."
+  },
+  {
+    "objectID": "psychology/foundations/self-control.html#mechanism-3-emotion-regulation",
+    "href": "psychology/foundations/self-control.html#mechanism-3-emotion-regulation",
+    "title": "Self-control",
+    "section": "Mechanism 3: Emotion regulation",
+    "text": "Mechanism 3: Emotion regulation\nMany self-control failures are attempts to regulate feelings: - anxiety → avoidance, - anger → confrontation, - sadness → withdrawal, - shame → concealment, - stress → immediate relief seeking.\nPrediction pattern: improving emotion regulation reduces impulsive choices even without changing incentives."
+  },
+  {
+    "objectID": "psychology/foundations/self-control.html#mechanism-4-habits-the-silent-competitor",
+    "href": "psychology/foundations/self-control.html#mechanism-4-habits-the-silent-competitor",
+    "title": "Self-control",
+    "section": "Mechanism 4: Habits: the silent competitor",
+    "text": "Mechanism 4: Habits: the silent competitor\nHabits are automatic routines learned through reinforcement. They dominate under stress and time pressure.\nPrediction pattern: people can endorse a plan but still act habitually when triggered.\nA useful distinction: - Goal intention: “I want to do X.” - Implementation intention: “If situation S happens, I will do X.”\nImplementation intentions work by linking cues to actions."
+  },
+  {
+    "objectID": "psychology/foundations/self-control.html#mechanism-5-present-focus-time-inconsistency",
+    "href": "psychology/foundations/self-control.html#mechanism-5-present-focus-time-inconsistency",
+    "title": "Self-control",
+    "section": "Mechanism 5: Present focus (time inconsistency)",
+    "text": "Mechanism 5: Present focus (time inconsistency)\nPeople often treat immediate outcomes as disproportionately important. This creates: - procrastination, - under-saving, - relapse dynamics.\nPrediction pattern: commitment devices increase follow-through."
+  },
+  {
+    "objectID": "psychology/foundations/self-control.html#commitment-devices-designing-around-the-problem",
+    "href": "psychology/foundations/self-control.html#commitment-devices-designing-around-the-problem",
+    "title": "Self-control",
+    "section": "Commitment devices: designing around the problem",
+    "text": "Commitment devices: designing around the problem\nCommitment is any intervention that changes future choices by altering: - access (removing temptation), - incentives (deposits, penalties), - observability (public deadlines), - defaults (pre-scheduled actions), - identity (role and norm salience).\nPrediction pattern: low-cost commitments can have large effects if they operate at the cue stage."
+  },
+  {
+    "objectID": "psychology/foundations/self-control.html#a-practical-self-control-toolkit-mechanism-lever",
+    "href": "psychology/foundations/self-control.html#a-practical-self-control-toolkit-mechanism-lever",
+    "title": "Self-control",
+    "section": "A practical self-control toolkit (mechanism → lever)",
+    "text": "A practical self-control toolkit (mechanism → lever)\n\nIf the bottleneck is attention\n\nremove distractions, reduce choice overload,\nuse checklists and single-task blocks.\n\n\n\nIf the bottleneck is cues/habit\n\nchange environment, remove triggers,\nsubstitute routine rather than “stop cold.”\n\n\n\nIf the bottleneck is emotion\n\nreappraisal, naming emotions, time-outs,\nsocial support and safe disclosure.\n\n\n\nIf the bottleneck is time inconsistency\n\npre-commit (deadlines, deposits),\nautomate good actions (savings, scheduling)."
+  },
+  {
+    "objectID": "psychology/foundations/self-control.html#a-reusable-explanation-template",
+    "href": "psychology/foundations/self-control.html#a-reusable-explanation-template",
+    "title": "Self-control",
+    "section": "A reusable explanation template",
+    "text": "A reusable explanation template\nWhen explaining self-control outcomes, specify:\n\nGoal conflict: what is short-run vs long-run?\n\nCues: what triggers the impulsive routine?\n\nState: stress, fatigue, sleep, social pressure?\n\nControl capacity: executive load and attention?\n\nHabit strength: how reinforced is the routine?\n\nIntervention: change cues, add friction, add commitment, add support."
+  },
+  {
+    "objectID": "psychology/foundations/self-control.html#canonical-examples-stubs-you-can-expand",
+    "href": "psychology/foundations/self-control.html#canonical-examples-stubs-you-can-expand",
+    "title": "Self-control",
+    "section": "Canonical examples (stubs you can expand)",
+    "text": "Canonical examples (stubs you can expand)\n\nExample A: Procrastination\n\nlong-run goal is valued,\ntask is aversive now,\navoidance yields immediate relief.\n\nMechanisms: present focus + negative reinforcement (relief) + attention avoidance.\n\n\nExample B: Relapse dynamics\n\nstress increases,\ncue exposure returns,\nhabit triggers before deliberation,\nguilt/shame may worsen avoidance.\n\nMechanisms: cue-triggered habit + emotion regulation failure + shame loop."
+  },
+  {
+    "objectID": "psychology/foundations/self-control.html#connections",
+    "href": "psychology/foundations/self-control.html#connections",
+    "title": "Self-control",
     "section": "Connections",
-    "text": "Connections\n\nCognition: this is the “detailed mechanics” layer.\nDecision-making: salience and retrieval shift perceived probabilities and values.\nLearning: encoding/retrieval determine what gets reinforced and generalized.\nSleep & stress: strongly modulate attention and memory.\nMethods: measurement of memory and attention is sensitive to task design and demand effects."
+    "text": "Connections\n\nCognition: self-control depends on working memory and attention.\nLearning: habits form through reinforcement; change requires new learning.\nEmotion & motivation: many failures are regulation attempts.\nDecision-making: time preferences and present focus.\nCriminology: impulsivity under hot states, deterrence sensitivity, and situational triggers."
   },
   {
     "objectID": "psychology/index.html",
@@ -2499,228 +2800,284 @@
     "text": "Links\n\nFoundations: cognition (attention/memory), emotion & motivation, social cognition\nTopics: norms & groups, biases\nOverlaps: strategic interaction (credibility), institutions (legitimacy), criminology (reporting/cooperation)"
   },
   {
-    "objectID": "psychology/foundations/self-control.html",
-    "href": "psychology/foundations/self-control.html",
-    "title": "Self-control",
+    "objectID": "psychology/foundations/biopsychology.html",
+    "href": "psychology/foundations/biopsychology.html",
+    "title": "Biopsychology",
     "section": "",
-    "text": "Self-control is the capacity to align behavior with goals when there is conflict: - short-run temptation vs long-run plan, - impulse vs norm, - habit vs deliberate intention.\nA useful stance: &gt; Self-control is not just “willpower.” It is a system involving attention, emotion regulation, habits, and environment design."
+    "text": "Biopsychology (biological psychology / psychobiology) studies how brain, body, and behavior connect. It does not replace psychological explanation; it adds a second layer:\nA good biopsych explanation links: &gt; mechanism in the mind ↔︎ mechanism in the body ↔︎ observable behavior\nThis page is a non-technical foundation: enough to read university-level material without getting lost."
   },
   {
-    "objectID": "psychology/foundations/self-control.html#the-conflict-view",
-    "href": "psychology/foundations/self-control.html#the-conflict-view",
-    "title": "Self-control",
-    "section": "The conflict view",
-    "text": "The conflict view\nMany self-control failures can be framed as:\n\nCompeting motivations at different time scales\n(comfort now vs outcomes later)\nState-dependence\n(what you want when calm differs from what you want when stressed)\nCue-triggered habits\n(automatic behavior initiated before deliberation starts)"
+    "objectID": "psychology/foundations/biopsychology.html#the-core-idea-levels-of-explanation",
+    "href": "psychology/foundations/biopsychology.html#the-core-idea-levels-of-explanation",
+    "title": "Biopsychology",
+    "section": "The core idea: levels of explanation",
+    "text": "The core idea: levels of explanation\nYou can often explain the same behavior at multiple levels:\n\nComputational / functional: what problem is being solved? (e.g., detect threat)\nAlgorithmic: what process implements it? (attention narrowing, habit)\nImplementation: what biological system supports it? (circuits, hormones)\n\nNone of these levels alone is “the real one.” They are complementary."
   },
   {
-    "objectID": "psychology/foundations/self-control.html#mechanism-1-executive-function-the-control-machinery",
-    "href": "psychology/foundations/self-control.html#mechanism-1-executive-function-the-control-machinery",
-    "title": "Self-control",
-    "section": "Mechanism 1: Executive function (the control machinery)",
-    "text": "Mechanism 1: Executive function (the control machinery)\nExecutive function supports: - sustaining attention, - inhibiting responses, - switching tasks, - holding goals in working memory.\nIt is limited and sensitive to: - fatigue, - stress, - sleep loss, - cognitive load.\nPrediction pattern: when executive load rises, people rely more on defaults and habits."
+    "objectID": "psychology/foundations/biopsychology.html#neurons-signals-and-plasticity-what-you-minimally-need",
+    "href": "psychology/foundations/biopsychology.html#neurons-signals-and-plasticity-what-you-minimally-need",
+    "title": "Biopsychology",
+    "section": "1) Neurons, signals, and plasticity (what you minimally need)",
+    "text": "1) Neurons, signals, and plasticity (what you minimally need)\n\nNeurons and communication (high-level)\nNeurons communicate via: - electrical signals (spikes), - chemical signaling at synapses.\nThe important part for psychology: - which signals get strengthened with experience? (learning) - which systems modulate alertness, reward, and threat? (motivation/emotion)\n\n\nPlasticity: how experience changes biology\nLearning corresponds to changes in: - synaptic strength, - network activation patterns, - cue associations.\nPrediction pattern: repeated, consistent feedback strengthens circuits supporting the repeated behavior (habit formation)."
   },
   {
-    "objectID": "psychology/foundations/self-control.html#mechanism-2-temptation-is-often-cue-driven",
-    "href": "psychology/foundations/self-control.html#mechanism-2-temptation-is-often-cue-driven",
-    "title": "Self-control",
-    "section": "Mechanism 2: Temptation is often cue-driven",
-    "text": "Mechanism 2: Temptation is often cue-driven\nTemptation is not random; it is triggered by cues: - places, - people, - time of day, - emotions, - devices and notifications.\nPrediction pattern: changing cues often outperforms “trying harder.”\nPractical lever: remove cues or introduce friction at the cue stage."
+    "objectID": "psychology/foundations/biopsychology.html#brain-organization-a-practical-map",
+    "href": "psychology/foundations/biopsychology.html#brain-organization-a-practical-map",
+    "title": "Biopsychology",
+    "section": "2) Brain organization (a practical map)",
+    "text": "2) Brain organization (a practical map)\nYou do not need full neuroanatomy, but you need a working map:\n\nCortex (outer layer): perception, attention, planning, language, flexible reasoning\n\nLimbic-related systems (broad umbrella): emotion, motivation, memory tagging\n\nBasal ganglia: action selection, habit, reinforcement learning\n\nHippocampal system: memory for episodes and context; building “maps” of situations\n\nAmygdala-related threat processing: rapid relevance/threat tagging (not a “fear center” only)\n\nBrainstem/arousal systems: wakefulness, arousal, stress responses\n\nPitfall: “one region = one function.” Most behaviors are distributed network outcomes."
   },
   {
-    "objectID": "psychology/foundations/self-control.html#mechanism-3-emotion-regulation",
-    "href": "psychology/foundations/self-control.html#mechanism-3-emotion-regulation",
-    "title": "Self-control",
-    "section": "Mechanism 3: Emotion regulation",
-    "text": "Mechanism 3: Emotion regulation\nMany self-control failures are attempts to regulate feelings: - anxiety → avoidance, - anger → confrontation, - sadness → withdrawal, - shame → concealment, - stress → immediate relief seeking.\nPrediction pattern: improving emotion regulation reduces impulsive choices even without changing incentives."
+    "objectID": "psychology/foundations/biopsychology.html#neurotransmitters-conceptual-not-memorization",
+    "href": "psychology/foundations/biopsychology.html#neurotransmitters-conceptual-not-memorization",
+    "title": "Biopsychology",
+    "section": "3) Neurotransmitters (conceptual, not memorization)",
+    "text": "3) Neurotransmitters (conceptual, not memorization)\nNeurotransmitters are chemical messengers that shape signaling patterns. For behavioral interpretation, you mostly need functional roles:\n\nDopamine (reward prediction and learning signals)\nOften linked to: - reward learning, - motivation/approach, - updating expected value.\nPrediction patterns - behaviors reinforced by unpredictable rewards become persistent (ties to compulsion/addiction loops). - dopamine-linked learning signals are sensitive to surprise (prediction error).\nPitfall: “dopamine = pleasure.” It’s better to think “dopamine supports learning and pursuit.”\n\n\nSerotonin (broad regulation; caution)\nOften discussed in relation to: - mood regulation, - patience/impulsivity (context-dependent), - inhibition and flexibility.\nNote: serotonin is complex; avoid one-line explanations.\n\n\nNorepinephrine (alertness and attention allocation)\nOften linked to: - arousal, - vigilance, - shifting attention under uncertainty.\nPrediction pattern: under arousal, attention becomes more selective and action becomes faster but less flexible.\n\n\nGABA / glutamate (inhibition/excitation balance)\nThese are foundational excitatory/inhibitory systems. In notes, you can treat them as: - “stability and control of neural activity.”"
   },
   {
-    "objectID": "psychology/foundations/self-control.html#mechanism-4-habits-the-silent-competitor",
-    "href": "psychology/foundations/self-control.html#mechanism-4-habits-the-silent-competitor",
-    "title": "Self-control",
-    "section": "Mechanism 4: Habits: the silent competitor",
-    "text": "Mechanism 4: Habits: the silent competitor\nHabits are automatic routines learned through reinforcement. They dominate under stress and time pressure.\nPrediction pattern: people can endorse a plan but still act habitually when triggered.\nA useful distinction: - Goal intention: “I want to do X.” - Implementation intention: “If situation S happens, I will do X.”\nImplementation intentions work by linking cues to actions."
+    "objectID": "psychology/foundations/biopsychology.html#stress-physiology-hpa-axis-lens-high-level",
+    "href": "psychology/foundations/biopsychology.html#stress-physiology-hpa-axis-lens-high-level",
+    "title": "Biopsychology",
+    "section": "4) Stress physiology (HPA axis lens, high-level)",
+    "text": "4) Stress physiology (HPA axis lens, high-level)\nStress is not only “mental.” It is also physiological regulation.\nA common high-level pathway: - stressor → threat appraisal → arousal + hormonal response → attention narrowing + habit dominance\nKey ideas: - Acute stress can be adaptive (mobilize action). - Chronic stress can degrade sleep, control, and mood regulation.\nPrediction patterns - acute threat increases vigilance and reduces deep reasoning (links to self-control and social cognition limits). - chronic stress increases short-horizon choices and avoidance loops."
   },
   {
-    "objectID": "psychology/foundations/self-control.html#mechanism-5-present-focus-time-inconsistency",
-    "href": "psychology/foundations/self-control.html#mechanism-5-present-focus-time-inconsistency",
-    "title": "Self-control",
-    "section": "Mechanism 5: Present focus (time inconsistency)",
-    "text": "Mechanism 5: Present focus (time inconsistency)\nPeople often treat immediate outcomes as disproportionately important. This creates: - procrastination, - under-saving, - relapse dynamics.\nPrediction pattern: commitment devices increase follow-through."
+    "objectID": "psychology/foundations/biopsychology.html#emotion-and-the-body-arousal-as-a-system-parameter",
+    "href": "psychology/foundations/biopsychology.html#emotion-and-the-body-arousal-as-a-system-parameter",
+    "title": "Biopsychology",
+    "section": "5) Emotion and the body: arousal as a system parameter",
+    "text": "5) Emotion and the body: arousal as a system parameter\nArousal changes: - reaction speed, - attention breadth, - memory tagging, - aggression/avoidance readiness.\nPrediction pattern: high arousal makes behavior more “scripted,” more cue-driven, and less reflective.\nThis is why environment design (safety, predictability) matters."
   },
   {
-    "objectID": "psychology/foundations/self-control.html#commitment-devices-designing-around-the-problem",
-    "href": "psychology/foundations/self-control.html#commitment-devices-designing-around-the-problem",
-    "title": "Self-control",
-    "section": "Commitment devices: designing around the problem",
-    "text": "Commitment devices: designing around the problem\nCommitment is any intervention that changes future choices by altering: - access (removing temptation), - incentives (deposits, penalties), - observability (public deadlines), - defaults (pre-scheduled actions), - identity (role and norm salience).\nPrediction pattern: low-cost commitments can have large effects if they operate at the cue stage."
+    "objectID": "psychology/foundations/biopsychology.html#sleep-as-biological-maintenance-and-cognitive-control-support",
+    "href": "psychology/foundations/biopsychology.html#sleep-as-biological-maintenance-and-cognitive-control-support",
+    "title": "Biopsychology",
+    "section": "6) Sleep as biological maintenance and cognitive control support",
+    "text": "6) Sleep as biological maintenance and cognitive control support\nSleep supports: - memory consolidation, - emotion regulation, - executive control stability.\nPrediction pattern: sleep loss increases impulsivity, threat sensitivity, and memory distortions (ties to your Sleep & stress page)."
   },
   {
-    "objectID": "psychology/foundations/self-control.html#a-practical-self-control-toolkit-mechanism-lever",
-    "href": "psychology/foundations/self-control.html#a-practical-self-control-toolkit-mechanism-lever",
-    "title": "Self-control",
-    "section": "A practical self-control toolkit (mechanism → lever)",
-    "text": "A practical self-control toolkit (mechanism → lever)\n\nIf the bottleneck is attention\n\nremove distractions, reduce choice overload,\nuse checklists and single-task blocks.\n\n\n\nIf the bottleneck is cues/habit\n\nchange environment, remove triggers,\nsubstitute routine rather than “stop cold.”\n\n\n\nIf the bottleneck is emotion\n\nreappraisal, naming emotions, time-outs,\nsocial support and safe disclosure.\n\n\n\nIf the bottleneck is time inconsistency\n\npre-commit (deadlines, deposits),\nautomate good actions (savings, scheduling)."
+    "objectID": "psychology/foundations/biopsychology.html#biological-constraints-in-social-behavior",
+    "href": "psychology/foundations/biopsychology.html#biological-constraints-in-social-behavior",
+    "title": "Biopsychology",
+    "section": "7) Biological constraints in social behavior",
+    "text": "7) Biological constraints in social behavior\nSocial interaction is not disembodied. Social threat activates: - stress systems, - vigilance, - shame/anger pathways.\nPrediction patterns - humiliation and status threat can produce outsized retaliation or withdrawal. - legitimacy and respect reduce threat activation and increase cooperation (bridges to institutions/criminology overlap pages)."
   },
   {
-    "objectID": "psychology/foundations/self-control.html#a-reusable-explanation-template",
-    "href": "psychology/foundations/self-control.html#a-reusable-explanation-template",
-    "title": "Self-control",
-    "section": "A reusable explanation template",
-    "text": "A reusable explanation template\nWhen explaining self-control outcomes, specify:\n\nGoal conflict: what is short-run vs long-run?\n\nCues: what triggers the impulsive routine?\n\nState: stress, fatigue, sleep, social pressure?\n\nControl capacity: executive load and attention?\n\nHabit strength: how reinforced is the routine?\n\nIntervention: change cues, add friction, add commitment, add support."
+    "objectID": "psychology/foundations/biopsychology.html#neuro-methods-conceptual-preview-details-can-be-a-separate-page",
+    "href": "psychology/foundations/biopsychology.html#neuro-methods-conceptual-preview-details-can-be-a-separate-page",
+    "title": "Biopsychology",
+    "section": "8) Neuro methods (conceptual preview; details can be a separate page)",
+    "text": "8) Neuro methods (conceptual preview; details can be a separate page)\nDifferent tools answer different questions:\n\nLesions / patient studies: what breaks when a system is damaged? (strong constraints, low control)\nEEG/ERP: timing of processes (fast temporal resolution)\nfMRI: where activity correlates with tasks (good spatial resolution; correlational)\nTMS: perturbation to test causal roles (limited scope)\nPsychophysiology: arousal and stress markers (not emotion labels)\n\nPitfall: treating neuro images as “proof of causality.” Most neuro measures are correlational unless combined with strong designs."
   },
   {
-    "objectID": "psychology/foundations/self-control.html#canonical-examples-stubs-you-can-expand",
-    "href": "psychology/foundations/self-control.html#canonical-examples-stubs-you-can-expand",
-    "title": "Self-control",
+    "objectID": "psychology/foundations/biopsychology.html#a-reusable-biopsych-explanation-template",
+    "href": "psychology/foundations/biopsychology.html#a-reusable-biopsych-explanation-template",
+    "title": "Biopsychology",
+    "section": "A reusable biopsych explanation template",
+    "text": "A reusable biopsych explanation template\nWhen adding biological content, write:\n\nBehavior: what is the phenomenon?\n\nPsych mechanism: attention? habit? appraisal? identity?\n\nBio support: what system plausibly implements/modulates it (arousal, reward learning, stress)?\n\nPrediction: what changes under sleep loss, stress, intoxication, or pharmacological modulation?\n\nBoundary: what this does not explain alone (avoid one-region stories)"
+  },
+  {
+    "objectID": "psychology/foundations/biopsychology.html#canonical-examples-stubs-you-can-expand",
+    "href": "psychology/foundations/biopsychology.html#canonical-examples-stubs-you-can-expand",
+    "title": "Biopsychology",
     "section": "Canonical examples (stubs you can expand)",
-    "text": "Canonical examples (stubs you can expand)\n\nExample A: Procrastination\n\nlong-run goal is valued,\ntask is aversive now,\navoidance yields immediate relief.\n\nMechanisms: present focus + negative reinforcement (relief) + attention avoidance.\n\n\nExample B: Relapse dynamics\n\nstress increases,\ncue exposure returns,\nhabit triggers before deliberation,\nguilt/shame may worsen avoidance.\n\nMechanisms: cue-triggered habit + emotion regulation failure + shame loop."
+    "text": "Canonical examples (stubs you can expand)\n\nExample A: Habit under stress\n\nstress increases arousal,\nexecutive control decreases,\nhabitual routines dominate.\n\nPsych: self-control + cue-triggered habit\nBio: arousal/stress systems modulate control networks\n\n\nExample B: Addiction loop reinforcement\n\ncue triggers craving and attention capture,\naction produces reward/relief,\nlearning strengthens cue-action mapping.\n\nPsych: reinforcement + negative reinforcement\nBio: reward-learning signals + stress relief mechanisms"
   },
   {
-    "objectID": "psychology/foundations/self-control.html#connections",
-    "href": "psychology/foundations/self-control.html#connections",
-    "title": "Self-control",
+    "objectID": "psychology/foundations/biopsychology.html#connections",
+    "href": "psychology/foundations/biopsychology.html#connections",
+    "title": "Biopsychology",
     "section": "Connections",
-    "text": "Connections\n\nCognition: self-control depends on working memory and attention.\nLearning: habits form through reinforcement; change requires new learning.\nEmotion & motivation: many failures are regulation attempts.\nDecision-making: time preferences and present focus.\nCriminology: impulsivity under hot states, deterrence sensitivity, and situational triggers."
+    "text": "Connections\n\nFoundations: cognition, attention & memory, learning, emotion & motivation, sleep & stress, self-control\nTopics: addiction & compulsion, mental health\nOverlaps: criminology (hot states, threat), institutions (procedural justice reduces threat), policy design (mechanism-matched interventions)"
   },
   {
-    "objectID": "psychology/foundations/cognition.html",
-    "href": "psychology/foundations/cognition.html",
-    "title": "Cognition",
+    "objectID": "psychology/foundations/attention-memory.html",
+    "href": "psychology/foundations/attention-memory.html",
+    "title": "Attention & memory",
     "section": "",
-    "text": "Cognition is how people take in information, represent it mentally, and use it to guide action. It includes perception, attention, memory, and the limited “workspace” that supports reasoning.\nA useful theme for the whole site: &gt; Many “biases” are not mysterious preferences — they are consequences of cognitive constraints."
+    "text": "This page zooms in on two bottlenecks that explain a huge amount of behavior: - attention (what gets selected for processing), - memory (what gets stored and what gets retrieved later).\nA recurring theme: &gt; People often fail not because they “prefer” something, but because they never processed the relevant information, or can’t retrieve it when needed."
   },
   {
-    "objectID": "psychology/foundations/cognition.html#the-pipeline-view",
-    "href": "psychology/foundations/cognition.html#the-pipeline-view",
-    "title": "Cognition",
-    "section": "The pipeline view",
-    "text": "The pipeline view\nYou can often explain behavior by locating where things break in this pipeline:\n\nPerception (what is detected)\nAttention (what is selected)\nEncoding (what gets stored)\nMemory & retrieval (what comes back to mind)\nWorking memory & reasoning (what can be manipulated)\nDecision output (judgment and choice)\n\nDifferent tasks fail at different stages."
+    "objectID": "psychology/foundations/attention-memory.html#attention-selection-under-scarcity",
+    "href": "psychology/foundations/attention-memory.html#attention-selection-under-scarcity",
+    "title": "Attention & memory",
+    "section": "Attention: selection under scarcity",
+    "text": "Attention: selection under scarcity\nAttention is limited. It is pulled by: - goal relevance (what you’re trying to do), - novelty (what’s new), - threat (what might harm you), - emotion (what feels intense), - social cues (faces, status signals).\n\nSelective attention\nPeople focus on a subset of information and ignore the rest.\nPrediction patterns - Making a cue visually prominent changes choices even if nothing “objective” changes. - Under time pressure, attention narrows and “second-order” considerations drop out. - When information is spread across screens/pages, integration fails.\nDesign lever: place the key cue at the point of action; reduce competing salience.\n\n\nInattentional blindness (practical takeaway)\nPeople can miss obvious signals when attention is elsewhere.\nPrediction pattern: adding more information can worsen outcomes if it increases clutter.\n\n\nDivided attention\nMultitasking reduces performance on tasks needing working memory.\nPrediction pattern: errors rise sharply when tasks require integration across steps."
   },
   {
-    "objectID": "psychology/foundations/cognition.html#perception-we-dont-experience-the-world-directly",
-    "href": "psychology/foundations/cognition.html#perception-we-dont-experience-the-world-directly",
-    "title": "Cognition",
-    "section": "Perception: we don’t experience the world directly",
-    "text": "Perception: we don’t experience the world directly\nPerception is an inference process: the mind reconstructs reality from partial input.\nKey implications: - people can miss obvious signals when they are not attended to, - ambiguous stimuli are interpreted using context and expectations, - repeated exposure changes what feels “normal.”\nPrediction pattern: the same event can be perceived differently depending on prior beliefs, stress, identity, and what is salient."
+    "objectID": "psychology/foundations/attention-memory.html#memory-storage-and-retrieval-are-both-active-processes",
+    "href": "psychology/foundations/attention-memory.html#memory-storage-and-retrieval-are-both-active-processes",
+    "title": "Attention & memory",
+    "section": "Memory: storage and retrieval are both active processes",
+    "text": "Memory: storage and retrieval are both active processes\nMemory is not a recording device. It is: - selective in encoding, - reconstructive in retrieval, - shaped by emotion and meaning.\n\nEncoding: what gets stored\nEncoding is stronger when: - attention is focused, - information is meaningful or structured, - there is repetition, - emotional salience tags it.\nPrediction pattern: “I read it but forgot” often means it was never encoded well (attention/structure issue).\n\n\nRetrieval: what comes to mind drives judgment\nRetrieval is cue-dependent. What is easiest to retrieve feels: - more common, - more important, - more true.\nThis underlies availability-driven judgments.\nPrediction pattern: recent or vivid events disproportionately shape perceived risk.\n\n\nReconstruction and distortion\nWhen recalling, people fill gaps with: - schemas (“what usually happens”), - identity-consistent narratives, - emotion-consistent interpretations.\nPrediction pattern: confidence in memory can be high even when details are wrong."
   },
   {
-    "objectID": "psychology/foundations/cognition.html#attention-the-scarce-resource",
-    "href": "psychology/foundations/cognition.html#attention-the-scarce-resource",
-    "title": "Cognition",
-    "section": "Attention: the scarce resource",
-    "text": "Attention: the scarce resource\nAttention is limited; it is allocated based on: - novelty, - threat, - goal relevance, - emotional salience, - social relevance (faces, status cues).\n\nSelective attention\nPeople focus on some cues and ignore others.\nPrediction pattern: changing what is salient (layout, framing, order, visual prominence) changes judgment and behavior even when information content is unchanged.\n\n\nDivided attention and multitasking\nMultitasking typically reduces performance and increases errors, especially for tasks requiring working memory.\nPrediction pattern: under distraction, people rely more on defaults, habits, and simple heuristics."
+    "objectID": "psychology/foundations/attention-memory.html#working-memory-the-small-scratchpad-behind-reasoning",
+    "href": "psychology/foundations/attention-memory.html#working-memory-the-small-scratchpad-behind-reasoning",
+    "title": "Attention & memory",
+    "section": "Working memory: the small scratchpad behind reasoning",
+    "text": "Working memory: the small scratchpad behind reasoning\nWorking memory supports: - holding goals active, - comparing options, - multi-step reasoning (“if A then B then C”).\nIt is small and fragile.\nPrediction patterns - As reasoning steps increase, accuracy drops quickly. - Stress, sleep loss, and threat reduce working memory capacity. - People switch to simpler heuristics when working memory is overloaded."
   },
   {
-    "objectID": "psychology/foundations/cognition.html#memory-storage-is-not-recording",
-    "href": "psychology/foundations/cognition.html#memory-storage-is-not-recording",
-    "title": "Cognition",
-    "section": "Memory: storage is not recording",
-    "text": "Memory: storage is not recording\nMemory is reconstructive. It is shaped by: - emotion (strong tagging), - repetition (availability), - meaning (schema-consistency), - recency and vividness.\n\nWorking memory vs long-term memory\n\nWorking memory: small, active “scratch space.”\nLong-term memory: large but retrieval is cue-dependent.\n\nPrediction pattern: tasks requiring multiple steps of reasoning fail when working memory load increases.\n\n\nRetrieval and availability\nWhat comes to mind easily feels more likely or more important.\nPrediction pattern: vivid, recent, or emotionally salient examples dominate judgment of frequency and risk."
+    "objectID": "psychology/foundations/attention-memory.html#the-attention-memory-choice-chain",
+    "href": "psychology/foundations/attention-memory.html#the-attention-memory-choice-chain",
+    "title": "Attention & memory",
+    "section": "The “attention → memory → choice” chain",
+    "text": "The “attention → memory → choice” chain\nMany interventions work because they modify this chain: - attention determines what gets encoded, - memory determines what gets retrieved, - retrieved content shapes judgment and choice.\nExample pattern - Reminder cues improve behavior not by changing preferences, but by changing retrieval."
   },
   {
-    "objectID": "psychology/foundations/cognition.html#mental-representations-the-hidden-structure-behind-choices",
-    "href": "psychology/foundations/cognition.html#mental-representations-the-hidden-structure-behind-choices",
-    "title": "Cognition",
-    "section": "Mental representations: the hidden structure behind choices",
-    "text": "Mental representations: the hidden structure behind choices\nPeople do not store full details; they store structured representations: - categories (“type of person” / “type of situation”), - causal stories (“X causes Y”), - scripts (“what happens next here”).\nRepresentations are useful but also create systematic errors: - you may ignore out-of-category evidence, - you may force events into familiar scripts.\nPrediction pattern: changing category labels changes interpretation, even with identical behavior."
+    "objectID": "psychology/foundations/attention-memory.html#a-reusable-analysis-template",
+    "href": "psychology/foundations/attention-memory.html#a-reusable-analysis-template",
+    "title": "Attention & memory",
+    "section": "A reusable analysis template",
+    "text": "A reusable analysis template\nWhen someone “should have known better,” ask:\n\nAttention: did they notice the relevant cue at the moment?\n\nEncoding: was it stored in memory (repetition/meaning)?\n\nRetrieval: was the right memory available (correct cue)?\n\nWorking memory: was the task too multi-step?\n\nPrediction: what happens if you reduce clutter, add reminders, or simplify steps?"
   },
   {
-    "objectID": "psychology/foundations/cognition.html#reasoning-computation-under-constraints",
-    "href": "psychology/foundations/cognition.html#reasoning-computation-under-constraints",
-    "title": "Cognition",
-    "section": "Reasoning: computation under constraints",
-    "text": "Reasoning: computation under constraints\nReasoning is costly and often: - stops early (satisficing), - uses shortcuts (heuristics), - depends on attention and working memory.\nA practical way to write this: - depth (how many steps you can carry), - breadth (how many possibilities you can compare), - precision (how error-free your steps are).\nStress, time pressure, and fatigue reduce all three."
+    "objectID": "psychology/foundations/attention-memory.html#connections",
+    "href": "psychology/foundations/attention-memory.html#connections",
+    "title": "Attention & memory",
+    "section": "Connections",
+    "text": "Connections\n\nCognition: this is the “detailed mechanics” layer.\nDecision-making: salience and retrieval shift perceived probabilities and values.\nLearning: encoding/retrieval determine what gets reinforced and generalized.\nSleep & stress: strongly modulate attention and memory.\nMethods: measurement of memory and attention is sensitive to task design and demand effects."
   },
   {
-    "objectID": "psychology/foundations/cognition.html#errors-that-look-like-bias-but-are-cognitive-mechanics",
-    "href": "psychology/foundations/cognition.html#errors-that-look-like-bias-but-are-cognitive-mechanics",
-    "title": "Cognition",
-    "section": "Errors that look like “bias” but are cognitive mechanics",
-    "text": "Errors that look like “bias” but are cognitive mechanics\nWhen people appear biased, check whether it could be explained by: - limited attention (missed information), - limited working memory (can’t integrate many cues), - cue-dependent retrieval (what comes to mind drives judgment), - schema-driven interpretation (story beats statistics), - default reliance (choice overload).\nRule of thumb: if an intervention that changes salience, load, or feedback changes behavior, the mechanism is likely cognitive."
-  },
-  {
-    "objectID": "psychology/foundations/cognition.html#a-reusable-explanation-template",
-    "href": "psychology/foundations/cognition.html#a-reusable-explanation-template",
-    "title": "Cognition",
-    "section": "A reusable explanation template",
-    "text": "A reusable explanation template\nTo explain a cognition-driven pattern, specify:\n\nTask: what must the person compute/remember?\nBottleneck: perception, attention, memory, or working memory?\nCue structure: what cues are salient vs hidden?\nRepresentation: what categories/scripts are activated?\nPrediction: what changes if you reduce load or change salience?"
-  },
-  {
-    "objectID": "psychology/foundations/cognition.html#canonical-examples-stubs-you-can-expand",
-    "href": "psychology/foundations/cognition.html#canonical-examples-stubs-you-can-expand",
-    "title": "Cognition",
-    "section": "Canonical examples (stubs you can expand)",
-    "text": "Canonical examples (stubs you can expand)\n\nExample A: “They had the information but didn’t use it”\n\ninfo exists but is not salient,\nattention is captured by another cue,\nworking memory is overloaded.\n\nMechanisms: selective attention + working memory limits.\n\n\nExample B: Miscommunication in complex tasks\n\nspeaker assumes shared context,\nlistener lacks the same representation,\nmisunderstanding persists because feedback is delayed or weak.\n\nMechanisms: different mental models + reconstruction + weak error signals."
-  },
-  {
-    "objectID": "psychology/foundations/cognition.html#connections-to-other-sections",
-    "href": "psychology/foundations/cognition.html#connections-to-other-sections",
-    "title": "Cognition",
-    "section": "Connections to other sections",
-    "text": "Connections to other sections\n\nDecision-making\nMany “preference anomalies” are actually representation and attention effects.\n\n\nLearning\nCues and memory determine what gets reinforced and what generalizes.\n\n\nSocial cognition\nMentalizing depth is constrained by working memory; stereotypes are low-cost representations.\n\n\nCriminology\nWitness memory, stress in high-stakes encounters, and selective attention to threat cues are cognition-sensitive.\n\n\nOverlaps (later)\nIn strategic environments, cognition limits: - depth of “I think you think…” - ability to compute contingencies, - ability to detect deception."
-  },
-  {
-    "objectID": "psychology/foundations/emotion-motivation.html",
-    "href": "psychology/foundations/emotion-motivation.html",
-    "title": "Emotion & motivation",
+    "objectID": "psychology/foundations/decision-making.html",
+    "href": "psychology/foundations/decision-making.html",
+    "title": "Decision-making",
     "section": "",
-    "text": "Emotion and motivation are not “noise.” They are control systems: they prioritize goals, allocate attention, trigger action tendencies, and shape what evidence feels persuasive.\nA clean mental model:"
+    "text": "Decision-making is about how people map uncertainty + preferences + constraints into choices. Psychology differs from “textbook rational choice” mainly by emphasizing: - limited attention, - limited computation, - context effects, - emotion and motivation, - social and moral preferences."
   },
   {
-    "objectID": "psychology/foundations/emotion-motivation.html#core-functions",
-    "href": "psychology/foundations/emotion-motivation.html#core-functions",
-    "title": "Emotion & motivation",
-    "section": "Core functions",
-    "text": "Core functions\n\n1) Value and priority\nEmotions change the felt value of outcomes and the urgency of action. - Fear prioritizes safety and threat monitoring. - Anger prioritizes confrontation and norm enforcement. - Sadness often reduces effort and shifts attention to loss and withdrawal. - Joy can broaden attention and exploration.\nPrediction pattern: same incentives can yield different behavior depending on the affective state because the objective function is effectively reweighted.\n\n\n2) Attention and memory\nEmotion acts like a spotlight: - it makes certain cues more salient, - it increases rehearsal and recall for emotionally tagged events, - it can narrow attention under threat.\nPrediction pattern: after emotionally intense events, people remember “the gist” and key cues, but details can be distorted.\n\n\n3) Action readiness\nEmotions prepare the body and mind for classes of actions: - fear → avoidance / vigilance, - anger → approach / punishment, - shame → concealment / withdrawal, - guilt → repair / apology.\nThis makes emotions especially important in social settings."
+    "objectID": "psychology/foundations/decision-making.html#map-of-this-topic",
+    "href": "psychology/foundations/decision-making.html#map-of-this-topic",
+    "title": "Decision-making",
+    "section": "Map of this topic",
+    "text": "Map of this topic\nUse this page as the overview, and branch out when you want more detail:\n\nRisk & uncertainty → reference points, loss sensitivity, probability weighting\n\nTime & self-control → present focus, temptation, commitment\n\nJudgment & heuristics → shortcuts, cue-use, framing, bounded computation\n\nChoice architecture → defaults, friction, salience, ordering effects\n\nSocial decision-making → fairness, reciprocity, identity, norms (can live here or under Social cognition / Topics)\n\n(Create subpages later if you want; this overview stays stable.)"
   },
   {
-    "objectID": "psychology/foundations/emotion-motivation.html#motivation-what-drives-goal-selection",
-    "href": "psychology/foundations/emotion-motivation.html#motivation-what-drives-goal-selection",
-    "title": "Emotion & motivation",
-    "section": "Motivation: what drives goal selection",
-    "text": "Motivation: what drives goal selection\n\nIntrinsic vs extrinsic motivation\n\nIntrinsic: activity is rewarding itself (curiosity, mastery, meaning).\nExtrinsic: activity is a means to an end (money, grades, approval).\n\nPrediction pattern: heavy extrinsic control can sometimes reduce intrinsic engagement, especially when it shifts the meaning from “I choose” to “I’m being controlled.”\n\n\nApproach vs avoidance\nA useful simplification: - Approach goals: obtain valued outcomes. - Avoidance goals: prevent negative outcomes.\nAvoidance motivation can be extremely powerful and can dominate attention (e.g., threat monitoring).\n\n\nSelf-control and conflict\nSelf-control problems often reflect conflicts between: - short-run drives (comfort, impulses, immediate relief), - long-run goals (health, reputation, mastery).\nPrediction pattern: commitment devices (pre-commitment, removing temptation, public deadlines) increase goal-consistent behavior without “changing personality.”"
+    "objectID": "psychology/foundations/decision-making.html#a-minimal-decomposition",
+    "href": "psychology/foundations/decision-making.html#a-minimal-decomposition",
+    "title": "Decision-making",
+    "section": "A minimal decomposition",
+    "text": "A minimal decomposition\nA decision process can be separated into: 1) Representation: what options do I even see? 2) Evaluation: how do I assign value (including risk and time)? 3) Choice rule: how do I select (maximization vs satisficing vs habits)? 4) Learning: how do I update after feedback?\nA lot of disagreement across theories is really disagreement about (1) and (3)."
   },
   {
-    "objectID": "psychology/foundations/emotion-motivation.html#emotion-as-information-and-when-it-misleads",
-    "href": "psychology/foundations/emotion-motivation.html#emotion-as-information-and-when-it-misleads",
-    "title": "Emotion & motivation",
-    "section": "Emotion as information (and when it misleads)",
-    "text": "Emotion as information (and when it misleads)\nPeople often use feelings as a signal: - “I feel bad about it, so it must be risky.” - “I feel good about it, so it must be right.”\nThis can be adaptive, but it also creates systematic errors when feelings are driven by irrelevant cues.\nPitfall: confusing arousal with evidence."
+    "objectID": "psychology/foundations/decision-making.html#risk-why-people-dont-behave-like-expected-utility",
+    "href": "psychology/foundations/decision-making.html#risk-why-people-dont-behave-like-expected-utility",
+    "title": "Decision-making",
+    "section": "Risk: why people don’t behave like expected utility",
+    "text": "Risk: why people don’t behave like expected utility\nCommon psychological regularities (high-level): - Reference dependence: outcomes feel like gains/losses relative to a reference point. - Loss sensitivity: losses tend to loom larger than equally-sized gains. - Probability weighting: small probabilities may be overweighted; moderate/large may be underweighted. - Framing effects: equivalent descriptions can change choice by changing representation.\nPitfall: calling this “irrational” too early. Often it’s a mismatch between the analyst’s representation and the subject’s."
   },
   {
-    "objectID": "psychology/foundations/emotion-motivation.html#social-emotions-the-bridge-to-norms-institutions-and-conflict",
-    "href": "psychology/foundations/emotion-motivation.html#social-emotions-the-bridge-to-norms-institutions-and-conflict",
-    "title": "Emotion & motivation",
-    "section": "Social emotions: the bridge to norms, institutions, and conflict",
-    "text": "Social emotions: the bridge to norms, institutions, and conflict\nSome emotions are inherently social: they depend on how one is seen, judged, or related to others.\n\nShame vs guilt (useful distinction)\n\nShame: “I am bad” → conceal, withdraw, avoid exposure.\nGuilt: “I did something bad” → repair, apologize, compensate.\n\nPrediction pattern: environments emphasizing public exposure increase shame; environments emphasizing repair increase guilt-driven pro-social behavior.\n\n\nAnger and punishment\nAnger is strongly tied to perceived norm violation and unfairness. It supports: - deterrence via credible retaliation, - norm enforcement in groups, - escalation in conflicts when misattributions occur.\nPrediction pattern: increasing perceived intentionality of harm increases anger and punitive choices.\n\n\nEmpathy and compassion\nEmpathy can increase helping, but also: - be biased toward identifiable individuals, - be stronger for in-group members, - lead to burnout without boundaries.\nPrediction pattern: abstract statistics move behavior less than vivid individual stories, even with identical expected harm."
+    "objectID": "psychology/foundations/decision-making.html#time-present-bias-and-self-control",
+    "href": "psychology/foundations/decision-making.html#time-present-bias-and-self-control",
+    "title": "Decision-making",
+    "section": "Time: present bias and self-control",
+    "text": "Time: present bias and self-control\nWhen decisions involve time (study now vs game now; save vs spend): - People often behave as if they put extra weight on the present. - This creates “planner vs doer” conflicts: preferences differ across time.\nPrediction pattern: commitment devices can increase follow-through even without changing incentives."
   },
   {
-    "objectID": "psychology/foundations/emotion-motivation.html#threat-stress-and-narrowing",
-    "href": "psychology/foundations/emotion-motivation.html#threat-stress-and-narrowing",
-    "title": "Emotion & motivation",
-    "section": "Threat, stress, and “narrowing”",
-    "text": "Threat, stress, and “narrowing”\nUnder threat/stress: - people rely more on habits and scripts, - mentalizing depth decreases, - attention narrows to salient cues, - ambiguity is interpreted more pessimistically.\nThis is a key mechanism linking environment → cognition → behavior.\nPrediction pattern: time pressure and threat cues increase reliance on stereotypes and reduce careful reasoning."
+    "objectID": "psychology/foundations/decision-making.html#heuristics-not-just-shortcuts-but-strategies",
+    "href": "psychology/foundations/decision-making.html#heuristics-not-just-shortcuts-but-strategies",
+    "title": "Decision-making",
+    "section": "Heuristics: not just shortcuts, but strategies",
+    "text": "Heuristics: not just shortcuts, but strategies\nHeuristics are often: - fast, - robust under noise, - adapted to common environments.\nUseful lens: heuristics trade off accuracy vs cost (attention, time, computation)."
   },
   {
-    "objectID": "psychology/foundations/emotion-motivation.html#a-reusable-explanation-template",
-    "href": "psychology/foundations/emotion-motivation.html#a-reusable-explanation-template",
-    "title": "Emotion & motivation",
-    "section": "A reusable explanation template",
-    "text": "A reusable explanation template\nWhen you explain a behavior using emotion/motivation, specify:\n\nTrigger/appraisal: what is the event interpreted as?\nGoal relevance: what goal is threatened or advanced?\nAffect: what emotion is generated (valence, arousal)?\nAction tendency: approach, avoid, punish, repair, withdraw?\nRegulation: reappraisal, suppression, distraction, rumination?\nOutcome: choice, social response, learning, reputation update."
+    "objectID": "psychology/foundations/decision-making.html#canonical-example-template-reuse-later",
+    "href": "psychology/foundations/decision-making.html#canonical-example-template-reuse-later",
+    "title": "Decision-making",
+    "section": "Canonical example template (reuse later)",
+    "text": "Canonical example template (reuse later)\nWhen you add examples, write them in this form: - Task: what is being decided? - Normative benchmark: what would a standard rational model predict? - Observed behavior: what pattern appears? - Mechanism: what cognitive/emotional/social process explains it? - Intervention: what changes the behavior (information, framing, incentives, commitment)?"
   },
   {
-    "objectID": "psychology/foundations/emotion-motivation.html#canonical-examples-stubs-you-can-expand",
-    "href": "psychology/foundations/emotion-motivation.html#canonical-examples-stubs-you-can-expand",
-    "title": "Emotion & motivation",
+    "objectID": "psychology/foundations/decision-making.html#where-this-connects-to-the-rest-of-the-site",
+    "href": "psychology/foundations/decision-making.html#where-this-connects-to-the-rest-of-the-site",
+    "title": "Decision-making",
+    "section": "Where this connects to the rest of the site",
+    "text": "Where this connects to the rest of the site\n\nSocial cognition: decisions depend on perceived intentions, norms, identity, and reputation.\nLearning: feedback changes preferences, habits, and beliefs over time.\nCriminology: risk/time preferences and self-control show up in offending, compliance, and deterrence responses.\nOverlap with strategic interaction: depth limits, miscalibration about others, and social emotions change outcomes in interactive settings."
+  },
+  {
+    "objectID": "psychology/foundations/sensation-perception.html",
+    "href": "psychology/foundations/sensation-perception.html",
+    "title": "Sensation & perception",
+    "section": "",
+    "text": "Sensation is the detection of physical energy (light, sound, pressure).\nPerception is the brain’s inference about what is out there.\nA useful stance: &gt; Perception is not recording. It is construction under uncertainty.\nThis page gives the core ideas commonly taught in UG psychology: bottom-up vs top-down, attention, and why perception can be systematically wrong."
+  },
+  {
+    "objectID": "psychology/foundations/sensation-perception.html#the-perception-pipeline-minimal",
+    "href": "psychology/foundations/sensation-perception.html#the-perception-pipeline-minimal",
+    "title": "Sensation & perception",
+    "section": "1) The perception pipeline (minimal)",
+    "text": "1) The perception pipeline (minimal)\n\nInput (stimulus)\nTransduction (sense organs convert energy into neural signals)\nEarly processing (basic features)\nIntegration (objects, scenes, meaning)\nInterpretation (inference using context and expectations)\nAction (what you do with it)\n\nMany “errors” are predictable consequences of step (5)."
+  },
+  {
+    "objectID": "psychology/foundations/sensation-perception.html#bottom-up-vs-top-down-processing",
+    "href": "psychology/foundations/sensation-perception.html#bottom-up-vs-top-down-processing",
+    "title": "Sensation & perception",
+    "section": "2) Bottom-up vs top-down processing",
+    "text": "2) Bottom-up vs top-down processing\n\nBottom-up (data-driven)\nPerception is driven by the stimulus: - contrast, edges, loudness, motion, timing.\n\n\nTop-down (model-driven)\nPerception is shaped by: - expectations, - goals, - context, - prior knowledge, - emotion and threat.\nPrediction patterns - ambiguity increases top-down influence (people “see” what they expect). - stress and threat bias interpretation toward danger. - labels and categories change what is perceived (not only what is reported)."
+  },
+  {
+    "objectID": "psychology/foundations/sensation-perception.html#signal-detection-sensitivity-vs-decision-criterion-conceptual",
+    "href": "psychology/foundations/sensation-perception.html#signal-detection-sensitivity-vs-decision-criterion-conceptual",
+    "title": "Sensation & perception",
+    "section": "3) Signal detection: sensitivity vs decision criterion (conceptual)",
+    "text": "3) Signal detection: sensitivity vs decision criterion (conceptual)\nIn many tasks, perception involves distinguishing signal from noise.\nTwo separable things: - Sensitivity: how well you can detect differences - Criterion: how willing you are to say “I detect it”\nPrediction patterns - when costs of misses are high, people adopt a “liberal” criterion (report more detections, more false alarms) - when costs of false alarms are high, people adopt a “conservative” criterion (fewer reports, more misses)\nThis is a key bridge to: - threat detection, - eyewitness identification, - security screening, - clinical symptom reporting."
+  },
+  {
+    "objectID": "psychology/foundations/sensation-perception.html#attention-and-perception-what-you-dont-attend-to-you-dont-perceive",
+    "href": "psychology/foundations/sensation-perception.html#attention-and-perception-what-you-dont-attend-to-you-dont-perceive",
+    "title": "Sensation & perception",
+    "section": "4) Attention and perception: what you don’t attend to, you don’t perceive",
+    "text": "4) Attention and perception: what you don’t attend to, you don’t perceive\nAttention selects information for deeper processing.\nPrediction patterns - inattentional blindness: people miss salient events when attention is elsewhere - change blindness: large changes can go unnoticed without attention - divided attention reduces integration and increases reliance on heuristics\nDesign implication: if something is critical, make it salient at the moment it matters."
+  },
+  {
+    "objectID": "psychology/foundations/sensation-perception.html#perceptual-constancies-why-perception-seems-stable",
+    "href": "psychology/foundations/sensation-perception.html#perceptual-constancies-why-perception-seems-stable",
+    "title": "Sensation & perception",
+    "section": "5) Perceptual constancies (why perception seems stable)",
+    "text": "5) Perceptual constancies (why perception seems stable)\nThe world changes (lighting, distance), but perception often remains stable: - size constancy, - color constancy, - loudness constancy.\nThese are achievements of inference systems that correct for context.\nPrediction pattern: constancies can produce systematic illusions in unusual contexts."
+  },
+  {
+    "objectID": "psychology/foundations/sensation-perception.html#illusions-as-diagnostics",
+    "href": "psychology/foundations/sensation-perception.html#illusions-as-diagnostics",
+    "title": "Sensation & perception",
+    "section": "6) Illusions as diagnostics",
+    "text": "6) Illusions as diagnostics\nIllusions matter because they show: - what assumptions the perceptual system is using, - when top-down inference dominates.\nTakeaway: perception is optimized for typical environments, not for perfect accuracy in all cases."
+  },
+  {
+    "objectID": "psychology/foundations/sensation-perception.html#multisensory-integration-how-senses-combine",
+    "href": "psychology/foundations/sensation-perception.html#multisensory-integration-how-senses-combine",
+    "title": "Sensation & perception",
+    "section": "7) Multisensory integration (how senses combine)",
+    "text": "7) Multisensory integration (how senses combine)\nThe brain integrates signals across modalities: - vision + hearing for speech perception, - touch + vision for object inference.\nIntegration depends on: - timing alignment, - spatial alignment, - prior expectation that the sources belong together.\nPrediction pattern: when signals conflict, perception can be dominated by the modality treated as more reliable in context."
+  },
+  {
+    "objectID": "psychology/foundations/sensation-perception.html#perception-emotion-and-threat",
+    "href": "psychology/foundations/sensation-perception.html#perception-emotion-and-threat",
+    "title": "Sensation & perception",
+    "section": "8) Perception, emotion, and threat",
+    "text": "8) Perception, emotion, and threat\nPerception is biased by affective state: - threat increases vigilance and pessimistic interpretation of ambiguity - anxiety increases attention to threat cues - anger increases perceived intentionality and hostility\nPrediction pattern: safety and predictability widen attention and improve discrimination.\nThis is the bridge to: - stress & hot states in criminology, - institutional encounters and legitimacy, - interpersonal conflict escalation."
+  },
+  {
+    "objectID": "psychology/foundations/sensation-perception.html#a-reusable-perception-explanation-template",
+    "href": "psychology/foundations/sensation-perception.html#a-reusable-perception-explanation-template",
+    "title": "Sensation & perception",
+    "section": "A reusable perception explanation template",
+    "text": "A reusable perception explanation template\nWhen analyzing a perceptual phenomenon, specify:\n\nStimulus ambiguity: how noisy or unclear is the input?\n\nGoal state: what does the person want/avoid?\n\nContext: what expectations are activated?\n\nAttention: what is attended vs ignored?\n\nCriterion: is the person set to detect more (false alarms) or less (misses)?\n\nPrediction: what changes if you change costs, salience, or safety?"
+  },
+  {
+    "objectID": "psychology/foundations/sensation-perception.html#canonical-examples-stubs-you-can-expand",
+    "href": "psychology/foundations/sensation-perception.html#canonical-examples-stubs-you-can-expand",
+    "title": "Sensation & perception",
     "section": "Canonical examples (stubs you can expand)",
-    "text": "Canonical examples (stubs you can expand)\n\nExample A: “Hot” decisions\n\nIn a calm state, a person plans to act prudently.\nIn a hot state (anger, arousal), they choose confrontation or risk.\nLater, regret and rationalization appear.\n\nMechanisms: state-dependent valuation + narrowed attention + action readiness.\n\n\nExample B: Compliance via legitimacy\n\nPeople comply not only because of expected punishment, but because noncompliance feels wrong.\nEmotions like guilt/shame and moral identity reinforce compliance.\n\nMechanisms: norm internalization + social emotions + identity."
+    "text": "Canonical examples (stubs you can expand)\n\nExample A: Threat detection in ambiguous environments\n\nambiguity is high,\ncosts of missing threat feel huge,\ncriterion shifts toward “better safe than sorry.”\n\nMechanisms: criterion shift + top-down threat bias\n\n\nExample B: Eyewitness perception under stress\n\nhigh arousal narrows attention,\nencoding is selective,\nlater recall is reconstructive.\n\nMechanisms: attention narrowing + memory reconstruction"
   },
   {
-    "objectID": "psychology/foundations/emotion-motivation.html#connections-to-other-sections",
-    "href": "psychology/foundations/emotion-motivation.html#connections-to-other-sections",
-    "title": "Emotion & motivation",
-    "section": "Connections to other sections",
-    "text": "Connections to other sections\n\nSocial cognition\nEmotion shapes attribution: - anger increases intentionality judgments, - fear increases threat interpretation, - shame increases self-focused attention.\n\n\nDecision-making\nEmotion changes perceived risk and time: - fear increases risk aversion in some settings, - anger can increase optimism and risk-taking, - stress increases present focus.\n\n\nCriminology\n\nescalation and retaliation,\nlegitimacy and procedural justice,\nself-control and situational triggers,\ncrowd dynamics, peer influence, and identity.\n\n\n\nOverlaps (later)\nThis page is the psychological backbone for: - strategic commitment (anger/reputation), - punishment and deterrence, - signaling via costly emotional displays."
+    "objectID": "psychology/foundations/sensation-perception.html#connections",
+    "href": "psychology/foundations/sensation-perception.html#connections",
+    "title": "Sensation & perception",
+    "section": "Connections",
+    "text": "Connections\n\nFoundations: attention & memory, cognition, social cognition (perceiving intentions), biopsychology (sensory systems), sleep & stress\nTopics: biases (availability and framing start with attention), person perception\nOverlaps: criminology (witnessing, threat), institutions (procedures reduce ambiguity), communication (framing changes perception)"
   },
   {
     "objectID": "psychology/foundations/social-cognition.html",
@@ -2849,81 +3206,179 @@
     "text": "Connections\n\nLearning: beliefs update differently from habits; both matter.\nDecision-making: confidence and uncertainty shape risk and action.\nCommunication overlap: trust, framing, and identity determine belief change.\nCriminology overlap: perceived risk, legitimacy, and rumor dynamics drive cooperation and compliance."
   },
   {
-    "objectID": "psychology/foundations/measurement.html",
-    "href": "psychology/foundations/measurement.html",
-    "title": "Measurement",
+    "objectID": "psychology/foundations/neuro-methods.html",
+    "href": "psychology/foundations/neuro-methods.html",
+    "title": "Neuroscience methods",
     "section": "",
-    "text": "Measurement is where many psychological arguments succeed or fail.\nIf you want to claim “X affects Y,” you must know: - what X and Y mean operationally, - whether they are measured reliably, - whether your measure captures the construct rather than noise.\nThis page is deeper than Methods: it’s about how variables are built."
+    "text": "This page explains what common neuroscience methods can and cannot tell you, in a way that stays useful even if specific technologies change.\nA simple rule: &gt; Methods answer different questions: where, when, what correlates, what causes, what is necessary.\nNeuro evidence is powerful when it constrains theories — not when it replaces them with “brain pictures.”"
   },
   {
-    "objectID": "psychology/foundations/measurement.html#constructs-vs-measures",
-    "href": "psychology/foundations/measurement.html#constructs-vs-measures",
-    "title": "Measurement",
-    "section": "Constructs vs measures",
-    "text": "Constructs vs measures\nA construct is the idea (e.g., “trust”, “self-control”, “anxiety”).\nA measure is the operational tool (survey items, tasks, behavior logs).\nOne construct can have many measures, and one measure can mix constructs.\nRule: never argue from labels. Argue from operational definitions."
+    "objectID": "psychology/foundations/neuro-methods.html#what-neuro-methods-are-for-the-question-map",
+    "href": "psychology/foundations/neuro-methods.html#what-neuro-methods-are-for-the-question-map",
+    "title": "Neuroscience methods",
+    "section": "1) What neuro methods are for (the question map)",
+    "text": "1) What neuro methods are for (the question map)\nNeuroscience methods are often used to answer:\n\nLocalization: where in the brain does activity relate to a task?\nTiming: when do processes occur (early perception vs later evaluation)?\nNecessity: is a region/system required for a function?\nCausality: what happens when we perturb a system?\nMechanism constraints: does the brain implement your theory in a plausible way?\n\nA good paper makes clear which of these it’s claiming."
   },
   {
-    "objectID": "psychology/foundations/measurement.html#validity-are-you-measuring-what-you-think",
-    "href": "psychology/foundations/measurement.html#validity-are-you-measuring-what-you-think",
-    "title": "Measurement",
-    "section": "Validity: are you measuring what you think?",
-    "text": "Validity: are you measuring what you think?\n\nContent validity\nDoes the measure cover the construct’s important aspects?\n\n\nConvergent / discriminant validity\n\nConvergent: does it correlate with other measures of the same construct?\nDiscriminant: does it avoid correlating with unrelated constructs?\n\n\n\nPredictive validity\nDoes it predict outcomes the construct should predict?\nRed flag: a measure is used because it is popular, not because it is justified for the specific argument."
+    "objectID": "psychology/foundations/neuro-methods.html#fmri-functional-magnetic-resonance-imaging",
+    "href": "psychology/foundations/neuro-methods.html#fmri-functional-magnetic-resonance-imaging",
+    "title": "Neuroscience methods",
+    "section": "2) fMRI (functional magnetic resonance imaging)",
+    "text": "2) fMRI (functional magnetic resonance imaging)\n\nWhat it measures (conceptually)\nfMRI measures changes related to blood oxygenation (a proxy for neural activity), with a delay.\n\n\nWhat it is good for\n\nspatial patterns (rough “where”)\ncomparing conditions (task A vs task B)\nlinking networks to tasks\n\n\n\nWhat it is not good for\n\nfine-grained timing (“when exactly”)\nproving causality by itself\nreading thoughts (in general use)\n\nPitfalls - reverse inference: “region X lit up, so emotion Y happened” - ignoring that many processes share the same regions\nBest use: constrain competing psychological theories by showing which network patterns align with which processes."
   },
   {
-    "objectID": "psychology/foundations/measurement.html#reliability-is-the-measure-stable-enough-to-be-useful",
-    "href": "psychology/foundations/measurement.html#reliability-is-the-measure-stable-enough-to-be-useful",
-    "title": "Measurement",
-    "section": "Reliability: is the measure stable enough to be useful?",
-    "text": "Reliability: is the measure stable enough to be useful?\n\nInternal consistency (for multi-item scales)\nAre items measuring the same underlying thing?\n\n\nTest–retest reliability\nDoes the measure remain similar over time (when it should)?\n\n\nInter-rater reliability\nWhen humans rate behavior, do they agree?\nPractical implication: low reliability makes effects look unstable and encourages overfitting."
+    "objectID": "psychology/foundations/neuro-methods.html#eeg-erp-electroencephalography-event-related-potentials",
+    "href": "psychology/foundations/neuro-methods.html#eeg-erp-electroencephalography-event-related-potentials",
+    "title": "Neuroscience methods",
+    "section": "3) EEG / ERP (electroencephalography / event-related potentials)",
+    "text": "3) EEG / ERP (electroencephalography / event-related potentials)\n\nWhat it measures\nElectrical activity at the scalp, reflecting synchronous neural activity.\n\n\nWhat it is good for\n\ntiming (“when” processes occur)\ndifferentiating early sensory processing vs later decision stages\nstudying attention and error monitoring\n\n\n\nLimits\n\nlocalization is coarse (harder to say exactly “where”)\nsensitive to noise (movement, environment)\n\nBest use: connect cognitive stages (perception → attention → evaluation) to time."
   },
   {
-    "objectID": "psychology/foundations/measurement.html#self-report-useful-but-not-direct-access",
-    "href": "psychology/foundations/measurement.html#self-report-useful-but-not-direct-access",
-    "title": "Measurement",
-    "section": "Self-report: useful but not “direct access”",
-    "text": "Self-report: useful but not “direct access”\nSelf-report captures: - introspection, - self-image, - social desirability, - memory reconstruction.\nIt can be excellent for private experiences, but it also has predictable distortions.\nPrediction patterns - sensitive topics are underreported in low-trust settings. - social desirability rises when anonymity is low. - current mood biases reports (“state contamination”).\nDesign levers - anonymity and privacy, - neutral wording, - indirect questioning when appropriate, - multiple methods (triangulation)."
+    "objectID": "psychology/foundations/neuro-methods.html#meg-magnetoencephalography-conceptual-note",
+    "href": "psychology/foundations/neuro-methods.html#meg-magnetoencephalography-conceptual-note",
+    "title": "Neuroscience methods",
+    "section": "4) MEG (magnetoencephalography) (conceptual note)",
+    "text": "4) MEG (magnetoencephalography) (conceptual note)\nMEG measures magnetic fields from neural activity. It is often treated as: - timing like EEG, - localization better than EEG (still not perfect).\nYou don’t need to emphasize it unless you later want a “methods completeness” section."
   },
   {
-    "objectID": "psychology/foundations/measurement.html#behavioral-tasks-what-you-gain-and-what-you-risk",
-    "href": "psychology/foundations/measurement.html#behavioral-tasks-what-you-gain-and-what-you-risk",
-    "title": "Measurement",
-    "section": "Behavioral tasks: what you gain and what you risk",
-    "text": "Behavioral tasks: what you gain and what you risk\nTasks can reduce self-presentation bias but may be sensitive to: - instructions and framing, - motivation and effort, - learning during the task, - “task impurity” (multiple mechanisms affect performance).\nRule of thumb: interpret tasks as measures of performance under specific conditions, not pure traits."
+    "objectID": "psychology/foundations/neuro-methods.html#lesion-and-patient-studies",
+    "href": "psychology/foundations/neuro-methods.html#lesion-and-patient-studies",
+    "title": "Neuroscience methods",
+    "section": "5) Lesion and patient studies",
+    "text": "5) Lesion and patient studies\n\nWhat they are\nStudy behavior after brain injury or neurological conditions.\n\n\nWhat they are good for\n\nnecessity claims: “when this system is damaged, function F is impaired”\ndissociations: one ability can break while another remains intact\n\n\n\nLimits\n\nlesions are rarely clean or identical across people\ncompensation and reorganization can occur\ninterpretation needs careful cognitive modeling\n\nBest use: demonstrate constraints and dissociations that any theory must respect."
   },
   {
-    "objectID": "psychology/foundations/measurement.html#physiological-measures-strong-signals-hard-interpretation",
-    "href": "psychology/foundations/measurement.html#physiological-measures-strong-signals-hard-interpretation",
-    "title": "Measurement",
-    "section": "Physiological measures: strong signals, hard interpretation",
-    "text": "Physiological measures: strong signals, hard interpretation\nPhysiology (heart rate, skin conductance, etc.) can indicate arousal but rarely maps 1:1 to a single emotion.\nPitfall: “arousal = fear” (often false)."
+    "objectID": "psychology/foundations/neuro-methods.html#tms-tdcs-brain-stimulation-and-modulation",
+    "href": "psychology/foundations/neuro-methods.html#tms-tdcs-brain-stimulation-and-modulation",
+    "title": "Neuroscience methods",
+    "section": "6) TMS / tDCS (brain stimulation and modulation)",
+    "text": "6) TMS / tDCS (brain stimulation and modulation)\n\nTMS (transcranial magnetic stimulation)\nUses magnetic pulses to temporarily disrupt or alter neural activity.\nGood for - causal tests: what changes when region/system is perturbed? - mapping functional roles under controlled tasks\nLimits - limited depth (mostly cortex) - effects can be variable across people - “where” and “how” claims must be careful\n\n\ntDCS (transcranial direct current stimulation)\nApplies weak currents; effects are often smaller and more variable.\nBest use: treat as “modulatory evidence,” not decisive proof."
   },
   {
-    "objectID": "psychology/foundations/measurement.html#measurement-invariance-cross-group-comparability",
-    "href": "psychology/foundations/measurement.html#measurement-invariance-cross-group-comparability",
-    "title": "Measurement",
-    "section": "Measurement invariance (cross-group comparability)",
-    "text": "Measurement invariance (cross-group comparability)\nIf you compare groups (cultures, genders, age), ask: - do items mean the same thing? - do response styles differ (acquiescence, extremity, modesty)?\nPrediction pattern: apparent group differences can be measurement artifacts."
+    "objectID": "psychology/foundations/neuro-methods.html#psychophysiology-body-measures",
+    "href": "psychology/foundations/neuro-methods.html#psychophysiology-body-measures",
+    "title": "Neuroscience methods",
+    "section": "7) Psychophysiology (body measures)",
+    "text": "7) Psychophysiology (body measures)\nIncludes: - heart rate variability, skin conductance, pupil dilation - hormone sampling (e.g., cortisol) - breathing patterns, startle reflex\nGood for - arousal and stress responses - threat sensitivity and regulation dynamics\nLimits - arousal ≠ one specific emotion - social context changes physiology strongly\nBest use: connect stress/arousal to attention narrowing, habit dominance, and emotional reactivity."
   },
   {
-    "objectID": "psychology/foundations/measurement.html#common-measurement-errors-and-fixes",
-    "href": "psychology/foundations/measurement.html#common-measurement-errors-and-fixes",
-    "title": "Measurement",
-    "section": "Common measurement errors (and fixes)",
-    "text": "Common measurement errors (and fixes)\n\nRange restriction\nIf everyone scores near the top or bottom, correlations shrink.\n\n\nFloor/ceiling effects\nThe measure can’t detect change.\n\n\nReactivity\nMeasuring behavior changes behavior (people perform for the measure).\n\n\nDemand characteristics\nPeople infer the hypothesis and comply or resist.\nFix set: pretest, blind conditions, unobtrusive outcomes, manipulate checks, and triangulate."
+    "objectID": "psychology/foundations/neuro-methods.html#pharmacology-conceptual",
+    "href": "psychology/foundations/neuro-methods.html#pharmacology-conceptual",
+    "title": "Neuroscience methods",
+    "section": "8) Pharmacology (conceptual)",
+    "text": "8) Pharmacology (conceptual)\nStudying behavior under substances that modulate neurotransmitter systems.\nGood for - suggesting causal involvement of neurotransmitter systems - understanding mechanism plausibility\nLimits - drugs have broad effects (not clean single-lever interventions) - individual differences and context matter\nBest use: triangulate with behavioral and neural evidence."
   },
   {
-    "objectID": "psychology/foundations/measurement.html#a-practical-checklist",
-    "href": "psychology/foundations/measurement.html#a-practical-checklist",
-    "title": "Measurement",
-    "section": "A practical checklist",
-    "text": "A practical checklist\nBefore using a variable, write:\n\nConstruct definition (one sentence)\n\nOperationalization (exact items/task/behavior)\n\nReliability evidence (or why it’s acceptable without it)\n\nValidity argument (why this measure matches the construct)\n\nLikely biases (social desirability, reactivity, invariance)\n\nA robustness plan (alternate measures or sensitivity tests)"
+    "objectID": "psychology/foundations/neuro-methods.html#animal-and-comparative-methods-conceptual-note",
+    "href": "psychology/foundations/neuro-methods.html#animal-and-comparative-methods-conceptual-note",
+    "title": "Neuroscience methods",
+    "section": "9) Animal and comparative methods (conceptual note)",
+    "text": "9) Animal and comparative methods (conceptual note)\nAnimal models allow: - invasive measurement, - precise control, - causal circuit interventions.\nBut translation to human cognition: - is strongest for basic learning, reward, threat, and physiology - is weaker for language, complex social institutions, and moral reasoning.\nBest use: use animal evidence to support foundational mechanisms, not to “explain society.”"
   },
   {
-    "objectID": "psychology/foundations/measurement.html#connections",
-    "href": "psychology/foundations/measurement.html#connections",
-    "title": "Measurement",
+    "objectID": "psychology/foundations/neuro-methods.html#what-makes-neuro-evidence-persuasive-triangulation",
+    "href": "psychology/foundations/neuro-methods.html#what-makes-neuro-evidence-persuasive-triangulation",
+    "title": "Neuroscience methods",
+    "section": "10) What makes neuro evidence persuasive? (triangulation)",
+    "text": "10) What makes neuro evidence persuasive? (triangulation)\nNeuroscience is most convincing when: - behavioral findings replicate, - neural evidence matches the predicted mechanism, - perturbation/lesion evidence supports necessity/causality, - results generalize across tasks and samples.\nRule: one fMRI result is rarely decisive; converging evidence is."
+  },
+  {
+    "objectID": "psychology/foundations/neuro-methods.html#common-interpretive-errors-quick-list",
+    "href": "psychology/foundations/neuro-methods.html#common-interpretive-errors-quick-list",
+    "title": "Neuroscience methods",
+    "section": "Common interpretive errors (quick list)",
+    "text": "Common interpretive errors (quick list)\n\nReverse inference: region activation → specific mental state (too strong)\nNeuro-essentialism: “because brain, it’s more real”\nOverlocalization: treating networks as isolated modules\nIgnoring task impurity: tasks rarely measure only one mechanism\nCausality leap: correlational neural evidence treated as causal"
+  },
+  {
+    "objectID": "psychology/foundations/neuro-methods.html#a-reusable-method-selection-template",
+    "href": "psychology/foundations/neuro-methods.html#a-reusable-method-selection-template",
+    "title": "Neuroscience methods",
+    "section": "A reusable method-selection template",
+    "text": "A reusable method-selection template\nWhen you want to study a psychological mechanism, write:\n\nMechanism hypothesis (algorithmic level)\n\nBehavioral predictions\n\nWhat would count as evidence against it\n\nChoose method by question:\n\nwhere? fMRI\nwhen? EEG/ERP\nnecessary? lesions\ncausal perturbation? TMS\narousal/stress? physiology/hormones\n\nTriangulate across at least two methods"
+  },
+  {
+    "objectID": "psychology/foundations/neuro-methods.html#connections",
+    "href": "psychology/foundations/neuro-methods.html#connections",
+    "title": "Neuroscience methods",
     "section": "Connections",
-    "text": "Connections\n\nMethods: measurement quality determines inference quality.\nMental health / stigma: self-report is especially fragile under shame/fear.\nCriminology: reporting and enforcement are measurement systems with selection bias.\nInstitutions: procedural justice shapes willingness to report truthfully."
+    "text": "Connections\n\nFoundations: biopsychology, cognition, attention & memory, measurement, methods\nTopics: sensation & perception, addiction & compulsion, mental health\nOverlaps: policy design (interpretation caution), criminology (stress physiology, threat)"
+  },
+  {
+    "objectID": "psychology/foundations/history-philosophy.html",
+    "href": "psychology/foundations/history-philosophy.html",
+    "title": "Conceptual & historical issues",
+    "section": "",
+    "text": "Psychology has recurring debates about: - what counts as explanation, - how to connect mind, brain, and society, - how to measure invisible constructs, - how to interpret evidence and replication.\nMany UG programs include “conceptual and historical issues” because it prevents two failures: - treating today’s terms as eternal truths, - mistaking methods for theories.\nThis page is a toolkit for thinking clearly, not a timeline quiz."
+  },
+  {
+    "objectID": "psychology/foundations/history-philosophy.html#the-big-moves-in-psychology-high-level",
+    "href": "psychology/foundations/history-philosophy.html#the-big-moves-in-psychology-high-level",
+    "title": "Conceptual & historical issues",
+    "section": "1) The “big moves” in psychology (high-level)",
+    "text": "1) The “big moves” in psychology (high-level)\n\nIntrospection and early measurement\nEarly psychology tried to study experience directly (introspection), but found limits: - reports are biased by language, memory, and social desirability.\nLesson: self-report is informative but not a transparent window.\n\n\nBehaviorism (behavior as the object)\nBehaviorism emphasized: - observable behavior, - learning via reinforcement, - skepticism about unobservables.\nContribution: rigorous learning theory, experimental discipline.\nLimit: struggles with representation, language, and flexible reasoning.\n\n\nThe cognitive revolution (representation returns)\nCognitive approaches reintroduced: - mental representations, - information processing, - attention and memory limits.\nContribution: mechanisms for thinking and perception.\nLimit: risk of treating humans like disembodied computers unless emotion and social context are included.\n\n\nSocial and cultural turns\nSocial psychology emphasized: - norms, identity, roles, - institutions and group processes, - meaning and context.\nContribution: behavior is embedded in social systems.\nLimit: risk of context-specific findings unless boundary conditions are made explicit.\n\n\nBiological and neuroscientific integration\nBiopsychology and neuroscience added: - implementation constraints (brain/body), - physiology of stress, sleep, arousal, - causal tests via lesion/perturbation.\nLesson: biology constrains and enables psychology, but does not replace it."
+  },
+  {
+    "objectID": "psychology/foundations/history-philosophy.html#levels-of-explanation-the-anti-confusion-framework",
+    "href": "psychology/foundations/history-philosophy.html#levels-of-explanation-the-anti-confusion-framework",
+    "title": "Conceptual & historical issues",
+    "section": "2) Levels of explanation (the anti-confusion framework)",
+    "text": "2) Levels of explanation (the anti-confusion framework)\nA single phenomenon can be explained at multiple levels:\n\nFunctional: what problem does this solve? (e.g., detect threat)\nAlgorithmic: what process runs? (attention narrowing, appraisal)\nImplementation: what supports it biologically? (arousal circuits, hormones)\n\nRule: don’t treat a lower level as “more real.” Better explanations connect levels."
+  },
+  {
+    "objectID": "psychology/foundations/history-philosophy.html#the-construct-problem",
+    "href": "psychology/foundations/history-philosophy.html#the-construct-problem",
+    "title": "Conceptual & historical issues",
+    "section": "3) The “construct problem”",
+    "text": "3) The “construct problem”\nPsychology studies unobservables (trust, anxiety, self-control). The danger is reification: - treating the label as the thing.\nRule: every construct must have: - operational definition, - measurement plan, - prediction commitments.\nThis links directly to your Measurement page."
+  },
+  {
+    "objectID": "psychology/foundations/history-philosophy.html#nature-vs-nurture-mostly-a-bad-question",
+    "href": "psychology/foundations/history-philosophy.html#nature-vs-nurture-mostly-a-bad-question",
+    "title": "Conceptual & historical issues",
+    "section": "4) Nature vs nurture (mostly a bad question)",
+    "text": "4) Nature vs nurture (mostly a bad question)\nA better framing: - behavior arises from gene × environment × development interactions.\nMost interesting questions are: - which environments amplify a vulnerability? - which experiences build resilience? - what interventions change trajectories?\nPractical note: “biological” does not mean “fixed.”"
+  },
+  {
+    "objectID": "psychology/foundations/history-philosophy.html#person-vs-situation-why-both-are-true",
+    "href": "psychology/foundations/history-philosophy.html#person-vs-situation-why-both-are-true",
+    "title": "Conceptual & historical issues",
+    "section": "5) Person vs situation (why both are true)",
+    "text": "5) Person vs situation (why both are true)\nTwo statements can both be true: - people differ (traits matter), - situations shape behavior strongly.\nThe key is: &gt; Person × situation interactions explain when traits show up.\nStrong situations (high surveillance, strong norms, high stakes) compress individual differences."
+  },
+  {
+    "objectID": "psychology/foundations/history-philosophy.html#what-is-a-good-psychological-theory",
+    "href": "psychology/foundations/history-philosophy.html#what-is-a-good-psychological-theory",
+    "title": "Conceptual & historical issues",
+    "section": "6) What is a “good” psychological theory?",
+    "text": "6) What is a “good” psychological theory?\nA useful theory should provide: 1) clear constructs, 2) mechanism specification, 3) testable predictions, 4) boundary conditions, 5) ability to integrate with neighboring domains (bio, social, institutions).\nRed flag: a theory that “explains” everything explains nothing."
+  },
+  {
+    "objectID": "psychology/foundations/history-philosophy.html#replication-generalization-and-why-psychology-argues-about-it",
+    "href": "psychology/foundations/history-philosophy.html#replication-generalization-and-why-psychology-argues-about-it",
+    "title": "Conceptual & historical issues",
+    "section": "7) Replication, generalization, and why psychology argues about it",
+    "text": "7) Replication, generalization, and why psychology argues about it\nModern psychology has emphasized: - replication (does the effect reproduce?), - generalization (does it hold across contexts?), - transparency (preregistration, open data, robust reporting).\nYou don’t need to be technical to apply the lesson: - treat single studies as suggestive, - look for converging evidence, - prioritize mechanisms and boundary conditions.\nPractical rule: prefer claims that survive changes in measurement, sample, and setting."
+  },
+  {
+    "objectID": "psychology/foundations/history-philosophy.html#ethics-and-the-subjectivity-of-participants",
+    "href": "psychology/foundations/history-philosophy.html#ethics-and-the-subjectivity-of-participants",
+    "title": "Conceptual & historical issues",
+    "section": "8) Ethics and the subjectivity of participants",
+    "text": "8) Ethics and the subjectivity of participants\nPsych research is unusually sensitive to: - demand characteristics, - deception and consent, - power dynamics, - stigma.\nLesson: ethics is not only moral; it affects data quality."
+  },
+  {
+    "objectID": "psychology/foundations/history-philosophy.html#a-reusable-conceptual-check-for-any-claim",
+    "href": "psychology/foundations/history-philosophy.html#a-reusable-conceptual-check-for-any-claim",
+    "title": "Conceptual & historical issues",
+    "section": "9) A reusable “conceptual check” for any claim",
+    "text": "9) A reusable “conceptual check” for any claim\nWhen you read or write a claim, ask:\n\nWhat is the construct? operational definition?\n\nWhat is the mechanism? not just a label?\n\nWhat is the evidence? and what are its limits?\n\nWhat would falsify it?\n\nWhere does it generalize? and where not?\n\nWhat level is this claim at? (functional/algorithmic/implementation)\n\nWhat are the ethical/measurement confounds?\n\nIf you can answer these, your notes will look “university-level.”"
+  },
+  {
+    "objectID": "psychology/foundations/history-philosophy.html#connections",
+    "href": "psychology/foundations/history-philosophy.html#connections",
+    "title": "Conceptual & historical issues",
+    "section": "Connections",
+    "text": "Connections\n\nFoundations: methods, measurement, biopsychology, cognition\nTopics: biases, personality, cultural psychology (later)\nOverlaps: institutions (power, legitimacy), communication (demand effects), policy design (external validity)"
   },
   {
     "objectID": "psychology/topics/person-perception.html",
@@ -2993,98 +3448,154 @@
     "href": "psychology/topics/index.html",
     "title": "Topics",
     "section": "",
-    "text": "Topics are reusable “modules” you can plug into many explanations.\nThey sit on top of Foundations (cognition, learning, decision-making, emotion, social cognition, methods)."
+    "text": "Topics are reusable “modules” you can plug into many explanations.\nThey sit on top of Foundations (cognition, learning, decision-making, emotion, social cognition, methods).\n\n\n\nBiases & heuristics\nSystematic patterns in judgment and choice: mechanisms → predictions.\nOpen →\n\n\n\n\nMotivation & goals\nWhat drives effort, persistence, self-regulation, and goal pursuit.\nOpen →\n\n\n\n\nNorms & groups\nIdentity, conformity, polarization, cooperation, and conflict.\nOpen →\n\n\n\n\nPerson perception\nHow we infer traits, intentions, emotions, and “type” from thin slices.\nOpen →\n\n\n\n\nPersonality\nStable individual differences, traits, and how context interacts with them.\nOpen →\n\n\n\n\nMoral psychology\nIntuitions, reasoning, norms, and why people disagree about “right”.\nOpen →\n\n\n\n\nRelationships\nAttachment, communication, conflict, and relationship maintenance.\nOpen →\n\n\n\n\nDevelopment\nHow cognition, emotion, and social behavior change across the life course.\nOpen →\n\n\n\n\nEducational psychology\nLearning in classrooms: instruction, motivation, and assessment.\nOpen →\n\n\n\n\nHealth psychology\nBehavior change, adherence, risk, prevention, and health contexts.\nOpen →\n\n\n\n\nMental health\nCommon problems, risk factors, and evidence-based ways of thinking about them.\nOpen →\n\n\n\n\nSleep & stress\nStress responses, coping, fatigue, and sleep as a cognitive foundation.\nOpen →\n\n\n\n\nTherapy tools\nPractical frameworks: CBT-style tools, habits, and structured reflection.\nOpen →\n\n\n\n\nAddiction & compulsion\nReinforcement loops, craving, habit formation, and relapse dynamics.\nOpen →\n\n\n\n\nPsychopathology\nSyndromes, symptom clusters, and clinical classification (overview).\nOpen →"
   },
   {
-    "objectID": "psychology/topics/index.html#how-to-use-topics",
-    "href": "psychology/topics/index.html#how-to-use-topics",
-    "title": "Topics",
-    "section": "How to use Topics",
-    "text": "How to use Topics\nFor any topic page, try the same template: 1) Mechanism(s)\n2) Predictions (what changes when the environment changes?)\n3) Failure modes (when the explanation breaks)\n4) Interventions (what reliably shifts behavior?)\n5) Links to Foundations and Overlaps"
-  },
-  {
-    "objectID": "psychology/topics/mental-health.html",
-    "href": "psychology/topics/mental-health.html",
-    "title": "Mental health",
+    "objectID": "psychology/topics/motivation-goals.html",
+    "href": "psychology/topics/motivation-goals.html",
+    "title": "Motivation & goals",
     "section": "",
-    "text": "This page is a foundational, non-clinical map of mental health topics that matter for understanding behavior. It is not a diagnostic guide. The goal is to organize mechanisms and predictions in a way that is useful for study and for linking to other parts of the site (decision-making, learning, emotion, social cognition).\nA helpful framing: &gt; Mental health patterns often reflect interactions between vulnerabilities, environments, and coping strategies."
+    "text": "Motivation determines what people try to do, how much effort they invest, and what tradeoffs they accept. Goals don’t just guide action — they also guide attention, memory, and interpretation."
   },
   {
-    "objectID": "psychology/topics/mental-health.html#core-dimensions-a-practical-map",
-    "href": "psychology/topics/mental-health.html#core-dimensions-a-practical-map",
-    "title": "Mental health",
-    "section": "Core dimensions (a practical map)",
-    "text": "Core dimensions (a practical map)\nMany symptoms can be grouped by a few dimensions:\n\nNegative affect: persistent sadness, anxiety, guilt, irritability\nThreat sensitivity: hypervigilance, avoidance, panic responses\nReward processing: reduced pleasure, low motivation, anhedonia\nCognitive control: attention, impulsivity, rumination, executive function\nSleep and arousal: insomnia, fatigue, agitation\nSocial functioning: isolation, mistrust, rejection sensitivity\n\nDifferent “disorders” often share dimensions. That’s part of why comorbidity is common."
+    "objectID": "psychology/topics/motivation-goals.html#goal-types",
+    "href": "psychology/topics/motivation-goals.html#goal-types",
+    "title": "Motivation & goals",
+    "section": "Goal types",
+    "text": "Goal types\n\nApproach vs avoidance\n\nApproach: pursue desirable outcomes.\nAvoidance: prevent negative outcomes.\n\nAvoidance goals can dominate attention and produce short-horizon “relief” strategies.\n\n\nMastery vs performance\n\nMastery: improve competence, learn.\nPerformance: look competent, avoid looking bad.\n\nPrediction pattern: performance focus increases anxiety and risk-avoidance; mastery focus increases persistence and learning."
   },
   {
-    "objectID": "psychology/topics/mental-health.html#stress-and-vulnerability-a-general-mechanism",
-    "href": "psychology/topics/mental-health.html#stress-and-vulnerability-a-general-mechanism",
-    "title": "Mental health",
-    "section": "Stress and vulnerability: a general mechanism",
-    "text": "Stress and vulnerability: a general mechanism\nA broad mechanism often used is:\n\nVulnerability (traits, history, genetics, learned patterns)\nStressors (acute shocks, chronic strain, social conflict)\nProtective factors (support, coping skills, stable routines)\n\nPrediction pattern: the same stressor affects people differently depending on vulnerability and protection."
+    "objectID": "psychology/topics/motivation-goals.html#intrinsic-vs-extrinsic-motivation",
+    "href": "psychology/topics/motivation-goals.html#intrinsic-vs-extrinsic-motivation",
+    "title": "Motivation & goals",
+    "section": "Intrinsic vs extrinsic motivation",
+    "text": "Intrinsic vs extrinsic motivation\n\nIntrinsic: doing the task is rewarding.\nExtrinsic: task is a means to an external reward.\n\nPrediction pattern: heavy external control can reduce intrinsic engagement when it changes the meaning from “I choose” to “I’m being controlled.”"
   },
   {
-    "objectID": "psychology/topics/mental-health.html#anxiety-threat-and-uncertainty",
-    "href": "psychology/topics/mental-health.html#anxiety-threat-and-uncertainty",
-    "title": "Mental health",
-    "section": "Anxiety: threat and uncertainty",
-    "text": "Anxiety: threat and uncertainty\nAnxiety is often characterized by: - heightened threat perception, - intolerance of uncertainty, - avoidance behavior, - safety-seeking behaviors that reduce anxiety short-run but maintain it long-run.\nLearning loop (common): - uncertainty → anxiety → avoidance → temporary relief → stronger avoidance habit\nPrediction pattern: reducing avoidance and increasing safe exposure often weakens the loop over time (mechanism: learning + prediction error)."
+    "objectID": "psychology/topics/motivation-goals.html#goal-conflict-and-self-regulation",
+    "href": "psychology/topics/motivation-goals.html#goal-conflict-and-self-regulation",
+    "title": "Motivation & goals",
+    "section": "Goal conflict and self-regulation",
+    "text": "Goal conflict and self-regulation\nPeople often hold multiple goals that conflict: - study vs social media, - fairness vs self-interest, - honesty vs reputation.\nConflict resolution depends on: - salience (which goal is active), - state (stress/fatigue), - identity (what kind of person I am), - environment (friction/defaults).\nPrediction pattern: making long-run goals salient at decision time improves alignment without changing values."
   },
   {
-    "objectID": "psychology/topics/mental-health.html#depression-reward-energy-and-self-evaluation",
-    "href": "psychology/topics/mental-health.html#depression-reward-energy-and-self-evaluation",
-    "title": "Mental health",
-    "section": "Depression: reward, energy, and self-evaluation",
-    "text": "Depression: reward, energy, and self-evaluation\nDepressive patterns often involve: - reduced motivation and energy, - diminished reward sensitivity (things feel less rewarding), - negative self-evaluation, - rumination (repetitive negative thinking).\nBehavioral loop (common): - low mood → withdrawal → fewer rewarding experiences → lower mood\nPrediction pattern: small increases in structured rewarding activity can have outsized effects because they interrupt the loop (mechanism: reinforcement and habit)."
+    "objectID": "psychology/topics/motivation-goals.html#motivation-under-uncertainty-expectancy-value-practical-lens",
+    "href": "psychology/topics/motivation-goals.html#motivation-under-uncertainty-expectancy-value-practical-lens",
+    "title": "Motivation & goals",
+    "section": "Motivation under uncertainty: expectancy × value (practical lens)",
+    "text": "Motivation under uncertainty: expectancy × value (practical lens)\nEffort tends to rise with: - expectancy (belief that effort helps), - value (importance of the outcome).\nFailures often come from: - low expectancy (“it won’t matter”), - unclear value (“why do this?”), - high immediate costs.\nIntervention levers - increase expectancy via feedback and progress signals, - increase value via meaning/identity framing, - reduce immediate costs via environment design."
   },
   {
-    "objectID": "psychology/topics/mental-health.html#rumination-repetitive-thought-as-a-trap",
-    "href": "psychology/topics/mental-health.html#rumination-repetitive-thought-as-a-trap",
-    "title": "Mental health",
-    "section": "Rumination: repetitive thought as a trap",
-    "text": "Rumination: repetitive thought as a trap\nRumination feels like problem-solving but often functions as: - attention capture, - negative memory retrieval, - threat rehearsal, - reduced action initiation.\nPrediction pattern: interventions that shift attention (structured activity, reappraisal skills, sleep stabilization) reduce rumination frequency."
+    "objectID": "psychology/topics/motivation-goals.html#social-motivation-status-belonging-and-norms",
+    "href": "psychology/topics/motivation-goals.html#social-motivation-status-belonging-and-norms",
+    "title": "Motivation & goals",
+    "section": "Social motivation: status, belonging, and norms",
+    "text": "Social motivation: status, belonging, and norms\nPeople are motivated by: - approval and belonging, - status and respect, - avoidance of shame.\nPrediction pattern: peer environments can outpower individual incentives."
   },
   {
-    "objectID": "psychology/topics/mental-health.html#trauma-related-patterns-memory-threat-and-triggers",
-    "href": "psychology/topics/mental-health.html#trauma-related-patterns-memory-threat-and-triggers",
-    "title": "Mental health",
-    "section": "Trauma-related patterns: memory, threat, and triggers",
-    "text": "Trauma-related patterns: memory, threat, and triggers\nAfter extreme stress, some people develop: - intrusive memories, - hypervigilance, - avoidance of reminders, - emotional numbing, - sleep disruption.\nMechanism lens: emotion-tagged memory + threat system sensitization + avoidance learning.\nPrediction pattern: unpredictable triggers and uncertain environments maintain hypervigilance."
+    "objectID": "psychology/topics/motivation-goals.html#a-reusable-template",
+    "href": "psychology/topics/motivation-goals.html#a-reusable-template",
+    "title": "Motivation & goals",
+    "section": "A reusable template",
+    "text": "A reusable template\nTo explain motivated behavior, specify:\n\nWhich goal is active (approach/avoidance; mastery/performance)\n\nExpectancy and value (why try?)\n\nImmediate costs (effort, fear, shame, opportunity cost)\n\nIdentity and norms (who am I here?)\n\nPrediction: what shifts if you change salience, feedback, or social audience?"
   },
   {
-    "objectID": "psychology/topics/mental-health.html#adhd-like-patterns-non-diagnostic-framing",
-    "href": "psychology/topics/mental-health.html#adhd-like-patterns-non-diagnostic-framing",
-    "title": "Mental health",
-    "section": "ADHD-like patterns (non-diagnostic framing)",
-    "text": "ADHD-like patterns (non-diagnostic framing)\nCommon behavioral dimensions include: - inattention under low stimulation, - difficulty sustaining effort, - impulsivity (short-horizon choice), - strong sensitivity to immediate rewards.\nMechanism lens: attention regulation + reinforcement sensitivity + executive control load.\nPrediction pattern: structure, feedback frequency, and reduced friction can help performance even without changing “traits.”"
-  },
-  {
-    "objectID": "psychology/topics/mental-health.html#substance-use-and-compulsive-behavior-mechanism-lens",
-    "href": "psychology/topics/mental-health.html#substance-use-and-compulsive-behavior-mechanism-lens",
-    "title": "Mental health",
-    "section": "Substance use and compulsive behavior (mechanism lens)",
-    "text": "Substance use and compulsive behavior (mechanism lens)\nA compact mechanism view: - strong immediate reward/relief, - habit formation, - cue-triggered craving, - withdrawal/negative reinforcement, - social context and norms.\nPrediction pattern: changing cue environments and social networks often matters as much as willpower."
-  },
-  {
-    "objectID": "psychology/topics/mental-health.html#stigma-and-social-context-often-overlooked",
-    "href": "psychology/topics/mental-health.html#stigma-and-social-context-often-overlooked",
-    "title": "Mental health",
-    "section": "Stigma and social context (often overlooked)",
-    "text": "Stigma and social context (often overlooked)\nMental health is shaped by: - perceived acceptance vs rejection, - shame and concealment, - access to support and care, - institutional treatment (school, workplace, legal system).\nPrediction pattern: reducing stigma and increasing safe disclosure channels increases help-seeking and reduces isolation loops."
-  },
-  {
-    "objectID": "psychology/topics/mental-health.html#a-reusable-explanation-template",
-    "href": "psychology/topics/mental-health.html#a-reusable-explanation-template",
-    "title": "Mental health",
-    "section": "A reusable explanation template",
-    "text": "A reusable explanation template\nWhen discussing a mental health-related behavior, specify:\n\nDimension(s) involved (threat, reward, control, sleep, social)\nLoop (avoidance loop? withdrawal loop? rumination loop?)\nContext (stressors, stability, social support)\nPrediction (what change would interrupt the loop?)\nBoundaries (what you are not claiming; avoid diagnosis)"
-  },
-  {
-    "objectID": "psychology/topics/mental-health.html#connections",
-    "href": "psychology/topics/mental-health.html#connections",
-    "title": "Mental health",
+    "objectID": "psychology/topics/motivation-goals.html#connections",
+    "href": "psychology/topics/motivation-goals.html#connections",
+    "title": "Motivation & goals",
     "section": "Connections",
-    "text": "Connections\n\nEmotion & motivation: affective systems and action tendencies are central.\nLearning: avoidance and reinforcement loops maintain patterns.\nCognition: attention and memory biases shape symptoms.\nNorms & groups: stigma and identity can worsen or buffer outcomes.\nCriminology (later link): trauma exposure, substance use, and stress can affect compliance, escalation, and institutional interactions."
+    "text": "Connections\n\nSelf-control: motivation interacts with cues and commitment.\nEmotion & motivation: emotions shift goal priority.\nNorms & groups: identity and belonging shape goal choice.\nInstitutions: incentives work better when they align with identity and legitimacy."
+  },
+  {
+    "objectID": "psychology/topics/educational-psychology.html",
+    "href": "psychology/topics/educational-psychology.html",
+    "title": "Educational psychology",
+    "section": "",
+    "text": "Note\n\n\n\nCommon UG elective; also a core pillar in many PG tracks (education, learning sciences, educational measurement)."
+  },
+  {
+    "objectID": "psychology/topics/educational-psychology.html#what-it-is",
+    "href": "psychology/topics/educational-psychology.html#what-it-is",
+    "title": "Educational psychology",
+    "section": "What it is",
+    "text": "What it is\nEducational psychology studies how people learn in real instructional settings, and how we can design environments that reliably produce learning and development. It sits between basic psychology (memory, attention, motivation) and applied decisions (curriculum, assessment, classroom climate, policy).\nA useful working split is: - Learning mechanisms: what changes in the learner (knowledge, skills, habits, beliefs). - Instructional design: how tasks, explanations, practice, and feedback shape those changes. - Motivation + context: why learners engage (or avoid), and how classrooms and institutions amplify or block learning. - Measurement: how we infer learning and compare approaches without fooling ourselves.\nLinks you’ll likely use a lot: - Learning - Measurement - Methods - Motivation & goals - Development - How to study"
+  },
+  {
+    "objectID": "psychology/topics/educational-psychology.html#core-questions",
+    "href": "psychology/topics/educational-psychology.html#core-questions",
+    "title": "Educational psychology",
+    "section": "Core questions",
+    "text": "Core questions\n\n1) What counts as learning?\nA simple but strict definition: learning is a durable change in capability (not just a temporary performance bump). This is why short-term “looks good in class” effects can vanish when tested after delay, under transfer, or without cues.\n\n\n2) Why do smart students fail to learn?\nOften it’s not raw ability. Common culprits are: - shallow processing (recognition mistaken for recall), - poor practice scheduling (cramming), - miscalibrated confidence, - attention/working-memory overload, - low expectancy/value or high perceived cost.\n\n\n3) What is the teacher (or system) optimizing?\nSometimes it’s grades or coverage, not retention or transfer. Edu-psych tries to align incentives and measurement with the actual learning objective."
+  },
+  {
+    "objectID": "psychology/topics/educational-psychology.html#learning-frameworks-used-in-education",
+    "href": "psychology/topics/educational-psychology.html#learning-frameworks-used-in-education",
+    "title": "Educational psychology",
+    "section": "Learning frameworks used in education",
+    "text": "Learning frameworks used in education\n\nBehaviorist (instruction as shaping)\nReinforcement and practice matter. In modern form this shows up as: - deliberate practice routines, - immediate feedback for procedural skills, - structured scaffolding for early competence.\n\n\nCognitive / information-processing (instruction as memory engineering)\nThe classroom is a pipeline from attention → working memory → long-term memory. Design implications: reduce noise, structure explanations, provide guided practice, and space retrieval.\n\n\nSocial-cognitive (learning as modeling + self-efficacy)\nStudents learn by observing others and by beliefs about capability (self-efficacy). This connects strongly to: - teacher expectations, - peer effects, - identity and belonging, - attribution patterns after failure.\n\n\nConstructivist / sociocultural (learning as meaning-making in context)\nKnowledge is built through activity and interaction; language and tools matter. This frames: - inquiry-based learning (done well vs done vaguely), - collaborative learning, - zone of proximal development / scaffolding."
+  },
+  {
+    "objectID": "psychology/topics/educational-psychology.html#instructional-design-and-cognitive-load",
+    "href": "psychology/topics/educational-psychology.html#instructional-design-and-cognitive-load",
+    "title": "Educational psychology",
+    "section": "Instructional design and cognitive load",
+    "text": "Instructional design and cognitive load\nA practical lens is: “How much of the student’s limited processing is spent on the target idea vs avoidable friction?”\nTypical design levers: - Worked examples → fading (start with full solutions, gradually remove steps). - Segmenting (break complex explanations into chunks). - Dual coding / modality (use words + diagrams thoughtfully, not as decoration). - Retrieval practice (testing as learning, not only evaluation). - Spacing + interleaving (timing and mixture of practice).\nIf you want the short bridge to your study page: - Retrieval + spacing are the “highest ROI” habits for most academic learning → see How to study."
+  },
+  {
+    "objectID": "psychology/topics/educational-psychology.html#motivation-goals-and-engagement",
+    "href": "psychology/topics/educational-psychology.html#motivation-goals-and-engagement",
+    "title": "Educational psychology",
+    "section": "Motivation, goals, and engagement",
+    "text": "Motivation, goals, and engagement\nMotivation can be treated as a choice under constraints: “Is effort worth it right now?” A common decomposition is:\n[ - . ]\nWhere: - Expectancy: “If I try, can I succeed?” - Value: “Does this matter to me?” - Cost: time, anxiety, effort, opportunity cost, ego threat.\nThis connects to: - mastery vs performance goal orientations, - self-determination (autonomy/competence/relatedness), - growth mindset vs fixed beliefs (best treated as beliefs + learning design, not slogans), - feedback framing (information vs judgment).\nSee: Motivation & goals, Self-control."
+  },
+  {
+    "objectID": "psychology/topics/educational-psychology.html#assessment-and-measurement",
+    "href": "psychology/topics/educational-psychology.html#assessment-and-measurement",
+    "title": "Educational psychology",
+    "section": "Assessment and measurement",
+    "text": "Assessment and measurement\nAssessment is not just grading; it is information that shapes behavior.\nKey splits: - Formative: feedback to improve learning during the process. - Summative: certification / selection. - Criterion-referenced vs norm-referenced: “did you meet a standard?” vs “where are you relative to others?”\nMeasurement pitfalls that show up constantly: - teaching to the test can be good (if the test matches the construct) or destructive (if the test measures a narrow proxy), - reliability vs validity tradeoffs, - short-term performance inflation (especially when items mirror practice too closely), - fairness and differential item functioning across groups.\nSee: Measurement."
+  },
+  {
+    "objectID": "psychology/topics/educational-psychology.html#individual-differences-and-support",
+    "href": "psychology/topics/educational-psychology.html#individual-differences-and-support",
+    "title": "Educational psychology",
+    "section": "Individual differences and support",
+    "text": "Individual differences and support\nEducational psychology also covers why the same instruction produces different outcomes: - prior knowledge and skill prerequisites, - language background, - attention / executive function constraints, - anxiety and stress, - special educational needs / disability accommodations, - home environment and resource constraints.\nThis overlaps with: - Mental health - Sleep & stress - Development"
+  },
+  {
+    "objectID": "psychology/topics/educational-psychology.html#classroom-climate-relationships-and-discipline",
+    "href": "psychology/topics/educational-psychology.html#classroom-climate-relationships-and-discipline",
+    "title": "Educational psychology",
+    "section": "Classroom climate, relationships, and discipline",
+    "text": "Classroom climate, relationships, and discipline\nLearning is social. The “hidden curriculum” includes norms, identity signals, and trust.\nCore ingredients: - psychological safety to ask questions, - teacher–student relationship quality, - norms around effort and help-seeking, - predictable routines and fair discipline, - peer effects (both academic and behavioral).\n(If you want the institutional angle later, this ties nicely to your overlaps pages on institutions and policy.)"
+  },
+  {
+    "objectID": "psychology/topics/educational-psychology.html#evidence-what-counts-as-works",
+    "href": "psychology/topics/educational-psychology.html#evidence-what-counts-as-works",
+    "title": "Educational psychology",
+    "section": "Evidence: what counts as “works”?",
+    "text": "Evidence: what counts as “works”?\nEdu-psych is full of interventions that sound right but fail under replication or scale. A useful hierarchy: - theory → mechanism → measurable intermediate outcomes → durable learning → transfer → real-world outcomes.\nMethods you’ll see often: - classroom RCTs with cluster randomization, - quasi-experiments (policy changes, cutoff rules), - longitudinal models (growth curves), - meta-analysis (with all the usual publication-bias worries).\nSee: Methods."
+  },
+  {
+    "objectID": "psychology/topics/educational-psychology.html#common-traps-and-myths",
+    "href": "psychology/topics/educational-psychology.html#common-traps-and-myths",
+    "title": "Educational psychology",
+    "section": "Common traps and myths",
+    "text": "Common traps and myths\n\n“Learning styles” as matching instruction to a fixed style (weak evidence; the better move is varied representations + retrieval).\nConfusing engagement with learning (fun ≠ retention).\nOvervaluing immediate fluency (easy processing today can mean weak memory tomorrow).\nTreating motivation as a pure personality trait rather than a design + context outcome."
+  },
+  {
+    "objectID": "psychology/topics/educational-psychology.html#a-practical-checklist-for-building-a-course-or-self-study-plan",
+    "href": "psychology/topics/educational-psychology.html#a-practical-checklist-for-building-a-course-or-self-study-plan",
+    "title": "Educational psychology",
+    "section": "A practical checklist for building a course or self-study plan",
+    "text": "A practical checklist for building a course or self-study plan\n\nDefine the learning targets as capabilities (what can the learner do).\nDesign practice that forces retrieval, not recognition.\nSpace practice over weeks; revisit core ideas repeatedly.\nUse feedback that diagnoses errors (not just “right/wrong”).\nMeasure learning after delay and under transfer tasks.\nKeep costs low: reduce friction, anxiety triggers, and pointless complexity."
+  },
+  {
+    "objectID": "psychology/topics/educational-psychology.html#suggested-anchors-to-read-later",
+    "href": "psychology/topics/educational-psychology.html#suggested-anchors-to-read-later",
+    "title": "Educational psychology",
+    "section": "Suggested anchors to read (later)",
+    "text": "Suggested anchors to read (later)\nIf you ever want a small bibliography page, typical anchors include work on: - cognitive load / worked examples, - retrieval practice and spacing, - formative assessment, - motivation and expectancy–value, - classroom climate and teacher effects."
   },
   {
     "objectID": "psychology/topics/personality.html",
