@@ -19,10 +19,28 @@ Systematic patterns in judgment and choice: mechanisms → predictions.
 
 ::: {.g-col-12 .g-col-md-4}
 ::: {.card}
+### Motivation & goals
+What drives effort, persistence, self-regulation, and goal pursuit.
+
+[Open →](motivation-goals.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
 ### Norms & groups
 Identity, conformity, polarization, cooperation, and conflict.
 
 [Open →](norms-groups.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Person perception
+How we infer traits, intentions, emotions, and “type” from thin slices.
+
+[Open →](person-perception.qmd)
 :::
 :::
 
@@ -35,12 +53,94 @@ Stable individual differences, traits, and how context interacts with them.
 :::
 :::
 
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Moral psychology
+Intuitions, reasoning, norms, and why people disagree about “right”.
+
+[Open →](moral-psychology.qmd)
+:::
 :::
 
-## How to use Topics
-For any topic page, try the same template:
-1) **Mechanism(s)**  
-2) **Predictions** (what changes when the environment changes?)  
-3) **Failure modes** (when the explanation breaks)  
-4) **Interventions** (what reliably shifts behavior?)  
-5) **Links** to Foundations and Overlaps
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Relationships
+Attachment, communication, conflict, and relationship maintenance.
+
+[Open →](relationships.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Development
+How cognition, emotion, and social behavior change across the life course.
+
+[Open →](development.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Educational psychology
+Learning in classrooms: instruction, motivation, and assessment.
+
+[Open →](educational-psychology.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Health psychology
+Behavior change, adherence, risk, prevention, and health contexts.
+
+[Open →](health-psychology.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Mental health
+Common problems, risk factors, and evidence-based ways of thinking about them.
+
+[Open →](mental-health.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Sleep & stress
+Stress responses, coping, fatigue, and sleep as a cognitive foundation.
+
+[Open →](sleep-stress.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Therapy tools
+Practical frameworks: CBT-style tools, habits, and structured reflection.
+
+[Open →](therapy-tools.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Addiction & compulsion
+Reinforcement loops, craving, habit formation, and relapse dynamics.
+
+[Open →](addition-compulsion.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Psychopathology
+Syndromes, symptom clusters, and clinical classification (overview).
+
+[Open →](psychopathology/index.qmd)
+:::
+:::
+
+:::

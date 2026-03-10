@@ -1,0 +1,174 @@
+---
+title: "Educational psychology"
+toc: true
+---
+
+::: {.callout-note}
+Common UG elective; also a core pillar in many PG tracks (education, learning sciences, educational measurement).
+:::
+
+## What it is
+Educational psychology studies how people learn in real instructional settings, and how we can design environments that reliably produce learning and development. It sits between **basic psychology** (memory, attention, motivation) and **applied decisions** (curriculum, assessment, classroom climate, policy).
+
+A useful working split is:
+- **Learning mechanisms**: what changes in the learner (knowledge, skills, habits, beliefs).
+- **Instructional design**: how tasks, explanations, practice, and feedback shape those changes.
+- **Motivation + context**: why learners engage (or avoid), and how classrooms and institutions amplify or block learning.
+- **Measurement**: how we infer learning and compare approaches without fooling ourselves.
+
+Links you’ll likely use a lot:
+- [Learning](../foundations/learning.qmd)
+- [Measurement](../foundations/measurement.qmd)
+- [Methods](../foundations/methods.qmd)
+- [Motivation & goals](motivation-goals.qmd)
+- [Development](development.qmd)
+- [How to study](../how-to-study.qmd)
+
+## Core questions
+### 1) What counts as learning?
+A simple but strict definition: learning is **a durable change in capability** (not just a temporary performance bump). This is why short-term “looks good in class” effects can vanish when tested after delay, under transfer, or without cues.
+
+### 2) Why do smart students fail to learn?
+Often it’s not raw ability. Common culprits are:
+- shallow processing (recognition mistaken for recall),
+- poor practice scheduling (cramming),
+- miscalibrated confidence,
+- attention/working-memory overload,
+- low expectancy/value or high perceived cost.
+
+### 3) What is the teacher (or system) optimizing?
+Sometimes it’s *grades* or *coverage*, not *retention* or *transfer*. Edu-psych tries to align incentives and measurement with the actual learning objective.
+
+## Learning frameworks used in education
+### Behaviorist (instruction as shaping)
+Reinforcement and practice matter. In modern form this shows up as:
+- deliberate practice routines,
+- immediate feedback for procedural skills,
+- structured scaffolding for early competence.
+
+### Cognitive / information-processing (instruction as memory engineering)
+The classroom is a pipeline from attention → working memory → long-term memory.
+Design implications: reduce noise, structure explanations, provide guided practice, and space retrieval.
+
+### Social-cognitive (learning as modeling + self-efficacy)
+Students learn by observing others and by beliefs about capability (self-efficacy). This connects strongly to:
+- teacher expectations,
+- peer effects,
+- identity and belonging,
+- attribution patterns after failure.
+
+### Constructivist / sociocultural (learning as meaning-making in context)
+Knowledge is built through activity and interaction; language and tools matter. This frames:
+- inquiry-based learning (done well vs done vaguely),
+- collaborative learning,
+- zone of proximal development / scaffolding.
+
+## Instructional design and cognitive load
+A practical lens is: “How much of the student’s limited processing is spent on *the target idea* vs *avoidable friction*?”
+
+Typical design levers:
+- **Worked examples → fading** (start with full solutions, gradually remove steps).
+- **Segmenting** (break complex explanations into chunks).
+- **Dual coding / modality** (use words + diagrams thoughtfully, not as decoration).
+- **Retrieval practice** (testing as learning, not only evaluation).
+- **Spacing + interleaving** (timing and mixture of practice).
+
+If you want the short bridge to your study page:
+- Retrieval + spacing are the “highest ROI” habits for most academic learning → see [How to study](../how-to-study.qmd).
+
+## Motivation, goals, and engagement
+Motivation can be treated as a choice under constraints: “Is effort worth it right now?”
+A common decomposition is:
+
+\[
+\text{Motivation} \approx \text{Expectancy} \times \text{Value} - \text{Cost}.
+\]
+
+Where:
+- **Expectancy**: “If I try, can I succeed?”
+- **Value**: “Does this matter to me?”
+- **Cost**: time, anxiety, effort, opportunity cost, ego threat.
+
+This connects to:
+- mastery vs performance goal orientations,
+- self-determination (autonomy/competence/relatedness),
+- growth mindset vs fixed beliefs (best treated as *beliefs + learning design*, not slogans),
+- feedback framing (information vs judgment).
+
+See: [Motivation & goals](motivation-goals.qmd), [Self-control](../foundations/self-control.qmd).
+
+## Assessment and measurement
+Assessment is not just grading; it is **information** that shapes behavior.
+
+Key splits:
+- **Formative**: feedback to improve learning during the process.
+- **Summative**: certification / selection.
+- **Criterion-referenced** vs **norm-referenced**: “did you meet a standard?” vs “where are you relative to others?”
+
+Measurement pitfalls that show up constantly:
+- teaching to the test can be good (if the test matches the construct) or destructive (if the test measures a narrow proxy),
+- reliability vs validity tradeoffs,
+- short-term performance inflation (especially when items mirror practice too closely),
+- fairness and differential item functioning across groups.
+
+See: [Measurement](../foundations/measurement.qmd).
+
+## Individual differences and support
+Educational psychology also covers why the same instruction produces different outcomes:
+- prior knowledge and skill prerequisites,
+- language background,
+- attention / executive function constraints,
+- anxiety and stress,
+- special educational needs / disability accommodations,
+- home environment and resource constraints.
+
+This overlaps with:
+- [Mental health](mental-health.qmd)
+- [Sleep & stress](sleep-stress.qmd)
+- [Development](development.qmd)
+
+## Classroom climate, relationships, and discipline
+Learning is social. The “hidden curriculum” includes norms, identity signals, and trust.
+
+Core ingredients:
+- psychological safety to ask questions,
+- teacher–student relationship quality,
+- norms around effort and help-seeking,
+- predictable routines and fair discipline,
+- peer effects (both academic and behavioral).
+
+(If you want the institutional angle later, this ties nicely to your overlaps pages on institutions and policy.)
+
+## Evidence: what counts as “works”?
+Edu-psych is full of interventions that *sound* right but fail under replication or scale. A useful hierarchy:
+- theory → mechanism → measurable intermediate outcomes → durable learning → transfer → real-world outcomes.
+
+Methods you’ll see often:
+- classroom RCTs with cluster randomization,
+- quasi-experiments (policy changes, cutoff rules),
+- longitudinal models (growth curves),
+- meta-analysis (with all the usual publication-bias worries).
+
+See: [Methods](../foundations/methods.qmd).
+
+## Common traps and myths
+- “Learning styles” as matching instruction to a fixed style (weak evidence; the better move is varied representations + retrieval).
+- Confusing engagement with learning (fun ≠ retention).
+- Overvaluing immediate fluency (easy processing today can mean weak memory tomorrow).
+- Treating motivation as a pure personality trait rather than a design + context outcome.
+
+## A practical checklist for building a course or self-study plan
+- Define the learning targets as capabilities (what can the learner *do*).
+- Design practice that forces retrieval, not recognition.
+- Space practice over weeks; revisit core ideas repeatedly.
+- Use feedback that diagnoses errors (not just “right/wrong”).
+- Measure learning after delay and under transfer tasks.
+- Keep costs low: reduce friction, anxiety triggers, and pointless complexity.
+
+## Suggested anchors to read (later)
+If you ever want a small bibliography page, typical anchors include work on:
+- cognitive load / worked examples,
+- retrieval practice and spacing,
+- formative assessment,
+- motivation and expectancy–value,
+- classroom climate and teacher effects.
