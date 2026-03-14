@@ -130,7 +130,7 @@ Practical frameworks: CBT-style tools, habits, and structured reflection.
 ### Addiction & compulsion
 Reinforcement loops, craving, habit formation, and relapse dynamics.
 
-[Open →](addition-compulsion.qmd)
+[Open →](addiction-compulsion.qmd)
 :::
 :::
 
