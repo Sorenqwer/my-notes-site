@@ -1,0 +1,23 @@
+---
+title: "Drug Markets"
+toc: true
+---
+
+Drug markets combine illicit exchange, dependence, enforcement, violence, and substitution. Policy pressure often changes market structure rather than simply eliminating demand.
+
+## Mechanisms to connect
+
+- demand persistence
+- enforcement displacement
+- violence under non-contractibility
+- risk premia and price changes
+
+## Models to try
+
+- illicit market equilibrium
+- enforcement and displacement models
+- network models of distribution
+
+## Notes to add later
+
+Add empirical examples, key definitions, and one diagram linking mechanism → prediction → measurement.

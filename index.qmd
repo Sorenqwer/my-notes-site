@@ -14,5 +14,5 @@ toc: false
 
 ---
 
-[Notes →](notes/index.qmd) · [Foundations →](foundations/index.qmd)· [PDFs →](pdfs/index.qmd)· [Criminology →](criminology/index.qmd)
+[Notes →](notes/index.qmd) · [Foundations →](foundations/index.qmd) · [PDFs →](pdfs/index.qmd) · [Criminology →](criminology/index.qmd) · [Psychology →](psychology/index.qmd)
 

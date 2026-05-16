@@ -1,0 +1,28 @@
+---
+title: "Modeling Checklist"
+toc: true
+---
+
+## 1. Actors
+
+Who chooses? Possible actors include offenders, victims, police, courts, regulators, firms, peers, and communities.
+
+## 2. Choices
+
+What are the available actions? Keep the first version small: offend/not offend, report/not report, inspect/not inspect.
+
+## 3. Information
+
+Who knows what? Separate objective risk from perceived risk, and private information from common knowledge.
+
+## 4. Payoffs
+
+What are the benefits, costs, sanctions, social rewards, stigma, or emotional payoffs?
+
+## 5. Timing
+
+Is the interaction simultaneous, sequential, repeated, or networked?
+
+## 6. Measurement
+
+What observable variable corresponds to the theoretical object? Recorded crime is not the same as true crime.

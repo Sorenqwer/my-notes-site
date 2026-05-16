@@ -1,0 +1,23 @@
+---
+title: "White-Collar Crime"
+toc: true
+---
+
+White-collar crime involves illegal or harmful conduct carried out through professional, organizational, or financial roles.
+
+## Mechanisms to connect
+
+- agency problems
+- moral neutralization
+- compliance incentives
+- regulatory capture
+
+## Models to try
+
+- principal-agent models
+- inspection and audit games
+- signaling and disclosure models
+
+## Notes to add later
+
+Add empirical examples, key definitions, and one diagram linking mechanism → prediction → measurement.

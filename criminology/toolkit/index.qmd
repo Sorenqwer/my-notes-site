@@ -1,0 +1,37 @@
+---
+title: "Toolkit"
+toc: true
+---
+
+This toolkit collects reusable concepts for reading, modeling, and writing criminology notes.
+
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Glossary
+Core terms used across criminology pages.
+
+[Open →](glossary.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Methods map
+Match research questions with empirical strategies.
+
+[Open →](methods-map.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Modeling checklist
+Turn a crime problem into a model.
+
+[Open →](modeling-checklist.qmd)
+:::
+:::
+
+:::

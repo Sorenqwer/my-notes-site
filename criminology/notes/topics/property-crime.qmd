@@ -1,0 +1,23 @@
+---
+title: "Property Crime"
+toc: true
+---
+
+Property crime concerns theft, burglary, damage, and taking. The central question is how opportunity and expected payoff interact with enforcement and guardianship.
+
+## Mechanisms to connect
+
+- target attractiveness
+- guardianship and surveillance
+- routine activity
+- displacement after intervention
+
+## Models to try
+
+- search and target-selection models
+- inspection games
+- spatial hot-spot models
+
+## Notes to add later
+
+Add empirical examples, key definitions, and one diagram linking mechanism → prediction → measurement.

@@ -448,5 +448,11 @@
   },
   "psychology/topics/educational-psychology.qmd": {
     "educational-psychology.html": "a393f8a9"
+  },
+  "psychology/overlaps/game-theory.qmd": {
+    "game-theory.html": "df433e74"
+  },
+  "psychology/topics/psychopathology/index.qmd": {
+    "index.html": "91028dc1"
   }
 }

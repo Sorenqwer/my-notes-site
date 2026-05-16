@@ -1,0 +1,20 @@
+---
+title: "Methods Map"
+toc: true
+---
+
+## Descriptive questions
+
+Use descriptive statistics, maps, trend plots, and typologies when the question is: *what is happening, where, and to whom?*
+
+## Mechanism questions
+
+Use theory-building, qualitative evidence, process tracing, or model-based explanation when the question is: *why does this pattern arise?*
+
+## Causal questions
+
+Use experiments, natural experiments, difference-in-differences, regression discontinuity, instrumental variables, or matching when the question is: *what is the effect of an intervention or exposure?*
+
+## Prediction questions
+
+Use supervised learning, validation, calibration checks, and error analysis when the question is: *who or where is at higher risk?*

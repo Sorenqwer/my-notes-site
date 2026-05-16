@@ -27,6 +27,6 @@ format:
     css: styles.css
     toc: false
     page-layout: full
-    title-block-manner: true
+    title-block-style: plain
 
 bibliography: references.bib

@@ -1,0 +1,23 @@
+---
+title: "Cybercrime"
+toc: true
+---
+
+Cybercrime is offending mediated by digital systems and shaped by scale, anonymity, automation, platform design, and jurisdictional limits.
+
+## Mechanisms to connect
+
+- low marginal cost of repeated attempts
+- anonymity and attribution problems
+- social engineering
+- cross-border enforcement frictions
+
+## Models to try
+
+- attacker-defender games
+- phishing as persuasion
+- inspection games with costly monitoring
+
+## Notes to add later
+
+Add empirical examples, key definitions, and one diagram linking mechanism → prediction → measurement.

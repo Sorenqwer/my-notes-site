@@ -1,0 +1,23 @@
+---
+title: "Violent Crime"
+toc: true
+---
+
+Violent crime involves the use or threat of physical force. It is best studied through individual propensity, situational triggers, social relations, and institutional response.
+
+## Mechanisms to connect
+
+- retaliation and status contests
+- alcohol, impulsivity, and self-control
+- peer effects and local norms
+- perceived legitimacy of police and courts
+
+## Models to try
+
+- repeated conflict and retaliation games
+- deterrence models with perceived sanction risk
+- network diffusion of violence
+
+## Notes to add later
+
+Add empirical examples, key definitions, and one diagram linking mechanism → prediction → measurement.

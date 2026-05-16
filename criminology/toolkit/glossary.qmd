@@ -1,0 +1,25 @@
+---
+title: "Glossary"
+toc: true
+---
+
+**Deterrence**  
+Sanctions reduce offending by changing expected costs.
+
+**Incapacitation**  
+Crime reduction by physically preventing offending, usually through custody or restriction.
+
+**Rehabilitation**  
+Interventions aimed at changing skills, constraints, preferences, or circumstances.
+
+**Legitimacy**  
+The perceived rightfulness of an authority or institution.
+
+**Routine activity theory**  
+Crime depends on the convergence of motivated offenders, suitable targets, and lack of capable guardianship.
+
+**Labeling**  
+Official or social reactions to deviance can alter identity, opportunity, and future behaviour.
+
+**Displacement**  
+A change in crime location, timing, target, method, or type after an intervention.

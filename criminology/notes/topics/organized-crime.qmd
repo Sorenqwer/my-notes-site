@@ -1,0 +1,23 @@
+---
+title: "Organized Crime"
+toc: true
+---
+
+Organized crime can be treated as illicit coordination under weak legal enforceability: groups govern exchange, maintain discipline, and adapt to enforcement.
+
+## Mechanisms to connect
+
+- reputation and internal discipline
+- violence as governance
+- corruption and protection
+- network resilience
+
+## Models to try
+
+- network games
+- repeated-game enforcement
+- principal-agent problems in illicit organizations
+
+## Notes to add later
+
+Add empirical examples, key definitions, and one diagram linking mechanism → prediction → measurement.

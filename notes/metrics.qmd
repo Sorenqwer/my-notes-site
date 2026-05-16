@@ -1,5 +1,21 @@
 ---
 title: "Metrics"
+toc: true
 ---
 
-Work in progress.
+Metrics pages collect small measurement concepts used across notes.
+
+## Common distinctions
+
+- **Rate vs count:** a count records events; a rate normalizes by population, exposure, time, or opportunity.
+- **Stock vs flow:** a stock is measured at a point in time; a flow is measured over an interval.
+- **Latent concept vs observed proxy:** the thing we care about may not be directly observed.
+- **Precision vs interpretability:** a complex measure may predict better but explain less clearly.
+
+## To add later
+
+- crime rates and reporting bias
+- belief accuracy
+- inequality measures
+- network centrality
+- welfare and payoff comparisons

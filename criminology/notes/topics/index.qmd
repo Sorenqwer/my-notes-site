@@ -3,11 +3,62 @@ title: "Topics"
 toc: true
 ---
 
-Topic pages are “application hubs” that connect mechanisms and models to specific crime domains.
+Topic pages are application hubs: each one connects a crime domain to mechanisms, models, institutions, and measurement problems.
 
-- `violent-crime.qmd` *(planned)*
-- `property-crime.qmd` *(planned)*
-- `organized-crime.qmd` *(planned)*
-- `white-collar.qmd` *(planned)*
-- `cybercrime.qmd` *(planned)*
-- `drug-markets.qmd` *(planned)*
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Violent Crime
+Violent crime involves the use or threat of physical force.
+
+[Open →](violent-crime.qmd)
+:::
+::: 
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Property Crime
+Property crime concerns theft, burglary, damage, and taking.
+
+[Open →](property-crime.qmd)
+:::
+::: 
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Organized Crime
+Organized crime can be treated as illicit coordination under weak legal enforceability: groups govern exchange, maintain discipline, and adapt to enforcement.
+
+[Open →](organized-crime.qmd)
+:::
+::: 
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### White-Collar Crime
+White-collar crime involves illegal or harmful conduct carried out through professional, organizational, or financial roles.
+
+[Open →](white-collar.qmd)
+:::
+::: 
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Cybercrime
+Cybercrime is offending mediated by digital systems and shaped by scale, anonymity, automation, platform design, and jurisdictional limits.
+
+[Open →](cybercrime.qmd)
+:::
+::: 
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Drug Markets
+Drug markets combine illicit exchange, dependence, enforcement, violence, and substitution.
+
+[Open →](drug-markets.qmd)
+:::
+::: 
+
+:::
