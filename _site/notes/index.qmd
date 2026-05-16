@@ -1,7 +1,0 @@
----
-title: "Notes"
----
-
-## Topics
-- [Game Theory](game-theory.qmd)
-- [Econometrics](metrics.qmd)

@@ -1,5 +1,0 @@
----
-title: "PDF Library"
----
-
-- [Example PDF](example.pdf)
