@@ -5,3 +5,38 @@ toc: false
 
 - [Game types](game-types/index.qmd)
 - [Equilibria](equilibriums/index.qmd)
+
+## A map of equilibrium concepts
+ 
+The diagram below shows how common equilibrium concepts relate to one another.
+ 
+```{mermaid}
+flowchart TD
+    A[Equilibrium Concepts] --> B[Nash Equilibrium]
+    A --> C[Bayesian Nash Equilibrium]
+    A --> D[Subgame Perfect Equilibrium]
+    A --> E[Refinements]
+    A --> F[Broader Notions]
+ 
+    D --> D1[Sequential Rationality]
+ 
+    E --> E1[Trembling-hand Perfect]
+    E --> E2[Proper Equilibrium]
+    E --> E3[Sequential Equilibrium]
+ 
+    F --> F1[Correlated Equilibrium]
+    F --> F2[Rationalizability]
+```
+
+## From basic equilibrium to refinements
+ 
+```{mermaid}
+flowchart LR
+    A[Nash Equilibrium] --> B[Dynamic Consistency Concerns]
+    B --> C[Subgame Perfect Equilibrium]
+    C --> D[Off-path Belief Concerns]
+    D --> E[Sequential Equilibrium]
+    C --> F[Robustness to Mistakes]
+    F --> G[Trembling-hand Perfect]
+    G --> H[Proper Equilibrium]
+```

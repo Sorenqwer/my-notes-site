@@ -17,6 +17,23 @@ $$
 
 In games, expected utility under a mixed strategy is exactly this idea: average the payoff over all possible outcomes, weighted by their probabilities.
 
+## From probability to posterior belief
+ 
+This diagram shows how conditional probability and Bayes' rule fit into belief updating.
+ 
+```{mermaid}
+flowchart TD
+    A[Sample Space] --> B[Events]
+    B --> C[Probabilities]
+    C --> D[Conditional Probability]
+    D --> E[Likelihood]
+    E --> F[Prior Belief]
+    F --> G[Bayes' Rule]
+    E --> G
+    G --> H[Posterior Belief]
+```
+
+
 ## Bayes’ rule
 For events $A$ and $B$ with $\mathbb{P}(B)>0$,
 
@@ -25,6 +42,18 @@ $$
 $$
 
 **Intuition.** Prior belief $\mathbb{P}(A)$ gets *updated* by how well $A$ predicts the evidence $B$.
+
+## Belief updating as a process
+ 
+```{mermaid}
+flowchart TD
+    A[Start with a Prior] --> B[Observe Evidence or Signal]
+    B --> C[Evaluate Signal Likelihood under Each State]
+    C --> D[Reweight Prior Beliefs]
+    D --> E[Obtain Posterior Belief]
+    E --> F[Use Posterior to Make Decisions]
+```
+
 
 ## Example: updating beliefs about types
 A player is either type $H$ or $L$. Prior $\mathbb{P}(H)=0.3$, $\mathbb{P}(L)=0.7$.

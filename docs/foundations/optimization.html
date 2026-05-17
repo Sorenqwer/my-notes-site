@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -160,8 +164,10 @@ window.Quarto = {
    
   <ul>
   <li><a href="#argmax-and-best-responses" id="toc-argmax-and-best-responses" class="nav-link active" data-scroll-target="#argmax-and-best-responses">Argmax and best responses</a></li>
+  <li><a href="#the-logic-of-optimization" id="toc-the-logic-of-optimization" class="nav-link" data-scroll-target="#the-logic-of-optimization">The logic of optimization</a></li>
   <li><a href="#foc-soc-unconstrained" id="toc-foc-soc-unconstrained" class="nav-link" data-scroll-target="#foc-soc-unconstrained">FOC / SOC (unconstrained)</a></li>
   <li><a href="#kkt-conditions-constrained" id="toc-kkt-conditions-constrained" class="nav-link" data-scroll-target="#kkt-conditions-constrained">KKT conditions (constrained)</a></li>
+  <li><a href="#constrained-optimization-at-a-glance" id="toc-constrained-optimization-at-a-glance" class="nav-link" data-scroll-target="#constrained-optimization-at-a-glance">Constrained optimization at a glance</a></li>
   <li><a href="#example-best-response-with-a-constraint" id="toc-example-best-response-with-a-constraint" class="nav-link" data-scroll-target="#example-best-response-with-a-constraint">Example: best response with a constraint</a></li>
   </ul>
 </nav>
@@ -196,6 +202,30 @@ BR_i(s_{-i})\in \arg\max_{s_i\in S_i} u_i(s_i,s_{-i}).
 \]</span></p>
 <p><strong>Intuition.</strong> A Nash equilibrium is a fixed point of best responses: everyone is already choosing an argmax given others.</p>
 </section>
+<section id="the-logic-of-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="the-logic-of-optimization">The logic of optimization</h2>
+<p>Many problems in economics and game theory can be organised as an optimization problem.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Start with an Objective] --&gt; B[Define the Choice Variable]
+    B --&gt; C[Identify Constraints]
+    C --&gt; D[Write Feasible Set]
+    D --&gt; E[Check Interior or Boundary Solution]
+    E --&gt; F[Apply FOC if Differentiable]
+    F --&gt; G[Apply SOC or Curvature Check]
+    G --&gt; H[Obtain Candidate Optimum]
+    H --&gt; I[Interpret Economically]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
 <section id="foc-soc-unconstrained" class="level2">
 <h2 class="anchored" data-anchor-id="foc-soc-unconstrained">FOC / SOC (unconstrained)</h2>
 <p>If <span class="math inline">\(f\)</span> is differentiable and you maximize over an interval, an interior optimum <span class="math inline">\(x^*\)</span> satisfies the <strong>first-order condition</strong> (FOC)</p>
@@ -217,6 +247,27 @@ f''(x^*)&lt;0.
 \]</span></p>
 <p>KKT conditions (at an optimum, under standard regularity assumptions) include: - <strong>Stationarity:</strong> <span class="math inline">\(\nabla_x \mathcal{L}(x^*,\lambda^*)=0\)</span> - <strong>Primal feasibility:</strong> <span class="math inline">\(g_j(x^*)\le 0\)</span> - <strong>Dual feasibility:</strong> <span class="math inline">\(\lambda_j^*\ge 0\)</span> - <strong>Complementary slackness:</strong> <span class="math inline">\(\lambda_j^* g_j(x^*)=0\)</span> for all <span class="math inline">\(j\)</span></p>
 <p><strong>Intuition.</strong> Constraints either bind (then they get a positive “shadow price” <span class="math inline">\(\lambda_j\)</span>) or don’t bind (then <span class="math inline">\(\lambda_j=0\)</span>).</p>
+</section>
+<section id="constrained-optimization-at-a-glance" class="level2">
+<h2 class="anchored" data-anchor-id="constrained-optimization-at-a-glance">Constrained optimization at a glance</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Objective Function] --&gt; C[Optimization Problem]
+    B[Constraint Set] --&gt; C
+    C --&gt; D[Feasible Choices]
+    D --&gt; E[Candidate Solution]
+    E --&gt; F[Check Optimality Conditions]
+    F --&gt; G[Interpret Shadow Value or Trade-off]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 </section>
 <section id="example-best-response-with-a-constraint" class="level2">
 <h2 class="anchored" data-anchor-id="example-best-response-with-a-constraint">Example: best response with a constraint</h2>

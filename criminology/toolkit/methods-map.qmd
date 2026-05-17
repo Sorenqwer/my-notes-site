@@ -2,6 +2,35 @@
 title: "Methods Map"
 toc: true
 ---
+## Matching questions to methods
+ 
+Different research questions call for different empirical strategies.
+
+```{mermaid}
+flowchart TD
+    A[Research Question] --> B[Describe Patterns]
+    A --> C[Explain Mechanisms]
+    A --> D[Estimate Causal Effects]
+    A --> E[Predict Risk or Outcomes]
+ 
+    B --> B1[Descriptive Statistics]
+    B --> B2[Maps and Trend Plots]
+    B --> B3[Typologies]
+ 
+    C --> C1[Theory Building]
+    C --> C2[Qualitative Evidence]
+    C --> C3[Process Tracing]
+ 
+    D --> D1[Experiments]
+    D --> D2[Natural Experiments]
+    D --> D3[Difference-in-Differences]
+    D --> D4[Regression Discontinuity]
+    D --> D5[Instrumental Variables]
+ 
+    E --> E1[Supervised Learning]
+    E --> E2[Validation and Calibration]
+    E --> E3[Forecast Comparison]
+```
 
 ## Descriptive questions
 

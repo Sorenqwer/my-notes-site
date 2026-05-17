@@ -6,6 +6,33 @@ toc: true
 This page treats “game theory” as a **language for interaction**, and psychology as the **engine of behavior**.
 The goal is to explain how real strategic behavior differs from idealized assumptions, using psychological mechanisms.
 
+## Where psychology and game theory meet
+ 
+Game theory and psychology overlap whenever behaviour depends on beliefs, social perception, or bounded reasoning.
+ 
+```{mermaid}
+flowchart TD
+    A[Game Theory] --> C[Strategic Interaction]
+    B[Psychology] --> C
+ 
+    A --> A1[Beliefs]
+    A --> A2[Incentives]
+    A --> A3[Equilibrium Reasoning]
+    A --> A4[Information Structure]
+ 
+    B --> B1[Preferences]
+    B --> B2[Heuristics and Biases]
+    B --> B3[Social Cognition]
+    B --> B4[Emotion and Motivation]
+ 
+    C --> D[Trust and Reciprocity]
+    C --> E[Bounded Rationality]
+    C --> F[Belief Formation]
+    C --> G[Cooperation and Conflict]
+    C --> H[Identity and Norms]
+```
+
+
 ## The simplest bridge
 Strategic interaction requires four psychological capacities:
 

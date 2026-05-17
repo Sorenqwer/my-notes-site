@@ -3,6 +3,44 @@ title: "Criminology notes"
 page-layout: full
 toc: true
 ---
+## How these criminology notes are organised
+ 
+The criminology section is organised around mechanisms, institutions, models, and substantive topics.
+ 
+```{mermaid}
+flowchart TD
+    A[Criminology] --> B[Foundations]
+    A --> C[Mechanisms]
+    A --> D[Institutions]
+    A --> E[Models]
+    A --> F[Topics]
+ 
+    B --> B1[Core Concepts]
+    B --> B2[Measurement]
+    B --> B3[Research Questions]
+ 
+    C --> C1[Self-control]
+    C --> C2[Opportunity and Routine Activity]
+    C --> C3[Legitimacy and Compliance]
+    C --> C4[Social Interactions]
+    C --> C5[Life-course Processes]
+ 
+    D --> D1[Policing]
+    D --> D2[Courts]
+    D --> D3[Corrections]
+ 
+    E --> E1[Inspection Games]
+    E --> E2[Co-offending Games]
+    E --> E3[Network Crime]
+    E --> E4[Reporting and Trust]
+ 
+    F --> F1[Violent Crime]
+    F --> F2[Property Crime]
+    F --> F3[White-collar Crime]
+    F --> F4[Cybercrime]
+    F --> F5[Organized Crime]
+    F --> F6[Drug Markets]
+```
 
 ## Start here
 - [Foundations](foundations/index.qmd)

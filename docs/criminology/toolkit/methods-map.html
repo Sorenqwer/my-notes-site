@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -130,7 +134,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#descriptive-questions" id="toc-descriptive-questions" class="nav-link active" data-scroll-target="#descriptive-questions">Descriptive questions</a></li>
+  <li><a href="#matching-questions-to-methods" id="toc-matching-questions-to-methods" class="nav-link active" data-scroll-target="#matching-questions-to-methods">Matching questions to methods</a></li>
+  <li><a href="#descriptive-questions" id="toc-descriptive-questions" class="nav-link" data-scroll-target="#descriptive-questions">Descriptive questions</a></li>
   <li><a href="#mechanism-questions" id="toc-mechanism-questions" class="nav-link" data-scroll-target="#mechanism-questions">Mechanism questions</a></li>
   <li><a href="#causal-questions" id="toc-causal-questions" class="nav-link" data-scroll-target="#causal-questions">Causal questions</a></li>
   <li><a href="#prediction-questions" id="toc-prediction-questions" class="nav-link" data-scroll-target="#prediction-questions">Prediction questions</a></li>
@@ -159,6 +164,44 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="matching-questions-to-methods" class="level2">
+<h2 class="anchored" data-anchor-id="matching-questions-to-methods">Matching questions to methods</h2>
+<p>Different research questions call for different empirical strategies.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Research Question] --&gt; B[Describe Patterns]
+    A --&gt; C[Explain Mechanisms]
+    A --&gt; D[Estimate Causal Effects]
+    A --&gt; E[Predict Risk or Outcomes]
+ 
+    B --&gt; B1[Descriptive Statistics]
+    B --&gt; B2[Maps and Trend Plots]
+    B --&gt; B3[Typologies]
+ 
+    C --&gt; C1[Theory Building]
+    C --&gt; C2[Qualitative Evidence]
+    C --&gt; C3[Process Tracing]
+ 
+    D --&gt; D1[Experiments]
+    D --&gt; D2[Natural Experiments]
+    D --&gt; D3[Difference-in-Differences]
+    D --&gt; D4[Regression Discontinuity]
+    D --&gt; D5[Instrumental Variables]
+ 
+    E --&gt; E1[Supervised Learning]
+    E --&gt; E2[Validation and Calibration]
+    E --&gt; E3[Forecast Comparison]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
 <section id="descriptive-questions" class="level2">
 <h2 class="anchored" data-anchor-id="descriptive-questions">Descriptive questions</h2>
 <p>Use descriptive statistics, maps, trend plots, and typologies when the question is: <em>what is happening, where, and to whom?</em></p>

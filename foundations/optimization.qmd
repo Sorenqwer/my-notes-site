@@ -12,6 +12,23 @@ $$
 
 **Intuition.** A Nash equilibrium is a fixed point of best responses: everyone is already choosing an argmax given others.
 
+## The logic of optimization
+ 
+Many problems in economics and game theory can be organised as an optimization problem.
+ 
+```{mermaid}
+flowchart TD
+    A[Start with an Objective] --> B[Define the Choice Variable]
+    B --> C[Identify Constraints]
+    C --> D[Write Feasible Set]
+    D --> E[Check Interior or Boundary Solution]
+    E --> F[Apply FOC if Differentiable]
+    F --> G[Apply SOC or Curvature Check]
+    G --> H[Obtain Candidate Optimum]
+    H --> I[Interpret Economically]
+```
+
+
 ## FOC / SOC (unconstrained)
 If $f$ is differentiable and you maximize over an interval, an interior optimum $x^*$ satisfies the **first-order condition** (FOC)
 
@@ -42,6 +59,18 @@ KKT conditions (at an optimum, under standard regularity assumptions) include:
 - **Complementary slackness:** $\lambda_j^* g_j(x^*)=0$ for all $j$
 
 **Intuition.** Constraints either bind (then they get a positive “shadow price” $\lambda_j$) or don’t bind (then $\lambda_j=0$).
+
+## Constrained optimization at a glance
+ 
+```{mermaid}
+flowchart LR
+    A[Objective Function] --> C[Optimization Problem]
+    B[Constraint Set] --> C
+    C --> D[Feasible Choices]
+    D --> E[Candidate Solution]
+    E --> F[Check Optimality Conditions]
+    F --> G[Interpret Shadow Value or Trade-off]
+```
 
 ## Example: best response with a constraint
 Maximize $f(x)=2x-x^2$ subject to $x\ge 0$.

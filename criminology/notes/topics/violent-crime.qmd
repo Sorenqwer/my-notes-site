@@ -5,6 +5,29 @@ toc: true
 
 Violent crime involves the use or threat of physical force. It is best studied through individual propensity, situational triggers, social relations, and institutional response.
 
+## A simple mechanism map
+ 
+Violent crime can be understood as the joint product of individual predispositions, situational triggers, and social environments.
+ 
+```{mermaid}
+flowchart TD
+    A[Individual Factors] --> D[Violent Behaviour]
+    B[Situational Triggers] --> D
+    C[Social Environment] --> D
+ 
+    A --> A1[Impulsivity]
+    A --> A2[Self-control]
+    A --> A3[Past Victimization]
+ 
+    B --> B1[Conflict]
+    B --> B2[Alcohol or Intoxication]
+    B --> B3[Weapon Availability]
+ 
+    C --> C1[Peer Effects]
+    C --> C2[Local Norms]
+    C --> C3[Low Trust and Weak Guardianship]
+```
+
 ## Mechanisms to connect
 
 - retaliation and status contests

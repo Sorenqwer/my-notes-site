@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -152,8 +156,60 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="../notes/game-types/index.html">Game types</a></li>
 <li><a href="../notes/equilibriums/index.html">Equilibria</a></li>
 </ul>
+<section id="a-map-of-equilibrium-concepts" class="level2">
+<h2 class="anchored" data-anchor-id="a-map-of-equilibrium-concepts">A map of equilibrium concepts</h2>
+<p>The diagram below shows how common equilibrium concepts relate to one another.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Equilibrium Concepts] --&gt; B[Nash Equilibrium]
+    A --&gt; C[Bayesian Nash Equilibrium]
+    A --&gt; D[Subgame Perfect Equilibrium]
+    A --&gt; E[Refinements]
+    A --&gt; F[Broader Notions]
+ 
+    D --&gt; D1[Sequential Rationality]
+ 
+    E --&gt; E1[Trembling-hand Perfect]
+    E --&gt; E2[Proper Equilibrium]
+    E --&gt; E3[Sequential Equilibrium]
+ 
+    F --&gt; F1[Correlated Equilibrium]
+    F --&gt; F2[Rationalizability]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="from-basic-equilibrium-to-refinements" class="level2">
+<h2 class="anchored" data-anchor-id="from-basic-equilibrium-to-refinements">From basic equilibrium to refinements</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Nash Equilibrium] --&gt; B[Dynamic Consistency Concerns]
+    B --&gt; C[Subgame Perfect Equilibrium]
+    C --&gt; D[Off-path Belief Concerns]
+    D --&gt; E[Sequential Equilibrium]
+    C --&gt; F[Robustness to Mistakes]
+    F --&gt; G[Trembling-hand Perfect]
+    G --&gt; H[Proper Equilibrium]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

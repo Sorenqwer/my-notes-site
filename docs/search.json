@@ -126,6 +126,13 @@
     "text": "Violent crime involves the use or threat of physical force. It is best studied through individual propensity, situational triggers, social relations, and institutional response."
   },
   {
+    "objectID": "criminology/notes/topics/violent-crime.html#a-simple-mechanism-map",
+    "href": "criminology/notes/topics/violent-crime.html#a-simple-mechanism-map",
+    "title": "Violent Crime",
+    "section": "A simple mechanism map",
+    "text": "A simple mechanism map\nViolent crime can be understood as the joint product of individual predispositions, situational triggers, and social environments.\n\n\n\n\n\nflowchart TD\n    A[Individual Factors] --&gt; D[Violent Behaviour]\n    B[Situational Triggers] --&gt; D\n    C[Social Environment] --&gt; D\n \n    A --&gt; A1[Impulsivity]\n    A --&gt; A2[Self-control]\n    A --&gt; A3[Past Victimization]\n \n    B --&gt; B1[Conflict]\n    B --&gt; B2[Alcohol or Intoxication]\n    B --&gt; B3[Weapon Availability]\n \n    C --&gt; C1[Peer Effects]\n    C --&gt; C2[Local Norms]\n    C --&gt; C3[Low Trust and Weak Guardianship]"
+  },
+  {
     "objectID": "criminology/notes/topics/violent-crime.html#mechanisms-to-connect",
     "href": "criminology/notes/topics/violent-crime.html#mechanisms-to-connect",
     "title": "Violent Crime",
@@ -186,14 +193,21 @@
     "href": "criminology/notes/index.html",
     "title": "Criminology notes",
     "section": "",
-    "text": "Foundations\nMechanisms\nInstitutions\nTopics\nModels"
+    "text": "The criminology section is organised around mechanisms, institutions, models, and substantive topics.\n\n\n\n\n\nflowchart TD\n    A[Criminology] --&gt; B[Foundations]\n    A --&gt; C[Mechanisms]\n    A --&gt; D[Institutions]\n    A --&gt; E[Models]\n    A --&gt; F[Topics]\n \n    B --&gt; B1[Core Concepts]\n    B --&gt; B2[Measurement]\n    B --&gt; B3[Research Questions]\n \n    C --&gt; C1[Self-control]\n    C --&gt; C2[Opportunity and Routine Activity]\n    C --&gt; C3[Legitimacy and Compliance]\n    C --&gt; C4[Social Interactions]\n    C --&gt; C5[Life-course Processes]\n \n    D --&gt; D1[Policing]\n    D --&gt; D2[Courts]\n    D --&gt; D3[Corrections]\n \n    E --&gt; E1[Inspection Games]\n    E --&gt; E2[Co-offending Games]\n    E --&gt; E3[Network Crime]\n    E --&gt; E4[Reporting and Trust]\n \n    F --&gt; F1[Violent Crime]\n    F --&gt; F2[Property Crime]\n    F --&gt; F3[White-collar Crime]\n    F --&gt; F4[Cybercrime]\n    F --&gt; F5[Organized Crime]\n    F --&gt; F6[Drug Markets]"
+  },
+  {
+    "objectID": "criminology/notes/index.html#how-these-criminology-notes-are-organised",
+    "href": "criminology/notes/index.html#how-these-criminology-notes-are-organised",
+    "title": "Criminology notes",
+    "section": "",
+    "text": "The criminology section is organised around mechanisms, institutions, models, and substantive topics.\n\n\n\n\n\nflowchart TD\n    A[Criminology] --&gt; B[Foundations]\n    A --&gt; C[Mechanisms]\n    A --&gt; D[Institutions]\n    A --&gt; E[Models]\n    A --&gt; F[Topics]\n \n    B --&gt; B1[Core Concepts]\n    B --&gt; B2[Measurement]\n    B --&gt; B3[Research Questions]\n \n    C --&gt; C1[Self-control]\n    C --&gt; C2[Opportunity and Routine Activity]\n    C --&gt; C3[Legitimacy and Compliance]\n    C --&gt; C4[Social Interactions]\n    C --&gt; C5[Life-course Processes]\n \n    D --&gt; D1[Policing]\n    D --&gt; D2[Courts]\n    D --&gt; D3[Corrections]\n \n    E --&gt; E1[Inspection Games]\n    E --&gt; E2[Co-offending Games]\n    E --&gt; E3[Network Crime]\n    E --&gt; E4[Reporting and Trust]\n \n    F --&gt; F1[Violent Crime]\n    F --&gt; F2[Property Crime]\n    F --&gt; F3[White-collar Crime]\n    F --&gt; F4[Cybercrime]\n    F --&gt; F5[Organized Crime]\n    F --&gt; F6[Drug Markets]"
   },
   {
     "objectID": "criminology/notes/index.html#start-here",
     "href": "criminology/notes/index.html#start-here",
     "title": "Criminology notes",
-    "section": "",
-    "text": "Foundations\nMechanisms\nInstitutions\nTopics\nModels"
+    "section": "Start here",
+    "text": "Start here\n\nFoundations\nMechanisms\nInstitutions\nTopics\nModels"
   },
   {
     "objectID": "criminology/notes/index.html#how-this-section-is-organized",
@@ -690,7 +704,63 @@
     "href": "notes/game-theory.html",
     "title": "Game Theory Notes",
     "section": "",
-    "text": "Here is an equation: \\(u(x)=\\log x\\).\nA displayed equation:\n\\[\n\\arg\\max_x \\; f(x)\n\\]"
+    "text": "Game theory studies situations in which outcomes depend not only on one person’s choice, but also on the choices, beliefs, and incentives of others. It is useful whenever behaviour is strategic: each player asks not only “What should I do?”, but also “What will others do, and what do they think I will do?”"
+  },
+  {
+    "objectID": "notes/game-theory.html#how-the-field-fits-together",
+    "href": "notes/game-theory.html#how-the-field-fits-together",
+    "title": "Game Theory Notes",
+    "section": "How the field fits together",
+    "text": "How the field fits together\nThe diagram below gives a simple map of the main branches of game theory.\n\n\n\n\n\nflowchart TD\n    A[Game Theory] --&gt; B[Static Games]\n    A --&gt; C[Dynamic Games]\n    A --&gt; D[Bayesian Games]\n    A --&gt; E[Repeated Games]\n    A --&gt; F[Cooperative and Bargaining Settings]\n \n    B --&gt; B1[Nash Equilibrium]\n    B --&gt; B2[Mixed Strategies]\n    B --&gt; B3[Best Responses]\n \n    C --&gt; C1[Extensive Form]\n    C --&gt; C2[Backward Induction]\n    C --&gt; C3[Subgame Perfect Equilibrium]\n \n    D --&gt; D1[Types]\n    D --&gt; D2[Beliefs]\n    D --&gt; D3[Bayesian Nash Equilibrium]\n \n    E --&gt; E1[Reputation]\n    E --&gt; E2[Punishment]\n    E --&gt; E3[Long-run Incentives]\n \n    F --&gt; F1[Bargaining]\n    F --&gt; F2[Coalitions]\n    F --&gt; F3[Surplus Division]\n\n\n\n\n\n\nThe point of the map is not to memorise labels. It is to see how each part of the subject changes one modelling ingredient: timing, information, repetition, or the possibility of binding cooperation."
+  },
+  {
+    "objectID": "notes/game-theory.html#basic-ingredients-of-a-game",
+    "href": "notes/game-theory.html#basic-ingredients-of-a-game",
+    "title": "Game Theory Notes",
+    "section": "Basic ingredients of a game",
+    "text": "Basic ingredients of a game\nA game normally specifies four objects:\n\nPlayers: the decision-makers.\nStrategies: the complete plans available to each player.\nInformation: what each player knows when they choose.\nPayoffs: how each player ranks the possible outcomes.\n\nA simple normal-form game can be written as\n\\[\nG = \\langle N, (S_i)_{i \\in N}, (u_i)_{i \\in N} \\rangle,\n\\]\nwhere \\(N\\) is the set of players, \\(S_i\\) is player \\(i\\)’s strategy set, and \\(u_i\\) is player \\(i\\)’s payoff function."
+  },
+  {
+    "objectID": "notes/game-theory.html#a-basic-workflow-for-analysing-a-game",
+    "href": "notes/game-theory.html#a-basic-workflow-for-analysing-a-game",
+    "title": "Game Theory Notes",
+    "section": "A basic workflow for analysing a game",
+    "text": "A basic workflow for analysing a game\nA useful way to study a game is to move from primitives to solution concept in a fixed order.\n\n\n\n\n\nflowchart TD\n    A[Identify Players] --&gt; B[Specify Actions or Strategies]\n    B --&gt; C[Specify Information]\n    C --&gt; D[Write Payoffs]\n    D --&gt; E[Identify Timing]\n    E --&gt; F[Choose Appropriate Solution Concept]\n    F --&gt; G[Solve for Equilibrium]\n    G --&gt; H[Interpret Behaviour and Comparative Statics]\n\n\n\n\n\n\nThis workflow prevents a common mistake: solving for an equilibrium before the game itself has been clearly defined."
+  },
+  {
+    "objectID": "notes/game-theory.html#nash-equilibrium",
+    "href": "notes/game-theory.html#nash-equilibrium",
+    "title": "Game Theory Notes",
+    "section": "Nash equilibrium",
+    "text": "Nash equilibrium\nA Nash equilibrium is a strategy profile in which every player is choosing a best response to the strategies of the others. Formally, a strategy profile \\(s^* = (s_1^*, \\ldots, s_n^*)\\) is a Nash equilibrium if, for every player \\(i\\),\n\\[\nu_i(s_i^*, s_{-i}^*) \\geq u_i(s_i, s_{-i}^*) \\quad \\text{for all } s_i \\in S_i.\n\\]\nThe key idea is mutual optimality: no player wants to deviate alone, taking the others’ strategies as given."
+  },
+  {
+    "objectID": "notes/game-theory.html#dynamic-games",
+    "href": "notes/game-theory.html#dynamic-games",
+    "title": "Game Theory Notes",
+    "section": "Dynamic games",
+    "text": "Dynamic games\nIn dynamic games, timing matters. A player may observe earlier actions before choosing later actions. This creates questions about credibility: a threat or promise must be optimal when the time comes to carry it out.\nBackward induction is the usual starting point. In finite games with perfect information, one solves from the end of the game backwards."
+  },
+  {
+    "objectID": "notes/game-theory.html#bayesian-games",
+    "href": "notes/game-theory.html#bayesian-games",
+    "title": "Game Theory Notes",
+    "section": "Bayesian games",
+    "text": "Bayesian games\nBayesian games introduce incomplete information. A player may not know another player’s type, payoff, cost, or intention. Instead, players hold beliefs over possible types and update those beliefs when signals or actions are observed."
+  },
+  {
+    "objectID": "notes/game-theory.html#repeated-games",
+    "href": "notes/game-theory.html#repeated-games",
+    "title": "Game Theory Notes",
+    "section": "Repeated games",
+    "text": "Repeated games\nRepeated games study how current behaviour can be shaped by future consequences. Cooperation may be sustained not because players are kind, but because deviation today can trigger punishment tomorrow."
+  },
+  {
+    "objectID": "notes/game-theory.html#related-pages",
+    "href": "notes/game-theory.html#related-pages",
+    "title": "Game Theory Notes",
+    "section": "Related pages",
+    "text": "Related pages\n\nGame types\nEquilibrium concepts\nDynamic reasoning\nProbability and belief updating\nOptimization"
   },
   {
     "objectID": "notes/game-types/screening-mechanism.html",
@@ -2765,6 +2835,13 @@
     "text": "This page treats “game theory” as a language for interaction, and psychology as the engine of behavior. The goal is to explain how real strategic behavior differs from idealized assumptions, using psychological mechanisms."
   },
   {
+    "objectID": "psychology/overlaps/game-theory.html#where-psychology-and-game-theory-meet",
+    "href": "psychology/overlaps/game-theory.html#where-psychology-and-game-theory-meet",
+    "title": "Psychology × strategic interaction",
+    "section": "Where psychology and game theory meet",
+    "text": "Where psychology and game theory meet\nGame theory and psychology overlap whenever behaviour depends on beliefs, social perception, or bounded reasoning.\n\n\n\n\n\nflowchart TD\n    A[Game Theory] --&gt; C[Strategic Interaction]\n    B[Psychology] --&gt; C\n \n    A --&gt; A1[Beliefs]\n    A --&gt; A2[Incentives]\n    A --&gt; A3[Equilibrium Reasoning]\n    A --&gt; A4[Information Structure]\n \n    B --&gt; B1[Preferences]\n    B --&gt; B2[Heuristics and Biases]\n    B --&gt; B3[Social Cognition]\n    B --&gt; B4[Emotion and Motivation]\n \n    C --&gt; D[Trust and Reciprocity]\n    C --&gt; E[Bounded Rationality]\n    C --&gt; F[Belief Formation]\n    C --&gt; G[Cooperation and Conflict]\n    C --&gt; H[Identity and Norms]"
+  },
+  {
     "objectID": "psychology/overlaps/game-theory.html#the-simplest-bridge",
     "href": "psychology/overlaps/game-theory.html#the-simplest-bridge",
     "title": "Psychology × strategic interaction",
@@ -4228,11 +4305,25 @@
     "text": "Expectation\nIf a random variable \\(X\\) takes values \\(x_k\\) with probabilities \\(p_k\\), then\n\\[\n\\mathbb{E}[X]=\\sum_k x_k p_k.\n\\]\nIn games, expected utility under a mixed strategy is exactly this idea: average the payoff over all possible outcomes, weighted by their probabilities."
   },
   {
+    "objectID": "foundations/probability.html#from-probability-to-posterior-belief",
+    "href": "foundations/probability.html#from-probability-to-posterior-belief",
+    "title": "Probability",
+    "section": "From probability to posterior belief",
+    "text": "From probability to posterior belief\nThis diagram shows how conditional probability and Bayes’ rule fit into belief updating.\n\n\n\n\n\nflowchart TD\n    A[Sample Space] --&gt; B[Events]\n    B --&gt; C[Probabilities]\n    C --&gt; D[Conditional Probability]\n    D --&gt; E[Likelihood]\n    E --&gt; F[Prior Belief]\n    F --&gt; G[Bayes' Rule]\n    E --&gt; G\n    G --&gt; H[Posterior Belief]"
+  },
+  {
     "objectID": "foundations/probability.html#bayes-rule",
     "href": "foundations/probability.html#bayes-rule",
     "title": "Probability",
     "section": "Bayes’ rule",
     "text": "Bayes’ rule\nFor events \\(A\\) and \\(B\\) with \\(\\mathbb{P}(B)&gt;0\\),\n\\[\n\\mathbb{P}(A\\mid B)=\\frac{\\mathbb{P}(B\\mid A)\\,\\mathbb{P}(A)}{\\mathbb{P}(B)}.\n\\]\nIntuition. Prior belief \\(\\mathbb{P}(A)\\) gets updated by how well \\(A\\) predicts the evidence \\(B\\)."
+  },
+  {
+    "objectID": "foundations/probability.html#belief-updating-as-a-process",
+    "href": "foundations/probability.html#belief-updating-as-a-process",
+    "title": "Probability",
+    "section": "Belief updating as a process",
+    "text": "Belief updating as a process\n\n\n\n\n\nflowchart TD\n    A[Start with a Prior] --&gt; B[Observe Evidence or Signal]\n    B --&gt; C[Evaluate Signal Likelihood under Each State]\n    C --&gt; D[Reweight Prior Beliefs]\n    D --&gt; E[Obtain Posterior Belief]\n    E --&gt; F[Use Posterior to Make Decisions]"
   },
   {
     "objectID": "foundations/probability.html#example-updating-beliefs-about-types",
@@ -4256,6 +4347,13 @@
     "text": "A best response is an optimization problem. Given others’ strategies \\(s_{-i}\\), player \\(i\\) chooses\n\\[\nBR_i(s_{-i})\\in \\arg\\max_{s_i\\in S_i} u_i(s_i,s_{-i}).\n\\]\nIntuition. A Nash equilibrium is a fixed point of best responses: everyone is already choosing an argmax given others."
   },
   {
+    "objectID": "foundations/optimization.html#the-logic-of-optimization",
+    "href": "foundations/optimization.html#the-logic-of-optimization",
+    "title": "Optimization",
+    "section": "The logic of optimization",
+    "text": "The logic of optimization\nMany problems in economics and game theory can be organised as an optimization problem.\n\n\n\n\n\nflowchart TD\n    A[Start with an Objective] --&gt; B[Define the Choice Variable]\n    B --&gt; C[Identify Constraints]\n    C --&gt; D[Write Feasible Set]\n    D --&gt; E[Check Interior or Boundary Solution]\n    E --&gt; F[Apply FOC if Differentiable]\n    F --&gt; G[Apply SOC or Curvature Check]\n    G --&gt; H[Obtain Candidate Optimum]\n    H --&gt; I[Interpret Economically]"
+  },
+  {
     "objectID": "foundations/optimization.html#foc-soc-unconstrained",
     "href": "foundations/optimization.html#foc-soc-unconstrained",
     "title": "Optimization",
@@ -4268,6 +4366,13 @@
     "title": "Optimization",
     "section": "KKT conditions (constrained)",
     "text": "KKT conditions (constrained)\nFor maximizing \\(f(x)\\) subject to inequality constraints \\(g_j(x)\\le 0\\), define the Lagrangian\n\\[\n\\mathcal{L}(x,\\lambda)=f(x)-\\sum_{j}\\lambda_j g_j(x),\n\\qquad \\lambda_j\\ge 0.\n\\]\nKKT conditions (at an optimum, under standard regularity assumptions) include: - Stationarity: \\(\\nabla_x \\mathcal{L}(x^*,\\lambda^*)=0\\) - Primal feasibility: \\(g_j(x^*)\\le 0\\) - Dual feasibility: \\(\\lambda_j^*\\ge 0\\) - Complementary slackness: \\(\\lambda_j^* g_j(x^*)=0\\) for all \\(j\\)\nIntuition. Constraints either bind (then they get a positive “shadow price” \\(\\lambda_j\\)) or don’t bind (then \\(\\lambda_j=0\\))."
+  },
+  {
+    "objectID": "foundations/optimization.html#constrained-optimization-at-a-glance",
+    "href": "foundations/optimization.html#constrained-optimization-at-a-glance",
+    "title": "Optimization",
+    "section": "Constrained optimization at a glance",
+    "text": "Constrained optimization at a glance\n\n\n\n\n\nflowchart LR\n    A[Objective Function] --&gt; C[Optimization Problem]\n    B[Constraint Set] --&gt; C\n    C --&gt; D[Feasible Choices]\n    D --&gt; E[Candidate Solution]\n    E --&gt; F[Check Optimality Conditions]\n    F --&gt; G[Interpret Shadow Value or Trade-off]"
   },
   {
     "objectID": "foundations/optimization.html#example-best-response-with-a-constraint",
@@ -4289,6 +4394,20 @@
     "title": "Dynamic reasoning",
     "section": "",
     "text": "In finite game trees with perfect information, backward induction solves from the end:\n\ndecide optimal actions at the last decision nodes\n\nreplace subgames by their continuation payoffs\n\nmove backward to the start\n\nIntuition. Future choices discipline earlier choices."
+  },
+  {
+    "objectID": "foundations/dynamic-reasoning.html#solving-a-dynamic-game-by-backward-induction",
+    "href": "foundations/dynamic-reasoning.html#solving-a-dynamic-game-by-backward-induction",
+    "title": "Dynamic reasoning",
+    "section": "Solving a dynamic game by backward induction",
+    "text": "Solving a dynamic game by backward induction\nBackward induction solves a game by reasoning from the end of the game back to the beginning.\n\n\n\n\n\nflowchart TD\n    A[Start at Terminal Nodes] --&gt; B[Find Last Mover's Optimal Action]\n    B --&gt; C[Replace Continuation Game with Resulting Payoffs]\n    C --&gt; D[Move to Previous Decision Node]\n    D --&gt; E[Find That Player's Optimal Action]\n    E --&gt; F[Repeat This Process]\n    F --&gt; G[Reach the Initial Node]\n    G --&gt; H[Obtain the Subgame Perfect Equilibrium Path]"
+  },
+  {
+    "objectID": "foundations/dynamic-reasoning.html#why-timing-matters",
+    "href": "foundations/dynamic-reasoning.html#why-timing-matters",
+    "title": "Dynamic reasoning",
+    "section": "Why timing matters",
+    "text": "Why timing matters\n\n\n\n\n\nflowchart LR\n    A[Timing of Moves] --&gt; B[Who Moves When]\n    B --&gt; C[What Each Player Knows]\n    C --&gt; D[What Actions Are Credible]\n    D --&gt; E[Equilibrium Outcome]"
   },
   {
     "objectID": "foundations/dynamic-reasoning.html#a-tiny-game-tree-diagram",
@@ -4968,6 +5087,20 @@
     "title": "Notes",
     "section": "",
     "text": "Game types\nEquilibria"
+  },
+  {
+    "objectID": "notes/index.html#a-map-of-equilibrium-concepts",
+    "href": "notes/index.html#a-map-of-equilibrium-concepts",
+    "title": "Notes",
+    "section": "A map of equilibrium concepts",
+    "text": "A map of equilibrium concepts\nThe diagram below shows how common equilibrium concepts relate to one another.\n\n\n\n\n\nflowchart TD\n    A[Equilibrium Concepts] --&gt; B[Nash Equilibrium]\n    A --&gt; C[Bayesian Nash Equilibrium]\n    A --&gt; D[Subgame Perfect Equilibrium]\n    A --&gt; E[Refinements]\n    A --&gt; F[Broader Notions]\n \n    D --&gt; D1[Sequential Rationality]\n \n    E --&gt; E1[Trembling-hand Perfect]\n    E --&gt; E2[Proper Equilibrium]\n    E --&gt; E3[Sequential Equilibrium]\n \n    F --&gt; F1[Correlated Equilibrium]\n    F --&gt; F2[Rationalizability]"
+  },
+  {
+    "objectID": "notes/index.html#from-basic-equilibrium-to-refinements",
+    "href": "notes/index.html#from-basic-equilibrium-to-refinements",
+    "title": "Notes",
+    "section": "From basic equilibrium to refinements",
+    "text": "From basic equilibrium to refinements\n\n\n\n\n\nflowchart LR\n    A[Nash Equilibrium] --&gt; B[Dynamic Consistency Concerns]\n    B --&gt; C[Subgame Perfect Equilibrium]\n    C --&gt; D[Off-path Belief Concerns]\n    D --&gt; E[Sequential Equilibrium]\n    C --&gt; F[Robustness to Mistakes]\n    F --&gt; G[Trembling-hand Perfect]\n    G --&gt; H[Proper Equilibrium]"
   },
   {
     "objectID": "notes/metrics.html",
@@ -5702,14 +5835,21 @@
     "href": "criminology/toolkit/methods-map.html",
     "title": "Methods Map",
     "section": "",
-    "text": "Use descriptive statistics, maps, trend plots, and typologies when the question is: what is happening, where, and to whom?"
+    "text": "Different research questions call for different empirical strategies.\n\n\n\n\n\nflowchart TD\n    A[Research Question] --&gt; B[Describe Patterns]\n    A --&gt; C[Explain Mechanisms]\n    A --&gt; D[Estimate Causal Effects]\n    A --&gt; E[Predict Risk or Outcomes]\n \n    B --&gt; B1[Descriptive Statistics]\n    B --&gt; B2[Maps and Trend Plots]\n    B --&gt; B3[Typologies]\n \n    C --&gt; C1[Theory Building]\n    C --&gt; C2[Qualitative Evidence]\n    C --&gt; C3[Process Tracing]\n \n    D --&gt; D1[Experiments]\n    D --&gt; D2[Natural Experiments]\n    D --&gt; D3[Difference-in-Differences]\n    D --&gt; D4[Regression Discontinuity]\n    D --&gt; D5[Instrumental Variables]\n \n    E --&gt; E1[Supervised Learning]\n    E --&gt; E2[Validation and Calibration]\n    E --&gt; E3[Forecast Comparison]"
+  },
+  {
+    "objectID": "criminology/toolkit/methods-map.html#matching-questions-to-methods",
+    "href": "criminology/toolkit/methods-map.html#matching-questions-to-methods",
+    "title": "Methods Map",
+    "section": "",
+    "text": "Different research questions call for different empirical strategies.\n\n\n\n\n\nflowchart TD\n    A[Research Question] --&gt; B[Describe Patterns]\n    A --&gt; C[Explain Mechanisms]\n    A --&gt; D[Estimate Causal Effects]\n    A --&gt; E[Predict Risk or Outcomes]\n \n    B --&gt; B1[Descriptive Statistics]\n    B --&gt; B2[Maps and Trend Plots]\n    B --&gt; B3[Typologies]\n \n    C --&gt; C1[Theory Building]\n    C --&gt; C2[Qualitative Evidence]\n    C --&gt; C3[Process Tracing]\n \n    D --&gt; D1[Experiments]\n    D --&gt; D2[Natural Experiments]\n    D --&gt; D3[Difference-in-Differences]\n    D --&gt; D4[Regression Discontinuity]\n    D --&gt; D5[Instrumental Variables]\n \n    E --&gt; E1[Supervised Learning]\n    E --&gt; E2[Validation and Calibration]\n    E --&gt; E3[Forecast Comparison]"
   },
   {
     "objectID": "criminology/toolkit/methods-map.html#descriptive-questions",
     "href": "criminology/toolkit/methods-map.html#descriptive-questions",
     "title": "Methods Map",
-    "section": "",
-    "text": "Use descriptive statistics, maps, trend plots, and typologies when the question is: what is happening, where, and to whom?"
+    "section": "Descriptive questions",
+    "text": "Descriptive questions\nUse descriptive statistics, maps, trend plots, and typologies when the question is: what is happening, where, and to whom?"
   },
   {
     "objectID": "criminology/toolkit/methods-map.html#mechanism-questions",

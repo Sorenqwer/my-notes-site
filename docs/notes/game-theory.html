@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -154,9 +158,24 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#how-the-field-fits-together" id="toc-how-the-field-fits-together" class="nav-link active" data-scroll-target="#how-the-field-fits-together">How the field fits together</a></li>
+  <li><a href="#basic-ingredients-of-a-game" id="toc-basic-ingredients-of-a-game" class="nav-link" data-scroll-target="#basic-ingredients-of-a-game">Basic ingredients of a game</a></li>
+  <li><a href="#a-basic-workflow-for-analysing-a-game" id="toc-a-basic-workflow-for-analysing-a-game" class="nav-link" data-scroll-target="#a-basic-workflow-for-analysing-a-game">A basic workflow for analysing a game</a></li>
+  <li><a href="#nash-equilibrium" id="toc-nash-equilibrium" class="nav-link" data-scroll-target="#nash-equilibrium">Nash equilibrium</a></li>
+  <li><a href="#dynamic-games" id="toc-dynamic-games" class="nav-link" data-scroll-target="#dynamic-games">Dynamic games</a></li>
+  <li><a href="#bayesian-games" id="toc-bayesian-games" class="nav-link" data-scroll-target="#bayesian-games">Bayesian games</a></li>
+  <li><a href="#repeated-games" id="toc-repeated-games" class="nav-link" data-scroll-target="#repeated-games">Repeated games</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -165,7 +184,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -177,13 +196,121 @@ window.Quarto = {
 </header>
 
 
-<p>Here is an equation: <span class="math inline">\(u(x)=\log x\)</span>.</p>
-<p>A displayed equation:</p>
+<p>Game theory studies situations in which outcomes depend not only on one person’s choice, but also on the choices, beliefs, and incentives of others. It is useful whenever behaviour is strategic: each player asks not only “What should I do?”, but also “What will others do, and what do they think I will do?”</p>
+<section id="how-the-field-fits-together" class="level2">
+<h2 class="anchored" data-anchor-id="how-the-field-fits-together">How the field fits together</h2>
+<p>The diagram below gives a simple map of the main branches of game theory.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Game Theory] --&gt; B[Static Games]
+    A --&gt; C[Dynamic Games]
+    A --&gt; D[Bayesian Games]
+    A --&gt; E[Repeated Games]
+    A --&gt; F[Cooperative and Bargaining Settings]
+ 
+    B --&gt; B1[Nash Equilibrium]
+    B --&gt; B2[Mixed Strategies]
+    B --&gt; B3[Best Responses]
+ 
+    C --&gt; C1[Extensive Form]
+    C --&gt; C2[Backward Induction]
+    C --&gt; C3[Subgame Perfect Equilibrium]
+ 
+    D --&gt; D1[Types]
+    D --&gt; D2[Beliefs]
+    D --&gt; D3[Bayesian Nash Equilibrium]
+ 
+    E --&gt; E1[Reputation]
+    E --&gt; E2[Punishment]
+    E --&gt; E3[Long-run Incentives]
+ 
+    F --&gt; F1[Bargaining]
+    F --&gt; F2[Coalitions]
+    F --&gt; F3[Surplus Division]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The point of the map is not to memorise labels. It is to see how each part of the subject changes one modelling ingredient: timing, information, repetition, or the possibility of binding cooperation.</p>
+</section>
+<section id="basic-ingredients-of-a-game" class="level2">
+<h2 class="anchored" data-anchor-id="basic-ingredients-of-a-game">Basic ingredients of a game</h2>
+<p>A game normally specifies four objects:</p>
+<ol type="1">
+<li><strong>Players</strong>: the decision-makers.</li>
+<li><strong>Strategies</strong>: the complete plans available to each player.</li>
+<li><strong>Information</strong>: what each player knows when they choose.</li>
+<li><strong>Payoffs</strong>: how each player ranks the possible outcomes.</li>
+</ol>
+<p>A simple normal-form game can be written as</p>
 <p><span class="math display">\[
-\arg\max_x \; f(x)
+G = \langle N, (S_i)_{i \in N}, (u_i)_{i \in N} \rangle,
 \]</span></p>
+<p>where <span class="math inline">\(N\)</span> is the set of players, <span class="math inline">\(S_i\)</span> is player <span class="math inline">\(i\)</span>’s strategy set, and <span class="math inline">\(u_i\)</span> is player <span class="math inline">\(i\)</span>’s payoff function.</p>
+</section>
+<section id="a-basic-workflow-for-analysing-a-game" class="level2">
+<h2 class="anchored" data-anchor-id="a-basic-workflow-for-analysing-a-game">A basic workflow for analysing a game</h2>
+<p>A useful way to study a game is to move from primitives to solution concept in a fixed order.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Identify Players] --&gt; B[Specify Actions or Strategies]
+    B --&gt; C[Specify Information]
+    C --&gt; D[Write Payoffs]
+    D --&gt; E[Identify Timing]
+    E --&gt; F[Choose Appropriate Solution Concept]
+    F --&gt; G[Solve for Equilibrium]
+    G --&gt; H[Interpret Behaviour and Comparative Statics]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This workflow prevents a common mistake: solving for an equilibrium before the game itself has been clearly defined.</p>
+</section>
+<section id="nash-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="nash-equilibrium">Nash equilibrium</h2>
+<p>A Nash equilibrium is a strategy profile in which every player is choosing a best response to the strategies of the others. Formally, a strategy profile <span class="math inline">\(s^* = (s_1^*, \ldots, s_n^*)\)</span> is a Nash equilibrium if, for every player <span class="math inline">\(i\)</span>,</p>
+<p><span class="math display">\[
+u_i(s_i^*, s_{-i}^*) \geq u_i(s_i, s_{-i}^*) \quad \text{for all } s_i \in S_i.
+\]</span></p>
+<p>The key idea is mutual optimality: no player wants to deviate alone, taking the others’ strategies as given.</p>
+</section>
+<section id="dynamic-games" class="level2">
+<h2 class="anchored" data-anchor-id="dynamic-games">Dynamic games</h2>
+<p>In dynamic games, timing matters. A player may observe earlier actions before choosing later actions. This creates questions about credibility: a threat or promise must be optimal when the time comes to carry it out.</p>
+<p>Backward induction is the usual starting point. In finite games with perfect information, one solves from the end of the game backwards.</p>
+</section>
+<section id="bayesian-games" class="level2">
+<h2 class="anchored" data-anchor-id="bayesian-games">Bayesian games</h2>
+<p>Bayesian games introduce incomplete information. A player may not know another player’s type, payoff, cost, or intention. Instead, players hold beliefs over possible types and update those beliefs when signals or actions are observed.</p>
+</section>
+<section id="repeated-games" class="level2">
+<h2 class="anchored" data-anchor-id="repeated-games">Repeated games</h2>
+<p>Repeated games study how current behaviour can be shaped by future consequences. Cooperation may be sustained not because players are kind, but because deviation today can trigger punishment tomorrow.</p>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../notes/game-types/index.html">Game types</a></li>
+<li><a href="../notes/equilibriums/index.html">Equilibrium concepts</a></li>
+<li><a href="../foundations/dynamic-reasoning.html">Dynamic reasoning</a></li>
+<li><a href="../foundations/probability.html">Probability and belief updating</a></li>
+<li><a href="../foundations/optimization.html">Optimization</a></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

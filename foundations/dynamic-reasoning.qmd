@@ -12,6 +12,32 @@ In finite game trees with perfect information, **backward induction** solves fro
 
 **Intuition.** Future choices discipline earlier choices.
 
+## Solving a dynamic game by backward induction
+ 
+Backward induction solves a game by reasoning from the end of the game back to the beginning.
+ 
+```{mermaid}
+flowchart TD
+    A[Start at Terminal Nodes] --> B[Find Last Mover's Optimal Action]
+    B --> C[Replace Continuation Game with Resulting Payoffs]
+    C --> D[Move to Previous Decision Node]
+    D --> E[Find That Player's Optimal Action]
+    E --> F[Repeat This Process]
+    F --> G[Reach the Initial Node]
+    G --> H[Obtain the Subgame Perfect Equilibrium Path]
+```
+
+## Why timing matters
+ 
+```{mermaid}
+flowchart LR
+    A[Timing of Moves] --> B[Who Moves When]
+    B --> C[What Each Player Knows]
+    C --> D[What Actions Are Credible]
+    D --> E[Equilibrium Outcome]
+```
+
+
 ## A tiny game tree (diagram)
 Below is a simple sequential choice: Player 1 chooses $A$ or $B$, then Player 2 chooses $L$ or $R$.
 

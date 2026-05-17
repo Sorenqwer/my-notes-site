@@ -164,6 +164,8 @@ window.Quarto = {
    
   <ul>
   <li><a href="#backward-induction-extensive-form-games" id="toc-backward-induction-extensive-form-games" class="nav-link active" data-scroll-target="#backward-induction-extensive-form-games">Backward induction (extensive-form games)</a></li>
+  <li><a href="#solving-a-dynamic-game-by-backward-induction" id="toc-solving-a-dynamic-game-by-backward-induction" class="nav-link" data-scroll-target="#solving-a-dynamic-game-by-backward-induction">Solving a dynamic game by backward induction</a></li>
+  <li><a href="#why-timing-matters" id="toc-why-timing-matters" class="nav-link" data-scroll-target="#why-timing-matters">Why timing matters</a></li>
   <li><a href="#a-tiny-game-tree-diagram" id="toc-a-tiny-game-tree-diagram" class="nav-link" data-scroll-target="#a-tiny-game-tree-diagram">A tiny game tree (diagram)</a></li>
   <li><a href="#one-step-backward-induction" id="toc-one-step-backward-induction" class="nav-link" data-scroll-target="#one-step-backward-induction">One-step backward induction</a></li>
   <li><a href="#bellman-idea-optional-for-dynamic-optimization" id="toc-bellman-idea-optional-for-dynamic-optimization" class="nav-link" data-scroll-target="#bellman-idea-optional-for-dynamic-optimization">Bellman idea (optional, for dynamic optimization)</a></li>
@@ -203,6 +205,48 @@ window.Quarto = {
 <li>move backward to the start</li>
 </ol>
 <p><strong>Intuition.</strong> Future choices discipline earlier choices.</p>
+</section>
+<section id="solving-a-dynamic-game-by-backward-induction" class="level2">
+<h2 class="anchored" data-anchor-id="solving-a-dynamic-game-by-backward-induction">Solving a dynamic game by backward induction</h2>
+<p>Backward induction solves a game by reasoning from the end of the game back to the beginning.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Start at Terminal Nodes] --&gt; B[Find Last Mover's Optimal Action]
+    B --&gt; C[Replace Continuation Game with Resulting Payoffs]
+    C --&gt; D[Move to Previous Decision Node]
+    D --&gt; E[Find That Player's Optimal Action]
+    E --&gt; F[Repeat This Process]
+    F --&gt; G[Reach the Initial Node]
+    G --&gt; H[Obtain the Subgame Perfect Equilibrium Path]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="why-timing-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-timing-matters">Why timing matters</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Timing of Moves] --&gt; B[Who Moves When]
+    B --&gt; C[What Each Player Knows]
+    C --&gt; D[What Actions Are Credible]
+    D --&gt; E[Equilibrium Outcome]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 </section>
 <section id="a-tiny-game-tree-diagram" class="level2">
 <h2 class="anchored" data-anchor-id="a-tiny-game-tree-diagram">A tiny game tree (diagram)</h2>
