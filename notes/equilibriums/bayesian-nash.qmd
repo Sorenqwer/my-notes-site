@@ -1,73 +1,322 @@
 ---
-title: "Bayesian Nash equilibrium (BNE)"
+title: "Bayesian Nash Equilibrium"
 toc: true
+page-layout: full
 ---
 
-## What it is
-A **Bayesian game** has private information (types). A **Bayesian Nash equilibrium** is a strategy profile where each type best-responds given beliefs about others’ types.
+Bayesian Nash equilibrium is the basic equilibrium concept for static games with incomplete information. It requires every type of every player to choose a best response, given beliefs about other players' types and strategies.
 
-Formally, each player $i$ has type $\theta_i$ and chooses an action via a strategy $s_i(\theta_i)$. A BNE satisfies, for each type $\theta_i$:
+The central idea is:
+
+> each possible type must be optimizing under uncertainty.
+
+## From Nash to Bayesian Nash
+
+In a complete-information game, Nash equilibrium requires each player to best respond to others' strategies.
+
+In a Bayesian game, each player may have different possible types. Therefore, equilibrium must specify what each type does.
+
+```{mermaid}
+flowchart LR
+    A[Nash equilibrium] --> B[Each player best responds]
+    C[Bayesian Nash equilibrium] --> D[Each type of each player best responds]
+```
+
+The difference is that strategies are type-contingent.
+
+## Basic setup
+
+A Bayesian game includes:
+
+| Object | Meaning |
+|---|---|
+| $N$ | players |
+| $\Theta_i$ | type space of player $i$ |
+| $A_i$ | action set of player $i$ |
+| $p(\theta)$ | prior over type profiles |
+| $u_i(a,\theta)$ | payoff of player $i$ |
+
+A strategy for player $i$ is a function:
+
 $$
-s_i(\theta_i)\in \arg\max_{a_i} \mathbb{E}\left[u_i(a_i, s_{-i}(\theta_{-i}), \theta_i,\theta_{-i})\mid \theta_i\right].
-$$
-
-## Where it shows up
-- Static games of incomplete information (entry games, pricing with private costs)
-- Auctions (many auction models are BNE)
-- As the static benchmark for dynamic incomplete-information models
-
-## How to solve (recipe)
-1) List types and prior beliefs.
-2) Write strategies as functions of types: $a_i=s_i(\theta_i)$.
-3) Compute each type’s expected payoff from each action.
-4) Choose best responses by type.
-5) Verify mutual best responses given beliefs.
-
----
-
-## Solved example (type-dependent best response)
-
-### Problem (context + question)
-An investor chooses whether to fund a startup: $F$ (fund) or $R$ (reject).
-
-The startup’s type is $\theta\in\{S,W\}$ (strong or weak), with prior $\Pr(S)=p$. If the investor funds:
-- payoff is $+1$ if $\theta=S$,
-- payoff is $-1$ if $\theta=W$.
-
-If the investor rejects, payoff is $0$.
-
-**Question:** Find the investor’s optimal action as a function of $p$ (a BNE decision rule).
-
-### Solution
-Compute expected payoff from funding:
-$$
-\mathbb{E}[\pi(F)] = p(1) + (1-p)(-1) = 2p-1.
+s_i:\Theta_i \to A_i.
 $$
 
-Rejecting yields:
+This means that the strategy assigns an action to every type.
+
+## Expected payoff
+
+If player $i$ has type $\theta_i$, then the player forms beliefs about other players' types $\theta_{-i}$.
+
+Given a strategy profile $s$, the expected payoff from choosing action $a_i$ is:
+
 $$
-\mathbb{E}[\pi(R)] = 0.
+\sum_{\theta_{-i}}
+u_i(a_i,s_{-i}(\theta_{-i}),\theta_i,\theta_{-i})
+\Pr(\theta_{-i}\mid \theta_i).
 $$
 
-So the investor funds iff $2p-1\ge 0$, i.e.
+The type $\theta_i$ chooses the action that maximizes this expected payoff.
+
+## Definition
+
+A strategy profile
+
 $$
-p \ge \tfrac12.
+s^*=(s_1^*,\ldots,s_n^*)
 $$
 
-**Result:** Optimal strategy is:
-- choose $F$ if $p\ge 1/2$,
-- choose $R$ if $p<1/2$,
-- indifferent at $p=1/2$.
+is a Bayesian Nash equilibrium if, for every player $i$ and every type $\theta_i \in \Theta_i$,
 
-### Check
-Given beliefs (the prior), the chosen action maximizes expected payoff.
+$$
+s_i^*(\theta_i)
+\in
+\arg\max_{a_i\in A_i}
+\sum_{\theta_{-i}}
+u_i(a_i,s_{-i}^*(\theta_{-i}),\theta_i,\theta_{-i})
+\Pr(\theta_{-i}\mid \theta_i).
+$$
 
-### Takeaway
-BNE decisions are often threshold rules: act if expected benefit given beliefs is large enough.
+In words:
 
----
+> each type chooses a best response to the type-contingent strategies of others.
 
-## Later-on analysis
-- If a **signal** is observed before acting, beliefs update via Bayes’ rule and the threshold shifts.
-- If the informed party can **strategically choose information**, you move toward signaling or cheap talk → PBE.
-- With many types/actions, equilibrium often has cutoff strategies and monotonicity structure.
+## The logic
+
+```{mermaid}
+flowchart TD
+    A[Player observes own type] --> B[Forms belief about others' types]
+    B --> C[Predicts others' type-contingent strategies]
+    C --> D[Computes expected payoff]
+    D --> E[Chooses best response]
+    E --> F[Bayesian Nash equilibrium if all types do this]
+```
+
+This is the core of Bayesian Nash equilibrium.
+
+## Example: two types
+
+Suppose player 1 can be type $H$ or type $L$.
+
+A strategy for player 1 is not just one action. It must specify:
+
+$$
+s_1(H)
+$$
+
+and
+
+$$
+s_1(L).
+$$
+
+For example:
+
+$$
+s_1(H)=A,
+\qquad
+s_1(L)=B.
+$$
+
+This means the high type chooses $A$, while the low type chooses $B$.
+
+The opponent may not observe the type, but forms beliefs about which type is being faced.
+
+## Type-contingent best response
+
+Suppose type $H$ and type $L$ have different payoffs.
+
+Then the same action may be optimal for one type but not for the other.
+
+```{mermaid}
+flowchart TD
+    A[Type H] --> B[Payoff function for H]
+    B --> C[Best response for H]
+
+    D[Type L] --> E[Payoff function for L]
+    E --> F[Best response for L]
+
+    C --> G[Type-contingent strategy]
+    F --> G
+```
+
+Bayesian Nash equilibrium requires both type-specific choices to be optimal.
+
+## Pure and mixed Bayesian strategies
+
+A pure Bayesian strategy maps each type to a pure action.
+
+A mixed Bayesian strategy maps each type to a probability distribution over actions.
+
+For example:
+
+$$
+\sigma_i(\theta_i)(a_i)
+$$
+
+is the probability that type $\theta_i$ of player $i$ chooses action $a_i$.
+
+This allows different types to randomize differently.
+
+## Interim perspective
+
+Bayesian Nash equilibrium is usually defined from the **interim** perspective.
+
+This means each player has already learned their own type but remains uncertain about others' types.
+
+The stages are:
+
+```{mermaid}
+flowchart LR
+    A[Ex ante: before types] --> B[Interim: after own type]
+    B --> C[Action choice]
+    C --> D[Ex post: after types and actions]
+```
+
+BNE asks whether each type is optimal at the interim stage.
+
+## Bayesian Nash and Bayes' rule
+
+In static Bayesian games, beliefs are usually derived from the common prior and the player's own type.
+
+If types are independent, then learning your own type may not change beliefs about others.
+
+If types are correlated, then learning your own type may provide information about others.
+
+Bayes' rule gives:
+
+$$
+\Pr(\theta_{-i}\mid \theta_i)
+=
+\frac{
+\Pr(\theta_i,\theta_{-i})
+}{
+\Pr(\theta_i)
+}.
+$$
+
+This conditional belief is used in the expected payoff calculation.
+
+## Relation to Harsanyi transformation
+
+Bayesian Nash equilibrium can be understood as Nash equilibrium in the Harsanyi-transformed game.
+
+The transformed game has:
+
+1. nature draws types;
+2. each player observes own type;
+3. each player chooses an action according to a type-contingent strategy.
+
+```{mermaid}
+flowchart TD
+    A[Bayesian game] --> B[Harsanyi transformation]
+    B --> C[Game with nature's move]
+    C --> D[Nash equilibrium in type-contingent strategies]
+    D --> E[Bayesian Nash equilibrium]
+```
+
+This is why Bayesian Nash equilibrium is a natural extension of Nash equilibrium.
+
+## Example structure: first-price auction
+
+In a first-price sealed-bid auction, each bidder knows their own valuation but not others' valuations.
+
+A bidder's type is their valuation:
+
+$$
+\theta_i = v_i.
+$$
+
+A strategy maps valuation into bid:
+
+$$
+b_i(v_i).
+$$
+
+A Bayesian Nash equilibrium is a bidding function where every valuation type bids optimally given beliefs about other bidders' valuations and bidding strategies.
+
+This shows why BNE is useful in auctions.
+
+## Example structure: entry with unknown cost
+
+Suppose a firm may be high-cost or low-cost. A rival does not observe the cost type.
+
+The firm's strategy specifies what each cost type does:
+
+$$
+s(H), \quad s(L).
+$$
+
+The rival's strategy is based on expected payoff under beliefs about whether the firm is high-cost or low-cost.
+
+The equilibrium requires:
+
+- high-cost type best responds;
+- low-cost type best responds;
+- rival best responds to its beliefs.
+
+## BNE versus PBE
+
+Bayesian Nash equilibrium is mainly for static incomplete-information games.
+
+Perfect Bayesian equilibrium is for dynamic incomplete-information games.
+
+| Concept | Used for | Requires |
+|---|---|---|
+| Bayesian Nash equilibrium | static incomplete information | type-contingent best responses |
+| Perfect Bayesian equilibrium | dynamic incomplete information | sequential rationality and beliefs |
+| Sequential equilibrium | dynamic incomplete information | stronger belief consistency |
+
+If actions reveal information over time, BNE may not be enough.
+
+## Common mistakes
+
+### 1. Solving only for one type
+
+Every possible type must be optimizing.
+
+### 2. Forgetting that strategy is a function
+
+A Bayesian strategy maps types to actions.
+
+### 3. Confusing type and belief
+
+A type is private information. A belief is a probability over unknown types or states.
+
+### 4. Ignoring expected payoff
+
+Players choose based on expected payoff over uncertain types.
+
+### 5. Applying BNE to dynamic signaling without beliefs after actions
+
+Dynamic signaling games usually need PBE or sequential equilibrium.
+
+### 6. Forgetting type correlation
+
+If types are correlated, observing your own type can change beliefs about others.
+
+## Checklist
+
+When checking Bayesian Nash equilibrium, ask:
+
+1. What are the players?
+2. What are the type spaces?
+3. What does each player observe?
+4. What is the prior distribution?
+5. Are types independent or correlated?
+6. What is each player's action set?
+7. What is each type's strategy?
+8. What belief does each type hold about others?
+9. What expected payoff does each type maximize?
+10. Is every type choosing a best response?
+
+## Related pages
+
+- [Equilibrium Concepts](index.qmd)
+- [Bayesian Games](../game-types/bayesian.qmd)
+- [Probability](../../foundations/probability.qmd)
+- [Nash Equilibrium](nash.qmd)
+- [Perfect Bayesian Equilibrium](perfect-bayesian.qmd)
+- [Sequential Equilibrium](sequential-equilibrium.qmd)
+- [Cheap Talk](../game-types/cheap-talk.qmd)
+- [Signaling](../game-types/signaling.qmd)

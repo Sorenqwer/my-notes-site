@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Bayesian games – Margins of Rationality</title>
+<title>Bayesian Games – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -159,13 +163,31 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
-  <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
-  <li><a href="#one-example-2-type-entry-game" id="toc-one-example-2-type-entry-game" class="nav-link" data-scroll-target="#one-example-2-type-entry-game">One example (2-type entry game)</a></li>
-  <li><a href="#story" id="toc-story" class="nav-link" data-scroll-target="#story">Story</a></li>
-  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
-  <li><a href="#equilibrium-threshold-best-response" id="toc-equilibrium-threshold-best-response" class="nav-link" data-scroll-target="#equilibrium-threshold-best-response">Equilibrium (threshold best response)</a></li>
-  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
+  <li><a href="#complete-versus-incomplete-information" id="toc-complete-versus-incomplete-information" class="nav-link active" data-scroll-target="#complete-versus-incomplete-information">Complete versus incomplete information</a></li>
+  <li><a href="#types" id="toc-types" class="nav-link" data-scroll-target="#types">Types</a></li>
+  <li><a href="#type-spaces" id="toc-type-spaces" class="nav-link" data-scroll-target="#type-spaces">Type spaces</a></li>
+  <li><a href="#beliefs" id="toc-beliefs" class="nav-link" data-scroll-target="#beliefs">Beliefs</a></li>
+  <li><a href="#nature" id="toc-nature" class="nav-link" data-scroll-target="#nature">Nature</a></li>
+  <li><a href="#strategy-in-a-bayesian-game" id="toc-strategy-in-a-bayesian-game" class="nav-link" data-scroll-target="#strategy-in-a-bayesian-game">Strategy in a Bayesian game</a></li>
+  <li><a href="#expected-payoff" id="toc-expected-payoff" class="nav-link" data-scroll-target="#expected-payoff">Expected payoff</a></li>
+  <li><a href="#bayesian-nash-equilibrium" id="toc-bayesian-nash-equilibrium" class="nav-link" data-scroll-target="#bayesian-nash-equilibrium">Bayesian Nash equilibrium</a></li>
+  <li><a href="#example-high-cost-and-low-cost-firm" id="toc-example-high-cost-and-low-cost-firm" class="nav-link" data-scroll-target="#example-high-cost-and-low-cost-firm">Example: high-cost and low-cost firm</a></li>
+  <li><a href="#harsanyi-transformation" id="toc-harsanyi-transformation" class="nav-link" data-scroll-target="#harsanyi-transformation">Harsanyi transformation</a></li>
+  <li><a href="#common-prior" id="toc-common-prior" class="nav-link" data-scroll-target="#common-prior">Common prior</a></li>
+  <li><a href="#bayesian-games-and-mixed-strategies" id="toc-bayesian-games-and-mixed-strategies" class="nav-link" data-scroll-target="#bayesian-games-and-mixed-strategies">Bayesian games and mixed strategies</a></li>
+  <li><a href="#incomplete-information-versus-imperfect-information" id="toc-incomplete-information-versus-imperfect-information" class="nav-link" data-scroll-target="#incomplete-information-versus-imperfect-information">Incomplete information versus imperfect information</a></li>
+  <li><a href="#bayesian-games-and-communication" id="toc-bayesian-games-and-communication" class="nav-link" data-scroll-target="#bayesian-games-and-communication">Bayesian games and communication</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#treating-type-as-action" id="toc-treating-type-as-action" class="nav-link" data-scroll-target="#treating-type-as-action">1. Treating type as action</a></li>
+  <li><a href="#forgetting-type-contingent-strategies" id="toc-forgetting-type-contingent-strategies" class="nav-link" data-scroll-target="#forgetting-type-contingent-strategies">2. Forgetting type-contingent strategies</a></li>
+  <li><a href="#ignoring-beliefs" id="toc-ignoring-beliefs" class="nav-link" data-scroll-target="#ignoring-beliefs">3. Ignoring beliefs</a></li>
+  <li><a href="#confusing-mixed-strategies-with-incomplete-information" id="toc-confusing-mixed-strategies-with-incomplete-information" class="nav-link" data-scroll-target="#confusing-mixed-strategies-with-incomplete-information">4. Confusing mixed strategies with incomplete information</a></li>
+  <li><a href="#forgetting-the-common-prior" id="toc-forgetting-the-common-prior" class="nav-link" data-scroll-target="#forgetting-the-common-prior">5. Forgetting the common prior</a></li>
+  <li><a href="#solving-only-for-one-type" id="toc-solving-only-for-one-type" class="nav-link" data-scroll-target="#solving-only-for-one-type">6. Solving only for one type</a></li>
+  </ul></li>
+  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist">Checklist</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -174,7 +196,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Bayesian games</h1>
+<h1 class="title">Bayesian Games</h1>
 </div>
 
 
@@ -191,57 +213,386 @@ window.Quarto = {
 </header>
 
 
-<section id="what-it-is" class="level2">
-<h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
-<p>A Bayesian game models <strong>incomplete information</strong>: players have private types and hold beliefs about others’ types.</p>
-<p>A Bayesian Nash equilibrium (BNE) is a strategy profile where each type best-responds given beliefs.</p>
+<p>Bayesian games study strategic interaction under incomplete information. Players may be uncertain about other players’ preferences, payoffs, costs, abilities, intentions, information, or types.</p>
+<p>The key idea is that players do not simply choose actions. They choose actions while holding beliefs about what kind of opponents they are facing.</p>
+<section id="complete-versus-incomplete-information" class="level2">
+<h2 class="anchored" data-anchor-id="complete-versus-incomplete-information">Complete versus incomplete information</h2>
+<p>A game has <strong>complete information</strong> if the structure of the game, including payoffs and types, is commonly known.</p>
+<p>A game has <strong>incomplete information</strong> if at least one player is uncertain about another player’s type or payoff-relevant characteristic.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Strategic interaction] --&gt; B[Complete information]
+    A --&gt; C[Incomplete information]
+    B --&gt; D[Players know payoffs and types]
+    C --&gt; E[Players hold beliefs over types]
+    E --&gt; F[Bayesian game]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Incomplete information does not mean players know nothing. It means they reason with probability.</p>
 </section>
-<section id="whats-special" class="level2">
-<h2 class="anchored" data-anchor-id="whats-special">What’s special</h2>
+<section id="types" class="level2">
+<h2 class="anchored" data-anchor-id="types">Types</h2>
+<p>A <strong>type</strong> represents private information about a player.</p>
+<p>A type can describe:</p>
 <ul>
-<li>Strategies map <strong>types to actions</strong>.</li>
-<li>Beliefs (priors/posteriors) drive behavior.</li>
-<li>Same strategic logic as normal-form games, but with expectations over types.</li>
+<li>cost;</li>
+<li>ability;</li>
+<li>valuation;</li>
+<li>patience;</li>
+<li>honesty;</li>
+<li>bias;</li>
+<li>preference;</li>
+<li>information;</li>
+<li>intention;</li>
+<li>risk;</li>
+<li>productivity.</li>
 </ul>
-</section>
-<section id="one-example-2-type-entry-game" class="level2">
-<h2 class="anchored" data-anchor-id="one-example-2-type-entry-game">One example (2-type entry game)</h2>
-<p>Player 1 (incumbent) has type <span class="math inline">\(\theta\in\{H,L\}\)</span> with <span class="math inline">\(\mathbb{P}(H)=p\)</span>. Player 2 (entrant) chooses <span class="math inline">\(E\)</span> (enter) or <span class="math inline">\(O\)</span> (out). If entrant stays out: payoffs <span class="math inline">\((1,0)\)</span>.</p>
-<p>If entrant enters: - If type is <span class="math inline">\(H\)</span>: fight is profitable for incumbent. - If type is <span class="math inline">\(L\)</span>: accommodate is better.</p>
-<p>Toy payoff if entrant enters: - Type <span class="math inline">\(H\)</span> incumbent prefers <strong>Fight</strong>, giving entrant payoff <span class="math inline">\(-1\)</span>. - Type <span class="math inline">\(L\)</span> incumbent prefers <strong>Accommodate</strong>, giving entrant payoff <span class="math inline">\(+1\)</span>.</p>
-<p>Entrant enters if expected payoff is nonnegative: <span class="math display">\[
-\mathbb{E}[\pi_2 \mid E] = p(-1) + (1-p)(+1) = 1-2p \ge 0
-\quad\Rightarrow\quad p \le \frac12.
+<p>For example, a firm may be high-cost or low-cost:</p>
+<p><span class="math display">\[
+\theta_i \in \{H,L\}.
 \]</span></p>
-<p><strong>Solution sketch.</strong> The entrant’s decision depends on the probability the incumbent is the tough type.</p>
+<p>The player’s payoff may depend on their own type and possibly on others’ types.</p>
 </section>
-<section id="story" class="level2">
-<h2 class="anchored" data-anchor-id="story">Story</h2>
-<p>A startup founder, <strong>Eden</strong>, pitches an angel investor. Eden knows whether the startup is strong or weak. The investor can’t fully verify this in one meeting. Funding a strong startup is profitable; funding a weak one is a loss.</p>
-<p>The investor’s action is based on beliefs about Eden’s (hidden) type.</p>
+<section id="type-spaces" class="level2">
+<h2 class="anchored" data-anchor-id="type-spaces">Type spaces</h2>
+<p>Each player has a type space.</p>
+<p>For player <span class="math inline">\(i\)</span>, the type space is written as</p>
+<p><span class="math display">\[
+\Theta_i.
+\]</span></p>
+<p>A type is an element:</p>
+<p><span class="math display">\[
+\theta_i \in \Theta_i.
+\]</span></p>
+<p>A profile of types is</p>
+<p><span class="math display">\[
+\theta = (\theta_1,\ldots,\theta_n).
+\]</span></p>
+<p>The types of everyone except player <span class="math inline">\(i\)</span> are written as</p>
+<p><span class="math display">\[
+\theta_{-i}.
+\]</span></p>
 </section>
-<section id="model" class="level2">
-<h2 class="anchored" data-anchor-id="model">Model</h2>
+<section id="beliefs" class="level2">
+<h2 class="anchored" data-anchor-id="beliefs">Beliefs</h2>
+<p>Players hold beliefs over types.</p>
+<p>If player 2 may be high-cost or low-cost, player 1 may believe:</p>
+<p><span class="math display">\[
+\Pr(\theta_2=H)=p,
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\Pr(\theta_2=L)=1-p.
+\]</span></p>
+<p>Beliefs are central because players choose actions based on expected payoffs.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Unknown type] --&gt; B[Belief over types]
+    B --&gt; C[Expected payoff]
+    C --&gt; D[Optimal action]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="nature" class="level2">
+<h2 class="anchored" data-anchor-id="nature">Nature</h2>
+<p>A Bayesian game is often represented as a game where nature first draws types.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Nature draws types] --&gt; B[Each player observes own type]
+    B --&gt; C[Players choose actions]
+    C --&gt; D[Payoffs depend on actions and types]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This converts incomplete information into imperfect information about nature’s move.</p>
+</section>
+<section id="strategy-in-a-bayesian-game" class="level2">
+<h2 class="anchored" data-anchor-id="strategy-in-a-bayesian-game">Strategy in a Bayesian game</h2>
+<p>A strategy in a Bayesian game is a type-contingent plan.</p>
+<p>Player <span class="math inline">\(i\)</span>’s strategy maps types into actions:</p>
+<p><span class="math display">\[
+s_i:\Theta_i \to A_i.
+\]</span></p>
+<p>This means each type of player <span class="math inline">\(i\)</span> may choose a different action.</p>
+<p>For example:</p>
+<p><span class="math display">\[
+s_i(H)=a_H,
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+s_i(L)=a_L.
+\]</span></p>
+<p>A strategy must specify what every possible type would do.</p>
+</section>
+<section id="expected-payoff" class="level2">
+<h2 class="anchored" data-anchor-id="expected-payoff">Expected payoff</h2>
+<p>Suppose player <span class="math inline">\(i\)</span> has type <span class="math inline">\(\theta_i\)</span> and chooses action <span class="math inline">\(a_i\)</span>. The player is uncertain about others’ types.</p>
+<p>The expected payoff is:</p>
+<p><span class="math display">\[
+\mathbb{E}_{\theta_{-i}}
+[
+u_i(a_i,a_{-i},\theta_i,\theta_{-i})
+].
+\]</span></p>
+<p>With finitely many types, this can be written as:</p>
+<p><span class="math display">\[
+\sum_{\theta_{-i}}
+u_i(a_i,a_{-i},\theta_i,\theta_{-i})
+\Pr(\theta_{-i}\mid \theta_i).
+\]</span></p>
+<p>The player chooses an action that maximizes expected payoff.</p>
+</section>
+<section id="bayesian-nash-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="bayesian-nash-equilibrium">Bayesian Nash equilibrium</h2>
+<p>A Bayesian Nash equilibrium is a strategy profile where every type of every player chooses a best response given beliefs and the type-contingent strategies of others.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Each player has a type] --&gt; B[Each type has beliefs]
+    B --&gt; C[Each type chooses best response]
+    C --&gt; D[Strategies are type-contingent]
+    D --&gt; E[Bayesian Nash equilibrium]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The important phrase is:</p>
+<blockquote class="blockquote">
+<p>every type of every player.</p>
+</blockquote>
+<p>A Bayesian equilibrium is not just one optimal action per player. It is optimal behaviour for each possible type.</p>
+</section>
+<section id="example-high-cost-and-low-cost-firm" class="level2">
+<h2 class="anchored" data-anchor-id="example-high-cost-and-low-cost-firm">Example: high-cost and low-cost firm</h2>
+<p>Suppose a firm may be high-cost or low-cost.</p>
+<p>A rival does not observe the firm’s cost type. The rival only has a prior belief:</p>
+<p><span class="math display">\[
+\Pr(L)=p.
+\]</span></p>
+<p>The low-cost firm may be more willing to set a low price. Observing a low price may make the rival think the firm is more likely to be low-cost.</p>
+<p>This is the beginning of signaling logic.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Private cost type] --&gt; B[Price choice]
+    B --&gt; C[Opponent updates belief]
+    C --&gt; D[Opponent chooses response]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Bayesian games therefore connect naturally to signaling games.</p>
+</section>
+<section id="harsanyi-transformation" class="level2">
+<h2 class="anchored" data-anchor-id="harsanyi-transformation">Harsanyi transformation</h2>
+<p>The Harsanyi transformation converts incomplete information into imperfect information.</p>
+<p>The steps are:</p>
+<ol type="1">
+<li>nature chooses types according to a commonly known prior;</li>
+<li>each player observes their own type;</li>
+<li>players choose strategies;</li>
+<li>payoffs depend on actions and types.</li>
+</ol>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Incomplete information problem] --&gt; B[Nature draws types]
+    B --&gt; C[Players observe own types]
+    C --&gt; D[Players choose actions]
+    D --&gt; E[Payoffs realized]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This allows incomplete-information games to be analysed using standard game-theoretic tools.</p>
+</section>
+<section id="common-prior" class="level2">
+<h2 class="anchored" data-anchor-id="common-prior">Common prior</h2>
+<p>A common prior means that players begin from the same probability distribution over types.</p>
+<p>They may hold different beliefs after observing different private information, but those beliefs come from the same underlying prior.</p>
+<p>The common prior assumption is powerful but restrictive. It rules out some forms of disagreement.</p>
+</section>
+<section id="bayesian-games-and-mixed-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="bayesian-games-and-mixed-strategies">Bayesian games and mixed strategies</h2>
+<p>Bayesian games and mixed strategies both use probability, but they are different.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Probability describes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mixed strategy</td>
+<td>randomization over actions</td>
+</tr>
+<tr class="even">
+<td>Bayesian type</td>
+<td>uncertainty about payoff-relevant characteristics</td>
+</tr>
+<tr class="odd">
+<td>Belief</td>
+<td>subjective probability over states or types</td>
+</tr>
+</tbody>
+</table>
+<p>A player may use a pure strategy in a Bayesian game. The uncertainty comes from not knowing the type.</p>
+<p>A player may also mix within each type.</p>
+</section>
+<section id="incomplete-information-versus-imperfect-information" class="level2">
+<h2 class="anchored" data-anchor-id="incomplete-information-versus-imperfect-information">Incomplete information versus imperfect information</h2>
+<p>These terms are related but not identical.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Incomplete information</td>
+<td>uncertainty about payoffs, types, or characteristics</td>
+</tr>
+<tr class="even">
+<td>Imperfect information</td>
+<td>uncertainty about previous moves or current node</td>
+</tr>
+<tr class="odd">
+<td>Bayesian game</td>
+<td>standard model of incomplete information</td>
+</tr>
+</tbody>
+</table>
+<p>The Harsanyi transformation turns incomplete information into imperfect information about nature’s move.</p>
+</section>
+<section id="bayesian-games-and-communication" class="level2">
+<h2 class="anchored" data-anchor-id="bayesian-games-and-communication">Bayesian games and communication</h2>
+<p>Once types are private, communication becomes strategic.</p>
+<p>An informed player may try to reveal, hide, exaggerate, or manipulate information.</p>
+<p>This leads to:</p>
 <ul>
-<li>Founder type: <span class="math inline">\(\theta\in\{S,W\}\)</span> with prior <span class="math inline">\(\Pr(S)=p\)</span></li>
-<li>Investor action: fund <span class="math inline">\(F\)</span> or reject <span class="math inline">\(R\)</span></li>
-<li>Payoff to investor: if <span class="math inline">\(F\)</span>, payoff <span class="math inline">\(+1\)</span> under <span class="math inline">\(S\)</span> and <span class="math inline">\(-1\)</span> under <span class="math inline">\(W\)</span>; if <span class="math inline">\(R\)</span>, payoff <span class="math inline">\(0\)</span></li>
+<li>cheap talk;</li>
+<li>signaling;</li>
+<li>screening;</li>
+<li>mechanism design;</li>
+<li>reputation;</li>
+<li>persuasion;</li>
+<li>deception.</li>
 </ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Private type] --&gt; B[Message or action]
+    B --&gt; C[Belief update]
+    C --&gt; D[Receiver response]
+    D --&gt; E[Sender payoff]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 </section>
-<section id="equilibrium-threshold-best-response" class="level2">
-<h2 class="anchored" data-anchor-id="equilibrium-threshold-best-response">Equilibrium (threshold best response)</h2>
-<p>Investor funds iff expected payoff is nonnegative: <span class="math display">\[
-\mathbb{E}[\pi \mid F]=p(1)+(1-p)(-1)=2p-1 \ge 0
-\quad\Rightarrow\quad
-p\ge \tfrac12.
-\]</span></p>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="treating-type-as-action" class="level3">
+<h3 class="anchored" data-anchor-id="treating-type-as-action">1. Treating type as action</h3>
+<p>A type is private information. An action is chosen by the player.</p>
 </section>
-<section id="later-on-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<section id="forgetting-type-contingent-strategies" class="level3">
+<h3 class="anchored" data-anchor-id="forgetting-type-contingent-strategies">2. Forgetting type-contingent strategies</h3>
+<p>A strategy must say what each type would do.</p>
+</section>
+<section id="ignoring-beliefs" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-beliefs">3. Ignoring beliefs</h3>
+<p>Bayesian games require beliefs over types.</p>
+</section>
+<section id="confusing-mixed-strategies-with-incomplete-information" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-mixed-strategies-with-incomplete-information">4. Confusing mixed strategies with incomplete information</h3>
+<p>Randomizing over actions is not the same as being uncertain about types.</p>
+</section>
+<section id="forgetting-the-common-prior" class="level3">
+<h3 class="anchored" data-anchor-id="forgetting-the-common-prior">5. Forgetting the common prior</h3>
+<p>Many Bayesian games assume a commonly known prior distribution over types.</p>
+</section>
+<section id="solving-only-for-one-type" class="level3">
+<h3 class="anchored" data-anchor-id="solving-only-for-one-type">6. Solving only for one type</h3>
+<p>Bayesian Nash equilibrium requires optimality for every type.</p>
+</section>
+</section>
+<section id="checklist" class="level2">
+<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
+<p>When analysing a Bayesian game, ask:</p>
+<ol type="1">
+<li>Who are the players?</li>
+<li>What are the possible types?</li>
+<li>Who observes which type?</li>
+<li>What is the prior belief over types?</li>
+<li>What actions are available?</li>
+<li>How do payoffs depend on types?</li>
+<li>What is each type’s strategy?</li>
+<li>What expected payoff does each type maximize?</li>
+<li>What are the best responses?</li>
+<li>Is the strategy profile a Bayesian Nash equilibrium?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
 <ul>
-<li><strong>Signals:</strong> if the pitch provides a signal, beliefs update via Bayes’ rule before the funding choice.</li>
-<li><strong>Strategic disclosure:</strong> if the founder can choose what to reveal, this becomes a signaling/cheap-talk hybrid.</li>
-<li><strong>Multiple types:</strong> richer type spaces yield cutoff strategies and comparative statics in <span class="math inline">\(p\)</span>.</li>
+<li><a href="../../notes/game-types/index.html">Game Types</a></li>
+<li><a href="../../notes/game-theory.html">Game Theory Notes</a></li>
+<li><a href="../../foundations/probability.html">Probability</a></li>
+<li><a href="../../notes/equilibriums/bayesian-nash.html">Bayesian Nash Equilibrium</a></li>
+<li><a href="../../notes/equilibriums/perfect-bayesian.html">Perfect Bayesian Equilibrium</a></li>
+<li><a href="../../notes/game-types/cheap-talk.html">Cheap Talk</a></li>
+<li><a href="../../notes/game-types/signaling.html">Signaling</a></li>
 </ul>
 
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Extensive-form games – Margins of Rationality</title>
+<title>Extensive-form Games – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -163,14 +163,30 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
-  <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
-  <li><a href="#one-example-backward-induction" id="toc-one-example-backward-induction" class="nav-link" data-scroll-target="#one-example-backward-induction">One example (backward induction)</a></li>
-  <li><a href="#story" id="toc-story" class="nav-link" data-scroll-target="#story">Story</a></li>
-  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
-  <li><a href="#game-tree-toy" id="toc-game-tree-toy" class="nav-link" data-scroll-target="#game-tree-toy">Game tree (toy)</a></li>
-  <li><a href="#equilibrium-backward-induction-spe" id="toc-equilibrium-backward-induction-spe" class="nav-link" data-scroll-target="#equilibrium-backward-induction-spe">Equilibrium (backward induction → SPE)</a></li>
-  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
+  <li><a href="#why-extensive-form-matters" id="toc-why-extensive-form-matters" class="nav-link active" data-scroll-target="#why-extensive-form-matters">Why extensive form matters</a></li>
+  <li><a href="#basic-components" id="toc-basic-components" class="nav-link" data-scroll-target="#basic-components">Basic components</a></li>
+  <li><a href="#a-simple-game-tree" id="toc-a-simple-game-tree" class="nav-link" data-scroll-target="#a-simple-game-tree">A simple game tree</a></li>
+  <li><a href="#histories" id="toc-histories" class="nav-link" data-scroll-target="#histories">Histories</a></li>
+  <li><a href="#strategies-in-extensive-form-games" id="toc-strategies-in-extensive-form-games" class="nav-link" data-scroll-target="#strategies-in-extensive-form-games">Strategies in extensive-form games</a></li>
+  <li><a href="#perfect-information" id="toc-perfect-information" class="nav-link" data-scroll-target="#perfect-information">Perfect information</a></li>
+  <li><a href="#imperfect-information" id="toc-imperfect-information" class="nav-link" data-scroll-target="#imperfect-information">Imperfect information</a></li>
+  <li><a href="#backward-induction" id="toc-backward-induction" class="nav-link" data-scroll-target="#backward-induction">Backward induction</a></li>
+  <li><a href="#credible-threats" id="toc-credible-threats" class="nav-link" data-scroll-target="#credible-threats">Credible threats</a></li>
+  <li><a href="#subgames" id="toc-subgames" class="nav-link" data-scroll-target="#subgames">Subgames</a></li>
+  <li><a href="#normal-form-versus-extensive-form" id="toc-normal-form-versus-extensive-form" class="nav-link" data-scroll-target="#normal-form-versus-extensive-form">Normal form versus extensive form</a></li>
+  <li><a href="#example-entry-deterrence" id="toc-example-entry-deterrence" class="nav-link" data-scroll-target="#example-entry-deterrence">Example: entry deterrence</a></li>
+  <li><a href="#dynamic-games-with-chance" id="toc-dynamic-games-with-chance" class="nav-link" data-scroll-target="#dynamic-games-with-chance">Dynamic games with chance</a></li>
+  <li><a href="#strategies-and-off-path-behaviour" id="toc-strategies-and-off-path-behaviour" class="nav-link" data-scroll-target="#strategies-and-off-path-behaviour">Strategies and off-path behaviour</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#solving-from-the-root-first" id="toc-solving-from-the-root-first" class="nav-link" data-scroll-target="#solving-from-the-root-first">1. Solving from the root first</a></li>
+  <li><a href="#confusing-action-and-strategy" id="toc-confusing-action-and-strategy" class="nav-link" data-scroll-target="#confusing-action-and-strategy">2. Confusing action and strategy</a></li>
+  <li><a href="#ignoring-off-path-actions" id="toc-ignoring-off-path-actions" class="nav-link" data-scroll-target="#ignoring-off-path-actions">3. Ignoring off-path actions</a></li>
+  <li><a href="#treating-all-nash-equilibria-as-credible" id="toc-treating-all-nash-equilibria-as-credible" class="nav-link" data-scroll-target="#treating-all-nash-equilibria-as-credible">4. Treating all Nash equilibria as credible</a></li>
+  <li><a href="#cutting-across-information-sets" id="toc-cutting-across-information-sets" class="nav-link" data-scroll-target="#cutting-across-information-sets">5. Cutting across information sets</a></li>
+  </ul></li>
+  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist">Checklist</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -179,7 +195,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Extensive-form games</h1>
+<h1 class="title">Extensive-form Games</h1>
 </div>
 
 
@@ -196,68 +212,134 @@ window.Quarto = {
 </header>
 
 
-<section id="what-it-is" class="level2">
-<h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
-<p>An extensive-form game represents <strong>timing</strong> (who moves when) and information (what players observe) using a game tree.</p>
-</section>
-<section id="whats-special" class="level2">
-<h2 class="anchored" data-anchor-id="whats-special">What’s special</h2>
-<ul>
-<li>Sequential rationality matters: players optimize <strong>at every decision node</strong>.</li>
-<li>The standard solution is <strong>subgame perfect equilibrium</strong> via backward induction (perfect information case).</li>
-</ul>
-</section>
-<section id="one-example-backward-induction" class="level2">
-<h2 class="anchored" data-anchor-id="one-example-backward-induction">One example (backward induction)</h2>
+<p>Extensive-form games represent strategic interaction over time. They show who moves when, what each player observes, what actions are available, and what payoffs follow from each possible path.</p>
+<p>The extensive form is especially useful for studying sequential decisions, credibility, threats, promises, commitment, entry deterrence, bargaining, signalling, and institutional processes.</p>
+<section id="why-extensive-form-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-extensive-form-matters">Why extensive form matters</h2>
+<p>A normal-form game lists strategies and payoffs. An extensive-form game shows the <strong>structure of play</strong>.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-<pre class="mermaid mermaid-js">flowchart TD
-  S((Start)) --&gt;|P1: A| A(( ))
-  S --&gt;|P1: B| B(( ))
-  A --&gt;|P2: L| AL["(2,1)"]
-  A --&gt;|P2: R| AR["(0,0)"]
-  B --&gt;|P2: L| BL["(1,2)"]
-  B --&gt;|P2: R| BR["(3,0)"]
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Normal form] --&gt; B[Strategies and payoffs]
+    C[Extensive form] --&gt; D[Timing]
+    C --&gt; E[Observation]
+    C --&gt; F[Histories]
+    C --&gt; G[Credibility]
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
-<p>Player 2 chooses <strong>L</strong> after <span class="math inline">\(A\)</span> (since <span class="math inline">\(1&gt;0\)</span>) and <strong>L</strong> after <span class="math inline">\(B\)</span> (since <span class="math inline">\(2&gt;0\)</span>).<br>
-Anticipating this, player 1 prefers <span class="math inline">\(A\)</span> (since <span class="math inline">\(2&gt;1\)</span>). Outcome: <span class="math inline">\((A,L)\)</span>.</p>
+<p>This matters because timing can change the strategic result. If one player moves first and another responds, the second player’s credible response shapes the first player’s decision.</p>
 </section>
-<section id="story" class="level2">
-<h2 class="anchored" data-anchor-id="story">Story</h2>
-<p>A landlord, <strong>Ms.&nbsp;K</strong>, is renewing a lease with <strong>Rin</strong>. The neighborhood has improved, and Ms.&nbsp;K considers raising rent. Ms.&nbsp;K chooses first: a moderate raise or an aggressive one. Rin then decides: accept or move out.</p>
-<p>The key is timing: Rin observes the offer before acting, and Ms.&nbsp;K anticipates Rin’s response.</p>
+<section id="basic-components" class="level2">
+<h2 class="anchored" data-anchor-id="basic-components">Basic components</h2>
+<p>An extensive-form game usually includes:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Players</td>
+<td>who makes decisions</td>
+</tr>
+<tr class="even">
+<td>Nodes</td>
+<td>points where a decision or event occurs</td>
+</tr>
+<tr class="odd">
+<td>Root</td>
+<td>the initial node</td>
+</tr>
+<tr class="even">
+<td>Branches</td>
+<td>available actions</td>
+</tr>
+<tr class="odd">
+<td>Terminal nodes</td>
+<td>endpoints of the game</td>
+</tr>
+<tr class="even">
+<td>Payoffs</td>
+<td>outcomes assigned at terminal nodes</td>
+</tr>
+<tr class="odd">
+<td>Information sets</td>
+<td>what a player can distinguish when choosing</td>
+</tr>
+<tr class="even">
+<td>Strategies</td>
+<td>complete plans for every possible decision point</td>
+</tr>
+</tbody>
+</table>
+<p>The game tree is the visual representation of these objects.</p>
 </section>
-<section id="model" class="level2">
-<h2 class="anchored" data-anchor-id="model">Model</h2>
-<ul>
-<li>Player 1 (landlord): <span class="math inline">\(L\)</span> (low increase) or <span class="math inline">\(H\)</span> (high increase)</li>
-<li>Player 2 (tenant): after observing, <span class="math inline">\(A\)</span> (accept) or <span class="math inline">\(M\)</span> (move)</li>
-<li>Information: perfect (tenant observes the offer)</li>
-<li>Solution concept: backward induction / SPE</li>
-</ul>
-</section>
-<section id="game-tree-toy" class="level2">
-<h2 class="anchored" data-anchor-id="game-tree-toy">Game tree (toy)</h2>
+<section id="a-simple-game-tree" class="level2">
+<h2 class="anchored" data-anchor-id="a-simple-game-tree">A simple game tree</h2>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TD
-  S((Start)) --&gt;|P1: L| L(( ))
-  S --&gt;|P1: H| H(( ))
-  L --&gt;|P2: A| LA["(2,2)"]
-  L --&gt;|P2: M| LM["(0,1)"]
-  H --&gt;|P2: A| HA["(3,0)"]
-  H --&gt;|P2: M| HM["(0,1)"]
+    A[Player 1] --&gt;|Enter| B[Player 2]
+    A --&gt;|Stay Out| C[Payoffs: 0,2]
+    B --&gt;|Fight| D[Payoffs: -1,-1]
+    B --&gt;|Accommodate| E[Payoffs: 2,1]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This tree says:</p>
+<ol type="1">
+<li>Player 1 chooses whether to enter.</li>
+<li>If Player 1 stays out, the game ends.</li>
+<li>If Player 1 enters, Player 2 chooses whether to fight or accommodate.</li>
+<li>Payoffs are assigned at the terminal nodes.</li>
+</ol>
+</section>
+<section id="histories" class="level2">
+<h2 class="anchored" data-anchor-id="histories">Histories</h2>
+<p>A <strong>history</strong> is a sequence of actions that has occurred so far.</p>
+<p>In the entry game above, after Player 1 chooses Enter, the history is:</p>
+<p><span class="math display">\[
+h = \text{Enter}.
+\]</span></p>
+<p>After Player 1 chooses Stay Out, the game ends.</p>
+<p>Histories matter because strategies in dynamic games are contingent plans. A player may choose different actions after different histories.</p>
+</section>
+<section id="strategies-in-extensive-form-games" class="level2">
+<h2 class="anchored" data-anchor-id="strategies-in-extensive-form-games">Strategies in extensive-form games</h2>
+<p>A strategy is not just one action. It is a complete plan.</p>
+<p>If Player 2 moves only after entry, then Player 2’s strategy must specify what to do after entry:</p>
+<p><span class="math display">\[
+s_2(\text{Enter}) \in \{\text{Fight},\text{Accommodate}\}.
+\]</span></p>
+<p>In more complex games, a strategy must specify what the player would do at every information set where they may be called to move.</p>
+<p>This is one of the most common sources of confusion in dynamic games.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Dynamic strategy] --&gt; B[Action after history 1]
+    A --&gt; C[Action after history 2]
+    A --&gt; D[Action after history 3]
+    B --&gt; E[Complete contingent plan]
+    C --&gt; E
+    D --&gt; E
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -265,19 +347,250 @@ Anticipating this, player 1 prefers <span class="math inline">\(A\)</span> (sinc
 </div>
 </div>
 </section>
-<section id="equilibrium-backward-induction-spe" class="level2">
-<h2 class="anchored" data-anchor-id="equilibrium-backward-induction-spe">Equilibrium (backward induction → SPE)</h2>
-<p>Step 1 (tenant’s optimal actions at the second stage): - After <span class="math inline">\(L\)</span>: compare tenant payoff <span class="math inline">\(2\)</span> (accept) vs <span class="math inline">\(1\)</span> (move) → choose <strong><span class="math inline">\(A\)</span></strong> - After <span class="math inline">\(H\)</span>: compare tenant payoff <span class="math inline">\(0\)</span> (accept) vs <span class="math inline">\(1\)</span> (move) → choose <strong><span class="math inline">\(M\)</span></strong></p>
-<p>Step 2 (landlord anticipates this): - If choose <span class="math inline">\(L\)</span> → outcome <span class="math inline">\((2,2)\)</span> - If choose <span class="math inline">\(H\)</span> → tenant moves → outcome <span class="math inline">\((0,1)\)</span></p>
-<p>So landlord chooses <strong><span class="math inline">\(L\)</span></strong>.<br>
-<strong>SPE outcome:</strong> <span class="math inline">\((L,A)\)</span>.</p>
+<section id="perfect-information" class="level2">
+<h2 class="anchored" data-anchor-id="perfect-information">Perfect information</h2>
+<p>A game has <strong>perfect information</strong> if every player observes all previous actions before choosing.</p>
+<p>Chess is a classic example. Each player observes the whole history of moves.</p>
+<p>In perfect-information games, decision nodes are not grouped into non-trivial information sets. Players know exactly where they are in the tree.</p>
 </section>
-<section id="later-on-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<section id="imperfect-information" class="level2">
+<h2 class="anchored" data-anchor-id="imperfect-information">Imperfect information</h2>
+<p>A game has <strong>imperfect information</strong> if a player does not know exactly which node they are at when choosing.</p>
+<p>This is represented by an information set.</p>
+<p>For example, if Player 2 cannot observe whether Player 1 chose <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span>, then Player 2’s two decision nodes are in the same information set.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Player 1] --&gt;|A| B[Player 2 node 1]
+    A --&gt;|B| C[Player 2 node 2]
+    B -. same information set .- C
+    B --&gt;|L| D[Outcome]
+    B --&gt;|R| E[Outcome]
+    C --&gt;|L| F[Outcome]
+    C --&gt;|R| G[Outcome]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The dotted connection means Player 2 cannot distinguish the two nodes.</p>
+</section>
+<section id="backward-induction" class="level2">
+<h2 class="anchored" data-anchor-id="backward-induction">Backward induction</h2>
+<p>In finite games with perfect information, backward induction solves the game from the end to the beginning.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Start at final decision nodes] --&gt; B[Choose last mover's optimal action]
+    B --&gt; C[Replace continuation with payoff]
+    C --&gt; D[Move one step backward]
+    D --&gt; E[Choose previous player's optimal action]
+    E --&gt; F[Repeat until root]
+    F --&gt; G[Predicted path]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Backward induction is the natural method for extensive-form games because earlier players anticipate later rational behaviour.</p>
+</section>
+<section id="credible-threats" class="level2">
+<h2 class="anchored" data-anchor-id="credible-threats">Credible threats</h2>
+<p>A threat is credible only if the player would actually want to carry it out when the time comes.</p>
+<p>In the entry game, suppose Player 2 threatens to fight if Player 1 enters. If fighting gives Player 2 a lower payoff than accommodating after entry, then the threat is not credible.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Threat announced] --&gt; B{Optimal later?}
+    B --&gt;|Yes| C[Credible threat]
+    B --&gt;|No| D[Non-credible threat]
+    D --&gt; E[Should not deter in SPE]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This is why Nash equilibrium alone may be too weak for dynamic games.</p>
+</section>
+<section id="subgames" class="level2">
+<h2 class="anchored" data-anchor-id="subgames">Subgames</h2>
+<p>A subgame is a part of the game that begins at a decision node and contains all future actions from that node onward.</p>
+<p>A subgame must not cut across an information set.</p>
+<p>Subgames matter because a dynamic equilibrium should prescribe optimal behaviour after every possible history.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Whole game] --&gt; B[Subgame after history 1]
+    A --&gt; C[Subgame after history 2]
+    B --&gt; D[Continuation equilibrium]
+    C --&gt; E[Continuation equilibrium]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This leads to subgame perfect equilibrium.</p>
+</section>
+<section id="normal-form-versus-extensive-form" class="level2">
+<h2 class="anchored" data-anchor-id="normal-form-versus-extensive-form">Normal form versus extensive form</h2>
+<p>Every finite extensive-form game can be represented in normal form by listing each player’s complete strategies.</p>
+<p>However, this conversion often hides timing.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Representation</th>
+<th>Strength</th>
+<th>Limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Extensive form</td>
+<td>shows timing and information</td>
+<td>can be visually large</td>
+</tr>
+<tr class="even">
+<td>Normal form</td>
+<td>shows all strategy profiles and payoffs</td>
+<td>hides credibility and sequence</td>
+</tr>
+</tbody>
+</table>
+<p>For dynamic games, extensive form is usually better for reasoning.</p>
+</section>
+<section id="example-entry-deterrence" class="level2">
+<h2 class="anchored" data-anchor-id="example-entry-deterrence">Example: entry deterrence</h2>
+<p>Suppose an entrant decides whether to enter a market. If it enters, the incumbent chooses whether to fight or accommodate.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Entrant] --&gt;|Stay Out| B[0,2]
+    A --&gt;|Enter| C[Incumbent]
+    C --&gt;|Fight| D[-1,-1]
+    C --&gt;|Accommodate| E[2,1]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Solve by backward induction:</p>
+<ol type="1">
+<li>If entry occurs, the incumbent compares Fight and Accommodate.</li>
+<li>The incumbent prefers Accommodate because <span class="math inline">\(1&gt;-1\)</span>.</li>
+<li>The entrant anticipates Accommodate.</li>
+<li>The entrant compares Enter, giving <span class="math inline">\(2\)</span>, with Stay Out, giving <span class="math inline">\(0\)</span>.</li>
+<li>The entrant enters.</li>
+</ol>
+<p>The subgame perfect outcome is:</p>
+<p><span class="math display">\[
+(\text{Enter}, \text{Accommodate}).
+\]</span></p>
+</section>
+<section id="dynamic-games-with-chance" class="level2">
+<h2 class="anchored" data-anchor-id="dynamic-games-with-chance">Dynamic games with chance</h2>
+<p>Some extensive-form games include nature. Nature represents random events.</p>
+<p>For example, nature may choose a player’s type before the player acts.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Nature] --&gt;|High type| B[Sender H]
+    A --&gt;|Low type| C[Sender L]
+    B --&gt; D[Message]
+    C --&gt; E[Message]
+    D --&gt; F[Receiver response]
+    E --&gt; F
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This structure appears in signaling games and Bayesian extensive-form games.</p>
+</section>
+<section id="strategies-and-off-path-behaviour" class="level2">
+<h2 class="anchored" data-anchor-id="strategies-and-off-path-behaviour">Strategies and off-path behaviour</h2>
+<p>In an extensive-form game, a strategy must specify what to do even after histories that do not occur in equilibrium.</p>
+<p>These histories are called off-path.</p>
+<p>Off-path behaviour matters because it can support or undermine threats and promises.</p>
+<p>For example, if entry does not occur in equilibrium, the incumbent’s planned response after entry is still part of the strategy.</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="solving-from-the-root-first" class="level3">
+<h3 class="anchored" data-anchor-id="solving-from-the-root-first">1. Solving from the root first</h3>
+<p>For finite perfect-information games, solve from the end backward.</p>
+</section>
+<section id="confusing-action-and-strategy" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-action-and-strategy">2. Confusing action and strategy</h3>
+<p>A strategy is a complete plan, not just the action taken on the equilibrium path.</p>
+</section>
+<section id="ignoring-off-path-actions" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-off-path-actions">3. Ignoring off-path actions</h3>
+<p>Dynamic equilibrium requires behaviour after possible histories, even if they are not reached.</p>
+</section>
+<section id="treating-all-nash-equilibria-as-credible" class="level3">
+<h3 class="anchored" data-anchor-id="treating-all-nash-equilibria-as-credible">4. Treating all Nash equilibria as credible</h3>
+<p>Some Nash equilibria rely on non-credible threats.</p>
+</section>
+<section id="cutting-across-information-sets" class="level3">
+<h3 class="anchored" data-anchor-id="cutting-across-information-sets">5. Cutting across information sets</h3>
+<p>A subgame cannot begin inside an information set.</p>
+</section>
+</section>
+<section id="checklist" class="level2">
+<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
+<p>When analysing an extensive-form game, ask:</p>
+<ol type="1">
+<li>Who moves first?</li>
+<li>Who moves later?</li>
+<li>What does each player observe?</li>
+<li>What are the histories?</li>
+<li>What are the terminal payoffs?</li>
+<li>What are each player’s strategies?</li>
+<li>Are there information sets?</li>
+<li>Are there proper subgames?</li>
+<li>What does backward induction predict?</li>
+<li>Are threats and promises credible?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
 <ul>
-<li><strong>Outside option changes:</strong> if moving becomes less costly, the landlord’s ability to raise rent shrinks.</li>
-<li><strong>Incomplete information:</strong> if Ms.&nbsp;K doesn’t know Rin’s moving cost, the game becomes Bayesian and can generate screening/signaling behavior.</li>
-<li><strong>Commitment:</strong> if Rin could commit to “move if any increase,” outcomes shift again (commitment changes the tree).</li>
+<li><a href="../../notes/game-types/index.html">Game Types</a></li>
+<li><a href="../../notes/game-theory.html">Game Theory Notes</a></li>
+<li><a href="../../notes/game-types/normal-form.html">Normal-form Games</a></li>
+<li><a href="../../notes/game-types/repeated.html">Repeated Games</a></li>
+<li><a href="../../notes/equilibriums/subgame-perfect.html">Subgame Perfect Equilibrium</a></li>
+<li><a href="../../notes/equilibriums/perfect-bayesian.html">Perfect Bayesian Equilibrium</a></li>
+<li><a href="../../foundations/dynamic-reasoning.html">Dynamic Reasoning</a></li>
 </ul>
 
 

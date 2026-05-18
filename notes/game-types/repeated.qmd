@@ -1,60 +1,327 @@
 ---
-title: "Repeated games"
+title: "Repeated Games"
 toc: true
+page-layout: full
 ---
 
-## What it is
-A repeated game plays the same stage game over time (finitely or infinitely many periods). Strategies can condition on history.
+Repeated games study what happens when the same strategic interaction occurs more than once. Repetition changes incentives because current actions can affect future behaviour.
 
-## What’s special
-- Past behavior can be rewarded/punished → enables cooperation even when the one-shot game would not.
-- Central ideas: incentives over time, credibility, and equilibrium path vs off-path threats.
-- Infinite-horizon models often use a discount factor $\delta\in(0,1)$.
+A player may cooperate today not because cooperation is immediately best, but because defection today may trigger punishment tomorrow.
 
-## One example (grim trigger in repeated Prisoner's Dilemma)
-Stage game: cooperate $C$ or defect $D$. Typical payoffs:
-- $(C,C)$ gives $(R,R)$,
-- $(D,C)$ gives $(T,S)$,
-- $(C,D)$ gives $(S,T)$,
-- $(D,D)$ gives $(P,P)$,
-with $T>R>P>S$.
+## The basic idea
 
-**Grim trigger strategy:** start with $C$, continue $C$ unless someone defects; after any defection, play $D$ forever.
+A repeated game begins with a **stage game**. The stage game is played multiple times.
 
-**Incentive condition (intuition):** cooperate today if the present temptation $T-R$ is outweighed by the discounted future loss from punishment. Cooperation can be sustained if $\delta$ is sufficiently high.
+```{mermaid}
+flowchart LR
+    A[Stage game] --> B[Period 1]
+    B --> C[Period 2]
+    C --> D[Period 3]
+    D --> E[Future periods]
+```
 
-## Story
-Two graduate students, **Kai** and **Mira**, share an office. Each week they decide whether to clean the shared space. Cleaning is effortful; skipping is tempting. If one keeps cleaning while the other skips, resentment builds. If both skip, the office becomes miserable.
+The key difference from a one-shot game is that history matters.
 
-Because the choice repeats, today’s action can trigger tomorrow’s response.
+Players can condition current actions on past behaviour.
 
-## Model
-- Stage actions: $C$ (clean), $S$ (shirk)
-- Stage payoffs (toy): PD-like
-- Infinite horizon with discount factor $\delta\in(0,1)$
-- Strategies can condition on history
+## Why repetition matters
 
-## Stage payoffs (toy)
-- $(C,C)=(2,2)$
-- $(S,C)=(3,0)$
-- $(C,S)=(0,3)$
-- $(S,S)=(1,1)$
+In a one-shot prisoners' dilemma, defection may be the dominant strategy.
 
-## Equilibrium (cooperation via grim trigger)
-Grim trigger: play $C$ unless someone shirks; after any shirking, play $S$ forever.
+In a repeated prisoners' dilemma, cooperation may be possible because defection can be punished in future periods.
 
-Compare deviating once vs cooperating on-path (player 1, symmetric):
-- Cooperate forever payoff: $\frac{2}{1-\delta}$
-- Deviate once (get 3 now, then punished with 1 forever): $3 + \frac{\delta}{1-\delta}$
+```{mermaid}
+flowchart LR
+    A[Cooperate today] --> B[Good future relationship]
+    C[Defect today] --> D[Short-run gain]
+    D --> E[Future punishment]
+    E --> F[Lower continuation payoff]
+```
+
+The comparison is:
+
+$$
+\text{short-run gain from defection}
+\leq
+\text{future loss from punishment}.
+$$
+
+If this condition holds, cooperation can be sustained.
+
+## Histories
+
+A history is the sequence of actions observed so far.
+
+After $t$ periods, a history may be written as:
+
+$$
+h^t = (a^0,a^1,\ldots,a^{t-1}).
+$$
+
+A repeated-game strategy maps histories into current actions:
+
+$$
+s_i(h^t) \in A_i.
+$$
+
+This means a player's action today may depend on what happened before.
+
+## Discounting
+
+Future payoffs are usually discounted.
+
+Let $\delta \in (0,1)$ be the discount factor. A player's total payoff may be written as:
+
+$$
+U_i
+=
+u_i^0
++
+\delta u_i^1
++
+\delta^2 u_i^2
++
+\cdots.
+$$
+
+A higher $\delta$ means the player is more patient.
+
+If $\delta$ is close to 1, future payoffs matter a lot. If $\delta$ is close to 0, the player is impatient and mostly cares about the present.
+
+## Present value of a constant payoff
+
+If a player receives payoff $x$ every period forever, the discounted value is:
+
+$$
+x+\delta x+\delta^2 x+\cdots
+=
+\frac{x}{1-\delta}.
+$$
+
+This formula is used constantly in repeated games.
+
+## Trigger strategies
+
+A trigger strategy begins by cooperating and then punishes if the other player defects.
+
+One simple version is grim trigger:
+
+1. cooperate as long as no one has defected;
+2. if anyone defects, punish forever.
+
+```{mermaid}
+flowchart TD
+    A[Start by cooperating] --> B{Has anyone defected?}
+    B -->|No| C[Continue cooperating]
+    B -->|Yes| D[Punish forever]
+    C --> B
+```
+
+Grim trigger is severe, but analytically simple.
+
+## Tit-for-tat
+
+Tit-for-tat is another common strategy:
+
+1. cooperate in the first period;
+2. after that, copy the other player's previous action.
+
+```{mermaid}
+flowchart TD
+    A[First period: cooperate] --> B[Observe opponent's last action]
+    B --> C[Choose same action this period]
+    C --> B
+```
+
+Tit-for-tat is less severe than grim trigger because cooperation can resume after punishment.
+
+## Repeated prisoners' dilemma
+
+In the one-shot prisoners' dilemma, defection is individually optimal.
+
+But in an infinitely repeated game, cooperation can be supported if players are sufficiently patient.
+
+Suppose:
+
+| Outcome | Payoff |
+|---|---:|
+| mutual cooperation | $R$ |
+| defect while other cooperates | $T$ |
+| mutual defection | $P$ |
+| cooperate while other defects | $S$ |
+
+where:
+
+$$
+T>R>P>S.
+$$
+
+If both cooperate forever, the value is:
+
+$$
+\frac{R}{1-\delta}.
+$$
+
+If one player defects today and is punished forever after, the value is:
+
+$$
+T+\delta\frac{P}{1-\delta}.
+$$
 
 Cooperation is sustainable if:
+
 $$
-\frac{2}{1-\delta} \ge 3+\frac{\delta}{1-\delta}
-\quad\Longleftrightarrow\quad
-\delta \ge \frac12.
+\frac{R}{1-\delta}
+\geq
+T+\delta\frac{P}{1-\delta}.
 $$
 
-## Later-on analysis
-- **Finite horizon:** backward induction kills cooperation near the end (unless there are other frictions).
-- **Noisy actions:** if mistakes happen, harsh punishments can be inefficient; “forgiving” strategies (tit-for-tat variants) become relevant.
-- **Multiple equilibria:** repeated games often admit many equilibrium paths; selection becomes a real question.
+This condition says that the value of continued cooperation must be at least as large as the value of cheating once and then being punished.
+
+## Solving the incentive condition
+
+Start with:
+
+$$
+\frac{R}{1-\delta}
+\geq
+T+\delta\frac{P}{1-\delta}.
+$$
+
+Multiply both sides by $1-\delta$:
+
+$$
+R \geq T(1-\delta)+\delta P.
+$$
+
+Expand:
+
+$$
+R \geq T-\delta T+\delta P.
+$$
+
+Rearrange:
+
+$$
+\delta(T-P) \geq T-R.
+$$
+
+So:
+
+$$
+\delta \geq \frac{T-R}{T-P}.
+$$
+
+Cooperation is easier to sustain when:
+
+- the temptation payoff $T-R$ is small;
+- the punishment gap $T-P$ is large;
+- players are patient.
+
+## Finite versus infinite repetition
+
+Finite and infinite repeated games behave differently.
+
+If the game has a known final period, backward induction can unravel cooperation.
+
+In the final period, there is no future punishment, so players may defect. Knowing this, cooperation may unravel in the previous period, and so on.
+
+```{mermaid}
+flowchart LR
+    A[Known final period] --> B[No future punishment]
+    B --> C[Defection in final period]
+    C --> D[Previous period unravels]
+    D --> E[Cooperation may collapse]
+```
+
+Infinite repetition avoids a known last period.
+
+## Folk theorem intuition
+
+The folk theorem says, roughly, that if players are sufficiently patient, many feasible and individually rational payoff profiles can be sustained as equilibria in infinitely repeated games.
+
+The intuition is:
+
+> patient players can use future rewards and punishments to support many forms of cooperation.
+
+This is powerful but also creates multiplicity. Repeated games may have many equilibria.
+
+## Reputation
+
+Repeated interaction can create reputation.
+
+A player may act cooperatively today to influence how others treat them tomorrow.
+
+```{mermaid}
+flowchart LR
+    A[Current action] --> B[Observed by others]
+    B --> C[Belief about type or reliability]
+    C --> D[Future treatment]
+    D --> E[Current incentive]
+```
+
+Reputation is especially important when players are uncertain about each other's types.
+
+## Repeated games and institutions
+
+Repeated-game logic appears in institutions.
+
+Examples:
+
+- firms cooperate because price wars are costly;
+- communities enforce norms through future exclusion;
+- criminal groups maintain discipline through repeated interaction;
+- police and communities build or lose trust over time;
+- political actors keep promises to protect reputation;
+- informal contracts survive because future business matters.
+
+## Common mistakes
+
+### 1. Treating repeated play as just many one-shot games
+
+History changes incentives.
+
+### 2. Forgetting discounting
+
+Future punishment matters only if players care about the future.
+
+### 3. Assuming cooperation always occurs
+
+Repetition can support cooperation, but only under incentive conditions.
+
+### 4. Ignoring finite-horizon unraveling
+
+A known final period can destroy cooperation through backward induction.
+
+### 5. Treating punishment as costless
+
+Punishment may reduce the punisher's payoff too.
+
+### 6. Ignoring multiple equilibria
+
+Repeated games often have many possible equilibria.
+
+## Checklist
+
+When analysing a repeated game, ask:
+
+1. What is the stage game?
+2. Is the game repeated finitely or infinitely?
+3. What does each player observe after each period?
+4. What is the discount factor?
+5. What strategies are available?
+6. What history triggers punishment?
+7. What is the gain from deviation?
+8. What is the future loss from punishment?
+9. Is cooperation sustainable?
+10. Are there multiple equilibria?
+
+## Related pages
+
+- [Game Types](index.qmd)
+- [Game Theory Notes](../game-theory.qmd)
+- [Normal-form Games](normal-form.qmd)
+- [Extensive-form Games](extensive-form.qmd)
+- [Subgame Perfect Equilibrium](../equilibriums/subgame-perfect.qmd)
+- [Perfect Bayesian Equilibrium](../equilibriums/perfect-bayesian.qmd)
+- [Dynamic Reasoning](../../foundations/dynamic-reasoning.qmd)

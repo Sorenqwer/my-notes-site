@@ -1,67 +1,289 @@
-
 ---
-title: "Extensive-form games"
+title: "Extensive-form Games"
 toc: true
+page-layout: full
 ---
 
-## What it is
-An extensive-form game represents **timing** (who moves when) and information (what players observe) using a game tree.
+Extensive-form games represent strategic interaction over time. They show who moves when, what each player observes, what actions are available, and what payoffs follow from each possible path.
 
-## What’s special
-- Sequential rationality matters: players optimize **at every decision node**.
-- The standard solution is **subgame perfect equilibrium** via backward induction (perfect information case).
+The extensive form is especially useful for studying sequential decisions, credibility, threats, promises, commitment, entry deterrence, bargaining, signalling, and institutional processes.
 
-## One example (backward induction)
+## Why extensive form matters
+
+A normal-form game lists strategies and payoffs. An extensive-form game shows the **structure of play**.
+
+```{mermaid}
+flowchart LR
+    A[Normal form] --> B[Strategies and payoffs]
+    C[Extensive form] --> D[Timing]
+    C --> E[Observation]
+    C --> F[Histories]
+    C --> G[Credibility]
+```
+
+This matters because timing can change the strategic result. If one player moves first and another responds, the second player's credible response shapes the first player's decision.
+
+## Basic components
+
+An extensive-form game usually includes:
+
+| Component | Meaning |
+|---|---|
+| Players | who makes decisions |
+| Nodes | points where a decision or event occurs |
+| Root | the initial node |
+| Branches | available actions |
+| Terminal nodes | endpoints of the game |
+| Payoffs | outcomes assigned at terminal nodes |
+| Information sets | what a player can distinguish when choosing |
+| Strategies | complete plans for every possible decision point |
+
+The game tree is the visual representation of these objects.
+
+## A simple game tree
 
 ```{mermaid}
 flowchart TD
-  S((Start)) -->|P1: A| A(( ))
-  S -->|P1: B| B(( ))
-  A -->|P2: L| AL["(2,1)"]
-  A -->|P2: R| AR["(0,0)"]
-  B -->|P2: L| BL["(1,2)"]
-  B -->|P2: R| BR["(3,0)"]
+    A[Player 1] -->|Enter| B[Player 2]
+    A -->|Stay Out| C[Payoffs: 0,2]
+    B -->|Fight| D[Payoffs: -1,-1]
+    B -->|Accommodate| E[Payoffs: 2,1]
 ```
 
-Player 2 chooses **L** after $A$ (since $1>0$) and **L** after $B$ (since $2>0$).  
-Anticipating this, player 1 prefers $A$ (since $2>1$). Outcome: $(A,L)$.
+This tree says:
 
+1. Player 1 chooses whether to enter.
+2. If Player 1 stays out, the game ends.
+3. If Player 1 enters, Player 2 chooses whether to fight or accommodate.
+4. Payoffs are assigned at the terminal nodes.
 
-## Story
-A landlord, **Ms. K**, is renewing a lease with **Rin**. The neighborhood has improved, and Ms. K considers raising rent. Ms. K chooses first: a moderate raise or an aggressive one. Rin then decides: accept or move out.
+## Histories
 
-The key is timing: Rin observes the offer before acting, and Ms. K anticipates Rin’s response.
+A **history** is a sequence of actions that has occurred so far.
 
-## Model
-- Player 1 (landlord): $L$ (low increase) or $H$ (high increase)
-- Player 2 (tenant): after observing, $A$ (accept) or $M$ (move)
-- Information: perfect (tenant observes the offer)
-- Solution concept: backward induction / SPE
+In the entry game above, after Player 1 chooses Enter, the history is:
 
-## Game tree (toy)
+$$
+h = \text{Enter}.
+$$
+
+After Player 1 chooses Stay Out, the game ends.
+
+Histories matter because strategies in dynamic games are contingent plans. A player may choose different actions after different histories.
+
+## Strategies in extensive-form games
+
+A strategy is not just one action. It is a complete plan.
+
+If Player 2 moves only after entry, then Player 2's strategy must specify what to do after entry:
+
+$$
+s_2(\text{Enter}) \in \{\text{Fight},\text{Accommodate}\}.
+$$
+
+In more complex games, a strategy must specify what the player would do at every information set where they may be called to move.
+
+This is one of the most common sources of confusion in dynamic games.
+
 ```{mermaid}
 flowchart TD
-  S((Start)) -->|P1: L| L(( ))
-  S -->|P1: H| H(( ))
-  L -->|P2: A| LA["(2,2)"]
-  L -->|P2: M| LM["(0,1)"]
-  H -->|P2: A| HA["(3,0)"]
-  H -->|P2: M| HM["(0,1)"]
+    A[Dynamic strategy] --> B[Action after history 1]
+    A --> C[Action after history 2]
+    A --> D[Action after history 3]
+    B --> E[Complete contingent plan]
+    C --> E
+    D --> E
 ```
 
-## Equilibrium (backward induction → SPE)
-Step 1 (tenant’s optimal actions at the second stage):
-- After $L$: compare tenant payoff $2$ (accept) vs $1$ (move) → choose **$A$**
-- After $H$: compare tenant payoff $0$ (accept) vs $1$ (move) → choose **$M$**
+## Perfect information
 
-Step 2 (landlord anticipates this):
-- If choose $L$ → outcome $(2,2)$
-- If choose $H$ → tenant moves → outcome $(0,1)$
+A game has **perfect information** if every player observes all previous actions before choosing.
 
-So landlord chooses **$L$**.  
-**SPE outcome:** $(L,A)$.
+Chess is a classic example. Each player observes the whole history of moves.
 
-## Later-on analysis
-- **Outside option changes:** if moving becomes less costly, the landlord’s ability to raise rent shrinks.
-- **Incomplete information:** if Ms. K doesn’t know Rin’s moving cost, the game becomes Bayesian and can generate screening/signaling behavior.
-- **Commitment:** if Rin could commit to “move if any increase,” outcomes shift again (commitment changes the tree).
+In perfect-information games, decision nodes are not grouped into non-trivial information sets. Players know exactly where they are in the tree.
+
+## Imperfect information
+
+A game has **imperfect information** if a player does not know exactly which node they are at when choosing.
+
+This is represented by an information set.
+
+For example, if Player 2 cannot observe whether Player 1 chose $A$ or $B$, then Player 2's two decision nodes are in the same information set.
+
+```{mermaid}
+flowchart TD
+    A[Player 1] -->|A| B[Player 2 node 1]
+    A -->|B| C[Player 2 node 2]
+    B -. same information set .- C
+    B -->|L| D[Outcome]
+    B -->|R| E[Outcome]
+    C -->|L| F[Outcome]
+    C -->|R| G[Outcome]
+```
+
+The dotted connection means Player 2 cannot distinguish the two nodes.
+
+## Backward induction
+
+In finite games with perfect information, backward induction solves the game from the end to the beginning.
+
+```{mermaid}
+flowchart TD
+    A[Start at final decision nodes] --> B[Choose last mover's optimal action]
+    B --> C[Replace continuation with payoff]
+    C --> D[Move one step backward]
+    D --> E[Choose previous player's optimal action]
+    E --> F[Repeat until root]
+    F --> G[Predicted path]
+```
+
+Backward induction is the natural method for extensive-form games because earlier players anticipate later rational behaviour.
+
+## Credible threats
+
+A threat is credible only if the player would actually want to carry it out when the time comes.
+
+In the entry game, suppose Player 2 threatens to fight if Player 1 enters. If fighting gives Player 2 a lower payoff than accommodating after entry, then the threat is not credible.
+
+```{mermaid}
+flowchart LR
+    A[Threat announced] --> B{Optimal later?}
+    B -->|Yes| C[Credible threat]
+    B -->|No| D[Non-credible threat]
+    D --> E[Should not deter in SPE]
+```
+
+This is why Nash equilibrium alone may be too weak for dynamic games.
+
+## Subgames
+
+A subgame is a part of the game that begins at a decision node and contains all future actions from that node onward.
+
+A subgame must not cut across an information set.
+
+Subgames matter because a dynamic equilibrium should prescribe optimal behaviour after every possible history.
+
+```{mermaid}
+flowchart TD
+    A[Whole game] --> B[Subgame after history 1]
+    A --> C[Subgame after history 2]
+    B --> D[Continuation equilibrium]
+    C --> E[Continuation equilibrium]
+```
+
+This leads to subgame perfect equilibrium.
+
+## Normal form versus extensive form
+
+Every finite extensive-form game can be represented in normal form by listing each player's complete strategies.
+
+However, this conversion often hides timing.
+
+| Representation | Strength | Limitation |
+|---|---|---|
+| Extensive form | shows timing and information | can be visually large |
+| Normal form | shows all strategy profiles and payoffs | hides credibility and sequence |
+
+For dynamic games, extensive form is usually better for reasoning.
+
+## Example: entry deterrence
+
+Suppose an entrant decides whether to enter a market. If it enters, the incumbent chooses whether to fight or accommodate.
+
+```{mermaid}
+flowchart TD
+    A[Entrant] -->|Stay Out| B[0,2]
+    A -->|Enter| C[Incumbent]
+    C -->|Fight| D[-1,-1]
+    C -->|Accommodate| E[2,1]
+```
+
+Solve by backward induction:
+
+1. If entry occurs, the incumbent compares Fight and Accommodate.
+2. The incumbent prefers Accommodate because $1>-1$.
+3. The entrant anticipates Accommodate.
+4. The entrant compares Enter, giving $2$, with Stay Out, giving $0$.
+5. The entrant enters.
+
+The subgame perfect outcome is:
+
+$$
+(\text{Enter}, \text{Accommodate}).
+$$
+
+## Dynamic games with chance
+
+Some extensive-form games include nature. Nature represents random events.
+
+For example, nature may choose a player's type before the player acts.
+
+```{mermaid}
+flowchart TD
+    A[Nature] -->|High type| B[Sender H]
+    A -->|Low type| C[Sender L]
+    B --> D[Message]
+    C --> E[Message]
+    D --> F[Receiver response]
+    E --> F
+```
+
+This structure appears in signaling games and Bayesian extensive-form games.
+
+## Strategies and off-path behaviour
+
+In an extensive-form game, a strategy must specify what to do even after histories that do not occur in equilibrium.
+
+These histories are called off-path.
+
+Off-path behaviour matters because it can support or undermine threats and promises.
+
+For example, if entry does not occur in equilibrium, the incumbent's planned response after entry is still part of the strategy.
+
+## Common mistakes
+
+### 1. Solving from the root first
+
+For finite perfect-information games, solve from the end backward.
+
+### 2. Confusing action and strategy
+
+A strategy is a complete plan, not just the action taken on the equilibrium path.
+
+### 3. Ignoring off-path actions
+
+Dynamic equilibrium requires behaviour after possible histories, even if they are not reached.
+
+### 4. Treating all Nash equilibria as credible
+
+Some Nash equilibria rely on non-credible threats.
+
+### 5. Cutting across information sets
+
+A subgame cannot begin inside an information set.
+
+## Checklist
+
+When analysing an extensive-form game, ask:
+
+1. Who moves first?
+2. Who moves later?
+3. What does each player observe?
+4. What are the histories?
+5. What are the terminal payoffs?
+6. What are each player's strategies?
+7. Are there information sets?
+8. Are there proper subgames?
+9. What does backward induction predict?
+10. Are threats and promises credible?
+
+## Related pages
+
+- [Game Types](index.qmd)
+- [Game Theory Notes](../game-theory.qmd)
+- [Normal-form Games](normal-form.qmd)
+- [Repeated Games](repeated.qmd)
+- [Subgame Perfect Equilibrium](../equilibriums/subgame-perfect.qmd)
+- [Perfect Bayesian Equilibrium](../equilibriums/perfect-bayesian.qmd)
+- [Dynamic Reasoning](../../foundations/dynamic-reasoning.qmd)

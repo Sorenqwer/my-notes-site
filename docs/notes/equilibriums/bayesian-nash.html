@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Bayesian Nash equilibrium (BNE) – Margins of Rationality</title>
+<title>Bayesian Nash Equilibrium – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -159,17 +163,31 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
-  <li><a href="#where-it-shows-up" id="toc-where-it-shows-up" class="nav-link" data-scroll-target="#where-it-shows-up">Where it shows up</a></li>
-  <li><a href="#how-to-solve-recipe" id="toc-how-to-solve-recipe" class="nav-link" data-scroll-target="#how-to-solve-recipe">How to solve (recipe)</a></li>
-  <li><a href="#solved-example-type-dependent-best-response" id="toc-solved-example-type-dependent-best-response" class="nav-link" data-scroll-target="#solved-example-type-dependent-best-response">Solved example (type-dependent best response)</a>
+  <li><a href="#from-nash-to-bayesian-nash" id="toc-from-nash-to-bayesian-nash" class="nav-link active" data-scroll-target="#from-nash-to-bayesian-nash">From Nash to Bayesian Nash</a></li>
+  <li><a href="#basic-setup" id="toc-basic-setup" class="nav-link" data-scroll-target="#basic-setup">Basic setup</a></li>
+  <li><a href="#expected-payoff" id="toc-expected-payoff" class="nav-link" data-scroll-target="#expected-payoff">Expected payoff</a></li>
+  <li><a href="#definition" id="toc-definition" class="nav-link" data-scroll-target="#definition">Definition</a></li>
+  <li><a href="#the-logic" id="toc-the-logic" class="nav-link" data-scroll-target="#the-logic">The logic</a></li>
+  <li><a href="#example-two-types" id="toc-example-two-types" class="nav-link" data-scroll-target="#example-two-types">Example: two types</a></li>
+  <li><a href="#type-contingent-best-response" id="toc-type-contingent-best-response" class="nav-link" data-scroll-target="#type-contingent-best-response">Type-contingent best response</a></li>
+  <li><a href="#pure-and-mixed-bayesian-strategies" id="toc-pure-and-mixed-bayesian-strategies" class="nav-link" data-scroll-target="#pure-and-mixed-bayesian-strategies">Pure and mixed Bayesian strategies</a></li>
+  <li><a href="#interim-perspective" id="toc-interim-perspective" class="nav-link" data-scroll-target="#interim-perspective">Interim perspective</a></li>
+  <li><a href="#bayesian-nash-and-bayes-rule" id="toc-bayesian-nash-and-bayes-rule" class="nav-link" data-scroll-target="#bayesian-nash-and-bayes-rule">Bayesian Nash and Bayes’ rule</a></li>
+  <li><a href="#relation-to-harsanyi-transformation" id="toc-relation-to-harsanyi-transformation" class="nav-link" data-scroll-target="#relation-to-harsanyi-transformation">Relation to Harsanyi transformation</a></li>
+  <li><a href="#example-structure-first-price-auction" id="toc-example-structure-first-price-auction" class="nav-link" data-scroll-target="#example-structure-first-price-auction">Example structure: first-price auction</a></li>
+  <li><a href="#example-structure-entry-with-unknown-cost" id="toc-example-structure-entry-with-unknown-cost" class="nav-link" data-scroll-target="#example-structure-entry-with-unknown-cost">Example structure: entry with unknown cost</a></li>
+  <li><a href="#bne-versus-pbe" id="toc-bne-versus-pbe" class="nav-link" data-scroll-target="#bne-versus-pbe">BNE versus PBE</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
   <ul class="collapse">
-  <li><a href="#problem-context-question" id="toc-problem-context-question" class="nav-link" data-scroll-target="#problem-context-question">Problem (context + question)</a></li>
-  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
-  <li><a href="#check" id="toc-check" class="nav-link" data-scroll-target="#check">Check</a></li>
-  <li><a href="#takeaway" id="toc-takeaway" class="nav-link" data-scroll-target="#takeaway">Takeaway</a></li>
+  <li><a href="#solving-only-for-one-type" id="toc-solving-only-for-one-type" class="nav-link" data-scroll-target="#solving-only-for-one-type">1. Solving only for one type</a></li>
+  <li><a href="#forgetting-that-strategy-is-a-function" id="toc-forgetting-that-strategy-is-a-function" class="nav-link" data-scroll-target="#forgetting-that-strategy-is-a-function">2. Forgetting that strategy is a function</a></li>
+  <li><a href="#confusing-type-and-belief" id="toc-confusing-type-and-belief" class="nav-link" data-scroll-target="#confusing-type-and-belief">3. Confusing type and belief</a></li>
+  <li><a href="#ignoring-expected-payoff" id="toc-ignoring-expected-payoff" class="nav-link" data-scroll-target="#ignoring-expected-payoff">4. Ignoring expected payoff</a></li>
+  <li><a href="#applying-bne-to-dynamic-signaling-without-beliefs-after-actions" id="toc-applying-bne-to-dynamic-signaling-without-beliefs-after-actions" class="nav-link" data-scroll-target="#applying-bne-to-dynamic-signaling-without-beliefs-after-actions">5. Applying BNE to dynamic signaling without beliefs after actions</a></li>
+  <li><a href="#forgetting-type-correlation" id="toc-forgetting-type-correlation" class="nav-link" data-scroll-target="#forgetting-type-correlation">6. Forgetting type correlation</a></li>
   </ul></li>
-  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
+  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist">Checklist</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -178,7 +196,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Bayesian Nash equilibrium (BNE)</h1>
+<h1 class="title">Bayesian Nash Equilibrium</h1>
 </div>
 
 
@@ -195,70 +213,365 @@ window.Quarto = {
 </header>
 
 
-<section id="what-it-is" class="level2">
-<h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
-<p>A <strong>Bayesian game</strong> has private information (types). A <strong>Bayesian Nash equilibrium</strong> is a strategy profile where each type best-responds given beliefs about others’ types.</p>
-<p>Formally, each player <span class="math inline">\(i\)</span> has type <span class="math inline">\(\theta_i\)</span> and chooses an action via a strategy <span class="math inline">\(s_i(\theta_i)\)</span>. A BNE satisfies, for each type <span class="math inline">\(\theta_i\)</span>: <span class="math display">\[
-s_i(\theta_i)\in \arg\max_{a_i} \mathbb{E}\left[u_i(a_i, s_{-i}(\theta_{-i}), \theta_i,\theta_{-i})\mid \theta_i\right].
-\]</span></p>
+<p>Bayesian Nash equilibrium is the basic equilibrium concept for static games with incomplete information. It requires every type of every player to choose a best response, given beliefs about other players’ types and strategies.</p>
+<p>The central idea is:</p>
+<blockquote class="blockquote">
+<p>each possible type must be optimizing under uncertainty.</p>
+</blockquote>
+<section id="from-nash-to-bayesian-nash" class="level2">
+<h2 class="anchored" data-anchor-id="from-nash-to-bayesian-nash">From Nash to Bayesian Nash</h2>
+<p>In a complete-information game, Nash equilibrium requires each player to best respond to others’ strategies.</p>
+<p>In a Bayesian game, each player may have different possible types. Therefore, equilibrium must specify what each type does.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Nash equilibrium] --&gt; B[Each player best responds]
+    C[Bayesian Nash equilibrium] --&gt; D[Each type of each player best responds]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The difference is that strategies are type-contingent.</p>
 </section>
-<section id="where-it-shows-up" class="level2">
-<h2 class="anchored" data-anchor-id="where-it-shows-up">Where it shows up</h2>
+<section id="basic-setup" class="level2">
+<h2 class="anchored" data-anchor-id="basic-setup">Basic setup</h2>
+<p>A Bayesian game includes:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Object</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(N\)</span></td>
+<td>players</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Theta_i\)</span></td>
+<td>type space of player <span class="math inline">\(i\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(A_i\)</span></td>
+<td>action set of player <span class="math inline">\(i\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(p(\theta)\)</span></td>
+<td>prior over type profiles</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(u_i(a,\theta)\)</span></td>
+<td>payoff of player <span class="math inline">\(i\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>A strategy for player <span class="math inline">\(i\)</span> is a function:</p>
+<p><span class="math display">\[
+s_i:\Theta_i \to A_i.
+\]</span></p>
+<p>This means that the strategy assigns an action to every type.</p>
+</section>
+<section id="expected-payoff" class="level2">
+<h2 class="anchored" data-anchor-id="expected-payoff">Expected payoff</h2>
+<p>If player <span class="math inline">\(i\)</span> has type <span class="math inline">\(\theta_i\)</span>, then the player forms beliefs about other players’ types <span class="math inline">\(\theta_{-i}\)</span>.</p>
+<p>Given a strategy profile <span class="math inline">\(s\)</span>, the expected payoff from choosing action <span class="math inline">\(a_i\)</span> is:</p>
+<p><span class="math display">\[
+\sum_{\theta_{-i}}
+u_i(a_i,s_{-i}(\theta_{-i}),\theta_i,\theta_{-i})
+\Pr(\theta_{-i}\mid \theta_i).
+\]</span></p>
+<p>The type <span class="math inline">\(\theta_i\)</span> chooses the action that maximizes this expected payoff.</p>
+</section>
+<section id="definition" class="level2">
+<h2 class="anchored" data-anchor-id="definition">Definition</h2>
+<p>A strategy profile</p>
+<p><span class="math display">\[
+s^*=(s_1^*,\ldots,s_n^*)
+\]</span></p>
+<p>is a Bayesian Nash equilibrium if, for every player <span class="math inline">\(i\)</span> and every type <span class="math inline">\(\theta_i \in \Theta_i\)</span>,</p>
+<p><span class="math display">\[
+s_i^*(\theta_i)
+\in
+\arg\max_{a_i\in A_i}
+\sum_{\theta_{-i}}
+u_i(a_i,s_{-i}^*(\theta_{-i}),\theta_i,\theta_{-i})
+\Pr(\theta_{-i}\mid \theta_i).
+\]</span></p>
+<p>In words:</p>
+<blockquote class="blockquote">
+<p>each type chooses a best response to the type-contingent strategies of others.</p>
+</blockquote>
+</section>
+<section id="the-logic" class="level2">
+<h2 class="anchored" data-anchor-id="the-logic">The logic</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Player observes own type] --&gt; B[Forms belief about others' types]
+    B --&gt; C[Predicts others' type-contingent strategies]
+    C --&gt; D[Computes expected payoff]
+    D --&gt; E[Chooses best response]
+    E --&gt; F[Bayesian Nash equilibrium if all types do this]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This is the core of Bayesian Nash equilibrium.</p>
+</section>
+<section id="example-two-types" class="level2">
+<h2 class="anchored" data-anchor-id="example-two-types">Example: two types</h2>
+<p>Suppose player 1 can be type <span class="math inline">\(H\)</span> or type <span class="math inline">\(L\)</span>.</p>
+<p>A strategy for player 1 is not just one action. It must specify:</p>
+<p><span class="math display">\[
+s_1(H)
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+s_1(L).
+\]</span></p>
+<p>For example:</p>
+<p><span class="math display">\[
+s_1(H)=A,
+\qquad
+s_1(L)=B.
+\]</span></p>
+<p>This means the high type chooses <span class="math inline">\(A\)</span>, while the low type chooses <span class="math inline">\(B\)</span>.</p>
+<p>The opponent may not observe the type, but forms beliefs about which type is being faced.</p>
+</section>
+<section id="type-contingent-best-response" class="level2">
+<h2 class="anchored" data-anchor-id="type-contingent-best-response">Type-contingent best response</h2>
+<p>Suppose type <span class="math inline">\(H\)</span> and type <span class="math inline">\(L\)</span> have different payoffs.</p>
+<p>Then the same action may be optimal for one type but not for the other.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Type H] --&gt; B[Payoff function for H]
+    B --&gt; C[Best response for H]
+
+    D[Type L] --&gt; E[Payoff function for L]
+    E --&gt; F[Best response for L]
+
+    C --&gt; G[Type-contingent strategy]
+    F --&gt; G
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Bayesian Nash equilibrium requires both type-specific choices to be optimal.</p>
+</section>
+<section id="pure-and-mixed-bayesian-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="pure-and-mixed-bayesian-strategies">Pure and mixed Bayesian strategies</h2>
+<p>A pure Bayesian strategy maps each type to a pure action.</p>
+<p>A mixed Bayesian strategy maps each type to a probability distribution over actions.</p>
+<p>For example:</p>
+<p><span class="math display">\[
+\sigma_i(\theta_i)(a_i)
+\]</span></p>
+<p>is the probability that type <span class="math inline">\(\theta_i\)</span> of player <span class="math inline">\(i\)</span> chooses action <span class="math inline">\(a_i\)</span>.</p>
+<p>This allows different types to randomize differently.</p>
+</section>
+<section id="interim-perspective" class="level2">
+<h2 class="anchored" data-anchor-id="interim-perspective">Interim perspective</h2>
+<p>Bayesian Nash equilibrium is usually defined from the <strong>interim</strong> perspective.</p>
+<p>This means each player has already learned their own type but remains uncertain about others’ types.</p>
+<p>The stages are:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Ex ante: before types] --&gt; B[Interim: after own type]
+    B --&gt; C[Action choice]
+    C --&gt; D[Ex post: after types and actions]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>BNE asks whether each type is optimal at the interim stage.</p>
+</section>
+<section id="bayesian-nash-and-bayes-rule" class="level2">
+<h2 class="anchored" data-anchor-id="bayesian-nash-and-bayes-rule">Bayesian Nash and Bayes’ rule</h2>
+<p>In static Bayesian games, beliefs are usually derived from the common prior and the player’s own type.</p>
+<p>If types are independent, then learning your own type may not change beliefs about others.</p>
+<p>If types are correlated, then learning your own type may provide information about others.</p>
+<p>Bayes’ rule gives:</p>
+<p><span class="math display">\[
+\Pr(\theta_{-i}\mid \theta_i)
+=
+\frac{
+\Pr(\theta_i,\theta_{-i})
+}{
+\Pr(\theta_i)
+}.
+\]</span></p>
+<p>This conditional belief is used in the expected payoff calculation.</p>
+</section>
+<section id="relation-to-harsanyi-transformation" class="level2">
+<h2 class="anchored" data-anchor-id="relation-to-harsanyi-transformation">Relation to Harsanyi transformation</h2>
+<p>Bayesian Nash equilibrium can be understood as Nash equilibrium in the Harsanyi-transformed game.</p>
+<p>The transformed game has:</p>
+<ol type="1">
+<li>nature draws types;</li>
+<li>each player observes own type;</li>
+<li>each player chooses an action according to a type-contingent strategy.</li>
+</ol>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Bayesian game] --&gt; B[Harsanyi transformation]
+    B --&gt; C[Game with nature's move]
+    C --&gt; D[Nash equilibrium in type-contingent strategies]
+    D --&gt; E[Bayesian Nash equilibrium]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This is why Bayesian Nash equilibrium is a natural extension of Nash equilibrium.</p>
+</section>
+<section id="example-structure-first-price-auction" class="level2">
+<h2 class="anchored" data-anchor-id="example-structure-first-price-auction">Example structure: first-price auction</h2>
+<p>In a first-price sealed-bid auction, each bidder knows their own valuation but not others’ valuations.</p>
+<p>A bidder’s type is their valuation:</p>
+<p><span class="math display">\[
+\theta_i = v_i.
+\]</span></p>
+<p>A strategy maps valuation into bid:</p>
+<p><span class="math display">\[
+b_i(v_i).
+\]</span></p>
+<p>A Bayesian Nash equilibrium is a bidding function where every valuation type bids optimally given beliefs about other bidders’ valuations and bidding strategies.</p>
+<p>This shows why BNE is useful in auctions.</p>
+</section>
+<section id="example-structure-entry-with-unknown-cost" class="level2">
+<h2 class="anchored" data-anchor-id="example-structure-entry-with-unknown-cost">Example structure: entry with unknown cost</h2>
+<p>Suppose a firm may be high-cost or low-cost. A rival does not observe the cost type.</p>
+<p>The firm’s strategy specifies what each cost type does:</p>
+<p><span class="math display">\[
+s(H), \quad s(L).
+\]</span></p>
+<p>The rival’s strategy is based on expected payoff under beliefs about whether the firm is high-cost or low-cost.</p>
+<p>The equilibrium requires:</p>
 <ul>
-<li>Static games of incomplete information (entry games, pricing with private costs)</li>
-<li>Auctions (many auction models are BNE)</li>
-<li>As the static benchmark for dynamic incomplete-information models</li>
+<li>high-cost type best responds;</li>
+<li>low-cost type best responds;</li>
+<li>rival best responds to its beliefs.</li>
 </ul>
 </section>
-<section id="how-to-solve-recipe" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-solve-recipe">How to solve (recipe)</h2>
+<section id="bne-versus-pbe" class="level2">
+<h2 class="anchored" data-anchor-id="bne-versus-pbe">BNE versus PBE</h2>
+<p>Bayesian Nash equilibrium is mainly for static incomplete-information games.</p>
+<p>Perfect Bayesian equilibrium is for dynamic incomplete-information games.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Used for</th>
+<th>Requires</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bayesian Nash equilibrium</td>
+<td>static incomplete information</td>
+<td>type-contingent best responses</td>
+</tr>
+<tr class="even">
+<td>Perfect Bayesian equilibrium</td>
+<td>dynamic incomplete information</td>
+<td>sequential rationality and beliefs</td>
+</tr>
+<tr class="odd">
+<td>Sequential equilibrium</td>
+<td>dynamic incomplete information</td>
+<td>stronger belief consistency</td>
+</tr>
+</tbody>
+</table>
+<p>If actions reveal information over time, BNE may not be enough.</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="solving-only-for-one-type" class="level3">
+<h3 class="anchored" data-anchor-id="solving-only-for-one-type">1. Solving only for one type</h3>
+<p>Every possible type must be optimizing.</p>
+</section>
+<section id="forgetting-that-strategy-is-a-function" class="level3">
+<h3 class="anchored" data-anchor-id="forgetting-that-strategy-is-a-function">2. Forgetting that strategy is a function</h3>
+<p>A Bayesian strategy maps types to actions.</p>
+</section>
+<section id="confusing-type-and-belief" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-type-and-belief">3. Confusing type and belief</h3>
+<p>A type is private information. A belief is a probability over unknown types or states.</p>
+</section>
+<section id="ignoring-expected-payoff" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-expected-payoff">4. Ignoring expected payoff</h3>
+<p>Players choose based on expected payoff over uncertain types.</p>
+</section>
+<section id="applying-bne-to-dynamic-signaling-without-beliefs-after-actions" class="level3">
+<h3 class="anchored" data-anchor-id="applying-bne-to-dynamic-signaling-without-beliefs-after-actions">5. Applying BNE to dynamic signaling without beliefs after actions</h3>
+<p>Dynamic signaling games usually need PBE or sequential equilibrium.</p>
+</section>
+<section id="forgetting-type-correlation" class="level3">
+<h3 class="anchored" data-anchor-id="forgetting-type-correlation">6. Forgetting type correlation</h3>
+<p>If types are correlated, observing your own type can change beliefs about others.</p>
+</section>
+</section>
+<section id="checklist" class="level2">
+<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
+<p>When checking Bayesian Nash equilibrium, ask:</p>
 <ol type="1">
-<li>List types and prior beliefs.</li>
-<li>Write strategies as functions of types: <span class="math inline">\(a_i=s_i(\theta_i)\)</span>.</li>
-<li>Compute each type’s expected payoff from each action.</li>
-<li>Choose best responses by type.</li>
-<li>Verify mutual best responses given beliefs.</li>
+<li>What are the players?</li>
+<li>What are the type spaces?</li>
+<li>What does each player observe?</li>
+<li>What is the prior distribution?</li>
+<li>Are types independent or correlated?</li>
+<li>What is each player’s action set?</li>
+<li>What is each type’s strategy?</li>
+<li>What belief does each type hold about others?</li>
+<li>What expected payoff does each type maximize?</li>
+<li>Is every type choosing a best response?</li>
 </ol>
-<hr>
 </section>
-<section id="solved-example-type-dependent-best-response" class="level2">
-<h2 class="anchored" data-anchor-id="solved-example-type-dependent-best-response">Solved example (type-dependent best response)</h2>
-<section id="problem-context-question" class="level3">
-<h3 class="anchored" data-anchor-id="problem-context-question">Problem (context + question)</h3>
-<p>An investor chooses whether to fund a startup: <span class="math inline">\(F\)</span> (fund) or <span class="math inline">\(R\)</span> (reject).</p>
-<p>The startup’s type is <span class="math inline">\(\theta\in\{S,W\}\)</span> (strong or weak), with prior <span class="math inline">\(\Pr(S)=p\)</span>. If the investor funds: - payoff is <span class="math inline">\(+1\)</span> if <span class="math inline">\(\theta=S\)</span>, - payoff is <span class="math inline">\(-1\)</span> if <span class="math inline">\(\theta=W\)</span>.</p>
-<p>If the investor rejects, payoff is <span class="math inline">\(0\)</span>.</p>
-<p><strong>Question:</strong> Find the investor’s optimal action as a function of <span class="math inline">\(p\)</span> (a BNE decision rule).</p>
-</section>
-<section id="solution" class="level3">
-<h3 class="anchored" data-anchor-id="solution">Solution</h3>
-<p>Compute expected payoff from funding: <span class="math display">\[
-\mathbb{E}[\pi(F)] = p(1) + (1-p)(-1) = 2p-1.
-\]</span></p>
-<p>Rejecting yields: <span class="math display">\[
-\mathbb{E}[\pi(R)] = 0.
-\]</span></p>
-<p>So the investor funds iff <span class="math inline">\(2p-1\ge 0\)</span>, i.e. <span class="math display">\[
-p \ge \tfrac12.
-\]</span></p>
-<p><strong>Result:</strong> Optimal strategy is: - choose <span class="math inline">\(F\)</span> if <span class="math inline">\(p\ge 1/2\)</span>, - choose <span class="math inline">\(R\)</span> if <span class="math inline">\(p&lt;1/2\)</span>, - indifferent at <span class="math inline">\(p=1/2\)</span>.</p>
-</section>
-<section id="check" class="level3">
-<h3 class="anchored" data-anchor-id="check">Check</h3>
-<p>Given beliefs (the prior), the chosen action maximizes expected payoff.</p>
-</section>
-<section id="takeaway" class="level3">
-<h3 class="anchored" data-anchor-id="takeaway">Takeaway</h3>
-<p>BNE decisions are often threshold rules: act if expected benefit given beliefs is large enough.</p>
-<hr>
-</section>
-</section>
-<section id="later-on-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
 <ul>
-<li>If a <strong>signal</strong> is observed before acting, beliefs update via Bayes’ rule and the threshold shifts.</li>
-<li>If the informed party can <strong>strategically choose information</strong>, you move toward signaling or cheap talk → PBE.</li>
-<li>With many types/actions, equilibrium often has cutoff strategies and monotonicity structure.</li>
+<li><a href="../../notes/equilibriums/index.html">Equilibrium Concepts</a></li>
+<li><a href="../../notes/game-types/bayesian.html">Bayesian Games</a></li>
+<li><a href="../../foundations/probability.html">Probability</a></li>
+<li><a href="../../notes/equilibriums/nash.html">Nash Equilibrium</a></li>
+<li><a href="../../notes/equilibriums/perfect-bayesian.html">Perfect Bayesian Equilibrium</a></li>
+<li><a href="../../notes/equilibriums/sequential-equilibrium.html">Sequential Equilibrium</a></li>
+<li><a href="../../notes/game-types/cheap-talk.html">Cheap Talk</a></li>
+<li><a href="../../notes/game-types/signaling.html">Signaling</a></li>
 </ul>
 
 

@@ -1,56 +1,338 @@
 ---
-title: "Bayesian games"
+title: "Bayesian Games"
 toc: true
+page-layout: full
 ---
 
-## What it is
-A Bayesian game models **incomplete information**: players have private types and hold beliefs about others’ types.
+Bayesian games study strategic interaction under incomplete information. Players may be uncertain about other players' preferences, payoffs, costs, abilities, intentions, information, or types.
 
-A Bayesian Nash equilibrium (BNE) is a strategy profile where each type best-responds given beliefs.
+The key idea is that players do not simply choose actions. They choose actions while holding beliefs about what kind of opponents they are facing.
 
-## What’s special
-- Strategies map **types to actions**.
-- Beliefs (priors/posteriors) drive behavior.
-- Same strategic logic as normal-form games, but with expectations over types.
+## Complete versus incomplete information
 
-## One example (2-type entry game)
-Player 1 (incumbent) has type $\theta\in\{H,L\}$ with $\mathbb{P}(H)=p$. Player 2 (entrant) chooses $E$ (enter) or $O$ (out). If entrant stays out: payoffs $(1,0)$.
+A game has **complete information** if the structure of the game, including payoffs and types, is commonly known.
 
-If entrant enters:
-- If type is $H$: fight is profitable for incumbent.
-- If type is $L$: accommodate is better.
+A game has **incomplete information** if at least one player is uncertain about another player's type or payoff-relevant characteristic.
 
-Toy payoff if entrant enters:
-- Type $H$ incumbent prefers **Fight**, giving entrant payoff $-1$.
-- Type $L$ incumbent prefers **Accommodate**, giving entrant payoff $+1$.
+```{mermaid}
+flowchart TD
+    A[Strategic interaction] --> B[Complete information]
+    A --> C[Incomplete information]
+    B --> D[Players know payoffs and types]
+    C --> E[Players hold beliefs over types]
+    E --> F[Bayesian game]
+```
 
-Entrant enters if expected payoff is nonnegative:
+Incomplete information does not mean players know nothing. It means they reason with probability.
+
+## Types
+
+A **type** represents private information about a player.
+
+A type can describe:
+
+- cost;
+- ability;
+- valuation;
+- patience;
+- honesty;
+- bias;
+- preference;
+- information;
+- intention;
+- risk;
+- productivity.
+
+For example, a firm may be high-cost or low-cost:
+
 $$
-\mathbb{E}[\pi_2 \mid E] = p(-1) + (1-p)(+1) = 1-2p \ge 0
-\quad\Rightarrow\quad p \le \frac12.
-$$
-
-**Solution sketch.** The entrant’s decision depends on the probability the incumbent is the tough type.
-
-## Story
-A startup founder, **Eden**, pitches an angel investor. Eden knows whether the startup is strong or weak. The investor can’t fully verify this in one meeting. Funding a strong startup is profitable; funding a weak one is a loss.
-
-The investor’s action is based on beliefs about Eden’s (hidden) type.
-
-## Model
-- Founder type: $\theta\in\{S,W\}$ with prior $\Pr(S)=p$
-- Investor action: fund $F$ or reject $R$
-- Payoff to investor: if $F$, payoff $+1$ under $S$ and $-1$ under $W$; if $R$, payoff $0$
-
-## Equilibrium (threshold best response)
-Investor funds iff expected payoff is nonnegative:
-$$
-\mathbb{E}[\pi \mid F]=p(1)+(1-p)(-1)=2p-1 \ge 0
-\quad\Rightarrow\quad
-p\ge \tfrac12.
+\theta_i \in \{H,L\}.
 $$
 
-## Later-on analysis
-- **Signals:** if the pitch provides a signal, beliefs update via Bayes’ rule before the funding choice.
-- **Strategic disclosure:** if the founder can choose what to reveal, this becomes a signaling/cheap-talk hybrid.
-- **Multiple types:** richer type spaces yield cutoff strategies and comparative statics in $p$.
+The player's payoff may depend on their own type and possibly on others' types.
+
+## Type spaces
+
+Each player has a type space.
+
+For player $i$, the type space is written as
+
+$$
+\Theta_i.
+$$
+
+A type is an element:
+
+$$
+\theta_i \in \Theta_i.
+$$
+
+A profile of types is
+
+$$
+\theta = (\theta_1,\ldots,\theta_n).
+$$
+
+The types of everyone except player $i$ are written as
+
+$$
+\theta_{-i}.
+$$
+
+## Beliefs
+
+Players hold beliefs over types.
+
+If player 2 may be high-cost or low-cost, player 1 may believe:
+
+$$
+\Pr(\theta_2=H)=p,
+$$
+
+and
+
+$$
+\Pr(\theta_2=L)=1-p.
+$$
+
+Beliefs are central because players choose actions based on expected payoffs.
+
+```{mermaid}
+flowchart LR
+    A[Unknown type] --> B[Belief over types]
+    B --> C[Expected payoff]
+    C --> D[Optimal action]
+```
+
+## Nature
+
+A Bayesian game is often represented as a game where nature first draws types.
+
+```{mermaid}
+flowchart TD
+    A[Nature draws types] --> B[Each player observes own type]
+    B --> C[Players choose actions]
+    C --> D[Payoffs depend on actions and types]
+```
+
+This converts incomplete information into imperfect information about nature's move.
+
+## Strategy in a Bayesian game
+
+A strategy in a Bayesian game is a type-contingent plan.
+
+Player $i$'s strategy maps types into actions:
+
+$$
+s_i:\Theta_i \to A_i.
+$$
+
+This means each type of player $i$ may choose a different action.
+
+For example:
+
+$$
+s_i(H)=a_H,
+$$
+
+and
+
+$$
+s_i(L)=a_L.
+$$
+
+A strategy must specify what every possible type would do.
+
+## Expected payoff
+
+Suppose player $i$ has type $\theta_i$ and chooses action $a_i$. The player is uncertain about others' types.
+
+The expected payoff is:
+
+$$
+\mathbb{E}_{\theta_{-i}}
+[
+u_i(a_i,a_{-i},\theta_i,\theta_{-i})
+].
+$$
+
+With finitely many types, this can be written as:
+
+$$
+\sum_{\theta_{-i}}
+u_i(a_i,a_{-i},\theta_i,\theta_{-i})
+\Pr(\theta_{-i}\mid \theta_i).
+$$
+
+The player chooses an action that maximizes expected payoff.
+
+## Bayesian Nash equilibrium
+
+A Bayesian Nash equilibrium is a strategy profile where every type of every player chooses a best response given beliefs and the type-contingent strategies of others.
+
+```{mermaid}
+flowchart TD
+    A[Each player has a type] --> B[Each type has beliefs]
+    B --> C[Each type chooses best response]
+    C --> D[Strategies are type-contingent]
+    D --> E[Bayesian Nash equilibrium]
+```
+
+The important phrase is:
+
+> every type of every player.
+
+A Bayesian equilibrium is not just one optimal action per player. It is optimal behaviour for each possible type.
+
+## Example: high-cost and low-cost firm
+
+Suppose a firm may be high-cost or low-cost.
+
+A rival does not observe the firm's cost type. The rival only has a prior belief:
+
+$$
+\Pr(L)=p.
+$$
+
+The low-cost firm may be more willing to set a low price. Observing a low price may make the rival think the firm is more likely to be low-cost.
+
+This is the beginning of signaling logic.
+
+```{mermaid}
+flowchart LR
+    A[Private cost type] --> B[Price choice]
+    B --> C[Opponent updates belief]
+    C --> D[Opponent chooses response]
+```
+
+Bayesian games therefore connect naturally to signaling games.
+
+## Harsanyi transformation
+
+The Harsanyi transformation converts incomplete information into imperfect information.
+
+The steps are:
+
+1. nature chooses types according to a commonly known prior;
+2. each player observes their own type;
+3. players choose strategies;
+4. payoffs depend on actions and types.
+
+```{mermaid}
+flowchart TD
+    A[Incomplete information problem] --> B[Nature draws types]
+    B --> C[Players observe own types]
+    C --> D[Players choose actions]
+    D --> E[Payoffs realized]
+```
+
+This allows incomplete-information games to be analysed using standard game-theoretic tools.
+
+## Common prior
+
+A common prior means that players begin from the same probability distribution over types.
+
+They may hold different beliefs after observing different private information, but those beliefs come from the same underlying prior.
+
+The common prior assumption is powerful but restrictive. It rules out some forms of disagreement.
+
+## Bayesian games and mixed strategies
+
+Bayesian games and mixed strategies both use probability, but they are different.
+
+| Concept | Probability describes |
+|---|---|
+| Mixed strategy | randomization over actions |
+| Bayesian type | uncertainty about payoff-relevant characteristics |
+| Belief | subjective probability over states or types |
+
+A player may use a pure strategy in a Bayesian game. The uncertainty comes from not knowing the type.
+
+A player may also mix within each type.
+
+## Incomplete information versus imperfect information
+
+These terms are related but not identical.
+
+| Term | Meaning |
+|---|---|
+| Incomplete information | uncertainty about payoffs, types, or characteristics |
+| Imperfect information | uncertainty about previous moves or current node |
+| Bayesian game | standard model of incomplete information |
+
+The Harsanyi transformation turns incomplete information into imperfect information about nature's move.
+
+## Bayesian games and communication
+
+Once types are private, communication becomes strategic.
+
+An informed player may try to reveal, hide, exaggerate, or manipulate information.
+
+This leads to:
+
+- cheap talk;
+- signaling;
+- screening;
+- mechanism design;
+- reputation;
+- persuasion;
+- deception.
+
+```{mermaid}
+flowchart LR
+    A[Private type] --> B[Message or action]
+    B --> C[Belief update]
+    C --> D[Receiver response]
+    D --> E[Sender payoff]
+```
+
+## Common mistakes
+
+### 1. Treating type as action
+
+A type is private information. An action is chosen by the player.
+
+### 2. Forgetting type-contingent strategies
+
+A strategy must say what each type would do.
+
+### 3. Ignoring beliefs
+
+Bayesian games require beliefs over types.
+
+### 4. Confusing mixed strategies with incomplete information
+
+Randomizing over actions is not the same as being uncertain about types.
+
+### 5. Forgetting the common prior
+
+Many Bayesian games assume a commonly known prior distribution over types.
+
+### 6. Solving only for one type
+
+Bayesian Nash equilibrium requires optimality for every type.
+
+## Checklist
+
+When analysing a Bayesian game, ask:
+
+1. Who are the players?
+2. What are the possible types?
+3. Who observes which type?
+4. What is the prior belief over types?
+5. What actions are available?
+6. How do payoffs depend on types?
+7. What is each type's strategy?
+8. What expected payoff does each type maximize?
+9. What are the best responses?
+10. Is the strategy profile a Bayesian Nash equilibrium?
+
+## Related pages
+
+- [Game Types](index.qmd)
+- [Game Theory Notes](../game-theory.qmd)
+- [Probability](../../foundations/probability.qmd)
+- [Bayesian Nash Equilibrium](../equilibriums/bayesian-nash.qmd)
+- [Perfect Bayesian Equilibrium](../equilibriums/perfect-bayesian.qmd)
+- [Cheap Talk](cheap-talk.qmd)
+- [Signaling](signaling.qmd)

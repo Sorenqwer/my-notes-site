@@ -1,67 +1,244 @@
 ---
-title: "Subgame perfect equilibrium (SPE)"
+title: "Subgame Perfect Equilibrium"
 toc: true
+page-layout: full
 ---
 
-## What it is
-A **subgame perfect equilibrium** is a Nash equilibrium of an extensive-form game that induces a Nash equilibrium **in every subgame**.
+Subgame perfect equilibrium is a refinement of Nash equilibrium for dynamic games. It rules out equilibria that rely on non-credible threats or promises.
 
-Intuition: strategies must be credible not only along the equilibrium path but also after any possible history.
+The central idea is:
 
-## Where it shows up
-- Extensive-form games with perfect information (classic backward induction)
-- Dynamic games where credibility of threats/promises matters
-- Bargaining models (alternating offers) are solved using SPE
+> behaviour should be optimal after every possible history, not only at the beginning of the game.
 
-## How to solve (recipe)
-1) Identify subgames (in perfect-information games, every decision node typically starts a subgame).
-2) Solve the last subgames first (optimize at terminal decision nodes).
-3) Replace each solved subgame by its continuation payoff.
-4) Continue backward until the start: this is **backward induction**.
-5) The resulting strategy profile is an SPE (in finite perfect-information games).
+## Why Nash equilibrium is not enough
 
----
+Nash equilibrium checks whether players want to deviate from their complete strategies.
 
-## Solved example (backward induction)
+In dynamic games, this can allow threats that would not actually be carried out if the relevant history occurred.
 
-### Problem (context + question)
-A landlord (player 1) offers a rent increase: $L$ (low) or $H$ (high). The tenant (player 2) observes and chooses accept $A$ or move $M$.
+```{mermaid}
+flowchart LR
+    A[Nash equilibrium] --> B[Mutual best responses]
+    B --> C[May include non-credible threats]
+    C --> D[Need stronger concept]
+    D --> E[Subgame perfect equilibrium]
+```
 
-Payoffs:
-- $(L,A)=(2,2)$, $(L,M)=(0,1)$
-- $(H,A)=(3,0)$, $(H,M)=(0,1)$
+Subgame perfection adds credibility.
 
-**Question:** Find the SPE.
+## Definition
 
-### Solution
-**Step 1 (solve tenant’s decision in each subgame):**
-- After $L$: tenant compares payoff $2$ (accept) vs $1$ (move) → chooses **$A$**.
-- After $H$: tenant compares payoff $0$ (accept) vs $1$ (move) → chooses **$M$**.
+A strategy profile is a **subgame perfect equilibrium** if it induces a Nash equilibrium in every subgame.
 
-So tenant strategy is: after $L$ play $A$, after $H$ play $M$.
+In words:
 
-**Step 2 (landlord anticipates tenant’s response):**
-- If landlord chooses $L$, outcome is $(2,2)$.
-- If landlord chooses $H$, tenant moves, outcome is $(0,1)$.
+> after every history that begins a subgame, the continuation strategies must form a Nash equilibrium of that subgame.
 
-Landlord prefers $L$ because $2>0$.
+This means players must behave optimally not only along the equilibrium path, but also after possible deviations.
 
-**Result (SPE):**
-- Landlord plays $L$.
-- Tenant plays $A$ after $L$ and $M$ after $H$.
-- Outcome: $(L,A)$.
+## Subgames
 
-### Check
-- Tenant’s actions are optimal in each subgame.
-- Given tenant’s strategy, landlord’s choice is optimal at the start.
-So the strategy profile is Nash in every subgame.
+A subgame is a part of an extensive-form game that:
 
-### Takeaway
-SPE rules out non-credible threats by requiring optimal behavior after every history.
+1. begins at a decision node;
+2. includes all future nodes and actions from that node;
+3. does not cut across an information set.
 
----
+```{mermaid}
+flowchart TD
+    A[Whole game] --> B[Decision node]
+    B --> C[Subgame from that node]
+    C --> D[All future actions]
+    C --> E[All terminal payoffs]
+```
 
-## Later-on analysis
-- With **imperfect information**, “subgame” may not be well-defined → PBE / sequential equilibrium.
-- With **multiple SPE**, equilibrium selection becomes a separate question.
-- In **repeated games**, SPE sets are large; punishments must still be credible.
+A subgame is like a smaller game inside the larger game.
+
+## Basic logic
+
+Subgame perfect equilibrium asks:
+
+```{mermaid}
+flowchart TD
+    A[Choose strategy profile] --> B[Look at each subgame]
+    B --> C{Are continuation strategies Nash equilibria?}
+    C -->|Yes| D[Subgame perfect]
+    C -->|No| E[Not subgame perfect]
+```
+
+The key test is whether the strategy profile remains rational inside every subgame.
+
+## Backward induction
+
+In finite games with perfect information, backward induction finds a subgame perfect equilibrium.
+
+```{mermaid}
+flowchart LR
+    A[Finite perfect-information game] --> B[Backward induction]
+    B --> C[Optimal action in final subgames]
+    C --> D[Move backward]
+    D --> E[Optimal action in every subgame]
+    E --> F[Subgame perfect equilibrium]
+```
+
+Backward induction is the procedure. Subgame perfect equilibrium is the solution concept.
+
+## Example: entry deterrence
+
+Consider the following game.
+
+```{mermaid}
+flowchart TD
+    A[Entrant] -->|Stay Out| B[0,2]
+    A -->|Enter| C[Incumbent]
+    C -->|Fight| D[-1,-1]
+    C -->|Accommodate| E[2,1]
+```
+
+If the entrant enters, the incumbent chooses between Fight and Accommodate.
+
+The incumbent prefers Accommodate because:
+
+$$
+1>-1.
+$$
+
+So Fight is not credible.
+
+The entrant anticipates Accommodate and chooses Enter because:
+
+$$
+2>0.
+$$
+
+The subgame perfect outcome is:
+
+$$
+(\text{Enter},\text{Accommodate}).
+$$
+
+## Non-credible threat
+
+The incumbent may want to threaten:
+
+> If you enter, I will fight.
+
+But after entry occurs, fighting gives the incumbent a lower payoff. Therefore the threat is not credible.
+
+```{mermaid}
+flowchart LR
+    A[Threat to fight] --> B[Entry occurs]
+    B --> C{Is fighting optimal?}
+    C -->|No| D[Threat not credible]
+    D --> E[Ruled out by SPE]
+```
+
+Subgame perfection removes equilibria supported by this kind of threat.
+
+## Strategy profiles and paths
+
+In dynamic games, an equilibrium strategy profile specifies:
+
+1. what happens on the equilibrium path;
+2. what would happen after off-path histories.
+
+The equilibrium path is the sequence of actions that actually occurs if everyone follows the equilibrium strategies.
+
+Off-path behaviour describes what players would do after deviations.
+
+Subgame perfection requires off-path behaviour to be optimal in every subgame.
+
+## Sequential rationality
+
+Subgame perfection is closely related to sequential rationality.
+
+Sequential rationality means that at every point where a player acts, the prescribed action is optimal given the continuation game.
+
+In perfect-information games, subgame perfection captures this idea well.
+
+In imperfect-information games, we often need belief-based refinements such as perfect Bayesian equilibrium or sequential equilibrium.
+
+## SPE versus Nash equilibrium
+
+| Concept | Requirement | Problem addressed |
+|---|---|---|
+| Nash equilibrium | no profitable unilateral deviation from complete strategy | strategic stability |
+| Subgame perfect equilibrium | Nash equilibrium in every subgame | credibility |
+| Perfect Bayesian equilibrium | sequential rationality plus beliefs | dynamic incomplete information |
+
+Every subgame perfect equilibrium is a Nash equilibrium. But not every Nash equilibrium is subgame perfect.
+
+## Finite-horizon repeated games
+
+Subgame perfection explains unraveling in finitely repeated prisoners' dilemma games.
+
+If the final period is known, players defect in the final period. Knowing that, they defect in the previous period, and so on.
+
+```{mermaid}
+flowchart LR
+    A[Final period] --> B[No future punishment]
+    B --> C[Defection]
+    C --> D[Previous period loses future discipline]
+    D --> E[Backward unraveling]
+```
+
+This is a classic application of backward induction.
+
+## One-deviation principle
+
+In many dynamic games, the one-deviation principle can simplify checking subgame perfection.
+
+The idea is:
+
+> a strategy profile is subgame perfect if no player can gain by deviating once and then returning to the strategy.
+
+This works under particular conditions, especially in many finite or discounted dynamic games.
+
+It is useful because checking every possible deviation can be hard.
+
+## Common mistakes
+
+### 1. Thinking SPE is only about the equilibrium path
+
+SPE also requires optimal behaviour after off-path histories.
+
+### 2. Treating threats as credible because they are announced
+
+A threat is credible only if it is optimal to carry out.
+
+### 3. Confusing backward induction with SPE
+
+Backward induction is a method; SPE is a solution concept.
+
+### 4. Applying subgame perfection where there are no proper subgames
+
+In some imperfect-information games, subgame perfection may add little beyond Nash equilibrium.
+
+### 5. Cutting through information sets
+
+A subgame cannot begin in the middle of an information set.
+
+## Checklist
+
+When checking subgame perfection, ask:
+
+1. What is the extensive-form game?
+2. What are the proper subgames?
+3. What strategy profile is proposed?
+4. Does the profile induce a Nash equilibrium in the whole game?
+5. Does it induce a Nash equilibrium in every subgame?
+6. Are threats credible?
+7. Are promises credible?
+8. What is the equilibrium path?
+9. What happens off path?
+10. Would backward induction give the same result in a finite perfect-information game?
+
+## Related pages
+
+- [Equilibrium Concepts](index.qmd)
+- [Nash Equilibrium](nash.qmd)
+- [Extensive-form Games](../game-types/extensive-form.qmd)
+- [Repeated Games](../game-types/repeated.qmd)
+- [Perfect Bayesian Equilibrium](perfect-bayesian.qmd)
+- [Sequential Equilibrium](sequential-equilibrium.qmd)
+- [Dynamic Reasoning](../../foundations/dynamic-reasoning.qmd)

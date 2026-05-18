@@ -1738,65 +1738,128 @@
   {
     "objectID": "notes/game-types/extensive-form.html",
     "href": "notes/game-types/extensive-form.html",
-    "title": "Extensive-form games",
+    "title": "Extensive-form Games",
     "section": "",
-    "text": "An extensive-form game represents timing (who moves when) and information (what players observe) using a game tree."
+    "text": "Extensive-form games represent strategic interaction over time. They show who moves when, what each player observes, what actions are available, and what payoffs follow from each possible path.\nThe extensive form is especially useful for studying sequential decisions, credibility, threats, promises, commitment, entry deterrence, bargaining, signalling, and institutional processes."
   },
   {
-    "objectID": "notes/game-types/extensive-form.html#what-it-is",
-    "href": "notes/game-types/extensive-form.html#what-it-is",
-    "title": "Extensive-form games",
-    "section": "",
-    "text": "An extensive-form game represents timing (who moves when) and information (what players observe) using a game tree."
+    "objectID": "notes/game-types/extensive-form.html#why-extensive-form-matters",
+    "href": "notes/game-types/extensive-form.html#why-extensive-form-matters",
+    "title": "Extensive-form Games",
+    "section": "Why extensive form matters",
+    "text": "Why extensive form matters\nA normal-form game lists strategies and payoffs. An extensive-form game shows the structure of play.\n\n\n\n\n\nflowchart LR\n    A[Normal form] --&gt; B[Strategies and payoffs]\n    C[Extensive form] --&gt; D[Timing]\n    C --&gt; E[Observation]\n    C --&gt; F[Histories]\n    C --&gt; G[Credibility]\n\n\n\n\n\n\nThis matters because timing can change the strategic result. If one player moves first and another responds, the second player’s credible response shapes the first player’s decision."
   },
   {
-    "objectID": "notes/game-types/extensive-form.html#whats-special",
-    "href": "notes/game-types/extensive-form.html#whats-special",
-    "title": "Extensive-form games",
-    "section": "What’s special",
-    "text": "What’s special\n\nSequential rationality matters: players optimize at every decision node.\nThe standard solution is subgame perfect equilibrium via backward induction (perfect information case)."
+    "objectID": "notes/game-types/extensive-form.html#basic-components",
+    "href": "notes/game-types/extensive-form.html#basic-components",
+    "title": "Extensive-form Games",
+    "section": "Basic components",
+    "text": "Basic components\nAn extensive-form game usually includes:\n\n\n\nComponent\nMeaning\n\n\n\n\nPlayers\nwho makes decisions\n\n\nNodes\npoints where a decision or event occurs\n\n\nRoot\nthe initial node\n\n\nBranches\navailable actions\n\n\nTerminal nodes\nendpoints of the game\n\n\nPayoffs\noutcomes assigned at terminal nodes\n\n\nInformation sets\nwhat a player can distinguish when choosing\n\n\nStrategies\ncomplete plans for every possible decision point\n\n\n\nThe game tree is the visual representation of these objects."
   },
   {
-    "objectID": "notes/game-types/extensive-form.html#one-example-backward-induction",
-    "href": "notes/game-types/extensive-form.html#one-example-backward-induction",
-    "title": "Extensive-form games",
-    "section": "One example (backward induction)",
-    "text": "One example (backward induction)\n\n\n\n\n\nflowchart TD\n  S((Start)) --&gt;|P1: A| A(( ))\n  S --&gt;|P1: B| B(( ))\n  A --&gt;|P2: L| AL[\"(2,1)\"]\n  A --&gt;|P2: R| AR[\"(0,0)\"]\n  B --&gt;|P2: L| BL[\"(1,2)\"]\n  B --&gt;|P2: R| BR[\"(3,0)\"]\n\n\n\n\n\n\nPlayer 2 chooses L after \\(A\\) (since \\(1&gt;0\\)) and L after \\(B\\) (since \\(2&gt;0\\)).\nAnticipating this, player 1 prefers \\(A\\) (since \\(2&gt;1\\)). Outcome: \\((A,L)\\)."
+    "objectID": "notes/game-types/extensive-form.html#a-simple-game-tree",
+    "href": "notes/game-types/extensive-form.html#a-simple-game-tree",
+    "title": "Extensive-form Games",
+    "section": "A simple game tree",
+    "text": "A simple game tree\n\n\n\n\n\nflowchart TD\n    A[Player 1] --&gt;|Enter| B[Player 2]\n    A --&gt;|Stay Out| C[Payoffs: 0,2]\n    B --&gt;|Fight| D[Payoffs: -1,-1]\n    B --&gt;|Accommodate| E[Payoffs: 2,1]\n\n\n\n\n\n\nThis tree says:\n\nPlayer 1 chooses whether to enter.\nIf Player 1 stays out, the game ends.\nIf Player 1 enters, Player 2 chooses whether to fight or accommodate.\nPayoffs are assigned at the terminal nodes."
   },
   {
-    "objectID": "notes/game-types/extensive-form.html#story",
-    "href": "notes/game-types/extensive-form.html#story",
-    "title": "Extensive-form games",
-    "section": "Story",
-    "text": "Story\nA landlord, Ms. K, is renewing a lease with Rin. The neighborhood has improved, and Ms. K considers raising rent. Ms. K chooses first: a moderate raise or an aggressive one. Rin then decides: accept or move out.\nThe key is timing: Rin observes the offer before acting, and Ms. K anticipates Rin’s response."
+    "objectID": "notes/game-types/extensive-form.html#histories",
+    "href": "notes/game-types/extensive-form.html#histories",
+    "title": "Extensive-form Games",
+    "section": "Histories",
+    "text": "Histories\nA history is a sequence of actions that has occurred so far.\nIn the entry game above, after Player 1 chooses Enter, the history is:\n\\[\nh = \\text{Enter}.\n\\]\nAfter Player 1 chooses Stay Out, the game ends.\nHistories matter because strategies in dynamic games are contingent plans. A player may choose different actions after different histories."
   },
   {
-    "objectID": "notes/game-types/extensive-form.html#model",
-    "href": "notes/game-types/extensive-form.html#model",
-    "title": "Extensive-form games",
-    "section": "Model",
-    "text": "Model\n\nPlayer 1 (landlord): \\(L\\) (low increase) or \\(H\\) (high increase)\nPlayer 2 (tenant): after observing, \\(A\\) (accept) or \\(M\\) (move)\nInformation: perfect (tenant observes the offer)\nSolution concept: backward induction / SPE"
+    "objectID": "notes/game-types/extensive-form.html#strategies-in-extensive-form-games",
+    "href": "notes/game-types/extensive-form.html#strategies-in-extensive-form-games",
+    "title": "Extensive-form Games",
+    "section": "Strategies in extensive-form games",
+    "text": "Strategies in extensive-form games\nA strategy is not just one action. It is a complete plan.\nIf Player 2 moves only after entry, then Player 2’s strategy must specify what to do after entry:\n\\[\ns_2(\\text{Enter}) \\in \\{\\text{Fight},\\text{Accommodate}\\}.\n\\]\nIn more complex games, a strategy must specify what the player would do at every information set where they may be called to move.\nThis is one of the most common sources of confusion in dynamic games.\n\n\n\n\n\nflowchart TD\n    A[Dynamic strategy] --&gt; B[Action after history 1]\n    A --&gt; C[Action after history 2]\n    A --&gt; D[Action after history 3]\n    B --&gt; E[Complete contingent plan]\n    C --&gt; E\n    D --&gt; E"
   },
   {
-    "objectID": "notes/game-types/extensive-form.html#game-tree-toy",
-    "href": "notes/game-types/extensive-form.html#game-tree-toy",
-    "title": "Extensive-form games",
-    "section": "Game tree (toy)",
-    "text": "Game tree (toy)\n\n\n\n\n\nflowchart TD\n  S((Start)) --&gt;|P1: L| L(( ))\n  S --&gt;|P1: H| H(( ))\n  L --&gt;|P2: A| LA[\"(2,2)\"]\n  L --&gt;|P2: M| LM[\"(0,1)\"]\n  H --&gt;|P2: A| HA[\"(3,0)\"]\n  H --&gt;|P2: M| HM[\"(0,1)\"]"
+    "objectID": "notes/game-types/extensive-form.html#perfect-information",
+    "href": "notes/game-types/extensive-form.html#perfect-information",
+    "title": "Extensive-form Games",
+    "section": "Perfect information",
+    "text": "Perfect information\nA game has perfect information if every player observes all previous actions before choosing.\nChess is a classic example. Each player observes the whole history of moves.\nIn perfect-information games, decision nodes are not grouped into non-trivial information sets. Players know exactly where they are in the tree."
   },
   {
-    "objectID": "notes/game-types/extensive-form.html#equilibrium-backward-induction-spe",
-    "href": "notes/game-types/extensive-form.html#equilibrium-backward-induction-spe",
-    "title": "Extensive-form games",
-    "section": "Equilibrium (backward induction → SPE)",
-    "text": "Equilibrium (backward induction → SPE)\nStep 1 (tenant’s optimal actions at the second stage): - After \\(L\\): compare tenant payoff \\(2\\) (accept) vs \\(1\\) (move) → choose \\(A\\) - After \\(H\\): compare tenant payoff \\(0\\) (accept) vs \\(1\\) (move) → choose \\(M\\)\nStep 2 (landlord anticipates this): - If choose \\(L\\) → outcome \\((2,2)\\) - If choose \\(H\\) → tenant moves → outcome \\((0,1)\\)\nSo landlord chooses \\(L\\).\nSPE outcome: \\((L,A)\\)."
+    "objectID": "notes/game-types/extensive-form.html#imperfect-information",
+    "href": "notes/game-types/extensive-form.html#imperfect-information",
+    "title": "Extensive-form Games",
+    "section": "Imperfect information",
+    "text": "Imperfect information\nA game has imperfect information if a player does not know exactly which node they are at when choosing.\nThis is represented by an information set.\nFor example, if Player 2 cannot observe whether Player 1 chose \\(A\\) or \\(B\\), then Player 2’s two decision nodes are in the same information set.\n\n\n\n\n\nflowchart TD\n    A[Player 1] --&gt;|A| B[Player 2 node 1]\n    A --&gt;|B| C[Player 2 node 2]\n    B -. same information set .- C\n    B --&gt;|L| D[Outcome]\n    B --&gt;|R| E[Outcome]\n    C --&gt;|L| F[Outcome]\n    C --&gt;|R| G[Outcome]\n\n\n\n\n\n\nThe dotted connection means Player 2 cannot distinguish the two nodes."
   },
   {
-    "objectID": "notes/game-types/extensive-form.html#later-on-analysis",
-    "href": "notes/game-types/extensive-form.html#later-on-analysis",
-    "title": "Extensive-form games",
-    "section": "Later-on analysis",
-    "text": "Later-on analysis\n\nOutside option changes: if moving becomes less costly, the landlord’s ability to raise rent shrinks.\nIncomplete information: if Ms. K doesn’t know Rin’s moving cost, the game becomes Bayesian and can generate screening/signaling behavior.\nCommitment: if Rin could commit to “move if any increase,” outcomes shift again (commitment changes the tree)."
+    "objectID": "notes/game-types/extensive-form.html#backward-induction",
+    "href": "notes/game-types/extensive-form.html#backward-induction",
+    "title": "Extensive-form Games",
+    "section": "Backward induction",
+    "text": "Backward induction\nIn finite games with perfect information, backward induction solves the game from the end to the beginning.\n\n\n\n\n\nflowchart TD\n    A[Start at final decision nodes] --&gt; B[Choose last mover's optimal action]\n    B --&gt; C[Replace continuation with payoff]\n    C --&gt; D[Move one step backward]\n    D --&gt; E[Choose previous player's optimal action]\n    E --&gt; F[Repeat until root]\n    F --&gt; G[Predicted path]\n\n\n\n\n\n\nBackward induction is the natural method for extensive-form games because earlier players anticipate later rational behaviour."
+  },
+  {
+    "objectID": "notes/game-types/extensive-form.html#credible-threats",
+    "href": "notes/game-types/extensive-form.html#credible-threats",
+    "title": "Extensive-form Games",
+    "section": "Credible threats",
+    "text": "Credible threats\nA threat is credible only if the player would actually want to carry it out when the time comes.\nIn the entry game, suppose Player 2 threatens to fight if Player 1 enters. If fighting gives Player 2 a lower payoff than accommodating after entry, then the threat is not credible.\n\n\n\n\n\nflowchart LR\n    A[Threat announced] --&gt; B{Optimal later?}\n    B --&gt;|Yes| C[Credible threat]\n    B --&gt;|No| D[Non-credible threat]\n    D --&gt; E[Should not deter in SPE]\n\n\n\n\n\n\nThis is why Nash equilibrium alone may be too weak for dynamic games."
+  },
+  {
+    "objectID": "notes/game-types/extensive-form.html#subgames",
+    "href": "notes/game-types/extensive-form.html#subgames",
+    "title": "Extensive-form Games",
+    "section": "Subgames",
+    "text": "Subgames\nA subgame is a part of the game that begins at a decision node and contains all future actions from that node onward.\nA subgame must not cut across an information set.\nSubgames matter because a dynamic equilibrium should prescribe optimal behaviour after every possible history.\n\n\n\n\n\nflowchart TD\n    A[Whole game] --&gt; B[Subgame after history 1]\n    A --&gt; C[Subgame after history 2]\n    B --&gt; D[Continuation equilibrium]\n    C --&gt; E[Continuation equilibrium]\n\n\n\n\n\n\nThis leads to subgame perfect equilibrium."
+  },
+  {
+    "objectID": "notes/game-types/extensive-form.html#normal-form-versus-extensive-form",
+    "href": "notes/game-types/extensive-form.html#normal-form-versus-extensive-form",
+    "title": "Extensive-form Games",
+    "section": "Normal form versus extensive form",
+    "text": "Normal form versus extensive form\nEvery finite extensive-form game can be represented in normal form by listing each player’s complete strategies.\nHowever, this conversion often hides timing.\n\n\n\n\n\n\n\n\nRepresentation\nStrength\nLimitation\n\n\n\n\nExtensive form\nshows timing and information\ncan be visually large\n\n\nNormal form\nshows all strategy profiles and payoffs\nhides credibility and sequence\n\n\n\nFor dynamic games, extensive form is usually better for reasoning."
+  },
+  {
+    "objectID": "notes/game-types/extensive-form.html#example-entry-deterrence",
+    "href": "notes/game-types/extensive-form.html#example-entry-deterrence",
+    "title": "Extensive-form Games",
+    "section": "Example: entry deterrence",
+    "text": "Example: entry deterrence\nSuppose an entrant decides whether to enter a market. If it enters, the incumbent chooses whether to fight or accommodate.\n\n\n\n\n\nflowchart TD\n    A[Entrant] --&gt;|Stay Out| B[0,2]\n    A --&gt;|Enter| C[Incumbent]\n    C --&gt;|Fight| D[-1,-1]\n    C --&gt;|Accommodate| E[2,1]\n\n\n\n\n\n\nSolve by backward induction:\n\nIf entry occurs, the incumbent compares Fight and Accommodate.\nThe incumbent prefers Accommodate because \\(1&gt;-1\\).\nThe entrant anticipates Accommodate.\nThe entrant compares Enter, giving \\(2\\), with Stay Out, giving \\(0\\).\nThe entrant enters.\n\nThe subgame perfect outcome is:\n\\[\n(\\text{Enter}, \\text{Accommodate}).\n\\]"
+  },
+  {
+    "objectID": "notes/game-types/extensive-form.html#dynamic-games-with-chance",
+    "href": "notes/game-types/extensive-form.html#dynamic-games-with-chance",
+    "title": "Extensive-form Games",
+    "section": "Dynamic games with chance",
+    "text": "Dynamic games with chance\nSome extensive-form games include nature. Nature represents random events.\nFor example, nature may choose a player’s type before the player acts.\n\n\n\n\n\nflowchart TD\n    A[Nature] --&gt;|High type| B[Sender H]\n    A --&gt;|Low type| C[Sender L]\n    B --&gt; D[Message]\n    C --&gt; E[Message]\n    D --&gt; F[Receiver response]\n    E --&gt; F\n\n\n\n\n\n\nThis structure appears in signaling games and Bayesian extensive-form games."
+  },
+  {
+    "objectID": "notes/game-types/extensive-form.html#strategies-and-off-path-behaviour",
+    "href": "notes/game-types/extensive-form.html#strategies-and-off-path-behaviour",
+    "title": "Extensive-form Games",
+    "section": "Strategies and off-path behaviour",
+    "text": "Strategies and off-path behaviour\nIn an extensive-form game, a strategy must specify what to do even after histories that do not occur in equilibrium.\nThese histories are called off-path.\nOff-path behaviour matters because it can support or undermine threats and promises.\nFor example, if entry does not occur in equilibrium, the incumbent’s planned response after entry is still part of the strategy."
+  },
+  {
+    "objectID": "notes/game-types/extensive-form.html#common-mistakes",
+    "href": "notes/game-types/extensive-form.html#common-mistakes",
+    "title": "Extensive-form Games",
+    "section": "Common mistakes",
+    "text": "Common mistakes\n\n1. Solving from the root first\nFor finite perfect-information games, solve from the end backward.\n\n\n2. Confusing action and strategy\nA strategy is a complete plan, not just the action taken on the equilibrium path.\n\n\n3. Ignoring off-path actions\nDynamic equilibrium requires behaviour after possible histories, even if they are not reached.\n\n\n4. Treating all Nash equilibria as credible\nSome Nash equilibria rely on non-credible threats.\n\n\n5. Cutting across information sets\nA subgame cannot begin inside an information set."
+  },
+  {
+    "objectID": "notes/game-types/extensive-form.html#checklist",
+    "href": "notes/game-types/extensive-form.html#checklist",
+    "title": "Extensive-form Games",
+    "section": "Checklist",
+    "text": "Checklist\nWhen analysing an extensive-form game, ask:\n\nWho moves first?\nWho moves later?\nWhat does each player observe?\nWhat are the histories?\nWhat are the terminal payoffs?\nWhat are each player’s strategies?\nAre there information sets?\nAre there proper subgames?\nWhat does backward induction predict?\nAre threats and promises credible?"
+  },
+  {
+    "objectID": "notes/game-types/extensive-form.html#related-pages",
+    "href": "notes/game-types/extensive-form.html#related-pages",
+    "title": "Extensive-form Games",
+    "section": "Related pages",
+    "text": "Related pages\n\nGame Types\nGame Theory Notes\nNormal-form Games\nRepeated Games\nSubgame Perfect Equilibrium\nPerfect Bayesian Equilibrium\nDynamic Reasoning"
   },
   {
     "objectID": "notes/game-types/bargaining.html",
@@ -5924,44 +5987,128 @@
   {
     "objectID": "notes/equilibriums/bayesian-nash.html",
     "href": "notes/equilibriums/bayesian-nash.html",
-    "title": "Bayesian Nash equilibrium (BNE)",
+    "title": "Bayesian Nash Equilibrium",
     "section": "",
-    "text": "A Bayesian game has private information (types). A Bayesian Nash equilibrium is a strategy profile where each type best-responds given beliefs about others’ types.\nFormally, each player \\(i\\) has type \\(\\theta_i\\) and chooses an action via a strategy \\(s_i(\\theta_i)\\). A BNE satisfies, for each type \\(\\theta_i\\): \\[\ns_i(\\theta_i)\\in \\arg\\max_{a_i} \\mathbb{E}\\left[u_i(a_i, s_{-i}(\\theta_{-i}), \\theta_i,\\theta_{-i})\\mid \\theta_i\\right].\n\\]"
+    "text": "Bayesian Nash equilibrium is the basic equilibrium concept for static games with incomplete information. It requires every type of every player to choose a best response, given beliefs about other players’ types and strategies.\nThe central idea is:"
   },
   {
-    "objectID": "notes/equilibriums/bayesian-nash.html#what-it-is",
-    "href": "notes/equilibriums/bayesian-nash.html#what-it-is",
-    "title": "Bayesian Nash equilibrium (BNE)",
-    "section": "",
-    "text": "A Bayesian game has private information (types). A Bayesian Nash equilibrium is a strategy profile where each type best-responds given beliefs about others’ types.\nFormally, each player \\(i\\) has type \\(\\theta_i\\) and chooses an action via a strategy \\(s_i(\\theta_i)\\). A BNE satisfies, for each type \\(\\theta_i\\): \\[\ns_i(\\theta_i)\\in \\arg\\max_{a_i} \\mathbb{E}\\left[u_i(a_i, s_{-i}(\\theta_{-i}), \\theta_i,\\theta_{-i})\\mid \\theta_i\\right].\n\\]"
+    "objectID": "notes/equilibriums/bayesian-nash.html#from-nash-to-bayesian-nash",
+    "href": "notes/equilibriums/bayesian-nash.html#from-nash-to-bayesian-nash",
+    "title": "Bayesian Nash Equilibrium",
+    "section": "From Nash to Bayesian Nash",
+    "text": "From Nash to Bayesian Nash\nIn a complete-information game, Nash equilibrium requires each player to best respond to others’ strategies.\nIn a Bayesian game, each player may have different possible types. Therefore, equilibrium must specify what each type does.\n\n\n\n\n\nflowchart LR\n    A[Nash equilibrium] --&gt; B[Each player best responds]\n    C[Bayesian Nash equilibrium] --&gt; D[Each type of each player best responds]\n\n\n\n\n\n\nThe difference is that strategies are type-contingent."
   },
   {
-    "objectID": "notes/equilibriums/bayesian-nash.html#where-it-shows-up",
-    "href": "notes/equilibriums/bayesian-nash.html#where-it-shows-up",
-    "title": "Bayesian Nash equilibrium (BNE)",
-    "section": "Where it shows up",
-    "text": "Where it shows up\n\nStatic games of incomplete information (entry games, pricing with private costs)\nAuctions (many auction models are BNE)\nAs the static benchmark for dynamic incomplete-information models"
+    "objectID": "notes/equilibriums/bayesian-nash.html#basic-setup",
+    "href": "notes/equilibriums/bayesian-nash.html#basic-setup",
+    "title": "Bayesian Nash Equilibrium",
+    "section": "Basic setup",
+    "text": "Basic setup\nA Bayesian game includes:\n\n\n\nObject\nMeaning\n\n\n\n\n\\(N\\)\nplayers\n\n\n\\(\\Theta_i\\)\ntype space of player \\(i\\)\n\n\n\\(A_i\\)\naction set of player \\(i\\)\n\n\n\\(p(\\theta)\\)\nprior over type profiles\n\n\n\\(u_i(a,\\theta)\\)\npayoff of player \\(i\\)\n\n\n\nA strategy for player \\(i\\) is a function:\n\\[\ns_i:\\Theta_i \\to A_i.\n\\]\nThis means that the strategy assigns an action to every type."
   },
   {
-    "objectID": "notes/equilibriums/bayesian-nash.html#how-to-solve-recipe",
-    "href": "notes/equilibriums/bayesian-nash.html#how-to-solve-recipe",
-    "title": "Bayesian Nash equilibrium (BNE)",
-    "section": "How to solve (recipe)",
-    "text": "How to solve (recipe)\n\nList types and prior beliefs.\nWrite strategies as functions of types: \\(a_i=s_i(\\theta_i)\\).\nCompute each type’s expected payoff from each action.\nChoose best responses by type.\nVerify mutual best responses given beliefs."
+    "objectID": "notes/equilibriums/bayesian-nash.html#expected-payoff",
+    "href": "notes/equilibriums/bayesian-nash.html#expected-payoff",
+    "title": "Bayesian Nash Equilibrium",
+    "section": "Expected payoff",
+    "text": "Expected payoff\nIf player \\(i\\) has type \\(\\theta_i\\), then the player forms beliefs about other players’ types \\(\\theta_{-i}\\).\nGiven a strategy profile \\(s\\), the expected payoff from choosing action \\(a_i\\) is:\n\\[\n\\sum_{\\theta_{-i}}\nu_i(a_i,s_{-i}(\\theta_{-i}),\\theta_i,\\theta_{-i})\n\\Pr(\\theta_{-i}\\mid \\theta_i).\n\\]\nThe type \\(\\theta_i\\) chooses the action that maximizes this expected payoff."
   },
   {
-    "objectID": "notes/equilibriums/bayesian-nash.html#solved-example-type-dependent-best-response",
-    "href": "notes/equilibriums/bayesian-nash.html#solved-example-type-dependent-best-response",
-    "title": "Bayesian Nash equilibrium (BNE)",
-    "section": "Solved example (type-dependent best response)",
-    "text": "Solved example (type-dependent best response)\n\nProblem (context + question)\nAn investor chooses whether to fund a startup: \\(F\\) (fund) or \\(R\\) (reject).\nThe startup’s type is \\(\\theta\\in\\{S,W\\}\\) (strong or weak), with prior \\(\\Pr(S)=p\\). If the investor funds: - payoff is \\(+1\\) if \\(\\theta=S\\), - payoff is \\(-1\\) if \\(\\theta=W\\).\nIf the investor rejects, payoff is \\(0\\).\nQuestion: Find the investor’s optimal action as a function of \\(p\\) (a BNE decision rule).\n\n\nSolution\nCompute expected payoff from funding: \\[\n\\mathbb{E}[\\pi(F)] = p(1) + (1-p)(-1) = 2p-1.\n\\]\nRejecting yields: \\[\n\\mathbb{E}[\\pi(R)] = 0.\n\\]\nSo the investor funds iff \\(2p-1\\ge 0\\), i.e. \\[\np \\ge \\tfrac12.\n\\]\nResult: Optimal strategy is: - choose \\(F\\) if \\(p\\ge 1/2\\), - choose \\(R\\) if \\(p&lt;1/2\\), - indifferent at \\(p=1/2\\).\n\n\nCheck\nGiven beliefs (the prior), the chosen action maximizes expected payoff.\n\n\nTakeaway\nBNE decisions are often threshold rules: act if expected benefit given beliefs is large enough."
+    "objectID": "notes/equilibriums/bayesian-nash.html#definition",
+    "href": "notes/equilibriums/bayesian-nash.html#definition",
+    "title": "Bayesian Nash Equilibrium",
+    "section": "Definition",
+    "text": "Definition\nA strategy profile\n\\[\ns^*=(s_1^*,\\ldots,s_n^*)\n\\]\nis a Bayesian Nash equilibrium if, for every player \\(i\\) and every type \\(\\theta_i \\in \\Theta_i\\),\n\\[\ns_i^*(\\theta_i)\n\\in\n\\arg\\max_{a_i\\in A_i}\n\\sum_{\\theta_{-i}}\nu_i(a_i,s_{-i}^*(\\theta_{-i}),\\theta_i,\\theta_{-i})\n\\Pr(\\theta_{-i}\\mid \\theta_i).\n\\]\nIn words:\n\neach type chooses a best response to the type-contingent strategies of others."
   },
   {
-    "objectID": "notes/equilibriums/bayesian-nash.html#later-on-analysis",
-    "href": "notes/equilibriums/bayesian-nash.html#later-on-analysis",
-    "title": "Bayesian Nash equilibrium (BNE)",
-    "section": "Later-on analysis",
-    "text": "Later-on analysis\n\nIf a signal is observed before acting, beliefs update via Bayes’ rule and the threshold shifts.\nIf the informed party can strategically choose information, you move toward signaling or cheap talk → PBE.\nWith many types/actions, equilibrium often has cutoff strategies and monotonicity structure."
+    "objectID": "notes/equilibriums/bayesian-nash.html#the-logic",
+    "href": "notes/equilibriums/bayesian-nash.html#the-logic",
+    "title": "Bayesian Nash Equilibrium",
+    "section": "The logic",
+    "text": "The logic\n\n\n\n\n\nflowchart TD\n    A[Player observes own type] --&gt; B[Forms belief about others' types]\n    B --&gt; C[Predicts others' type-contingent strategies]\n    C --&gt; D[Computes expected payoff]\n    D --&gt; E[Chooses best response]\n    E --&gt; F[Bayesian Nash equilibrium if all types do this]\n\n\n\n\n\n\nThis is the core of Bayesian Nash equilibrium."
+  },
+  {
+    "objectID": "notes/equilibriums/bayesian-nash.html#example-two-types",
+    "href": "notes/equilibriums/bayesian-nash.html#example-two-types",
+    "title": "Bayesian Nash Equilibrium",
+    "section": "Example: two types",
+    "text": "Example: two types\nSuppose player 1 can be type \\(H\\) or type \\(L\\).\nA strategy for player 1 is not just one action. It must specify:\n\\[\ns_1(H)\n\\]\nand\n\\[\ns_1(L).\n\\]\nFor example:\n\\[\ns_1(H)=A,\n\\qquad\ns_1(L)=B.\n\\]\nThis means the high type chooses \\(A\\), while the low type chooses \\(B\\).\nThe opponent may not observe the type, but forms beliefs about which type is being faced."
+  },
+  {
+    "objectID": "notes/equilibriums/bayesian-nash.html#type-contingent-best-response",
+    "href": "notes/equilibriums/bayesian-nash.html#type-contingent-best-response",
+    "title": "Bayesian Nash Equilibrium",
+    "section": "Type-contingent best response",
+    "text": "Type-contingent best response\nSuppose type \\(H\\) and type \\(L\\) have different payoffs.\nThen the same action may be optimal for one type but not for the other.\n\n\n\n\n\nflowchart TD\n    A[Type H] --&gt; B[Payoff function for H]\n    B --&gt; C[Best response for H]\n\n    D[Type L] --&gt; E[Payoff function for L]\n    E --&gt; F[Best response for L]\n\n    C --&gt; G[Type-contingent strategy]\n    F --&gt; G\n\n\n\n\n\n\nBayesian Nash equilibrium requires both type-specific choices to be optimal."
+  },
+  {
+    "objectID": "notes/equilibriums/bayesian-nash.html#pure-and-mixed-bayesian-strategies",
+    "href": "notes/equilibriums/bayesian-nash.html#pure-and-mixed-bayesian-strategies",
+    "title": "Bayesian Nash Equilibrium",
+    "section": "Pure and mixed Bayesian strategies",
+    "text": "Pure and mixed Bayesian strategies\nA pure Bayesian strategy maps each type to a pure action.\nA mixed Bayesian strategy maps each type to a probability distribution over actions.\nFor example:\n\\[\n\\sigma_i(\\theta_i)(a_i)\n\\]\nis the probability that type \\(\\theta_i\\) of player \\(i\\) chooses action \\(a_i\\).\nThis allows different types to randomize differently."
+  },
+  {
+    "objectID": "notes/equilibriums/bayesian-nash.html#interim-perspective",
+    "href": "notes/equilibriums/bayesian-nash.html#interim-perspective",
+    "title": "Bayesian Nash Equilibrium",
+    "section": "Interim perspective",
+    "text": "Interim perspective\nBayesian Nash equilibrium is usually defined from the interim perspective.\nThis means each player has already learned their own type but remains uncertain about others’ types.\nThe stages are:\n\n\n\n\n\nflowchart LR\n    A[Ex ante: before types] --&gt; B[Interim: after own type]\n    B --&gt; C[Action choice]\n    C --&gt; D[Ex post: after types and actions]\n\n\n\n\n\n\nBNE asks whether each type is optimal at the interim stage."
+  },
+  {
+    "objectID": "notes/equilibriums/bayesian-nash.html#bayesian-nash-and-bayes-rule",
+    "href": "notes/equilibriums/bayesian-nash.html#bayesian-nash-and-bayes-rule",
+    "title": "Bayesian Nash Equilibrium",
+    "section": "Bayesian Nash and Bayes’ rule",
+    "text": "Bayesian Nash and Bayes’ rule\nIn static Bayesian games, beliefs are usually derived from the common prior and the player’s own type.\nIf types are independent, then learning your own type may not change beliefs about others.\nIf types are correlated, then learning your own type may provide information about others.\nBayes’ rule gives:\n\\[\n\\Pr(\\theta_{-i}\\mid \\theta_i)\n=\n\\frac{\n\\Pr(\\theta_i,\\theta_{-i})\n}{\n\\Pr(\\theta_i)\n}.\n\\]\nThis conditional belief is used in the expected payoff calculation."
+  },
+  {
+    "objectID": "notes/equilibriums/bayesian-nash.html#relation-to-harsanyi-transformation",
+    "href": "notes/equilibriums/bayesian-nash.html#relation-to-harsanyi-transformation",
+    "title": "Bayesian Nash Equilibrium",
+    "section": "Relation to Harsanyi transformation",
+    "text": "Relation to Harsanyi transformation\nBayesian Nash equilibrium can be understood as Nash equilibrium in the Harsanyi-transformed game.\nThe transformed game has:\n\nnature draws types;\neach player observes own type;\neach player chooses an action according to a type-contingent strategy.\n\n\n\n\n\n\nflowchart TD\n    A[Bayesian game] --&gt; B[Harsanyi transformation]\n    B --&gt; C[Game with nature's move]\n    C --&gt; D[Nash equilibrium in type-contingent strategies]\n    D --&gt; E[Bayesian Nash equilibrium]\n\n\n\n\n\n\nThis is why Bayesian Nash equilibrium is a natural extension of Nash equilibrium."
+  },
+  {
+    "objectID": "notes/equilibriums/bayesian-nash.html#example-structure-first-price-auction",
+    "href": "notes/equilibriums/bayesian-nash.html#example-structure-first-price-auction",
+    "title": "Bayesian Nash Equilibrium",
+    "section": "Example structure: first-price auction",
+    "text": "Example structure: first-price auction\nIn a first-price sealed-bid auction, each bidder knows their own valuation but not others’ valuations.\nA bidder’s type is their valuation:\n\\[\n\\theta_i = v_i.\n\\]\nA strategy maps valuation into bid:\n\\[\nb_i(v_i).\n\\]\nA Bayesian Nash equilibrium is a bidding function where every valuation type bids optimally given beliefs about other bidders’ valuations and bidding strategies.\nThis shows why BNE is useful in auctions."
+  },
+  {
+    "objectID": "notes/equilibriums/bayesian-nash.html#example-structure-entry-with-unknown-cost",
+    "href": "notes/equilibriums/bayesian-nash.html#example-structure-entry-with-unknown-cost",
+    "title": "Bayesian Nash Equilibrium",
+    "section": "Example structure: entry with unknown cost",
+    "text": "Example structure: entry with unknown cost\nSuppose a firm may be high-cost or low-cost. A rival does not observe the cost type.\nThe firm’s strategy specifies what each cost type does:\n\\[\ns(H), \\quad s(L).\n\\]\nThe rival’s strategy is based on expected payoff under beliefs about whether the firm is high-cost or low-cost.\nThe equilibrium requires:\n\nhigh-cost type best responds;\nlow-cost type best responds;\nrival best responds to its beliefs."
+  },
+  {
+    "objectID": "notes/equilibriums/bayesian-nash.html#bne-versus-pbe",
+    "href": "notes/equilibriums/bayesian-nash.html#bne-versus-pbe",
+    "title": "Bayesian Nash Equilibrium",
+    "section": "BNE versus PBE",
+    "text": "BNE versus PBE\nBayesian Nash equilibrium is mainly for static incomplete-information games.\nPerfect Bayesian equilibrium is for dynamic incomplete-information games.\n\n\n\n\n\n\n\n\nConcept\nUsed for\nRequires\n\n\n\n\nBayesian Nash equilibrium\nstatic incomplete information\ntype-contingent best responses\n\n\nPerfect Bayesian equilibrium\ndynamic incomplete information\nsequential rationality and beliefs\n\n\nSequential equilibrium\ndynamic incomplete information\nstronger belief consistency\n\n\n\nIf actions reveal information over time, BNE may not be enough."
+  },
+  {
+    "objectID": "notes/equilibriums/bayesian-nash.html#common-mistakes",
+    "href": "notes/equilibriums/bayesian-nash.html#common-mistakes",
+    "title": "Bayesian Nash Equilibrium",
+    "section": "Common mistakes",
+    "text": "Common mistakes\n\n1. Solving only for one type\nEvery possible type must be optimizing.\n\n\n2. Forgetting that strategy is a function\nA Bayesian strategy maps types to actions.\n\n\n3. Confusing type and belief\nA type is private information. A belief is a probability over unknown types or states.\n\n\n4. Ignoring expected payoff\nPlayers choose based on expected payoff over uncertain types.\n\n\n5. Applying BNE to dynamic signaling without beliefs after actions\nDynamic signaling games usually need PBE or sequential equilibrium.\n\n\n6. Forgetting type correlation\nIf types are correlated, observing your own type can change beliefs about others."
+  },
+  {
+    "objectID": "notes/equilibriums/bayesian-nash.html#checklist",
+    "href": "notes/equilibriums/bayesian-nash.html#checklist",
+    "title": "Bayesian Nash Equilibrium",
+    "section": "Checklist",
+    "text": "Checklist\nWhen checking Bayesian Nash equilibrium, ask:\n\nWhat are the players?\nWhat are the type spaces?\nWhat does each player observe?\nWhat is the prior distribution?\nAre types independent or correlated?\nWhat is each player’s action set?\nWhat is each type’s strategy?\nWhat belief does each type hold about others?\nWhat expected payoff does each type maximize?\nIs every type choosing a best response?"
+  },
+  {
+    "objectID": "notes/equilibriums/bayesian-nash.html#related-pages",
+    "href": "notes/equilibriums/bayesian-nash.html#related-pages",
+    "title": "Bayesian Nash Equilibrium",
+    "section": "Related pages",
+    "text": "Related pages\n\nEquilibrium Concepts\nBayesian Games\nProbability\nNash Equilibrium\nPerfect Bayesian Equilibrium\nSequential Equilibrium\nCheap Talk\nSignaling"
   },
   {
     "objectID": "notes/equilibriums/trembling-hand-perfect.html",
@@ -6190,107 +6337,233 @@
   {
     "objectID": "notes/equilibriums/subgame-perfect.html",
     "href": "notes/equilibriums/subgame-perfect.html",
-    "title": "Subgame perfect equilibrium (SPE)",
+    "title": "Subgame Perfect Equilibrium",
     "section": "",
-    "text": "A subgame perfect equilibrium is a Nash equilibrium of an extensive-form game that induces a Nash equilibrium in every subgame.\nIntuition: strategies must be credible not only along the equilibrium path but also after any possible history."
+    "text": "Subgame perfect equilibrium is a refinement of Nash equilibrium for dynamic games. It rules out equilibria that rely on non-credible threats or promises.\nThe central idea is:"
   },
   {
-    "objectID": "notes/equilibriums/subgame-perfect.html#what-it-is",
-    "href": "notes/equilibriums/subgame-perfect.html#what-it-is",
-    "title": "Subgame perfect equilibrium (SPE)",
-    "section": "",
-    "text": "A subgame perfect equilibrium is a Nash equilibrium of an extensive-form game that induces a Nash equilibrium in every subgame.\nIntuition: strategies must be credible not only along the equilibrium path but also after any possible history."
+    "objectID": "notes/equilibriums/subgame-perfect.html#why-nash-equilibrium-is-not-enough",
+    "href": "notes/equilibriums/subgame-perfect.html#why-nash-equilibrium-is-not-enough",
+    "title": "Subgame Perfect Equilibrium",
+    "section": "Why Nash equilibrium is not enough",
+    "text": "Why Nash equilibrium is not enough\nNash equilibrium checks whether players want to deviate from their complete strategies.\nIn dynamic games, this can allow threats that would not actually be carried out if the relevant history occurred.\n\n\n\n\n\nflowchart LR\n    A[Nash equilibrium] --&gt; B[Mutual best responses]\n    B --&gt; C[May include non-credible threats]\n    C --&gt; D[Need stronger concept]\n    D --&gt; E[Subgame perfect equilibrium]\n\n\n\n\n\n\nSubgame perfection adds credibility."
   },
   {
-    "objectID": "notes/equilibriums/subgame-perfect.html#where-it-shows-up",
-    "href": "notes/equilibriums/subgame-perfect.html#where-it-shows-up",
-    "title": "Subgame perfect equilibrium (SPE)",
-    "section": "Where it shows up",
-    "text": "Where it shows up\n\nExtensive-form games with perfect information (classic backward induction)\nDynamic games where credibility of threats/promises matters\nBargaining models (alternating offers) are solved using SPE"
+    "objectID": "notes/equilibriums/subgame-perfect.html#definition",
+    "href": "notes/equilibriums/subgame-perfect.html#definition",
+    "title": "Subgame Perfect Equilibrium",
+    "section": "Definition",
+    "text": "Definition\nA strategy profile is a subgame perfect equilibrium if it induces a Nash equilibrium in every subgame.\nIn words:\n\nafter every history that begins a subgame, the continuation strategies must form a Nash equilibrium of that subgame.\n\nThis means players must behave optimally not only along the equilibrium path, but also after possible deviations."
   },
   {
-    "objectID": "notes/equilibriums/subgame-perfect.html#how-to-solve-recipe",
-    "href": "notes/equilibriums/subgame-perfect.html#how-to-solve-recipe",
-    "title": "Subgame perfect equilibrium (SPE)",
-    "section": "How to solve (recipe)",
-    "text": "How to solve (recipe)\n\nIdentify subgames (in perfect-information games, every decision node typically starts a subgame).\nSolve the last subgames first (optimize at terminal decision nodes).\nReplace each solved subgame by its continuation payoff.\nContinue backward until the start: this is backward induction.\nThe resulting strategy profile is an SPE (in finite perfect-information games)."
+    "objectID": "notes/equilibriums/subgame-perfect.html#subgames",
+    "href": "notes/equilibriums/subgame-perfect.html#subgames",
+    "title": "Subgame Perfect Equilibrium",
+    "section": "Subgames",
+    "text": "Subgames\nA subgame is a part of an extensive-form game that:\n\nbegins at a decision node;\nincludes all future nodes and actions from that node;\ndoes not cut across an information set.\n\n\n\n\n\n\nflowchart TD\n    A[Whole game] --&gt; B[Decision node]\n    B --&gt; C[Subgame from that node]\n    C --&gt; D[All future actions]\n    C --&gt; E[All terminal payoffs]\n\n\n\n\n\n\nA subgame is like a smaller game inside the larger game."
   },
   {
-    "objectID": "notes/equilibriums/subgame-perfect.html#solved-example-backward-induction",
-    "href": "notes/equilibriums/subgame-perfect.html#solved-example-backward-induction",
-    "title": "Subgame perfect equilibrium (SPE)",
-    "section": "Solved example (backward induction)",
-    "text": "Solved example (backward induction)\n\nProblem (context + question)\nA landlord (player 1) offers a rent increase: \\(L\\) (low) or \\(H\\) (high). The tenant (player 2) observes and chooses accept \\(A\\) or move \\(M\\).\nPayoffs: - \\((L,A)=(2,2)\\), \\((L,M)=(0,1)\\) - \\((H,A)=(3,0)\\), \\((H,M)=(0,1)\\)\nQuestion: Find the SPE.\n\n\nSolution\nStep 1 (solve tenant’s decision in each subgame): - After \\(L\\): tenant compares payoff \\(2\\) (accept) vs \\(1\\) (move) → chooses \\(A\\). - After \\(H\\): tenant compares payoff \\(0\\) (accept) vs \\(1\\) (move) → chooses \\(M\\).\nSo tenant strategy is: after \\(L\\) play \\(A\\), after \\(H\\) play \\(M\\).\nStep 2 (landlord anticipates tenant’s response): - If landlord chooses \\(L\\), outcome is \\((2,2)\\). - If landlord chooses \\(H\\), tenant moves, outcome is \\((0,1)\\).\nLandlord prefers \\(L\\) because \\(2&gt;0\\).\nResult (SPE): - Landlord plays \\(L\\). - Tenant plays \\(A\\) after \\(L\\) and \\(M\\) after \\(H\\). - Outcome: \\((L,A)\\).\n\n\nCheck\n\nTenant’s actions are optimal in each subgame.\nGiven tenant’s strategy, landlord’s choice is optimal at the start. So the strategy profile is Nash in every subgame.\n\n\n\nTakeaway\nSPE rules out non-credible threats by requiring optimal behavior after every history."
+    "objectID": "notes/equilibriums/subgame-perfect.html#basic-logic",
+    "href": "notes/equilibriums/subgame-perfect.html#basic-logic",
+    "title": "Subgame Perfect Equilibrium",
+    "section": "Basic logic",
+    "text": "Basic logic\nSubgame perfect equilibrium asks:\n\n\n\n\n\nflowchart TD\n    A[Choose strategy profile] --&gt; B[Look at each subgame]\n    B --&gt; C{Are continuation strategies Nash equilibria?}\n    C --&gt;|Yes| D[Subgame perfect]\n    C --&gt;|No| E[Not subgame perfect]\n\n\n\n\n\n\nThe key test is whether the strategy profile remains rational inside every subgame."
   },
   {
-    "objectID": "notes/equilibriums/subgame-perfect.html#later-on-analysis",
-    "href": "notes/equilibriums/subgame-perfect.html#later-on-analysis",
-    "title": "Subgame perfect equilibrium (SPE)",
-    "section": "Later-on analysis",
-    "text": "Later-on analysis\n\nWith imperfect information, “subgame” may not be well-defined → PBE / sequential equilibrium.\nWith multiple SPE, equilibrium selection becomes a separate question.\nIn repeated games, SPE sets are large; punishments must still be credible."
+    "objectID": "notes/equilibriums/subgame-perfect.html#backward-induction",
+    "href": "notes/equilibriums/subgame-perfect.html#backward-induction",
+    "title": "Subgame Perfect Equilibrium",
+    "section": "Backward induction",
+    "text": "Backward induction\nIn finite games with perfect information, backward induction finds a subgame perfect equilibrium.\n\n\n\n\n\nflowchart LR\n    A[Finite perfect-information game] --&gt; B[Backward induction]\n    B --&gt; C[Optimal action in final subgames]\n    C --&gt; D[Move backward]\n    D --&gt; E[Optimal action in every subgame]\n    E --&gt; F[Subgame perfect equilibrium]\n\n\n\n\n\n\nBackward induction is the procedure. Subgame perfect equilibrium is the solution concept."
+  },
+  {
+    "objectID": "notes/equilibriums/subgame-perfect.html#example-entry-deterrence",
+    "href": "notes/equilibriums/subgame-perfect.html#example-entry-deterrence",
+    "title": "Subgame Perfect Equilibrium",
+    "section": "Example: entry deterrence",
+    "text": "Example: entry deterrence\nConsider the following game.\n\n\n\n\n\nflowchart TD\n    A[Entrant] --&gt;|Stay Out| B[0,2]\n    A --&gt;|Enter| C[Incumbent]\n    C --&gt;|Fight| D[-1,-1]\n    C --&gt;|Accommodate| E[2,1]\n\n\n\n\n\n\nIf the entrant enters, the incumbent chooses between Fight and Accommodate.\nThe incumbent prefers Accommodate because:\n\\[\n1&gt;-1.\n\\]\nSo Fight is not credible.\nThe entrant anticipates Accommodate and chooses Enter because:\n\\[\n2&gt;0.\n\\]\nThe subgame perfect outcome is:\n\\[\n(\\text{Enter},\\text{Accommodate}).\n\\]"
+  },
+  {
+    "objectID": "notes/equilibriums/subgame-perfect.html#non-credible-threat",
+    "href": "notes/equilibriums/subgame-perfect.html#non-credible-threat",
+    "title": "Subgame Perfect Equilibrium",
+    "section": "Non-credible threat",
+    "text": "Non-credible threat\nThe incumbent may want to threaten:\n\nIf you enter, I will fight.\n\nBut after entry occurs, fighting gives the incumbent a lower payoff. Therefore the threat is not credible.\n\n\n\n\n\nflowchart LR\n    A[Threat to fight] --&gt; B[Entry occurs]\n    B --&gt; C{Is fighting optimal?}\n    C --&gt;|No| D[Threat not credible]\n    D --&gt; E[Ruled out by SPE]\n\n\n\n\n\n\nSubgame perfection removes equilibria supported by this kind of threat."
+  },
+  {
+    "objectID": "notes/equilibriums/subgame-perfect.html#strategy-profiles-and-paths",
+    "href": "notes/equilibriums/subgame-perfect.html#strategy-profiles-and-paths",
+    "title": "Subgame Perfect Equilibrium",
+    "section": "Strategy profiles and paths",
+    "text": "Strategy profiles and paths\nIn dynamic games, an equilibrium strategy profile specifies:\n\nwhat happens on the equilibrium path;\nwhat would happen after off-path histories.\n\nThe equilibrium path is the sequence of actions that actually occurs if everyone follows the equilibrium strategies.\nOff-path behaviour describes what players would do after deviations.\nSubgame perfection requires off-path behaviour to be optimal in every subgame."
+  },
+  {
+    "objectID": "notes/equilibriums/subgame-perfect.html#sequential-rationality",
+    "href": "notes/equilibriums/subgame-perfect.html#sequential-rationality",
+    "title": "Subgame Perfect Equilibrium",
+    "section": "Sequential rationality",
+    "text": "Sequential rationality\nSubgame perfection is closely related to sequential rationality.\nSequential rationality means that at every point where a player acts, the prescribed action is optimal given the continuation game.\nIn perfect-information games, subgame perfection captures this idea well.\nIn imperfect-information games, we often need belief-based refinements such as perfect Bayesian equilibrium or sequential equilibrium."
+  },
+  {
+    "objectID": "notes/equilibriums/subgame-perfect.html#spe-versus-nash-equilibrium",
+    "href": "notes/equilibriums/subgame-perfect.html#spe-versus-nash-equilibrium",
+    "title": "Subgame Perfect Equilibrium",
+    "section": "SPE versus Nash equilibrium",
+    "text": "SPE versus Nash equilibrium\n\n\n\n\n\n\n\n\nConcept\nRequirement\nProblem addressed\n\n\n\n\nNash equilibrium\nno profitable unilateral deviation from complete strategy\nstrategic stability\n\n\nSubgame perfect equilibrium\nNash equilibrium in every subgame\ncredibility\n\n\nPerfect Bayesian equilibrium\nsequential rationality plus beliefs\ndynamic incomplete information\n\n\n\nEvery subgame perfect equilibrium is a Nash equilibrium. But not every Nash equilibrium is subgame perfect."
+  },
+  {
+    "objectID": "notes/equilibriums/subgame-perfect.html#finite-horizon-repeated-games",
+    "href": "notes/equilibriums/subgame-perfect.html#finite-horizon-repeated-games",
+    "title": "Subgame Perfect Equilibrium",
+    "section": "Finite-horizon repeated games",
+    "text": "Finite-horizon repeated games\nSubgame perfection explains unraveling in finitely repeated prisoners’ dilemma games.\nIf the final period is known, players defect in the final period. Knowing that, they defect in the previous period, and so on.\n\n\n\n\n\nflowchart LR\n    A[Final period] --&gt; B[No future punishment]\n    B --&gt; C[Defection]\n    C --&gt; D[Previous period loses future discipline]\n    D --&gt; E[Backward unraveling]\n\n\n\n\n\n\nThis is a classic application of backward induction."
+  },
+  {
+    "objectID": "notes/equilibriums/subgame-perfect.html#one-deviation-principle",
+    "href": "notes/equilibriums/subgame-perfect.html#one-deviation-principle",
+    "title": "Subgame Perfect Equilibrium",
+    "section": "One-deviation principle",
+    "text": "One-deviation principle\nIn many dynamic games, the one-deviation principle can simplify checking subgame perfection.\nThe idea is:\n\na strategy profile is subgame perfect if no player can gain by deviating once and then returning to the strategy.\n\nThis works under particular conditions, especially in many finite or discounted dynamic games.\nIt is useful because checking every possible deviation can be hard."
+  },
+  {
+    "objectID": "notes/equilibriums/subgame-perfect.html#common-mistakes",
+    "href": "notes/equilibriums/subgame-perfect.html#common-mistakes",
+    "title": "Subgame Perfect Equilibrium",
+    "section": "Common mistakes",
+    "text": "Common mistakes\n\n1. Thinking SPE is only about the equilibrium path\nSPE also requires optimal behaviour after off-path histories.\n\n\n2. Treating threats as credible because they are announced\nA threat is credible only if it is optimal to carry out.\n\n\n3. Confusing backward induction with SPE\nBackward induction is a method; SPE is a solution concept.\n\n\n4. Applying subgame perfection where there are no proper subgames\nIn some imperfect-information games, subgame perfection may add little beyond Nash equilibrium.\n\n\n5. Cutting through information sets\nA subgame cannot begin in the middle of an information set."
+  },
+  {
+    "objectID": "notes/equilibriums/subgame-perfect.html#checklist",
+    "href": "notes/equilibriums/subgame-perfect.html#checklist",
+    "title": "Subgame Perfect Equilibrium",
+    "section": "Checklist",
+    "text": "Checklist\nWhen checking subgame perfection, ask:\n\nWhat is the extensive-form game?\nWhat are the proper subgames?\nWhat strategy profile is proposed?\nDoes the profile induce a Nash equilibrium in the whole game?\nDoes it induce a Nash equilibrium in every subgame?\nAre threats credible?\nAre promises credible?\nWhat is the equilibrium path?\nWhat happens off path?\nWould backward induction give the same result in a finite perfect-information game?"
+  },
+  {
+    "objectID": "notes/equilibriums/subgame-perfect.html#related-pages",
+    "href": "notes/equilibriums/subgame-perfect.html#related-pages",
+    "title": "Subgame Perfect Equilibrium",
+    "section": "Related pages",
+    "text": "Related pages\n\nEquilibrium Concepts\nNash Equilibrium\nExtensive-form Games\nRepeated Games\nPerfect Bayesian Equilibrium\nSequential Equilibrium\nDynamic Reasoning"
   },
   {
     "objectID": "notes/game-types/repeated.html",
     "href": "notes/game-types/repeated.html",
-    "title": "Repeated games",
+    "title": "Repeated Games",
     "section": "",
-    "text": "A repeated game plays the same stage game over time (finitely or infinitely many periods). Strategies can condition on history."
+    "text": "Repeated games study what happens when the same strategic interaction occurs more than once. Repetition changes incentives because current actions can affect future behaviour.\nA player may cooperate today not because cooperation is immediately best, but because defection today may trigger punishment tomorrow."
   },
   {
-    "objectID": "notes/game-types/repeated.html#what-it-is",
-    "href": "notes/game-types/repeated.html#what-it-is",
-    "title": "Repeated games",
-    "section": "",
-    "text": "A repeated game plays the same stage game over time (finitely or infinitely many periods). Strategies can condition on history."
+    "objectID": "notes/game-types/repeated.html#the-basic-idea",
+    "href": "notes/game-types/repeated.html#the-basic-idea",
+    "title": "Repeated Games",
+    "section": "The basic idea",
+    "text": "The basic idea\nA repeated game begins with a stage game. The stage game is played multiple times.\n\n\n\n\n\nflowchart LR\n    A[Stage game] --&gt; B[Period 1]\n    B --&gt; C[Period 2]\n    C --&gt; D[Period 3]\n    D --&gt; E[Future periods]\n\n\n\n\n\n\nThe key difference from a one-shot game is that history matters.\nPlayers can condition current actions on past behaviour."
   },
   {
-    "objectID": "notes/game-types/repeated.html#whats-special",
-    "href": "notes/game-types/repeated.html#whats-special",
-    "title": "Repeated games",
-    "section": "What’s special",
-    "text": "What’s special\n\nPast behavior can be rewarded/punished → enables cooperation even when the one-shot game would not.\nCentral ideas: incentives over time, credibility, and equilibrium path vs off-path threats.\nInfinite-horizon models often use a discount factor \\(\\delta\\in(0,1)\\)."
+    "objectID": "notes/game-types/repeated.html#why-repetition-matters",
+    "href": "notes/game-types/repeated.html#why-repetition-matters",
+    "title": "Repeated Games",
+    "section": "Why repetition matters",
+    "text": "Why repetition matters\nIn a one-shot prisoners’ dilemma, defection may be the dominant strategy.\nIn a repeated prisoners’ dilemma, cooperation may be possible because defection can be punished in future periods.\n\n\n\n\n\nflowchart LR\n    A[Cooperate today] --&gt; B[Good future relationship]\n    C[Defect today] --&gt; D[Short-run gain]\n    D --&gt; E[Future punishment]\n    E --&gt; F[Lower continuation payoff]\n\n\n\n\n\n\nThe comparison is:\n\\[\n\\text{short-run gain from defection}\n\\leq\n\\text{future loss from punishment}.\n\\]\nIf this condition holds, cooperation can be sustained."
   },
   {
-    "objectID": "notes/game-types/repeated.html#one-example-grim-trigger-in-repeated-prisoners-dilemma",
-    "href": "notes/game-types/repeated.html#one-example-grim-trigger-in-repeated-prisoners-dilemma",
-    "title": "Repeated games",
-    "section": "One example (grim trigger in repeated Prisoner’s Dilemma)",
-    "text": "One example (grim trigger in repeated Prisoner’s Dilemma)\nStage game: cooperate \\(C\\) or defect \\(D\\). Typical payoffs: - \\((C,C)\\) gives \\((R,R)\\), - \\((D,C)\\) gives \\((T,S)\\), - \\((C,D)\\) gives \\((S,T)\\), - \\((D,D)\\) gives \\((P,P)\\), with \\(T&gt;R&gt;P&gt;S\\).\nGrim trigger strategy: start with \\(C\\), continue \\(C\\) unless someone defects; after any defection, play \\(D\\) forever.\nIncentive condition (intuition): cooperate today if the present temptation \\(T-R\\) is outweighed by the discounted future loss from punishment. Cooperation can be sustained if \\(\\delta\\) is sufficiently high."
+    "objectID": "notes/game-types/repeated.html#histories",
+    "href": "notes/game-types/repeated.html#histories",
+    "title": "Repeated Games",
+    "section": "Histories",
+    "text": "Histories\nA history is the sequence of actions observed so far.\nAfter \\(t\\) periods, a history may be written as:\n\\[\nh^t = (a^0,a^1,\\ldots,a^{t-1}).\n\\]\nA repeated-game strategy maps histories into current actions:\n\\[\ns_i(h^t) \\in A_i.\n\\]\nThis means a player’s action today may depend on what happened before."
   },
   {
-    "objectID": "notes/game-types/repeated.html#story",
-    "href": "notes/game-types/repeated.html#story",
-    "title": "Repeated games",
-    "section": "Story",
-    "text": "Story\nTwo graduate students, Kai and Mira, share an office. Each week they decide whether to clean the shared space. Cleaning is effortful; skipping is tempting. If one keeps cleaning while the other skips, resentment builds. If both skip, the office becomes miserable.\nBecause the choice repeats, today’s action can trigger tomorrow’s response."
+    "objectID": "notes/game-types/repeated.html#discounting",
+    "href": "notes/game-types/repeated.html#discounting",
+    "title": "Repeated Games",
+    "section": "Discounting",
+    "text": "Discounting\nFuture payoffs are usually discounted.\nLet \\(\\delta \\in (0,1)\\) be the discount factor. A player’s total payoff may be written as:\n\\[\nU_i\n=\nu_i^0\n+\n\\delta u_i^1\n+\n\\delta^2 u_i^2\n+\n\\cdots.\n\\]\nA higher \\(\\delta\\) means the player is more patient.\nIf \\(\\delta\\) is close to 1, future payoffs matter a lot. If \\(\\delta\\) is close to 0, the player is impatient and mostly cares about the present."
   },
   {
-    "objectID": "notes/game-types/repeated.html#model",
-    "href": "notes/game-types/repeated.html#model",
-    "title": "Repeated games",
-    "section": "Model",
-    "text": "Model\n\nStage actions: \\(C\\) (clean), \\(S\\) (shirk)\nStage payoffs (toy): PD-like\nInfinite horizon with discount factor \\(\\delta\\in(0,1)\\)\nStrategies can condition on history"
+    "objectID": "notes/game-types/repeated.html#present-value-of-a-constant-payoff",
+    "href": "notes/game-types/repeated.html#present-value-of-a-constant-payoff",
+    "title": "Repeated Games",
+    "section": "Present value of a constant payoff",
+    "text": "Present value of a constant payoff\nIf a player receives payoff \\(x\\) every period forever, the discounted value is:\n\\[\nx+\\delta x+\\delta^2 x+\\cdots\n=\n\\frac{x}{1-\\delta}.\n\\]\nThis formula is used constantly in repeated games."
   },
   {
-    "objectID": "notes/game-types/repeated.html#stage-payoffs-toy",
-    "href": "notes/game-types/repeated.html#stage-payoffs-toy",
-    "title": "Repeated games",
-    "section": "Stage payoffs (toy)",
-    "text": "Stage payoffs (toy)\n\n\\((C,C)=(2,2)\\)\n\\((S,C)=(3,0)\\)\n\\((C,S)=(0,3)\\)\n\\((S,S)=(1,1)\\)"
+    "objectID": "notes/game-types/repeated.html#trigger-strategies",
+    "href": "notes/game-types/repeated.html#trigger-strategies",
+    "title": "Repeated Games",
+    "section": "Trigger strategies",
+    "text": "Trigger strategies\nA trigger strategy begins by cooperating and then punishes if the other player defects.\nOne simple version is grim trigger:\n\ncooperate as long as no one has defected;\nif anyone defects, punish forever.\n\n\n\n\n\n\nflowchart TD\n    A[Start by cooperating] --&gt; B{Has anyone defected?}\n    B --&gt;|No| C[Continue cooperating]\n    B --&gt;|Yes| D[Punish forever]\n    C --&gt; B\n\n\n\n\n\n\nGrim trigger is severe, but analytically simple."
   },
   {
-    "objectID": "notes/game-types/repeated.html#equilibrium-cooperation-via-grim-trigger",
-    "href": "notes/game-types/repeated.html#equilibrium-cooperation-via-grim-trigger",
-    "title": "Repeated games",
-    "section": "Equilibrium (cooperation via grim trigger)",
-    "text": "Equilibrium (cooperation via grim trigger)\nGrim trigger: play \\(C\\) unless someone shirks; after any shirking, play \\(S\\) forever.\nCompare deviating once vs cooperating on-path (player 1, symmetric): - Cooperate forever payoff: \\(\\frac{2}{1-\\delta}\\) - Deviate once (get 3 now, then punished with 1 forever): \\(3 + \\frac{\\delta}{1-\\delta}\\)\nCooperation is sustainable if: \\[\n\\frac{2}{1-\\delta} \\ge 3+\\frac{\\delta}{1-\\delta}\n\\quad\\Longleftrightarrow\\quad\n\\delta \\ge \\frac12.\n\\]"
+    "objectID": "notes/game-types/repeated.html#tit-for-tat",
+    "href": "notes/game-types/repeated.html#tit-for-tat",
+    "title": "Repeated Games",
+    "section": "Tit-for-tat",
+    "text": "Tit-for-tat\nTit-for-tat is another common strategy:\n\ncooperate in the first period;\nafter that, copy the other player’s previous action.\n\n\n\n\n\n\nflowchart TD\n    A[First period: cooperate] --&gt; B[Observe opponent's last action]\n    B --&gt; C[Choose same action this period]\n    C --&gt; B\n\n\n\n\n\n\nTit-for-tat is less severe than grim trigger because cooperation can resume after punishment."
   },
   {
-    "objectID": "notes/game-types/repeated.html#later-on-analysis",
-    "href": "notes/game-types/repeated.html#later-on-analysis",
-    "title": "Repeated games",
-    "section": "Later-on analysis",
-    "text": "Later-on analysis\n\nFinite horizon: backward induction kills cooperation near the end (unless there are other frictions).\nNoisy actions: if mistakes happen, harsh punishments can be inefficient; “forgiving” strategies (tit-for-tat variants) become relevant.\nMultiple equilibria: repeated games often admit many equilibrium paths; selection becomes a real question."
+    "objectID": "notes/game-types/repeated.html#repeated-prisoners-dilemma",
+    "href": "notes/game-types/repeated.html#repeated-prisoners-dilemma",
+    "title": "Repeated Games",
+    "section": "Repeated prisoners’ dilemma",
+    "text": "Repeated prisoners’ dilemma\nIn the one-shot prisoners’ dilemma, defection is individually optimal.\nBut in an infinitely repeated game, cooperation can be supported if players are sufficiently patient.\nSuppose:\n\n\n\nOutcome\nPayoff\n\n\n\n\nmutual cooperation\n\\(R\\)\n\n\ndefect while other cooperates\n\\(T\\)\n\n\nmutual defection\n\\(P\\)\n\n\ncooperate while other defects\n\\(S\\)\n\n\n\nwhere:\n\\[\nT&gt;R&gt;P&gt;S.\n\\]\nIf both cooperate forever, the value is:\n\\[\n\\frac{R}{1-\\delta}.\n\\]\nIf one player defects today and is punished forever after, the value is:\n\\[\nT+\\delta\\frac{P}{1-\\delta}.\n\\]\nCooperation is sustainable if:\n\\[\n\\frac{R}{1-\\delta}\n\\geq\nT+\\delta\\frac{P}{1-\\delta}.\n\\]\nThis condition says that the value of continued cooperation must be at least as large as the value of cheating once and then being punished."
+  },
+  {
+    "objectID": "notes/game-types/repeated.html#solving-the-incentive-condition",
+    "href": "notes/game-types/repeated.html#solving-the-incentive-condition",
+    "title": "Repeated Games",
+    "section": "Solving the incentive condition",
+    "text": "Solving the incentive condition\nStart with:\n\\[\n\\frac{R}{1-\\delta}\n\\geq\nT+\\delta\\frac{P}{1-\\delta}.\n\\]\nMultiply both sides by \\(1-\\delta\\):\n\\[\nR \\geq T(1-\\delta)+\\delta P.\n\\]\nExpand:\n\\[\nR \\geq T-\\delta T+\\delta P.\n\\]\nRearrange:\n\\[\n\\delta(T-P) \\geq T-R.\n\\]\nSo:\n\\[\n\\delta \\geq \\frac{T-R}{T-P}.\n\\]\nCooperation is easier to sustain when:\n\nthe temptation payoff \\(T-R\\) is small;\nthe punishment gap \\(T-P\\) is large;\nplayers are patient."
+  },
+  {
+    "objectID": "notes/game-types/repeated.html#finite-versus-infinite-repetition",
+    "href": "notes/game-types/repeated.html#finite-versus-infinite-repetition",
+    "title": "Repeated Games",
+    "section": "Finite versus infinite repetition",
+    "text": "Finite versus infinite repetition\nFinite and infinite repeated games behave differently.\nIf the game has a known final period, backward induction can unravel cooperation.\nIn the final period, there is no future punishment, so players may defect. Knowing this, cooperation may unravel in the previous period, and so on.\n\n\n\n\n\nflowchart LR\n    A[Known final period] --&gt; B[No future punishment]\n    B --&gt; C[Defection in final period]\n    C --&gt; D[Previous period unravels]\n    D --&gt; E[Cooperation may collapse]\n\n\n\n\n\n\nInfinite repetition avoids a known last period."
+  },
+  {
+    "objectID": "notes/game-types/repeated.html#folk-theorem-intuition",
+    "href": "notes/game-types/repeated.html#folk-theorem-intuition",
+    "title": "Repeated Games",
+    "section": "Folk theorem intuition",
+    "text": "Folk theorem intuition\nThe folk theorem says, roughly, that if players are sufficiently patient, many feasible and individually rational payoff profiles can be sustained as equilibria in infinitely repeated games.\nThe intuition is:\n\npatient players can use future rewards and punishments to support many forms of cooperation.\n\nThis is powerful but also creates multiplicity. Repeated games may have many equilibria."
+  },
+  {
+    "objectID": "notes/game-types/repeated.html#reputation",
+    "href": "notes/game-types/repeated.html#reputation",
+    "title": "Repeated Games",
+    "section": "Reputation",
+    "text": "Reputation\nRepeated interaction can create reputation.\nA player may act cooperatively today to influence how others treat them tomorrow.\n\n\n\n\n\nflowchart LR\n    A[Current action] --&gt; B[Observed by others]\n    B --&gt; C[Belief about type or reliability]\n    C --&gt; D[Future treatment]\n    D --&gt; E[Current incentive]\n\n\n\n\n\n\nReputation is especially important when players are uncertain about each other’s types."
+  },
+  {
+    "objectID": "notes/game-types/repeated.html#repeated-games-and-institutions",
+    "href": "notes/game-types/repeated.html#repeated-games-and-institutions",
+    "title": "Repeated Games",
+    "section": "Repeated games and institutions",
+    "text": "Repeated games and institutions\nRepeated-game logic appears in institutions.\nExamples:\n\nfirms cooperate because price wars are costly;\ncommunities enforce norms through future exclusion;\ncriminal groups maintain discipline through repeated interaction;\npolice and communities build or lose trust over time;\npolitical actors keep promises to protect reputation;\ninformal contracts survive because future business matters."
+  },
+  {
+    "objectID": "notes/game-types/repeated.html#common-mistakes",
+    "href": "notes/game-types/repeated.html#common-mistakes",
+    "title": "Repeated Games",
+    "section": "Common mistakes",
+    "text": "Common mistakes\n\n1. Treating repeated play as just many one-shot games\nHistory changes incentives.\n\n\n2. Forgetting discounting\nFuture punishment matters only if players care about the future.\n\n\n3. Assuming cooperation always occurs\nRepetition can support cooperation, but only under incentive conditions.\n\n\n4. Ignoring finite-horizon unraveling\nA known final period can destroy cooperation through backward induction.\n\n\n5. Treating punishment as costless\nPunishment may reduce the punisher’s payoff too.\n\n\n6. Ignoring multiple equilibria\nRepeated games often have many possible equilibria."
+  },
+  {
+    "objectID": "notes/game-types/repeated.html#checklist",
+    "href": "notes/game-types/repeated.html#checklist",
+    "title": "Repeated Games",
+    "section": "Checklist",
+    "text": "Checklist\nWhen analysing a repeated game, ask:\n\nWhat is the stage game?\nIs the game repeated finitely or infinitely?\nWhat does each player observe after each period?\nWhat is the discount factor?\nWhat strategies are available?\nWhat history triggers punishment?\nWhat is the gain from deviation?\nWhat is the future loss from punishment?\nIs cooperation sustainable?\nAre there multiple equilibria?"
+  },
+  {
+    "objectID": "notes/game-types/repeated.html#related-pages",
+    "href": "notes/game-types/repeated.html#related-pages",
+    "title": "Repeated Games",
+    "section": "Related pages",
+    "text": "Related pages\n\nGame Types\nGame Theory Notes\nNormal-form Games\nExtensive-form Games\nSubgame Perfect Equilibrium\nPerfect Bayesian Equilibrium\nDynamic Reasoning"
   },
   {
     "objectID": "notes/game-types/auctions.html",
@@ -6631,58 +6904,128 @@
   {
     "objectID": "notes/game-types/bayesian.html",
     "href": "notes/game-types/bayesian.html",
-    "title": "Bayesian games",
+    "title": "Bayesian Games",
     "section": "",
-    "text": "A Bayesian game models incomplete information: players have private types and hold beliefs about others’ types.\nA Bayesian Nash equilibrium (BNE) is a strategy profile where each type best-responds given beliefs."
+    "text": "Bayesian games study strategic interaction under incomplete information. Players may be uncertain about other players’ preferences, payoffs, costs, abilities, intentions, information, or types.\nThe key idea is that players do not simply choose actions. They choose actions while holding beliefs about what kind of opponents they are facing."
   },
   {
-    "objectID": "notes/game-types/bayesian.html#what-it-is",
-    "href": "notes/game-types/bayesian.html#what-it-is",
-    "title": "Bayesian games",
-    "section": "",
-    "text": "A Bayesian game models incomplete information: players have private types and hold beliefs about others’ types.\nA Bayesian Nash equilibrium (BNE) is a strategy profile where each type best-responds given beliefs."
+    "objectID": "notes/game-types/bayesian.html#complete-versus-incomplete-information",
+    "href": "notes/game-types/bayesian.html#complete-versus-incomplete-information",
+    "title": "Bayesian Games",
+    "section": "Complete versus incomplete information",
+    "text": "Complete versus incomplete information\nA game has complete information if the structure of the game, including payoffs and types, is commonly known.\nA game has incomplete information if at least one player is uncertain about another player’s type or payoff-relevant characteristic.\n\n\n\n\n\nflowchart TD\n    A[Strategic interaction] --&gt; B[Complete information]\n    A --&gt; C[Incomplete information]\n    B --&gt; D[Players know payoffs and types]\n    C --&gt; E[Players hold beliefs over types]\n    E --&gt; F[Bayesian game]\n\n\n\n\n\n\nIncomplete information does not mean players know nothing. It means they reason with probability."
   },
   {
-    "objectID": "notes/game-types/bayesian.html#whats-special",
-    "href": "notes/game-types/bayesian.html#whats-special",
-    "title": "Bayesian games",
-    "section": "What’s special",
-    "text": "What’s special\n\nStrategies map types to actions.\nBeliefs (priors/posteriors) drive behavior.\nSame strategic logic as normal-form games, but with expectations over types."
+    "objectID": "notes/game-types/bayesian.html#types",
+    "href": "notes/game-types/bayesian.html#types",
+    "title": "Bayesian Games",
+    "section": "Types",
+    "text": "Types\nA type represents private information about a player.\nA type can describe:\n\ncost;\nability;\nvaluation;\npatience;\nhonesty;\nbias;\npreference;\ninformation;\nintention;\nrisk;\nproductivity.\n\nFor example, a firm may be high-cost or low-cost:\n\\[\n\\theta_i \\in \\{H,L\\}.\n\\]\nThe player’s payoff may depend on their own type and possibly on others’ types."
   },
   {
-    "objectID": "notes/game-types/bayesian.html#one-example-2-type-entry-game",
-    "href": "notes/game-types/bayesian.html#one-example-2-type-entry-game",
-    "title": "Bayesian games",
-    "section": "One example (2-type entry game)",
-    "text": "One example (2-type entry game)\nPlayer 1 (incumbent) has type \\(\\theta\\in\\{H,L\\}\\) with \\(\\mathbb{P}(H)=p\\). Player 2 (entrant) chooses \\(E\\) (enter) or \\(O\\) (out). If entrant stays out: payoffs \\((1,0)\\).\nIf entrant enters: - If type is \\(H\\): fight is profitable for incumbent. - If type is \\(L\\): accommodate is better.\nToy payoff if entrant enters: - Type \\(H\\) incumbent prefers Fight, giving entrant payoff \\(-1\\). - Type \\(L\\) incumbent prefers Accommodate, giving entrant payoff \\(+1\\).\nEntrant enters if expected payoff is nonnegative: \\[\n\\mathbb{E}[\\pi_2 \\mid E] = p(-1) + (1-p)(+1) = 1-2p \\ge 0\n\\quad\\Rightarrow\\quad p \\le \\frac12.\n\\]\nSolution sketch. The entrant’s decision depends on the probability the incumbent is the tough type."
+    "objectID": "notes/game-types/bayesian.html#type-spaces",
+    "href": "notes/game-types/bayesian.html#type-spaces",
+    "title": "Bayesian Games",
+    "section": "Type spaces",
+    "text": "Type spaces\nEach player has a type space.\nFor player \\(i\\), the type space is written as\n\\[\n\\Theta_i.\n\\]\nA type is an element:\n\\[\n\\theta_i \\in \\Theta_i.\n\\]\nA profile of types is\n\\[\n\\theta = (\\theta_1,\\ldots,\\theta_n).\n\\]\nThe types of everyone except player \\(i\\) are written as\n\\[\n\\theta_{-i}.\n\\]"
   },
   {
-    "objectID": "notes/game-types/bayesian.html#story",
-    "href": "notes/game-types/bayesian.html#story",
-    "title": "Bayesian games",
-    "section": "Story",
-    "text": "Story\nA startup founder, Eden, pitches an angel investor. Eden knows whether the startup is strong or weak. The investor can’t fully verify this in one meeting. Funding a strong startup is profitable; funding a weak one is a loss.\nThe investor’s action is based on beliefs about Eden’s (hidden) type."
+    "objectID": "notes/game-types/bayesian.html#beliefs",
+    "href": "notes/game-types/bayesian.html#beliefs",
+    "title": "Bayesian Games",
+    "section": "Beliefs",
+    "text": "Beliefs\nPlayers hold beliefs over types.\nIf player 2 may be high-cost or low-cost, player 1 may believe:\n\\[\n\\Pr(\\theta_2=H)=p,\n\\]\nand\n\\[\n\\Pr(\\theta_2=L)=1-p.\n\\]\nBeliefs are central because players choose actions based on expected payoffs.\n\n\n\n\n\nflowchart LR\n    A[Unknown type] --&gt; B[Belief over types]\n    B --&gt; C[Expected payoff]\n    C --&gt; D[Optimal action]"
   },
   {
-    "objectID": "notes/game-types/bayesian.html#model",
-    "href": "notes/game-types/bayesian.html#model",
-    "title": "Bayesian games",
-    "section": "Model",
-    "text": "Model\n\nFounder type: \\(\\theta\\in\\{S,W\\}\\) with prior \\(\\Pr(S)=p\\)\nInvestor action: fund \\(F\\) or reject \\(R\\)\nPayoff to investor: if \\(F\\), payoff \\(+1\\) under \\(S\\) and \\(-1\\) under \\(W\\); if \\(R\\), payoff \\(0\\)"
+    "objectID": "notes/game-types/bayesian.html#nature",
+    "href": "notes/game-types/bayesian.html#nature",
+    "title": "Bayesian Games",
+    "section": "Nature",
+    "text": "Nature\nA Bayesian game is often represented as a game where nature first draws types.\n\n\n\n\n\nflowchart TD\n    A[Nature draws types] --&gt; B[Each player observes own type]\n    B --&gt; C[Players choose actions]\n    C --&gt; D[Payoffs depend on actions and types]\n\n\n\n\n\n\nThis converts incomplete information into imperfect information about nature’s move."
   },
   {
-    "objectID": "notes/game-types/bayesian.html#equilibrium-threshold-best-response",
-    "href": "notes/game-types/bayesian.html#equilibrium-threshold-best-response",
-    "title": "Bayesian games",
-    "section": "Equilibrium (threshold best response)",
-    "text": "Equilibrium (threshold best response)\nInvestor funds iff expected payoff is nonnegative: \\[\n\\mathbb{E}[\\pi \\mid F]=p(1)+(1-p)(-1)=2p-1 \\ge 0\n\\quad\\Rightarrow\\quad\np\\ge \\tfrac12.\n\\]"
+    "objectID": "notes/game-types/bayesian.html#strategy-in-a-bayesian-game",
+    "href": "notes/game-types/bayesian.html#strategy-in-a-bayesian-game",
+    "title": "Bayesian Games",
+    "section": "Strategy in a Bayesian game",
+    "text": "Strategy in a Bayesian game\nA strategy in a Bayesian game is a type-contingent plan.\nPlayer \\(i\\)’s strategy maps types into actions:\n\\[\ns_i:\\Theta_i \\to A_i.\n\\]\nThis means each type of player \\(i\\) may choose a different action.\nFor example:\n\\[\ns_i(H)=a_H,\n\\]\nand\n\\[\ns_i(L)=a_L.\n\\]\nA strategy must specify what every possible type would do."
   },
   {
-    "objectID": "notes/game-types/bayesian.html#later-on-analysis",
-    "href": "notes/game-types/bayesian.html#later-on-analysis",
-    "title": "Bayesian games",
-    "section": "Later-on analysis",
-    "text": "Later-on analysis\n\nSignals: if the pitch provides a signal, beliefs update via Bayes’ rule before the funding choice.\nStrategic disclosure: if the founder can choose what to reveal, this becomes a signaling/cheap-talk hybrid.\nMultiple types: richer type spaces yield cutoff strategies and comparative statics in \\(p\\)."
+    "objectID": "notes/game-types/bayesian.html#expected-payoff",
+    "href": "notes/game-types/bayesian.html#expected-payoff",
+    "title": "Bayesian Games",
+    "section": "Expected payoff",
+    "text": "Expected payoff\nSuppose player \\(i\\) has type \\(\\theta_i\\) and chooses action \\(a_i\\). The player is uncertain about others’ types.\nThe expected payoff is:\n\\[\n\\mathbb{E}_{\\theta_{-i}}\n[\nu_i(a_i,a_{-i},\\theta_i,\\theta_{-i})\n].\n\\]\nWith finitely many types, this can be written as:\n\\[\n\\sum_{\\theta_{-i}}\nu_i(a_i,a_{-i},\\theta_i,\\theta_{-i})\n\\Pr(\\theta_{-i}\\mid \\theta_i).\n\\]\nThe player chooses an action that maximizes expected payoff."
+  },
+  {
+    "objectID": "notes/game-types/bayesian.html#bayesian-nash-equilibrium",
+    "href": "notes/game-types/bayesian.html#bayesian-nash-equilibrium",
+    "title": "Bayesian Games",
+    "section": "Bayesian Nash equilibrium",
+    "text": "Bayesian Nash equilibrium\nA Bayesian Nash equilibrium is a strategy profile where every type of every player chooses a best response given beliefs and the type-contingent strategies of others.\n\n\n\n\n\nflowchart TD\n    A[Each player has a type] --&gt; B[Each type has beliefs]\n    B --&gt; C[Each type chooses best response]\n    C --&gt; D[Strategies are type-contingent]\n    D --&gt; E[Bayesian Nash equilibrium]\n\n\n\n\n\n\nThe important phrase is:\n\nevery type of every player.\n\nA Bayesian equilibrium is not just one optimal action per player. It is optimal behaviour for each possible type."
+  },
+  {
+    "objectID": "notes/game-types/bayesian.html#example-high-cost-and-low-cost-firm",
+    "href": "notes/game-types/bayesian.html#example-high-cost-and-low-cost-firm",
+    "title": "Bayesian Games",
+    "section": "Example: high-cost and low-cost firm",
+    "text": "Example: high-cost and low-cost firm\nSuppose a firm may be high-cost or low-cost.\nA rival does not observe the firm’s cost type. The rival only has a prior belief:\n\\[\n\\Pr(L)=p.\n\\]\nThe low-cost firm may be more willing to set a low price. Observing a low price may make the rival think the firm is more likely to be low-cost.\nThis is the beginning of signaling logic.\n\n\n\n\n\nflowchart LR\n    A[Private cost type] --&gt; B[Price choice]\n    B --&gt; C[Opponent updates belief]\n    C --&gt; D[Opponent chooses response]\n\n\n\n\n\n\nBayesian games therefore connect naturally to signaling games."
+  },
+  {
+    "objectID": "notes/game-types/bayesian.html#harsanyi-transformation",
+    "href": "notes/game-types/bayesian.html#harsanyi-transformation",
+    "title": "Bayesian Games",
+    "section": "Harsanyi transformation",
+    "text": "Harsanyi transformation\nThe Harsanyi transformation converts incomplete information into imperfect information.\nThe steps are:\n\nnature chooses types according to a commonly known prior;\neach player observes their own type;\nplayers choose strategies;\npayoffs depend on actions and types.\n\n\n\n\n\n\nflowchart TD\n    A[Incomplete information problem] --&gt; B[Nature draws types]\n    B --&gt; C[Players observe own types]\n    C --&gt; D[Players choose actions]\n    D --&gt; E[Payoffs realized]\n\n\n\n\n\n\nThis allows incomplete-information games to be analysed using standard game-theoretic tools."
+  },
+  {
+    "objectID": "notes/game-types/bayesian.html#common-prior",
+    "href": "notes/game-types/bayesian.html#common-prior",
+    "title": "Bayesian Games",
+    "section": "Common prior",
+    "text": "Common prior\nA common prior means that players begin from the same probability distribution over types.\nThey may hold different beliefs after observing different private information, but those beliefs come from the same underlying prior.\nThe common prior assumption is powerful but restrictive. It rules out some forms of disagreement."
+  },
+  {
+    "objectID": "notes/game-types/bayesian.html#bayesian-games-and-mixed-strategies",
+    "href": "notes/game-types/bayesian.html#bayesian-games-and-mixed-strategies",
+    "title": "Bayesian Games",
+    "section": "Bayesian games and mixed strategies",
+    "text": "Bayesian games and mixed strategies\nBayesian games and mixed strategies both use probability, but they are different.\n\n\n\nConcept\nProbability describes\n\n\n\n\nMixed strategy\nrandomization over actions\n\n\nBayesian type\nuncertainty about payoff-relevant characteristics\n\n\nBelief\nsubjective probability over states or types\n\n\n\nA player may use a pure strategy in a Bayesian game. The uncertainty comes from not knowing the type.\nA player may also mix within each type."
+  },
+  {
+    "objectID": "notes/game-types/bayesian.html#incomplete-information-versus-imperfect-information",
+    "href": "notes/game-types/bayesian.html#incomplete-information-versus-imperfect-information",
+    "title": "Bayesian Games",
+    "section": "Incomplete information versus imperfect information",
+    "text": "Incomplete information versus imperfect information\nThese terms are related but not identical.\n\n\n\n\n\n\n\nTerm\nMeaning\n\n\n\n\nIncomplete information\nuncertainty about payoffs, types, or characteristics\n\n\nImperfect information\nuncertainty about previous moves or current node\n\n\nBayesian game\nstandard model of incomplete information\n\n\n\nThe Harsanyi transformation turns incomplete information into imperfect information about nature’s move."
+  },
+  {
+    "objectID": "notes/game-types/bayesian.html#bayesian-games-and-communication",
+    "href": "notes/game-types/bayesian.html#bayesian-games-and-communication",
+    "title": "Bayesian Games",
+    "section": "Bayesian games and communication",
+    "text": "Bayesian games and communication\nOnce types are private, communication becomes strategic.\nAn informed player may try to reveal, hide, exaggerate, or manipulate information.\nThis leads to:\n\ncheap talk;\nsignaling;\nscreening;\nmechanism design;\nreputation;\npersuasion;\ndeception.\n\n\n\n\n\n\nflowchart LR\n    A[Private type] --&gt; B[Message or action]\n    B --&gt; C[Belief update]\n    C --&gt; D[Receiver response]\n    D --&gt; E[Sender payoff]"
+  },
+  {
+    "objectID": "notes/game-types/bayesian.html#common-mistakes",
+    "href": "notes/game-types/bayesian.html#common-mistakes",
+    "title": "Bayesian Games",
+    "section": "Common mistakes",
+    "text": "Common mistakes\n\n1. Treating type as action\nA type is private information. An action is chosen by the player.\n\n\n2. Forgetting type-contingent strategies\nA strategy must say what each type would do.\n\n\n3. Ignoring beliefs\nBayesian games require beliefs over types.\n\n\n4. Confusing mixed strategies with incomplete information\nRandomizing over actions is not the same as being uncertain about types.\n\n\n5. Forgetting the common prior\nMany Bayesian games assume a commonly known prior distribution over types.\n\n\n6. Solving only for one type\nBayesian Nash equilibrium requires optimality for every type."
+  },
+  {
+    "objectID": "notes/game-types/bayesian.html#checklist",
+    "href": "notes/game-types/bayesian.html#checklist",
+    "title": "Bayesian Games",
+    "section": "Checklist",
+    "text": "Checklist\nWhen analysing a Bayesian game, ask:\n\nWho are the players?\nWhat are the possible types?\nWho observes which type?\nWhat is the prior belief over types?\nWhat actions are available?\nHow do payoffs depend on types?\nWhat is each type’s strategy?\nWhat expected payoff does each type maximize?\nWhat are the best responses?\nIs the strategy profile a Bayesian Nash equilibrium?"
+  },
+  {
+    "objectID": "notes/game-types/bayesian.html#related-pages",
+    "href": "notes/game-types/bayesian.html#related-pages",
+    "title": "Bayesian Games",
+    "section": "Related pages",
+    "text": "Related pages\n\nGame Types\nGame Theory Notes\nProbability\nBayesian Nash Equilibrium\nPerfect Bayesian Equilibrium\nCheap Talk\nSignaling"
   },
   {
     "objectID": "notes/index.html",

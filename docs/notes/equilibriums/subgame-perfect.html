@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Subgame perfect equilibrium (SPE) – Margins of Rationality</title>
+<title>Subgame Perfect Equilibrium – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -159,17 +163,28 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
-  <li><a href="#where-it-shows-up" id="toc-where-it-shows-up" class="nav-link" data-scroll-target="#where-it-shows-up">Where it shows up</a></li>
-  <li><a href="#how-to-solve-recipe" id="toc-how-to-solve-recipe" class="nav-link" data-scroll-target="#how-to-solve-recipe">How to solve (recipe)</a></li>
-  <li><a href="#solved-example-backward-induction" id="toc-solved-example-backward-induction" class="nav-link" data-scroll-target="#solved-example-backward-induction">Solved example (backward induction)</a>
+  <li><a href="#why-nash-equilibrium-is-not-enough" id="toc-why-nash-equilibrium-is-not-enough" class="nav-link active" data-scroll-target="#why-nash-equilibrium-is-not-enough">Why Nash equilibrium is not enough</a></li>
+  <li><a href="#definition" id="toc-definition" class="nav-link" data-scroll-target="#definition">Definition</a></li>
+  <li><a href="#subgames" id="toc-subgames" class="nav-link" data-scroll-target="#subgames">Subgames</a></li>
+  <li><a href="#basic-logic" id="toc-basic-logic" class="nav-link" data-scroll-target="#basic-logic">Basic logic</a></li>
+  <li><a href="#backward-induction" id="toc-backward-induction" class="nav-link" data-scroll-target="#backward-induction">Backward induction</a></li>
+  <li><a href="#example-entry-deterrence" id="toc-example-entry-deterrence" class="nav-link" data-scroll-target="#example-entry-deterrence">Example: entry deterrence</a></li>
+  <li><a href="#non-credible-threat" id="toc-non-credible-threat" class="nav-link" data-scroll-target="#non-credible-threat">Non-credible threat</a></li>
+  <li><a href="#strategy-profiles-and-paths" id="toc-strategy-profiles-and-paths" class="nav-link" data-scroll-target="#strategy-profiles-and-paths">Strategy profiles and paths</a></li>
+  <li><a href="#sequential-rationality" id="toc-sequential-rationality" class="nav-link" data-scroll-target="#sequential-rationality">Sequential rationality</a></li>
+  <li><a href="#spe-versus-nash-equilibrium" id="toc-spe-versus-nash-equilibrium" class="nav-link" data-scroll-target="#spe-versus-nash-equilibrium">SPE versus Nash equilibrium</a></li>
+  <li><a href="#finite-horizon-repeated-games" id="toc-finite-horizon-repeated-games" class="nav-link" data-scroll-target="#finite-horizon-repeated-games">Finite-horizon repeated games</a></li>
+  <li><a href="#one-deviation-principle" id="toc-one-deviation-principle" class="nav-link" data-scroll-target="#one-deviation-principle">One-deviation principle</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
   <ul class="collapse">
-  <li><a href="#problem-context-question" id="toc-problem-context-question" class="nav-link" data-scroll-target="#problem-context-question">Problem (context + question)</a></li>
-  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
-  <li><a href="#check" id="toc-check" class="nav-link" data-scroll-target="#check">Check</a></li>
-  <li><a href="#takeaway" id="toc-takeaway" class="nav-link" data-scroll-target="#takeaway">Takeaway</a></li>
+  <li><a href="#thinking-spe-is-only-about-the-equilibrium-path" id="toc-thinking-spe-is-only-about-the-equilibrium-path" class="nav-link" data-scroll-target="#thinking-spe-is-only-about-the-equilibrium-path">1. Thinking SPE is only about the equilibrium path</a></li>
+  <li><a href="#treating-threats-as-credible-because-they-are-announced" id="toc-treating-threats-as-credible-because-they-are-announced" class="nav-link" data-scroll-target="#treating-threats-as-credible-because-they-are-announced">2. Treating threats as credible because they are announced</a></li>
+  <li><a href="#confusing-backward-induction-with-spe" id="toc-confusing-backward-induction-with-spe" class="nav-link" data-scroll-target="#confusing-backward-induction-with-spe">3. Confusing backward induction with SPE</a></li>
+  <li><a href="#applying-subgame-perfection-where-there-are-no-proper-subgames" id="toc-applying-subgame-perfection-where-there-are-no-proper-subgames" class="nav-link" data-scroll-target="#applying-subgame-perfection-where-there-are-no-proper-subgames">4. Applying subgame perfection where there are no proper subgames</a></li>
+  <li><a href="#cutting-through-information-sets" id="toc-cutting-through-information-sets" class="nav-link" data-scroll-target="#cutting-through-information-sets">5. Cutting through information sets</a></li>
   </ul></li>
-  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
+  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist">Checklist</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -178,7 +193,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Subgame perfect equilibrium (SPE)</h1>
+<h1 class="title">Subgame Perfect Equilibrium</h1>
 </div>
 
 
@@ -195,65 +210,304 @@ window.Quarto = {
 </header>
 
 
-<section id="what-it-is" class="level2">
-<h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
-<p>A <strong>subgame perfect equilibrium</strong> is a Nash equilibrium of an extensive-form game that induces a Nash equilibrium <strong>in every subgame</strong>.</p>
-<p>Intuition: strategies must be credible not only along the equilibrium path but also after any possible history.</p>
+<p>Subgame perfect equilibrium is a refinement of Nash equilibrium for dynamic games. It rules out equilibria that rely on non-credible threats or promises.</p>
+<p>The central idea is:</p>
+<blockquote class="blockquote">
+<p>behaviour should be optimal after every possible history, not only at the beginning of the game.</p>
+</blockquote>
+<section id="why-nash-equilibrium-is-not-enough" class="level2">
+<h2 class="anchored" data-anchor-id="why-nash-equilibrium-is-not-enough">Why Nash equilibrium is not enough</h2>
+<p>Nash equilibrium checks whether players want to deviate from their complete strategies.</p>
+<p>In dynamic games, this can allow threats that would not actually be carried out if the relevant history occurred.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Nash equilibrium] --&gt; B[Mutual best responses]
+    B --&gt; C[May include non-credible threats]
+    C --&gt; D[Need stronger concept]
+    D --&gt; E[Subgame perfect equilibrium]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Subgame perfection adds credibility.</p>
 </section>
-<section id="where-it-shows-up" class="level2">
-<h2 class="anchored" data-anchor-id="where-it-shows-up">Where it shows up</h2>
-<ul>
-<li>Extensive-form games with perfect information (classic backward induction)</li>
-<li>Dynamic games where credibility of threats/promises matters</li>
-<li>Bargaining models (alternating offers) are solved using SPE</li>
-</ul>
+<section id="definition" class="level2">
+<h2 class="anchored" data-anchor-id="definition">Definition</h2>
+<p>A strategy profile is a <strong>subgame perfect equilibrium</strong> if it induces a Nash equilibrium in every subgame.</p>
+<p>In words:</p>
+<blockquote class="blockquote">
+<p>after every history that begins a subgame, the continuation strategies must form a Nash equilibrium of that subgame.</p>
+</blockquote>
+<p>This means players must behave optimally not only along the equilibrium path, but also after possible deviations.</p>
 </section>
-<section id="how-to-solve-recipe" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-solve-recipe">How to solve (recipe)</h2>
+<section id="subgames" class="level2">
+<h2 class="anchored" data-anchor-id="subgames">Subgames</h2>
+<p>A subgame is a part of an extensive-form game that:</p>
 <ol type="1">
-<li>Identify subgames (in perfect-information games, every decision node typically starts a subgame).</li>
-<li>Solve the last subgames first (optimize at terminal decision nodes).</li>
-<li>Replace each solved subgame by its continuation payoff.</li>
-<li>Continue backward until the start: this is <strong>backward induction</strong>.</li>
-<li>The resulting strategy profile is an SPE (in finite perfect-information games).</li>
+<li>begins at a decision node;</li>
+<li>includes all future nodes and actions from that node;</li>
+<li>does not cut across an information set.</li>
 </ol>
-<hr>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Whole game] --&gt; B[Decision node]
+    B --&gt; C[Subgame from that node]
+    C --&gt; D[All future actions]
+    C --&gt; E[All terminal payoffs]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>A subgame is like a smaller game inside the larger game.</p>
 </section>
-<section id="solved-example-backward-induction" class="level2">
-<h2 class="anchored" data-anchor-id="solved-example-backward-induction">Solved example (backward induction)</h2>
-<section id="problem-context-question" class="level3">
-<h3 class="anchored" data-anchor-id="problem-context-question">Problem (context + question)</h3>
-<p>A landlord (player 1) offers a rent increase: <span class="math inline">\(L\)</span> (low) or <span class="math inline">\(H\)</span> (high). The tenant (player 2) observes and chooses accept <span class="math inline">\(A\)</span> or move <span class="math inline">\(M\)</span>.</p>
-<p>Payoffs: - <span class="math inline">\((L,A)=(2,2)\)</span>, <span class="math inline">\((L,M)=(0,1)\)</span> - <span class="math inline">\((H,A)=(3,0)\)</span>, <span class="math inline">\((H,M)=(0,1)\)</span></p>
-<p><strong>Question:</strong> Find the SPE.</p>
+<section id="basic-logic" class="level2">
+<h2 class="anchored" data-anchor-id="basic-logic">Basic logic</h2>
+<p>Subgame perfect equilibrium asks:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Choose strategy profile] --&gt; B[Look at each subgame]
+    B --&gt; C{Are continuation strategies Nash equilibria?}
+    C --&gt;|Yes| D[Subgame perfect]
+    C --&gt;|No| E[Not subgame perfect]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The key test is whether the strategy profile remains rational inside every subgame.</p>
 </section>
-<section id="solution" class="level3">
-<h3 class="anchored" data-anchor-id="solution">Solution</h3>
-<p><strong>Step 1 (solve tenant’s decision in each subgame):</strong> - After <span class="math inline">\(L\)</span>: tenant compares payoff <span class="math inline">\(2\)</span> (accept) vs <span class="math inline">\(1\)</span> (move) → chooses <strong><span class="math inline">\(A\)</span></strong>. - After <span class="math inline">\(H\)</span>: tenant compares payoff <span class="math inline">\(0\)</span> (accept) vs <span class="math inline">\(1\)</span> (move) → chooses <strong><span class="math inline">\(M\)</span></strong>.</p>
-<p>So tenant strategy is: after <span class="math inline">\(L\)</span> play <span class="math inline">\(A\)</span>, after <span class="math inline">\(H\)</span> play <span class="math inline">\(M\)</span>.</p>
-<p><strong>Step 2 (landlord anticipates tenant’s response):</strong> - If landlord chooses <span class="math inline">\(L\)</span>, outcome is <span class="math inline">\((2,2)\)</span>. - If landlord chooses <span class="math inline">\(H\)</span>, tenant moves, outcome is <span class="math inline">\((0,1)\)</span>.</p>
-<p>Landlord prefers <span class="math inline">\(L\)</span> because <span class="math inline">\(2&gt;0\)</span>.</p>
-<p><strong>Result (SPE):</strong> - Landlord plays <span class="math inline">\(L\)</span>. - Tenant plays <span class="math inline">\(A\)</span> after <span class="math inline">\(L\)</span> and <span class="math inline">\(M\)</span> after <span class="math inline">\(H\)</span>. - Outcome: <span class="math inline">\((L,A)\)</span>.</p>
+<section id="backward-induction" class="level2">
+<h2 class="anchored" data-anchor-id="backward-induction">Backward induction</h2>
+<p>In finite games with perfect information, backward induction finds a subgame perfect equilibrium.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Finite perfect-information game] --&gt; B[Backward induction]
+    B --&gt; C[Optimal action in final subgames]
+    C --&gt; D[Move backward]
+    D --&gt; E[Optimal action in every subgame]
+    E --&gt; F[Subgame perfect equilibrium]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Backward induction is the procedure. Subgame perfect equilibrium is the solution concept.</p>
 </section>
-<section id="check" class="level3">
-<h3 class="anchored" data-anchor-id="check">Check</h3>
+<section id="example-entry-deterrence" class="level2">
+<h2 class="anchored" data-anchor-id="example-entry-deterrence">Example: entry deterrence</h2>
+<p>Consider the following game.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Entrant] --&gt;|Stay Out| B[0,2]
+    A --&gt;|Enter| C[Incumbent]
+    C --&gt;|Fight| D[-1,-1]
+    C --&gt;|Accommodate| E[2,1]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>If the entrant enters, the incumbent chooses between Fight and Accommodate.</p>
+<p>The incumbent prefers Accommodate because:</p>
+<p><span class="math display">\[
+1&gt;-1.
+\]</span></p>
+<p>So Fight is not credible.</p>
+<p>The entrant anticipates Accommodate and chooses Enter because:</p>
+<p><span class="math display">\[
+2&gt;0.
+\]</span></p>
+<p>The subgame perfect outcome is:</p>
+<p><span class="math display">\[
+(\text{Enter},\text{Accommodate}).
+\]</span></p>
+</section>
+<section id="non-credible-threat" class="level2">
+<h2 class="anchored" data-anchor-id="non-credible-threat">Non-credible threat</h2>
+<p>The incumbent may want to threaten:</p>
+<blockquote class="blockquote">
+<p>If you enter, I will fight.</p>
+</blockquote>
+<p>But after entry occurs, fighting gives the incumbent a lower payoff. Therefore the threat is not credible.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Threat to fight] --&gt; B[Entry occurs]
+    B --&gt; C{Is fighting optimal?}
+    C --&gt;|No| D[Threat not credible]
+    D --&gt; E[Ruled out by SPE]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Subgame perfection removes equilibria supported by this kind of threat.</p>
+</section>
+<section id="strategy-profiles-and-paths" class="level2">
+<h2 class="anchored" data-anchor-id="strategy-profiles-and-paths">Strategy profiles and paths</h2>
+<p>In dynamic games, an equilibrium strategy profile specifies:</p>
+<ol type="1">
+<li>what happens on the equilibrium path;</li>
+<li>what would happen after off-path histories.</li>
+</ol>
+<p>The equilibrium path is the sequence of actions that actually occurs if everyone follows the equilibrium strategies.</p>
+<p>Off-path behaviour describes what players would do after deviations.</p>
+<p>Subgame perfection requires off-path behaviour to be optimal in every subgame.</p>
+</section>
+<section id="sequential-rationality" class="level2">
+<h2 class="anchored" data-anchor-id="sequential-rationality">Sequential rationality</h2>
+<p>Subgame perfection is closely related to sequential rationality.</p>
+<p>Sequential rationality means that at every point where a player acts, the prescribed action is optimal given the continuation game.</p>
+<p>In perfect-information games, subgame perfection captures this idea well.</p>
+<p>In imperfect-information games, we often need belief-based refinements such as perfect Bayesian equilibrium or sequential equilibrium.</p>
+</section>
+<section id="spe-versus-nash-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="spe-versus-nash-equilibrium">SPE versus Nash equilibrium</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Requirement</th>
+<th>Problem addressed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nash equilibrium</td>
+<td>no profitable unilateral deviation from complete strategy</td>
+<td>strategic stability</td>
+</tr>
+<tr class="even">
+<td>Subgame perfect equilibrium</td>
+<td>Nash equilibrium in every subgame</td>
+<td>credibility</td>
+</tr>
+<tr class="odd">
+<td>Perfect Bayesian equilibrium</td>
+<td>sequential rationality plus beliefs</td>
+<td>dynamic incomplete information</td>
+</tr>
+</tbody>
+</table>
+<p>Every subgame perfect equilibrium is a Nash equilibrium. But not every Nash equilibrium is subgame perfect.</p>
+</section>
+<section id="finite-horizon-repeated-games" class="level2">
+<h2 class="anchored" data-anchor-id="finite-horizon-repeated-games">Finite-horizon repeated games</h2>
+<p>Subgame perfection explains unraveling in finitely repeated prisoners’ dilemma games.</p>
+<p>If the final period is known, players defect in the final period. Knowing that, they defect in the previous period, and so on.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Final period] --&gt; B[No future punishment]
+    B --&gt; C[Defection]
+    C --&gt; D[Previous period loses future discipline]
+    D --&gt; E[Backward unraveling]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This is a classic application of backward induction.</p>
+</section>
+<section id="one-deviation-principle" class="level2">
+<h2 class="anchored" data-anchor-id="one-deviation-principle">One-deviation principle</h2>
+<p>In many dynamic games, the one-deviation principle can simplify checking subgame perfection.</p>
+<p>The idea is:</p>
+<blockquote class="blockquote">
+<p>a strategy profile is subgame perfect if no player can gain by deviating once and then returning to the strategy.</p>
+</blockquote>
+<p>This works under particular conditions, especially in many finite or discounted dynamic games.</p>
+<p>It is useful because checking every possible deviation can be hard.</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="thinking-spe-is-only-about-the-equilibrium-path" class="level3">
+<h3 class="anchored" data-anchor-id="thinking-spe-is-only-about-the-equilibrium-path">1. Thinking SPE is only about the equilibrium path</h3>
+<p>SPE also requires optimal behaviour after off-path histories.</p>
+</section>
+<section id="treating-threats-as-credible-because-they-are-announced" class="level3">
+<h3 class="anchored" data-anchor-id="treating-threats-as-credible-because-they-are-announced">2. Treating threats as credible because they are announced</h3>
+<p>A threat is credible only if it is optimal to carry out.</p>
+</section>
+<section id="confusing-backward-induction-with-spe" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-backward-induction-with-spe">3. Confusing backward induction with SPE</h3>
+<p>Backward induction is a method; SPE is a solution concept.</p>
+</section>
+<section id="applying-subgame-perfection-where-there-are-no-proper-subgames" class="level3">
+<h3 class="anchored" data-anchor-id="applying-subgame-perfection-where-there-are-no-proper-subgames">4. Applying subgame perfection where there are no proper subgames</h3>
+<p>In some imperfect-information games, subgame perfection may add little beyond Nash equilibrium.</p>
+</section>
+<section id="cutting-through-information-sets" class="level3">
+<h3 class="anchored" data-anchor-id="cutting-through-information-sets">5. Cutting through information sets</h3>
+<p>A subgame cannot begin in the middle of an information set.</p>
+</section>
+</section>
+<section id="checklist" class="level2">
+<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
+<p>When checking subgame perfection, ask:</p>
+<ol type="1">
+<li>What is the extensive-form game?</li>
+<li>What are the proper subgames?</li>
+<li>What strategy profile is proposed?</li>
+<li>Does the profile induce a Nash equilibrium in the whole game?</li>
+<li>Does it induce a Nash equilibrium in every subgame?</li>
+<li>Are threats credible?</li>
+<li>Are promises credible?</li>
+<li>What is the equilibrium path?</li>
+<li>What happens off path?</li>
+<li>Would backward induction give the same result in a finite perfect-information game?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
 <ul>
-<li>Tenant’s actions are optimal in each subgame.</li>
-<li>Given tenant’s strategy, landlord’s choice is optimal at the start. So the strategy profile is Nash in every subgame.</li>
-</ul>
-</section>
-<section id="takeaway" class="level3">
-<h3 class="anchored" data-anchor-id="takeaway">Takeaway</h3>
-<p>SPE rules out non-credible threats by requiring optimal behavior after every history.</p>
-<hr>
-</section>
-</section>
-<section id="later-on-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
-<ul>
-<li>With <strong>imperfect information</strong>, “subgame” may not be well-defined → PBE / sequential equilibrium.</li>
-<li>With <strong>multiple SPE</strong>, equilibrium selection becomes a separate question.</li>
-<li>In <strong>repeated games</strong>, SPE sets are large; punishments must still be credible.</li>
+<li><a href="../../notes/equilibriums/index.html">Equilibrium Concepts</a></li>
+<li><a href="../../notes/equilibriums/nash.html">Nash Equilibrium</a></li>
+<li><a href="../../notes/game-types/extensive-form.html">Extensive-form Games</a></li>
+<li><a href="../../notes/game-types/repeated.html">Repeated Games</a></li>
+<li><a href="../../notes/equilibriums/perfect-bayesian.html">Perfect Bayesian Equilibrium</a></li>
+<li><a href="../../notes/equilibriums/sequential-equilibrium.html">Sequential Equilibrium</a></li>
+<li><a href="../../foundations/dynamic-reasoning.html">Dynamic Reasoning</a></li>
 </ul>
 
 
