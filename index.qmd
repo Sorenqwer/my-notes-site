@@ -131,6 +131,15 @@ What this site is for and how the sections fit together.
 5. [Models](criminology/notes/models/index.qmd)
 6. [Topics](criminology/notes/topics/index.qmd)
 
+### If you want psychology
+
+1. [Psychology](psychology/index.qmd)
+2. [Cognition](psychology/foundations/cognition.qmd)
+3. [Emotion and Motivation](psychology/foundations/emotion-motivation.qmd)
+4. [Mental Health](psychology/topics/mental-health.qmd)
+5. [Therapy Tools](psychology/topics/therapy-tools.qmd)
+6. [Psychology and Game Theory](psychology/overlaps/game-theory.qmd)
+
 ### If you want the mathematical tools
 
 1. [Optimization](foundations/optimization.qmd)
