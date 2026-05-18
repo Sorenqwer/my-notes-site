@@ -1,21 +1,271 @@
 ---
-title: "Equilibria"
+title: "Equilibrium Concepts"
 toc: true
+page-layout: full
 ---
-- [Equilibrium cheat sheet](cheat-sheet.qmd)
 
-## Core (most used)
-- [Nash equilibrium (NE)](nash.qmd)
-- [Subgame perfect equilibrium (SPE)](subgame-perfect.qmd)
-- [Bayesian Nash equilibrium (BNE)](bayesian-nash.qmd)
-- [Perfect Bayesian equilibrium (PBE)](perfect-bayesian.qmd)
-- [Sequential equilibrium](sequential-equilibrium.qmd)
+Equilibrium concepts describe what it means for behaviour to be stable in a strategic setting. Different games require different notions of stability: simultaneous games need mutual best responses; dynamic games need credible continuation behaviour; incomplete-information games need beliefs; and communication games need consistency between messages, beliefs, and incentives.
 
-## Refinements (when credibility matters)
-- [Trembling-hand perfect equilibrium](trembling-hand-perfect.qmd)
-- [Proper equilibrium](proper-equilibrium.qmd)
+The purpose of this page is to give a map of the main equilibrium concepts used across the notes.
 
-## Alternatives / related notions
-- [Correlated equilibrium](correlated-equilibrium.qmd)
-- [Rationalizability](rationalizability.qmd)
-- [Babbling equilibrium (cheap talk)](babbling.qmd)
+## The basic question
+
+Every equilibrium concept answers some version of the same question:
+
+> Given what everyone else is doing, believing, or expecting, does each player have a reason to change their behaviour?
+
+The details depend on the model. In a static game, the issue is whether anyone wants to deviate from their chosen action. In a dynamic game, we also ask whether future threats and promises are credible. In a Bayesian game, we ask whether each type of each player is acting optimally given beliefs.
+
+## A map of equilibrium concepts
+
+```{mermaid}
+flowchart TD
+    A[Equilibrium Concepts] --> B[Nash Equilibrium]
+    A --> C[Bayesian Nash Equilibrium]
+    A --> D[Subgame Perfect Equilibrium]
+    A --> E[Dynamic Incomplete Information]
+    A --> F[Refinements]
+    A --> G[Alternative Notions]
+
+    B --> B1[Mutual best responses]
+
+    C --> C1[Types]
+    C --> C2[Beliefs over types]
+
+    D --> D1[Sequential rationality]
+    D --> D2[Credible threats]
+
+    E --> E1[Perfect Bayesian Equilibrium]
+    E --> E2[Sequential Equilibrium]
+
+    F --> F1[Trembling-hand Perfect]
+    F --> F2[Proper Equilibrium]
+
+    G --> G1[Correlated Equilibrium]
+    G --> G2[Rationalizability]
+    G --> G3[Babbling Equilibrium]
+```
+
+The map is not a strict hierarchy. Some concepts are designed for different kinds of games, while others are refinements that rule out implausible equilibria.
+
+## Core equilibrium concepts
+
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Nash Equilibrium
+
+The basic equilibrium concept for strategic interaction. Each player chooses a best response to the strategies of the others.
+
+[Open →](nash.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Subgame Perfect Equilibrium
+
+A refinement of Nash equilibrium for dynamic games. It requires optimal behaviour after every possible history.
+
+[Open →](subgame-perfect.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Bayesian Nash Equilibrium
+
+The basic equilibrium concept for games with incomplete information. Each type chooses optimally given beliefs about other players' types.
+
+[Open →](bayesian-nash.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Perfect Bayesian Equilibrium
+
+A dynamic incomplete-information concept combining sequential rationality with belief updating.
+
+[Open →](perfect-bayesian.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Sequential Equilibrium
+
+A stronger dynamic incomplete-information concept based on sequential rationality and consistent beliefs.
+
+[Open →](sequential-equilibrium.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Equilibrium Cheat Sheet
+
+A compact comparison of the main concepts and when to use them.
+
+[Open →](cheat-sheet.qmd)
+:::
+:::
+
+:::
+
+## Refinements and related notions
+
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Trembling-hand Perfect Equilibrium
+
+Rules out equilibria that are not robust to small mistakes.
+
+[Open →](trembling-hand-perfect.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Proper Equilibrium
+
+A stronger refinement where more costly mistakes are much less likely than less costly mistakes.
+
+[Open →](proper-equilibrium.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Correlated Equilibrium
+
+Allows players to condition actions on signals from a common recommendation device.
+
+[Open →](correlated-equilibrium.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Rationalizability
+
+Keeps strategies that can survive iterative best-response reasoning, without requiring a full equilibrium.
+
+[Open →](rationalizability.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Babbling Equilibrium
+
+A cheap-talk equilibrium in which messages carry no information and are ignored by the receiver.
+
+[Open →](babbling.qmd)
+:::
+:::
+
+:::
+
+## From basic equilibrium to refinements
+
+A useful way to understand refinements is to ask what problem each concept tries to fix.
+
+```{mermaid}
+flowchart LR
+    A[Nash Equilibrium] --> B[Problem: non-credible threats]
+    B --> C[Subgame Perfect Equilibrium]
+
+    C --> D[Problem: beliefs after unexpected moves]
+    D --> E[Perfect Bayesian Equilibrium]
+
+    E --> F[Problem: belief consistency]
+    F --> G[Sequential Equilibrium]
+
+    A --> H[Problem: fragile equilibria]
+    H --> I[Trembling-hand Perfect Equilibrium]
+    I --> J[Proper Equilibrium]
+```
+
+Nash equilibrium is the starting point. Refinements add extra discipline when the basic idea of mutual best response is not enough.
+
+## Choosing the right concept
+
+```{mermaid}
+flowchart TD
+    A[What kind of game is it?] --> B[Simultaneous and complete information]
+    A --> C[Sequential and complete information]
+    A --> D[Static incomplete information]
+    A --> E[Dynamic incomplete information]
+    A --> F[Cheap talk or communication]
+    A --> G[Recommendation device or mediated play]
+
+    B --> B1[Nash Equilibrium]
+    C --> C1[Subgame Perfect Equilibrium]
+    D --> D1[Bayesian Nash Equilibrium]
+    E --> E1[Perfect Bayesian or Sequential Equilibrium]
+    F --> F1[Informative or Babbling Equilibrium]
+    G --> G1[Correlated Equilibrium]
+```
+
+This decision tree is only a guide. In actual modelling, the right solution concept depends on what the model needs to explain.
+
+## Comparison table
+
+| Concept | Used for | Core requirement | Main issue addressed |
+|---|---|---|---|
+| Nash equilibrium | Static games | Mutual best responses | Strategic stability |
+| Subgame perfect equilibrium | Dynamic complete-information games | Nash equilibrium in every subgame | Credibility |
+| Bayesian Nash equilibrium | Static incomplete-information games | Type-contingent best responses | Private information |
+| Perfect Bayesian equilibrium | Dynamic incomplete-information games | Sequential rationality and beliefs | Off-path inference |
+| Sequential equilibrium | Dynamic incomplete-information games | Sequential rationality and consistent beliefs | Stronger belief discipline |
+| Trembling-hand perfect equilibrium | Strategic-form games | Robustness to small mistakes | Fragile equilibria |
+| Proper equilibrium | Strategic-form games | Costlier mistakes are less likely | Stronger mistake discipline |
+| Correlated equilibrium | Games with recommendations | Obedience to signals | Coordination through information |
+| Rationalizability | Strategic reasoning | Survival under best-response reasoning | Reasoning without full equilibrium |
+| Babbling equilibrium | Cheap-talk games | Messages ignored by receiver | No information transmission |
+
+## Why equilibrium is not enough
+
+An equilibrium can be stable but undesirable. It can also be mathematically valid but behaviourally implausible. This is why equilibrium analysis usually needs interpretation.
+
+When reading an equilibrium result, ask:
+
+1. What incentives make this behaviour stable?
+2. What beliefs support the behaviour?
+3. Are threats and promises credible?
+4. Is the equilibrium efficient or inefficient?
+5. Are there multiple equilibria?
+6. Would the result survive small changes in assumptions?
+
+These questions matter because equilibrium is a tool for explanation, not a guarantee of realism.
+
+## Suggested reading order
+
+If you are reading this section for the first time, a good order is:
+
+1. [Nash equilibrium](nash.qmd)
+2. [Subgame perfect equilibrium](subgame-perfect.qmd)
+3. [Bayesian Nash equilibrium](bayesian-nash.qmd)
+4. [Perfect Bayesian equilibrium](perfect-bayesian.qmd)
+5. [Sequential equilibrium](sequential-equilibrium.qmd)
+6. [Trembling-hand perfect equilibrium](trembling-hand-perfect.qmd)
+7. [Proper equilibrium](proper-equilibrium.qmd)
+8. [Correlated equilibrium](correlated-equilibrium.qmd)
+9. [Rationalizability](rationalizability.qmd)
+10. [Babbling equilibrium](babbling.qmd)
+
+## Related pages
+
+- [Game Theory Notes](../game-theory.qmd)
+- [Game types](../game-types/index.qmd)
+- [Normal-form games](../game-types/normal-form.qmd)
+- [Extensive-form games](../game-types/extensive-form.qmd)
+- [Bayesian games](../game-types/bayesian.qmd)
+- [Cheap talk](../game-types/cheap-talk.qmd)
+- [Signaling](../game-types/signaling.qmd)
+- [Dynamic reasoning](../../foundations/dynamic-reasoning.qmd)
+- [Probability](../../foundations/probability.qmd)

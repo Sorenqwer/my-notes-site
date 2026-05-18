@@ -1283,30 +1283,79 @@
   {
     "objectID": "notes/equilibriums/index.html",
     "href": "notes/equilibriums/index.html",
-    "title": "Equilibria",
+    "title": "Equilibrium Concepts",
     "section": "",
-    "text": "Equilibrium cheat sheet"
+    "text": "Equilibrium concepts describe what it means for behaviour to be stable in a strategic setting. Different games require different notions of stability: simultaneous games need mutual best responses; dynamic games need credible continuation behaviour; incomplete-information games need beliefs; and communication games need consistency between messages, beliefs, and incentives.\nThe purpose of this page is to give a map of the main equilibrium concepts used across the notes."
   },
   {
-    "objectID": "notes/equilibriums/index.html#core-most-used",
-    "href": "notes/equilibriums/index.html#core-most-used",
-    "title": "Equilibria",
-    "section": "Core (most used)",
-    "text": "Core (most used)\n\nNash equilibrium (NE)\nSubgame perfect equilibrium (SPE)\nBayesian Nash equilibrium (BNE)\nPerfect Bayesian equilibrium (PBE)\nSequential equilibrium"
+    "objectID": "notes/equilibriums/index.html#the-basic-question",
+    "href": "notes/equilibriums/index.html#the-basic-question",
+    "title": "Equilibrium Concepts",
+    "section": "The basic question",
+    "text": "The basic question\nEvery equilibrium concept answers some version of the same question:\n\nGiven what everyone else is doing, believing, or expecting, does each player have a reason to change their behaviour?\n\nThe details depend on the model. In a static game, the issue is whether anyone wants to deviate from their chosen action. In a dynamic game, we also ask whether future threats and promises are credible. In a Bayesian game, we ask whether each type of each player is acting optimally given beliefs."
   },
   {
-    "objectID": "notes/equilibriums/index.html#refinements-when-credibility-matters",
-    "href": "notes/equilibriums/index.html#refinements-when-credibility-matters",
-    "title": "Equilibria",
-    "section": "Refinements (when credibility matters)",
-    "text": "Refinements (when credibility matters)\n\nTrembling-hand perfect equilibrium\nProper equilibrium"
+    "objectID": "notes/equilibriums/index.html#a-map-of-equilibrium-concepts",
+    "href": "notes/equilibriums/index.html#a-map-of-equilibrium-concepts",
+    "title": "Equilibrium Concepts",
+    "section": "A map of equilibrium concepts",
+    "text": "A map of equilibrium concepts\n\n\n\n\n\nflowchart TD\n    A[Equilibrium Concepts] --&gt; B[Nash Equilibrium]\n    A --&gt; C[Bayesian Nash Equilibrium]\n    A --&gt; D[Subgame Perfect Equilibrium]\n    A --&gt; E[Dynamic Incomplete Information]\n    A --&gt; F[Refinements]\n    A --&gt; G[Alternative Notions]\n\n    B --&gt; B1[Mutual best responses]\n\n    C --&gt; C1[Types]\n    C --&gt; C2[Beliefs over types]\n\n    D --&gt; D1[Sequential rationality]\n    D --&gt; D2[Credible threats]\n\n    E --&gt; E1[Perfect Bayesian Equilibrium]\n    E --&gt; E2[Sequential Equilibrium]\n\n    F --&gt; F1[Trembling-hand Perfect]\n    F --&gt; F2[Proper Equilibrium]\n\n    G --&gt; G1[Correlated Equilibrium]\n    G --&gt; G2[Rationalizability]\n    G --&gt; G3[Babbling Equilibrium]\n\n\n\n\n\n\nThe map is not a strict hierarchy. Some concepts are designed for different kinds of games, while others are refinements that rule out implausible equilibria."
   },
   {
-    "objectID": "notes/equilibriums/index.html#alternatives-related-notions",
-    "href": "notes/equilibriums/index.html#alternatives-related-notions",
-    "title": "Equilibria",
-    "section": "Alternatives / related notions",
-    "text": "Alternatives / related notions\n\nCorrelated equilibrium\nRationalizability\nBabbling equilibrium (cheap talk)"
+    "objectID": "notes/equilibriums/index.html#core-equilibrium-concepts",
+    "href": "notes/equilibriums/index.html#core-equilibrium-concepts",
+    "title": "Equilibrium Concepts",
+    "section": "Core equilibrium concepts",
+    "text": "Core equilibrium concepts\n\n\n\nNash Equilibrium\nThe basic equilibrium concept for strategic interaction. Each player chooses a best response to the strategies of the others.\nOpen →\n\n\n\n\nSubgame Perfect Equilibrium\nA refinement of Nash equilibrium for dynamic games. It requires optimal behaviour after every possible history.\nOpen →\n\n\n\n\nBayesian Nash Equilibrium\nThe basic equilibrium concept for games with incomplete information. Each type chooses optimally given beliefs about other players’ types.\nOpen →\n\n\n\n\nPerfect Bayesian Equilibrium\nA dynamic incomplete-information concept combining sequential rationality with belief updating.\nOpen →\n\n\n\n\nSequential Equilibrium\nA stronger dynamic incomplete-information concept based on sequential rationality and consistent beliefs.\nOpen →\n\n\n\n\nEquilibrium Cheat Sheet\nA compact comparison of the main concepts and when to use them.\nOpen →"
+  },
+  {
+    "objectID": "notes/equilibriums/index.html#refinements-and-related-notions",
+    "href": "notes/equilibriums/index.html#refinements-and-related-notions",
+    "title": "Equilibrium Concepts",
+    "section": "Refinements and related notions",
+    "text": "Refinements and related notions\n\n\n\nTrembling-hand Perfect Equilibrium\nRules out equilibria that are not robust to small mistakes.\nOpen →\n\n\n\n\nProper Equilibrium\nA stronger refinement where more costly mistakes are much less likely than less costly mistakes.\nOpen →\n\n\n\n\nCorrelated Equilibrium\nAllows players to condition actions on signals from a common recommendation device.\nOpen →\n\n\n\n\nRationalizability\nKeeps strategies that can survive iterative best-response reasoning, without requiring a full equilibrium.\nOpen →\n\n\n\n\nBabbling Equilibrium\nA cheap-talk equilibrium in which messages carry no information and are ignored by the receiver.\nOpen →"
+  },
+  {
+    "objectID": "notes/equilibriums/index.html#from-basic-equilibrium-to-refinements",
+    "href": "notes/equilibriums/index.html#from-basic-equilibrium-to-refinements",
+    "title": "Equilibrium Concepts",
+    "section": "From basic equilibrium to refinements",
+    "text": "From basic equilibrium to refinements\nA useful way to understand refinements is to ask what problem each concept tries to fix.\n\n\n\n\n\nflowchart LR\n    A[Nash Equilibrium] --&gt; B[Problem: non-credible threats]\n    B --&gt; C[Subgame Perfect Equilibrium]\n\n    C --&gt; D[Problem: beliefs after unexpected moves]\n    D --&gt; E[Perfect Bayesian Equilibrium]\n\n    E --&gt; F[Problem: belief consistency]\n    F --&gt; G[Sequential Equilibrium]\n\n    A --&gt; H[Problem: fragile equilibria]\n    H --&gt; I[Trembling-hand Perfect Equilibrium]\n    I --&gt; J[Proper Equilibrium]\n\n\n\n\n\n\nNash equilibrium is the starting point. Refinements add extra discipline when the basic idea of mutual best response is not enough."
+  },
+  {
+    "objectID": "notes/equilibriums/index.html#choosing-the-right-concept",
+    "href": "notes/equilibriums/index.html#choosing-the-right-concept",
+    "title": "Equilibrium Concepts",
+    "section": "Choosing the right concept",
+    "text": "Choosing the right concept\n\n\n\n\n\nflowchart TD\n    A[What kind of game is it?] --&gt; B[Simultaneous and complete information]\n    A --&gt; C[Sequential and complete information]\n    A --&gt; D[Static incomplete information]\n    A --&gt; E[Dynamic incomplete information]\n    A --&gt; F[Cheap talk or communication]\n    A --&gt; G[Recommendation device or mediated play]\n\n    B --&gt; B1[Nash Equilibrium]\n    C --&gt; C1[Subgame Perfect Equilibrium]\n    D --&gt; D1[Bayesian Nash Equilibrium]\n    E --&gt; E1[Perfect Bayesian or Sequential Equilibrium]\n    F --&gt; F1[Informative or Babbling Equilibrium]\n    G --&gt; G1[Correlated Equilibrium]\n\n\n\n\n\n\nThis decision tree is only a guide. In actual modelling, the right solution concept depends on what the model needs to explain."
+  },
+  {
+    "objectID": "notes/equilibriums/index.html#comparison-table",
+    "href": "notes/equilibriums/index.html#comparison-table",
+    "title": "Equilibrium Concepts",
+    "section": "Comparison table",
+    "text": "Comparison table\n\n\n\n\n\n\n\n\n\nConcept\nUsed for\nCore requirement\nMain issue addressed\n\n\n\n\nNash equilibrium\nStatic games\nMutual best responses\nStrategic stability\n\n\nSubgame perfect equilibrium\nDynamic complete-information games\nNash equilibrium in every subgame\nCredibility\n\n\nBayesian Nash equilibrium\nStatic incomplete-information games\nType-contingent best responses\nPrivate information\n\n\nPerfect Bayesian equilibrium\nDynamic incomplete-information games\nSequential rationality and beliefs\nOff-path inference\n\n\nSequential equilibrium\nDynamic incomplete-information games\nSequential rationality and consistent beliefs\nStronger belief discipline\n\n\nTrembling-hand perfect equilibrium\nStrategic-form games\nRobustness to small mistakes\nFragile equilibria\n\n\nProper equilibrium\nStrategic-form games\nCostlier mistakes are less likely\nStronger mistake discipline\n\n\nCorrelated equilibrium\nGames with recommendations\nObedience to signals\nCoordination through information\n\n\nRationalizability\nStrategic reasoning\nSurvival under best-response reasoning\nReasoning without full equilibrium\n\n\nBabbling equilibrium\nCheap-talk games\nMessages ignored by receiver\nNo information transmission"
+  },
+  {
+    "objectID": "notes/equilibriums/index.html#why-equilibrium-is-not-enough",
+    "href": "notes/equilibriums/index.html#why-equilibrium-is-not-enough",
+    "title": "Equilibrium Concepts",
+    "section": "Why equilibrium is not enough",
+    "text": "Why equilibrium is not enough\nAn equilibrium can be stable but undesirable. It can also be mathematically valid but behaviourally implausible. This is why equilibrium analysis usually needs interpretation.\nWhen reading an equilibrium result, ask:\n\nWhat incentives make this behaviour stable?\nWhat beliefs support the behaviour?\nAre threats and promises credible?\nIs the equilibrium efficient or inefficient?\nAre there multiple equilibria?\nWould the result survive small changes in assumptions?\n\nThese questions matter because equilibrium is a tool for explanation, not a guarantee of realism."
+  },
+  {
+    "objectID": "notes/equilibriums/index.html#suggested-reading-order",
+    "href": "notes/equilibriums/index.html#suggested-reading-order",
+    "title": "Equilibrium Concepts",
+    "section": "Suggested reading order",
+    "text": "Suggested reading order\nIf you are reading this section for the first time, a good order is:\n\nNash equilibrium\nSubgame perfect equilibrium\nBayesian Nash equilibrium\nPerfect Bayesian equilibrium\nSequential equilibrium\nTrembling-hand perfect equilibrium\nProper equilibrium\nCorrelated equilibrium\nRationalizability\nBabbling equilibrium"
+  },
+  {
+    "objectID": "notes/equilibriums/index.html#related-pages",
+    "href": "notes/equilibriums/index.html#related-pages",
+    "title": "Equilibrium Concepts",
+    "section": "Related pages",
+    "text": "Related pages\n\nGame Theory Notes\nGame types\nNormal-form games\nExtensive-form games\nBayesian games\nCheap talk\nSignaling\nDynamic reasoning\nProbability"
   },
   {
     "objectID": "notes/equilibriums/rationalizability.html",

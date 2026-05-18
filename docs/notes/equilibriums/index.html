@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Equilibria – Margins of Rationality</title>
+<title>Equilibrium Concepts – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -130,9 +134,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#core-most-used" id="toc-core-most-used" class="nav-link active" data-scroll-target="#core-most-used">Core (most used)</a></li>
-  <li><a href="#refinements-when-credibility-matters" id="toc-refinements-when-credibility-matters" class="nav-link" data-scroll-target="#refinements-when-credibility-matters">Refinements (when credibility matters)</a></li>
-  <li><a href="#alternatives-related-notions" id="toc-alternatives-related-notions" class="nav-link" data-scroll-target="#alternatives-related-notions">Alternatives / related notions</a></li>
+  <li><a href="#the-basic-question" id="toc-the-basic-question" class="nav-link active" data-scroll-target="#the-basic-question">The basic question</a></li>
+  <li><a href="#a-map-of-equilibrium-concepts" id="toc-a-map-of-equilibrium-concepts" class="nav-link" data-scroll-target="#a-map-of-equilibrium-concepts">A map of equilibrium concepts</a></li>
+  <li><a href="#core-equilibrium-concepts" id="toc-core-equilibrium-concepts" class="nav-link" data-scroll-target="#core-equilibrium-concepts">Core equilibrium concepts</a></li>
+  <li><a href="#refinements-and-related-notions" id="toc-refinements-and-related-notions" class="nav-link" data-scroll-target="#refinements-and-related-notions">Refinements and related notions</a></li>
+  <li><a href="#from-basic-equilibrium-to-refinements" id="toc-from-basic-equilibrium-to-refinements" class="nav-link" data-scroll-target="#from-basic-equilibrium-to-refinements">From basic equilibrium to refinements</a></li>
+  <li><a href="#choosing-the-right-concept" id="toc-choosing-the-right-concept" class="nav-link" data-scroll-target="#choosing-the-right-concept">Choosing the right concept</a></li>
+  <li><a href="#comparison-table" id="toc-comparison-table" class="nav-link" data-scroll-target="#comparison-table">Comparison table</a></li>
+  <li><a href="#why-equilibrium-is-not-enough" id="toc-why-equilibrium-is-not-enough" class="nav-link" data-scroll-target="#why-equilibrium-is-not-enough">Why equilibrium is not enough</a></li>
+  <li><a href="#suggested-reading-order" id="toc-suggested-reading-order" class="nav-link" data-scroll-target="#suggested-reading-order">Suggested reading order</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -141,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Equilibria</h1>
+<h1 class="title">Equilibrium Concepts</h1>
 </div>
 
 
@@ -158,32 +169,324 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<ul>
-<li><a href="../../notes/equilibriums/cheat-sheet.html">Equilibrium cheat sheet</a></li>
-</ul>
-<section id="core-most-used" class="level2">
-<h2 class="anchored" data-anchor-id="core-most-used">Core (most used)</h2>
-<ul>
-<li><a href="../../notes/equilibriums/nash.html">Nash equilibrium (NE)</a></li>
-<li><a href="../../notes/equilibriums/subgame-perfect.html">Subgame perfect equilibrium (SPE)</a></li>
-<li><a href="../../notes/equilibriums/bayesian-nash.html">Bayesian Nash equilibrium (BNE)</a></li>
-<li><a href="../../notes/equilibriums/perfect-bayesian.html">Perfect Bayesian equilibrium (PBE)</a></li>
-<li><a href="../../notes/equilibriums/sequential-equilibrium.html">Sequential equilibrium</a></li>
-</ul>
+<p>Equilibrium concepts describe what it means for behaviour to be stable in a strategic setting. Different games require different notions of stability: simultaneous games need mutual best responses; dynamic games need credible continuation behaviour; incomplete-information games need beliefs; and communication games need consistency between messages, beliefs, and incentives.</p>
+<p>The purpose of this page is to give a map of the main equilibrium concepts used across the notes.</p>
+<section id="the-basic-question" class="level2">
+<h2 class="anchored" data-anchor-id="the-basic-question">The basic question</h2>
+<p>Every equilibrium concept answers some version of the same question:</p>
+<blockquote class="blockquote">
+<p>Given what everyone else is doing, believing, or expecting, does each player have a reason to change their behaviour?</p>
+</blockquote>
+<p>The details depend on the model. In a static game, the issue is whether anyone wants to deviate from their chosen action. In a dynamic game, we also ask whether future threats and promises are credible. In a Bayesian game, we ask whether each type of each player is acting optimally given beliefs.</p>
 </section>
-<section id="refinements-when-credibility-matters" class="level2">
-<h2 class="anchored" data-anchor-id="refinements-when-credibility-matters">Refinements (when credibility matters)</h2>
-<ul>
+<section id="a-map-of-equilibrium-concepts" class="level2">
+<h2 class="anchored" data-anchor-id="a-map-of-equilibrium-concepts">A map of equilibrium concepts</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Equilibrium Concepts] --&gt; B[Nash Equilibrium]
+    A --&gt; C[Bayesian Nash Equilibrium]
+    A --&gt; D[Subgame Perfect Equilibrium]
+    A --&gt; E[Dynamic Incomplete Information]
+    A --&gt; F[Refinements]
+    A --&gt; G[Alternative Notions]
+
+    B --&gt; B1[Mutual best responses]
+
+    C --&gt; C1[Types]
+    C --&gt; C2[Beliefs over types]
+
+    D --&gt; D1[Sequential rationality]
+    D --&gt; D2[Credible threats]
+
+    E --&gt; E1[Perfect Bayesian Equilibrium]
+    E --&gt; E2[Sequential Equilibrium]
+
+    F --&gt; F1[Trembling-hand Perfect]
+    F --&gt; F2[Proper Equilibrium]
+
+    G --&gt; G1[Correlated Equilibrium]
+    G --&gt; G2[Rationalizability]
+    G --&gt; G3[Babbling Equilibrium]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The map is not a strict hierarchy. Some concepts are designed for different kinds of games, while others are refinements that rule out implausible equilibria.</p>
+</section>
+<section id="core-equilibrium-concepts" class="level2">
+<h2 class="anchored" data-anchor-id="core-equilibrium-concepts">Core equilibrium concepts</h2>
+<div class="grid gap-3">
+<div class="g-col-12 g-col-md-6">
+<section id="nash-equilibrium" class="level3 card">
+<h3 class="anchored" data-anchor-id="nash-equilibrium">Nash Equilibrium</h3>
+<p>The basic equilibrium concept for strategic interaction. Each player chooses a best response to the strategies of the others.</p>
+<p><a href="../../notes/equilibriums/nash.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="subgame-perfect-equilibrium" class="level3 card">
+<h3 class="anchored" data-anchor-id="subgame-perfect-equilibrium">Subgame Perfect Equilibrium</h3>
+<p>A refinement of Nash equilibrium for dynamic games. It requires optimal behaviour after every possible history.</p>
+<p><a href="../../notes/equilibriums/subgame-perfect.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="bayesian-nash-equilibrium" class="level3 card">
+<h3 class="anchored" data-anchor-id="bayesian-nash-equilibrium">Bayesian Nash Equilibrium</h3>
+<p>The basic equilibrium concept for games with incomplete information. Each type chooses optimally given beliefs about other players’ types.</p>
+<p><a href="../../notes/equilibriums/bayesian-nash.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="perfect-bayesian-equilibrium" class="level3 card">
+<h3 class="anchored" data-anchor-id="perfect-bayesian-equilibrium">Perfect Bayesian Equilibrium</h3>
+<p>A dynamic incomplete-information concept combining sequential rationality with belief updating.</p>
+<p><a href="../../notes/equilibriums/perfect-bayesian.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="sequential-equilibrium" class="level3 card">
+<h3 class="anchored" data-anchor-id="sequential-equilibrium">Sequential Equilibrium</h3>
+<p>A stronger dynamic incomplete-information concept based on sequential rationality and consistent beliefs.</p>
+<p><a href="../../notes/equilibriums/sequential-equilibrium.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="equilibrium-cheat-sheet" class="level3 card">
+<h3 class="anchored" data-anchor-id="equilibrium-cheat-sheet">Equilibrium Cheat Sheet</h3>
+<p>A compact comparison of the main concepts and when to use them.</p>
+<p><a href="../../notes/equilibriums/cheat-sheet.html">Open →</a></p>
+</section>
+</div>
+</div>
+</section>
+<section id="refinements-and-related-notions" class="level2">
+<h2 class="anchored" data-anchor-id="refinements-and-related-notions">Refinements and related notions</h2>
+<div class="grid gap-3">
+<div class="g-col-12 g-col-md-4">
+<section id="trembling-hand-perfect-equilibrium" class="level3 card">
+<h3 class="anchored" data-anchor-id="trembling-hand-perfect-equilibrium">Trembling-hand Perfect Equilibrium</h3>
+<p>Rules out equilibria that are not robust to small mistakes.</p>
+<p><a href="../../notes/equilibriums/trembling-hand-perfect.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-4">
+<section id="proper-equilibrium" class="level3 card">
+<h3 class="anchored" data-anchor-id="proper-equilibrium">Proper Equilibrium</h3>
+<p>A stronger refinement where more costly mistakes are much less likely than less costly mistakes.</p>
+<p><a href="../../notes/equilibriums/proper-equilibrium.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-4">
+<section id="correlated-equilibrium" class="level3 card">
+<h3 class="anchored" data-anchor-id="correlated-equilibrium">Correlated Equilibrium</h3>
+<p>Allows players to condition actions on signals from a common recommendation device.</p>
+<p><a href="../../notes/equilibriums/correlated-equilibrium.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-4">
+<section id="rationalizability" class="level3 card">
+<h3 class="anchored" data-anchor-id="rationalizability">Rationalizability</h3>
+<p>Keeps strategies that can survive iterative best-response reasoning, without requiring a full equilibrium.</p>
+<p><a href="../../notes/equilibriums/rationalizability.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-4">
+<section id="babbling-equilibrium" class="level3 card">
+<h3 class="anchored" data-anchor-id="babbling-equilibrium">Babbling Equilibrium</h3>
+<p>A cheap-talk equilibrium in which messages carry no information and are ignored by the receiver.</p>
+<p><a href="../../notes/equilibriums/babbling.html">Open →</a></p>
+</section>
+</div>
+</div>
+</section>
+<section id="from-basic-equilibrium-to-refinements" class="level2">
+<h2 class="anchored" data-anchor-id="from-basic-equilibrium-to-refinements">From basic equilibrium to refinements</h2>
+<p>A useful way to understand refinements is to ask what problem each concept tries to fix.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Nash Equilibrium] --&gt; B[Problem: non-credible threats]
+    B --&gt; C[Subgame Perfect Equilibrium]
+
+    C --&gt; D[Problem: beliefs after unexpected moves]
+    D --&gt; E[Perfect Bayesian Equilibrium]
+
+    E --&gt; F[Problem: belief consistency]
+    F --&gt; G[Sequential Equilibrium]
+
+    A --&gt; H[Problem: fragile equilibria]
+    H --&gt; I[Trembling-hand Perfect Equilibrium]
+    I --&gt; J[Proper Equilibrium]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Nash equilibrium is the starting point. Refinements add extra discipline when the basic idea of mutual best response is not enough.</p>
+</section>
+<section id="choosing-the-right-concept" class="level2">
+<h2 class="anchored" data-anchor-id="choosing-the-right-concept">Choosing the right concept</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[What kind of game is it?] --&gt; B[Simultaneous and complete information]
+    A --&gt; C[Sequential and complete information]
+    A --&gt; D[Static incomplete information]
+    A --&gt; E[Dynamic incomplete information]
+    A --&gt; F[Cheap talk or communication]
+    A --&gt; G[Recommendation device or mediated play]
+
+    B --&gt; B1[Nash Equilibrium]
+    C --&gt; C1[Subgame Perfect Equilibrium]
+    D --&gt; D1[Bayesian Nash Equilibrium]
+    E --&gt; E1[Perfect Bayesian or Sequential Equilibrium]
+    F --&gt; F1[Informative or Babbling Equilibrium]
+    G --&gt; G1[Correlated Equilibrium]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This decision tree is only a guide. In actual modelling, the right solution concept depends on what the model needs to explain.</p>
+</section>
+<section id="comparison-table" class="level2">
+<h2 class="anchored" data-anchor-id="comparison-table">Comparison table</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Used for</th>
+<th>Core requirement</th>
+<th>Main issue addressed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nash equilibrium</td>
+<td>Static games</td>
+<td>Mutual best responses</td>
+<td>Strategic stability</td>
+</tr>
+<tr class="even">
+<td>Subgame perfect equilibrium</td>
+<td>Dynamic complete-information games</td>
+<td>Nash equilibrium in every subgame</td>
+<td>Credibility</td>
+</tr>
+<tr class="odd">
+<td>Bayesian Nash equilibrium</td>
+<td>Static incomplete-information games</td>
+<td>Type-contingent best responses</td>
+<td>Private information</td>
+</tr>
+<tr class="even">
+<td>Perfect Bayesian equilibrium</td>
+<td>Dynamic incomplete-information games</td>
+<td>Sequential rationality and beliefs</td>
+<td>Off-path inference</td>
+</tr>
+<tr class="odd">
+<td>Sequential equilibrium</td>
+<td>Dynamic incomplete-information games</td>
+<td>Sequential rationality and consistent beliefs</td>
+<td>Stronger belief discipline</td>
+</tr>
+<tr class="even">
+<td>Trembling-hand perfect equilibrium</td>
+<td>Strategic-form games</td>
+<td>Robustness to small mistakes</td>
+<td>Fragile equilibria</td>
+</tr>
+<tr class="odd">
+<td>Proper equilibrium</td>
+<td>Strategic-form games</td>
+<td>Costlier mistakes are less likely</td>
+<td>Stronger mistake discipline</td>
+</tr>
+<tr class="even">
+<td>Correlated equilibrium</td>
+<td>Games with recommendations</td>
+<td>Obedience to signals</td>
+<td>Coordination through information</td>
+</tr>
+<tr class="odd">
+<td>Rationalizability</td>
+<td>Strategic reasoning</td>
+<td>Survival under best-response reasoning</td>
+<td>Reasoning without full equilibrium</td>
+</tr>
+<tr class="even">
+<td>Babbling equilibrium</td>
+<td>Cheap-talk games</td>
+<td>Messages ignored by receiver</td>
+<td>No information transmission</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="why-equilibrium-is-not-enough" class="level2">
+<h2 class="anchored" data-anchor-id="why-equilibrium-is-not-enough">Why equilibrium is not enough</h2>
+<p>An equilibrium can be stable but undesirable. It can also be mathematically valid but behaviourally implausible. This is why equilibrium analysis usually needs interpretation.</p>
+<p>When reading an equilibrium result, ask:</p>
+<ol type="1">
+<li>What incentives make this behaviour stable?</li>
+<li>What beliefs support the behaviour?</li>
+<li>Are threats and promises credible?</li>
+<li>Is the equilibrium efficient or inefficient?</li>
+<li>Are there multiple equilibria?</li>
+<li>Would the result survive small changes in assumptions?</li>
+</ol>
+<p>These questions matter because equilibrium is a tool for explanation, not a guarantee of realism.</p>
+</section>
+<section id="suggested-reading-order" class="level2">
+<h2 class="anchored" data-anchor-id="suggested-reading-order">Suggested reading order</h2>
+<p>If you are reading this section for the first time, a good order is:</p>
+<ol type="1">
+<li><a href="../../notes/equilibriums/nash.html">Nash equilibrium</a></li>
+<li><a href="../../notes/equilibriums/subgame-perfect.html">Subgame perfect equilibrium</a></li>
+<li><a href="../../notes/equilibriums/bayesian-nash.html">Bayesian Nash equilibrium</a></li>
+<li><a href="../../notes/equilibriums/perfect-bayesian.html">Perfect Bayesian equilibrium</a></li>
+<li><a href="../../notes/equilibriums/sequential-equilibrium.html">Sequential equilibrium</a></li>
 <li><a href="../../notes/equilibriums/trembling-hand-perfect.html">Trembling-hand perfect equilibrium</a></li>
 <li><a href="../../notes/equilibriums/proper-equilibrium.html">Proper equilibrium</a></li>
-</ul>
-</section>
-<section id="alternatives-related-notions" class="level2">
-<h2 class="anchored" data-anchor-id="alternatives-related-notions">Alternatives / related notions</h2>
-<ul>
 <li><a href="../../notes/equilibriums/correlated-equilibrium.html">Correlated equilibrium</a></li>
 <li><a href="../../notes/equilibriums/rationalizability.html">Rationalizability</a></li>
-<li><a href="../../notes/equilibriums/babbling.html">Babbling equilibrium (cheap talk)</a></li>
+<li><a href="../../notes/equilibriums/babbling.html">Babbling equilibrium</a></li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../../notes/game-theory.html">Game Theory Notes</a></li>
+<li><a href="../../notes/game-types/index.html">Game types</a></li>
+<li><a href="../../notes/game-types/normal-form.html">Normal-form games</a></li>
+<li><a href="../../notes/game-types/extensive-form.html">Extensive-form games</a></li>
+<li><a href="../../notes/game-types/bayesian.html">Bayesian games</a></li>
+<li><a href="../../notes/game-types/cheap-talk.html">Cheap talk</a></li>
+<li><a href="../../notes/game-types/signaling.html">Signaling</a></li>
+<li><a href="../../foundations/dynamic-reasoning.html">Dynamic reasoning</a></li>
+<li><a href="../../foundations/probability.html">Probability</a></li>
 </ul>
 
 
