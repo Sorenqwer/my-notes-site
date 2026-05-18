@@ -348,3 +348,32 @@ main.content .grid .card a {
 main.content .grid .card a:hover {
   text-decoration-thickness: 2px;
 }
+/* ---------- Mermaid graph font ---------- */
+
+main.content .mermaid,
+main.content .mermaid svg,
+main.content .mermaid text,
+main.content .mermaid .nodeLabel,
+main.content .mermaid .edgeLabel,
+main.content .mermaid .label,
+main.content .mermaid span {
+  font-family: var(--font-body), ui-serif, Georgia, "Times New Roman", serif !important;
+}
+
+main.content .mermaid text,
+main.content .mermaid .nodeLabel,
+main.content .mermaid .edgeLabel,
+main.content .mermaid .label {
+  font-size: 15px !important;
+  letter-spacing: 0.01em;
+}
+
+/* ---------- Mermaid graph font inside enlarged view ---------- */
+
+.mor-diagram-zoom-stage .mor-zoomed-svg text,
+.mor-diagram-zoom-stage .mor-zoomed-svg .nodeLabel,
+.mor-diagram-zoom-stage .mor-zoomed-svg .edgeLabel,
+.mor-diagram-zoom-stage .mor-zoomed-svg .label {
+  font-family: var(--font-body), ui-serif, Georgia, "Times New Roman", serif !important;
+  font-size: 18px !important;
+}
