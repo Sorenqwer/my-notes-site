@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Models – Margins of Rationality</title>
+<title>Criminology Models – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,7 +68,40 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
@@ -125,20 +158,46 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#why-use-models" id="toc-why-use-models" class="nav-link active" data-scroll-target="#why-use-models">Why use models?</a></li>
+  <li><a href="#map-of-criminology-models" id="toc-map-of-criminology-models" class="nav-link" data-scroll-target="#map-of-criminology-models">Map of criminology models</a></li>
+  <li><a href="#model-pages" id="toc-model-pages" class="nav-link" data-scroll-target="#model-pages">Model pages</a></li>
+  <li><a href="#from-mechanism-to-model" id="toc-from-mechanism-to-model" class="nav-link" data-scroll-target="#from-mechanism-to-model">From mechanism to model</a></li>
+  <li><a href="#matching-models-to-questions" id="toc-matching-models-to-questions" class="nav-link" data-scroll-target="#matching-models-to-questions">Matching models to questions</a></li>
+  <li><a href="#actors-and-choices" id="toc-actors-and-choices" class="nav-link" data-scroll-target="#actors-and-choices">Actors and choices</a></li>
+  <li><a href="#information" id="toc-information" class="nav-link" data-scroll-target="#information">Information</a></li>
+  <li><a href="#payoffs-and-constraints" id="toc-payoffs-and-constraints" class="nav-link" data-scroll-target="#payoffs-and-constraints">Payoffs and constraints</a></li>
+  <li><a href="#timing" id="toc-timing" class="nav-link" data-scroll-target="#timing">Timing</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#adding-too-many-features-too-early" id="toc-adding-too-many-features-too-early" class="nav-link" data-scroll-target="#adding-too-many-features-too-early">1. Adding too many features too early</a></li>
+  <li><a href="#forgetting-the-unit-of-analysis" id="toc-forgetting-the-unit-of-analysis" class="nav-link" data-scroll-target="#forgetting-the-unit-of-analysis">2. Forgetting the unit of analysis</a></li>
+  <li><a href="#treating-payoffs-as-purely-monetary" id="toc-treating-payoffs-as-purely-monetary" class="nav-link" data-scroll-target="#treating-payoffs-as-purely-monetary">3. Treating payoffs as purely monetary</a></li>
+  <li><a href="#ignoring-institutions" id="toc-ignoring-institutions" class="nav-link" data-scroll-target="#ignoring-institutions">4. Ignoring institutions</a></li>
+  <li><a href="#ignoring-measurement" id="toc-ignoring-measurement" class="nav-link" data-scroll-target="#ignoring-measurement">5. Ignoring measurement</a></li>
+  <li><a href="#treating-model-results-as-automatic-policy-advice" id="toc-treating-model-results-as-automatic-policy-advice" class="nav-link" data-scroll-target="#treating-model-results-as-automatic-policy-advice">6. Treating model results as automatic policy advice</a></li>
+  </ul></li>
+  <li><a href="#checklist-for-building-a-criminology-model" id="toc-checklist-for-building-a-criminology-model" class="nav-link" data-scroll-target="#checklist-for-building-a-criminology-model">Checklist for building a criminology model</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Models</h1>
+<h1 class="title">Criminology Models</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -150,17 +209,397 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>These pages provide canonical strategic/dynamic representations used in theory-first criminology.</p>
+<p>Models are simplified representations of criminological mechanisms. They help make assumptions explicit: who acts, what they choose, what they know, what they value, and how institutions respond.</p>
+<p>The purpose of this section is not to make criminology artificially mathematical. The purpose is to use models as disciplined thinking tools.</p>
+<section id="why-use-models" class="level2">
+<h2 class="anchored" data-anchor-id="why-use-models">Why use models?</h2>
+<p>A model helps answer questions such as:</p>
 <ul>
-<li><a href="../../../criminology/notes/models/inspection-games.html">Inspection games (deterrence &amp; monitoring)</a></li>
-<li><a href="../../../criminology/notes/models/plea-bargaining.html">Plea bargaining (asymmetric information)</a></li>
-<li><a href="../../../criminology/notes/models/reporting-trust.html">Reporting &amp; trust (legitimacy and cooperation)</a></li>
-<li><a href="../../../criminology/notes/models/co-offending-games.html">Co-offending games (coordination and betrayal)</a></li>
-<li><a href="../../../criminology/notes/models/network-crime.html">Network crime (diffusion and complements)</a></li>
-<li><a href="../../../criminology/notes/models/allocation-dynamics.html">Allocation dynamics (hotspots and resource allocation)</a></li>
+<li>Who are the actors?</li>
+<li>What choices are available?</li>
+<li>What information does each actor have?</li>
+<li>What incentives or constraints matter?</li>
+<li>What outcome should we expect?</li>
+<li>What would change under a different policy?</li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Criminological problem] --&gt; B[Actors]
+    B --&gt; C[Choices]
+    C --&gt; D[Information]
+    D --&gt; E[Payoffs or constraints]
+    E --&gt; F[Prediction]
+    F --&gt; G[Evidence or policy test]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>A good model is not a full description of the world. It is a controlled way to isolate a mechanism.</p>
+</section>
+<section id="map-of-criminology-models" class="level2">
+<h2 class="anchored" data-anchor-id="map-of-criminology-models">Map of criminology models</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Criminology Models] --&gt; B[Inspection Games]
+    A --&gt; C[Reporting and Trust]
+    A --&gt; D[Co-offending Games]
+    A --&gt; E[Network Crime]
+    A --&gt; F[Plea Bargaining]
+    A --&gt; G[Allocation Dynamics]
+
+    B --&gt; B1[Monitoring]
+    B --&gt; B2[Deterrence]
+    B --&gt; B3[Detection risk]
+
+    C --&gt; C1[Victim or witness decision]
+    C --&gt; C2[Institutional trust]
+    C --&gt; C3[Recorded crime]
+
+    D --&gt; D1[Coordination]
+    D --&gt; D2[Betrayal risk]
+    D --&gt; D3[Group offending]
+
+    E --&gt; E1[Diffusion]
+    E --&gt; E2[Peer effects]
+    E --&gt; E3[Central actors]
+
+    F --&gt; F1[Asymmetric information]
+    F --&gt; F2[Trial risk]
+    F --&gt; F3[Bargaining]
+
+    G --&gt; G1[Hotspots]
+    G --&gt; G2[Resource allocation]
+    G --&gt; G3[Displacement]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>These models connect directly to mechanisms. Deterrence can be modelled as inspection. Reporting can be modelled as cooperation under trust. Co-offending can be modelled as coordination. Crime diffusion can be modelled through networks.</p>
+</section>
+<section id="model-pages" class="level2">
+<h2 class="anchored" data-anchor-id="model-pages">Model pages</h2>
+<div class="grid gap-3">
+<div class="g-col-12 g-col-md-6">
+<section id="inspection-games" class="level3 card">
+<h3 class="anchored" data-anchor-id="inspection-games">Inspection Games</h3>
+<p>Models of monitoring, deterrence, enforcement, detection risk, and strategic adaptation between rule-breakers and authorities.</p>
+<p><a href="../../../criminology/notes/models/inspection-games.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="plea-bargaining" class="level3 card">
+<h3 class="anchored" data-anchor-id="plea-bargaining">Plea Bargaining</h3>
+<p>A model of bargaining under uncertainty, asymmetric information, trial risk, and institutional pressure.</p>
+<p><a href="../../../criminology/notes/models/plea-bargaining.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="reporting-and-trust" class="level3 card">
+<h3 class="anchored" data-anchor-id="reporting-and-trust">Reporting and Trust</h3>
+<p>Models of victim or witness reporting, institutional trust, cooperation, hidden crime, and recorded crime.</p>
+<p><a href="../../../criminology/notes/models/reporting-trust.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="co-offending-games" class="level3 card">
+<h3 class="anchored" data-anchor-id="co-offending-games">Co-offending Games</h3>
+<p>Models of coordination, mutual trust, betrayal risk, group crime, and collective action.</p>
+<p><a href="../../../criminology/notes/models/co-offending-games.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="network-crime" class="level3 card">
+<h3 class="anchored" data-anchor-id="network-crime">Network Crime</h3>
+<p>Models of social ties, diffusion, peer effects, central actors, and network disruption.</p>
+<p><a href="../../../criminology/notes/models/network-crime.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="allocation-dynamics" class="level3 card">
+<h3 class="anchored" data-anchor-id="allocation-dynamics">Allocation Dynamics</h3>
+<p>Models of enforcement resources, hotspots, spatial concentration, displacement, and feedback over time.</p>
+<p><a href="../../../criminology/notes/models/allocation-dynamics.html">Open →</a></p>
+</section>
+</div>
+</div>
+</section>
+<section id="from-mechanism-to-model" class="level2">
+<h2 class="anchored" data-anchor-id="from-mechanism-to-model">From mechanism to model</h2>
+<p>A mechanism explains a process. A model formalises the process enough to examine its implications.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Mechanism] --&gt; B[Choose actors]
+    B --&gt; C[Define actions]
+    C --&gt; D[Define information]
+    D --&gt; E[Define payoffs]
+    E --&gt; F[Choose timing]
+    F --&gt; G[Choose solution concept]
+    G --&gt; H[Derive prediction]
+    H --&gt; I[Interpret criminologically]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>For example, deterrence as a mechanism can become an inspection game:</p>
+<pre class="text"><code>authority chooses monitor/not monitor
+individual chooses offend/not offend
+payoffs depend on gain, punishment, monitoring cost, and detection probability</code></pre>
+<p>This model can then ask how behaviour changes when monitoring becomes cheaper, punishment becomes harsher, or detection becomes more likely.</p>
+</section>
+<section id="matching-models-to-questions" class="level2">
+<h2 class="anchored" data-anchor-id="matching-models-to-questions">Matching models to questions</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Research question</th>
+<th>Useful model</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>How does monitoring affect offending?</td>
+<td>Inspection game</td>
+</tr>
+<tr class="even">
+<td>Why do victims report or stay silent?</td>
+<td>Reporting and trust model</td>
+</tr>
+<tr class="odd">
+<td>Why do offenders cooperate with one another?</td>
+<td>Co-offending game</td>
+</tr>
+<tr class="even">
+<td>How does crime spread through groups?</td>
+<td>Network crime model</td>
+</tr>
+<tr class="odd">
+<td>Why do defendants accept plea deals?</td>
+<td>Plea bargaining model</td>
+</tr>
+<tr class="even">
+<td>How should police allocate scarce resources?</td>
+<td>Allocation dynamics model</td>
+</tr>
+</tbody>
+</table>
+<p>The model should be chosen because it fits the mechanism, not because it looks sophisticated.</p>
+</section>
+<section id="actors-and-choices" class="level2">
+<h2 class="anchored" data-anchor-id="actors-and-choices">Actors and choices</h2>
+<p>Every model begins by identifying actors and choices.</p>
+<p>Examples:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Actors</th>
+<th>Choices</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Inspection game</td>
+<td>offender, authority</td>
+<td>offend/comply; inspect/not inspect</td>
+</tr>
+<tr class="even">
+<td>Reporting model</td>
+<td>victim/witness, police</td>
+<td>report/not report; respond/not respond</td>
+</tr>
+<tr class="odd">
+<td>Co-offending game</td>
+<td>potential co-offenders</td>
+<td>join/not join; cooperate/betray</td>
+</tr>
+<tr class="even">
+<td>Plea bargaining</td>
+<td>prosecutor, defendant</td>
+<td>offer/accept/reject; trial/settle</td>
+</tr>
+<tr class="odd">
+<td>Network model</td>
+<td>connected individuals</td>
+<td>offend, transmit information, recruit, withdraw</td>
+</tr>
+<tr class="even">
+<td>Allocation model</td>
+<td>enforcement agency, offenders</td>
+<td>allocate patrols; move, offend, avoid</td>
+</tr>
+</tbody>
+</table>
+<p>A model is unclear if the actors and choices are unclear.</p>
+</section>
+<section id="information" class="level2">
+<h2 class="anchored" data-anchor-id="information">Information</h2>
+<p>Information is often the most important part of criminological modelling.</p>
+<p>Actors may be uncertain about:</p>
+<ul>
+<li>detection risk;</li>
+<li>sanction severity;</li>
+<li>police presence;</li>
+<li>victim reporting;</li>
+<li>co-offender loyalty;</li>
+<li>evidence strength;</li>
+<li>court outcomes;</li>
+<li>institutional response;</li>
+<li>peer behaviour;</li>
+<li>market conditions.</li>
+</ul>
+<p>Incomplete information can change the result completely. It can create signaling, screening, reputation, mistrust, overreaction, or hidden behaviour.</p>
+</section>
+<section id="payoffs-and-constraints" class="level2">
+<h2 class="anchored" data-anchor-id="payoffs-and-constraints">Payoffs and constraints</h2>
+<p>Payoffs do not need to mean money. In criminology, payoffs may include:</p>
+<ul>
+<li>material gain;</li>
+<li>physical risk;</li>
+<li>punishment;</li>
+<li>shame;</li>
+<li>status;</li>
+<li>revenge;</li>
+<li>addiction;</li>
+<li>fear;</li>
+<li>stigma;</li>
+<li>legal cost;</li>
+<li>moral cost;</li>
+<li>future opportunity;</li>
+<li>institutional legitimacy.</li>
+</ul>
+<p>A good model should avoid pretending that all motivations are the same. But it should still be clear about what is being assumed.</p>
+</section>
+<section id="timing" class="level2">
+<h2 class="anchored" data-anchor-id="timing">Timing</h2>
+<p>Timing determines the logic of the model.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Choose timing] --&gt; B[Simultaneous]
+    A --&gt; C[Sequential]
+    A --&gt; D[Repeated]
+    A --&gt; E[Networked or dynamic]
+
+    B --&gt; B1[Nash equilibrium]
+    C --&gt; C1[Backward induction or SPE]
+    D --&gt; D1[Reputation and punishment]
+    E --&gt; E1[Diffusion and feedback]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>For example, deterrence may look different if police move first, offenders move first, or both adapt over time.</p>
+</section>
+<section id="interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="interpretation">Interpretation</h2>
+<p>The final step is interpretation. A model result should be translated back into criminological language.</p>
+<p>A model may produce a result like:</p>
+<p><span class="math display">\[
+\Pr(\text{offend}) \text{ decreases when } \Pr(\text{detection}) \text{ increases}.
+\]</span></p>
+<p>But the interpretation should ask:</p>
+<ul>
+<li>Do people perceive detection risk accurately?</li>
+<li>Which groups are most affected?</li>
+<li>Does enforcement change reporting?</li>
+<li>Does crime move elsewhere?</li>
+<li>Does legitimacy rise or fall?</li>
+<li>Are there unintended consequences?</li>
+</ul>
+<p>Without interpretation, a model is only algebra.</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="adding-too-many-features-too-early" class="level3">
+<h3 class="anchored" data-anchor-id="adding-too-many-features-too-early">1. Adding too many features too early</h3>
+<p>A useful first model should be simple. Add complexity only when it clarifies the mechanism.</p>
+</section>
+<section id="forgetting-the-unit-of-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="forgetting-the-unit-of-analysis">2. Forgetting the unit of analysis</h3>
+<p>A model of individual offending is not the same as a model of neighbourhood crime rates.</p>
+</section>
+<section id="treating-payoffs-as-purely-monetary" class="level3">
+<h3 class="anchored" data-anchor-id="treating-payoffs-as-purely-monetary">3. Treating payoffs as purely monetary</h3>
+<p>Status, fear, shame, addiction, trust, and identity may matter.</p>
+</section>
+<section id="ignoring-institutions" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-institutions">4. Ignoring institutions</h3>
+<p>Police, courts, prisons, regulators, and communities are strategic actors too.</p>
+</section>
+<section id="ignoring-measurement" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-measurement">5. Ignoring measurement</h3>
+<p>A model may predict true crime, but the available data may measure recorded crime.</p>
+</section>
+<section id="treating-model-results-as-automatic-policy-advice" class="level3">
+<h3 class="anchored" data-anchor-id="treating-model-results-as-automatic-policy-advice">6. Treating model results as automatic policy advice</h3>
+<p>A model clarifies one mechanism. Policy requires institutional, empirical, and ethical interpretation.</p>
+</section>
+</section>
+<section id="checklist-for-building-a-criminology-model" class="level2">
+<h2 class="anchored" data-anchor-id="checklist-for-building-a-criminology-model">Checklist for building a criminology model</h2>
+<ol type="1">
+<li>What crime, behaviour, or institution is being studied?</li>
+<li>Who are the actors?</li>
+<li>What choices do they have?</li>
+<li>What information does each actor have?</li>
+<li>What are the payoffs, constraints, or motivations?</li>
+<li>What is the timing?</li>
+<li>Is the interaction one-shot, repeated, or networked?</li>
+<li>What solution concept is appropriate?</li>
+<li>What prediction does the model produce?</li>
+<li>What measurement problem might affect evidence?</li>
+<li>What would the model miss?</li>
+<li>What policy implication, if any, follows?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../../../criminology/notes/index.html">Criminology Notes</a></li>
+<li><a href="../../../criminology/notes/mechanisms/index.html">Mechanisms</a></li>
+<li><a href="../../../criminology/notes/institutions/index.html">Institutions</a></li>
+<li><a href="../../../criminology/notes/topics/index.html">Topics</a></li>
+<li><a href="../../../criminology/toolkit/modeling-checklist.html">Modeling Checklist</a></li>
+<li><a href="../../../notes/game-theory.html">Game Theory Notes</a></li>
+<li><a href="../../../foundations/dynamic-reasoning.html">Dynamic reasoning</a></li>
+<li><a href="../../../foundations/probability.html">Probability</a></li>
+<li><a href="../../../foundations/optimization.html">Optimization</a></li>
 </ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

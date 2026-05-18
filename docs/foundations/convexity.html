@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Convexity &amp; concavity – Margins of Rationality</title>
+<title>Convexity – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -160,8 +164,31 @@ window.Quarto = {
    
   <ul>
   <li><a href="#convex-sets" id="toc-convex-sets" class="nav-link active" data-scroll-target="#convex-sets">Convex sets</a></li>
+  <li><a href="#simple-examples" id="toc-simple-examples" class="nav-link" data-scroll-target="#simple-examples">Simple examples</a>
+  <ul class="collapse">
+  <li><a href="#convex-example" id="toc-convex-example" class="nav-link" data-scroll-target="#convex-example">Convex example</a></li>
+  <li><a href="#non-convex-example" id="toc-non-convex-example" class="nav-link" data-scroll-target="#non-convex-example">Non-convex example</a></li>
+  </ul></li>
+  <li><a href="#convex-combinations" id="toc-convex-combinations" class="nav-link" data-scroll-target="#convex-combinations">Convex combinations</a></li>
+  <li><a href="#convexity-and-probability" id="toc-convexity-and-probability" class="nav-link" data-scroll-target="#convexity-and-probability">Convexity and probability</a></li>
+  <li><a href="#mixed-strategies" id="toc-mixed-strategies" class="nav-link" data-scroll-target="#mixed-strategies">Mixed strategies</a></li>
+  <li><a href="#convex-functions" id="toc-convex-functions" class="nav-link" data-scroll-target="#convex-functions">Convex functions</a></li>
   <li><a href="#concave-functions" id="toc-concave-functions" class="nav-link" data-scroll-target="#concave-functions">Concave functions</a></li>
-  <li><a href="#example-why-concavity-helps-best-responses" id="toc-example-why-concavity-helps-best-responses" class="nav-link" data-scroll-target="#example-why-concavity-helps-best-responses">Example: why concavity helps best responses</a></li>
+  <li><a href="#convexity-and-optimization" id="toc-convexity-and-optimization" class="nav-link" data-scroll-target="#convexity-and-optimization">Convexity and optimization</a></li>
+  <li><a href="#first-order-conditions-and-concavity" id="toc-first-order-conditions-and-concavity" class="nav-link" data-scroll-target="#first-order-conditions-and-concavity">First-order conditions and concavity</a></li>
+  <li><a href="#quasi-concavity" id="toc-quasi-concavity" class="nav-link" data-scroll-target="#quasi-concavity">Quasi-concavity</a></li>
+  <li><a href="#convexity-and-best-responses" id="toc-convexity-and-best-responses" class="nav-link" data-scroll-target="#convexity-and-best-responses">Convexity and best responses</a></li>
+  <li><a href="#convexity-and-mixtures" id="toc-convexity-and-mixtures" class="nav-link" data-scroll-target="#convexity-and-mixtures">Convexity and mixtures</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#confusing-convex-sets-and-convex-functions" id="toc-confusing-convex-sets-and-convex-functions" class="nav-link" data-scroll-target="#confusing-convex-sets-and-convex-functions">1. Confusing convex sets and convex functions</a></li>
+  <li><a href="#forgetting-the-weights-must-sum-to-one" id="toc-forgetting-the-weights-must-sum-to-one" class="nav-link" data-scroll-target="#forgetting-the-weights-must-sum-to-one">2. Forgetting the weights must sum to one</a></li>
+  <li><a href="#using-convex-when-concave-is-needed" id="toc-using-convex-when-concave-is-needed" class="nav-link" data-scroll-target="#using-convex-when-concave-is-needed">3. Using convex when concave is needed</a></li>
+  <li><a href="#assuming-every-feasible-set-is-convex" id="toc-assuming-every-feasible-set-is-convex" class="nav-link" data-scroll-target="#assuming-every-feasible-set-is-convex">4. Assuming every feasible set is convex</a></li>
+  <li><a href="#treating-local-conditions-as-global-without-curvature" id="toc-treating-local-conditions-as-global-without-curvature" class="nav-link" data-scroll-target="#treating-local-conditions-as-global-without-curvature">5. Treating local conditions as global without curvature</a></li>
+  </ul></li>
+  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist">Checklist</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -170,7 +197,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Convexity &amp; concavity</h1>
+<h1 class="title">Convexity</h1>
 </div>
 
 
@@ -187,25 +214,336 @@ window.Quarto = {
 </header>
 
 
+<p>Convexity is a way of describing shape. It is important in optimization, probability, game theory, and equilibrium existence because convex objects behave well under mixtures.</p>
+<p>The central idea is simple:</p>
+<blockquote class="blockquote">
+<p>If two points are feasible, then every mixture between them is also feasible.</p>
+</blockquote>
 <section id="convex-sets" class="level2">
 <h2 class="anchored" data-anchor-id="convex-sets">Convex sets</h2>
-<p>A set <span class="math inline">\(C \subseteq \mathbb{R}^n\)</span> is <strong>convex</strong> if for any <span class="math inline">\(x,y\in C\)</span> and any <span class="math inline">\(\lambda\in[0,1]\)</span>, <span class="math display">\[
-\lambda x + (1-\lambda)y \in C.
+<p>A set <span class="math inline">\(X\)</span> is convex if for any two points <span class="math inline">\(x,y \in X\)</span> and any <span class="math inline">\(\alpha \in [0,1]\)</span>,</p>
+<p><span class="math display">\[
+\alpha x + (1-\alpha)y \in X.
 \]</span></p>
-<p><strong>Intuition.</strong> If you can take “mixtures” of two feasible points and stay feasible, the set is convex. This is exactly why mixed strategies live in a simplex.</p>
+<p>This means the line segment between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> stays inside <span class="math inline">\(X\)</span>.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Point x in set] --&gt; C[Mixture alpha x plus 1 minus alpha y]
+    B[Point y in set] --&gt; C
+    C --&gt; D{Still in the set?}
+    D --&gt;|Yes| E[Convex set]
+    D --&gt;|No| F[Not convex]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Convexity is useful because it allows interpolation, mixing, and averaging without leaving the feasible set.</p>
+</section>
+<section id="simple-examples" class="level2">
+<h2 class="anchored" data-anchor-id="simple-examples">Simple examples</h2>
+<section id="convex-example" class="level3">
+<h3 class="anchored" data-anchor-id="convex-example">Convex example</h3>
+<p>The interval</p>
+<p><span class="math display">\[
+[0,1]
+\]</span></p>
+<p>is convex. If <span class="math inline">\(x,y \in [0,1]\)</span>, then any weighted average of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is also in <span class="math inline">\([0,1]\)</span>.</p>
+</section>
+<section id="non-convex-example" class="level3">
+<h3 class="anchored" data-anchor-id="non-convex-example">Non-convex example</h3>
+<p>The set</p>
+<p><span class="math display">\[
+[0,1] \cup [2,3]
+\]</span></p>
+<p>is not convex.</p>
+<p>For example, <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span> are in the set, but their average is</p>
+<p><span class="math display">\[
+\frac{1+2}{2}=1.5,
+\]</span></p>
+<p>which is not in the set.</p>
+</section>
+</section>
+<section id="convex-combinations" class="level2">
+<h2 class="anchored" data-anchor-id="convex-combinations">Convex combinations</h2>
+<p>A convex combination of points <span class="math inline">\(x_1,\ldots,x_n\)</span> is</p>
+<p><span class="math display">\[
+\sum_{k=1}^n \alpha_k x_k,
+\]</span></p>
+<p>where</p>
+<p><span class="math display">\[
+\alpha_k \geq 0
+\]</span></p>
+<p>for all <span class="math inline">\(k\)</span>, and</p>
+<p><span class="math display">\[
+\sum_{k=1}^n \alpha_k=1.
+\]</span></p>
+<p>The weights behave like probabilities.</p>
+<p>This is why convexity appears naturally in mixed strategies, expectations, and probability distributions.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Weights are nonnegative] --&gt; C[Convex combination]
+    B[Weights sum to one] --&gt; C
+    C --&gt; D[Weighted average]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="convexity-and-probability" class="level2">
+<h2 class="anchored" data-anchor-id="convexity-and-probability">Convexity and probability</h2>
+<p>A probability distribution is a convex combination.</p>
+<p>If outcome <span class="math inline">\(x_k\)</span> occurs with probability <span class="math inline">\(p_k\)</span>, then the expected value is</p>
+<p><span class="math display">\[
+\mathbb{E}[X]=\sum_k p_k x_k.
+\]</span></p>
+<p>The probabilities satisfy</p>
+<p><span class="math display">\[
+p_k \geq 0
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\sum_k p_k = 1.
+\]</span></p>
+<p>So expectation is a weighted average.</p>
+<p>This is why convexity is closely connected to probability and mixed strategies.</p>
+</section>
+<section id="mixed-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="mixed-strategies">Mixed strategies</h2>
+<p>In game theory, a mixed strategy is a probability distribution over pure strategies.</p>
+<p>If a player has actions <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, then a mixed strategy can be written as</p>
+<p><span class="math display">\[
+\sigma = (p,1-p),
+\]</span></p>
+<p>where</p>
+<p><span class="math display">\[
+p \in [0,1].
+\]</span></p>
+<p>The set of possible mixed strategies is convex. If one mixed strategy assigns probability <span class="math inline">\(p\)</span> to <span class="math inline">\(A\)</span>, and another assigns probability <span class="math inline">\(q\)</span> to <span class="math inline">\(A\)</span>, then a mixture of those mixed strategies assigns probability</p>
+<p><span class="math display">\[
+\alpha p+(1-\alpha)q
+\]</span></p>
+<p>to <span class="math inline">\(A\)</span>.</p>
+<p>This remains a valid probability.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Pure strategies] --&gt; B[Probability distributions over them]
+    B --&gt; C[Mixed strategy space]
+    C --&gt; D[Convex set]
+    D --&gt; E[Fixed-point existence arguments]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Convexity of mixed-strategy spaces is one reason finite games have mixed-strategy equilibria.</p>
+</section>
+<section id="convex-functions" class="level2">
+<h2 class="anchored" data-anchor-id="convex-functions">Convex functions</h2>
+<p>A function <span class="math inline">\(f\)</span> is convex if for all <span class="math inline">\(x,y\)</span> and <span class="math inline">\(\alpha \in [0,1]\)</span>,</p>
+<p><span class="math display">\[
+f(\alpha x+(1-\alpha)y)
+\leq
+\alpha f(x)+(1-\alpha)f(y).
+\]</span></p>
+<p>The graph of a convex function lies below the chord between any two points.</p>
+<p>A standard example is</p>
+<p><span class="math display">\[
+f(x)=x^2.
+\]</span></p>
+<p>Convex functions are important in minimization problems.</p>
 </section>
 <section id="concave-functions" class="level2">
 <h2 class="anchored" data-anchor-id="concave-functions">Concave functions</h2>
-<p>A function <span class="math inline">\(f\)</span> is <strong>concave</strong> on a convex set if for any <span class="math inline">\(x,y\)</span> and <span class="math inline">\(\lambda\in[0,1]\)</span>, <span class="math display">\[
-f(\lambda x + (1-\lambda)y)\ge \lambda f(x) + (1-\lambda)f(y).
+<p>A function <span class="math inline">\(f\)</span> is concave if</p>
+<p><span class="math display">\[
+f(\alpha x+(1-\alpha)y)
+\geq
+\alpha f(x)+(1-\alpha)f(y).
 \]</span></p>
-<p><strong>Intuition.</strong> Concavity means “diminishing returns” and makes optimization well-behaved: local maxima are global.</p>
+<p>The graph of a concave function lies above the chord between any two points.</p>
+<p>A standard example is</p>
+<p><span class="math display">\[
+f(x)=\log x.
+\]</span></p>
+<p>Concave functions are important in maximization problems.</p>
 </section>
-<section id="example-why-concavity-helps-best-responses" class="level2">
-<h2 class="anchored" data-anchor-id="example-why-concavity-helps-best-responses">Example: why concavity helps best responses</h2>
-<p>Let <span class="math inline">\(f(x)=2x-x^2\)</span> on <span class="math inline">\([0,2]\)</span>. Then <span class="math inline">\(f''(x)=-2&lt;0\)</span>, so <span class="math inline">\(f\)</span> is concave and the maximizer is unique.</p>
-<p>FOC: <span class="math inline">\(f'(x)=2-2x=0 \Rightarrow x^*=1\)</span>.</p>
-<p>In games, concavity in your own action often implies a unique best response.</p>
+<section id="convexity-and-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="convexity-and-optimization">Convexity and optimization</h2>
+<p>Convexity makes optimization easier.</p>
+<p>For maximization, concavity is especially useful. If the objective function is concave and the feasible set is convex, then local optima are global optima.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Convex feasible set] --&gt; C[Well-behaved optimization]
+    B[Concave objective for maximization] --&gt; C
+    C --&gt; D[Local optimum is global]
+    D --&gt; E[Clear comparative statics]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This matters because many economic models rely on maximization.</p>
+</section>
+<section id="first-order-conditions-and-concavity" class="level2">
+<h2 class="anchored" data-anchor-id="first-order-conditions-and-concavity">First-order conditions and concavity</h2>
+<p>Suppose <span class="math inline">\(f\)</span> is differentiable and concave. If an interior point <span class="math inline">\(x^*\)</span> satisfies</p>
+<p><span class="math display">\[
+f'(x^*)=0,
+\]</span></p>
+<p>then <span class="math inline">\(x^*\)</span> is a global maximum.</p>
+<p>If <span class="math inline">\(f\)</span> is strictly concave, then the maximum is unique.</p>
+<p>This is stronger than the ordinary second-order check because concavity gives global structure.</p>
+</section>
+<section id="quasi-concavity" class="level2">
+<h2 class="anchored" data-anchor-id="quasi-concavity">Quasi-concavity</h2>
+<p>A function is quasi-concave if its upper contour sets are convex.</p>
+<p>The upper contour set at level <span class="math inline">\(c\)</span> is</p>
+<p><span class="math display">\[
+\{x: f(x)\geq c\}.
+\]</span></p>
+<p>Quasi-concavity is useful because it captures single-peakedness or convex preferences without requiring full concavity.</p>
+<p>In economics, quasi-concavity often appears in consumer theory and game theory because it helps ensure well-behaved best responses.</p>
+</section>
+<section id="convexity-and-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="convexity-and-best-responses">Convexity and best responses</h2>
+<p>In game theory, convexity helps with equilibrium existence.</p>
+<p>A typical existence argument needs:</p>
+<ul>
+<li>compact strategy spaces;</li>
+<li>convex strategy spaces;</li>
+<li>continuous payoff functions;</li>
+<li>quasi-concave payoff functions in own strategy.</li>
+</ul>
+<p>These conditions help ensure that best responses exist and are well behaved.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Convex strategy spaces] --&gt; B[Well-behaved best responses]
+    C[Continuous payoffs] --&gt; B
+    D[Quasi-concavity in own strategy] --&gt; B
+    B --&gt; E[Fixed-point theorem applies]
+    E --&gt; F[Equilibrium exists]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="convexity-and-mixtures" class="level2">
+<h2 class="anchored" data-anchor-id="convexity-and-mixtures">Convexity and mixtures</h2>
+<p>Convexity is also useful conceptually.</p>
+<p>A mixture between two strategies, beliefs, policies, or outcomes can be meaningful only if the mixture remains inside the relevant set.</p>
+<p>Examples:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Object</th>
+<th>Why convexity matters</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mixed strategies</td>
+<td>probabilities over pure actions</td>
+</tr>
+<tr class="even">
+<td>beliefs</td>
+<td>probabilities over states</td>
+</tr>
+<tr class="odd">
+<td>feasible policies</td>
+<td>combinations of policy instruments</td>
+</tr>
+<tr class="even">
+<td>consumption bundles</td>
+<td>mixtures of goods</td>
+</tr>
+<tr class="odd">
+<td>expected payoffs</td>
+<td>probability-weighted values</td>
+</tr>
+<tr class="even">
+<td>correlated recommendations</td>
+<td>distributions over action profiles</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="confusing-convex-sets-and-convex-functions" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-convex-sets-and-convex-functions">1. Confusing convex sets and convex functions</h3>
+<p>A set is convex if mixtures of points stay inside the set. A function is convex if its graph satisfies a shape condition.</p>
+</section>
+<section id="forgetting-the-weights-must-sum-to-one" class="level3">
+<h3 class="anchored" data-anchor-id="forgetting-the-weights-must-sum-to-one">2. Forgetting the weights must sum to one</h3>
+<p>A convex combination requires nonnegative weights that add to one.</p>
+</section>
+<section id="using-convex-when-concave-is-needed" class="level3">
+<h3 class="anchored" data-anchor-id="using-convex-when-concave-is-needed">3. Using convex when concave is needed</h3>
+<p>For maximization, concavity is usually the helpful property. For minimization, convexity is usually helpful.</p>
+</section>
+<section id="assuming-every-feasible-set-is-convex" class="level3">
+<h3 class="anchored" data-anchor-id="assuming-every-feasible-set-is-convex">4. Assuming every feasible set is convex</h3>
+<p>Some real choices are discrete or non-convex.</p>
+</section>
+<section id="treating-local-conditions-as-global-without-curvature" class="level3">
+<h3 class="anchored" data-anchor-id="treating-local-conditions-as-global-without-curvature">5. Treating local conditions as global without curvature</h3>
+<p>First-order conditions alone do not guarantee a global optimum unless additional structure such as concavity is present.</p>
+</section>
+</section>
+<section id="checklist" class="level2">
+<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
+<p>When convexity appears, ask:</p>
+<ol type="1">
+<li>Is the object a set or a function?</li>
+<li>If it is a set, do mixtures stay inside?</li>
+<li>If it is a function, is it convex or concave?</li>
+<li>Are weights nonnegative and do they sum to one?</li>
+<li>Is the feasible set convex?</li>
+<li>Is the objective concave for maximization?</li>
+<li>Are best responses well behaved?</li>
+<li>Is convexity being used for optimization, probability, or equilibrium existence?</li>
+<li>Are there discrete choices that break convexity?</li>
+<li>What substantive interpretation does the mixture have?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../foundations/optimization.html">Optimization</a></li>
+<li><a href="../foundations/probability.html">Probability</a></li>
+<li><a href="../foundations/fixed-points.html">Fixed Points</a></li>
+<li><a href="../foundations/linear-algebra.html">Linear Algebra</a></li>
+<li><a href="../notes/game-theory.html">Game Theory Notes</a></li>
+<li><a href="../notes/equilibriums/nash.html">Nash Equilibrium</a></li>
+</ul>
 
 
 </section>

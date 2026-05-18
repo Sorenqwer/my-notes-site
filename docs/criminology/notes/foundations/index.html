@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Foundations – Margins of Rationality</title>
+<title>Criminology Foundations – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../../styles.css">
@@ -125,20 +129,44 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#why-foundations-matter" id="toc-why-foundations-matter" class="nav-link active" data-scroll-target="#why-foundations-matter">Why foundations matter</a></li>
+  <li><a href="#main-foundation-pages" id="toc-main-foundation-pages" class="nav-link" data-scroll-target="#main-foundation-pages">Main foundation pages</a></li>
+  <li><a href="#crime-deviance-and-harm" id="toc-crime-deviance-and-harm" class="nav-link" data-scroll-target="#crime-deviance-and-harm">Crime, deviance, and harm</a></li>
+  <li><a href="#true-crime-and-recorded-crime" id="toc-true-crime-and-recorded-crime" class="nav-link" data-scroll-target="#true-crime-and-recorded-crime">True crime and recorded crime</a></li>
+  <li><a href="#units-of-analysis-1" id="toc-units-of-analysis-1" class="nav-link" data-scroll-target="#units-of-analysis-1">Units of analysis</a></li>
+  <li><a href="#from-concept-to-measurement" id="toc-from-concept-to-measurement" class="nav-link" data-scroll-target="#from-concept-to-measurement">From concept to measurement</a></li>
+  <li><a href="#explanation-versus-description" id="toc-explanation-versus-description" class="nav-link" data-scroll-target="#explanation-versus-description">Explanation versus description</a></li>
+  <li><a href="#causation-and-mechanism" id="toc-causation-and-mechanism" class="nav-link" data-scroll-target="#causation-and-mechanism">Causation and mechanism</a></li>
+  <li><a href="#common-measurement-problems" id="toc-common-measurement-problems" class="nav-link" data-scroll-target="#common-measurement-problems">Common measurement problems</a>
+  <ul class="collapse">
+  <li><a href="#underreporting" id="toc-underreporting" class="nav-link" data-scroll-target="#underreporting">1. Underreporting</a></li>
+  <li><a href="#recording-variation" id="toc-recording-variation" class="nav-link" data-scroll-target="#recording-variation">2. Recording variation</a></li>
+  <li><a href="#detection-bias" id="toc-detection-bias" class="nav-link" data-scroll-target="#detection-bias">3. Detection bias</a></li>
+  <li><a href="#classification-changes" id="toc-classification-changes" class="nav-link" data-scroll-target="#classification-changes">4. Classification changes</a></li>
+  <li><a href="#visibility-bias" id="toc-visibility-bias" class="nav-link" data-scroll-target="#visibility-bias">5. Visibility bias</a></li>
+  <li><a href="#ecological-fallacy" id="toc-ecological-fallacy" class="nav-link" data-scroll-target="#ecological-fallacy">6. Ecological fallacy</a></li>
+  </ul></li>
+  <li><a href="#checklist-for-foundation-level-analysis" id="toc-checklist-for-foundation-level-analysis" class="nav-link" data-scroll-target="#checklist-for-foundation-level-analysis">Checklist for foundation-level analysis</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Foundations</h1>
+<h1 class="title">Criminology Foundations</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -150,13 +178,321 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Foundations clarify <strong>definitions</strong>, <strong>units of analysis</strong>, and <strong>measurement caveats</strong> (recorded crime vs incidence). These are the conceptual primitives used throughout criminology research.</p>
+<p>Foundations clarify the basic objects of criminological analysis: crime, deviance, harm, law, measurement, reporting, units of analysis, and explanation. These concepts matter because criminology often studies events that are partly hidden, socially interpreted, and institutionally recorded.</p>
+<p>The goal of this section is to make the primitives clear before moving to mechanisms, institutions, models, or policy.</p>
+<section id="why-foundations-matter" class="level2">
+<h2 class="anchored" data-anchor-id="why-foundations-matter">Why foundations matter</h2>
+<p>In criminology, the object being studied is rarely simple. A recorded crime is not only an event. It is also the result of reporting, classification, policing, and legal definition.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Social behaviour] --&gt; B[Legal definition]
+    B --&gt; C[Crime event]
+    C --&gt; D[Reporting]
+    D --&gt; E[Recording]
+    E --&gt; F[Official statistics]
+    F --&gt; G[Research interpretation]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This means a criminological claim usually depends on both social reality and measurement process.</p>
+<p>For example, a rise in recorded crime may reflect:</p>
 <ul>
-<li><a href="../../../criminology/notes/foundations/key-definitions.html">Key definitions</a></li>
-<li><a href="../../../criminology/notes/foundations/units-of-analysis.html">Units of analysis</a></li>
+<li>more actual offending;</li>
+<li>more reporting;</li>
+<li>changes in policing;</li>
+<li>changes in legal classification;</li>
+<li>changes in recording standards;</li>
+<li>greater visibility of certain groups or places.</li>
+</ul>
+</section>
+<section id="main-foundation-pages" class="level2">
+<h2 class="anchored" data-anchor-id="main-foundation-pages">Main foundation pages</h2>
+<div class="grid gap-3">
+<div class="g-col-12 g-col-md-6">
+<section id="key-definitions" class="level3 card">
+<h3 class="anchored" data-anchor-id="key-definitions">Key Definitions</h3>
+<p>Core concepts such as crime, deviance, harm, law, social control, criminalization, victimization, and recorded crime.</p>
+<p><a href="../../../criminology/notes/foundations/key-definitions.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="units-of-analysis" class="level3 card">
+<h3 class="anchored" data-anchor-id="units-of-analysis">Units of Analysis</h3>
+<p>How criminological explanations change when the unit is an individual, event, place, group, network, institution, or society.</p>
+<p><a href="../../../criminology/notes/foundations/units-of-analysis.html">Open →</a></p>
+</section>
+</div>
+</div>
+</section>
+<section id="crime-deviance-and-harm" class="level2">
+<h2 class="anchored" data-anchor-id="crime-deviance-and-harm">Crime, deviance, and harm</h2>
+<p>A behaviour can be harmful without being criminal. A behaviour can be criminal without being treated as equally harmful in practice. A behaviour can also be deviant without being illegal.</p>
+<p>These distinctions are important.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Basic meaning</th>
+<th>Example question</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Crime</td>
+<td>Behaviour prohibited by criminal law</td>
+<td>What does the law define as punishable?</td>
+</tr>
+<tr class="even">
+<td>Deviance</td>
+<td>Behaviour violating social norms</td>
+<td>What does society label as unacceptable?</td>
+</tr>
+<tr class="odd">
+<td>Harm</td>
+<td>Damage to persons, groups, or institutions</td>
+<td>Who is injured or made worse off?</td>
+</tr>
+<tr class="even">
+<td>Criminalization</td>
+<td>Process of making behaviour criminal</td>
+<td>Why is this behaviour treated as a criminal matter?</td>
+</tr>
+<tr class="odd">
+<td>Social control</td>
+<td>Formal or informal regulation of behaviour</td>
+<td>Who enforces norms, and how?</td>
+</tr>
+</tbody>
+</table>
+<p>Criminology often studies the relationship among these categories rather than assuming they are identical.</p>
+</section>
+<section id="true-crime-and-recorded-crime" class="level2">
+<h2 class="anchored" data-anchor-id="true-crime-and-recorded-crime">True crime and recorded crime</h2>
+<p>A central measurement problem is the gap between crime that occurs and crime that appears in official data.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[True crime incidence] --&gt; B{Is the event noticed?}
+    B --&gt;|No| C[Invisible event]
+    B --&gt;|Yes| D{Is it reported?}
+    D --&gt;|No| E[Unreported crime]
+    D --&gt;|Yes| F{Is it recorded by authorities?}
+    F --&gt;|No| G[Reported but not recorded]
+    F --&gt;|Yes| H[Recorded crime]
+    H --&gt; I[Official crime statistics]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This does not make official statistics useless. It means they should be interpreted carefully.</p>
+<p>Official statistics are especially useful when paired with:</p>
+<ul>
+<li>victimization surveys;</li>
+<li>self-report surveys;</li>
+<li>administrative records;</li>
+<li>qualitative evidence;</li>
+<li>local institutional knowledge;</li>
+<li>careful comparison over time.</li>
+</ul>
+</section>
+<section id="units-of-analysis-1" class="level2">
+<h2 class="anchored" data-anchor-id="units-of-analysis-1">Units of analysis</h2>
+<p>Criminological research can focus on different units.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Unit</th>
+<th>Typical question</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Individual</td>
+<td>Why does this person offend, desist, report, or comply?</td>
+</tr>
+<tr class="even">
+<td>Event</td>
+<td>Why did this crime happen here and now?</td>
+</tr>
+<tr class="odd">
+<td>Place</td>
+<td>Why are some places crime hotspots?</td>
+</tr>
+<tr class="even">
+<td>Group</td>
+<td>How do peers, gangs, or organizations shape behaviour?</td>
+</tr>
+<tr class="odd">
+<td>Network</td>
+<td>How do ties transmit information, opportunity, or trust?</td>
+</tr>
+<tr class="even">
+<td>Institution</td>
+<td>How do police, courts, prisons, or regulators act?</td>
+</tr>
+<tr class="odd">
+<td>Society</td>
+<td>How do inequality, culture, law, and state capacity shape crime?</td>
+</tr>
+</tbody>
+</table>
+<p>A theory that works at one level may not automatically work at another. For example, a theory of individual offending is not the same as a theory of neighbourhood crime rates.</p>
+</section>
+<section id="from-concept-to-measurement" class="level2">
+<h2 class="anchored" data-anchor-id="from-concept-to-measurement">From concept to measurement</h2>
+<p>A good empirical study must connect the concept being discussed to the variable being measured.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Concept] --&gt; B[Operational definition]
+    B --&gt; C[Measurement]
+    C --&gt; D[Data]
+    D --&gt; E[Inference]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>For example:</p>
+<ul>
+<li>“fear of crime” may be measured by survey responses;</li>
+<li>“police activity” may be measured by stops, arrests, patrol time, or spending;</li>
+<li>“violence” may be measured by hospital admissions, police records, or victimization data;</li>
+<li>“trust” may be measured by survey items, reporting behaviour, or cooperation.</li>
+</ul>
+<p>Each measurement choice captures something slightly different.</p>
+</section>
+<section id="explanation-versus-description" class="level2">
+<h2 class="anchored" data-anchor-id="explanation-versus-description">Explanation versus description</h2>
+<p>Description answers:</p>
+<blockquote class="blockquote">
+<p>What is happening?</p>
+</blockquote>
+<p>Explanation asks:</p>
+<blockquote class="blockquote">
+<p>Why is it happening?</p>
+</blockquote>
+<p>A descriptive claim might say that burglary is concentrated in certain areas. An explanatory claim asks why those areas experience more burglary: opportunity, guardianship, poverty, housing structure, policing, social networks, or reporting practices.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Observed pattern] --&gt; B[Description]
+    A --&gt; C[Possible explanations]
+    C --&gt; D[Mechanism]
+    D --&gt; E[Testable implication]
+    E --&gt; F[Evidence]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The move from pattern to mechanism is where theory becomes important.</p>
+</section>
+<section id="causation-and-mechanism" class="level2">
+<h2 class="anchored" data-anchor-id="causation-and-mechanism">Causation and mechanism</h2>
+<p>A mechanism is a process that connects cause and effect.</p>
+<p>For example:</p>
+<pre class="text"><code>poverty → stress and opportunity constraints → illegal income strategies</code></pre>
+<p>or:</p>
+<pre class="text"><code>low institutional trust → lower reporting → lower recorded crime</code></pre>
+<p>or:</p>
+<pre class="text"><code>increased guardianship → fewer suitable opportunities → lower burglary</code></pre>
+<p>A mechanism should make clear:</p>
+<ol type="1">
+<li>what changes;</li>
+<li>who responds;</li>
+<li>why they respond;</li>
+<li>what outcome follows;</li>
+<li>what evidence would support or challenge the explanation.</li>
+</ol>
+</section>
+<section id="common-measurement-problems" class="level2">
+<h2 class="anchored" data-anchor-id="common-measurement-problems">Common measurement problems</h2>
+<section id="underreporting" class="level3">
+<h3 class="anchored" data-anchor-id="underreporting">1. Underreporting</h3>
+<p>Many crimes are never reported to authorities. This is especially important for domestic abuse, sexual violence, fraud, drug offences, and crimes involving distrust of police.</p>
+</section>
+<section id="recording-variation" class="level3">
+<h3 class="anchored" data-anchor-id="recording-variation">2. Recording variation</h3>
+<p>Even reported events may not be recorded consistently across time, place, or institution.</p>
+</section>
+<section id="detection-bias" class="level3">
+<h3 class="anchored" data-anchor-id="detection-bias">3. Detection bias</h3>
+<p>Some crimes are found only when institutions search for them. Drug offences, tax violations, and regulatory offences often depend heavily on enforcement intensity.</p>
+</section>
+<section id="classification-changes" class="level3">
+<h3 class="anchored" data-anchor-id="classification-changes">4. Classification changes</h3>
+<p>Legal or administrative changes can alter crime categories without any real change in behaviour.</p>
+</section>
+<section id="visibility-bias" class="level3">
+<h3 class="anchored" data-anchor-id="visibility-bias">5. Visibility bias</h3>
+<p>Highly visible populations and places may appear more criminal because they are more closely monitored.</p>
+</section>
+<section id="ecological-fallacy" class="level3">
+<h3 class="anchored" data-anchor-id="ecological-fallacy">6. Ecological fallacy</h3>
+<p>Patterns at the group or area level should not be automatically applied to individuals.</p>
+</section>
+</section>
+<section id="checklist-for-foundation-level-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="checklist-for-foundation-level-analysis">Checklist for foundation-level analysis</h2>
+<p>Before using a criminological claim, ask:</p>
+<ol type="1">
+<li>What is being defined as crime?</li>
+<li>Is the issue crime, deviance, harm, or criminalization?</li>
+<li>What is the unit of analysis?</li>
+<li>Is the evidence about true crime or recorded crime?</li>
+<li>What measurement process produced the data?</li>
+<li>What mechanism is being proposed?</li>
+<li>What alternative explanations are possible?</li>
+<li>Does the claim confuse description with causation?</li>
+<li>Are institutions part of the measurement process?</li>
+<li>What would count as contrary evidence?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../../../criminology/notes/index.html">Criminology Notes</a></li>
+<li><a href="../../../criminology/notes/mechanisms/index.html">Mechanisms</a></li>
+<li><a href="../../../criminology/notes/institutions/index.html">Institutions</a></li>
+<li><a href="../../../criminology/notes/models/index.html">Models</a></li>
+<li><a href="../../../criminology/notes/topics/index.html">Topics</a></li>
+<li><a href="../../../criminology/toolkit/methods-map.html">Methods Map</a></li>
+<li><a href="../../../foundations/probability.html">Probability</a></li>
+<li><a href="../../../notes/metrics.html">Metrics</a></li>
 </ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Normal-form (simultaneous move) – Margins of Rationality</title>
+<title>Normal-form Games – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -159,14 +163,30 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
-  <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
-  <li><a href="#one-example-prisoners-dilemma" id="toc-one-example-prisoners-dilemma" class="nav-link" data-scroll-target="#one-example-prisoners-dilemma">One example (Prisoner’s Dilemma)</a></li>
-  <li><a href="#story" id="toc-story" class="nav-link" data-scroll-target="#story">Story</a></li>
-  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
-  <li><a href="#payoffs-toy" id="toc-payoffs-toy" class="nav-link" data-scroll-target="#payoffs-toy">Payoffs (toy)</a></li>
-  <li><a href="#equilibrium-nash" id="toc-equilibrium-nash" class="nav-link" data-scroll-target="#equilibrium-nash">Equilibrium (Nash)</a></li>
-  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
+  <li><a href="#basic-structure" id="toc-basic-structure" class="nav-link active" data-scroll-target="#basic-structure">Basic structure</a></li>
+  <li><a href="#why-normal-form-matters" id="toc-why-normal-form-matters" class="nav-link" data-scroll-target="#why-normal-form-matters">Why normal form matters</a></li>
+  <li><a href="#payoff-matrix" id="toc-payoff-matrix" class="nav-link" data-scroll-target="#payoff-matrix">Payoff matrix</a></li>
+  <li><a href="#simultaneous-does-not-always-mean-literal-same-time" id="toc-simultaneous-does-not-always-mean-literal-same-time" class="nav-link" data-scroll-target="#simultaneous-does-not-always-mean-literal-same-time">Simultaneous does not always mean literal same time</a></li>
+  <li><a href="#best-responses" id="toc-best-responses" class="nav-link" data-scroll-target="#best-responses">Best responses</a></li>
+  <li><a href="#nash-equilibrium" id="toc-nash-equilibrium" class="nav-link" data-scroll-target="#nash-equilibrium">Nash equilibrium</a></li>
+  <li><a href="#solving-a-2-by-2-game" id="toc-solving-a-2-by-2-game" class="nav-link" data-scroll-target="#solving-a-2-by-2-game">Solving a 2-by-2 game</a></li>
+  <li><a href="#dominant-strategies" id="toc-dominant-strategies" class="nav-link" data-scroll-target="#dominant-strategies">Dominant strategies</a></li>
+  <li><a href="#dominated-strategies" id="toc-dominated-strategies" class="nav-link" data-scroll-target="#dominated-strategies">Dominated strategies</a></li>
+  <li><a href="#coordination-games" id="toc-coordination-games" class="nav-link" data-scroll-target="#coordination-games">Coordination games</a></li>
+  <li><a href="#prisoners-dilemma" id="toc-prisoners-dilemma" class="nav-link" data-scroll-target="#prisoners-dilemma">Prisoners’ dilemma</a></li>
+  <li><a href="#mixed-strategies" id="toc-mixed-strategies" class="nav-link" data-scroll-target="#mixed-strategies">Mixed strategies</a></li>
+  <li><a href="#expected-payoff" id="toc-expected-payoff" class="nav-link" data-scroll-target="#expected-payoff">Expected payoff</a></li>
+  <li><a href="#normal-form-and-extensive-form" id="toc-normal-form-and-extensive-form" class="nav-link" data-scroll-target="#normal-form-and-extensive-form">Normal form and extensive form</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#confusing-actions-with-strategies" id="toc-confusing-actions-with-strategies" class="nav-link" data-scroll-target="#confusing-actions-with-strategies">1. Confusing actions with strategies</a></li>
+  <li><a href="#reading-payoffs-in-the-wrong-order" id="toc-reading-payoffs-in-the-wrong-order" class="nav-link" data-scroll-target="#reading-payoffs-in-the-wrong-order">2. Reading payoffs in the wrong order</a></li>
+  <li><a href="#treating-nash-equilibrium-as-the-best-social-outcome" id="toc-treating-nash-equilibrium-as-the-best-social-outcome" class="nav-link" data-scroll-target="#treating-nash-equilibrium-as-the-best-social-outcome">3. Treating Nash equilibrium as the best social outcome</a></li>
+  <li><a href="#removing-strategies-incorrectly" id="toc-removing-strategies-incorrectly" class="nav-link" data-scroll-target="#removing-strategies-incorrectly">4. Removing strategies incorrectly</a></li>
+  <li><a href="#ignoring-mixed-strategies" id="toc-ignoring-mixed-strategies" class="nav-link" data-scroll-target="#ignoring-mixed-strategies">5. Ignoring mixed strategies</a></li>
+  </ul></li>
+  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist">Checklist</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -175,7 +195,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Normal-form (simultaneous move)</h1>
+<h1 class="title">Normal-form Games</h1>
 </div>
 
 
@@ -192,61 +212,396 @@ window.Quarto = {
 </header>
 
 
-<section id="what-it-is" class="level2">
-<h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
-<p>A normal-form game models <strong>simultaneous</strong> choice: players pick actions without observing others’ choices.</p>
-<p>A finite two-player game is often represented by payoff matrices <span class="math inline">\((A,B)\)</span>.</p>
-</section>
-<section id="whats-special" class="level2">
-<h2 class="anchored" data-anchor-id="whats-special">What’s special</h2>
-<ul>
-<li>Strategies are complete plans chosen at once (pure or mixed).</li>
-<li>Main solution concept: <strong>Nash equilibrium</strong> (possibly mixed).</li>
-<li>Workhorse tools: best responses, dominance, indifference.</li>
-</ul>
-</section>
-<section id="one-example-prisoners-dilemma" class="level2">
-<h2 class="anchored" data-anchor-id="one-example-prisoners-dilemma">One example (Prisoner’s Dilemma)</h2>
-<p>Actions: <span class="math inline">\(C\)</span> (cooperate) or <span class="math inline">\(D\)</span> (defect).</p>
-<p>Payoffs: - <span class="math inline">\((C,C)=(2,2)\)</span> - <span class="math inline">\((D,C)=(3,0)\)</span> - <span class="math inline">\((C,D)=(0,3)\)</span> - <span class="math inline">\((D,D)=(1,1)\)</span></p>
-<p><strong>Solution sketch.</strong> <span class="math inline">\(D\)</span> strictly dominates <span class="math inline">\(C\)</span> for each player, so the unique Nash equilibrium is <span class="math inline">\((D,D)\)</span>, even though <span class="math inline">\((C,C)\)</span> is Pareto-better.</p>
-</section>
-<section id="story" class="level2">
-<h2 class="anchored" data-anchor-id="story">Story</h2>
-<p>Two independent cafés, <strong>North Bean</strong> and <strong>South Bean</strong>, sit across the same narrow street by a commuter station. Tomorrow morning there will be a marathon: heavy demand, impatient customers, and intense competition for foot traffic. Tonight, each café must decide whether to run a deep discount.</p>
-<p>If only one café discounts, it steals attention and most walk-ins. If both discount, they split the crowd but both suffer thin margins. If neither discounts, both do fine—yet each fears being the only one who doesn’t discount.</p>
-<p>They decide simultaneously: no café observes the other’s choice before committing.</p>
-</section>
-<section id="model" class="level2">
-<h2 class="anchored" data-anchor-id="model">Model</h2>
-<ul>
-<li>Players: cafés <span class="math inline">\(1,2\)</span></li>
-<li>Actions: <span class="math inline">\(D\)</span> (discount), <span class="math inline">\(N\)</span> (normal)</li>
-<li>Timing: simultaneous</li>
-<li>Payoffs: profits</li>
-</ul>
-</section>
-<section id="payoffs-toy" class="level2">
-<h2 class="anchored" data-anchor-id="payoffs-toy">Payoffs (toy)</h2>
+<p>A normal-form game represents a strategic situation in which players choose strategies and receive payoffs from the resulting strategy profile. It is the standard representation for simultaneous-move games and the natural starting point for Nash equilibrium.</p>
+<p>The normal form is useful because it makes the basic ingredients of a game explicit: players, strategies, and payoffs.</p>
+<section id="basic-structure" class="level2">
+<h2 class="anchored" data-anchor-id="basic-structure">Basic structure</h2>
+<p>A normal-form game can be written as</p>
 <p><span class="math display">\[
-\begin{array}{c|cc}
-&amp; D &amp; N\\ \hline
-D &amp; (1,1) &amp; (3,0)\\
-N &amp; (0,3) &amp; (2,2)
-\end{array}
+G=\langle N,(S_i)_{i\in N},(u_i)_{i\in N}\rangle.
+\]</span></p>
+<p>Here:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Object</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(N\)</span></td>
+<td>set of players</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(S_i\)</span></td>
+<td>strategy set of player <span class="math inline">\(i\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(u_i\)</span></td>
+<td>payoff function of player <span class="math inline">\(i\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>A strategy profile is</p>
+<p><span class="math display">\[
+s=(s_1,\ldots,s_n).
+\]</span></p>
+<p>Player <span class="math inline">\(i\)</span>’s payoff is</p>
+<p><span class="math display">\[
+u_i(s_i,s_{-i}),
+\]</span></p>
+<p>where <span class="math inline">\(s_{-i}\)</span> denotes the strategies of all players other than <span class="math inline">\(i\)</span>.</p>
+</section>
+<section id="why-normal-form-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-normal-form-matters">Why normal form matters</h2>
+<p>Normal form gives the cleanest setting for best-response reasoning.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Players] --&gt; D[Normal-form game]
+    B[Strategies] --&gt; D
+    C[Payoffs] --&gt; D
+    D --&gt; E[Best responses]
+    E --&gt; F[Nash equilibrium]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Once the normal-form game is defined, the main question is:</p>
+<blockquote class="blockquote">
+<p>Which strategies are best responses to which other strategies?</p>
+</blockquote>
+</section>
+<section id="payoff-matrix" class="level2">
+<h2 class="anchored" data-anchor-id="payoff-matrix">Payoff matrix</h2>
+<p>For two-player finite games, the normal form is often shown as a payoff matrix.</p>
+<p>For example:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: right;">Player 2: L</th>
+<th style="text-align: right;">Player 2: R</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Player 1: U</td>
+<td style="text-align: right;"><span class="math inline">\((2,2)\)</span></td>
+<td style="text-align: right;"><span class="math inline">\((0,3)\)</span></td>
+</tr>
+<tr class="even">
+<td>Player 1: D</td>
+<td style="text-align: right;"><span class="math inline">\((3,0)\)</span></td>
+<td style="text-align: right;"><span class="math inline">\((1,1)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Each cell gives payoffs in the form:</p>
+<p><span class="math display">\[
+(\text{Player 1 payoff}, \text{Player 2 payoff}).
+\]</span></p>
+<p>If Player 1 chooses <span class="math inline">\(U\)</span> and Player 2 chooses <span class="math inline">\(L\)</span>, the outcome is <span class="math inline">\((2,2)\)</span>.</p>
+</section>
+<section id="simultaneous-does-not-always-mean-literal-same-time" class="level2">
+<h2 class="anchored" data-anchor-id="simultaneous-does-not-always-mean-literal-same-time">Simultaneous does not always mean literal same time</h2>
+<p>A normal-form game is often called simultaneous-move, but the key idea is informational rather than physical.</p>
+<p>Players do not need to choose at exactly the same second. What matters is that a player cannot condition their current action on the other player’s current action.</p>
+<p>For example:</p>
+<ul>
+<li>two firms set prices without observing each other’s price;</li>
+<li>two suspects decide whether to confess;</li>
+<li>two countries choose military investment levels;</li>
+<li>two students choose how much effort to contribute to a joint project.</li>
+</ul>
+</section>
+<section id="best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="best-responses">Best responses</h2>
+<p>A best response is a strategy that maximizes a player’s payoff given the strategies of others.</p>
+<p>For player <span class="math inline">\(i\)</span>,</p>
+<p><span class="math display">\[
+BR_i(s_{-i})
+\in
+\arg\max_{s_i\in S_i}
+u_i(s_i,s_{-i}).
+\]</span></p>
+<p>This says:</p>
+<blockquote class="blockquote">
+<p>hold the other players’ strategies fixed, then choose the strategy that gives the highest payoff.</p>
+</blockquote>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Others' strategies] --&gt; B[Player i compares payoffs]
+    B --&gt; C[Choose highest payoff strategy]
+    C --&gt; D[Best response]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Best-response analysis is the core method for solving normal-form games.</p>
+</section>
+<section id="nash-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="nash-equilibrium">Nash equilibrium</h2>
+<p>A Nash equilibrium is a strategy profile where every player is choosing a best response to the others.</p>
+<p>Formally, <span class="math inline">\(s^*\)</span> is a Nash equilibrium if, for every player <span class="math inline">\(i\)</span>,</p>
+<p><span class="math display">\[
+u_i(s_i^*,s_{-i}^*)
+\geq
+u_i(s_i,s_{-i}^*)
+\quad
+\text{for all } s_i\in S_i.
+\]</span></p>
+<p>Equivalently,</p>
+<p><span class="math display">\[
+s_i^* \in BR_i(s_{-i}^*)
+\quad
+\text{for every } i.
 \]</span></p>
 </section>
-<section id="equilibrium-nash" class="level2">
-<h2 class="anchored" data-anchor-id="equilibrium-nash">Equilibrium (Nash)</h2>
-<p>Best responses: - If the other chooses <span class="math inline">\(N\)</span>, your best response is <span class="math inline">\(D\)</span> (you gain market share). - If the other chooses <span class="math inline">\(D\)</span>, your best response is <span class="math inline">\(D\)</span> (you avoid being undercut).</p>
-<p>So <span class="math inline">\(D\)</span> is a best response to both opponent actions: the unique Nash equilibrium is <span class="math inline">\((D,D)\)</span>.</p>
+<section id="solving-a-2-by-2-game" class="level2">
+<h2 class="anchored" data-anchor-id="solving-a-2-by-2-game">Solving a 2-by-2 game</h2>
+<p>For a two-player, two-action game, use this workflow:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Write payoff matrix] --&gt; B[Find Player 1's best response to each Player 2 action]
+    B --&gt; C[Find Player 2's best response to each Player 1 action]
+    C --&gt; D[Mark mutual best responses]
+    D --&gt; E[Nash equilibria]
+    E --&gt; F[Interpret result]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>A cell is a pure-strategy Nash equilibrium if both players’ strategies are best responses in that cell.</p>
 </section>
-<section id="later-on-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<section id="dominant-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="dominant-strategies">Dominant strategies</h2>
+<p>A strategy is strictly dominant if it gives a player a higher payoff than every other strategy, no matter what the other players do.</p>
+<p>For player <span class="math inline">\(i\)</span>, strategy <span class="math inline">\(s_i\)</span> strictly dominates <span class="math inline">\(s_i'\)</span> if</p>
+<p><span class="math display">\[
+u_i(s_i,s_{-i})
+&gt;
+u_i(s_i',s_{-i})
+\]</span></p>
+<p>for all <span class="math inline">\(s_{-i}\)</span>.</p>
+<p>A weakly dominant strategy gives at least as high a payoff in every case and a strictly higher payoff in at least one case.</p>
+<p>Dominant strategies are powerful because they do not depend on beliefs about what others do.</p>
+</section>
+<section id="dominated-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="dominated-strategies">Dominated strategies</h2>
+<p>A strategy is dominated if another strategy always performs better.</p>
+<p>Dominated strategies are often removed through iterative elimination.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Start with full game] --&gt; B[Find dominated strategies]
+    B --&gt; C[Remove dominated strategies]
+    C --&gt; D[Reduced game]
+    D --&gt; E{More dominated strategies?}
+    E --&gt;|Yes| B
+    E --&gt;|No| F[Remaining strategies]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This process is useful, but it is not the same as finding all Nash equilibria.</p>
+</section>
+<section id="coordination-games" class="level2">
+<h2 class="anchored" data-anchor-id="coordination-games">Coordination games</h2>
+<p>A coordination game has multiple equilibria, and players prefer to match each other’s actions.</p>
+<p>Example:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: right;">L</th>
+<th style="text-align: right;">R</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>U</td>
+<td style="text-align: right;"><span class="math inline">\((2,2)\)</span></td>
+<td style="text-align: right;"><span class="math inline">\((0,0)\)</span></td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td style="text-align: right;"><span class="math inline">\((0,0)\)</span></td>
+<td style="text-align: right;"><span class="math inline">\((1,1)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>There are two Nash equilibria:</p>
+<p><span class="math display">\[
+(U,L)
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+(D,R).
+\]</span></p>
+<p>The problem is not conflict alone. The problem is selecting the same equilibrium.</p>
+</section>
+<section id="prisoners-dilemma" class="level2">
+<h2 class="anchored" data-anchor-id="prisoners-dilemma">Prisoners’ dilemma</h2>
+<p>The prisoners’ dilemma shows how individually rational behaviour can lead to a collectively worse outcome.</p>
+<p>The usual structure is:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: right;">Cooperate</th>
+<th style="text-align: right;">Defect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cooperate</td>
+<td style="text-align: right;">good for both</td>
+<td style="text-align: right;">sucker payoff</td>
+</tr>
+<tr class="even">
+<td>Defect</td>
+<td style="text-align: right;">temptation payoff</td>
+<td style="text-align: right;">bad for both</td>
+</tr>
+</tbody>
+</table>
+<p>Each player has an incentive to defect, but mutual defection is worse than mutual cooperation.</p>
+<p>This is why Nash equilibrium should not be confused with social optimality.</p>
+</section>
+<section id="mixed-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="mixed-strategies">Mixed strategies</h2>
+<p>A mixed strategy is a probability distribution over pure strategies.</p>
+<p>If Player 1 chooses <span class="math inline">\(U\)</span> with probability <span class="math inline">\(p\)</span> and <span class="math inline">\(D\)</span> with probability <span class="math inline">\(1-p\)</span>, then Player 1’s mixed strategy is</p>
+<p><span class="math display">\[
+\sigma_1=(p,1-p).
+\]</span></p>
+<p>Mixed strategies are useful when no pure-strategy equilibrium exists or when players need to keep opponents indifferent.</p>
+<p>A mixed-strategy equilibrium requires each player to be willing to randomize among the strategies used with positive probability.</p>
+</section>
+<section id="expected-payoff" class="level2">
+<h2 class="anchored" data-anchor-id="expected-payoff">Expected payoff</h2>
+<p>If Player 2 plays <span class="math inline">\(L\)</span> with probability <span class="math inline">\(q\)</span> and <span class="math inline">\(R\)</span> with probability <span class="math inline">\(1-q\)</span>, Player 1’s expected payoff from <span class="math inline">\(U\)</span> is</p>
+<p><span class="math display">\[
+U_1(U,q)
+=
+q u_1(U,L)+(1-q)u_1(U,R).
+\]</span></p>
+<p>Player 1’s expected payoff from <span class="math inline">\(D\)</span> is</p>
+<p><span class="math display">\[
+U_1(D,q)
+=
+q u_1(D,L)+(1-q)u_1(D,R).
+\]</span></p>
+<p>If Player 1 mixes between <span class="math inline">\(U\)</span> and <span class="math inline">\(D\)</span>, then they must be indifferent:</p>
+<p><span class="math display">\[
+U_1(U,q)=U_1(D,q).
+\]</span></p>
+<p>This condition is often used to solve mixed equilibria.</p>
+</section>
+<section id="normal-form-and-extensive-form" class="level2">
+<h2 class="anchored" data-anchor-id="normal-form-and-extensive-form">Normal form and extensive form</h2>
+<p>A dynamic game can often be converted into normal form by listing each player’s complete strategies.</p>
+<p>However, the normal form may hide timing and credibility.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Representation</th>
+<th>Strength</th>
+<th>Weakness</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Normal form</td>
+<td>clear strategy-payoff structure</td>
+<td>hides timing</td>
+</tr>
+<tr class="even">
+<td>Extensive form</td>
+<td>shows sequence and information</td>
+<td>can be larger and more complex</td>
+</tr>
+</tbody>
+</table>
+<p>For sequential games, the extensive form is usually better for reasoning about credibility and subgame perfection.</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="confusing-actions-with-strategies" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-actions-with-strategies">1. Confusing actions with strategies</h3>
+<p>In static games, an action and strategy may look similar. In dynamic games, a strategy is a complete plan.</p>
+</section>
+<section id="reading-payoffs-in-the-wrong-order" class="level3">
+<h3 class="anchored" data-anchor-id="reading-payoffs-in-the-wrong-order">2. Reading payoffs in the wrong order</h3>
+<p>In a payoff pair <span class="math inline">\((a,b)\)</span>, the first number usually belongs to Player 1 and the second to Player 2.</p>
+</section>
+<section id="treating-nash-equilibrium-as-the-best-social-outcome" class="level3">
+<h3 class="anchored" data-anchor-id="treating-nash-equilibrium-as-the-best-social-outcome">3. Treating Nash equilibrium as the best social outcome</h3>
+<p>A Nash equilibrium may be inefficient.</p>
+</section>
+<section id="removing-strategies-incorrectly" class="level3">
+<h3 class="anchored" data-anchor-id="removing-strategies-incorrectly">4. Removing strategies incorrectly</h3>
+<p>Only dominated strategies should be removed under dominance reasoning.</p>
+</section>
+<section id="ignoring-mixed-strategies" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-mixed-strategies">5. Ignoring mixed strategies</h3>
+<p>A game may have no pure equilibrium but still have a mixed equilibrium.</p>
+</section>
+</section>
+<section id="checklist" class="level2">
+<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
+<p>When analysing a normal-form game, ask:</p>
+<ol type="1">
+<li>Who are the players?</li>
+<li>What are their strategies?</li>
+<li>What are the payoffs?</li>
+<li>What is each player’s best response to each opponent strategy?</li>
+<li>Are there dominant or dominated strategies?</li>
+<li>Are there mutual best responses?</li>
+<li>Are there multiple equilibria?</li>
+<li>Is there a mixed equilibrium?</li>
+<li>Is the equilibrium efficient?</li>
+<li>What does the result mean substantively?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
 <ul>
-<li><strong>Why it matters:</strong> this is the basic logic behind price wars and “race to the bottom” outcomes.</li>
-<li><strong>If repeated:</strong> repeated interaction can sustain <span class="math inline">\((N,N)\)</span> via punishments (see Repeated games).</li>
-<li><strong>If asymmetric costs:</strong> one café might never discount, shifting equilibrium and welfare.</li>
+<li><a href="../../notes/game-types/index.html">Game Types</a></li>
+<li><a href="../../notes/game-theory.html">Game Theory Notes</a></li>
+<li><a href="../../notes/equilibriums/nash.html">Nash Equilibrium</a></li>
+<li><a href="../../notes/equilibriums/subgame-perfect.html">Subgame Perfect Equilibrium</a></li>
+<li><a href="../../foundations/optimization.html">Optimization</a></li>
+<li><a href="../../foundations/probability.html">Probability</a></li>
 </ul>
 
 

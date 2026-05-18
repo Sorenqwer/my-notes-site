@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../../styles.css">
@@ -130,9 +134,30 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#mechanisms-to-connect" id="toc-mechanisms-to-connect" class="nav-link active" data-scroll-target="#mechanisms-to-connect">Mechanisms to connect</a></li>
-  <li><a href="#models-to-try" id="toc-models-to-try" class="nav-link" data-scroll-target="#models-to-try">Models to try</a></li>
-  <li><a href="#notes-to-add-later" id="toc-notes-to-add-later" class="nav-link" data-scroll-target="#notes-to-add-later">Notes to add later</a></li>
+  <li><a href="#basic-mechanism-map" id="toc-basic-mechanism-map" class="nav-link active" data-scroll-target="#basic-mechanism-map">Basic mechanism map</a></li>
+  <li><a href="#core-mechanisms" id="toc-core-mechanisms" class="nav-link" data-scroll-target="#core-mechanisms">Core mechanisms</a>
+  <ul class="collapse">
+  <li><a href="#automation" id="toc-automation" class="nav-link" data-scroll-target="#automation">Automation</a></li>
+  <li><a href="#anonymity-and-weak-attribution" id="toc-anonymity-and-weak-attribution" class="nav-link" data-scroll-target="#anonymity-and-weak-attribution">Anonymity and weak attribution</a></li>
+  <li><a href="#social-engineering" id="toc-social-engineering" class="nav-link" data-scroll-target="#social-engineering">Social engineering</a></li>
+  <li><a href="#platform-dependency" id="toc-platform-dependency" class="nav-link" data-scroll-target="#platform-dependency">Platform dependency</a></li>
+  <li><a href="#cross-border-enforcement" id="toc-cross-border-enforcement" class="nav-link" data-scroll-target="#cross-border-enforcement">Cross-border enforcement</a></li>
+  </ul></li>
+  <li><a href="#measurement-issues" id="toc-measurement-issues" class="nav-link" data-scroll-target="#measurement-issues">Measurement issues</a></li>
+  <li><a href="#attacker-defender-logic" id="toc-attacker-defender-logic" class="nav-link" data-scroll-target="#attacker-defender-logic">Attacker-defender logic</a></li>
+  <li><a href="#phishing-as-persuasion" id="toc-phishing-as-persuasion" class="nav-link" data-scroll-target="#phishing-as-persuasion">Phishing as persuasion</a></li>
+  <li><a href="#policy-trade-offs" id="toc-policy-trade-offs" class="nav-link" data-scroll-target="#policy-trade-offs">Policy trade-offs</a></li>
+  <li><a href="#cybercrime-and-displacement" id="toc-cybercrime-and-displacement" class="nav-link" data-scroll-target="#cybercrime-and-displacement">Cybercrime and displacement</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#treating-cybercrime-as-purely-technical" id="toc-treating-cybercrime-as-purely-technical" class="nav-link" data-scroll-target="#treating-cybercrime-as-purely-technical">1. Treating cybercrime as purely technical</a></li>
+  <li><a href="#ignoring-scale" id="toc-ignoring-scale" class="nav-link" data-scroll-target="#ignoring-scale">2. Ignoring scale</a></li>
+  <li><a href="#treating-victims-as-careless" id="toc-treating-victims-as-careless" class="nav-link" data-scroll-target="#treating-victims-as-careless">3. Treating victims as careless</a></li>
+  <li><a href="#ignoring-platforms" id="toc-ignoring-platforms" class="nav-link" data-scroll-target="#ignoring-platforms">4. Ignoring platforms</a></li>
+  <li><a href="#ignoring-cross-border-enforcement" id="toc-ignoring-cross-border-enforcement" class="nav-link" data-scroll-target="#ignoring-cross-border-enforcement">5. Ignoring cross-border enforcement</a></li>
+  </ul></li>
+  <li><a href="#checklist-for-analysing-cybercrime" id="toc-checklist-for-analysing-cybercrime" class="nav-link" data-scroll-target="#checklist-for-analysing-cybercrime">Checklist for analysing cybercrime</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -158,27 +183,276 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Cybercrime is offending mediated by digital systems and shaped by scale, anonymity, automation, platform design, and jurisdictional limits.</p>
-<section id="mechanisms-to-connect" class="level2">
-<h2 class="anchored" data-anchor-id="mechanisms-to-connect">Mechanisms to connect</h2>
-<ul>
-<li>low marginal cost of repeated attempts</li>
-<li>anonymity and attribution problems</li>
-<li>social engineering</li>
-<li>cross-border enforcement frictions</li>
-</ul>
+<p>Cybercrime refers to offences that use digital systems as targets, tools, environments, or markets. It includes hacking, malware, phishing, online fraud, identity theft, ransomware, platform abuse, data theft, harassment, and illicit online marketplaces.</p>
+<p>Cybercrime is not one mechanism. It is a domain shaped by scale, anonymity, automation, weak attribution, platform design, and cross-border enforcement problems.</p>
+<section id="basic-mechanism-map" class="level2">
+<h2 class="anchored" data-anchor-id="basic-mechanism-map">Basic mechanism map</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Cybercrime] --&gt; B[Technical opportunity]
+    A --&gt; C[Anonymity and attribution]
+    A --&gt; D[Automation and scale]
+    A --&gt; E[Human vulnerability]
+    A --&gt; F[Platform and market structure]
+
+    B --&gt; B1[Software weakness]
+    B --&gt; B2[Credential exposure]
+
+    C --&gt; C1[Hidden identity]
+    C --&gt; C2[Cross-border actors]
+
+    D --&gt; D1[Mass attempts]
+    D --&gt; D2[Low marginal cost]
+
+    E --&gt; E1[Phishing]
+    E --&gt; E2[Social engineering]
+
+    F --&gt; F1[Online markets]
+    F --&gt; F2[Platform rules]
+    F --&gt; F3[Data economies]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The distinctive feature of cybercrime is that one actor can target many victims at low marginal cost.</p>
 </section>
-<section id="models-to-try" class="level2">
-<h2 class="anchored" data-anchor-id="models-to-try">Models to try</h2>
-<ul>
-<li>attacker-defender games</li>
-<li>phishing as persuasion</li>
-<li>inspection games with costly monitoring</li>
-</ul>
+<section id="core-mechanisms" class="level2">
+<h2 class="anchored" data-anchor-id="core-mechanisms">Core mechanisms</h2>
+<section id="automation" class="level3">
+<h3 class="anchored" data-anchor-id="automation">Automation</h3>
+<p>Digital tools allow repeated attempts at scale. A fraud attempt with a very low success rate may still be profitable if the cost per attempt is tiny.</p>
 </section>
-<section id="notes-to-add-later" class="level2">
-<h2 class="anchored" data-anchor-id="notes-to-add-later">Notes to add later</h2>
-<p>Add empirical examples, key definitions, and one diagram linking mechanism → prediction → measurement.</p>
+<section id="anonymity-and-weak-attribution" class="level3">
+<h3 class="anchored" data-anchor-id="anonymity-and-weak-attribution">Anonymity and weak attribution</h3>
+<p>Cyber offenders can hide identity, location, or responsibility. This reduces expected detection and complicates enforcement.</p>
+</section>
+<section id="social-engineering" class="level3">
+<h3 class="anchored" data-anchor-id="social-engineering">Social engineering</h3>
+<p>Many cybercrimes exploit human behaviour rather than only technical weaknesses. Phishing, romance scams, and impersonation attacks rely on trust, urgency, fear, or confusion.</p>
+</section>
+<section id="platform-dependency" class="level3">
+<h3 class="anchored" data-anchor-id="platform-dependency">Platform dependency</h3>
+<p>Cybercrime often occurs through platforms, payment systems, social media, marketplaces, cloud services, or messaging apps. Platform rules shape opportunity.</p>
+</section>
+<section id="cross-border-enforcement" class="level3">
+<h3 class="anchored" data-anchor-id="cross-border-enforcement">Cross-border enforcement</h3>
+<p>Victims, offenders, servers, financial intermediaries, and platforms may be in different jurisdictions.</p>
+</section>
+</section>
+<section id="measurement-issues" class="level2">
+<h2 class="anchored" data-anchor-id="measurement-issues">Measurement issues</h2>
+<p>Cybercrime is hard to measure.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Issue</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Underreporting</td>
+<td>victims may feel shame or see reporting as useless</td>
+</tr>
+<tr class="even">
+<td>Misclassification</td>
+<td>incidents may be recorded as fraud, harassment, or data breach</td>
+</tr>
+<tr class="odd">
+<td>Private handling</td>
+<td>firms may resolve incidents internally</td>
+</tr>
+<tr class="even">
+<td>Cross-border cases</td>
+<td>jurisdiction complicates recording</td>
+</tr>
+<tr class="odd">
+<td>Rapid change</td>
+<td>offence methods evolve quickly</td>
+</tr>
+<tr class="even">
+<td>Technical uncertainty</td>
+<td>victims may not know how the offence occurred</td>
+</tr>
+</tbody>
+</table>
+<p>Recorded cybercrime usually captures only part of the problem.</p>
+</section>
+<section id="attacker-defender-logic" class="level2">
+<h2 class="anchored" data-anchor-id="attacker-defender-logic">Attacker-defender logic</h2>
+<p>Cybercrime can be represented as an attacker-defender game.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Defender chooses security level] --&gt; B[Attacker observes or infers weakness]
+    B --&gt; C[Attacker chooses target or method]
+    C --&gt; D{Attack succeeds?}
+    D --&gt;|Yes| E[Loss to victim]
+    D --&gt;|No| F[Attack cost or failure]
+    E --&gt; G[Defender updates security]
+    F --&gt; G
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The strategic point is adaptation. Defenders harden systems, attackers search for weaker targets or new methods.</p>
+</section>
+<section id="phishing-as-persuasion" class="level2">
+<h2 class="anchored" data-anchor-id="phishing-as-persuasion">Phishing as persuasion</h2>
+<p>Phishing can be understood as manipulative communication.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Attacker sends message] --&gt; B[Victim interprets credibility]
+    B --&gt; C{Trust message?}
+    C --&gt;|Yes| D[Click, pay, or reveal credentials]
+    C --&gt;|No| E[Ignore or report]
+    D --&gt; F[Loss or account compromise]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The message works when it changes beliefs or triggers action before verification.</p>
+</section>
+<section id="policy-trade-offs" class="level2">
+<h2 class="anchored" data-anchor-id="policy-trade-offs">Policy trade-offs</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Policy</th>
+<th>Mechanism</th>
+<th>Possible limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Security education</td>
+<td>reduces human vulnerability</td>
+<td>training fatigue</td>
+</tr>
+<tr class="even">
+<td>Multi-factor authentication</td>
+<td>reduces credential misuse</td>
+<td>adoption and usability issues</td>
+</tr>
+<tr class="odd">
+<td>Platform moderation</td>
+<td>disrupts abuse at scale</td>
+<td>false positives and evasion</td>
+</tr>
+<tr class="even">
+<td>Incident reporting rules</td>
+<td>improves visibility</td>
+<td>firms may under-disclose</td>
+</tr>
+<tr class="odd">
+<td>International cooperation</td>
+<td>improves enforcement</td>
+<td>slow and politically difficult</td>
+</tr>
+<tr class="even">
+<td>Payment tracing</td>
+<td>disrupts monetization</td>
+<td>offenders adapt to alternatives</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="cybercrime-and-displacement" class="level2">
+<h2 class="anchored" data-anchor-id="cybercrime-and-displacement">Cybercrime and displacement</h2>
+<p>Cyber offenders adapt quickly. Removing one method may shift activity to another.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Security improvement] --&gt; B[Original attack becomes harder]
+    B --&gt; C[Attacker adapts]
+    C --&gt; D[New target]
+    C --&gt; E[New method]
+    C --&gt; F[New platform]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This does not mean prevention is useless. It means policy should consider adaptation.</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="treating-cybercrime-as-purely-technical" class="level3">
+<h3 class="anchored" data-anchor-id="treating-cybercrime-as-purely-technical">1. Treating cybercrime as purely technical</h3>
+<p>Many cybercrimes exploit psychology, trust, institutions, and markets.</p>
+</section>
+<section id="ignoring-scale" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-scale">2. Ignoring scale</h3>
+<p>Low success rates can still be profitable at large scale.</p>
+</section>
+<section id="treating-victims-as-careless" class="level3">
+<h3 class="anchored" data-anchor-id="treating-victims-as-careless">3. Treating victims as careless</h3>
+<p>Cybercrime often involves sophisticated manipulation and structural vulnerability.</p>
+</section>
+<section id="ignoring-platforms" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-platforms">4. Ignoring platforms</h3>
+<p>Platforms shape opportunity, visibility, reporting, and enforcement.</p>
+</section>
+<section id="ignoring-cross-border-enforcement" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-cross-border-enforcement">5. Ignoring cross-border enforcement</h3>
+<p>Jurisdiction is often central to the problem.</p>
+</section>
+</section>
+<section id="checklist-for-analysing-cybercrime" class="level2">
+<h2 class="anchored" data-anchor-id="checklist-for-analysing-cybercrime">Checklist for analysing cybercrime</h2>
+<ol type="1">
+<li>Is the digital system the target, tool, environment, or market?</li>
+<li>What is the offender trying to gain?</li>
+<li>Is the mechanism technical, psychological, economic, or mixed?</li>
+<li>What makes the target vulnerable?</li>
+<li>How does anonymity or attribution matter?</li>
+<li>Is automation or scale important?</li>
+<li>Which platform or intermediary is involved?</li>
+<li>How is the incident measured?</li>
+<li>What intervention changes the offender’s expected payoff?</li>
+<li>How might offenders adapt?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../../../criminology/notes/topics/index.html">Topics</a></li>
+<li><a href="../../../criminology/notes/models/inspection-games.html">Inspection games</a></li>
+<li><a href="../../../criminology/notes/models/reporting-trust.html">Reporting and trust</a></li>
+<li><a href="../../../criminology/notes/models/network-crime.html">Network crime</a></li>
+<li><a href="../../../criminology/notes/mechanisms/opportunity-routine.html">Opportunity and routine activity</a></li>
+<li><a href="../../../psychology/overlaps/game-theory.html">Psychology and game theory</a></li>
+</ul>
 
 
 </section>

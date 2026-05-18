@@ -1,42 +1,322 @@
 ---
-title: "Fixed points & correspondences"
+title: "Fixed Points"
 toc: true
+page-layout: full
 ---
 
-## Fixed points (functions)
-A **fixed point** of a function $f:X\to X$ is a point $x^*$ such that
+A fixed point is a point that is mapped back to itself. In game theory, fixed-point reasoning is central because an equilibrium is often a situation where each player's strategy is consistent with everyone else's strategy.
+
+The basic idea is simple:
+
+$$
+x^* = f(x^*).
+$$
+
+The input and output coincide. Nothing changes after the mapping is applied.
+
+## The basic idea
+
+Suppose there is a function
+
+$$
+f:X \to X.
+$$
+
+A point $x^* \in X$ is a fixed point of $f$ if
+
+$$
+f(x^*) = x^*.
+$$
+
+This means that if we start at $x^*$ and apply the function, we end up exactly where we started.
+
+```{mermaid}
+flowchart LR
+    A[Start with x] --> B[Apply mapping f]
+    B --> C[Get f x]
+    C --> D{Is f x equal to x?}
+    D -->|Yes| E[Fixed point]
+    D -->|No| F[Not fixed]
+```
+
+The concept is useful because many stability ideas have this structure.
+
+## Simple example
+
+Let
+
+$$
+f(x)=\frac{x+1}{2}.
+$$
+
+A fixed point satisfies
+
+$$
+x=\frac{x+1}{2}.
+$$
+
+Multiply both sides by 2:
+
+$$
+2x=x+1.
+$$
+
+So
+
+$$
+x=1.
+$$
+
+Therefore, $x^*=1$ is a fixed point.
+
+Check:
+
+$$
+f(1)=\frac{1+1}{2}=1.
+$$
+
+## Fixed points and equilibrium
+
+In game theory, a Nash equilibrium can be understood as a fixed point of best-response reasoning.
+
+Each player chooses a best response to what the others do. If everyone is already best responding to everyone else, the strategy profile is stable.
+
+```{mermaid}
+flowchart LR
+    A[Strategy profile] --> B[Best-response mapping]
+    B --> C[New strategy profile]
+    C --> D{Same as before?}
+    D -->|Yes| E[Nash equilibrium]
+    D -->|No| F[Adjust again]
+```
+
+The formal idea is:
+
+$$
+s^* \in BR(s^*).
+$$
+
+Here $BR$ is the best-response correspondence. A Nash equilibrium is a fixed point of the best-response correspondence.
+
+## Function versus correspondence
+
+A function assigns exactly one output to each input.
+
+A correspondence can assign a set of possible outputs to each input.
+
+For example, a best response may not be unique. A player may be indifferent between several strategies. In that case, the best-response object is a correspondence rather than a function.
+
+```{mermaid}
+flowchart TD
+    A[Input] --> B{Mapping type}
+    B --> C[Function: one output]
+    B --> D[Correspondence: set of outputs]
+    D --> E[Best responses may be multiple]
+```
+
+This is why many equilibrium existence theorems use fixed-point theorems for correspondences.
+
+## Why fixed points matter
+
+Fixed-point reasoning helps prove that an equilibrium exists.
+
+In many models, we do not solve directly for the equilibrium. Instead, we show that some mapping must have a fixed point. If the mapping represents best responses, then the fixed point is an equilibrium.
+
+The logic is:
+
+```{mermaid}
+flowchart LR
+    A[Define strategy space] --> B[Define best-response mapping]
+    B --> C[Check mathematical conditions]
+    C --> D[Apply fixed-point theorem]
+    D --> E[Equilibrium exists]
+```
+
+This is especially important in games with continuous strategy spaces or mixed strategies.
+
+## Brouwer fixed-point theorem
+
+The Brouwer fixed-point theorem says, roughly:
+
+> If a continuous function maps a compact and convex set into itself, then it has at least one fixed point.
+
+A simplified statement is:
+
+Let $X$ be non-empty, compact, and convex. If
+
+$$
+f:X \to X
+$$
+
+is continuous, then there exists some $x^* \in X$ such that
+
 $$
 f(x^*)=x^*.
 $$
 
-**Intuition.** An equilibrium is often a fixed point: if “best response” maps strategies into strategies, equilibrium is where nothing changes.
+The key conditions are:
 
-## Brouwer (idea)
-Brouwer’s fixed point theorem (informal): a continuous function from a compact convex set to itself has a fixed point.
+| Condition | Meaning |
+|---|---|
+| Non-empty | There is at least one possible point |
+| Compact | The set is closed and bounded |
+| Convex | Mixtures of points stay inside the set |
+| Continuous | Small input changes do not create jumps |
+| Maps into itself | The output remains feasible |
 
-This supports existence of equilibrium in many continuous games.
+## Kakutani fixed-point theorem
 
-## Correspondences (set-valued maps)
-A **correspondence** $F:X \rightrightarrows X$ assigns a *set* $F(x)$ to each $x$.
-Best responses are usually correspondences:
-$$
-BR_i(s_{-i}) = \arg\max_{s_i\in S_i} u_i(s_i,s_{-i}),
-$$
-which may contain multiple maximizers.
+Kakutani's theorem extends the logic to correspondences.
 
-## Kakutani (idea)
-Kakutani’s theorem (informal): under continuity-like conditions and nonempty convex values, a correspondence has a fixed point:
+A simplified version says:
+
+> If a correspondence maps a non-empty, compact, convex set into itself, and satisfies suitable continuity and convexity conditions, then it has a fixed point.
+
+This is useful for game theory because best responses may be set-valued.
+
+A fixed point of a correspondence $F$ is a point $x^*$ such that
+
 $$
 x^* \in F(x^*).
 $$
 
-This is the classic route to Nash existence with mixed strategies: the product of best-response correspondences has a fixed point.
+For Nash equilibrium, this becomes:
 
-## Example: fixed point intuition in 1D
-Let $f(x)=\frac{1}{2}x+\frac{1}{4}$ on $[0,1]$.
-Solve $x=f(x)$:
 $$
-x=\frac{1}{2}x+\frac{1}{4}\Rightarrow x^*=\frac{1}{2}.
+s^* \in BR(s^*).
 $$
 
-Equilibrium-as-fixed-point is exactly this: apply the rule, you land back on yourself.
+## Fixed points in mixed strategies
+
+Finite games may fail to have a pure-strategy Nash equilibrium, but they always have a mixed-strategy Nash equilibrium.
+
+The existence proof relies on fixed-point reasoning.
+
+The intuition is:
+
+1. each player has a set of mixed strategies;
+2. each player has best responses to others' mixed strategies;
+3. the best-response correspondence maps the strategy space into itself;
+4. under appropriate conditions, there is a fixed point;
+5. that fixed point is a Nash equilibrium.
+
+```{mermaid}
+flowchart TD
+    A[Finite game] --> B[Mixed strategy spaces]
+    B --> C[Best-response correspondence]
+    C --> D[Fixed-point theorem]
+    D --> E[Mixed-strategy Nash equilibrium exists]
+```
+
+This does not tell us which equilibrium is best or unique. It only guarantees existence.
+
+## Stability interpretation
+
+A fixed point is a kind of stability condition. If the system is at the fixed point, applying the rule again does not move it.
+
+In social science, this can describe:
+
+- equilibrium strategies;
+- stable beliefs;
+- persistent norms;
+- self-confirming expectations;
+- steady states;
+- institutional routines.
+
+The common structure is:
+
+```text
+current state → adjustment rule → next state
+```
+
+A fixed point occurs when:
+
+```text
+current state = next state
+```
+
+## Fixed point versus convergence
+
+A fixed point is not the same as convergence.
+
+A mapping may have a fixed point, but the process of repeatedly applying the mapping may not necessarily converge to it.
+
+For example, a system can cycle:
+
+```{mermaid}
+flowchart LR
+    A[State A] --> B[State B]
+    B --> C[State C]
+    C --> A
+```
+
+So we should separate two questions:
+
+1. Does a fixed point exist?
+2. Will a process actually reach it?
+
+Existence is mathematical. Convergence is dynamic.
+
+## Application: best-response dynamics
+
+In best-response dynamics, players repeatedly adjust to what others did before.
+
+```{mermaid}
+flowchart LR
+    A[Initial strategies] --> B[Player 1 best responds]
+    B --> C[Player 2 best responds]
+    C --> D[New strategies]
+    D --> E{Stable?}
+    E -->|Yes| F[Equilibrium]
+    E -->|No| B
+```
+
+If the process reaches a point where no one wants to change, it has reached a Nash equilibrium.
+
+But best-response dynamics do not always converge. Some games cycle.
+
+## Common mistakes
+
+### 1. Thinking a fixed point must be unique
+
+A mapping may have one fixed point, many fixed points, or none.
+
+### 2. Confusing fixed point with maximum
+
+A fixed point solves $x=f(x)$. An optimum solves a maximization or minimization problem.
+
+### 3. Confusing existence with computation
+
+A theorem may prove that an equilibrium exists without telling us how to find it.
+
+### 4. Confusing existence with stability
+
+A fixed point may exist even if a dynamic process does not converge to it.
+
+### 5. Ignoring assumptions
+
+Fixed-point theorems require conditions such as compactness, convexity, continuity, and self-mapping.
+
+## Checklist
+
+When you see fixed-point reasoning, ask:
+
+1. What is the set $X$?
+2. What is the mapping $f$ or correspondence $F$?
+3. Does it map $X$ into itself?
+4. Is $X$ non-empty?
+5. Is $X$ compact?
+6. Is $X$ convex?
+7. Is the mapping continuous or suitably well-behaved?
+8. What does the fixed point mean substantively?
+9. Is the fixed point an equilibrium, steady state, or stable belief?
+10. Does the argument prove existence, uniqueness, or convergence?
+
+## Related pages
+
+- [Optimization](optimization.qmd)
+- [Convexity](convexity.qmd)
+- [Linear Algebra](linear-algebra.qmd)
+- [Game Theory Notes](../notes/game-theory.qmd)
+- [Nash Equilibrium](../notes/equilibriums/nash.qmd)
+- [Equilibrium Concepts](../notes/equilibriums/index.qmd)

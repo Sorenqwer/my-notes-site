@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../../styles.css">
@@ -125,11 +129,37 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#why-institutions-matter" id="toc-why-institutions-matter" class="nav-link active" data-scroll-target="#why-institutions-matter">Why institutions matter</a></li>
+  <li><a href="#main-institution-pages" id="toc-main-institution-pages" class="nav-link" data-scroll-target="#main-institution-pages">Main institution pages</a></li>
+  <li><a href="#the-institutional-chain" id="toc-the-institutional-chain" class="nav-link" data-scroll-target="#the-institutional-chain">The institutional chain</a></li>
+  <li><a href="#institutions-as-strategic-actors" id="toc-institutions-as-strategic-actors" class="nav-link" data-scroll-target="#institutions-as-strategic-actors">Institutions as strategic actors</a></li>
+  <li><a href="#policing-1" id="toc-policing-1" class="nav-link" data-scroll-target="#policing-1">Policing</a></li>
+  <li><a href="#courts-1" id="toc-courts-1" class="nav-link" data-scroll-target="#courts-1">Courts</a></li>
+  <li><a href="#corrections-1" id="toc-corrections-1" class="nav-link" data-scroll-target="#corrections-1">Corrections</a></li>
+  <li><a href="#legitimacy-and-institutional-trust" id="toc-legitimacy-and-institutional-trust" class="nav-link" data-scroll-target="#legitimacy-and-institutional-trust">Legitimacy and institutional trust</a></li>
+  <li><a href="#institutional-errors" id="toc-institutional-errors" class="nav-link" data-scroll-target="#institutional-errors">Institutional errors</a></li>
+  <li><a href="#policy-questions" id="toc-policy-questions" class="nav-link" data-scroll-target="#policy-questions">Policy questions</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#treating-institutions-as-neutral-recording-devices" id="toc-treating-institutions-as-neutral-recording-devices" class="nav-link" data-scroll-target="#treating-institutions-as-neutral-recording-devices">1. Treating institutions as neutral recording devices</a></li>
+  <li><a href="#ignoring-discretion" id="toc-ignoring-discretion" class="nav-link" data-scroll-target="#ignoring-discretion">2. Ignoring discretion</a></li>
+  <li><a href="#equating-more-enforcement-with-less-crime" id="toc-equating-more-enforcement-with-less-crime" class="nav-link" data-scroll-target="#equating-more-enforcement-with-less-crime">3. Equating more enforcement with less crime</a></li>
+  <li><a href="#ignoring-legitimacy" id="toc-ignoring-legitimacy" class="nav-link" data-scroll-target="#ignoring-legitimacy">4. Ignoring legitimacy</a></li>
+  <li><a href="#treating-punishment-as-one-mechanism" id="toc-treating-punishment-as-one-mechanism" class="nav-link" data-scroll-target="#treating-punishment-as-one-mechanism">5. Treating punishment as one mechanism</a></li>
+  <li><a href="#ignoring-feedback" id="toc-ignoring-feedback" class="nav-link" data-scroll-target="#ignoring-feedback">6. Ignoring feedback</a></li>
+  </ul></li>
+  <li><a href="#checklist-for-institutional-analysis" id="toc-checklist-for-institutional-analysis" class="nav-link" data-scroll-target="#checklist-for-institutional-analysis">Checklist for institutional analysis</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -138,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -150,14 +180,390 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Institutions are <strong>strategic actors</strong> (objectives, constraints, incentives). This section treats policing, courts, and corrections as part of an equilibrium system.</p>
+<p>Institutions shape how crime is defined, detected, processed, punished, prevented, and recorded. In criminology, institutions are not only background conditions. They are strategic actors with incentives, constraints, errors, legitimacy problems, and information limits.</p>
+<p>This section focuses on policing, courts, corrections, and the broader institutional chain connecting crime events to official responses.</p>
+<section id="why-institutions-matter" class="level2">
+<h2 class="anchored" data-anchor-id="why-institutions-matter">Why institutions matter</h2>
+<p>A crime event does not automatically become a criminal justice outcome. It must pass through many institutional stages.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Crime or alleged crime] --&gt; B[Reporting or detection]
+    B --&gt; C[Police response]
+    C --&gt; D[Investigation]
+    D --&gt; E[Charging decision]
+    E --&gt; F[Court process]
+    F --&gt; G[Sentence or dismissal]
+    G --&gt; H[Correctional or community supervision]
+    H --&gt; I[Long-term consequences]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Each stage involves discretion. Each stage can create error, inequality, delay, deterrence, legitimacy, or distrust.</p>
+</section>
+<section id="main-institution-pages" class="level2">
+<h2 class="anchored" data-anchor-id="main-institution-pages">Main institution pages</h2>
+<div class="grid gap-3">
+<div class="g-col-12 g-col-md-4">
+<section id="policing" class="level3 card">
+<h3 class="anchored" data-anchor-id="policing">Policing</h3>
+<p>Police as detection, enforcement, order maintenance, service provision, and legitimacy-producing institutions.</p>
+<p><a href="../../../criminology/notes/institutions/policing.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-4">
+<section id="courts" class="level3 card">
+<h3 class="anchored" data-anchor-id="courts">Courts</h3>
+<p>Courts as institutions of adjudication, bargaining, legal classification, procedural fairness, and case processing.</p>
+<p><a href="../../../criminology/notes/institutions/courts.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-4">
+<section id="corrections" class="level3 card">
+<h3 class="anchored" data-anchor-id="corrections">Corrections</h3>
+<p>Prisons, probation, parole, rehabilitation, incapacitation, reentry, stigma, and long-term institutional effects.</p>
+<p><a href="../../../criminology/notes/institutions/corrections.html">Open →</a></p>
+</section>
+</div>
+</div>
+</section>
+<section id="the-institutional-chain" class="level2">
+<h2 class="anchored" data-anchor-id="the-institutional-chain">The institutional chain</h2>
+<p>A useful way to analyse institutions is to follow the case pathway.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Event] --&gt; B{Observed?}
+    B --&gt;|No| C[No institutional case]
+    B --&gt;|Yes| D{Reported or detected?}
+    D --&gt;|No| E[Hidden from system]
+    D --&gt;|Yes| F[Police contact]
+    F --&gt; G{Recorded?}
+    G --&gt;|No| H[No official crime record]
+    G --&gt;|Yes| I[Official record]
+    I --&gt; J{Suspect identified?}
+    J --&gt;|No| K[Unsolved case]
+    J --&gt;|Yes| L[Charge or diversion decision]
+    L --&gt; M[Court or settlement process]
+    M --&gt; N[Outcome]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This chain shows why official criminal justice data are institutionally produced. They are not pure measurements of social behaviour.</p>
+</section>
+<section id="institutions-as-strategic-actors" class="level2">
+<h2 class="anchored" data-anchor-id="institutions-as-strategic-actors">Institutions as strategic actors</h2>
+<p>Institutions respond to incentives and constraints.</p>
+<p>Police may respond to crime rates, public pressure, budgets, political priorities, legal rules, performance targets, and community relations.</p>
+<p>Courts may respond to caseload pressure, evidence quality, plea bargaining incentives, procedural rules, and sentencing guidelines.</p>
+<p>Correctional systems may respond to capacity, public safety claims, rehabilitation goals, labour constraints, and political pressure.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Institutional constraints] --&gt; B[Institutional incentives]
+    B --&gt; C[Discretionary decisions]
+    C --&gt; D[Observed justice outcomes]
+    D --&gt; E[Public trust or distrust]
+    E --&gt; B
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The feedback loop matters. Institutional action changes public trust, and public trust changes reporting, cooperation, compliance, and legitimacy.</p>
+</section>
+<section id="policing-1" class="level2">
+<h2 class="anchored" data-anchor-id="policing-1">Policing</h2>
+<p>Policing is not only enforcement. Police also produce information.</p>
+<p>Police activity affects:</p>
 <ul>
-<li><a href="../../../criminology/notes/institutions/policing.html">Policing</a></li>
-<li><a href="../../../criminology/notes/institutions/courts.html">Courts (charging, plea bargaining, sentencing)</a></li>
-<li><a href="../../../criminology/notes/institutions/corrections.html">Corrections (incarceration, supervision, reentry)</a></li>
+<li>detection;</li>
+<li>recorded crime;</li>
+<li>perceived risk;</li>
+<li>public trust;</li>
+<li>community cooperation;</li>
+<li>informal order;</li>
+<li>visibility of certain groups;</li>
+<li>legitimacy of law.</li>
+</ul>
+<p>This makes policing central to both crime control and crime measurement.</p>
+<p>A simple policing mechanism may look like:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Patrol or monitoring] --&gt; B[Perceived detection risk]
+    B --&gt; C[Behavioural response]
+    A --&gt; D[Actual detection]
+    D --&gt; E[Recorded crime]
+    A --&gt; F[Community experience]
+    F --&gt; G[Trust and cooperation]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The same intervention can increase recorded crime by increasing detection, even if underlying offending falls.</p>
+</section>
+<section id="courts-1" class="level2">
+<h2 class="anchored" data-anchor-id="courts-1">Courts</h2>
+<p>Courts process cases under uncertainty.</p>
+<p>Key questions include:</p>
+<ul>
+<li>How strong is the evidence?</li>
+<li>What is the expected trial outcome?</li>
+<li>What are the costs of delay?</li>
+<li>What are the incentives to accept a plea?</li>
+<li>How does procedural fairness affect legitimacy?</li>
+<li>How do sentencing rules shape bargaining?</li>
+</ul>
+<p>Court outcomes are not only legal outcomes. They are also negotiated outcomes produced under institutional pressure.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Evidence strength] --&gt; B[Charging and bargaining]
+    C[Trial risk] --&gt; B
+    D[Caseload pressure] --&gt; B
+    E[Legal rights and procedure] --&gt; B
+    B --&gt; F[Case outcome]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="corrections-1" class="level2">
+<h2 class="anchored" data-anchor-id="corrections-1">Corrections</h2>
+<p>Corrections include prisons, probation, parole, rehabilitation, and reentry.</p>
+<p>Correctional institutions can produce different mechanisms:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Mechanism</th>
+<th>Possible effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Incapacitation</td>
+<td>prevents offending during custody</td>
+</tr>
+<tr class="even">
+<td>Deterrence</td>
+<td>discourages future offending through expected punishment</td>
+</tr>
+<tr class="odd">
+<td>Rehabilitation</td>
+<td>changes skills, constraints, or behaviour</td>
+</tr>
+<tr class="even">
+<td>Stigma</td>
+<td>reduces future opportunity</td>
+</tr>
+<tr class="odd">
+<td>Network exposure</td>
+<td>connects people to criminogenic networks</td>
+</tr>
+<tr class="even">
+<td>Reentry support</td>
+<td>reduces barriers after release</td>
+</tr>
+</tbody>
+</table>
+<p>Correctional policy therefore involves trade-offs. A sanction can reduce crime through incapacitation while increasing future risk through stigma or disrupted employment.</p>
+</section>
+<section id="legitimacy-and-institutional-trust" class="level2">
+<h2 class="anchored" data-anchor-id="legitimacy-and-institutional-trust">Legitimacy and institutional trust</h2>
+<p>Institutions do not only change incentives. They also shape whether people view law as rightful.</p>
+<p>Legitimacy matters because voluntary compliance and cooperation are partly trust-based.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Procedural fairness] --&gt; B[Institutional legitimacy]
+    B --&gt; C[Trust]
+    C --&gt; D[Reporting and cooperation]
+    C --&gt; E[Voluntary compliance]
+    D --&gt; F[Institutional effectiveness]
+    E --&gt; F
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>When legitimacy falls, institutions may need more coercion to produce the same behavioural outcome. That can further reduce trust.</p>
+</section>
+<section id="institutional-errors" class="level2">
+<h2 class="anchored" data-anchor-id="institutional-errors">Institutional errors</h2>
+<p>Criminal justice institutions face several kinds of error.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Error type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>False positive</td>
+<td>treating an innocent person as guilty</td>
+</tr>
+<tr class="even">
+<td>False negative</td>
+<td>failing to detect or sanction actual wrongdoing</td>
+</tr>
+<tr class="odd">
+<td>Classification error</td>
+<td>recording an event under the wrong category</td>
+</tr>
+<tr class="even">
+<td>Discretionary bias</td>
+<td>unequal treatment across people or places</td>
+</tr>
+<tr class="odd">
+<td>Process error</td>
+<td>delay, lost evidence, weak procedure, or inconsistent decision-making</td>
+</tr>
+</tbody>
+</table>
+<p>Institutional analysis should ask where errors enter the chain and who bears their cost.</p>
+</section>
+<section id="policy-questions" class="level2">
+<h2 class="anchored" data-anchor-id="policy-questions">Policy questions</h2>
+<p>Institutional policy should be analysed through mechanisms.</p>
+<p>Examples:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Policy</th>
+<th>Mechanism to examine</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hotspot policing</td>
+<td>concentration of patrol and deterrence</td>
+</tr>
+<tr class="even">
+<td>Body-worn cameras</td>
+<td>accountability, evidence, and behaviour change</td>
+</tr>
+<tr class="odd">
+<td>Procedural justice training</td>
+<td>legitimacy and cooperation</td>
+</tr>
+<tr class="even">
+<td>Sentencing reform</td>
+<td>deterrence, incapacitation, proportionality, prison population</td>
+</tr>
+<tr class="odd">
+<td>Diversion</td>
+<td>reduced stigma and alternative intervention</td>
+</tr>
+<tr class="even">
+<td>Reentry programmes</td>
+<td>employment, housing, support, and desistance</td>
+</tr>
+</tbody>
+</table>
+<p>The key question is not simply whether a policy is “tough” or “soft.” The key question is what mechanism it activates and what consequences it produces.</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="treating-institutions-as-neutral-recording-devices" class="level3">
+<h3 class="anchored" data-anchor-id="treating-institutions-as-neutral-recording-devices">1. Treating institutions as neutral recording devices</h3>
+<p>Institutions shape the data they produce.</p>
+</section>
+<section id="ignoring-discretion" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-discretion">2. Ignoring discretion</h3>
+<p>Rules matter, but discretionary interpretation and implementation also matter.</p>
+</section>
+<section id="equating-more-enforcement-with-less-crime" class="level3">
+<h3 class="anchored" data-anchor-id="equating-more-enforcement-with-less-crime">3. Equating more enforcement with less crime</h3>
+<p>More enforcement may increase detection and recorded crime, change displacement, or reduce trust.</p>
+</section>
+<section id="ignoring-legitimacy" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-legitimacy">4. Ignoring legitimacy</h3>
+<p>Compliance is not only produced by fear of punishment.</p>
+</section>
+<section id="treating-punishment-as-one-mechanism" class="level3">
+<h3 class="anchored" data-anchor-id="treating-punishment-as-one-mechanism">5. Treating punishment as one mechanism</h3>
+<p>Punishment can deter, incapacitate, stigmatize, rehabilitate, or destabilize.</p>
+</section>
+<section id="ignoring-feedback" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-feedback">6. Ignoring feedback</h3>
+<p>Institutional action changes future behaviour, cooperation, reporting, and trust.</p>
+</section>
+</section>
+<section id="checklist-for-institutional-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="checklist-for-institutional-analysis">Checklist for institutional analysis</h2>
+<ol type="1">
+<li>Which institution is acting?</li>
+<li>What choices does it have?</li>
+<li>What information does it observe?</li>
+<li>What incentives and constraints does it face?</li>
+<li>Where does discretion enter?</li>
+<li>What errors are possible?</li>
+<li>How does the institution affect recorded data?</li>
+<li>How does it affect trust and legitimacy?</li>
+<li>What feedback effects may follow?</li>
+<li>Which groups bear the costs and benefits?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../../../criminology/notes/index.html">Criminology Notes</a></li>
+<li><a href="../../../criminology/notes/mechanisms/index.html">Mechanisms</a></li>
+<li><a href="../../../criminology/notes/models/index.html">Models</a></li>
+<li><a href="../../../criminology/notes/topics/index.html">Topics</a></li>
+<li><a href="../../../criminology/notes/models/reporting-trust.html">Reporting and trust</a></li>
+<li><a href="../../../criminology/notes/models/inspection-games.html">Inspection games</a></li>
+<li><a href="../../../criminology/notes/models/plea-bargaining.html">Plea bargaining</a></li>
+<li><a href="../../../criminology/notes/mechanisms/legitimacy-compliance.html">Legitimacy and compliance</a></li>
+<li><a href="../../../foundations/dynamic-reasoning.html">Dynamic reasoning</a></li>
 </ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

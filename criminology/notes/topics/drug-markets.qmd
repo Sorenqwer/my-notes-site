@@ -1,23 +1,200 @@
 ---
 title: "Drug Markets"
 toc: true
+page-layout: full
 ---
 
-Drug markets combine illicit exchange, dependence, enforcement, violence, and substitution. Policy pressure often changes market structure rather than simply eliminating demand.
+Drug markets involve the production, distribution, sale, purchase, and consumption of prohibited or regulated substances. They combine demand, dependence, illicit exchange, enforcement risk, violence, public health, stigma, and institutional response.
 
-## Mechanisms to connect
+Drug markets are useful for studying how policy changes market structure rather than simply turning behaviour on or off.
 
-- demand persistence
-- enforcement displacement
-- violence under non-contractibility
-- risk premia and price changes
+## Basic mechanism map
 
-## Models to try
+```{mermaid}
+flowchart TD
+    A[Drug Markets] --> B[Demand]
+    A --> C[Supply and distribution]
+    A --> D[Enforcement risk]
+    A --> E[Violence and governance]
+    A --> F[Health and harm]
 
-- illicit market equilibrium
-- enforcement and displacement models
-- network models of distribution
+    B --> B1[Dependence]
+    B --> B2[Recreation]
+    B --> B3[Social context]
 
-## Notes to add later
+    C --> C1[Dealers]
+    C --> C2[Networks]
+    C --> C3[Territory]
 
-Add empirical examples, key definitions, and one diagram linking mechanism → prediction → measurement.
+    D --> D1[Detection]
+    D --> D2[Sanction]
+    D --> D3[Risk premium]
+
+    E --> E1[Dispute resolution]
+    E --> E2[Retaliation]
+    E --> E3[Market control]
+
+    F --> F1[Overdose]
+    F --> F2[Contamination]
+    F --> F3[Treatment access]
+```
+
+The key feature of illicit drug markets is that demand and supply persist under legal risk, but the form of the market changes.
+
+## Core mechanisms
+
+### Demand persistence
+
+Demand may persist because of dependence, recreation, pain, social environment, or economic opportunity. Enforcement alone may not remove demand.
+
+### Risk premium
+
+Illegality raises costs and risks. Sellers may require higher returns to compensate for punishment risk, seizure, violence, and uncertainty.
+
+### Non-contractibility
+
+Illegal market participants cannot rely on courts. This increases the importance of reputation, violence, trust, and repeated exchange.
+
+### Enforcement displacement
+
+Enforcement may move markets across places, platforms, methods, or substances.
+
+### Public health harm
+
+Drug policy affects not only crime, but also overdose, contamination, treatment access, stigma, and willingness to seek help.
+
+## Measurement issues
+
+Drug markets are partly hidden and enforcement-dependent.
+
+| Issue | Why it matters |
+|---|---|
+| Arrest data | reflects enforcement intensity as well as behaviour |
+| Seizure data | reflects detection and policing strategy |
+| Self-report data | may understate stigmatized behaviour |
+| Health data | captures harm but not full market activity |
+| Price and purity | may indicate market pressure but are hard to measure |
+| Open-air visibility | visible markets are easier to police and count |
+
+A rise in drug arrests may mean more drug activity, more enforcement, or changed policing priorities.
+
+## Illicit market logic
+
+A simple market view begins with supply and demand, but illegality adds enforcement risk.
+
+```{mermaid}
+flowchart LR
+    A[Demand] --> C[Illicit exchange]
+    B[Supply] --> C
+    D[Enforcement risk] --> E[Risk premium]
+    E --> C
+    C --> F[Price, purity, availability]
+    F --> G[Consumption and harm]
+```
+
+Enforcement can raise costs, but the effect depends on market adaptation and demand elasticity.
+
+## Violence in drug markets
+
+Violence may arise because illegal market participants cannot use legal institutions to resolve disputes.
+
+```{mermaid}
+flowchart TD
+    A[Illicit transaction] --> B{Dispute or betrayal?}
+    B -->|No| C[Exchange continues]
+    B -->|Yes| D{Legal enforcement available?}
+    D -->|No| E[Self-help enforcement]
+    E --> F[Threats or violence]
+    D -->|Yes| G[Formal dispute resolution]
+```
+
+Violence is therefore connected to governance, trust, and market structure.
+
+## Enforcement and adaptation
+
+Drug markets often adapt to enforcement.
+
+```{mermaid}
+flowchart LR
+    A[Enforcement pressure] --> B[Higher risk]
+    B --> C[Market adaptation]
+    C --> D[New location]
+    C --> E[New method]
+    C --> F[New substance]
+    C --> G[More hidden transactions]
+```
+
+This means policy analysis should look beyond immediate arrests.
+
+## Public health approach
+
+A public health approach focuses on reducing harm, not only reducing supply.
+
+Possible mechanisms include:
+
+- treatment access;
+- harm reduction;
+- overdose prevention;
+- safer consumption information;
+- reduced stigma;
+- housing and support;
+- substitution treatment;
+- early intervention.
+
+This approach changes the outcome of interest from “number of arrests” to harm, survival, treatment, and stability.
+
+## Policy trade-offs
+
+| Policy | Intended mechanism | Possible risk |
+|---|---|---|
+| Supply enforcement | raises cost and risk | displacement, violence, hidden markets |
+| Demand reduction | lowers consumption | slow and support-dependent |
+| Treatment | reduces dependence-related demand | access and retention challenges |
+| Harm reduction | reduces death and injury | political resistance |
+| Decriminalization | reduces justice-system harm | depends on health infrastructure |
+| Market regulation | reduces illicit control | design and compliance challenges |
+
+## Common mistakes
+
+### 1. Treating drug markets as simple supply problems
+
+Demand, dependence, substitution, and social context matter.
+
+### 2. Using arrests as direct evidence of market size
+
+Arrests are strongly shaped by enforcement.
+
+### 3. Ignoring public health outcomes
+
+Policy may reduce visible dealing but increase overdose or contamination risk.
+
+### 4. Ignoring displacement
+
+Markets can move across space, method, or substance.
+
+### 5. Treating all substances as the same
+
+Different drugs have different markets, harms, users, and enforcement dynamics.
+
+## Checklist for analysing drug markets
+
+1. Which substance or market is being studied?
+2. What drives demand?
+3. How is supply organized?
+4. How does enforcement affect risk and price?
+5. What role does violence play?
+6. What data source is being used?
+7. Does the measure reflect behaviour or enforcement?
+8. Is displacement likely?
+9. What public health outcomes matter?
+10. What policy trade-off is involved?
+
+## Related pages
+
+- [Topics](index.qmd)
+- [Organized crime](organized-crime.qmd)
+- [Network crime](../models/network-crime.qmd)
+- [Inspection games](../models/inspection-games.qmd)
+- [Social interactions](../mechanisms/social-interactions.qmd)
+- [Institutions](../institutions/index.qmd)
+- [Methods Map](../../toolkit/methods-map.qmd)

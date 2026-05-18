@@ -1,26 +1,288 @@
 ---
 title: "Probability"
 toc: true
+page-layout: full
 ---
 
-## Distributions and mixed strategies
-A mixed strategy is a probability distribution over actions. If the action set is finite, this is just a probability vector (see the simplex definition in Linear algebra).
+Probability is the language of uncertainty. In game theory, it appears whenever players randomise, hold beliefs, observe signals, face private information, or make decisions under incomplete knowledge.
 
-**Intuition.** “Randomizing” in game theory is not mystical: it’s a distribution that other players can form beliefs about.
+This page introduces the probability tools most often used in the notes: events, random variables, expectation, mixed strategies, conditional probability, Bayes' rule, signals, types, and posterior beliefs.
+
+## Why probability matters in game theory
+
+Game theory uses probability in two main ways.
+
+First, probability can describe **randomisation**. A mixed strategy is a probability distribution over actions.
+
+Second, probability can describe **beliefs**. In Bayesian games, players may be uncertain about another player's type, payoff, information, or intention.
+
+```{mermaid}
+flowchart TD
+    A[Probability in Game Theory] --> B[Randomisation]
+    A --> C[Beliefs]
+
+    B --> B1[Mixed Strategies]
+    B --> B2[Expected Payoffs]
+    B --> B3[Indifference Conditions]
+
+    C --> C1[Types]
+    C --> C2[Signals]
+    C --> C3[Bayesian Updating]
+    C --> C4[Posterior Beliefs]
+```
+
+The same mathematical tool therefore has two interpretations: either a player is genuinely randomising, or another player is uncertain about what is true.
+
+## Events and probabilities
+
+A **sample space** is the set of possible outcomes. An **event** is a subset of the sample space.
+
+For example, if a player may be either high-cost or low-cost, the sample space is
+
+$$
+\Omega = \{H,L\}.
+$$
+
+The event that the player is high-cost is
+
+$$
+\{H\}.
+$$
+
+A probability assigns a number between 0 and 1 to each event. If
+
+$$
+\mathbb{P}(H)=0.3,
+$$
+
+then the probability of type $H$ is 0.3.
+
+Since there are only two types here,
+
+$$
+\mathbb{P}(L)=1-\mathbb{P}(H)=0.7.
+$$
+
+## Random variables
+
+A **random variable** assigns numerical values to outcomes.
+
+For example, suppose a player's cost can be high or low:
+
+$$
+c(H)=10,
+\qquad
+c(L)=4.
+$$
+
+If the probability of type $H$ is 0.3 and the probability of type $L$ is 0.7, then the cost is uncertain before the type is known.
+
+Random variables are useful because payoffs often depend on uncertain states, types, signals, or actions.
 
 ## Expectation
+
 If a random variable $X$ takes values $x_k$ with probabilities $p_k$, then
 
 $$
-\mathbb{E}[X]=\sum_k x_k p_k.
+\mathbb{E}[X]
+=
+\sum_k x_k p_k.
 $$
 
-In games, expected utility under a mixed strategy is exactly this idea: average the payoff over all possible outcomes, weighted by their probabilities.
+Expectation is the probability-weighted average value of a random variable.
+
+For example, if
+
+$$
+X =
+\begin{cases}
+10 & \text{with probability } 0.3,\\
+4 & \text{with probability } 0.7,
+\end{cases}
+$$
+
+then
+
+$$
+\mathbb{E}[X]
+=
+10(0.3)+4(0.7)
+=
+5.8.
+$$
+
+In games, expected utility uses exactly this logic: average payoffs over possible outcomes, weighted by their probabilities.
+
+## Expected utility
+
+Suppose a player chooses action $a$, but the payoff depends on an uncertain state $\theta$. If the possible states are $\theta_1,\ldots,\theta_K$, expected utility is
+
+$$
+\mathbb{E}[u(a,\theta)]
+=
+\sum_{k=1}^{K}
+u(a,\theta_k)\mathbb{P}(\theta_k).
+$$
+
+The player chooses the action with the highest expected utility:
+
+$$
+a^*
+\in
+\arg\max_{a \in A}
+\sum_{k=1}^{K}
+u(a,\theta_k)\mathbb{P}(\theta_k).
+$$
+
+This is the bridge between probability and optimization.
+
+## Mixed strategies
+
+A **mixed strategy** is a probability distribution over pure actions.
+
+If a player has two actions, $A$ and $B$, then a mixed strategy may be written as
+
+$$
+\sigma(A)=p,
+\qquad
+\sigma(B)=1-p,
+$$
+
+where
+
+$$
+p \in [0,1].
+$$
+
+The player chooses $A$ with probability $p$ and $B$ with probability $1-p$.
+
+If the action set is finite,
+
+$$
+S_i = \{s_{i1},s_{i2},\ldots,s_{im}\},
+$$
+
+then a mixed strategy is a probability vector
+
+$$
+\sigma_i = (\sigma_i(s_{i1}),\ldots,\sigma_i(s_{im})),
+$$
+
+where
+
+$$
+\sigma_i(s_{ij}) \geq 0
+$$
+
+for all $j$, and
+
+$$
+\sum_{j=1}^{m}\sigma_i(s_{ij})=1.
+$$
+
+Mixed strategies are not mystical. They are probability distributions that allow players and opponents to compute expected payoffs.
+
+## Expected payoff under a mixed strategy
+
+Suppose player 1 chooses between $A$ and $B$, while player 2 chooses between $L$ and $R$.
+
+If player 2 plays $L$ with probability $q$ and $R$ with probability $1-q$, then player 1's expected payoff from playing $A$ is
+
+$$
+U_1(A,q)
+=
+q u_1(A,L)
++
+(1-q)u_1(A,R).
+$$
+
+Player 1's expected payoff from playing $B$ is
+
+$$
+U_1(B,q)
+=
+q u_1(B,L)
++
+(1-q)u_1(B,R).
+$$
+
+Player 1 prefers $A$ when
+
+$$
+U_1(A,q)>U_1(B,q).
+$$
+
+Player 1 prefers $B$ when
+
+$$
+U_1(B,q)>U_1(A,q).
+$$
+
+Player 1 is indifferent when
+
+$$
+U_1(A,q)=U_1(B,q).
+$$
+
+This indifference condition is often used to solve mixed-strategy equilibria.
+
+## Conditional probability
+
+Conditional probability asks: what is the probability of event $A$ given that event $B$ has occurred?
+
+It is written as
+
+$$
+\mathbb{P}(A \mid B).
+$$
+
+For events $A$ and $B$ with $\mathbb{P}(B)>0$,
+
+$$
+\mathbb{P}(A\mid B)
+=
+\frac{\mathbb{P}(A\cap B)}{\mathbb{P}(B)}.
+$$
+
+This formula says:
+
+> among the cases where $B$ occurs, what fraction also involve $A$?
+
+Conditional probability is essential for belief updating.
+
+## Bayes' rule
+
+Bayes' rule rewrites conditional probability in a form useful for updating beliefs.
+
+For events $A$ and $B$ with $\mathbb{P}(B)>0$,
+
+$$
+\mathbb{P}(A\mid B)
+=
+\frac{
+\mathbb{P}(B\mid A)\mathbb{P}(A)
+}{
+\mathbb{P}(B)
+}.
+$$
+
+The terms have a standard interpretation:
+
+| Term | Meaning |
+|---|---|
+| $\mathbb{P}(A)$ | prior belief |
+| $\mathbb{P}(B\mid A)$ | likelihood of observing evidence $B$ if $A$ is true |
+| $\mathbb{P}(B)$ | overall probability of observing evidence $B$ |
+| $\mathbb{P}(A\mid B)$ | posterior belief after observing $B$ |
+
+The intuition is:
+
+> prior belief is reweighted by how well the hypothesis predicts the evidence.
 
 ## From probability to posterior belief
- 
+
 This diagram shows how conditional probability and Bayes' rule fit into belief updating.
- 
+
 ```{mermaid}
 flowchart TD
     A[Sample Space] --> B[Events]
@@ -33,18 +295,10 @@ flowchart TD
     G --> H[Posterior Belief]
 ```
 
-
-## Bayes’ rule
-For events $A$ and $B$ with $\mathbb{P}(B)>0$,
-
-$$
-\mathbb{P}(A\mid B)=\frac{\mathbb{P}(B\mid A)\,\mathbb{P}(A)}{\mathbb{P}(B)}.
-$$
-
-**Intuition.** Prior belief $\mathbb{P}(A)$ gets *updated* by how well $A$ predicts the evidence $B$.
+Bayes' rule is especially important in games with incomplete information, where players must update beliefs after observing signals, messages, or actions.
 
 ## Belief updating as a process
- 
+
 ```{mermaid}
 flowchart TD
     A[Start with a Prior] --> B[Observe Evidence or Signal]
@@ -54,25 +308,263 @@ flowchart TD
     E --> F[Use Posterior to Make Decisions]
 ```
 
+In words:
+
+1. Start with a prior belief.
+2. Observe a signal.
+3. Ask how likely the signal would be under each possible state.
+4. Reweight the prior.
+5. Use the posterior belief to choose an action.
 
 ## Example: updating beliefs about types
-A player is either type $H$ or $L$. Prior $\mathbb{P}(H)=0.3$, $\mathbb{P}(L)=0.7$.
+
+A player is either type $H$ or type $L$. The prior beliefs are
+
+$$
+\mathbb{P}(H)=0.3,
+\qquad
+\mathbb{P}(L)=0.7.
+$$
+
 You observe a signal $s$. Suppose
 
 $$
-\mathbb{P}(s\mid H)=0.8,\qquad \mathbb{P}(s\mid L)=0.2.
+\mathbb{P}(s\mid H)=0.8,
+\qquad
+\mathbb{P}(s\mid L)=0.2.
 $$
 
-First compute the overall likelihood of $s$:
+First compute the overall probability of observing $s$:
 
 $$
-\mathbb{P}(s)=\mathbb{P}(s\mid H)\mathbb{P}(H)+\mathbb{P}(s\mid L)\mathbb{P}(L)=0.8\cdot 0.3+0.2\cdot 0.7=0.38.
+\mathbb{P}(s)
+=
+\mathbb{P}(s\mid H)\mathbb{P}(H)
++
+\mathbb{P}(s\mid L)\mathbb{P}(L).
 $$
 
-Then the posterior belief is
+Substitute the numbers:
 
 $$
-\mathbb{P}(H\mid s)=\frac{0.8\cdot 0.3}{0.38}\approx 0.6316.
+\mathbb{P}(s)
+=
+0.8 \cdot 0.3
++
+0.2 \cdot 0.7
+=
+0.24+0.14
+=
+0.38.
 $$
 
-So after observing $s$, belief in type $H$ rises from $0.3$ to about $0.63$.
+Then compute the posterior probability of type $H$:
+
+$$
+\mathbb{P}(H\mid s)
+=
+\frac{
+\mathbb{P}(s\mid H)\mathbb{P}(H)
+}{
+\mathbb{P}(s)
+}
+=
+\frac{0.8 \cdot 0.3}{0.38}
+=
+\frac{0.24}{0.38}
+\approx
+0.6316.
+$$
+
+So after observing signal $s$, belief in type $H$ rises from 0.3 to about 0.63.
+
+The signal increases belief in $H$ because it is more likely under $H$ than under $L$.
+
+## Prior, likelihood, posterior
+
+The belief-updating example can be summarised as:
+
+```{mermaid}
+flowchart LR
+    A[Prior: P(H)] --> C[Posterior: P(H | s)]
+    B[Likelihood: P(s | H) and P(s | L)] --> C
+    C --> D[Decision after observing signal]
+```
+
+A posterior belief is not just the prior plus the signal. It depends on how diagnostic the signal is.
+
+A signal is more diagnostic when its likelihood differs strongly across states.
+
+## Signals and types
+
+In Bayesian games, a **type** represents private information about a player. A type may describe:
+
+- cost
+- ability
+- patience
+- preference
+- information
+- intention
+- valuation
+- honesty or bias
+
+A **signal** is something observed that may contain information about the type.
+
+The basic structure is:
+
+```{mermaid}
+flowchart TD
+    A[Unknown Type] --> B[Signal or Action]
+    B --> C[Observer Updates Beliefs]
+    C --> D[Observer Chooses Response]
+    D --> E[Strategic Outcome]
+```
+
+This structure appears in signaling games, cheap-talk games, reputation models, screening problems, and many models of trust.
+
+## Bayesian games
+
+A Bayesian game includes uncertainty about types. The model normally specifies:
+
+1. a set of players;
+2. a type space for each player;
+3. prior beliefs over types;
+4. actions or strategies;
+5. payoffs that may depend on types.
+
+A player's strategy must specify what they do for each possible type. If player $i$ has type $\theta_i$, a strategy can be written as
+
+$$
+s_i(\theta_i).
+$$
+
+A Bayesian Nash equilibrium requires each type to choose a best response given beliefs and the strategies of others.
+
+In short:
+
+$$
+\text{Bayesian reasoning}
+=
+\text{optimization under beliefs}.
+$$
+
+## Beliefs after actions
+
+In dynamic games, players may update beliefs after observing actions.
+
+For example, suppose a sender chooses a message $m$, and the receiver must infer the sender's type $\theta$.
+
+The receiver's posterior belief is
+
+$$
+\mu(\theta \mid m).
+$$
+
+Using Bayes' rule,
+
+$$
+\mu(\theta \mid m)
+=
+\frac{
+\mathbb{P}(m\mid \theta)\mathbb{P}(\theta)
+}{
+\sum_{\theta'} \mathbb{P}(m\mid \theta')\mathbb{P}(\theta')
+}.
+$$
+
+This formula says that a message changes beliefs according to how likely each type would be to send that message.
+
+This is the foundation of signaling and cheap talk.
+
+## On-path and off-path beliefs
+
+In dynamic games with incomplete information, some actions or messages occur with positive probability in equilibrium. These are called **on-path**.
+
+Other actions or messages are not expected to occur in equilibrium. These are called **off-path**.
+
+Bayes' rule pins down beliefs after on-path observations. But after an off-path observation, Bayes' rule may not give a unique answer because the denominator may be zero.
+
+This is why solution concepts such as perfect Bayesian equilibrium and sequential equilibrium include belief requirements.
+
+The key idea is:
+
+```{mermaid}
+flowchart TD
+    A[Observation occurs] --> B{Positive probability in equilibrium?}
+    B -->|Yes| C[Use Bayes' rule]
+    B -->|No| D[Off-path belief needs extra discipline]
+    C --> E[Posterior belief]
+    D --> E
+    E --> F[Sequentially rational action]
+```
+
+## Independence
+
+Two events $A$ and $B$ are independent if learning that one occurred does not change the probability of the other.
+
+Formally,
+
+$$
+\mathbb{P}(A\mid B)=\mathbb{P}(A).
+$$
+
+Equivalently,
+
+$$
+\mathbb{P}(A\cap B)
+=
+\mathbb{P}(A)\mathbb{P}(B).
+$$
+
+Independence is useful, but it should not be assumed automatically. In strategic settings, actions are often informative precisely because they are not independent of types or incentives.
+
+## Common mistakes
+
+### 1. Confusing prior and posterior
+
+The prior is the belief before observing evidence. The posterior is the belief after updating on evidence.
+
+### 2. Ignoring the denominator in Bayes' rule
+
+The denominator $\mathbb{P}(B)$ matters because it measures how likely the evidence is overall.
+
+### 3. Treating a signal as proof
+
+A signal changes beliefs. It does not usually reveal the state with certainty.
+
+### 4. Assuming independence without justification
+
+If actions are strategically chosen, they may be correlated with private information.
+
+### 5. Confusing mixed strategies with uncertainty about pure strategies
+
+A mixed strategy is a deliberate probability distribution over actions. Uncertainty about what someone will do may arise from mixed strategies, private information, or lack of observation.
+
+### 6. Forgetting off-path beliefs
+
+In dynamic incomplete-information games, behaviour after unexpected observations may matter for equilibrium.
+
+## Checklist for belief updating
+
+When using Bayes' rule in a model, ask:
+
+1. What are the possible states or types?
+2. What is the prior belief over those states?
+3. What signal or action is observed?
+4. How likely is that signal under each state?
+5. What is the overall probability of the signal?
+6. What is the posterior belief after observing it?
+7. How does the posterior belief affect the next action?
+8. Are we updating after an on-path or off-path observation?
+
+## Related pages
+
+- [Game Theory Notes](../notes/game-theory.qmd)
+- [Bayesian games](../notes/game-types/bayesian.qmd)
+- [Bayesian Nash equilibrium](../notes/equilibriums/bayesian-nash.qmd)
+- [Perfect Bayesian equilibrium](../notes/equilibriums/perfect-bayesian.qmd)
+- [Cheap talk](../notes/game-types/cheap-talk.qmd)
+- [Signaling](../notes/game-types/signaling.qmd)
+- [Optimization](optimization.qmd)
+- [Dynamic reasoning](dynamic-reasoning.qmd)
+- [Linear algebra](linear-algebra.qmd)

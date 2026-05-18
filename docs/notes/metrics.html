@@ -68,7 +68,40 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -130,8 +163,31 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#common-distinctions" id="toc-common-distinctions" class="nav-link active" data-scroll-target="#common-distinctions">Common distinctions</a></li>
-  <li><a href="#to-add-later" id="toc-to-add-later" class="nav-link" data-scroll-target="#to-add-later">To add later</a></li>
+  <li><a href="#why-metrics-matter" id="toc-why-metrics-matter" class="nav-link active" data-scroll-target="#why-metrics-matter">Why metrics matter</a></li>
+  <li><a href="#count-and-rate" id="toc-count-and-rate" class="nav-link" data-scroll-target="#count-and-rate">Count and rate</a></li>
+  <li><a href="#choosing-the-denominator" id="toc-choosing-the-denominator" class="nav-link" data-scroll-target="#choosing-the-denominator">Choosing the denominator</a></li>
+  <li><a href="#stock-and-flow" id="toc-stock-and-flow" class="nav-link" data-scroll-target="#stock-and-flow">Stock and flow</a></li>
+  <li><a href="#prevalence-and-incidence" id="toc-prevalence-and-incidence" class="nav-link" data-scroll-target="#prevalence-and-incidence">Prevalence and incidence</a></li>
+  <li><a href="#risk-and-probability" id="toc-risk-and-probability" class="nav-link" data-scroll-target="#risk-and-probability">Risk and probability</a></li>
+  <li><a href="#expected-value" id="toc-expected-value" class="nav-link" data-scroll-target="#expected-value">Expected value</a></li>
+  <li><a href="#accuracy-precision-and-bias" id="toc-accuracy-precision-and-bias" class="nav-link" data-scroll-target="#accuracy-precision-and-bias">Accuracy, precision, and bias</a></li>
+  <li><a href="#proxy-measures" id="toc-proxy-measures" class="nav-link" data-scroll-target="#proxy-measures">Proxy measures</a></li>
+  <li><a href="#latent-concepts" id="toc-latent-concepts" class="nav-link" data-scroll-target="#latent-concepts">Latent concepts</a></li>
+  <li><a href="#belief-accuracy" id="toc-belief-accuracy" class="nav-link" data-scroll-target="#belief-accuracy">Belief accuracy</a></li>
+  <li><a href="#payoff-comparison" id="toc-payoff-comparison" class="nav-link" data-scroll-target="#payoff-comparison">Payoff comparison</a></li>
+  <li><a href="#welfare-comparison" id="toc-welfare-comparison" class="nav-link" data-scroll-target="#welfare-comparison">Welfare comparison</a></li>
+  <li><a href="#rates-over-time" id="toc-rates-over-time" class="nav-link" data-scroll-target="#rates-over-time">Rates over time</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#comparing-counts-when-rates-are-needed" id="toc-comparing-counts-when-rates-are-needed" class="nav-link" data-scroll-target="#comparing-counts-when-rates-are-needed">1. Comparing counts when rates are needed</a></li>
+  <li><a href="#using-the-wrong-denominator" id="toc-using-the-wrong-denominator" class="nav-link" data-scroll-target="#using-the-wrong-denominator">2. Using the wrong denominator</a></li>
+  <li><a href="#treating-proxy-as-concept" id="toc-treating-proxy-as-concept" class="nav-link" data-scroll-target="#treating-proxy-as-concept">3. Treating proxy as concept</a></li>
+  <li><a href="#ignoring-measurement-process" id="toc-ignoring-measurement-process" class="nav-link" data-scroll-target="#ignoring-measurement-process">4. Ignoring measurement process</a></li>
+  <li><a href="#confusing-prediction-with-explanation" id="toc-confusing-prediction-with-explanation" class="nav-link" data-scroll-target="#confusing-prediction-with-explanation">5. Confusing prediction with explanation</a></li>
+  <li><a href="#ignoring-uncertainty" id="toc-ignoring-uncertainty" class="nav-link" data-scroll-target="#ignoring-uncertainty">6. Ignoring uncertainty</a></li>
+  </ul></li>
+  <li><a href="#checklist-for-using-a-metric" id="toc-checklist-for-using-a-metric" class="nav-link" data-scroll-target="#checklist-for-using-a-metric">Checklist for using a metric</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -157,24 +213,428 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Metrics pages collect small measurement concepts used across notes.</p>
-<section id="common-distinctions" class="level2">
-<h2 class="anchored" data-anchor-id="common-distinctions">Common distinctions</h2>
-<ul>
-<li><strong>Rate vs count:</strong> a count records events; a rate normalizes by population, exposure, time, or opportunity.</li>
-<li><strong>Stock vs flow:</strong> a stock is measured at a point in time; a flow is measured over an interval.</li>
-<li><strong>Latent concept vs observed proxy:</strong> the thing we care about may not be directly observed.</li>
-<li><strong>Precision vs interpretability:</strong> a complex measure may predict better but explain less clearly.</li>
-</ul>
+<p>Metrics are tools for making comparisons precise. They turn concepts into quantities, but they also introduce assumptions. A metric is useful only when we understand what it measures, what it leaves out, and how it can be misread.</p>
+<p>This page collects basic measurement ideas used across the site.</p>
+<section id="why-metrics-matter" class="level2">
+<h2 class="anchored" data-anchor-id="why-metrics-matter">Why metrics matter</h2>
+<p>Many arguments depend on measurement.</p>
+<p>In game theory, we compare payoffs, beliefs, welfare, strategies, and equilibrium outcomes.</p>
+<p>In criminology, we compare crime counts, rates, reporting, risk, harm, institutional outcomes, and policy effects.</p>
+<p>In psychology, we compare behaviour, beliefs, symptoms, responses, and decision patterns.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Concept] --&gt; B[Metric]
+    B --&gt; C[Comparison]
+    C --&gt; D[Interpretation]
+    D --&gt; E[Decision or argument]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The danger is that the metric may look precise while the underlying concept remains unclear.</p>
 </section>
-<section id="to-add-later" class="level2">
-<h2 class="anchored" data-anchor-id="to-add-later">To add later</h2>
+<section id="count-and-rate" class="level2">
+<h2 class="anchored" data-anchor-id="count-and-rate">Count and rate</h2>
+<p>A <strong>count</strong> records the number of events.</p>
+<p>A <strong>rate</strong> normalizes the count by a relevant denominator.</p>
+<p>For example:</p>
+<p><span class="math display">\[
+\text{Crime rate}
+=
+\frac{\text{Number of crimes}}{\text{Population}}
+\times 100{,}000.
+\]</span></p>
+<p>Counts are useful for scale. Rates are useful for comparison.</p>
+<p>If City A has more crimes than City B, it may simply have a larger population. A rate adjusts for this.</p>
+</section>
+<section id="choosing-the-denominator" class="level2">
+<h2 class="anchored" data-anchor-id="choosing-the-denominator">Choosing the denominator</h2>
+<p>A rate depends on the denominator.</p>
+<p>Possible denominators include:</p>
 <ul>
-<li>crime rates and reporting bias</li>
-<li>belief accuracy</li>
-<li>inequality measures</li>
-<li>network centrality</li>
-<li>welfare and payoff comparisons</li>
+<li>population;</li>
+<li>households;</li>
+<li>firms;</li>
+<li>users;</li>
+<li>opportunities;</li>
+<li>time exposed;</li>
+<li>number of transactions;</li>
+<li>number of police stops;</li>
+<li>number of cases;</li>
+<li>number of people at risk.</li>
+</ul>
+<p>Different denominators answer different questions.</p>
+<p>For example, burglary per resident and burglary per household are not the same measure.</p>
+</section>
+<section id="stock-and-flow" class="level2">
+<h2 class="anchored" data-anchor-id="stock-and-flow">Stock and flow</h2>
+<p>A <strong>stock</strong> is measured at a point in time.<br>
+A <strong>flow</strong> is measured over an interval.</p>
+<p>Examples:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Stock</th>
+<th>Flow</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>prison population</td>
+<td>people in prison on a date</td>
+<td>admissions or releases per year</td>
+</tr>
+<tr class="even">
+<td>unemployment</td>
+<td>people unemployed now</td>
+<td>people entering unemployment</td>
+</tr>
+<tr class="odd">
+<td>cases</td>
+<td>pending cases</td>
+<td>new filings</td>
+</tr>
+<tr class="even">
+<td>beliefs</td>
+<td>current probability belief</td>
+<td>belief update after signal</td>
+</tr>
+</tbody>
+</table>
+<p>Stock-flow confusion is common. A system can have a high stock because inflow is high, outflow is low, or duration is long.</p>
+</section>
+<section id="prevalence-and-incidence" class="level2">
+<h2 class="anchored" data-anchor-id="prevalence-and-incidence">Prevalence and incidence</h2>
+<p><strong>Prevalence</strong> asks how widespread something is in a population.</p>
+<p><strong>Incidence</strong> asks how many new events occur over a period.</p>
+<p>For example:</p>
+<pre class="text"><code>prevalence: share of people victimized this year
+incidence: number of victimization events this year</code></pre>
+<p>If the same person is victimized multiple times, incidence may be high even when prevalence is lower.</p>
+</section>
+<section id="risk-and-probability" class="level2">
+<h2 class="anchored" data-anchor-id="risk-and-probability">Risk and probability</h2>
+<p>A risk is often represented as a probability.</p>
+<p>For example:</p>
+<p><span class="math display">\[
+\Pr(\text{victimization})
+\]</span></p>
+<p>or</p>
+<p><span class="math display">\[
+\Pr(\text{detection} \mid \text{offending}).
+\]</span></p>
+<p>Conditional probabilities are especially important.</p>
+<p>For example:</p>
+<p><span class="math display">\[
+\Pr(\text{recorded} \mid \text{reported})
+\]</span></p>
+<p>is different from</p>
+<p><span class="math display">\[
+\Pr(\text{reported} \mid \text{crime occurred}).
+\]</span></p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Crime occurs] --&gt; B{Reported?}
+    B --&gt;|Yes| C{Recorded?}
+    B --&gt;|No| D[Hidden]
+    C --&gt;|Yes| E[Recorded crime]
+    C --&gt;|No| F[Reported but unrecorded]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Each transition has its own probability.</p>
+</section>
+<section id="expected-value" class="level2">
+<h2 class="anchored" data-anchor-id="expected-value">Expected value</h2>
+<p>Expected value is a probability-weighted average.</p>
+<p>If outcome <span class="math inline">\(x_k\)</span> occurs with probability <span class="math inline">\(p_k\)</span>, then</p>
+<p><span class="math display">\[
+\mathbb{E}[X]
+=
+\sum_k p_k x_k.
+\]</span></p>
+<p>Expected value is central to decision theory, deterrence, and game theory.</p>
+<p>For example, expected punishment can be written as:</p>
+<p><span class="math display">\[
+\mathbb{E}[\text{punishment}]
+=
+\Pr(\text{caught}) \times \text{sanction}.
+\]</span></p>
+<p>This simple expression is useful, but incomplete. It assumes the actor perceives the probability and sanction, and that they are responsive to expected future costs.</p>
+</section>
+<section id="accuracy-precision-and-bias" class="level2">
+<h2 class="anchored" data-anchor-id="accuracy-precision-and-bias">Accuracy, precision, and bias</h2>
+<p>A metric can fail in different ways.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Accuracy</td>
+<td>closeness to the true value</td>
+</tr>
+<tr class="even">
+<td>Precision</td>
+<td>consistency or narrowness of measurement</td>
+</tr>
+<tr class="odd">
+<td>Bias</td>
+<td>systematic error</td>
+</tr>
+<tr class="even">
+<td>Noise</td>
+<td>random variation</td>
+</tr>
+<tr class="odd">
+<td>Validity</td>
+<td>whether the measure captures the intended concept</td>
+</tr>
+<tr class="even">
+<td>Reliability</td>
+<td>whether measurement is consistent</td>
+</tr>
+</tbody>
+</table>
+<p>A measure can be precise but biased. It can be reliable but invalid.</p>
+<p>For example, recorded crime can be measured consistently but still fail to capture true crime if reporting is low.</p>
+</section>
+<section id="proxy-measures" class="level2">
+<h2 class="anchored" data-anchor-id="proxy-measures">Proxy measures</h2>
+<p>A <strong>proxy</strong> is a measurable variable used to approximate a harder-to-measure concept.</p>
+<p>Examples:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Possible proxy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>trust in police</td>
+<td>survey response or reporting behaviour</td>
+</tr>
+<tr class="even">
+<td>offending</td>
+<td>arrest, conviction, self-report, victimization data</td>
+</tr>
+<tr class="odd">
+<td>social disorder</td>
+<td>calls for service, complaints, observation</td>
+</tr>
+<tr class="even">
+<td>deterrence</td>
+<td>perceived detection risk</td>
+</tr>
+<tr class="odd">
+<td>harm</td>
+<td>injury, loss, trauma, cost</td>
+</tr>
+<tr class="even">
+<td>ability</td>
+<td>test score or qualification</td>
+</tr>
+</tbody>
+</table>
+<p>A proxy should never be treated as identical to the concept.</p>
+</section>
+<section id="latent-concepts" class="level2">
+<h2 class="anchored" data-anchor-id="latent-concepts">Latent concepts</h2>
+<p>Some concepts are not directly observed. These are latent concepts.</p>
+<p>Examples:</p>
+<ul>
+<li>trust;</li>
+<li>fear;</li>
+<li>self-control;</li>
+<li>legitimacy;</li>
+<li>belief;</li>
+<li>intention;</li>
+<li>risk perception;</li>
+<li>social cohesion.</li>
+</ul>
+<p>Latent concepts require careful measurement. A single proxy may capture only one dimension.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Latent concept] --&gt; B[Survey item]
+    A --&gt; C[Observed behaviour]
+    A --&gt; D[Administrative record]
+    B --&gt; E[Inference]
+    C --&gt; E
+    D --&gt; E
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Using several measures can improve interpretation.</p>
+</section>
+<section id="belief-accuracy" class="level2">
+<h2 class="anchored" data-anchor-id="belief-accuracy">Belief accuracy</h2>
+<p>In models of rationality and strategic interaction, we may ask whether beliefs are accurate.</p>
+<p>Suppose the true probability of an event is <span class="math inline">\(p\)</span>, while a person believes it is <span class="math inline">\(\hat p\)</span>.</p>
+<p>A simple error measure is:</p>
+<p><span class="math display">\[
+|\hat p - p|.
+\]</span></p>
+<p>Belief accuracy matters in:</p>
+<ul>
+<li>Bayesian updating;</li>
+<li>deterrence;</li>
+<li>risk perception;</li>
+<li>trust;</li>
+<li>reputation;</li>
+<li>learning;</li>
+<li>prediction.</li>
+</ul>
+<p>A person may behave “rationally” given their belief, even if the belief itself is inaccurate.</p>
+</section>
+<section id="payoff-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="payoff-comparison">Payoff comparison</h2>
+<p>Game theory often compares payoffs across actions.</p>
+<p>Player <span class="math inline">\(i\)</span> prefers action <span class="math inline">\(a\)</span> over action <span class="math inline">\(b\)</span> when</p>
+<p><span class="math display">\[
+u_i(a) &gt; u_i(b).
+\]</span></p>
+<p>In strategic settings, payoffs depend on what others do:</p>
+<p><span class="math display">\[
+u_i(a_i,a_{-i}).
+\]</span></p>
+<p>Payoff comparisons become best-response comparisons:</p>
+<p><span class="math display">\[
+a_i^*
+\in
+\arg\max_{a_i}
+u_i(a_i,a_{-i}).
+\]</span></p>
+<p>The metric here is not necessarily money. It is an ordering of outcomes.</p>
+</section>
+<section id="welfare-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="welfare-comparison">Welfare comparison</h2>
+<p>Welfare comparisons ask whether one outcome is socially better than another.</p>
+<p>A simple utilitarian welfare function is:</p>
+<p><span class="math display">\[
+W = \sum_i u_i.
+\]</span></p>
+<p>But welfare comparison can be difficult because:</p>
+<ul>
+<li>utility may not be comparable across people;</li>
+<li>distribution may matter;</li>
+<li>rights and fairness may matter;</li>
+<li>harm may be multidimensional;</li>
+<li>some costs are hidden or delayed.</li>
+</ul>
+<p>A model may identify an efficient outcome, but policy interpretation still requires ethical judgement.</p>
+</section>
+<section id="rates-over-time" class="level2">
+<h2 class="anchored" data-anchor-id="rates-over-time">Rates over time</h2>
+<p>When comparing rates over time, ask:</p>
+<ol type="1">
+<li>Did the numerator change?</li>
+<li>Did the denominator change?</li>
+<li>Did measurement practice change?</li>
+<li>Did reporting change?</li>
+<li>Did the population at risk change?</li>
+<li>Did the category definition change?</li>
+</ol>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Observed rate change] --&gt; B[Numerator change]
+    A --&gt; C[Denominator change]
+    A --&gt; D[Measurement change]
+    A --&gt; E[Reporting change]
+    A --&gt; F[Real behavioural change]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>A trend is not automatically an explanation.</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="comparing-counts-when-rates-are-needed" class="level3">
+<h3 class="anchored" data-anchor-id="comparing-counts-when-rates-are-needed">1. Comparing counts when rates are needed</h3>
+<p>A larger place may have more events simply because it has more people or opportunities.</p>
+</section>
+<section id="using-the-wrong-denominator" class="level3">
+<h3 class="anchored" data-anchor-id="using-the-wrong-denominator">2. Using the wrong denominator</h3>
+<p>The denominator should match the population at risk.</p>
+</section>
+<section id="treating-proxy-as-concept" class="level3">
+<h3 class="anchored" data-anchor-id="treating-proxy-as-concept">3. Treating proxy as concept</h3>
+<p>A proxy is evidence about a concept, not the concept itself.</p>
+</section>
+<section id="ignoring-measurement-process" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-measurement-process">4. Ignoring measurement process</h3>
+<p>Metrics are produced through institutions, surveys, instruments, or coding rules.</p>
+</section>
+<section id="confusing-prediction-with-explanation" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-prediction-with-explanation">5. Confusing prediction with explanation</h3>
+<p>A variable may predict an outcome without causing it.</p>
+</section>
+<section id="ignoring-uncertainty" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-uncertainty">6. Ignoring uncertainty</h3>
+<p>Point estimates should be interpreted with uncertainty, variation, and possible error in mind.</p>
+</section>
+</section>
+<section id="checklist-for-using-a-metric" class="level2">
+<h2 class="anchored" data-anchor-id="checklist-for-using-a-metric">Checklist for using a metric</h2>
+<ol type="1">
+<li>What concept is being measured?</li>
+<li>What is the exact metric?</li>
+<li>What is the numerator?</li>
+<li>What is the denominator?</li>
+<li>What is the unit of analysis?</li>
+<li>Is it a count, rate, stock, flow, prevalence, or incidence?</li>
+<li>Is the measure a direct measure or proxy?</li>
+<li>What measurement process produced it?</li>
+<li>What bias or missingness may exist?</li>
+<li>What comparison is being made?</li>
+<li>What interpretation is justified?</li>
+<li>What interpretation would be too strong?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../foundations/probability.html">Probability</a></li>
+<li><a href="../foundations/optimization.html">Optimization</a></li>
+<li><a href="../notes/game-theory.html">Game Theory Notes</a></li>
+<li><a href="../criminology/notes/foundations/index.html">Criminology Foundations</a></li>
+<li><a href="../criminology/toolkit/methods-map.html">Methods Map</a></li>
 </ul>
 
 

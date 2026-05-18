@@ -1,23 +1,175 @@
 ---
 title: "White-Collar Crime"
 toc: true
+page-layout: full
 ---
 
-White-collar crime involves illegal or harmful conduct carried out through professional, organizational, or financial roles.
+White-collar crime refers to illegal or harmful conduct carried out through professional, corporate, financial, bureaucratic, or organizational roles. Examples include fraud, insider trading, corruption, false accounting, regulatory violations, wage theft, bribery, tax evasion, and unsafe corporate practices.
 
-## Mechanisms to connect
+The key feature is not simply that the offender is wealthy. The key feature is that the offence is enabled by legitimate roles, organizations, expertise, trust, and access.
 
-- agency problems
-- moral neutralization
-- compliance incentives
-- regulatory capture
+## Basic mechanism map
 
-## Models to try
+```{mermaid}
+flowchart TD
+    A[White-Collar Crime] --> B[Organizational access]
+    A --> C[Information advantage]
+    A --> D[Weak monitoring]
+    A --> E[Incentive pressure]
+    A --> F[Neutralization]
 
-- principal-agent models
-- inspection and audit games
-- signaling and disclosure models
+    B --> B1[Role-based authority]
+    B --> B2[Control over records]
 
-## Notes to add later
+    C --> C1[Complex products]
+    C --> C2[Asymmetric information]
 
-Add empirical examples, key definitions, and one diagram linking mechanism → prediction → measurement.
+    D --> D1[Audit limits]
+    D --> D2[Regulatory gaps]
+
+    E --> E1[Profit targets]
+    E --> E2[Career rewards]
+
+    F --> F1[Everyone does it]
+    F --> F2[No direct victim]
+    F --> F3[Only bending rules]
+```
+
+White-collar crime often depends on the gap between formal rules and actual organizational incentives.
+
+## Core mechanisms
+
+### Agency problems
+
+An agent may act against the interests of a principal. Managers, employees, advisers, or contractors may exploit their role for private benefit.
+
+### Information asymmetry
+
+White-collar crime often involves one side knowing more than another. This can make fraud, concealment, manipulation, or misreporting easier.
+
+### Weak monitoring
+
+Complex organizations are difficult to monitor. Auditors, regulators, customers, and shareholders may not observe misconduct until much later.
+
+### Incentive pressure
+
+Targets, bonuses, competition, and organizational culture can reward risky or illegal conduct.
+
+### Neutralization
+
+Offenders may justify misconduct by denying harm, blaming the system, or reframing violations as normal business practice.
+
+## Measurement issues
+
+White-collar crime is difficult to measure.
+
+| Issue | Why it matters |
+|---|---|
+| Low visibility | victims may not know they were harmed |
+| Complex evidence | misconduct may require expert investigation |
+| Regulatory dependence | detection depends on audit and enforcement |
+| Organizational concealment | records may be manipulated |
+| Ambiguous harm | harm may be delayed, diffuse, or collective |
+| Civil/criminal boundary | cases may be handled administratively rather than criminally |
+
+Recorded white-collar crime is often closer to detected white-collar crime than true white-collar crime.
+
+## Principal-agent model
+
+A simple model treats misconduct as an agency problem.
+
+```{mermaid}
+flowchart LR
+    A[Principal delegates task] --> B[Agent controls information or action]
+    B --> C{Monitor effectively?}
+    C -->|Yes| D[Compliance more likely]
+    C -->|No| E[Opportunity for misconduct]
+    E --> F[Private gain]
+    F --> G[Possible detection and sanction]
+```
+
+The central problem is that the agent has both opportunity and private information.
+
+## Audit logic
+
+A regulator or firm may audit only some cases because monitoring is costly.
+
+```{mermaid}
+flowchart LR
+    A[Possible violation] --> B{Audit?}
+    B -->|No| C[Violation may remain hidden]
+    B -->|Yes| D{Detected?}
+    D -->|No| E[No sanction]
+    D -->|Yes| F[Penalty or correction]
+```
+
+This connects white-collar crime to inspection games.
+
+## Policy trade-offs
+
+| Policy | Mechanism | Possible limitation |
+|---|---|---|
+| More audits | raises detection risk | costly and selective |
+| Whistleblower protection | increases internal reporting | retaliation and credibility issues |
+| Compliance systems | improves monitoring | may become symbolic |
+| Stronger penalties | increases expected cost | only if detection is plausible |
+| Transparency rules | reduces information asymmetry | may overload users with information |
+| Individual liability | targets decision-makers | difficult to prove intent |
+
+## Compliance theatre
+
+A special problem in white-collar crime is **compliance theatre**: organizations create formal compliance structures that look good externally but do not change internal incentives.
+
+```{mermaid}
+flowchart TD
+    A[Formal compliance rule] --> B[Box-ticking]
+    B --> C[Appearance of control]
+    C --> D[Weak behavioural change]
+    D --> E[Misconduct risk remains]
+```
+
+This is why policy must examine implementation, not only formal rules.
+
+## Common mistakes
+
+### 1. Treating white-collar crime as victimless
+
+Harm can be diffuse, delayed, financial, physical, environmental, or institutional.
+
+### 2. Focusing only on individual greed
+
+Organizational incentives and culture may matter as much as individual motive.
+
+### 3. Treating compliance programmes as proof of compliance
+
+Formal systems may exist without meaningful enforcement.
+
+### 4. Ignoring detection bias
+
+Observed cases are shaped by audit, regulation, whistleblowing, and investigation.
+
+### 5. Ignoring civil and administrative enforcement
+
+Many white-collar harms are handled outside criminal prosecution.
+
+## Checklist for analysing white-collar crime
+
+1. What role or organization enabled the misconduct?
+2. Who had information advantage?
+3. Who was supposed to monitor?
+4. What incentive pressure existed?
+5. Who was harmed, and how?
+6. Was the harm direct, diffuse, delayed, or hidden?
+7. How was the misconduct detected?
+8. Was enforcement criminal, civil, administrative, or internal?
+9. Did compliance systems actually affect behaviour?
+10. What reform targets the mechanism?
+
+## Related pages
+
+- [Topics](index.qmd)
+- [Inspection games](../models/inspection-games.qmd)
+- [Incentives and deterrence](../mechanisms/incentives-deterrence.qmd)
+- [Institutions](../institutions/index.qmd)
+- [Methods Map](../../toolkit/methods-map.qmd)
+- [Modeling Checklist](../../toolkit/modeling-checklist.qmd)

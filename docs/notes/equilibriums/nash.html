@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Nash equilibrium (NE) – Margins of Rationality</title>
+<title>Nash Equilibrium – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -159,21 +163,30 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
-  <li><a href="#where-it-shows-up" id="toc-where-it-shows-up" class="nav-link" data-scroll-target="#where-it-shows-up">Where it shows up</a></li>
-  <li><a href="#how-to-solve-recipe" id="toc-how-to-solve-recipe" class="nav-link" data-scroll-target="#how-to-solve-recipe">How to solve (recipe)</a>
+  <li><a href="#the-definition" id="toc-the-definition" class="nav-link active" data-scroll-target="#the-definition">The definition</a></li>
+  <li><a href="#intuition" id="toc-intuition" class="nav-link" data-scroll-target="#intuition">Intuition</a></li>
+  <li><a href="#what-nash-equilibrium-does-and-does-not-say" id="toc-what-nash-equilibrium-does-and-does-not-say" class="nav-link" data-scroll-target="#what-nash-equilibrium-does-and-does-not-say">What Nash equilibrium does and does not say</a></li>
+  <li><a href="#best-response-method" id="toc-best-response-method" class="nav-link" data-scroll-target="#best-response-method">Best-response method</a></li>
+  <li><a href="#example-coordination-game" id="toc-example-coordination-game" class="nav-link" data-scroll-target="#example-coordination-game">Example: coordination game</a></li>
+  <li><a href="#example-prisoners-dilemma" id="toc-example-prisoners-dilemma" class="nav-link" data-scroll-target="#example-prisoners-dilemma">Example: prisoners’ dilemma</a></li>
+  <li><a href="#nash-equilibrium-and-inefficiency" id="toc-nash-equilibrium-and-inefficiency" class="nav-link" data-scroll-target="#nash-equilibrium-and-inefficiency">Nash equilibrium and inefficiency</a></li>
+  <li><a href="#mixed-strategy-nash-equilibrium" id="toc-mixed-strategy-nash-equilibrium" class="nav-link" data-scroll-target="#mixed-strategy-nash-equilibrium">Mixed-strategy Nash equilibrium</a></li>
+  <li><a href="#indifference-principle" id="toc-indifference-principle" class="nav-link" data-scroll-target="#indifference-principle">Indifference principle</a></li>
+  <li><a href="#nash-equilibrium-as-a-fixed-point" id="toc-nash-equilibrium-as-a-fixed-point" class="nav-link" data-scroll-target="#nash-equilibrium-as-a-fixed-point">Nash equilibrium as a fixed point</a></li>
+  <li><a href="#existence" id="toc-existence" class="nav-link" data-scroll-target="#existence">Existence</a></li>
+  <li><a href="#multiple-equilibria" id="toc-multiple-equilibria" class="nav-link" data-scroll-target="#multiple-equilibria">Multiple equilibria</a></li>
+  <li><a href="#nash-equilibrium-in-dynamic-games" id="toc-nash-equilibrium-in-dynamic-games" class="nav-link" data-scroll-target="#nash-equilibrium-in-dynamic-games">Nash equilibrium in dynamic games</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
   <ul class="collapse">
-  <li><a href="#pure-strategies" id="toc-pure-strategies" class="nav-link" data-scroll-target="#pure-strategies">Pure strategies</a></li>
-  <li><a href="#mixed-strategies-22-or-small-games" id="toc-mixed-strategies-22-or-small-games" class="nav-link" data-scroll-target="#mixed-strategies-22-or-small-games">Mixed strategies (2×2 or small games)</a></li>
+  <li><a href="#thinking-nash-equilibrium-means-the-best-outcome" id="toc-thinking-nash-equilibrium-means-the-best-outcome" class="nav-link" data-scroll-target="#thinking-nash-equilibrium-means-the-best-outcome">1. Thinking Nash equilibrium means the best outcome</a></li>
+  <li><a href="#forgetting-unilateral-deviation" id="toc-forgetting-unilateral-deviation" class="nav-link" data-scroll-target="#forgetting-unilateral-deviation">2. Forgetting unilateral deviation</a></li>
+  <li><a href="#ignoring-mixed-strategies" id="toc-ignoring-mixed-strategies" class="nav-link" data-scroll-target="#ignoring-mixed-strategies">3. Ignoring mixed strategies</a></li>
+  <li><a href="#confusing-best-response-with-dominant-strategy" id="toc-confusing-best-response-with-dominant-strategy" class="nav-link" data-scroll-target="#confusing-best-response-with-dominant-strategy">4. Confusing best response with dominant strategy</a></li>
+  <li><a href="#treating-multiple-equilibria-as-a-contradiction" id="toc-treating-multiple-equilibria-as-a-contradiction" class="nav-link" data-scroll-target="#treating-multiple-equilibria-as-a-contradiction">5. Treating multiple equilibria as a contradiction</a></li>
+  <li><a href="#using-nash-equilibrium-when-timing-matters" id="toc-using-nash-equilibrium-when-timing-matters" class="nav-link" data-scroll-target="#using-nash-equilibrium-when-timing-matters">6. Using Nash equilibrium when timing matters</a></li>
   </ul></li>
-  <li><a href="#solved-example-pure-ne" id="toc-solved-example-pure-ne" class="nav-link" data-scroll-target="#solved-example-pure-ne">Solved example (pure NE)</a>
-  <ul class="collapse">
-  <li><a href="#problem-context-question" id="toc-problem-context-question" class="nav-link" data-scroll-target="#problem-context-question">Problem (context + question)</a></li>
-  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
-  <li><a href="#check" id="toc-check" class="nav-link" data-scroll-target="#check">Check</a></li>
-  <li><a href="#takeaway" id="toc-takeaway" class="nav-link" data-scroll-target="#takeaway">Takeaway</a></li>
-  </ul></li>
-  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
+  <li><a href="#checklist-for-finding-nash-equilibrium" id="toc-checklist-for-finding-nash-equilibrium" class="nav-link" data-scroll-target="#checklist-for-finding-nash-equilibrium">Checklist for finding Nash equilibrium</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -182,7 +195,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Nash equilibrium (NE)</h1>
+<h1 class="title">Nash Equilibrium</h1>
 </div>
 
 
@@ -199,78 +212,367 @@ window.Quarto = {
 </header>
 
 
-<section id="what-it-is" class="level2">
-<h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
-<p>A <strong>Nash equilibrium</strong> is a strategy profile where no player can gain by deviating unilaterally.</p>
-<p>In a finite game with strategy sets <span class="math inline">\(S_i\)</span> and payoffs <span class="math inline">\(u_i\)</span>, a profile <span class="math inline">\(s^*=(s_1^*,\dots,s_n^*)\)</span> is a Nash equilibrium if for every player <span class="math inline">\(i\)</span>: <span class="math display">\[
-u_i(s_i^*,s_{-i}^*) \ge u_i(s_i,s_{-i}^*) \quad \forall s_i\in S_i.
-\]</span></p>
-</section>
-<section id="where-it-shows-up" class="level2">
-<h2 class="anchored" data-anchor-id="where-it-shows-up">Where it shows up</h2>
-<ul>
-<li>Normal-form games (simultaneous move)</li>
-<li>Any finite game once written in normal form (including mixed strategies)</li>
-<li>As a building block inside more advanced equilibrium concepts</li>
-</ul>
-</section>
-<section id="how-to-solve-recipe" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-solve-recipe">How to solve (recipe)</h2>
-<section id="pure-strategies" class="level3">
-<h3 class="anchored" data-anchor-id="pure-strategies">Pure strategies</h3>
-<ol type="1">
-<li>(Optional) Check for <strong>strict dominance</strong> and eliminate dominated actions.</li>
-<li>Compute each player’s <strong>best response</strong> to every opponent action.</li>
-<li>Nash equilibria are <strong>intersections of best responses</strong>.</li>
-</ol>
-</section>
-<section id="mixed-strategies-22-or-small-games" class="level3">
-<h3 class="anchored" data-anchor-id="mixed-strategies-22-or-small-games">Mixed strategies (2×2 or small games)</h3>
-<ol type="1">
-<li>Guess supports (which actions get positive probability).</li>
-<li>Impose <strong>indifference conditions</strong>: each player mixes only if the opponent makes them indifferent over actions in support.</li>
-<li>Solve probabilities + verify they lie in <span class="math inline">\([0,1]\)</span> and no excluded action yields higher payoff.</li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="solved-example-pure-ne" class="level2">
-<h2 class="anchored" data-anchor-id="solved-example-pure-ne">Solved example (pure NE)</h2>
-<section id="problem-context-question" class="level3">
-<h3 class="anchored" data-anchor-id="problem-context-question">Problem (context + question)</h3>
-<p>Two cafés simultaneously choose discount <span class="math inline">\(D\)</span> or normal pricing <span class="math inline">\(N\)</span>. Payoffs are:</p>
+<p>Nash equilibrium is the basic solution concept of non-cooperative game theory. It describes a strategy profile in which every player is choosing a best response to the strategies of the others.</p>
+<p>The central idea is:</p>
+<blockquote class="blockquote">
+<p>No player can profitably deviate alone.</p>
+</blockquote>
+<section id="the-definition" class="level2">
+<h2 class="anchored" data-anchor-id="the-definition">The definition</h2>
+<p>Let</p>
 <p><span class="math display">\[
-\begin{array}{c|cc}
-&amp; D &amp; N\\ \hline
-D &amp; (1,1) &amp; (3,0)\\
-N &amp; (0,3) &amp; (2,2)
-\end{array}
+G=\langle N,(S_i)_{i\in N},(u_i)_{i\in N}\rangle
 \]</span></p>
-<p><strong>Question:</strong> Find all pure-strategy Nash equilibria.</p>
+<p>be a normal-form game.</p>
+<p>A strategy profile</p>
+<p><span class="math display">\[
+s^*=(s_1^*,\ldots,s_n^*)
+\]</span></p>
+<p>is a Nash equilibrium if, for every player <span class="math inline">\(i\)</span>,</p>
+<p><span class="math display">\[
+u_i(s_i^*,s_{-i}^*)
+\geq
+u_i(s_i,s_{-i}^*)
+\quad
+\text{for all } s_i\in S_i.
+\]</span></p>
+<p>This means that <span class="math inline">\(s_i^*\)</span> solves player <span class="math inline">\(i\)</span>’s optimization problem given the strategies of the other players.</p>
+<p>Equivalently,</p>
+<p><span class="math display">\[
+s_i^* \in BR_i(s_{-i}^*)
+\quad
+\text{for every } i.
+\]</span></p>
 </section>
-<section id="solution" class="level3">
-<h3 class="anchored" data-anchor-id="solution">Solution</h3>
-<p><strong>Step 1 (player 1 best responses):</strong> - If player 2 plays <span class="math inline">\(D\)</span>, player 1 compares <span class="math inline">\(1\)</span> (play <span class="math inline">\(D\)</span>) vs <span class="math inline">\(0\)</span> (play <span class="math inline">\(N\)</span>) → best response is <span class="math inline">\(D\)</span>. - If player 2 plays <span class="math inline">\(N\)</span>, player 1 compares <span class="math inline">\(3\)</span> (play <span class="math inline">\(D\)</span>) vs <span class="math inline">\(2\)</span> (play <span class="math inline">\(N\)</span>) → best response is <span class="math inline">\(D\)</span>.</p>
-<p>So player 1’s best response is always <span class="math inline">\(D\)</span>.</p>
-<p><strong>Step 2 (player 2 best responses):</strong> By symmetry, player 2’s best response is always <span class="math inline">\(D\)</span>.</p>
-<p><strong>Result:</strong> The unique pure-strategy Nash equilibrium is <span class="math inline">\((D,D)\)</span>.</p>
+<section id="intuition" class="level2">
+<h2 class="anchored" data-anchor-id="intuition">Intuition</h2>
+<p>A Nash equilibrium is a state of mutual best response.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Player 1 best responds to Player 2] --&gt; C[Nash equilibrium]
+    B[Player 2 best responds to Player 1] --&gt; C
+    C --&gt; D[No unilateral profitable deviation]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The equilibrium is stable in a specific sense: if everyone expects the equilibrium strategies, no single player wants to change their own strategy.</p>
 </section>
-<section id="check" class="level3">
-<h3 class="anchored" data-anchor-id="check">Check</h3>
-<p>At <span class="math inline">\((D,D)\)</span>, deviating to <span class="math inline">\(N\)</span> reduces each café’s payoff from <span class="math inline">\(1\)</span> to <span class="math inline">\(0\)</span>.</p>
-</section>
-<section id="takeaway" class="level3">
-<h3 class="anchored" data-anchor-id="takeaway">Takeaway</h3>
-<p>NE can be inefficient: both cafés would prefer <span class="math inline">\((N,N)\)</span>, but strategic incentives push them to discount.</p>
-<hr>
-</section>
-</section>
-<section id="later-on-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<section id="what-nash-equilibrium-does-and-does-not-say" class="level2">
+<h2 class="anchored" data-anchor-id="what-nash-equilibrium-does-and-does-not-say">What Nash equilibrium does and does not say</h2>
+<p>Nash equilibrium says:</p>
 <ul>
-<li><strong>Multiple equilibria:</strong> some games have multiple Nash equilibria; then you need selection ideas.</li>
-<li><strong>Refinements:</strong> in dynamic games, Nash can allow non-credible threats → motivates SPE.</li>
-<li><strong>Correlated equilibrium:</strong> enlarges the solution concept by allowing correlation devices.</li>
+<li>each player is individually optimizing;</li>
+<li>each player takes others’ strategies as given;</li>
+<li>no player has a profitable unilateral deviation.</li>
+</ul>
+<p>It does <strong>not</strong> say:</p>
+<ul>
+<li>the outcome is fair;</li>
+<li>the outcome is socially efficient;</li>
+<li>the outcome is morally good;</li>
+<li>players are happy;</li>
+<li>the equilibrium is unique;</li>
+<li>players will necessarily learn their way to it.</li>
+</ul>
+<p>This distinction is essential.</p>
+</section>
+<section id="best-response-method" class="level2">
+<h2 class="anchored" data-anchor-id="best-response-method">Best-response method</h2>
+<p>To find a Nash equilibrium, find mutual best responses.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Write the game] --&gt; B[Find each player's best responses]
+    B --&gt; C[Look for mutual best responses]
+    C --&gt; D[Identify Nash equilibria]
+    D --&gt; E[Interpret stability and welfare]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>In a payoff matrix, a pure-strategy Nash equilibrium is a cell where each player’s chosen strategy is a best response to the other player’s chosen strategy.</p>
+</section>
+<section id="example-coordination-game" class="level2">
+<h2 class="anchored" data-anchor-id="example-coordination-game">Example: coordination game</h2>
+<p>Consider this game:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: right;">Player 2: L</th>
+<th style="text-align: right;">Player 2: R</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Player 1: U</td>
+<td style="text-align: right;"><span class="math inline">\((2,2)\)</span></td>
+<td style="text-align: right;"><span class="math inline">\((0,0)\)</span></td>
+</tr>
+<tr class="even">
+<td>Player 1: D</td>
+<td style="text-align: right;"><span class="math inline">\((0,0)\)</span></td>
+<td style="text-align: right;"><span class="math inline">\((1,1)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>If Player 2 chooses <span class="math inline">\(L\)</span>, Player 1 prefers <span class="math inline">\(U\)</span>.</p>
+<p>If Player 2 chooses <span class="math inline">\(R\)</span>, Player 1 prefers <span class="math inline">\(D\)</span>.</p>
+<p>If Player 1 chooses <span class="math inline">\(U\)</span>, Player 2 prefers <span class="math inline">\(L\)</span>.</p>
+<p>If Player 1 chooses <span class="math inline">\(D\)</span>, Player 2 prefers <span class="math inline">\(R\)</span>.</p>
+<p>Therefore, there are two Nash equilibria:</p>
+<p><span class="math display">\[
+(U,L)
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+(D,R).
+\]</span></p>
+<p>This shows that Nash equilibrium may not be unique.</p>
+</section>
+<section id="example-prisoners-dilemma" class="level2">
+<h2 class="anchored" data-anchor-id="example-prisoners-dilemma">Example: prisoners’ dilemma</h2>
+<p>In a prisoners’ dilemma, each player has an individual incentive to defect, even though both would be better off if both cooperated.</p>
+<p>The usual ranking is:</p>
+<p><span class="math display">\[
+T &gt; R &gt; P &gt; S,
+\]</span></p>
+<p>where:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(T\)</span></td>
+<td>temptation payoff from defecting while the other cooperates</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(R\)</span></td>
+<td>reward from mutual cooperation</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(P\)</span></td>
+<td>punishment from mutual defection</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(S\)</span></td>
+<td>sucker payoff from cooperating while the other defects</td>
+</tr>
+</tbody>
+</table>
+<p>The Nash equilibrium is mutual defection.</p>
+<p>This outcome is stable because no player wants to cooperate unilaterally. But it is inefficient because both players would prefer mutual cooperation.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Individual incentive to defect] --&gt; B[Mutual defection]
+    B --&gt; C[Nash equilibrium]
+    C --&gt; D[Collectively worse than mutual cooperation]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="nash-equilibrium-and-inefficiency" class="level2">
+<h2 class="anchored" data-anchor-id="nash-equilibrium-and-inefficiency">Nash equilibrium and inefficiency</h2>
+<p>A Nash equilibrium can be inefficient.</p>
+<p>This is one of the main lessons of game theory. Individual rationality does not automatically produce collective welfare.</p>
+<p>Examples include:</p>
+<ul>
+<li>prisoners’ dilemma;</li>
+<li>arms races;</li>
+<li>overuse of common resources;</li>
+<li>price competition;</li>
+<li>public goods underprovision;</li>
+<li>failure to coordinate on a better convention.</li>
+</ul>
+<p>The general problem is:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Private incentive] --&gt; B[Individual best response]
+    B --&gt; C[Equilibrium]
+    C --&gt; D[Possible social inefficiency]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="mixed-strategy-nash-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="mixed-strategy-nash-equilibrium">Mixed-strategy Nash equilibrium</h2>
+<p>A Nash equilibrium may involve mixed strategies.</p>
+<p>A mixed strategy is a probability distribution over pure strategies.</p>
+<p>In a mixed-strategy equilibrium, each player must be willing to randomize among the pure strategies used with positive probability.</p>
+<p>This means the player must be indifferent among those pure strategies.</p>
+<p>For example, if Player 1 mixes between <span class="math inline">\(U\)</span> and <span class="math inline">\(D\)</span>, then</p>
+<p><span class="math display">\[
+U_1(U,\sigma_2)=U_1(D,\sigma_2).
+\]</span></p>
+<p>If one pure strategy gave a strictly higher expected payoff, Player 1 would not randomize.</p>
+</section>
+<section id="indifference-principle" class="level2">
+<h2 class="anchored" data-anchor-id="indifference-principle">Indifference principle</h2>
+<p>The indifference principle is often used to solve mixed equilibria.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Player mixes between actions] --&gt; B[Each used action must give same expected payoff]
+    B --&gt; C[Set expected payoffs equal]
+    C --&gt; D[Solve for opponent's mixing probability]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This can feel strange at first. When solving for Player 2’s mixing probability, we often use Player 1’s indifference condition. Player 2 randomizes in a way that makes Player 1 willing to mix.</p>
+</section>
+<section id="nash-equilibrium-as-a-fixed-point" class="level2">
+<h2 class="anchored" data-anchor-id="nash-equilibrium-as-a-fixed-point">Nash equilibrium as a fixed point</h2>
+<p>Nash equilibrium can be understood as a fixed point of the best-response correspondence.</p>
+<p>Let <span class="math inline">\(BR(s)\)</span> be the set of best-response profiles to <span class="math inline">\(s\)</span>. A Nash equilibrium satisfies</p>
+<p><span class="math display">\[
+s^* \in BR(s^*).
+\]</span></p>
+<p>This means that if everyone best responds to <span class="math inline">\(s^*\)</span>, the resulting strategy profile can still be <span class="math inline">\(s^*\)</span>.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Strategy profile s] --&gt; B[Best-response correspondence]
+    B --&gt; C[Best responses BR s]
+    C --&gt; D{Contains s?}
+    D --&gt;|Yes| E[Nash equilibrium]
+    D --&gt;|No| F[Not equilibrium]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This connection explains why fixed-point theorems are used to prove equilibrium existence.</p>
+</section>
+<section id="existence" class="level2">
+<h2 class="anchored" data-anchor-id="existence">Existence</h2>
+<p>Every finite game has at least one Nash equilibrium in mixed strategies.</p>
+<p>This does not mean every finite game has a pure-strategy equilibrium.</p>
+<p>For example, matching pennies has no pure-strategy Nash equilibrium, but it has a mixed-strategy equilibrium.</p>
+<p>The existence result relies on allowing players to randomize.</p>
+</section>
+<section id="multiple-equilibria" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-equilibria">Multiple equilibria</h2>
+<p>A game may have more than one Nash equilibrium.</p>
+<p>Multiple equilibria create a selection problem:</p>
+<blockquote class="blockquote">
+<p>If several outcomes are stable, which one should we expect?</p>
+</blockquote>
+<p>Possible selection forces include:</p>
+<ul>
+<li>focal points;</li>
+<li>history;</li>
+<li>communication;</li>
+<li>institutions;</li>
+<li>conventions;</li>
+<li>risk dominance;</li>
+<li>payoff dominance;</li>
+<li>learning;</li>
+<li>equilibrium refinements.</li>
+</ul>
+<p>Coordination games often have multiple equilibria.</p>
+</section>
+<section id="nash-equilibrium-in-dynamic-games" class="level2">
+<h2 class="anchored" data-anchor-id="nash-equilibrium-in-dynamic-games">Nash equilibrium in dynamic games</h2>
+<p>Nash equilibrium can be applied to dynamic games by treating strategies as complete contingent plans.</p>
+<p>However, Nash equilibrium alone may allow non-credible threats.</p>
+<p>This is why dynamic games often use stronger concepts such as subgame perfect equilibrium.</p>
+<p>Example:</p>
+<pre class="text"><code>A player threatens to punish later, but when later arrives, punishment is costly and irrational.</code></pre>
+<p>Nash equilibrium may not rule this out unless the threat is tested inside the relevant subgame.</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="thinking-nash-equilibrium-means-the-best-outcome" class="level3">
+<h3 class="anchored" data-anchor-id="thinking-nash-equilibrium-means-the-best-outcome">1. Thinking Nash equilibrium means the best outcome</h3>
+<p>Nash equilibrium is about stability, not welfare.</p>
+</section>
+<section id="forgetting-unilateral-deviation" class="level3">
+<h3 class="anchored" data-anchor-id="forgetting-unilateral-deviation">2. Forgetting unilateral deviation</h3>
+<p>Nash equilibrium checks whether one player can improve by deviating alone, holding others fixed.</p>
+</section>
+<section id="ignoring-mixed-strategies" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-mixed-strategies">3. Ignoring mixed strategies</h3>
+<p>A game with no pure equilibrium may still have a mixed equilibrium.</p>
+</section>
+<section id="confusing-best-response-with-dominant-strategy" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-best-response-with-dominant-strategy">4. Confusing best response with dominant strategy</h3>
+<p>A best response depends on what others do. A dominant strategy is best no matter what others do.</p>
+</section>
+<section id="treating-multiple-equilibria-as-a-contradiction" class="level3">
+<h3 class="anchored" data-anchor-id="treating-multiple-equilibria-as-a-contradiction">5. Treating multiple equilibria as a contradiction</h3>
+<p>Multiple equilibria mean several outcomes are strategically stable.</p>
+</section>
+<section id="using-nash-equilibrium-when-timing-matters" class="level3">
+<h3 class="anchored" data-anchor-id="using-nash-equilibrium-when-timing-matters">6. Using Nash equilibrium when timing matters</h3>
+<p>For dynamic games, check whether subgame perfection or another refinement is needed.</p>
+</section>
+</section>
+<section id="checklist-for-finding-nash-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="checklist-for-finding-nash-equilibrium">Checklist for finding Nash equilibrium</h2>
+<ol type="1">
+<li>Identify players.</li>
+<li>List strategies.</li>
+<li>Write payoffs.</li>
+<li>For each opponent strategy, find each player’s best response.</li>
+<li>Mark mutual best responses.</li>
+<li>Check if any player can profitably deviate alone.</li>
+<li>If no pure equilibrium exists, check mixed strategies.</li>
+<li>If multiple equilibria exist, interpret the selection problem.</li>
+<li>Check whether the equilibrium is efficient.</li>
+<li>If the game is dynamic, ask whether the equilibrium is credible.</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../../notes/equilibriums/index.html">Equilibrium Concepts</a></li>
+<li><a href="../../notes/game-theory.html">Game Theory Notes</a></li>
+<li><a href="../../notes/game-types/normal-form.html">Normal-form Games</a></li>
+<li><a href="../../notes/equilibriums/subgame-perfect.html">Subgame Perfect Equilibrium</a></li>
+<li><a href="../../notes/equilibriums/bayesian-nash.html">Bayesian Nash Equilibrium</a></li>
+<li><a href="../../foundations/fixed-points.html">Fixed Points</a></li>
+<li><a href="../../foundations/optimization.html">Optimization</a></li>
+<li><a href="../../foundations/probability.html">Probability</a></li>
 </ul>
 
 

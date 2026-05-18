@@ -1,70 +1,330 @@
 ---
-title: "Nash equilibrium (NE)"
+title: "Nash Equilibrium"
 toc: true
+page-layout: full
 ---
 
-## What it is
-A **Nash equilibrium** is a strategy profile where no player can gain by deviating unilaterally.
+Nash equilibrium is the basic solution concept of non-cooperative game theory. It describes a strategy profile in which every player is choosing a best response to the strategies of the others.
 
-In a finite game with strategy sets $S_i$ and payoffs $u_i$, a profile $s^*=(s_1^*,\dots,s_n^*)$ is a Nash equilibrium if for every player $i$:
-$$
-u_i(s_i^*,s_{-i}^*) \ge u_i(s_i,s_{-i}^*) \quad \forall s_i\in S_i.
-$$
+The central idea is:
 
-## Where it shows up
-- Normal-form games (simultaneous move)
-- Any finite game once written in normal form (including mixed strategies)
-- As a building block inside more advanced equilibrium concepts
+> No player can profitably deviate alone.
 
-## How to solve (recipe)
-### Pure strategies
-1) (Optional) Check for **strict dominance** and eliminate dominated actions.
-2) Compute each player’s **best response** to every opponent action.
-3) Nash equilibria are **intersections of best responses**.
+## The definition
 
-### Mixed strategies (2×2 or small games)
-1) Guess supports (which actions get positive probability).
-2) Impose **indifference conditions**: each player mixes only if the opponent makes them indifferent over actions in support.
-3) Solve probabilities + verify they lie in $[0,1]$ and no excluded action yields higher payoff.
-
----
-
-## Solved example (pure NE)
-
-### Problem (context + question)
-Two cafés simultaneously choose discount $D$ or normal pricing $N$. Payoffs are:
+Let
 
 $$
-\begin{array}{c|cc}
- & D & N\\ \hline
-D & (1,1) & (3,0)\\
-N & (0,3) & (2,2)
-\end{array}
+G=\langle N,(S_i)_{i\in N},(u_i)_{i\in N}\rangle
 $$
 
-**Question:** Find all pure-strategy Nash equilibria.
+be a normal-form game.
 
-### Solution
-**Step 1 (player 1 best responses):**
-- If player 2 plays $D$, player 1 compares $1$ (play $D$) vs $0$ (play $N$) → best response is $D$.
-- If player 2 plays $N$, player 1 compares $3$ (play $D$) vs $2$ (play $N$) → best response is $D$.
+A strategy profile
 
-So player 1’s best response is always $D$.
+$$
+s^*=(s_1^*,\ldots,s_n^*)
+$$
 
-**Step 2 (player 2 best responses):**
-By symmetry, player 2’s best response is always $D$.
+is a Nash equilibrium if, for every player $i$,
 
-**Result:** The unique pure-strategy Nash equilibrium is $(D,D)$.
+$$
+u_i(s_i^*,s_{-i}^*)
+\geq
+u_i(s_i,s_{-i}^*)
+\quad
+\text{for all } s_i\in S_i.
+$$
 
-### Check
-At $(D,D)$, deviating to $N$ reduces each café’s payoff from $1$ to $0$.
+This means that $s_i^*$ solves player $i$'s optimization problem given the strategies of the other players.
 
-### Takeaway
-NE can be inefficient: both cafés would prefer $(N,N)$, but strategic incentives push them to discount.
+Equivalently,
 
----
+$$
+s_i^* \in BR_i(s_{-i}^*)
+\quad
+\text{for every } i.
+$$
 
-## Later-on analysis
-- **Multiple equilibria:** some games have multiple Nash equilibria; then you need selection ideas.
-- **Refinements:** in dynamic games, Nash can allow non-credible threats → motivates SPE.
-- **Correlated equilibrium:** enlarges the solution concept by allowing correlation devices.
+## Intuition
+
+A Nash equilibrium is a state of mutual best response.
+
+```{mermaid}
+flowchart LR
+    A[Player 1 best responds to Player 2] --> C[Nash equilibrium]
+    B[Player 2 best responds to Player 1] --> C
+    C --> D[No unilateral profitable deviation]
+```
+
+The equilibrium is stable in a specific sense: if everyone expects the equilibrium strategies, no single player wants to change their own strategy.
+
+## What Nash equilibrium does and does not say
+
+Nash equilibrium says:
+
+- each player is individually optimizing;
+- each player takes others' strategies as given;
+- no player has a profitable unilateral deviation.
+
+It does **not** say:
+
+- the outcome is fair;
+- the outcome is socially efficient;
+- the outcome is morally good;
+- players are happy;
+- the equilibrium is unique;
+- players will necessarily learn their way to it.
+
+This distinction is essential.
+
+## Best-response method
+
+To find a Nash equilibrium, find mutual best responses.
+
+```{mermaid}
+flowchart TD
+    A[Write the game] --> B[Find each player's best responses]
+    B --> C[Look for mutual best responses]
+    C --> D[Identify Nash equilibria]
+    D --> E[Interpret stability and welfare]
+```
+
+In a payoff matrix, a pure-strategy Nash equilibrium is a cell where each player's chosen strategy is a best response to the other player's chosen strategy.
+
+## Example: coordination game
+
+Consider this game:
+
+|  | Player 2: L | Player 2: R |
+|---|---:|---:|
+| Player 1: U | $(2,2)$ | $(0,0)$ |
+| Player 1: D | $(0,0)$ | $(1,1)$ |
+
+If Player 2 chooses $L$, Player 1 prefers $U$.
+
+If Player 2 chooses $R$, Player 1 prefers $D$.
+
+If Player 1 chooses $U$, Player 2 prefers $L$.
+
+If Player 1 chooses $D$, Player 2 prefers $R$.
+
+Therefore, there are two Nash equilibria:
+
+$$
+(U,L)
+$$
+
+and
+
+$$
+(D,R).
+$$
+
+This shows that Nash equilibrium may not be unique.
+
+## Example: prisoners' dilemma
+
+In a prisoners' dilemma, each player has an individual incentive to defect, even though both would be better off if both cooperated.
+
+The usual ranking is:
+
+$$
+T > R > P > S,
+$$
+
+where:
+
+| Symbol | Meaning |
+|---|---|
+| $T$ | temptation payoff from defecting while the other cooperates |
+| $R$ | reward from mutual cooperation |
+| $P$ | punishment from mutual defection |
+| $S$ | sucker payoff from cooperating while the other defects |
+
+The Nash equilibrium is mutual defection.
+
+This outcome is stable because no player wants to cooperate unilaterally. But it is inefficient because both players would prefer mutual cooperation.
+
+```{mermaid}
+flowchart LR
+    A[Individual incentive to defect] --> B[Mutual defection]
+    B --> C[Nash equilibrium]
+    C --> D[Collectively worse than mutual cooperation]
+```
+
+## Nash equilibrium and inefficiency
+
+A Nash equilibrium can be inefficient.
+
+This is one of the main lessons of game theory. Individual rationality does not automatically produce collective welfare.
+
+Examples include:
+
+- prisoners' dilemma;
+- arms races;
+- overuse of common resources;
+- price competition;
+- public goods underprovision;
+- failure to coordinate on a better convention.
+
+The general problem is:
+
+```{mermaid}
+flowchart LR
+    A[Private incentive] --> B[Individual best response]
+    B --> C[Equilibrium]
+    C --> D[Possible social inefficiency]
+```
+
+## Mixed-strategy Nash equilibrium
+
+A Nash equilibrium may involve mixed strategies.
+
+A mixed strategy is a probability distribution over pure strategies.
+
+In a mixed-strategy equilibrium, each player must be willing to randomize among the pure strategies used with positive probability.
+
+This means the player must be indifferent among those pure strategies.
+
+For example, if Player 1 mixes between $U$ and $D$, then
+
+$$
+U_1(U,\sigma_2)=U_1(D,\sigma_2).
+$$
+
+If one pure strategy gave a strictly higher expected payoff, Player 1 would not randomize.
+
+## Indifference principle
+
+The indifference principle is often used to solve mixed equilibria.
+
+```{mermaid}
+flowchart TD
+    A[Player mixes between actions] --> B[Each used action must give same expected payoff]
+    B --> C[Set expected payoffs equal]
+    C --> D[Solve for opponent's mixing probability]
+```
+
+This can feel strange at first. When solving for Player 2's mixing probability, we often use Player 1's indifference condition. Player 2 randomizes in a way that makes Player 1 willing to mix.
+
+## Nash equilibrium as a fixed point
+
+Nash equilibrium can be understood as a fixed point of the best-response correspondence.
+
+Let $BR(s)$ be the set of best-response profiles to $s$. A Nash equilibrium satisfies
+
+$$
+s^* \in BR(s^*).
+$$
+
+This means that if everyone best responds to $s^*$, the resulting strategy profile can still be $s^*$.
+
+```{mermaid}
+flowchart LR
+    A[Strategy profile s] --> B[Best-response correspondence]
+    B --> C[Best responses BR s]
+    C --> D{Contains s?}
+    D -->|Yes| E[Nash equilibrium]
+    D -->|No| F[Not equilibrium]
+```
+
+This connection explains why fixed-point theorems are used to prove equilibrium existence.
+
+## Existence
+
+Every finite game has at least one Nash equilibrium in mixed strategies.
+
+This does not mean every finite game has a pure-strategy equilibrium.
+
+For example, matching pennies has no pure-strategy Nash equilibrium, but it has a mixed-strategy equilibrium.
+
+The existence result relies on allowing players to randomize.
+
+## Multiple equilibria
+
+A game may have more than one Nash equilibrium.
+
+Multiple equilibria create a selection problem:
+
+> If several outcomes are stable, which one should we expect?
+
+Possible selection forces include:
+
+- focal points;
+- history;
+- communication;
+- institutions;
+- conventions;
+- risk dominance;
+- payoff dominance;
+- learning;
+- equilibrium refinements.
+
+Coordination games often have multiple equilibria.
+
+## Nash equilibrium in dynamic games
+
+Nash equilibrium can be applied to dynamic games by treating strategies as complete contingent plans.
+
+However, Nash equilibrium alone may allow non-credible threats.
+
+This is why dynamic games often use stronger concepts such as subgame perfect equilibrium.
+
+Example:
+
+```text
+A player threatens to punish later, but when later arrives, punishment is costly and irrational.
+```
+
+Nash equilibrium may not rule this out unless the threat is tested inside the relevant subgame.
+
+## Common mistakes
+
+### 1. Thinking Nash equilibrium means the best outcome
+
+Nash equilibrium is about stability, not welfare.
+
+### 2. Forgetting unilateral deviation
+
+Nash equilibrium checks whether one player can improve by deviating alone, holding others fixed.
+
+### 3. Ignoring mixed strategies
+
+A game with no pure equilibrium may still have a mixed equilibrium.
+
+### 4. Confusing best response with dominant strategy
+
+A best response depends on what others do. A dominant strategy is best no matter what others do.
+
+### 5. Treating multiple equilibria as a contradiction
+
+Multiple equilibria mean several outcomes are strategically stable.
+
+### 6. Using Nash equilibrium when timing matters
+
+For dynamic games, check whether subgame perfection or another refinement is needed.
+
+## Checklist for finding Nash equilibrium
+
+1. Identify players.
+2. List strategies.
+3. Write payoffs.
+4. For each opponent strategy, find each player's best response.
+5. Mark mutual best responses.
+6. Check if any player can profitably deviate alone.
+7. If no pure equilibrium exists, check mixed strategies.
+8. If multiple equilibria exist, interpret the selection problem.
+9. Check whether the equilibrium is efficient.
+10. If the game is dynamic, ask whether the equilibrium is credible.
+
+## Related pages
+
+- [Equilibrium Concepts](index.qmd)
+- [Game Theory Notes](../game-theory.qmd)
+- [Normal-form Games](../game-types/normal-form.qmd)
+- [Subgame Perfect Equilibrium](subgame-perfect.qmd)
+- [Bayesian Nash Equilibrium](bayesian-nash.qmd)
+- [Fixed Points](../../foundations/fixed-points.qmd)
+- [Optimization](../../foundations/optimization.qmd)
+- [Probability](../../foundations/probability.qmd)

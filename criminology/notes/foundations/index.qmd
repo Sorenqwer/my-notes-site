@@ -1,9 +1,245 @@
 ---
-title: "Foundations"
+title: "Criminology Foundations"
 toc: true
+page-layout: full
 ---
 
-Foundations clarify **definitions**, **units of analysis**, and **measurement caveats** (recorded crime vs incidence). These are the conceptual primitives used throughout criminology research.
+Foundations clarify the basic objects of criminological analysis: crime, deviance, harm, law, measurement, reporting, units of analysis, and explanation. These concepts matter because criminology often studies events that are partly hidden, socially interpreted, and institutionally recorded.
 
-- [Key definitions](key-definitions.qmd)
-- [Units of analysis](units-of-analysis.qmd)
+The goal of this section is to make the primitives clear before moving to mechanisms, institutions, models, or policy.
+
+## Why foundations matter
+
+In criminology, the object being studied is rarely simple. A recorded crime is not only an event. It is also the result of reporting, classification, policing, and legal definition.
+
+```{mermaid}
+flowchart LR
+    A[Social behaviour] --> B[Legal definition]
+    B --> C[Crime event]
+    C --> D[Reporting]
+    D --> E[Recording]
+    E --> F[Official statistics]
+    F --> G[Research interpretation]
+```
+
+This means a criminological claim usually depends on both social reality and measurement process.
+
+For example, a rise in recorded crime may reflect:
+
+- more actual offending;
+- more reporting;
+- changes in policing;
+- changes in legal classification;
+- changes in recording standards;
+- greater visibility of certain groups or places.
+
+## Main foundation pages
+
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Key Definitions
+
+Core concepts such as crime, deviance, harm, law, social control, criminalization, victimization, and recorded crime.
+
+[Open →](key-definitions.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Units of Analysis
+
+How criminological explanations change when the unit is an individual, event, place, group, network, institution, or society.
+
+[Open →](units-of-analysis.qmd)
+:::
+:::
+
+:::
+
+## Crime, deviance, and harm
+
+A behaviour can be harmful without being criminal. A behaviour can be criminal without being treated as equally harmful in practice. A behaviour can also be deviant without being illegal.
+
+These distinctions are important.
+
+| Concept | Basic meaning | Example question |
+|---|---|---|
+| Crime | Behaviour prohibited by criminal law | What does the law define as punishable? |
+| Deviance | Behaviour violating social norms | What does society label as unacceptable? |
+| Harm | Damage to persons, groups, or institutions | Who is injured or made worse off? |
+| Criminalization | Process of making behaviour criminal | Why is this behaviour treated as a criminal matter? |
+| Social control | Formal or informal regulation of behaviour | Who enforces norms, and how? |
+
+Criminology often studies the relationship among these categories rather than assuming they are identical.
+
+## True crime and recorded crime
+
+A central measurement problem is the gap between crime that occurs and crime that appears in official data.
+
+```{mermaid}
+flowchart TD
+    A[True crime incidence] --> B{Is the event noticed?}
+    B -->|No| C[Invisible event]
+    B -->|Yes| D{Is it reported?}
+    D -->|No| E[Unreported crime]
+    D -->|Yes| F{Is it recorded by authorities?}
+    F -->|No| G[Reported but not recorded]
+    F -->|Yes| H[Recorded crime]
+    H --> I[Official crime statistics]
+```
+
+This does not make official statistics useless. It means they should be interpreted carefully.
+
+Official statistics are especially useful when paired with:
+
+- victimization surveys;
+- self-report surveys;
+- administrative records;
+- qualitative evidence;
+- local institutional knowledge;
+- careful comparison over time.
+
+## Units of analysis
+
+Criminological research can focus on different units.
+
+| Unit | Typical question |
+|---|---|
+| Individual | Why does this person offend, desist, report, or comply? |
+| Event | Why did this crime happen here and now? |
+| Place | Why are some places crime hotspots? |
+| Group | How do peers, gangs, or organizations shape behaviour? |
+| Network | How do ties transmit information, opportunity, or trust? |
+| Institution | How do police, courts, prisons, or regulators act? |
+| Society | How do inequality, culture, law, and state capacity shape crime? |
+
+A theory that works at one level may not automatically work at another. For example, a theory of individual offending is not the same as a theory of neighbourhood crime rates.
+
+## From concept to measurement
+
+A good empirical study must connect the concept being discussed to the variable being measured.
+
+```{mermaid}
+flowchart LR
+    A[Concept] --> B[Operational definition]
+    B --> C[Measurement]
+    C --> D[Data]
+    D --> E[Inference]
+```
+
+For example:
+
+- “fear of crime” may be measured by survey responses;
+- “police activity” may be measured by stops, arrests, patrol time, or spending;
+- “violence” may be measured by hospital admissions, police records, or victimization data;
+- “trust” may be measured by survey items, reporting behaviour, or cooperation.
+
+Each measurement choice captures something slightly different.
+
+## Explanation versus description
+
+Description answers:
+
+> What is happening?
+
+Explanation asks:
+
+> Why is it happening?
+
+A descriptive claim might say that burglary is concentrated in certain areas. An explanatory claim asks why those areas experience more burglary: opportunity, guardianship, poverty, housing structure, policing, social networks, or reporting practices.
+
+```{mermaid}
+flowchart TD
+    A[Observed pattern] --> B[Description]
+    A --> C[Possible explanations]
+    C --> D[Mechanism]
+    D --> E[Testable implication]
+    E --> F[Evidence]
+```
+
+The move from pattern to mechanism is where theory becomes important.
+
+## Causation and mechanism
+
+A mechanism is a process that connects cause and effect.
+
+For example:
+
+```text
+poverty → stress and opportunity constraints → illegal income strategies
+```
+
+or:
+
+```text
+low institutional trust → lower reporting → lower recorded crime
+```
+
+or:
+
+```text
+increased guardianship → fewer suitable opportunities → lower burglary
+```
+
+A mechanism should make clear:
+
+1. what changes;
+2. who responds;
+3. why they respond;
+4. what outcome follows;
+5. what evidence would support or challenge the explanation.
+
+## Common measurement problems
+
+### 1. Underreporting
+
+Many crimes are never reported to authorities. This is especially important for domestic abuse, sexual violence, fraud, drug offences, and crimes involving distrust of police.
+
+### 2. Recording variation
+
+Even reported events may not be recorded consistently across time, place, or institution.
+
+### 3. Detection bias
+
+Some crimes are found only when institutions search for them. Drug offences, tax violations, and regulatory offences often depend heavily on enforcement intensity.
+
+### 4. Classification changes
+
+Legal or administrative changes can alter crime categories without any real change in behaviour.
+
+### 5. Visibility bias
+
+Highly visible populations and places may appear more criminal because they are more closely monitored.
+
+### 6. Ecological fallacy
+
+Patterns at the group or area level should not be automatically applied to individuals.
+
+## Checklist for foundation-level analysis
+
+Before using a criminological claim, ask:
+
+1. What is being defined as crime?
+2. Is the issue crime, deviance, harm, or criminalization?
+3. What is the unit of analysis?
+4. Is the evidence about true crime or recorded crime?
+5. What measurement process produced the data?
+6. What mechanism is being proposed?
+7. What alternative explanations are possible?
+8. Does the claim confuse description with causation?
+9. Are institutions part of the measurement process?
+10. What would count as contrary evidence?
+
+## Related pages
+
+- [Criminology Notes](../index.qmd)
+- [Mechanisms](../mechanisms/index.qmd)
+- [Institutions](../institutions/index.qmd)
+- [Models](../models/index.qmd)
+- [Topics](../topics/index.qmd)
+- [Methods Map](../../toolkit/methods-map.qmd)
+- [Probability](../../../foundations/probability.qmd)
+- [Metrics](../../../notes/metrics.qmd)

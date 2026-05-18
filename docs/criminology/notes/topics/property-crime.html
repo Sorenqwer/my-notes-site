@@ -68,7 +68,40 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
@@ -130,9 +163,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#mechanisms-to-connect" id="toc-mechanisms-to-connect" class="nav-link active" data-scroll-target="#mechanisms-to-connect">Mechanisms to connect</a></li>
-  <li><a href="#models-to-try" id="toc-models-to-try" class="nav-link" data-scroll-target="#models-to-try">Models to try</a></li>
-  <li><a href="#notes-to-add-later" id="toc-notes-to-add-later" class="nav-link" data-scroll-target="#notes-to-add-later">Notes to add later</a></li>
+  <li><a href="#basic-mechanism-map" id="toc-basic-mechanism-map" class="nav-link active" data-scroll-target="#basic-mechanism-map">Basic mechanism map</a></li>
+  <li><a href="#routine-activity-logic" id="toc-routine-activity-logic" class="nav-link" data-scroll-target="#routine-activity-logic">Routine activity logic</a></li>
+  <li><a href="#target-suitability" id="toc-target-suitability" class="nav-link" data-scroll-target="#target-suitability">Target suitability</a></li>
+  <li><a href="#guardianship" id="toc-guardianship" class="nav-link" data-scroll-target="#guardianship">Guardianship</a></li>
+  <li><a href="#measurement-issues" id="toc-measurement-issues" class="nav-link" data-scroll-target="#measurement-issues">Measurement issues</a></li>
+  <li><a href="#a-simple-target-selection-model" id="toc-a-simple-target-selection-model" class="nav-link" data-scroll-target="#a-simple-target-selection-model">A simple target-selection model</a></li>
+  <li><a href="#displacement" id="toc-displacement" class="nav-link" data-scroll-target="#displacement">Displacement</a></li>
+  <li><a href="#policy-trade-offs" id="toc-policy-trade-offs" class="nav-link" data-scroll-target="#policy-trade-offs">Policy trade-offs</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#treating-property-crime-as-purely-economic" id="toc-treating-property-crime-as-purely-economic" class="nav-link" data-scroll-target="#treating-property-crime-as-purely-economic">1. Treating property crime as purely economic</a></li>
+  <li><a href="#ignoring-target-suitability" id="toc-ignoring-target-suitability" class="nav-link" data-scroll-target="#ignoring-target-suitability">2. Ignoring target suitability</a></li>
+  <li><a href="#assuming-displacement-is-complete" id="toc-assuming-displacement-is-complete" class="nav-link" data-scroll-target="#assuming-displacement-is-complete">3. Assuming displacement is complete</a></li>
+  <li><a href="#treating-recorded-crime-as-true-crime" id="toc-treating-recorded-crime-as-true-crime" class="nav-link" data-scroll-target="#treating-recorded-crime-as-true-crime">4. Treating recorded crime as true crime</a></li>
+  <li><a href="#ignoring-repeat-victimization" id="toc-ignoring-repeat-victimization" class="nav-link" data-scroll-target="#ignoring-repeat-victimization">5. Ignoring repeat victimization</a></li>
+  </ul></li>
+  <li><a href="#checklist-for-analysing-property-crime" id="toc-checklist-for-analysing-property-crime" class="nav-link" data-scroll-target="#checklist-for-analysing-property-crime">Checklist for analysing property crime</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -158,27 +206,312 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Property crime concerns theft, burglary, damage, and taking. The central question is how opportunity and expected payoff interact with enforcement and guardianship.</p>
-<section id="mechanisms-to-connect" class="level2">
-<h2 class="anchored" data-anchor-id="mechanisms-to-connect">Mechanisms to connect</h2>
+<p>Property crime involves taking, damaging, entering, or interfering with property. It includes theft, burglary, vehicle crime, robbery with property motives, vandalism, shoplifting, and fraud-like low-level acquisition offences.</p>
+<p>Property crime is especially useful for studying opportunity, target selection, guardianship, routine activity, and displacement.</p>
+<section id="basic-mechanism-map" class="level2">
+<h2 class="anchored" data-anchor-id="basic-mechanism-map">Basic mechanism map</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Property Crime] --&gt; B[Motivation]
+    A --&gt; C[Opportunity]
+    A --&gt; D[Target]
+    A --&gt; E[Guardianship]
+    A --&gt; F[Market or disposal]
+
+    B --&gt; B1[Need or gain]
+    B --&gt; B2[Peer influence]
+    B --&gt; B3[Low perceived risk]
+
+    C --&gt; C1[Access]
+    C --&gt; C2[Timing]
+    C --&gt; C3[Location]
+
+    D --&gt; D1[Value]
+    D --&gt; D2[Visibility]
+    D --&gt; D3[Portability]
+
+    E --&gt; E1[People nearby]
+    E --&gt; E2[Locks and alarms]
+    E --&gt; E3[Surveillance]
+
+    F --&gt; F1[Resale]
+    F --&gt; F2[Informal markets]
+    F --&gt; F3[Online platforms]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The key idea is that property crime often depends less on deep motivation and more on the immediate structure of opportunity.</p>
+</section>
+<section id="routine-activity-logic" class="level2">
+<h2 class="anchored" data-anchor-id="routine-activity-logic">Routine activity logic</h2>
+<p>Routine activity theory argues that crime becomes more likely when three elements converge:</p>
+<ol type="1">
+<li>a motivated offender;</li>
+<li>a suitable target;</li>
+<li>absence of capable guardianship.</li>
+</ol>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Motivated offender] --&gt; D[Crime event]
+    B[Suitable target] --&gt; D
+    C[Weak guardianship] --&gt; D
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This framework is especially useful for burglary, theft, vehicle crime, and shoplifting.</p>
+</section>
+<section id="target-suitability" class="level2">
+<h2 class="anchored" data-anchor-id="target-suitability">Target suitability</h2>
+<p>A target is more suitable when it is valuable, visible, accessible, removable, and weakly protected.</p>
+<p>For example, a bicycle locked in a hidden alley with a weak lock is more suitable than a bicycle locked in a crowded area with strong surveillance.</p>
+<p>Target suitability depends on:</p>
 <ul>
-<li>target attractiveness</li>
-<li>guardianship and surveillance</li>
-<li>routine activity</li>
-<li>displacement after intervention</li>
+<li>value;</li>
+<li>portability;</li>
+<li>visibility;</li>
+<li>accessibility;</li>
+<li>traceability;</li>
+<li>guardianship;</li>
+<li>resale possibilities.</li>
 </ul>
 </section>
-<section id="models-to-try" class="level2">
-<h2 class="anchored" data-anchor-id="models-to-try">Models to try</h2>
+<section id="guardianship" class="level2">
+<h2 class="anchored" data-anchor-id="guardianship">Guardianship</h2>
+<p>Guardianship does not only mean police. It can include:</p>
 <ul>
-<li>search and target-selection models</li>
-<li>inspection games</li>
-<li>spatial hot-spot models</li>
+<li>neighbours;</li>
+<li>passers-by;</li>
+<li>staff;</li>
+<li>lighting;</li>
+<li>locks;</li>
+<li>alarms;</li>
+<li>CCTV;</li>
+<li>platform moderation;</li>
+<li>transaction monitoring;</li>
+<li>design of space.</li>
 </ul>
+<p>Guardianship changes the expected risk and difficulty of offending.</p>
 </section>
-<section id="notes-to-add-later" class="level2">
-<h2 class="anchored" data-anchor-id="notes-to-add-later">Notes to add later</h2>
-<p>Add empirical examples, key definitions, and one diagram linking mechanism → prediction → measurement.</p>
+<section id="measurement-issues" class="level2">
+<h2 class="anchored" data-anchor-id="measurement-issues">Measurement issues</h2>
+<p>Property crime has several measurement problems.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Issue</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Insurance incentives</td>
+<td>some incidents are reported mainly for claims</td>
+</tr>
+<tr class="even">
+<td>Low-value offences</td>
+<td>small losses may not be reported</td>
+</tr>
+<tr class="odd">
+<td>Business reporting</td>
+<td>firms may record losses internally rather than report</td>
+</tr>
+<tr class="even">
+<td>Repeat victimization</td>
+<td>one location or person may experience many events</td>
+</tr>
+<tr class="odd">
+<td>Classification</td>
+<td>theft, burglary, robbery, and fraud may be separated legally</td>
+</tr>
+<tr class="even">
+<td>Online resale</td>
+<td>stolen property markets may be hard to observe</td>
+</tr>
+</tbody>
+</table>
+<p>Recorded property crime can fall because offending falls, but also because reporting falls or insurance behaviour changes.</p>
+</section>
+<section id="a-simple-target-selection-model" class="level2">
+<h2 class="anchored" data-anchor-id="a-simple-target-selection-model">A simple target-selection model</h2>
+<p>A property offender may choose among possible targets by comparing expected gain and expected cost.</p>
+<p>A simple expression is:</p>
+<p><span class="math display">\[
+\text{Expected payoff}
+=
+\text{value of target}
+-
+\Pr(\text{caught}) \times \text{sanction}
+-
+\text{effort cost}.
+\]</span></p>
+<p>The offender chooses the target with the highest expected payoff.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Target value] --&gt; D[Expected payoff]
+    B[Detection risk] --&gt; D
+    C[Effort cost] --&gt; D
+    D --&gt; E[Target choice]
+    E --&gt; F[Crime concentration]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This model explains why crime can cluster around attractive targets and weakly guarded places.</p>
+</section>
+<section id="displacement" class="level2">
+<h2 class="anchored" data-anchor-id="displacement">Displacement</h2>
+<p>Property crime interventions often raise the issue of displacement.</p>
+<p>If one target becomes harder, offending may move to:</p>
+<ul>
+<li>another place;</li>
+<li>another time;</li>
+<li>another target;</li>
+<li>another method;</li>
+<li>another offence type.</li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Intervention] --&gt; B[Target becomes harder]
+    B --&gt; C{Offender adapts?}
+    C --&gt;|No| D[Crime reduction]
+    C --&gt;|Yes| E[Displacement]
+    E --&gt; F[Place]
+    E --&gt; G[Time]
+    E --&gt; H[Target]
+    E --&gt; I[Method]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Displacement is possible, but not automatic. Some interventions reduce crime without full displacement because offenders do not always find equally attractive alternatives.</p>
+</section>
+<section id="policy-trade-offs" class="level2">
+<h2 class="anchored" data-anchor-id="policy-trade-offs">Policy trade-offs</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Policy</th>
+<th>Mechanism</th>
+<th>Possible risk</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Better locks</td>
+<td>increases effort cost</td>
+<td>benefits depend on adoption</td>
+</tr>
+<tr class="even">
+<td>CCTV</td>
+<td>increases detection risk</td>
+<td>may shift crime elsewhere</td>
+</tr>
+<tr class="odd">
+<td>Street lighting</td>
+<td>increases guardianship</td>
+<td>effect varies by context</td>
+</tr>
+<tr class="even">
+<td>Hotspot patrol</td>
+<td>increases perceived risk</td>
+<td>may affect trust</td>
+</tr>
+<tr class="odd">
+<td>Product marking</td>
+<td>lowers resale value</td>
+<td>requires market checks</td>
+</tr>
+<tr class="even">
+<td>Platform monitoring</td>
+<td>disrupts stolen-goods markets</td>
+<td>privacy and enforcement concerns</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="treating-property-crime-as-purely-economic" class="level3">
+<h3 class="anchored" data-anchor-id="treating-property-crime-as-purely-economic">1. Treating property crime as purely economic</h3>
+<p>Material gain matters, but peer influence, drug markets, habit, status, and opportunity may also matter.</p>
+</section>
+<section id="ignoring-target-suitability" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-target-suitability">2. Ignoring target suitability</h3>
+<p>Not all targets are equally attractive or accessible.</p>
+</section>
+<section id="assuming-displacement-is-complete" class="level3">
+<h3 class="anchored" data-anchor-id="assuming-displacement-is-complete">3. Assuming displacement is complete</h3>
+<p>Offenders may not perfectly substitute to other targets.</p>
+</section>
+<section id="treating-recorded-crime-as-true-crime" class="level3">
+<h3 class="anchored" data-anchor-id="treating-recorded-crime-as-true-crime">4. Treating recorded crime as true crime</h3>
+<p>Reporting varies by value, insurance, trust, and victim type.</p>
+</section>
+<section id="ignoring-repeat-victimization" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-repeat-victimization">5. Ignoring repeat victimization</h3>
+<p>Some people, firms, or places are victimized repeatedly.</p>
+</section>
+</section>
+<section id="checklist-for-analysing-property-crime" class="level2">
+<h2 class="anchored" data-anchor-id="checklist-for-analysing-property-crime">Checklist for analysing property crime</h2>
+<ol type="1">
+<li>What kind of property crime is being studied?</li>
+<li>What is the target?</li>
+<li>What makes the target suitable?</li>
+<li>What guardianship exists?</li>
+<li>What is the expected gain?</li>
+<li>What is the perceived risk?</li>
+<li>How is the crime reported and recorded?</li>
+<li>Is repeat victimization present?</li>
+<li>Could displacement occur?</li>
+<li>What policy mechanism is being used?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../../../criminology/notes/topics/index.html">Topics</a></li>
+<li><a href="../../../criminology/notes/mechanisms/opportunity-routine.html">Opportunity and routine activity</a></li>
+<li><a href="../../../criminology/notes/models/inspection-games.html">Inspection games</a></li>
+<li><a href="../../../criminology/notes/models/allocation-dynamics.html">Allocation dynamics</a></li>
+<li><a href="../../../criminology/notes/models/reporting-trust.html">Reporting and trust</a></li>
+<li><a href="../../../notes/metrics.html">Metrics</a></li>
+</ul>
 
 
 </section>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Fixed points &amp; correspondences – Margins of Rationality</title>
+<title>Fixed Points – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -159,11 +163,27 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#fixed-points-functions" id="toc-fixed-points-functions" class="nav-link active" data-scroll-target="#fixed-points-functions">Fixed points (functions)</a></li>
-  <li><a href="#brouwer-idea" id="toc-brouwer-idea" class="nav-link" data-scroll-target="#brouwer-idea">Brouwer (idea)</a></li>
-  <li><a href="#correspondences-set-valued-maps" id="toc-correspondences-set-valued-maps" class="nav-link" data-scroll-target="#correspondences-set-valued-maps">Correspondences (set-valued maps)</a></li>
-  <li><a href="#kakutani-idea" id="toc-kakutani-idea" class="nav-link" data-scroll-target="#kakutani-idea">Kakutani (idea)</a></li>
-  <li><a href="#example-fixed-point-intuition-in-1d" id="toc-example-fixed-point-intuition-in-1d" class="nav-link" data-scroll-target="#example-fixed-point-intuition-in-1d">Example: fixed point intuition in 1D</a></li>
+  <li><a href="#the-basic-idea" id="toc-the-basic-idea" class="nav-link active" data-scroll-target="#the-basic-idea">The basic idea</a></li>
+  <li><a href="#simple-example" id="toc-simple-example" class="nav-link" data-scroll-target="#simple-example">Simple example</a></li>
+  <li><a href="#fixed-points-and-equilibrium" id="toc-fixed-points-and-equilibrium" class="nav-link" data-scroll-target="#fixed-points-and-equilibrium">Fixed points and equilibrium</a></li>
+  <li><a href="#function-versus-correspondence" id="toc-function-versus-correspondence" class="nav-link" data-scroll-target="#function-versus-correspondence">Function versus correspondence</a></li>
+  <li><a href="#why-fixed-points-matter" id="toc-why-fixed-points-matter" class="nav-link" data-scroll-target="#why-fixed-points-matter">Why fixed points matter</a></li>
+  <li><a href="#brouwer-fixed-point-theorem" id="toc-brouwer-fixed-point-theorem" class="nav-link" data-scroll-target="#brouwer-fixed-point-theorem">Brouwer fixed-point theorem</a></li>
+  <li><a href="#kakutani-fixed-point-theorem" id="toc-kakutani-fixed-point-theorem" class="nav-link" data-scroll-target="#kakutani-fixed-point-theorem">Kakutani fixed-point theorem</a></li>
+  <li><a href="#fixed-points-in-mixed-strategies" id="toc-fixed-points-in-mixed-strategies" class="nav-link" data-scroll-target="#fixed-points-in-mixed-strategies">Fixed points in mixed strategies</a></li>
+  <li><a href="#stability-interpretation" id="toc-stability-interpretation" class="nav-link" data-scroll-target="#stability-interpretation">Stability interpretation</a></li>
+  <li><a href="#fixed-point-versus-convergence" id="toc-fixed-point-versus-convergence" class="nav-link" data-scroll-target="#fixed-point-versus-convergence">Fixed point versus convergence</a></li>
+  <li><a href="#application-best-response-dynamics" id="toc-application-best-response-dynamics" class="nav-link" data-scroll-target="#application-best-response-dynamics">Application: best-response dynamics</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#thinking-a-fixed-point-must-be-unique" id="toc-thinking-a-fixed-point-must-be-unique" class="nav-link" data-scroll-target="#thinking-a-fixed-point-must-be-unique">1. Thinking a fixed point must be unique</a></li>
+  <li><a href="#confusing-fixed-point-with-maximum" id="toc-confusing-fixed-point-with-maximum" class="nav-link" data-scroll-target="#confusing-fixed-point-with-maximum">2. Confusing fixed point with maximum</a></li>
+  <li><a href="#confusing-existence-with-computation" id="toc-confusing-existence-with-computation" class="nav-link" data-scroll-target="#confusing-existence-with-computation">3. Confusing existence with computation</a></li>
+  <li><a href="#confusing-existence-with-stability" id="toc-confusing-existence-with-stability" class="nav-link" data-scroll-target="#confusing-existence-with-stability">4. Confusing existence with stability</a></li>
+  <li><a href="#ignoring-assumptions" id="toc-ignoring-assumptions" class="nav-link" data-scroll-target="#ignoring-assumptions">5. Ignoring assumptions</a></li>
+  </ul></li>
+  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist">Checklist</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -172,7 +192,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Fixed points &amp; correspondences</h1>
+<h1 class="title">Fixed Points</h1>
 </div>
 
 
@@ -189,37 +209,350 @@ window.Quarto = {
 </header>
 
 
-<section id="fixed-points-functions" class="level2">
-<h2 class="anchored" data-anchor-id="fixed-points-functions">Fixed points (functions)</h2>
-<p>A <strong>fixed point</strong> of a function <span class="math inline">\(f:X\to X\)</span> is a point <span class="math inline">\(x^*\)</span> such that <span class="math display">\[
+<p>A fixed point is a point that is mapped back to itself. In game theory, fixed-point reasoning is central because an equilibrium is often a situation where each player’s strategy is consistent with everyone else’s strategy.</p>
+<p>The basic idea is simple:</p>
+<p><span class="math display">\[
+x^* = f(x^*).
+\]</span></p>
+<p>The input and output coincide. Nothing changes after the mapping is applied.</p>
+<section id="the-basic-idea" class="level2">
+<h2 class="anchored" data-anchor-id="the-basic-idea">The basic idea</h2>
+<p>Suppose there is a function</p>
+<p><span class="math display">\[
+f:X \to X.
+\]</span></p>
+<p>A point <span class="math inline">\(x^* \in X\)</span> is a fixed point of <span class="math inline">\(f\)</span> if</p>
+<p><span class="math display">\[
+f(x^*) = x^*.
+\]</span></p>
+<p>This means that if we start at <span class="math inline">\(x^*\)</span> and apply the function, we end up exactly where we started.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Start with x] --&gt; B[Apply mapping f]
+    B --&gt; C[Get f x]
+    C --&gt; D{Is f x equal to x?}
+    D --&gt;|Yes| E[Fixed point]
+    D --&gt;|No| F[Not fixed]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The concept is useful because many stability ideas have this structure.</p>
+</section>
+<section id="simple-example" class="level2">
+<h2 class="anchored" data-anchor-id="simple-example">Simple example</h2>
+<p>Let</p>
+<p><span class="math display">\[
+f(x)=\frac{x+1}{2}.
+\]</span></p>
+<p>A fixed point satisfies</p>
+<p><span class="math display">\[
+x=\frac{x+1}{2}.
+\]</span></p>
+<p>Multiply both sides by 2:</p>
+<p><span class="math display">\[
+2x=x+1.
+\]</span></p>
+<p>So</p>
+<p><span class="math display">\[
+x=1.
+\]</span></p>
+<p>Therefore, <span class="math inline">\(x^*=1\)</span> is a fixed point.</p>
+<p>Check:</p>
+<p><span class="math display">\[
+f(1)=\frac{1+1}{2}=1.
+\]</span></p>
+</section>
+<section id="fixed-points-and-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="fixed-points-and-equilibrium">Fixed points and equilibrium</h2>
+<p>In game theory, a Nash equilibrium can be understood as a fixed point of best-response reasoning.</p>
+<p>Each player chooses a best response to what the others do. If everyone is already best responding to everyone else, the strategy profile is stable.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Strategy profile] --&gt; B[Best-response mapping]
+    B --&gt; C[New strategy profile]
+    C --&gt; D{Same as before?}
+    D --&gt;|Yes| E[Nash equilibrium]
+    D --&gt;|No| F[Adjust again]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The formal idea is:</p>
+<p><span class="math display">\[
+s^* \in BR(s^*).
+\]</span></p>
+<p>Here <span class="math inline">\(BR\)</span> is the best-response correspondence. A Nash equilibrium is a fixed point of the best-response correspondence.</p>
+</section>
+<section id="function-versus-correspondence" class="level2">
+<h2 class="anchored" data-anchor-id="function-versus-correspondence">Function versus correspondence</h2>
+<p>A function assigns exactly one output to each input.</p>
+<p>A correspondence can assign a set of possible outputs to each input.</p>
+<p>For example, a best response may not be unique. A player may be indifferent between several strategies. In that case, the best-response object is a correspondence rather than a function.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Input] --&gt; B{Mapping type}
+    B --&gt; C[Function: one output]
+    B --&gt; D[Correspondence: set of outputs]
+    D --&gt; E[Best responses may be multiple]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This is why many equilibrium existence theorems use fixed-point theorems for correspondences.</p>
+</section>
+<section id="why-fixed-points-matter" class="level2">
+<h2 class="anchored" data-anchor-id="why-fixed-points-matter">Why fixed points matter</h2>
+<p>Fixed-point reasoning helps prove that an equilibrium exists.</p>
+<p>In many models, we do not solve directly for the equilibrium. Instead, we show that some mapping must have a fixed point. If the mapping represents best responses, then the fixed point is an equilibrium.</p>
+<p>The logic is:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Define strategy space] --&gt; B[Define best-response mapping]
+    B --&gt; C[Check mathematical conditions]
+    C --&gt; D[Apply fixed-point theorem]
+    D --&gt; E[Equilibrium exists]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This is especially important in games with continuous strategy spaces or mixed strategies.</p>
+</section>
+<section id="brouwer-fixed-point-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="brouwer-fixed-point-theorem">Brouwer fixed-point theorem</h2>
+<p>The Brouwer fixed-point theorem says, roughly:</p>
+<blockquote class="blockquote">
+<p>If a continuous function maps a compact and convex set into itself, then it has at least one fixed point.</p>
+</blockquote>
+<p>A simplified statement is:</p>
+<p>Let <span class="math inline">\(X\)</span> be non-empty, compact, and convex. If</p>
+<p><span class="math display">\[
+f:X \to X
+\]</span></p>
+<p>is continuous, then there exists some <span class="math inline">\(x^* \in X\)</span> such that</p>
+<p><span class="math display">\[
 f(x^*)=x^*.
 \]</span></p>
-<p><strong>Intuition.</strong> An equilibrium is often a fixed point: if “best response” maps strategies into strategies, equilibrium is where nothing changes.</p>
+<p>The key conditions are:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Condition</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Non-empty</td>
+<td>There is at least one possible point</td>
+</tr>
+<tr class="even">
+<td>Compact</td>
+<td>The set is closed and bounded</td>
+</tr>
+<tr class="odd">
+<td>Convex</td>
+<td>Mixtures of points stay inside the set</td>
+</tr>
+<tr class="even">
+<td>Continuous</td>
+<td>Small input changes do not create jumps</td>
+</tr>
+<tr class="odd">
+<td>Maps into itself</td>
+<td>The output remains feasible</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="brouwer-idea" class="level2">
-<h2 class="anchored" data-anchor-id="brouwer-idea">Brouwer (idea)</h2>
-<p>Brouwer’s fixed point theorem (informal): a continuous function from a compact convex set to itself has a fixed point.</p>
-<p>This supports existence of equilibrium in many continuous games.</p>
-</section>
-<section id="correspondences-set-valued-maps" class="level2">
-<h2 class="anchored" data-anchor-id="correspondences-set-valued-maps">Correspondences (set-valued maps)</h2>
-<p>A <strong>correspondence</strong> <span class="math inline">\(F:X \rightrightarrows X\)</span> assigns a <em>set</em> <span class="math inline">\(F(x)\)</span> to each <span class="math inline">\(x\)</span>. Best responses are usually correspondences: <span class="math display">\[
-BR_i(s_{-i}) = \arg\max_{s_i\in S_i} u_i(s_i,s_{-i}),
-\]</span> which may contain multiple maximizers.</p>
-</section>
-<section id="kakutani-idea" class="level2">
-<h2 class="anchored" data-anchor-id="kakutani-idea">Kakutani (idea)</h2>
-<p>Kakutani’s theorem (informal): under continuity-like conditions and nonempty convex values, a correspondence has a fixed point: <span class="math display">\[
+<section id="kakutani-fixed-point-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="kakutani-fixed-point-theorem">Kakutani fixed-point theorem</h2>
+<p>Kakutani’s theorem extends the logic to correspondences.</p>
+<p>A simplified version says:</p>
+<blockquote class="blockquote">
+<p>If a correspondence maps a non-empty, compact, convex set into itself, and satisfies suitable continuity and convexity conditions, then it has a fixed point.</p>
+</blockquote>
+<p>This is useful for game theory because best responses may be set-valued.</p>
+<p>A fixed point of a correspondence <span class="math inline">\(F\)</span> is a point <span class="math inline">\(x^*\)</span> such that</p>
+<p><span class="math display">\[
 x^* \in F(x^*).
 \]</span></p>
-<p>This is the classic route to Nash existence with mixed strategies: the product of best-response correspondences has a fixed point.</p>
-</section>
-<section id="example-fixed-point-intuition-in-1d" class="level2">
-<h2 class="anchored" data-anchor-id="example-fixed-point-intuition-in-1d">Example: fixed point intuition in 1D</h2>
-<p>Let <span class="math inline">\(f(x)=\frac{1}{2}x+\frac{1}{4}\)</span> on <span class="math inline">\([0,1]\)</span>. Solve <span class="math inline">\(x=f(x)\)</span>: <span class="math display">\[
-x=\frac{1}{2}x+\frac{1}{4}\Rightarrow x^*=\frac{1}{2}.
+<p>For Nash equilibrium, this becomes:</p>
+<p><span class="math display">\[
+s^* \in BR(s^*).
 \]</span></p>
-<p>Equilibrium-as-fixed-point is exactly this: apply the rule, you land back on yourself.</p>
+</section>
+<section id="fixed-points-in-mixed-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="fixed-points-in-mixed-strategies">Fixed points in mixed strategies</h2>
+<p>Finite games may fail to have a pure-strategy Nash equilibrium, but they always have a mixed-strategy Nash equilibrium.</p>
+<p>The existence proof relies on fixed-point reasoning.</p>
+<p>The intuition is:</p>
+<ol type="1">
+<li>each player has a set of mixed strategies;</li>
+<li>each player has best responses to others’ mixed strategies;</li>
+<li>the best-response correspondence maps the strategy space into itself;</li>
+<li>under appropriate conditions, there is a fixed point;</li>
+<li>that fixed point is a Nash equilibrium.</li>
+</ol>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Finite game] --&gt; B[Mixed strategy spaces]
+    B --&gt; C[Best-response correspondence]
+    C --&gt; D[Fixed-point theorem]
+    D --&gt; E[Mixed-strategy Nash equilibrium exists]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This does not tell us which equilibrium is best or unique. It only guarantees existence.</p>
+</section>
+<section id="stability-interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="stability-interpretation">Stability interpretation</h2>
+<p>A fixed point is a kind of stability condition. If the system is at the fixed point, applying the rule again does not move it.</p>
+<p>In social science, this can describe:</p>
+<ul>
+<li>equilibrium strategies;</li>
+<li>stable beliefs;</li>
+<li>persistent norms;</li>
+<li>self-confirming expectations;</li>
+<li>steady states;</li>
+<li>institutional routines.</li>
+</ul>
+<p>The common structure is:</p>
+<pre class="text"><code>current state → adjustment rule → next state</code></pre>
+<p>A fixed point occurs when:</p>
+<pre class="text"><code>current state = next state</code></pre>
+</section>
+<section id="fixed-point-versus-convergence" class="level2">
+<h2 class="anchored" data-anchor-id="fixed-point-versus-convergence">Fixed point versus convergence</h2>
+<p>A fixed point is not the same as convergence.</p>
+<p>A mapping may have a fixed point, but the process of repeatedly applying the mapping may not necessarily converge to it.</p>
+<p>For example, a system can cycle:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[State A] --&gt; B[State B]
+    B --&gt; C[State C]
+    C --&gt; A
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>So we should separate two questions:</p>
+<ol type="1">
+<li>Does a fixed point exist?</li>
+<li>Will a process actually reach it?</li>
+</ol>
+<p>Existence is mathematical. Convergence is dynamic.</p>
+</section>
+<section id="application-best-response-dynamics" class="level2">
+<h2 class="anchored" data-anchor-id="application-best-response-dynamics">Application: best-response dynamics</h2>
+<p>In best-response dynamics, players repeatedly adjust to what others did before.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Initial strategies] --&gt; B[Player 1 best responds]
+    B --&gt; C[Player 2 best responds]
+    C --&gt; D[New strategies]
+    D --&gt; E{Stable?}
+    E --&gt;|Yes| F[Equilibrium]
+    E --&gt;|No| B
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>If the process reaches a point where no one wants to change, it has reached a Nash equilibrium.</p>
+<p>But best-response dynamics do not always converge. Some games cycle.</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="thinking-a-fixed-point-must-be-unique" class="level3">
+<h3 class="anchored" data-anchor-id="thinking-a-fixed-point-must-be-unique">1. Thinking a fixed point must be unique</h3>
+<p>A mapping may have one fixed point, many fixed points, or none.</p>
+</section>
+<section id="confusing-fixed-point-with-maximum" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-fixed-point-with-maximum">2. Confusing fixed point with maximum</h3>
+<p>A fixed point solves <span class="math inline">\(x=f(x)\)</span>. An optimum solves a maximization or minimization problem.</p>
+</section>
+<section id="confusing-existence-with-computation" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-existence-with-computation">3. Confusing existence with computation</h3>
+<p>A theorem may prove that an equilibrium exists without telling us how to find it.</p>
+</section>
+<section id="confusing-existence-with-stability" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-existence-with-stability">4. Confusing existence with stability</h3>
+<p>A fixed point may exist even if a dynamic process does not converge to it.</p>
+</section>
+<section id="ignoring-assumptions" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-assumptions">5. Ignoring assumptions</h3>
+<p>Fixed-point theorems require conditions such as compactness, convexity, continuity, and self-mapping.</p>
+</section>
+</section>
+<section id="checklist" class="level2">
+<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
+<p>When you see fixed-point reasoning, ask:</p>
+<ol type="1">
+<li>What is the set <span class="math inline">\(X\)</span>?</li>
+<li>What is the mapping <span class="math inline">\(f\)</span> or correspondence <span class="math inline">\(F\)</span>?</li>
+<li>Does it map <span class="math inline">\(X\)</span> into itself?</li>
+<li>Is <span class="math inline">\(X\)</span> non-empty?</li>
+<li>Is <span class="math inline">\(X\)</span> compact?</li>
+<li>Is <span class="math inline">\(X\)</span> convex?</li>
+<li>Is the mapping continuous or suitably well-behaved?</li>
+<li>What does the fixed point mean substantively?</li>
+<li>Is the fixed point an equilibrium, steady state, or stable belief?</li>
+<li>Does the argument prove existence, uniqueness, or convergence?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../foundations/optimization.html">Optimization</a></li>
+<li><a href="../foundations/convexity.html">Convexity</a></li>
+<li><a href="../foundations/linear-algebra.html">Linear Algebra</a></li>
+<li><a href="../notes/game-theory.html">Game Theory Notes</a></li>
+<li><a href="../notes/equilibriums/nash.html">Nash Equilibrium</a></li>
+<li><a href="../notes/equilibriums/index.html">Equilibrium Concepts</a></li>
+</ul>
 
 
 </section>

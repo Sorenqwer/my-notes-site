@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Criminology notes – Margins of Rationality</title>
+<title>Criminology Notes – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,6 +73,35 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -134,9 +163,33 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#how-these-criminology-notes-are-organised" id="toc-how-these-criminology-notes-are-organised" class="nav-link active" data-scroll-target="#how-these-criminology-notes-are-organised">How these criminology notes are organised</a></li>
-  <li><a href="#start-here" id="toc-start-here" class="nav-link" data-scroll-target="#start-here">Start here</a></li>
-  <li><a href="#how-this-section-is-organized" id="toc-how-this-section-is-organized" class="nav-link" data-scroll-target="#how-this-section-is-organized">How this section is organized</a></li>
+  <li><a href="#map-of-the-criminology-notes" id="toc-map-of-the-criminology-notes" class="nav-link active" data-scroll-target="#map-of-the-criminology-notes">Map of the criminology notes</a></li>
+  <li><a href="#main-sections" id="toc-main-sections" class="nav-link" data-scroll-target="#main-sections">Main sections</a></li>
+  <li><a href="#the-basic-analytical-chain" id="toc-the-basic-analytical-chain" class="nav-link" data-scroll-target="#the-basic-analytical-chain">The basic analytical chain</a></li>
+  <li><a href="#crime-as-behaviour-and-record" id="toc-crime-as-behaviour-and-record" class="nav-link" data-scroll-target="#crime-as-behaviour-and-record">Crime as behaviour and record</a></li>
+  <li><a href="#mechanisms-before-labels" id="toc-mechanisms-before-labels" class="nav-link" data-scroll-target="#mechanisms-before-labels">Mechanisms before labels</a></li>
+  <li><a href="#institutions-and-incentives" id="toc-institutions-and-incentives" class="nav-link" data-scroll-target="#institutions-and-incentives">Institutions and incentives</a></li>
+  <li><a href="#why-models-are-useful" id="toc-why-models-are-useful" class="nav-link" data-scroll-target="#why-models-are-useful">Why models are useful</a></li>
+  <li><a href="#example-deterrence-as-a-mechanism" id="toc-example-deterrence-as-a-mechanism" class="nav-link" data-scroll-target="#example-deterrence-as-a-mechanism">Example: deterrence as a mechanism</a></li>
+  <li><a href="#example-reporting-and-trust" id="toc-example-reporting-and-trust" class="nav-link" data-scroll-target="#example-reporting-and-trust">Example: reporting and trust</a></li>
+  <li><a href="#suggested-reading-paths" id="toc-suggested-reading-paths" class="nav-link" data-scroll-target="#suggested-reading-paths">Suggested reading paths</a>
+  <ul class="collapse">
+  <li><a href="#if-you-are-new-to-criminology" id="toc-if-you-are-new-to-criminology" class="nav-link" data-scroll-target="#if-you-are-new-to-criminology">If you are new to criminology</a></li>
+  <li><a href="#if-you-want-mechanisms" id="toc-if-you-want-mechanisms" class="nav-link" data-scroll-target="#if-you-want-mechanisms">If you want mechanisms</a></li>
+  <li><a href="#if-you-want-institutions" id="toc-if-you-want-institutions" class="nav-link" data-scroll-target="#if-you-want-institutions">If you want institutions</a></li>
+  <li><a href="#if-you-want-models" id="toc-if-you-want-models" class="nav-link" data-scroll-target="#if-you-want-models">If you want models</a></li>
+  </ul></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#treating-recorded-crime-as-true-crime" id="toc-treating-recorded-crime-as-true-crime" class="nav-link" data-scroll-target="#treating-recorded-crime-as-true-crime">1. Treating recorded crime as true crime</a></li>
+  <li><a href="#naming-a-theory-without-explaining-the-mechanism" id="toc-naming-a-theory-without-explaining-the-mechanism" class="nav-link" data-scroll-target="#naming-a-theory-without-explaining-the-mechanism">2. Naming a theory without explaining the mechanism</a></li>
+  <li><a href="#ignoring-institutions" id="toc-ignoring-institutions" class="nav-link" data-scroll-target="#ignoring-institutions">3. Ignoring institutions</a></li>
+  <li><a href="#assuming-punishment-works-mechanically" id="toc-assuming-punishment-works-mechanically" class="nav-link" data-scroll-target="#assuming-punishment-works-mechanically">4. Assuming punishment works mechanically</a></li>
+  <li><a href="#ignoring-displacement" id="toc-ignoring-displacement" class="nav-link" data-scroll-target="#ignoring-displacement">5. Ignoring displacement</a></li>
+  <li><a href="#separating-theory-and-measurement" id="toc-separating-theory-and-measurement" class="nav-link" data-scroll-target="#separating-theory-and-measurement">6. Separating theory and measurement</a></li>
+  </ul></li>
+  <li><a href="#how-these-notes-connect-to-the-rest-of-the-site" id="toc-how-these-notes-connect-to-the-rest-of-the-site" class="nav-link" data-scroll-target="#how-these-notes-connect-to-the-rest-of-the-site">How these notes connect to the rest of the site</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -145,7 +198,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Criminology notes</h1>
+<h1 class="title">Criminology Notes</h1>
 </div>
 
 
@@ -162,77 +215,378 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="how-these-criminology-notes-are-organised" class="level2">
-<h2 class="anchored" data-anchor-id="how-these-criminology-notes-are-organised">How these criminology notes are organised</h2>
-<p>The criminology section is organised around mechanisms, institutions, models, and substantive topics.</p>
+<p>These notes study crime, deviance, social control, and institutions through mechanisms. The aim is not only to list theories, but to ask how behaviour is produced, constrained, recorded, punished, justified, and changed.</p>
+<p>The criminology section is organised around five layers:</p>
+<ol type="1">
+<li><strong>Foundations</strong>: core concepts and measurement problems.</li>
+<li><strong>Mechanisms</strong>: causal and behavioural processes.</li>
+<li><strong>Institutions</strong>: police, courts, corrections, and governance.</li>
+<li><strong>Models</strong>: formal or semi-formal tools for thinking clearly.</li>
+<li><strong>Topics</strong>: substantive crime areas such as violence, property crime, cybercrime, and drug markets.</li>
+</ol>
+<section id="map-of-the-criminology-notes" class="level2">
+<h2 class="anchored" data-anchor-id="map-of-the-criminology-notes">Map of the criminology notes</h2>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TD
-    A[Criminology] --&gt; B[Foundations]
+    A[Criminology Notes] --&gt; B[Foundations]
     A --&gt; C[Mechanisms]
     A --&gt; D[Institutions]
     A --&gt; E[Models]
     A --&gt; F[Topics]
- 
-    B --&gt; B1[Core Concepts]
+
+    B --&gt; B1[Crime and deviance]
     B --&gt; B2[Measurement]
-    B --&gt; B3[Research Questions]
- 
+    B --&gt; B3[Recorded crime vs true crime]
+
     C --&gt; C1[Self-control]
-    C --&gt; C2[Opportunity and Routine Activity]
-    C --&gt; C3[Legitimacy and Compliance]
-    C --&gt; C4[Social Interactions]
-    C --&gt; C5[Life-course Processes]
- 
+    C --&gt; C2[Opportunity and routine activity]
+    C --&gt; C3[Social interactions]
+    C --&gt; C4[Legitimacy and compliance]
+    C --&gt; C5[Labeling and stigma]
+    C --&gt; C6[Life-course processes]
+    C --&gt; C7[Inequality and trust]
+
     D --&gt; D1[Policing]
     D --&gt; D2[Courts]
     D --&gt; D3[Corrections]
- 
-    E --&gt; E1[Inspection Games]
-    E --&gt; E2[Co-offending Games]
-    E --&gt; E3[Network Crime]
-    E --&gt; E4[Reporting and Trust]
- 
-    F --&gt; F1[Violent Crime]
-    F --&gt; F2[Property Crime]
-    F --&gt; F3[White-collar Crime]
+
+    E --&gt; E1[Inspection games]
+    E --&gt; E2[Co-offending games]
+    E --&gt; E3[Network crime]
+    E --&gt; E4[Reporting and trust]
+    E --&gt; E5[Plea bargaining]
+    E --&gt; E6[Allocation dynamics]
+
+    F --&gt; F1[Violent crime]
+    F --&gt; F2[Property crime]
+    F --&gt; F3[White-collar crime]
     F --&gt; F4[Cybercrime]
-    F --&gt; F5[Organized Crime]
-    F --&gt; F6[Drug Markets]
+    F --&gt; F5[Organized crime]
+    F --&gt; F6[Drug markets]
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
+<p>The structure is meant to help connect theories with mechanisms and mechanisms with evidence.</p>
 </section>
-<section id="start-here" class="level2">
-<h2 class="anchored" data-anchor-id="start-here">Start here</h2>
+<section id="main-sections" class="level2">
+<h2 class="anchored" data-anchor-id="main-sections">Main sections</h2>
+<div class="grid gap-3">
+<div class="g-col-12 g-col-md-6">
+<section id="foundations" class="level3 card">
+<h3 class="anchored" data-anchor-id="foundations">Foundations</h3>
+<p>Core criminological concepts: crime, deviance, measurement, recorded crime, hidden crime, harm, social control, and explanation.</p>
+<p><a href="../../criminology/notes/foundations/index.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="mechanisms" class="level3 card">
+<h3 class="anchored" data-anchor-id="mechanisms">Mechanisms</h3>
+<p>Behavioural and social processes that generate crime or compliance: self-control, opportunity, social interaction, legitimacy, labeling, life-course dynamics, inequality, and trust.</p>
+<p><a href="../../criminology/notes/mechanisms/index.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="institutions" class="level3 card">
+<h3 class="anchored" data-anchor-id="institutions">Institutions</h3>
+<p>How formal institutions respond to crime: policing, courts, corrections, enforcement, legitimacy, discretion, and incentives.</p>
+<p><a href="../../criminology/notes/institutions/index.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="models" class="level3 card">
+<h3 class="anchored" data-anchor-id="models">Models</h3>
+<p>Analytical tools for thinking about crime: inspection games, co-offending games, network crime, reporting and trust, plea bargaining, and allocation dynamics.</p>
+<p><a href="../../criminology/notes/models/index.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="topics" class="level3 card">
+<h3 class="anchored" data-anchor-id="topics">Topics</h3>
+<p>Substantive crime areas: violent crime, property crime, organized crime, white-collar crime, cybercrime, and drug markets.</p>
+<p><a href="../../criminology/notes/topics/index.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="toolkit" class="level3 card">
+<h3 class="anchored" data-anchor-id="toolkit">Toolkit</h3>
+<p>Glossary, methods map, and modelling checklist for criminology pages.</p>
+<p><a href="../../criminology/toolkit/index.html">Open →</a></p>
+</section>
+</div>
+</div>
+</section>
+<section id="the-basic-analytical-chain" class="level2">
+<h2 class="anchored" data-anchor-id="the-basic-analytical-chain">The basic analytical chain</h2>
+<p>A useful criminological explanation usually connects context, mechanism, behaviour, measurement, and response.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Social or institutional context] --&gt; B[Mechanism]
+    B --&gt; C[Behaviour]
+    C --&gt; D[Observed data]
+    D --&gt; E[Interpretation]
+    E --&gt; F[Policy response]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This chain also shows where mistakes can occur. A change in recorded crime may reflect a change in actual offending, reporting, detection, classification, or enforcement intensity.</p>
+</section>
+<section id="crime-as-behaviour-and-record" class="level2">
+<h2 class="anchored" data-anchor-id="crime-as-behaviour-and-record">Crime as behaviour and record</h2>
+<p>One of the most important distinctions in criminology is the difference between <strong>true crime</strong> and <strong>recorded crime</strong>.</p>
+<p>True crime refers to events that actually occur. Recorded crime refers to events that appear in official data.</p>
+<p>These are not the same.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Crime event occurs] --&gt; B{Victim or witness reports?}
+    B --&gt;|No| C[Hidden crime]
+    B --&gt;|Yes| D{Police record the event?}
+    D --&gt;|No| E[Unrecorded reported event]
+    D --&gt;|Yes| F[Recorded crime]
+    F --&gt; G[Official statistics]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This distinction matters because many empirical claims rely on recorded data. A rise in recorded crime may mean more offending, better reporting, changed police practice, or changed classification.</p>
+</section>
+<section id="mechanisms-before-labels" class="level2">
+<h2 class="anchored" data-anchor-id="mechanisms-before-labels">Mechanisms before labels</h2>
+<p>A theory is most useful when it identifies a mechanism.</p>
+<p>For example:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Theory family</th>
+<th>Possible mechanism</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Deterrence</td>
+<td>Sanctions change expected costs</td>
+</tr>
+<tr class="even">
+<td>Routine activity</td>
+<td>Crime occurs when opportunity, target, and weak guardianship coincide</td>
+</tr>
+<tr class="odd">
+<td>Self-control</td>
+<td>Impulsivity affects sensitivity to immediate reward</td>
+</tr>
+<tr class="even">
+<td>Social learning</td>
+<td>Behaviour spreads through peers and reinforcement</td>
+</tr>
+<tr class="odd">
+<td>Labeling</td>
+<td>Official reaction changes identity and opportunity</td>
+</tr>
+<tr class="even">
+<td>Legitimacy</td>
+<td>Perceived fairness affects willingness to comply</td>
+</tr>
+<tr class="odd">
+<td>Life-course theory</td>
+<td>Turning points change constraints and attachments</td>
+</tr>
+</tbody>
+</table>
+<p>The same crime type can involve several mechanisms at once. Violent crime may involve self-control, retaliation, peer norms, alcohol, weapon access, and weak guardianship.</p>
+</section>
+<section id="institutions-and-incentives" class="level2">
+<h2 class="anchored" data-anchor-id="institutions-and-incentives">Institutions and incentives</h2>
+<p>Criminology is also about institutions. Police, courts, prisons, probation systems, regulators, communities, and firms all respond to crime under constraints.</p>
+<p>Institutions face their own incentives:</p>
 <ul>
-<li><a href="../../criminology/notes/foundations/index.html">Foundations</a></li>
-<li><a href="../../criminology/notes/mechanisms/index.html">Mechanisms</a></li>
-<li><a href="../../criminology/notes/institutions/index.html">Institutions</a></li>
-<li><a href="../../criminology/notes/topics/index.html">Topics</a></li>
-<li><a href="../../criminology/notes/models/index.html">Models</a></li>
+<li>limited budgets;</li>
+<li>imperfect information;</li>
+<li>political pressure;</li>
+<li>legal constraints;</li>
+<li>legitimacy concerns;</li>
+<li>discretion;</li>
+<li>error;</li>
+<li>unequal visibility across groups and places.</li>
 </ul>
-<hr>
+<p>A good institutional analysis asks not only whether an intervention works, but also how it changes incentives and behaviour across the system.</p>
 </section>
-<section id="how-this-section-is-organized" class="level2">
-<h2 class="anchored" data-anchor-id="how-this-section-is-organized">How this section is organized</h2>
+<section id="why-models-are-useful" class="level2">
+<h2 class="anchored" data-anchor-id="why-models-are-useful">Why models are useful</h2>
+<p>Models do not replace empirical evidence or qualitative interpretation. They help clarify assumptions.</p>
+<p>A model can show:</p>
+<ul>
+<li>who the actors are;</li>
+<li>what choices they face;</li>
+<li>what information they have;</li>
+<li>what incentives matter;</li>
+<li>what outcome should be expected;</li>
+<li>what would change under a policy intervention.</li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Criminological question] --&gt; B[Identify actors]
+    B --&gt; C[Specify choices]
+    C --&gt; D[Specify information]
+    D --&gt; E[Specify payoffs or incentives]
+    E --&gt; F[Derive prediction]
+    F --&gt; G[Compare with evidence]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This is especially useful when the same policy may have different effects depending on reporting, deterrence, displacement, trust, and institutional response.</p>
+</section>
+<section id="example-deterrence-as-a-mechanism" class="level2">
+<h2 class="anchored" data-anchor-id="example-deterrence-as-a-mechanism">Example: deterrence as a mechanism</h2>
+<p>A simple deterrence argument says that offending becomes less attractive when expected punishment increases.</p>
+<p>Expected punishment can be written roughly as</p>
+<p><span class="math display">\[
+\text{Expected punishment}
+=
+\Pr(\text{caught}) \times \text{sanction severity}.
+\]</span></p>
+<p>A deterrence policy may increase either the probability of detection or the severity of punishment.</p>
+<p>But the mechanism is not automatic. The effect depends on whether potential offenders perceive the risk, whether they are responsive to future consequences, whether opportunities remain available, and whether enforcement is legitimate.</p>
+<p>This is why a simple model should be paired with institutional and behavioural interpretation.</p>
+</section>
+<section id="example-reporting-and-trust" class="level2">
+<h2 class="anchored" data-anchor-id="example-reporting-and-trust">Example: reporting and trust</h2>
+<p>Recorded crime depends partly on reporting. Reporting depends partly on trust.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Crime or victimization] --&gt; B{Report to authorities?}
+    B --&gt;|Yes| C[Case enters official data]
+    B --&gt;|No| D[Hidden from official data]
+    E[Trust in institutions] --&gt; B
+    F[Expected benefit of reporting] --&gt; B
+    G[Expected cost or stigma] --&gt; B
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This means recorded crime can rise even when true crime does not rise, if victims become more willing to report. It can also fall even when true crime does not fall, if trust declines.</p>
+</section>
+<section id="suggested-reading-paths" class="level2">
+<h2 class="anchored" data-anchor-id="suggested-reading-paths">Suggested reading paths</h2>
+<section id="if-you-are-new-to-criminology" class="level3">
+<h3 class="anchored" data-anchor-id="if-you-are-new-to-criminology">If you are new to criminology</h3>
 <ol type="1">
-<li><strong>Foundations</strong>: definitions + units of analysis + measurement caveats<br>
-</li>
-<li><strong>Mechanisms</strong>: theory families (channels)<br>
-</li>
-<li><strong>Institutions</strong>: policing/courts/corrections as strategic systems<br>
-</li>
-<li><strong>Topics</strong>: substantive crime domains<br>
-</li>
-<li><strong>Models</strong>: canonical strategic/dynamic representations</li>
+<li><a href="../../criminology/notes/foundations/index.html">Foundations</a></li>
+<li><a href="../../criminology/notes/mechanisms/opportunity-routine.html">Opportunity and routine activity</a></li>
+<li><a href="../../criminology/notes/mechanisms/self-control.html">Self-control</a></li>
+<li><a href="../../criminology/notes/mechanisms/legitimacy-compliance.html">Legitimacy and compliance</a></li>
+<li><a href="../../criminology/notes/topics/index.html">Topics</a></li>
 </ol>
+</section>
+<section id="if-you-want-mechanisms" class="level3">
+<h3 class="anchored" data-anchor-id="if-you-want-mechanisms">If you want mechanisms</h3>
+<ol type="1">
+<li><a href="../../criminology/notes/mechanisms/index.html">Mechanisms</a></li>
+<li><a href="../../criminology/notes/mechanisms/social-interactions.html">Social interactions</a></li>
+<li><a href="../../criminology/notes/mechanisms/opportunity-routine.html">Opportunity and routine activity</a></li>
+<li><a href="../../criminology/notes/mechanisms/labeling-stigma.html">Labeling and stigma</a></li>
+<li><a href="../../criminology/notes/mechanisms/life-course.html">Life-course processes</a></li>
+</ol>
+</section>
+<section id="if-you-want-institutions" class="level3">
+<h3 class="anchored" data-anchor-id="if-you-want-institutions">If you want institutions</h3>
+<ol type="1">
+<li><a href="../../criminology/notes/institutions/index.html">Institutions</a></li>
+<li><a href="../../criminology/notes/institutions/policing.html">Policing</a></li>
+<li><a href="../../criminology/notes/institutions/courts.html">Courts</a></li>
+<li><a href="../../criminology/notes/institutions/corrections.html">Corrections</a></li>
+</ol>
+</section>
+<section id="if-you-want-models" class="level3">
+<h3 class="anchored" data-anchor-id="if-you-want-models">If you want models</h3>
+<ol type="1">
+<li><a href="../../criminology/notes/models/index.html">Models</a></li>
+<li><a href="../../criminology/notes/models/inspection-games.html">Inspection games</a></li>
+<li><a href="../../criminology/notes/models/reporting-trust.html">Reporting and trust</a></li>
+<li><a href="../../criminology/notes/models/network-crime.html">Network crime</a></li>
+<li><a href="../../criminology/notes/models/plea-bargaining.html">Plea bargaining</a></li>
+</ol>
+</section>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="treating-recorded-crime-as-true-crime" class="level3">
+<h3 class="anchored" data-anchor-id="treating-recorded-crime-as-true-crime">1. Treating recorded crime as true crime</h3>
+<p>Official statistics are valuable, but they are shaped by reporting, recording, policing, and classification.</p>
+</section>
+<section id="naming-a-theory-without-explaining-the-mechanism" class="level3">
+<h3 class="anchored" data-anchor-id="naming-a-theory-without-explaining-the-mechanism">2. Naming a theory without explaining the mechanism</h3>
+<p>A label is not an explanation. The mechanism should show how one thing produces another.</p>
+</section>
+<section id="ignoring-institutions" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-institutions">3. Ignoring institutions</h3>
+<p>Crime policy works through institutions, and institutions have incentives, constraints, and errors.</p>
+</section>
+<section id="assuming-punishment-works-mechanically" class="level3">
+<h3 class="anchored" data-anchor-id="assuming-punishment-works-mechanically">4. Assuming punishment works mechanically</h3>
+<p>Deterrence depends on perceived risk, responsiveness, legitimacy, and available alternatives.</p>
+</section>
+<section id="ignoring-displacement" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-displacement">5. Ignoring displacement</h3>
+<p>An intervention may move crime across time, space, target, method, or offence type.</p>
+</section>
+<section id="separating-theory-and-measurement" class="level3">
+<h3 class="anchored" data-anchor-id="separating-theory-and-measurement">6. Separating theory and measurement</h3>
+<p>The way crime is measured affects the conclusions that can be drawn from evidence.</p>
+</section>
+</section>
+<section id="how-these-notes-connect-to-the-rest-of-the-site" class="level2">
+<h2 class="anchored" data-anchor-id="how-these-notes-connect-to-the-rest-of-the-site">How these notes connect to the rest of the site</h2>
+<p>Criminology connects naturally with game theory and psychology.</p>
+<p>Game theory helps analyse enforcement, inspection, reporting, bargaining, cooperation, and strategic adaptation.</p>
+<p>Psychology helps analyse impulse, identity, emotion, trauma, social cognition, moral judgement, and compliance.</p>
+<p>Foundations help keep the reasoning clear: optimization for incentives, probability for uncertainty, dynamic reasoning for future consequences, and networks for social structure.</p>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../../criminology/index.html">Criminology home</a></li>
+<li><a href="../../criminology/toolkit/index.html">Criminology toolkit</a></li>
+<li><a href="../../notes/game-theory.html">Game Theory Notes</a></li>
+<li><a href="../../foundations/dynamic-reasoning.html">Dynamic reasoning</a></li>
+<li><a href="../../foundations/probability.html">Probability</a></li>
+<li><a href="../../psychology/index.html">Psychology</a></li>
+</ul>
 
 
 </section>

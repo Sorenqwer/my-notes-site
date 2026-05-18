@@ -1,28 +1,373 @@
 ---
 title: "Modeling Checklist"
 toc: true
+page-layout: full
 ---
 
-## 1. Actors
+This checklist helps turn a criminological question into a simple model. The goal is not to force every topic into mathematics. The goal is to make assumptions explicit.
 
-Who chooses? Possible actors include offenders, victims, police, courts, regulators, firms, peers, and communities.
+A model should clarify actors, choices, information, incentives, timing, and expected outcomes.
 
-## 2. Choices
+## The basic modelling chain
 
-What are the available actions? Keep the first version small: offend/not offend, report/not report, inspect/not inspect.
+```{mermaid}
+flowchart TD
+    A[Research problem] --> B[Actors]
+    B --> C[Choices]
+    C --> D[Information]
+    D --> E[Payoffs and constraints]
+    E --> F[Timing]
+    F --> G[Solution or prediction]
+    G --> H[Interpretation]
+    H --> I[Evidence and limitations]
+```
 
-## 3. Information
+A weak model skips steps. A strong model makes each step visible.
 
-Who knows what? Separate objective risk from perceived risk, and private information from common knowledge.
+## Step 1: Define the problem
 
-## 4. Payoffs
+Start with the behaviour or institution you want to explain.
 
-What are the benefits, costs, sanctions, social rewards, stigma, or emotional payoffs?
+Examples:
 
-## 5. Timing
+- Why do some victims not report crime?
+- How does monitoring affect rule-breaking?
+- Why do co-offenders cooperate?
+- How do police allocate patrols?
+- Why do defendants accept plea bargains?
+- How does cybercrime scale across platforms?
 
-Is the interaction simultaneous, sequential, repeated, or networked?
+Write the problem in one sentence:
 
-## 6. Measurement
+```text
+I want to explain why [actor] chooses [action] under [condition].
+```
 
-What observable variable corresponds to the theoretical object? Recorded crime is not the same as true crime.
+## Step 2: Identify actors
+
+Actors are the decision-makers in the model.
+
+Possible actors include:
+
+- offender;
+- victim;
+- witness;
+- police;
+- prosecutor;
+- defendant;
+- judge;
+- prison authority;
+- regulator;
+- firm;
+- peer group;
+- community;
+- platform;
+- criminal organization.
+
+A model should not include every possible actor. Include actors only if their choices are central to the mechanism.
+
+## Step 3: Define choices
+
+Each actor needs a choice set.
+
+Examples:
+
+| Actor | Possible choices |
+|---|---|
+| offender | offend / not offend |
+| police | inspect / not inspect |
+| victim | report / not report |
+| prosecutor | charge / dismiss / bargain |
+| defendant | accept plea / reject plea |
+| co-offender | cooperate / betray |
+| regulator | audit / not audit |
+| platform | moderate / ignore / report |
+
+Keep the first version small. A two-action model is often enough to clarify the mechanism.
+
+## Step 4: Specify information
+
+Ask what each actor knows when choosing.
+
+Information may include:
+
+- detection probability;
+- sanction severity;
+- police presence;
+- evidence strength;
+- co-offender reliability;
+- institutional trust;
+- victim willingness to report;
+- type of offender;
+- strength of social ties;
+- platform rules;
+- legal consequences.
+
+```{mermaid}
+flowchart LR
+    A[Actor] --> B[Observed information]
+    A --> C[Unobserved information]
+    C --> D[Beliefs]
+    B --> E[Choice]
+    D --> E
+```
+
+If actors are uncertain, beliefs must be part of the model.
+
+## Step 5: Define payoffs
+
+Payoffs represent what actors care about.
+
+In criminology, payoffs can include:
+
+- money;
+- status;
+- revenge;
+- fear;
+- shame;
+- punishment;
+- time;
+- effort;
+- moral cost;
+- legal risk;
+- stigma;
+- trust;
+- safety;
+- future opportunity;
+- institutional legitimacy.
+
+Do not assume payoffs are purely financial unless the model requires it.
+
+## Step 6: Choose timing
+
+Timing determines the model type.
+
+```{mermaid}
+flowchart TD
+    A[Timing] --> B[Simultaneous]
+    A --> C[Sequential]
+    A --> D[Repeated]
+    A --> E[Networked]
+
+    B --> B1[Normal-form game]
+    C --> C1[Extensive-form game]
+    D --> D1[Repeated game]
+    E --> E1[Network model]
+```
+
+Examples:
+
+- Offender and police choose simultaneously: inspection game.
+- Offender acts, victim reports, police respond: sequential game.
+- Community and police interact repeatedly: repeated trust game.
+- Offending spreads through peers: network model.
+
+## Step 7: Choose the solution concept or prediction
+
+The solution concept depends on the model.
+
+| Model type | Typical solution or prediction |
+|---|---|
+| One-person choice model | optimal action |
+| Simultaneous game | Nash equilibrium |
+| Sequential game | backward induction or subgame perfection |
+| Incomplete-information game | Bayesian reasoning |
+| Repeated game | cooperation, punishment, reputation |
+| Network model | diffusion, centrality, clustering |
+| Empirical prediction model | validation and error analysis |
+
+Not every model needs a formal equilibrium. Sometimes the purpose is to clarify a mechanism or generate testable predictions.
+
+## Step 8: Interpret the result
+
+A model result should be translated back into criminological language.
+
+For example, if the model says:
+
+```text
+offending falls when detection probability rises
+```
+
+then interpret:
+
+- Do actors perceive detection risk?
+- Is enforcement evenly distributed?
+- Does crime displace?
+- Does trust change?
+- Does recorded crime rise because detection rises?
+- What are the unintended consequences?
+
+Interpretation prevents the model from becoming detached from reality.
+
+## Step 9: Connect to evidence
+
+Every model should suggest observable implications.
+
+```{mermaid}
+flowchart LR
+    A[Model prediction] --> B[Observable implication]
+    B --> C[Data source]
+    C --> D[Evidence]
+    D --> E[Revise model]
+```
+
+For example:
+
+| Model claim | Observable implication |
+|---|---|
+| deterrence works through perceived risk | perceived risk should change before behaviour changes |
+| trust affects reporting | low-trust groups should report less, holding victimization constant |
+| peer effects matter | behaviour should cluster through social ties |
+| stigma affects reoffending | formal contact should affect later opportunity |
+| displacement occurs | crime should move across place, time, target, or method |
+
+## Example: reporting model
+
+Problem:
+
+```text
+Why might victims not report crime?
+```
+
+Actors:
+
+- victim;
+- police or institution.
+
+Victim choices:
+
+- report;
+- do not report.
+
+Information:
+
+- expected police response;
+- perceived cost of reporting;
+- trust in institution;
+- fear of retaliation;
+- seriousness of harm.
+
+Payoffs:
+
+```text
+report if expected benefit of reporting > expected cost of reporting
+```
+
+Mechanism:
+
+```{mermaid}
+flowchart LR
+    A[Victimization] --> B[Expected benefit of reporting]
+    C[Cost, fear, stigma] --> D[Reporting decision]
+    B --> D
+    E[Institutional trust] --> D
+    D --> F[Recorded or hidden crime]
+```
+
+Prediction:
+
+- higher trust should increase reporting;
+- higher stigma or retaliation risk should reduce reporting;
+- recorded crime may rise if reporting increases.
+
+## Example: inspection game
+
+Problem:
+
+```text
+How does monitoring affect rule-breaking?
+```
+
+Actors:
+
+- potential offender;
+- authority.
+
+Choices:
+
+- offender: offend or comply;
+- authority: inspect or not inspect.
+
+Information:
+
+- offender may not know whether inspection occurs;
+- authority may not know whether offending occurs.
+
+Payoffs:
+
+- offending gives gain if undetected;
+- inspection is costly;
+- punishment reduces payoff if detected.
+
+Mechanism:
+
+```{mermaid}
+flowchart LR
+    A[Inspection probability] --> B[Expected punishment]
+    B --> C[Offending incentive]
+    C --> D[Observed offending]
+    A --> E[Detection and recorded crime]
+```
+
+Prediction:
+
+- higher perceived inspection risk should reduce offending;
+- higher inspection may increase recorded crime in the short run;
+- offenders may adapt if monitoring is predictable.
+
+## Common mistakes
+
+### 1. Including too many actors
+
+Start simple. Add actors only when they change the mechanism.
+
+### 2. Making choices vague
+
+Choices should be specific enough to analyse.
+
+### 3. Ignoring information
+
+Strategic behaviour depends heavily on what actors know or believe.
+
+### 4. Treating payoffs as only money
+
+Status, fear, legitimacy, shame, and time may matter.
+
+### 5. Confusing model outcome with data
+
+The model may predict true offending, while the data may measure recorded crime.
+
+### 6. Jumping from model to policy
+
+Policy requires evidence, implementation, ethics, and institutional feasibility.
+
+## Checklist
+
+Use this checklist before writing a model page:
+
+1. What is the behaviour or institution being explained?
+2. Who are the actors?
+3. What choices do they have?
+4. What does each actor know?
+5. What is uncertain?
+6. What beliefs matter?
+7. What does each actor value?
+8. What are the constraints?
+9. What is the timing?
+10. Is the interaction one-shot, repeated, or networked?
+11. What solution concept or prediction is appropriate?
+12. What observable implication follows?
+13. What data could test or illustrate the prediction?
+14. What does the model ignore?
+15. What policy implication is safe to draw?
+
+## Related pages
+
+- [Criminology Toolkit](index.qmd)
+- [Methods Map](methods-map.qmd)
+- [Glossary](glossary.qmd)
+- [Criminology Models](../notes/models/index.qmd)
+- [Game Theory Notes](../../notes/game-theory.qmd)
+- [Optimization](../../foundations/optimization.qmd)
+- [Probability](../../foundations/probability.qmd)
+- [Dynamic reasoning](../../foundations/dynamic-reasoning.qmd)

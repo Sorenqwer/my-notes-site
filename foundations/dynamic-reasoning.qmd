@@ -1,77 +1,399 @@
 ---
-title: "Dynamic reasoning"
+title: "Dynamic Reasoning"
 toc: true
+page-layout: full
 ---
 
-## Backward induction (extensive-form games)
-In finite game trees with perfect information, **backward induction** solves from the end:
+Dynamic reasoning studies decisions that unfold over time. In a static problem, a player chooses once. In a dynamic problem, players act after histories, observe earlier moves, form expectations about later moves, and ask whether threats or promises are credible.
 
-1) decide optimal actions at the last decision nodes  
-2) replace subgames by their continuation payoffs  
-3) move backward to the start  
+This page introduces the logic behind backward induction, sequential rationality, credibility, continuation payoffs, and dynamic equilibrium.
 
-**Intuition.** Future choices discipline earlier choices.
+## Why dynamic reasoning matters
 
-## Solving a dynamic game by backward induction
- 
-Backward induction solves a game by reasoning from the end of the game back to the beginning.
- 
-```{mermaid}
-flowchart TD
-    A[Start at Terminal Nodes] --> B[Find Last Mover's Optimal Action]
-    B --> C[Replace Continuation Game with Resulting Payoffs]
-    C --> D[Move to Previous Decision Node]
-    D --> E[Find That Player's Optimal Action]
-    E --> F[Repeat This Process]
-    F --> G[Reach the Initial Node]
-    G --> H[Obtain the Subgame Perfect Equilibrium Path]
-```
+Timing changes strategic behaviour.
 
-## Why timing matters
- 
+In a simultaneous game, each player chooses without observing the current action of the other. In a dynamic game, one player may observe an earlier move and respond. This creates new strategic possibilities:
+
+- threats;
+- promises;
+- commitment;
+- reputation;
+- punishment;
+- learning;
+- signalling;
+- waiting;
+- delay.
+
+A dynamic game is not just a static game with time added. The order of moves can change the result.
+
 ```{mermaid}
 flowchart LR
-    A[Timing of Moves] --> B[Who Moves When]
-    B --> C[What Each Player Knows]
-    C --> D[What Actions Are Credible]
-    D --> E[Equilibrium Outcome]
+    A[Static reasoning] --> B[What is my best response now?]
+    C[Dynamic reasoning] --> D[What will happen later?]
+    D --> E[What is credible later?]
+    E --> F[What should I do now?]
 ```
 
+Dynamic reasoning therefore often works backwards: to decide what should happen now, we first ask what would happen later.
 
-## A tiny game tree (diagram)
-Below is a simple sequential choice: Player 1 chooses $A$ or $B$, then Player 2 chooses $L$ or $R$.
+## Histories and continuation
 
+A **history** is a sequence of actions that has occurred so far.
+
+For example, in a simple two-stage game:
+
+1. Player 1 chooses $A$ or $B$.
+2. Player 2 observes Player 1's action.
+3. Player 2 chooses $L$ or $R$.
+
+After Player 1 chooses $A$, the history is
+
+$$
+h = A.
+$$
+
+After Player 1 chooses $B$, the history is
+
+$$
+h = B.
+$$
+
+Player 2 may choose differently after different histories. This is why a strategy in a dynamic game must specify what a player would do after every relevant history.
+
+## Strategies in dynamic games
+
+In a static game, a strategy can often be thought of as one action.
+
+In a dynamic game, a strategy is a **complete contingent plan**. It says what the player will do at every decision point where they may be called to move.
+
+For example, if Player 2 moves after either $A$ or $B$, then a strategy for Player 2 must specify:
+
+$$
+s_2(A)
+$$
+
+and
+
+$$
+s_2(B).
+$$
+
+A complete strategy might be:
+
+$$
+s_2 = (L \text{ after } A,\ R \text{ after } B).
+$$
+
+This matters because equilibrium requires optimality not only along the path that actually occurs, but also after possible histories that might not occur.
+
+## The logic of backward induction
+
+Backward induction solves a finite dynamic game by starting from the final decision nodes and moving backward to the beginning.
 
 ```{mermaid}
 flowchart TD
-  S((Start)) -->|P1: A| A(( ))
-  S -->|P1: B| B(( ))
-  A -->|P2: L| AL["(2,1)"]
-  A -->|P2: R| AR["(0,0)"]
-  B -->|P2: L| BL["(1,2)"]
-  B -->|P2: R| BR["(3,0)"]
+    A[Start at terminal decision nodes] --> B[Find the last mover's optimal action]
+    B --> C[Replace the continuation with resulting payoffs]
+    C --> D[Move to the previous decision node]
+    D --> E[Find that player's optimal action]
+    E --> F[Repeat the process]
+    F --> G[Reach the initial node]
+    G --> H[Obtain the predicted path]
 ```
 
-## One-step backward induction
+The key idea is simple:
 
-::: {.callout-note title="Backward induction steps"}
-**Step 1 (Player 2):**  
-After $A$: compare $(2,1)$ vs $(0,0)$ → choose **L** (since $1>0$).  
-After $B$: compare $(1,2)$ vs $(3,0)$ → choose **L** (since $2>0$).
+> To know what a player should do now, first determine what later players would rationally do.
 
-**Step 2 (Player 1):**  
-If $A$ → payoff $2$.  
-If $B$ → payoff $1$.  
-So choose **A**.
+Backward induction is therefore reasoning from the future back to the present.
 
-**Outcome:** $(A,L)$.
-:::
+## A small example
 
-## Bellman idea (optional, for dynamic optimization)
-Dynamic programming often writes:
+Suppose Player 1 chooses whether to **Enter** or **Stay Out**.
+
+If Player 1 stays out, the game ends. If Player 1 enters, Player 2 chooses whether to **Fight** or **Accommodate**.
+
+The game has this structure:
+
+```{mermaid}
+flowchart TD
+    A[Player 1: Enter or Stay Out] --> B[Stay Out]
+    A --> C[Enter]
+    C --> D[Player 2: Fight or Accommodate]
+    D --> E[Fight]
+    D --> F[Accommodate]
+```
+
+To solve this game, do not start by asking whether Player 1 should enter. Start at Player 2's decision node.
+
+If Player 2 would prefer to accommodate rather than fight after entry, then Player 1 anticipates accommodation. Player 1's entry decision should be evaluated against that expected response.
+
+If Player 2 would prefer to fight after entry, then Player 1 anticipates fighting. Player 1's entry decision may change.
+
+The first move depends on the credible second move.
+
+## Credibility
+
+A threat is **credible** if the player would actually want to carry it out when the time comes.
+
+A promise is **credible** if the player would actually want to honour it when the time comes.
+
+In dynamic games, announcements alone are not enough. What matters is whether the announced behaviour is sequentially optimal.
+
+```{mermaid}
+flowchart LR
+    A[Threat or promise] --> B{Would the player carry it out later?}
+    B -->|Yes| C[Credible]
+    B -->|No| D[Not credible]
+    C --> E[Affects current behaviour]
+    D --> F[Should be ignored in equilibrium]
+```
+
+This is one of the most important lessons of dynamic reasoning: future behaviour must be optimal when the future arrives.
+
+## Sequential rationality
+
+A strategy is sequentially rational if it prescribes optimal behaviour at every decision point, given the player's beliefs and continuation payoffs.
+
+This is stronger than simply being optimal at the start of the game.
+
+For example, a player may announce:
+
+> “If you enter, I will fight.”
+
+But if fighting is costly and accommodation is better after entry occurs, then fighting is not sequentially rational. The threat is not credible.
+
+Sequential rationality asks:
+
+> At each point in the game, given the history so far, is this action optimal from that point onward?
+
+## Subgames
+
+A **subgame** is a part of a dynamic game that begins at a decision node and includes all later actions and payoffs from that node onward.
+
+A strategy profile is a **subgame perfect equilibrium** if it induces a Nash equilibrium in every subgame.
+
+The intuition is:
+
+> A dynamic equilibrium should remain rational after every possible history.
+
+This rules out equilibria supported by non-credible threats.
+
+```{mermaid}
+flowchart TD
+    A[Dynamic Game] --> B[Subgame 1]
+    A --> C[Subgame 2]
+    A --> D[Subgame 3]
+    B --> E[Optimal continuation]
+    C --> F[Optimal continuation]
+    D --> G[Optimal continuation]
+    E --> H[Subgame Perfect Equilibrium]
+    F --> H
+    G --> H
+```
+
+## Backward induction and subgame perfection
+
+In finite games with perfect information, backward induction produces a subgame perfect equilibrium.
+
+The relationship is:
+
+```{mermaid}
+flowchart LR
+    A[Finite dynamic game] --> B[Perfect information]
+    B --> C[Backward induction]
+    C --> D[Optimal action in every subgame]
+    D --> E[Subgame perfect equilibrium]
+```
+
+Backward induction is a procedure.  
+Subgame perfection is a solution concept.
+
+They are related, but not identical.
+
+## Perfect information and imperfect information
+
+A game has **perfect information** if every player observes all previous actions before choosing.
+
+A game has **imperfect information** if some player does not observe some earlier action, or if decision nodes are grouped into information sets.
+
+Perfect-information games can often be solved by backward induction. Imperfect-information games may require beliefs.
+
+```{mermaid}
+flowchart TD
+    A[Dynamic Game] --> B{Does each player observe all previous actions?}
+    B -->|Yes| C[Perfect Information]
+    B -->|No| D[Imperfect Information]
+    C --> E[Backward Induction]
+    D --> F[Beliefs and information sets]
+    F --> G[Perfect Bayesian or sequential equilibrium]
+```
+
+When players do not know exactly where they are in the game, dynamic reasoning becomes belief-based.
+
+## Continuation payoffs
+
+A **continuation payoff** is the payoff a player expects from a point in the game onward.
+
+Dynamic reasoning often compares current actions by asking how they change future continuation payoffs.
+
+For example, in a repeated relationship, cheating today may give a current benefit but reduce future continuation value.
+
+The basic comparison is:
 
 $$
-V(s)=\max_{a\in A(s)}\bigl\{ r(s,a) + \beta V(s') \bigr\}.
+\text{current payoff} + \text{future continuation payoff}.
 $$
 
-Same “optimize now + value of continuation” logic.
+If a player discounts the future by $\delta \in (0,1)$, then the value of a stream of future payoffs may be written as
+
+$$
+U
+=
+u_0
++
+\delta u_1
++
+\delta^2 u_2
++
+\cdots.
+$$
+
+The discount factor $\delta$ measures patience. A higher $\delta$ means the player cares more about future payoffs.
+
+## Dynamic incentives
+
+A dynamic incentive exists when current behaviour is shaped by future consequences.
+
+```{mermaid}
+flowchart LR
+    A[Action today] --> B[Observed by others]
+    B --> C[Future response]
+    C --> D[Continuation payoff]
+    D --> E[Current incentive]
+```
+
+This logic appears in:
+
+- repeated games;
+- reputation models;
+- relational contracts;
+- crime and punishment;
+- trust and betrayal;
+- cooperation and retaliation;
+- political promises;
+- institutional enforcement.
+
+The strategic force is the same: future responses can discipline current behaviour.
+
+## Repeated games
+
+Repeated games are dynamic games where the same stage game is played more than once.
+
+Repetition can support cooperation because players can reward or punish one another across time.
+
+For example, suppose cooperation gives long-run benefits but defection gives a short-run gain. Cooperation may be sustained if the future loss from punishment is larger than the current gain from defection.
+
+A typical incentive condition has the form:
+
+$$
+\text{gain from deviation}
+\leq
+\text{future loss from punishment}.
+$$
+
+This is one of the central ideas behind repeated-game cooperation.
+
+## Commitment
+
+Commitment changes dynamic reasoning by changing what future actions are available or attractive.
+
+A player has commitment power if they can bind themselves to a future action.
+
+Without commitment, a promise may fail because the player will later want to break it.
+
+With commitment, the same promise may become credible.
+
+```{mermaid}
+flowchart TD
+    A[Future action] --> B{Can the player commit?}
+    B -->|No| C[Future self may revise action]
+    B -->|Yes| D[Future action becomes fixed or costly to change]
+    C --> E[Credibility problem]
+    D --> F[Credibility strengthened]
+```
+
+Commitment is important in contracts, bargaining, monetary policy, deterrence, and institutional design.
+
+## Dynamic reasoning in Bayesian settings
+
+When dynamic games include incomplete information, players must reason about both future actions and beliefs.
+
+For example, if a sender sends a message, the receiver may update beliefs about the sender's type. The receiver then chooses a response. The sender anticipates this response when choosing the message.
+
+The reasoning chain is:
+
+```{mermaid}
+flowchart TD
+    A[Sender has type] --> B[Sender chooses message or action]
+    B --> C[Receiver observes signal]
+    C --> D[Receiver updates belief]
+    D --> E[Receiver chooses response]
+    E --> F[Sender anticipates this when choosing]
+```
+
+This is the logic behind signaling, cheap talk, reputation, and perfect Bayesian equilibrium.
+
+## Common mistakes
+
+### 1. Solving from the beginning
+
+In finite perfect-information games, solve from the end first. The first move depends on later credible responses.
+
+### 2. Confusing actions and strategies
+
+In dynamic games, a strategy is a complete plan for every relevant decision point.
+
+### 3. Ignoring off-path behaviour
+
+Equilibrium may require specifying what players would do after histories that do not occur on the equilibrium path.
+
+### 4. Treating threats as automatically credible
+
+A threat affects behaviour only if it is optimal to carry out when the time comes.
+
+### 5. Forgetting beliefs
+
+In dynamic games with incomplete information, players must update beliefs after observations.
+
+### 6. Confusing backward induction with equilibrium
+
+Backward induction is a method. Subgame perfect equilibrium is a solution concept.
+
+## Checklist for dynamic games
+
+When analysing a dynamic game, ask:
+
+1. Who moves first?
+2. Who moves later?
+3. What does each player observe before choosing?
+4. What are the possible histories?
+5. What is each player's complete strategy?
+6. What happens at the final decision nodes?
+7. Which threats or promises are credible?
+8. Are actions optimal in every subgame?
+9. Are beliefs needed?
+10. What is the equilibrium path?
+
+## Related pages
+
+- [Game Theory Notes](../notes/game-theory.qmd)
+- [Extensive-form games](../notes/game-types/extensive-form.qmd)
+- [Repeated games](../notes/game-types/repeated.qmd)
+- [Cheap talk](../notes/game-types/cheap-talk.qmd)
+- [Signaling](../notes/game-types/signaling.qmd)
+- [Subgame perfect equilibrium](../notes/equilibriums/subgame-perfect.qmd)
+- [Perfect Bayesian equilibrium](../notes/equilibriums/perfect-bayesian.qmd)
+- [Sequential equilibrium](../notes/equilibriums/sequential-equilibrium.qmd)
+- [Probability](probability.qmd)
+- [Optimization](optimization.qmd)

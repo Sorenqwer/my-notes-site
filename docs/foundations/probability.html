@@ -163,12 +163,35 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#distributions-and-mixed-strategies" id="toc-distributions-and-mixed-strategies" class="nav-link active" data-scroll-target="#distributions-and-mixed-strategies">Distributions and mixed strategies</a></li>
+  <li><a href="#why-probability-matters-in-game-theory" id="toc-why-probability-matters-in-game-theory" class="nav-link active" data-scroll-target="#why-probability-matters-in-game-theory">Why probability matters in game theory</a></li>
+  <li><a href="#events-and-probabilities" id="toc-events-and-probabilities" class="nav-link" data-scroll-target="#events-and-probabilities">Events and probabilities</a></li>
+  <li><a href="#random-variables" id="toc-random-variables" class="nav-link" data-scroll-target="#random-variables">Random variables</a></li>
   <li><a href="#expectation" id="toc-expectation" class="nav-link" data-scroll-target="#expectation">Expectation</a></li>
-  <li><a href="#from-probability-to-posterior-belief" id="toc-from-probability-to-posterior-belief" class="nav-link" data-scroll-target="#from-probability-to-posterior-belief">From probability to posterior belief</a></li>
+  <li><a href="#expected-utility" id="toc-expected-utility" class="nav-link" data-scroll-target="#expected-utility">Expected utility</a></li>
+  <li><a href="#mixed-strategies" id="toc-mixed-strategies" class="nav-link" data-scroll-target="#mixed-strategies">Mixed strategies</a></li>
+  <li><a href="#expected-payoff-under-a-mixed-strategy" id="toc-expected-payoff-under-a-mixed-strategy" class="nav-link" data-scroll-target="#expected-payoff-under-a-mixed-strategy">Expected payoff under a mixed strategy</a></li>
+  <li><a href="#conditional-probability" id="toc-conditional-probability" class="nav-link" data-scroll-target="#conditional-probability">Conditional probability</a></li>
   <li><a href="#bayes-rule" id="toc-bayes-rule" class="nav-link" data-scroll-target="#bayes-rule">Bayes’ rule</a></li>
+  <li><a href="#from-probability-to-posterior-belief" id="toc-from-probability-to-posterior-belief" class="nav-link" data-scroll-target="#from-probability-to-posterior-belief">From probability to posterior belief</a></li>
   <li><a href="#belief-updating-as-a-process" id="toc-belief-updating-as-a-process" class="nav-link" data-scroll-target="#belief-updating-as-a-process">Belief updating as a process</a></li>
   <li><a href="#example-updating-beliefs-about-types" id="toc-example-updating-beliefs-about-types" class="nav-link" data-scroll-target="#example-updating-beliefs-about-types">Example: updating beliefs about types</a></li>
+  <li><a href="#prior-likelihood-posterior" id="toc-prior-likelihood-posterior" class="nav-link" data-scroll-target="#prior-likelihood-posterior">Prior, likelihood, posterior</a></li>
+  <li><a href="#signals-and-types" id="toc-signals-and-types" class="nav-link" data-scroll-target="#signals-and-types">Signals and types</a></li>
+  <li><a href="#bayesian-games" id="toc-bayesian-games" class="nav-link" data-scroll-target="#bayesian-games">Bayesian games</a></li>
+  <li><a href="#beliefs-after-actions" id="toc-beliefs-after-actions" class="nav-link" data-scroll-target="#beliefs-after-actions">Beliefs after actions</a></li>
+  <li><a href="#on-path-and-off-path-beliefs" id="toc-on-path-and-off-path-beliefs" class="nav-link" data-scroll-target="#on-path-and-off-path-beliefs">On-path and off-path beliefs</a></li>
+  <li><a href="#independence" id="toc-independence" class="nav-link" data-scroll-target="#independence">Independence</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#confusing-prior-and-posterior" id="toc-confusing-prior-and-posterior" class="nav-link" data-scroll-target="#confusing-prior-and-posterior">1. Confusing prior and posterior</a></li>
+  <li><a href="#ignoring-the-denominator-in-bayes-rule" id="toc-ignoring-the-denominator-in-bayes-rule" class="nav-link" data-scroll-target="#ignoring-the-denominator-in-bayes-rule">2. Ignoring the denominator in Bayes’ rule</a></li>
+  <li><a href="#treating-a-signal-as-proof" id="toc-treating-a-signal-as-proof" class="nav-link" data-scroll-target="#treating-a-signal-as-proof">3. Treating a signal as proof</a></li>
+  <li><a href="#assuming-independence-without-justification" id="toc-assuming-independence-without-justification" class="nav-link" data-scroll-target="#assuming-independence-without-justification">4. Assuming independence without justification</a></li>
+  <li><a href="#confusing-mixed-strategies-with-uncertainty-about-pure-strategies" id="toc-confusing-mixed-strategies-with-uncertainty-about-pure-strategies" class="nav-link" data-scroll-target="#confusing-mixed-strategies-with-uncertainty-about-pure-strategies">5. Confusing mixed strategies with uncertainty about pure strategies</a></li>
+  <li><a href="#forgetting-off-path-beliefs" id="toc-forgetting-off-path-beliefs" class="nav-link" data-scroll-target="#forgetting-off-path-beliefs">6. Forgetting off-path beliefs</a></li>
+  </ul></li>
+  <li><a href="#checklist-for-belief-updating" id="toc-checklist-for-belief-updating" class="nav-link" data-scroll-target="#checklist-for-belief-updating">Checklist for belief updating</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -194,18 +217,249 @@ window.Quarto = {
 </header>
 
 
-<section id="distributions-and-mixed-strategies" class="level2">
-<h2 class="anchored" data-anchor-id="distributions-and-mixed-strategies">Distributions and mixed strategies</h2>
-<p>A mixed strategy is a probability distribution over actions. If the action set is finite, this is just a probability vector (see the simplex definition in Linear algebra).</p>
-<p><strong>Intuition.</strong> “Randomizing” in game theory is not mystical: it’s a distribution that other players can form beliefs about.</p>
+<p>Probability is the language of uncertainty. In game theory, it appears whenever players randomise, hold beliefs, observe signals, face private information, or make decisions under incomplete knowledge.</p>
+<p>This page introduces the probability tools most often used in the notes: events, random variables, expectation, mixed strategies, conditional probability, Bayes’ rule, signals, types, and posterior beliefs.</p>
+<section id="why-probability-matters-in-game-theory" class="level2">
+<h2 class="anchored" data-anchor-id="why-probability-matters-in-game-theory">Why probability matters in game theory</h2>
+<p>Game theory uses probability in two main ways.</p>
+<p>First, probability can describe <strong>randomisation</strong>. A mixed strategy is a probability distribution over actions.</p>
+<p>Second, probability can describe <strong>beliefs</strong>. In Bayesian games, players may be uncertain about another player’s type, payoff, information, or intention.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Probability in Game Theory] --&gt; B[Randomisation]
+    A --&gt; C[Beliefs]
+
+    B --&gt; B1[Mixed Strategies]
+    B --&gt; B2[Expected Payoffs]
+    B --&gt; B3[Indifference Conditions]
+
+    C --&gt; C1[Types]
+    C --&gt; C2[Signals]
+    C --&gt; C3[Bayesian Updating]
+    C --&gt; C4[Posterior Beliefs]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The same mathematical tool therefore has two interpretations: either a player is genuinely randomising, or another player is uncertain about what is true.</p>
+</section>
+<section id="events-and-probabilities" class="level2">
+<h2 class="anchored" data-anchor-id="events-and-probabilities">Events and probabilities</h2>
+<p>A <strong>sample space</strong> is the set of possible outcomes. An <strong>event</strong> is a subset of the sample space.</p>
+<p>For example, if a player may be either high-cost or low-cost, the sample space is</p>
+<p><span class="math display">\[
+\Omega = \{H,L\}.
+\]</span></p>
+<p>The event that the player is high-cost is</p>
+<p><span class="math display">\[
+\{H\}.
+\]</span></p>
+<p>A probability assigns a number between 0 and 1 to each event. If</p>
+<p><span class="math display">\[
+\mathbb{P}(H)=0.3,
+\]</span></p>
+<p>then the probability of type <span class="math inline">\(H\)</span> is 0.3.</p>
+<p>Since there are only two types here,</p>
+<p><span class="math display">\[
+\mathbb{P}(L)=1-\mathbb{P}(H)=0.7.
+\]</span></p>
+</section>
+<section id="random-variables" class="level2">
+<h2 class="anchored" data-anchor-id="random-variables">Random variables</h2>
+<p>A <strong>random variable</strong> assigns numerical values to outcomes.</p>
+<p>For example, suppose a player’s cost can be high or low:</p>
+<p><span class="math display">\[
+c(H)=10,
+\qquad
+c(L)=4.
+\]</span></p>
+<p>If the probability of type <span class="math inline">\(H\)</span> is 0.3 and the probability of type <span class="math inline">\(L\)</span> is 0.7, then the cost is uncertain before the type is known.</p>
+<p>Random variables are useful because payoffs often depend on uncertain states, types, signals, or actions.</p>
 </section>
 <section id="expectation" class="level2">
 <h2 class="anchored" data-anchor-id="expectation">Expectation</h2>
 <p>If a random variable <span class="math inline">\(X\)</span> takes values <span class="math inline">\(x_k\)</span> with probabilities <span class="math inline">\(p_k\)</span>, then</p>
 <p><span class="math display">\[
-\mathbb{E}[X]=\sum_k x_k p_k.
+\mathbb{E}[X]
+=
+\sum_k x_k p_k.
 \]</span></p>
-<p>In games, expected utility under a mixed strategy is exactly this idea: average the payoff over all possible outcomes, weighted by their probabilities.</p>
+<p>Expectation is the probability-weighted average value of a random variable.</p>
+<p>For example, if</p>
+<p><span class="math display">\[
+X =
+\begin{cases}
+10 &amp; \text{with probability } 0.3,\\
+4 &amp; \text{with probability } 0.7,
+\end{cases}
+\]</span></p>
+<p>then</p>
+<p><span class="math display">\[
+\mathbb{E}[X]
+=
+10(0.3)+4(0.7)
+=
+5.8.
+\]</span></p>
+<p>In games, expected utility uses exactly this logic: average payoffs over possible outcomes, weighted by their probabilities.</p>
+</section>
+<section id="expected-utility" class="level2">
+<h2 class="anchored" data-anchor-id="expected-utility">Expected utility</h2>
+<p>Suppose a player chooses action <span class="math inline">\(a\)</span>, but the payoff depends on an uncertain state <span class="math inline">\(\theta\)</span>. If the possible states are <span class="math inline">\(\theta_1,\ldots,\theta_K\)</span>, expected utility is</p>
+<p><span class="math display">\[
+\mathbb{E}[u(a,\theta)]
+=
+\sum_{k=1}^{K}
+u(a,\theta_k)\mathbb{P}(\theta_k).
+\]</span></p>
+<p>The player chooses the action with the highest expected utility:</p>
+<p><span class="math display">\[
+a^*
+\in
+\arg\max_{a \in A}
+\sum_{k=1}^{K}
+u(a,\theta_k)\mathbb{P}(\theta_k).
+\]</span></p>
+<p>This is the bridge between probability and optimization.</p>
+</section>
+<section id="mixed-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="mixed-strategies">Mixed strategies</h2>
+<p>A <strong>mixed strategy</strong> is a probability distribution over pure actions.</p>
+<p>If a player has two actions, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, then a mixed strategy may be written as</p>
+<p><span class="math display">\[
+\sigma(A)=p,
+\qquad
+\sigma(B)=1-p,
+\]</span></p>
+<p>where</p>
+<p><span class="math display">\[
+p \in [0,1].
+\]</span></p>
+<p>The player chooses <span class="math inline">\(A\)</span> with probability <span class="math inline">\(p\)</span> and <span class="math inline">\(B\)</span> with probability <span class="math inline">\(1-p\)</span>.</p>
+<p>If the action set is finite,</p>
+<p><span class="math display">\[
+S_i = \{s_{i1},s_{i2},\ldots,s_{im}\},
+\]</span></p>
+<p>then a mixed strategy is a probability vector</p>
+<p><span class="math display">\[
+\sigma_i = (\sigma_i(s_{i1}),\ldots,\sigma_i(s_{im})),
+\]</span></p>
+<p>where</p>
+<p><span class="math display">\[
+\sigma_i(s_{ij}) \geq 0
+\]</span></p>
+<p>for all <span class="math inline">\(j\)</span>, and</p>
+<p><span class="math display">\[
+\sum_{j=1}^{m}\sigma_i(s_{ij})=1.
+\]</span></p>
+<p>Mixed strategies are not mystical. They are probability distributions that allow players and opponents to compute expected payoffs.</p>
+</section>
+<section id="expected-payoff-under-a-mixed-strategy" class="level2">
+<h2 class="anchored" data-anchor-id="expected-payoff-under-a-mixed-strategy">Expected payoff under a mixed strategy</h2>
+<p>Suppose player 1 chooses between <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, while player 2 chooses between <span class="math inline">\(L\)</span> and <span class="math inline">\(R\)</span>.</p>
+<p>If player 2 plays <span class="math inline">\(L\)</span> with probability <span class="math inline">\(q\)</span> and <span class="math inline">\(R\)</span> with probability <span class="math inline">\(1-q\)</span>, then player 1’s expected payoff from playing <span class="math inline">\(A\)</span> is</p>
+<p><span class="math display">\[
+U_1(A,q)
+=
+q u_1(A,L)
++
+(1-q)u_1(A,R).
+\]</span></p>
+<p>Player 1’s expected payoff from playing <span class="math inline">\(B\)</span> is</p>
+<p><span class="math display">\[
+U_1(B,q)
+=
+q u_1(B,L)
++
+(1-q)u_1(B,R).
+\]</span></p>
+<p>Player 1 prefers <span class="math inline">\(A\)</span> when</p>
+<p><span class="math display">\[
+U_1(A,q)&gt;U_1(B,q).
+\]</span></p>
+<p>Player 1 prefers <span class="math inline">\(B\)</span> when</p>
+<p><span class="math display">\[
+U_1(B,q)&gt;U_1(A,q).
+\]</span></p>
+<p>Player 1 is indifferent when</p>
+<p><span class="math display">\[
+U_1(A,q)=U_1(B,q).
+\]</span></p>
+<p>This indifference condition is often used to solve mixed-strategy equilibria.</p>
+</section>
+<section id="conditional-probability" class="level2">
+<h2 class="anchored" data-anchor-id="conditional-probability">Conditional probability</h2>
+<p>Conditional probability asks: what is the probability of event <span class="math inline">\(A\)</span> given that event <span class="math inline">\(B\)</span> has occurred?</p>
+<p>It is written as</p>
+<p><span class="math display">\[
+\mathbb{P}(A \mid B).
+\]</span></p>
+<p>For events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> with <span class="math inline">\(\mathbb{P}(B)&gt;0\)</span>,</p>
+<p><span class="math display">\[
+\mathbb{P}(A\mid B)
+=
+\frac{\mathbb{P}(A\cap B)}{\mathbb{P}(B)}.
+\]</span></p>
+<p>This formula says:</p>
+<blockquote class="blockquote">
+<p>among the cases where <span class="math inline">\(B\)</span> occurs, what fraction also involve <span class="math inline">\(A\)</span>?</p>
+</blockquote>
+<p>Conditional probability is essential for belief updating.</p>
+</section>
+<section id="bayes-rule" class="level2">
+<h2 class="anchored" data-anchor-id="bayes-rule">Bayes’ rule</h2>
+<p>Bayes’ rule rewrites conditional probability in a form useful for updating beliefs.</p>
+<p>For events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> with <span class="math inline">\(\mathbb{P}(B)&gt;0\)</span>,</p>
+<p><span class="math display">\[
+\mathbb{P}(A\mid B)
+=
+\frac{
+\mathbb{P}(B\mid A)\mathbb{P}(A)
+}{
+\mathbb{P}(B)
+}.
+\]</span></p>
+<p>The terms have a standard interpretation:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\mathbb{P}(A)\)</span></td>
+<td>prior belief</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbb{P}(B\mid A)\)</span></td>
+<td>likelihood of observing evidence <span class="math inline">\(B\)</span> if <span class="math inline">\(A\)</span> is true</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathbb{P}(B)\)</span></td>
+<td>overall probability of observing evidence <span class="math inline">\(B\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbb{P}(A\mid B)\)</span></td>
+<td>posterior belief after observing <span class="math inline">\(B\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The intuition is:</p>
+<blockquote class="blockquote">
+<p>prior belief is reweighted by how well the hypothesis predicts the evidence.</p>
+</blockquote>
 </section>
 <section id="from-probability-to-posterior-belief" class="level2">
 <h2 class="anchored" data-anchor-id="from-probability-to-posterior-belief">From probability to posterior belief</h2>
@@ -230,14 +484,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-</section>
-<section id="bayes-rule" class="level2">
-<h2 class="anchored" data-anchor-id="bayes-rule">Bayes’ rule</h2>
-<p>For events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> with <span class="math inline">\(\mathbb{P}(B)&gt;0\)</span>,</p>
-<p><span class="math display">\[
-\mathbb{P}(A\mid B)=\frac{\mathbb{P}(B\mid A)\,\mathbb{P}(A)}{\mathbb{P}(B)}.
-\]</span></p>
-<p><strong>Intuition.</strong> Prior belief <span class="math inline">\(\mathbb{P}(A)\)</span> gets <em>updated</em> by how well <span class="math inline">\(A\)</span> predicts the evidence <span class="math inline">\(B\)</span>.</p>
+<p>Bayes’ rule is especially important in games with incomplete information, where players must update beliefs after observing signals, messages, or actions.</p>
 </section>
 <section id="belief-updating-as-a-process" class="level2">
 <h2 class="anchored" data-anchor-id="belief-updating-as-a-process">Belief updating as a process</h2>
@@ -258,22 +505,260 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<p>In words:</p>
+<ol type="1">
+<li>Start with a prior belief.</li>
+<li>Observe a signal.</li>
+<li>Ask how likely the signal would be under each possible state.</li>
+<li>Reweight the prior.</li>
+<li>Use the posterior belief to choose an action.</li>
+</ol>
 </section>
 <section id="example-updating-beliefs-about-types" class="level2">
 <h2 class="anchored" data-anchor-id="example-updating-beliefs-about-types">Example: updating beliefs about types</h2>
-<p>A player is either type <span class="math inline">\(H\)</span> or <span class="math inline">\(L\)</span>. Prior <span class="math inline">\(\mathbb{P}(H)=0.3\)</span>, <span class="math inline">\(\mathbb{P}(L)=0.7\)</span>. You observe a signal <span class="math inline">\(s\)</span>. Suppose</p>
+<p>A player is either type <span class="math inline">\(H\)</span> or type <span class="math inline">\(L\)</span>. The prior beliefs are</p>
 <p><span class="math display">\[
-\mathbb{P}(s\mid H)=0.8,\qquad \mathbb{P}(s\mid L)=0.2.
+\mathbb{P}(H)=0.3,
+\qquad
+\mathbb{P}(L)=0.7.
 \]</span></p>
-<p>First compute the overall likelihood of <span class="math inline">\(s\)</span>:</p>
+<p>You observe a signal <span class="math inline">\(s\)</span>. Suppose</p>
 <p><span class="math display">\[
-\mathbb{P}(s)=\mathbb{P}(s\mid H)\mathbb{P}(H)+\mathbb{P}(s\mid L)\mathbb{P}(L)=0.8\cdot 0.3+0.2\cdot 0.7=0.38.
+\mathbb{P}(s\mid H)=0.8,
+\qquad
+\mathbb{P}(s\mid L)=0.2.
 \]</span></p>
-<p>Then the posterior belief is</p>
+<p>First compute the overall probability of observing <span class="math inline">\(s\)</span>:</p>
 <p><span class="math display">\[
-\mathbb{P}(H\mid s)=\frac{0.8\cdot 0.3}{0.38}\approx 0.6316.
+\mathbb{P}(s)
+=
+\mathbb{P}(s\mid H)\mathbb{P}(H)
++
+\mathbb{P}(s\mid L)\mathbb{P}(L).
 \]</span></p>
-<p>So after observing <span class="math inline">\(s\)</span>, belief in type <span class="math inline">\(H\)</span> rises from <span class="math inline">\(0.3\)</span> to about <span class="math inline">\(0.63\)</span>.</p>
+<p>Substitute the numbers:</p>
+<p><span class="math display">\[
+\mathbb{P}(s)
+=
+0.8 \cdot 0.3
++
+0.2 \cdot 0.7
+=
+0.24+0.14
+=
+0.38.
+\]</span></p>
+<p>Then compute the posterior probability of type <span class="math inline">\(H\)</span>:</p>
+<p><span class="math display">\[
+\mathbb{P}(H\mid s)
+=
+\frac{
+\mathbb{P}(s\mid H)\mathbb{P}(H)
+}{
+\mathbb{P}(s)
+}
+=
+\frac{0.8 \cdot 0.3}{0.38}
+=
+\frac{0.24}{0.38}
+\approx
+0.6316.
+\]</span></p>
+<p>So after observing signal <span class="math inline">\(s\)</span>, belief in type <span class="math inline">\(H\)</span> rises from 0.3 to about 0.63.</p>
+<p>The signal increases belief in <span class="math inline">\(H\)</span> because it is more likely under <span class="math inline">\(H\)</span> than under <span class="math inline">\(L\)</span>.</p>
+</section>
+<section id="prior-likelihood-posterior" class="level2">
+<h2 class="anchored" data-anchor-id="prior-likelihood-posterior">Prior, likelihood, posterior</h2>
+<p>The belief-updating example can be summarised as:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Prior: P(H)] --&gt; C[Posterior: P(H | s)]
+    B[Likelihood: P(s | H) and P(s | L)] --&gt; C
+    C --&gt; D[Decision after observing signal]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>A posterior belief is not just the prior plus the signal. It depends on how diagnostic the signal is.</p>
+<p>A signal is more diagnostic when its likelihood differs strongly across states.</p>
+</section>
+<section id="signals-and-types" class="level2">
+<h2 class="anchored" data-anchor-id="signals-and-types">Signals and types</h2>
+<p>In Bayesian games, a <strong>type</strong> represents private information about a player. A type may describe:</p>
+<ul>
+<li>cost</li>
+<li>ability</li>
+<li>patience</li>
+<li>preference</li>
+<li>information</li>
+<li>intention</li>
+<li>valuation</li>
+<li>honesty or bias</li>
+</ul>
+<p>A <strong>signal</strong> is something observed that may contain information about the type.</p>
+<p>The basic structure is:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Unknown Type] --&gt; B[Signal or Action]
+    B --&gt; C[Observer Updates Beliefs]
+    C --&gt; D[Observer Chooses Response]
+    D --&gt; E[Strategic Outcome]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This structure appears in signaling games, cheap-talk games, reputation models, screening problems, and many models of trust.</p>
+</section>
+<section id="bayesian-games" class="level2">
+<h2 class="anchored" data-anchor-id="bayesian-games">Bayesian games</h2>
+<p>A Bayesian game includes uncertainty about types. The model normally specifies:</p>
+<ol type="1">
+<li>a set of players;</li>
+<li>a type space for each player;</li>
+<li>prior beliefs over types;</li>
+<li>actions or strategies;</li>
+<li>payoffs that may depend on types.</li>
+</ol>
+<p>A player’s strategy must specify what they do for each possible type. If player <span class="math inline">\(i\)</span> has type <span class="math inline">\(\theta_i\)</span>, a strategy can be written as</p>
+<p><span class="math display">\[
+s_i(\theta_i).
+\]</span></p>
+<p>A Bayesian Nash equilibrium requires each type to choose a best response given beliefs and the strategies of others.</p>
+<p>In short:</p>
+<p><span class="math display">\[
+\text{Bayesian reasoning}
+=
+\text{optimization under beliefs}.
+\]</span></p>
+</section>
+<section id="beliefs-after-actions" class="level2">
+<h2 class="anchored" data-anchor-id="beliefs-after-actions">Beliefs after actions</h2>
+<p>In dynamic games, players may update beliefs after observing actions.</p>
+<p>For example, suppose a sender chooses a message <span class="math inline">\(m\)</span>, and the receiver must infer the sender’s type <span class="math inline">\(\theta\)</span>.</p>
+<p>The receiver’s posterior belief is</p>
+<p><span class="math display">\[
+\mu(\theta \mid m).
+\]</span></p>
+<p>Using Bayes’ rule,</p>
+<p><span class="math display">\[
+\mu(\theta \mid m)
+=
+\frac{
+\mathbb{P}(m\mid \theta)\mathbb{P}(\theta)
+}{
+\sum_{\theta'} \mathbb{P}(m\mid \theta')\mathbb{P}(\theta')
+}.
+\]</span></p>
+<p>This formula says that a message changes beliefs according to how likely each type would be to send that message.</p>
+<p>This is the foundation of signaling and cheap talk.</p>
+</section>
+<section id="on-path-and-off-path-beliefs" class="level2">
+<h2 class="anchored" data-anchor-id="on-path-and-off-path-beliefs">On-path and off-path beliefs</h2>
+<p>In dynamic games with incomplete information, some actions or messages occur with positive probability in equilibrium. These are called <strong>on-path</strong>.</p>
+<p>Other actions or messages are not expected to occur in equilibrium. These are called <strong>off-path</strong>.</p>
+<p>Bayes’ rule pins down beliefs after on-path observations. But after an off-path observation, Bayes’ rule may not give a unique answer because the denominator may be zero.</p>
+<p>This is why solution concepts such as perfect Bayesian equilibrium and sequential equilibrium include belief requirements.</p>
+<p>The key idea is:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Observation occurs] --&gt; B{Positive probability in equilibrium?}
+    B --&gt;|Yes| C[Use Bayes' rule]
+    B --&gt;|No| D[Off-path belief needs extra discipline]
+    C --&gt; E[Posterior belief]
+    D --&gt; E
+    E --&gt; F[Sequentially rational action]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="independence" class="level2">
+<h2 class="anchored" data-anchor-id="independence">Independence</h2>
+<p>Two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent if learning that one occurred does not change the probability of the other.</p>
+<p>Formally,</p>
+<p><span class="math display">\[
+\mathbb{P}(A\mid B)=\mathbb{P}(A).
+\]</span></p>
+<p>Equivalently,</p>
+<p><span class="math display">\[
+\mathbb{P}(A\cap B)
+=
+\mathbb{P}(A)\mathbb{P}(B).
+\]</span></p>
+<p>Independence is useful, but it should not be assumed automatically. In strategic settings, actions are often informative precisely because they are not independent of types or incentives.</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="confusing-prior-and-posterior" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-prior-and-posterior">1. Confusing prior and posterior</h3>
+<p>The prior is the belief before observing evidence. The posterior is the belief after updating on evidence.</p>
+</section>
+<section id="ignoring-the-denominator-in-bayes-rule" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-the-denominator-in-bayes-rule">2. Ignoring the denominator in Bayes’ rule</h3>
+<p>The denominator <span class="math inline">\(\mathbb{P}(B)\)</span> matters because it measures how likely the evidence is overall.</p>
+</section>
+<section id="treating-a-signal-as-proof" class="level3">
+<h3 class="anchored" data-anchor-id="treating-a-signal-as-proof">3. Treating a signal as proof</h3>
+<p>A signal changes beliefs. It does not usually reveal the state with certainty.</p>
+</section>
+<section id="assuming-independence-without-justification" class="level3">
+<h3 class="anchored" data-anchor-id="assuming-independence-without-justification">4. Assuming independence without justification</h3>
+<p>If actions are strategically chosen, they may be correlated with private information.</p>
+</section>
+<section id="confusing-mixed-strategies-with-uncertainty-about-pure-strategies" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-mixed-strategies-with-uncertainty-about-pure-strategies">5. Confusing mixed strategies with uncertainty about pure strategies</h3>
+<p>A mixed strategy is a deliberate probability distribution over actions. Uncertainty about what someone will do may arise from mixed strategies, private information, or lack of observation.</p>
+</section>
+<section id="forgetting-off-path-beliefs" class="level3">
+<h3 class="anchored" data-anchor-id="forgetting-off-path-beliefs">6. Forgetting off-path beliefs</h3>
+<p>In dynamic incomplete-information games, behaviour after unexpected observations may matter for equilibrium.</p>
+</section>
+</section>
+<section id="checklist-for-belief-updating" class="level2">
+<h2 class="anchored" data-anchor-id="checklist-for-belief-updating">Checklist for belief updating</h2>
+<p>When using Bayes’ rule in a model, ask:</p>
+<ol type="1">
+<li>What are the possible states or types?</li>
+<li>What is the prior belief over those states?</li>
+<li>What signal or action is observed?</li>
+<li>How likely is that signal under each state?</li>
+<li>What is the overall probability of the signal?</li>
+<li>What is the posterior belief after observing it?</li>
+<li>How does the posterior belief affect the next action?</li>
+<li>Are we updating after an on-path or off-path observation?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../notes/game-theory.html">Game Theory Notes</a></li>
+<li><a href="../notes/game-types/bayesian.html">Bayesian games</a></li>
+<li><a href="../notes/equilibriums/bayesian-nash.html">Bayesian Nash equilibrium</a></li>
+<li><a href="../notes/equilibriums/perfect-bayesian.html">Perfect Bayesian equilibrium</a></li>
+<li><a href="../notes/game-types/cheap-talk.html">Cheap talk</a></li>
+<li><a href="../notes/game-types/signaling.html">Signaling</a></li>
+<li><a href="../foundations/optimization.html">Optimization</a></li>
+<li><a href="../foundations/dynamic-reasoning.html">Dynamic reasoning</a></li>
+<li><a href="../foundations/linear-algebra.html">Linear algebra</a></li>
+</ul>
 
 
 </section>

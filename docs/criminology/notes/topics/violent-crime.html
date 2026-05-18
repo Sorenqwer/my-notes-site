@@ -134,10 +134,29 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#a-simple-mechanism-map" id="toc-a-simple-mechanism-map" class="nav-link active" data-scroll-target="#a-simple-mechanism-map">A simple mechanism map</a></li>
-  <li><a href="#mechanisms-to-connect" id="toc-mechanisms-to-connect" class="nav-link" data-scroll-target="#mechanisms-to-connect">Mechanisms to connect</a></li>
-  <li><a href="#models-to-try" id="toc-models-to-try" class="nav-link" data-scroll-target="#models-to-try">Models to try</a></li>
-  <li><a href="#notes-to-add-later" id="toc-notes-to-add-later" class="nav-link" data-scroll-target="#notes-to-add-later">Notes to add later</a></li>
+  <li><a href="#basic-mechanism-map" id="toc-basic-mechanism-map" class="nav-link active" data-scroll-target="#basic-mechanism-map">Basic mechanism map</a></li>
+  <li><a href="#core-mechanisms" id="toc-core-mechanisms" class="nav-link" data-scroll-target="#core-mechanisms">Core mechanisms</a>
+  <ul class="collapse">
+  <li><a href="#conflict-escalation" id="toc-conflict-escalation" class="nav-link" data-scroll-target="#conflict-escalation">Conflict escalation</a></li>
+  <li><a href="#retaliation" id="toc-retaliation" class="nav-link" data-scroll-target="#retaliation">Retaliation</a></li>
+  <li><a href="#status-and-identity" id="toc-status-and-identity" class="nav-link" data-scroll-target="#status-and-identity">Status and identity</a></li>
+  <li><a href="#opportunity-and-guardianship" id="toc-opportunity-and-guardianship" class="nav-link" data-scroll-target="#opportunity-and-guardianship">Opportunity and guardianship</a></li>
+  <li><a href="#coercive-control" id="toc-coercive-control" class="nav-link" data-scroll-target="#coercive-control">Coercive control</a></li>
+  </ul></li>
+  <li><a href="#measurement-issues" id="toc-measurement-issues" class="nav-link" data-scroll-target="#measurement-issues">Measurement issues</a></li>
+  <li><a href="#a-simple-retaliation-model" id="toc-a-simple-retaliation-model" class="nav-link" data-scroll-target="#a-simple-retaliation-model">A simple retaliation model</a></li>
+  <li><a href="#institutional-response" id="toc-institutional-response" class="nav-link" data-scroll-target="#institutional-response">Institutional response</a></li>
+  <li><a href="#policy-trade-offs" id="toc-policy-trade-offs" class="nav-link" data-scroll-target="#policy-trade-offs">Policy trade-offs</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#treating-all-violence-as-the-same" id="toc-treating-all-violence-as-the-same" class="nav-link" data-scroll-target="#treating-all-violence-as-the-same">1. Treating all violence as the same</a></li>
+  <li><a href="#ignoring-the-victim-offender-relationship" id="toc-ignoring-the-victim-offender-relationship" class="nav-link" data-scroll-target="#ignoring-the-victim-offender-relationship">2. Ignoring the victim-offender relationship</a></li>
+  <li><a href="#treating-violence-as-purely-impulsive" id="toc-treating-violence-as-purely-impulsive" class="nav-link" data-scroll-target="#treating-violence-as-purely-impulsive">3. Treating violence as purely impulsive</a></li>
+  <li><a href="#ignoring-reporting" id="toc-ignoring-reporting" class="nav-link" data-scroll-target="#ignoring-reporting">4. Ignoring reporting</a></li>
+  <li><a href="#ignoring-institutions" id="toc-ignoring-institutions" class="nav-link" data-scroll-target="#ignoring-institutions">5. Ignoring institutions</a></li>
+  </ul></li>
+  <li><a href="#checklist-for-analysing-violent-crime" id="toc-checklist-for-analysing-violent-crime" class="nav-link" data-scroll-target="#checklist-for-analysing-violent-crime">Checklist for analysing violent crime</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -163,58 +182,247 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Violent crime involves the use or threat of physical force. It is best studied through individual propensity, situational triggers, social relations, and institutional response.</p>
-<section id="a-simple-mechanism-map" class="level2">
-<h2 class="anchored" data-anchor-id="a-simple-mechanism-map">A simple mechanism map</h2>
-<p>Violent crime can be understood as the joint product of individual predispositions, situational triggers, and social environments.</p>
+<p>Violent crime involves the use, threat, or attempted use of physical force. It includes behaviours such as assault, robbery, homicide, domestic violence, sexual violence, and group-based violence. These behaviours differ greatly in motive, severity, setting, and institutional response, so violent crime should not be treated as one simple category.</p>
+<p>A useful analysis of violent crime usually connects individual factors, situational triggers, social context, weapons, institutions, and measurement.</p>
+<section id="basic-mechanism-map" class="level2">
+<h2 class="anchored" data-anchor-id="basic-mechanism-map">Basic mechanism map</h2>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TD
-    A[Individual Factors] --&gt; D[Violent Behaviour]
-    B[Situational Triggers] --&gt; D
-    C[Social Environment] --&gt; D
- 
-    A --&gt; A1[Impulsivity]
-    A --&gt; A2[Self-control]
-    A --&gt; A3[Past Victimization]
- 
-    B --&gt; B1[Conflict]
-    B --&gt; B2[Alcohol or Intoxication]
-    B --&gt; B3[Weapon Availability]
- 
-    C --&gt; C1[Peer Effects]
-    C --&gt; C2[Local Norms]
-    C --&gt; C3[Low Trust and Weak Guardianship]
+    A[Violent crime] --&gt; B[Individual factors]
+    A --&gt; C[Situational triggers]
+    A --&gt; D[Social environment]
+    A --&gt; E[Institutional context]
+
+    B --&gt; B1[Impulsivity]
+    B --&gt; B2[Trauma or victimization]
+    B --&gt; B3[Substance use]
+
+    C --&gt; C1[Conflict]
+    C --&gt; C2[Status threat]
+    C --&gt; C3[Weapon availability]
+
+    D --&gt; D1[Peer audience]
+    D --&gt; D2[Retaliation norms]
+    D --&gt; D3[Low trust]
+
+    E --&gt; E1[Policing]
+    E --&gt; E2[Reporting]
+    E --&gt; E3[Protection and support]
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
+<p>Violence often occurs when several mechanisms combine. A conflict may escalate because of intoxication, peer pressure, weapon access, low trust in authorities, and expectations of retaliation.</p>
 </section>
-<section id="mechanisms-to-connect" class="level2">
-<h2 class="anchored" data-anchor-id="mechanisms-to-connect">Mechanisms to connect</h2>
+<section id="core-mechanisms" class="level2">
+<h2 class="anchored" data-anchor-id="core-mechanisms">Core mechanisms</h2>
+<section id="conflict-escalation" class="level3">
+<h3 class="anchored" data-anchor-id="conflict-escalation">Conflict escalation</h3>
+<p>Many violent events begin as disputes. The key question is why a dispute becomes physical. Escalation may depend on emotion, perceived disrespect, alcohol, audience effects, weapon availability, or fear of appearing weak.</p>
+</section>
+<section id="retaliation" class="level3">
+<h3 class="anchored" data-anchor-id="retaliation">Retaliation</h3>
+<p>Violence can become self-reinforcing when one act creates pressure for revenge. Retaliation is especially important when formal institutions are not trusted to resolve disputes.</p>
+</section>
+<section id="status-and-identity" class="level3">
+<h3 class="anchored" data-anchor-id="status-and-identity">Status and identity</h3>
+<p>In some contexts, violence functions as a way to defend reputation, masculinity, group identity, or status. The payoff is not only material. It may include respect, fear, belonging, or avoidance of humiliation.</p>
+</section>
+<section id="opportunity-and-guardianship" class="level3">
+<h3 class="anchored" data-anchor-id="opportunity-and-guardianship">Opportunity and guardianship</h3>
+<p>Violence is also situational. Some settings create more opportunities for violence because of crowding, alcohol, weak guardianship, or repeated contact between conflicting groups.</p>
+</section>
+<section id="coercive-control" class="level3">
+<h3 class="anchored" data-anchor-id="coercive-control">Coercive control</h3>
+<p>Domestic and intimate partner violence cannot be understood only as isolated incidents. In many cases, violence is part of a broader pattern of control, fear, dependency, surveillance, and isolation.</p>
+</section>
+</section>
+<section id="measurement-issues" class="level2">
+<h2 class="anchored" data-anchor-id="measurement-issues">Measurement issues</h2>
+<p>Violent crime is not measured perfectly.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Issue</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Underreporting</td>
+<td>Many violent events, especially domestic and sexual violence, are not reported</td>
+</tr>
+<tr class="even">
+<td>Severity variation</td>
+<td>The same legal category may include very different levels of harm</td>
+</tr>
+<tr class="odd">
+<td>Recording practices</td>
+<td>Police classification can change recorded trends</td>
+</tr>
+<tr class="even">
+<td>Victim-offender relationship</td>
+<td>Stranger violence and domestic violence have different mechanisms</td>
+</tr>
+<tr class="odd">
+<td>Hospital data</td>
+<td>Medical records may capture injuries that police data miss</td>
+</tr>
+<tr class="even">
+<td>Fear and trauma</td>
+<td>Harm may persist beyond the physical event</td>
+</tr>
+</tbody>
+</table>
+<p>A rise in recorded violent crime may reflect more violence, better reporting, changed recording rules, or greater institutional attention.</p>
+</section>
+<section id="a-simple-retaliation-model" class="level2">
+<h2 class="anchored" data-anchor-id="a-simple-retaliation-model">A simple retaliation model</h2>
+<p>Violence can be modelled as a repeated interaction where failure to retaliate may reduce status, while retaliation creates future risk.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Initial conflict] --&gt; B[Perceived disrespect or harm]
+    B --&gt; C{Retaliate?}
+    C --&gt;|Yes| D[Immediate status or revenge payoff]
+    C --&gt;|No| E[Possible loss of status]
+    D --&gt; F[Future retaliation risk]
+    E --&gt; G[Conflict may fade]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The policy implication is that reducing violence may require changing the expected payoff from retaliation, creating safe alternatives, and increasing trust in non-violent dispute resolution.</p>
+</section>
+<section id="institutional-response" class="level2">
+<h2 class="anchored" data-anchor-id="institutional-response">Institutional response</h2>
+<p>Institutions affect violent crime through several channels:</p>
 <ul>
-<li>retaliation and status contests</li>
-<li>alcohol, impulsivity, and self-control</li>
-<li>peer effects and local norms</li>
-<li>perceived legitimacy of police and courts</li>
+<li>emergency protection;</li>
+<li>deterrence;</li>
+<li>incapacitation;</li>
+<li>support for victims;</li>
+<li>conflict mediation;</li>
+<li>legitimacy and trust;</li>
+<li>weapon control;</li>
+<li>treatment and rehabilitation;</li>
+<li>hotspot or focused deterrence strategies.</li>
 </ul>
+<p>The same intervention may have different effects depending on whether the violence is domestic, group-based, situational, or economically motivated.</p>
 </section>
-<section id="models-to-try" class="level2">
-<h2 class="anchored" data-anchor-id="models-to-try">Models to try</h2>
+<section id="policy-trade-offs" class="level2">
+<h2 class="anchored" data-anchor-id="policy-trade-offs">Policy trade-offs</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Policy</th>
+<th>Possible benefit</th>
+<th>Possible risk</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Increased patrol</td>
+<td>higher guardianship and deterrence</td>
+<td>reduced trust if aggressive or unequal</td>
+</tr>
+<tr class="even">
+<td>Focused deterrence</td>
+<td>targets high-risk conflicts</td>
+<td>depends on legitimacy and implementation</td>
+</tr>
+<tr class="odd">
+<td>Weapon restrictions</td>
+<td>reduces lethality</td>
+<td>displacement to other methods possible</td>
+</tr>
+<tr class="even">
+<td>Victim support</td>
+<td>increases safety and reporting</td>
+<td>requires trust and access</td>
+</tr>
+<tr class="odd">
+<td>Mediation</td>
+<td>reduces retaliation</td>
+<td>may be inappropriate for coercive abuse</td>
+</tr>
+<tr class="even">
+<td>Rehabilitation</td>
+<td>addresses behaviour and trauma</td>
+<td>slow and resource-intensive</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="treating-all-violence-as-the-same" class="level3">
+<h3 class="anchored" data-anchor-id="treating-all-violence-as-the-same">1. Treating all violence as the same</h3>
+<p>Domestic violence, street violence, robbery, homicide, and group conflict may involve different mechanisms.</p>
+</section>
+<section id="ignoring-the-victim-offender-relationship" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-the-victim-offender-relationship">2. Ignoring the victim-offender relationship</h3>
+<p>Violence between strangers differs from violence between intimate partners, family members, peers, or rivals.</p>
+</section>
+<section id="treating-violence-as-purely-impulsive" class="level3">
+<h3 class="anchored" data-anchor-id="treating-violence-as-purely-impulsive">3. Treating violence as purely impulsive</h3>
+<p>Some violence is impulsive, but some is strategic, retaliatory, coercive, or reputation-based.</p>
+</section>
+<section id="ignoring-reporting" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-reporting">4. Ignoring reporting</h3>
+<p>Recorded violent crime may change because reporting changes.</p>
+</section>
+<section id="ignoring-institutions" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-institutions">5. Ignoring institutions</h3>
+<p>Trust in police and courts can shape whether people report, seek help, retaliate, or remain silent.</p>
+</section>
+</section>
+<section id="checklist-for-analysing-violent-crime" class="level2">
+<h2 class="anchored" data-anchor-id="checklist-for-analysing-violent-crime">Checklist for analysing violent crime</h2>
+<ol type="1">
+<li>What type of violence is being studied?</li>
+<li>Who is involved?</li>
+<li>What is the relationship between victim and offender?</li>
+<li>What situational trigger is present?</li>
+<li>Is the violence expressive, instrumental, retaliatory, coercive, or mixed?</li>
+<li>What role do peers, weapons, alcohol, or place play?</li>
+<li>How is the violence measured?</li>
+<li>What institutional response is available?</li>
+<li>What policy mechanism is being proposed?</li>
+<li>What unintended consequences are possible?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
 <ul>
-<li>repeated conflict and retaliation games</li>
-<li>deterrence models with perceived sanction risk</li>
-<li>network diffusion of violence</li>
+<li><a href="../../../criminology/notes/topics/index.html">Topics</a></li>
+<li><a href="../../../criminology/notes/mechanisms/social-interactions.html">Social interactions</a></li>
+<li><a href="../../../criminology/notes/mechanisms/self-control.html">Self-control</a></li>
+<li><a href="../../../criminology/notes/mechanisms/opportunity-routine.html">Opportunity and routine activity</a></li>
+<li><a href="../../../criminology/notes/mechanisms/legitimacy-compliance.html">Legitimacy and compliance</a></li>
+<li><a href="../../../criminology/notes/models/network-crime.html">Network crime</a></li>
+<li><a href="../../../criminology/notes/models/reporting-trust.html">Reporting and trust</a></li>
 </ul>
-</section>
-<section id="notes-to-add-later" class="level2">
-<h2 class="anchored" data-anchor-id="notes-to-add-later">Notes to add later</h2>
-<p>Add empirical examples, key definitions, and one diagram linking mechanism → prediction → measurement.</p>
 
 
 </section>

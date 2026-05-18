@@ -1,23 +1,181 @@
 ---
 title: "Organized Crime"
 toc: true
+page-layout: full
 ---
 
-Organized crime can be treated as illicit coordination under weak legal enforceability: groups govern exchange, maintain discipline, and adapt to enforcement.
+Organized crime involves coordinated illegal activity that is structured, repeated, and often protected by reputation, violence, corruption, secrecy, or governance. It may involve illicit markets, extortion, trafficking, fraud, protection, smuggling, cybercrime, or control over territory and networks.
 
-## Mechanisms to connect
+The key feature is organization under illegality. Since illegal agreements cannot rely on ordinary courts, organized crime often develops alternative enforcement mechanisms.
 
-- reputation and internal discipline
-- violence as governance
-- corruption and protection
-- network resilience
+## Basic mechanism map
 
-## Models to try
+```{mermaid}
+flowchart TD
+    A[Organized Crime] --> B[Illicit coordination]
+    A --> C[Governance]
+    A --> D[Violence or threat]
+    A --> E[Corruption]
+    A --> F[Market structure]
 
-- network games
-- repeated-game enforcement
-- principal-agent problems in illicit organizations
+    B --> B1[Roles]
+    B --> B2[Networks]
+    B --> B3[Repeated exchange]
 
-## Notes to add later
+    C --> C1[Dispute resolution]
+    C --> C2[Rule enforcement]
 
-Add empirical examples, key definitions, and one diagram linking mechanism → prediction → measurement.
+    D --> D1[Reputation]
+    D --> D2[Intimidation]
+
+    E --> E1[Protection]
+    E --> E2[Information leakage]
+
+    F --> F1[Demand]
+    F --> F2[Supply chains]
+    F --> F3[Risk premium]
+```
+
+Organized crime is not just “crime by groups.” It is crime where coordination, enforcement, and continuity matter.
+
+## Core mechanisms
+
+### Illegal governance
+
+Organized groups may provide enforcement, protection, dispute resolution, and contract discipline in illegal markets.
+
+### Reputation
+
+Reputation can substitute for legal enforcement. A group may maintain a reputation for violence or reliability to control behaviour.
+
+### Violence
+
+Violence can be used to punish betrayal, deter rivals, discipline members, intimidate witnesses, or regulate markets.
+
+### Corruption
+
+Corruption reduces enforcement risk, provides information, protects markets, or allows illegal activity to operate under legal cover.
+
+### Network resilience
+
+Organized crime may survive enforcement because roles and ties can shift. Removing one actor may not destroy the structure.
+
+## Measurement issues
+
+Organized crime is difficult to observe.
+
+| Issue | Why it matters |
+|---|---|
+| Hidden structure | membership and hierarchy are often unknown |
+| Witness intimidation | reporting and cooperation may be suppressed |
+| Corruption | institutional data may be compromised |
+| Market secrecy | transactions are hidden |
+| Network adaptation | groups reorganize after enforcement |
+| Legal ambiguity | some activities mix legal and illegal businesses |
+
+Data often come from investigations, prosecutions, intelligence, interviews, seizures, or network reconstruction. Each source is partial.
+
+## Repeated exchange model
+
+Illegal markets face a problem: participants cannot use ordinary legal contract enforcement.
+
+Repeated interaction can partly solve this.
+
+```{mermaid}
+flowchart LR
+    A[Illegal exchange] --> B{Can parties trust each other?}
+    B -->|No| C[High betrayal risk]
+    B -->|Yes| D[Repeated cooperation]
+    D --> E[Reputation]
+    E --> F[Future business]
+    C --> G[Violence or enforcement]
+    G --> E
+```
+
+The same mechanism that supports cooperation within the group can also produce violence against outsiders or defectors.
+
+## Corruption as protection
+
+Corruption can be modelled as an exchange between criminal actors and officials.
+
+```{mermaid}
+flowchart TD
+    A[Criminal group] --> B[Payment or favour]
+    B --> C[Corrupt official]
+    C --> D[Protection, information, or non-enforcement]
+    D --> E[Lower expected punishment]
+    E --> F[Illicit market stability]
+```
+
+Corruption changes expected costs and can make illegal markets more durable.
+
+## Policy trade-offs
+
+| Policy | Mechanism | Possible limitation |
+|---|---|---|
+| Arrest leaders | disrupts hierarchy | may create succession violence |
+| Asset seizure | reduces resources | groups may hide assets |
+| Anti-corruption enforcement | raises protection cost | politically difficult |
+| Witness protection | increases cooperation | expensive and trust-dependent |
+| Market disruption | raises transaction cost | may displace activity |
+| Network targeting | attacks central nodes | network may adapt |
+
+## Organized crime and violence
+
+Violence may increase when markets are unstable. Strong groups may reduce visible violence by governing markets, while fragmented competition may increase conflict.
+
+This creates a difficult policy issue:
+
+```{mermaid}
+flowchart LR
+    A[Enforcement pressure] --> B[Market disruption]
+    B --> C[Power vacuum]
+    C --> D[Rival competition]
+    D --> E[Violence risk]
+```
+
+This does not mean enforcement is bad. It means enforcement can have transitional effects that should be anticipated.
+
+## Common mistakes
+
+### 1. Treating organized crime as a fixed hierarchy
+
+Some groups are hierarchical, but others are networked, flexible, or project-based.
+
+### 2. Ignoring governance
+
+Organized crime may provide illegal order, not only disorder.
+
+### 3. Treating violence as random
+
+Violence may serve strategic functions such as discipline, reputation, and market control.
+
+### 4. Ignoring corruption
+
+Corruption can be central to durability.
+
+### 5. Assuming removal of leaders ends the organization
+
+Networks may adapt after leadership removal.
+
+## Checklist for analysing organized crime
+
+1. What activity or market is being organized?
+2. What roles exist?
+3. How are agreements enforced?
+4. What role does violence play?
+5. What role does corruption play?
+6. Is the structure hierarchical or networked?
+7. How does the group manage betrayal?
+8. How is the activity measured?
+9. What happens if enforcement disrupts the group?
+10. What unintended effects may follow?
+
+## Related pages
+
+- [Topics](index.qmd)
+- [Network crime](../models/network-crime.qmd)
+- [Co-offending games](../models/co-offending-games.qmd)
+- [Inspection games](../models/inspection-games.qmd)
+- [Social interactions](../mechanisms/social-interactions.qmd)
+- [Institutions](../institutions/index.qmd)

@@ -1,60 +1,326 @@
 ---
-title: "Normal-form (simultaneous move)"
+title: "Normal-form Games"
 toc: true
+page-layout: full
 ---
 
-## What it is
-A normal-form game models **simultaneous** choice: players pick actions without observing others’ choices.
+A normal-form game represents a strategic situation in which players choose strategies and receive payoffs from the resulting strategy profile. It is the standard representation for simultaneous-move games and the natural starting point for Nash equilibrium.
 
-A finite two-player game is often represented by payoff matrices $(A,B)$.
+The normal form is useful because it makes the basic ingredients of a game explicit: players, strategies, and payoffs.
 
-## What’s special
-- Strategies are complete plans chosen at once (pure or mixed).
-- Main solution concept: **Nash equilibrium** (possibly mixed).
-- Workhorse tools: best responses, dominance, indifference.
+## Basic structure
 
-## One example (Prisoner's Dilemma)
-Actions: $C$ (cooperate) or $D$ (defect).
+A normal-form game can be written as
 
-Payoffs:
-- $(C,C)=(2,2)$
-- $(D,C)=(3,0)$
-- $(C,D)=(0,3)$
-- $(D,D)=(1,1)$
-
-**Solution sketch.** $D$ strictly dominates $C$ for each player, so the unique Nash equilibrium is $(D,D)$, even though $(C,C)$ is Pareto-better.
-
-
-## Story
-Two independent cafés, **North Bean** and **South Bean**, sit across the same narrow street by a commuter station. Tomorrow morning there will be a marathon: heavy demand, impatient customers, and intense competition for foot traffic. Tonight, each café must decide whether to run a deep discount.
-
-If only one café discounts, it steals attention and most walk-ins. If both discount, they split the crowd but both suffer thin margins. If neither discounts, both do fine—yet each fears being the only one who doesn’t discount.
-
-They decide simultaneously: no café observes the other’s choice before committing.
-
-## Model
-- Players: cafés $1,2$
-- Actions: $D$ (discount), $N$ (normal)
-- Timing: simultaneous
-- Payoffs: profits
-
-## Payoffs (toy)
 $$
-\begin{array}{c|cc}
- & D & N\\ \hline
-D & (1,1) & (3,0)\\
-N & (0,3) & (2,2)
-\end{array}
+G=\langle N,(S_i)_{i\in N},(u_i)_{i\in N}\rangle.
 $$
 
-## Equilibrium (Nash)
-Best responses:
-- If the other chooses $N$, your best response is $D$ (you gain market share).
-- If the other chooses $D$, your best response is $D$ (you avoid being undercut).
+Here:
 
-So $D$ is a best response to both opponent actions: the unique Nash equilibrium is $(D,D)$.
+| Object | Meaning |
+|---|---|
+| $N$ | set of players |
+| $S_i$ | strategy set of player $i$ |
+| $u_i$ | payoff function of player $i$ |
 
-## Later-on analysis
-- **Why it matters:** this is the basic logic behind price wars and “race to the bottom” outcomes.
-- **If repeated:** repeated interaction can sustain $(N,N)$ via punishments (see Repeated games).
-- **If asymmetric costs:** one café might never discount, shifting equilibrium and welfare.
+A strategy profile is
+
+$$
+s=(s_1,\ldots,s_n).
+$$
+
+Player $i$'s payoff is
+
+$$
+u_i(s_i,s_{-i}),
+$$
+
+where $s_{-i}$ denotes the strategies of all players other than $i$.
+
+## Why normal form matters
+
+Normal form gives the cleanest setting for best-response reasoning.
+
+```{mermaid}
+flowchart LR
+    A[Players] --> D[Normal-form game]
+    B[Strategies] --> D
+    C[Payoffs] --> D
+    D --> E[Best responses]
+    E --> F[Nash equilibrium]
+```
+
+Once the normal-form game is defined, the main question is:
+
+> Which strategies are best responses to which other strategies?
+
+## Payoff matrix
+
+For two-player finite games, the normal form is often shown as a payoff matrix.
+
+For example:
+
+|  | Player 2: L | Player 2: R |
+|---|---:|---:|
+| Player 1: U | $(2,2)$ | $(0,3)$ |
+| Player 1: D | $(3,0)$ | $(1,1)$ |
+
+Each cell gives payoffs in the form:
+
+$$
+(\text{Player 1 payoff}, \text{Player 2 payoff}).
+$$
+
+If Player 1 chooses $U$ and Player 2 chooses $L$, the outcome is $(2,2)$.
+
+## Simultaneous does not always mean literal same time
+
+A normal-form game is often called simultaneous-move, but the key idea is informational rather than physical.
+
+Players do not need to choose at exactly the same second. What matters is that a player cannot condition their current action on the other player's current action.
+
+For example:
+
+- two firms set prices without observing each other's price;
+- two suspects decide whether to confess;
+- two countries choose military investment levels;
+- two students choose how much effort to contribute to a joint project.
+
+## Best responses
+
+A best response is a strategy that maximizes a player's payoff given the strategies of others.
+
+For player $i$,
+
+$$
+BR_i(s_{-i})
+\in
+\arg\max_{s_i\in S_i}
+u_i(s_i,s_{-i}).
+$$
+
+This says:
+
+> hold the other players' strategies fixed, then choose the strategy that gives the highest payoff.
+
+```{mermaid}
+flowchart LR
+    A[Others' strategies] --> B[Player i compares payoffs]
+    B --> C[Choose highest payoff strategy]
+    C --> D[Best response]
+```
+
+Best-response analysis is the core method for solving normal-form games.
+
+## Nash equilibrium
+
+A Nash equilibrium is a strategy profile where every player is choosing a best response to the others.
+
+Formally, $s^*$ is a Nash equilibrium if, for every player $i$,
+
+$$
+u_i(s_i^*,s_{-i}^*)
+\geq
+u_i(s_i,s_{-i}^*)
+\quad
+\text{for all } s_i\in S_i.
+$$
+
+Equivalently,
+
+$$
+s_i^* \in BR_i(s_{-i}^*)
+\quad
+\text{for every } i.
+$$
+
+## Solving a 2-by-2 game
+
+For a two-player, two-action game, use this workflow:
+
+```{mermaid}
+flowchart TD
+    A[Write payoff matrix] --> B[Find Player 1's best response to each Player 2 action]
+    B --> C[Find Player 2's best response to each Player 1 action]
+    C --> D[Mark mutual best responses]
+    D --> E[Nash equilibria]
+    E --> F[Interpret result]
+```
+
+A cell is a pure-strategy Nash equilibrium if both players' strategies are best responses in that cell.
+
+## Dominant strategies
+
+A strategy is strictly dominant if it gives a player a higher payoff than every other strategy, no matter what the other players do.
+
+For player $i$, strategy $s_i$ strictly dominates $s_i'$ if
+
+$$
+u_i(s_i,s_{-i})
+>
+u_i(s_i',s_{-i})
+$$
+
+for all $s_{-i}$.
+
+A weakly dominant strategy gives at least as high a payoff in every case and a strictly higher payoff in at least one case.
+
+Dominant strategies are powerful because they do not depend on beliefs about what others do.
+
+## Dominated strategies
+
+A strategy is dominated if another strategy always performs better.
+
+Dominated strategies are often removed through iterative elimination.
+
+```{mermaid}
+flowchart TD
+    A[Start with full game] --> B[Find dominated strategies]
+    B --> C[Remove dominated strategies]
+    C --> D[Reduced game]
+    D --> E{More dominated strategies?}
+    E -->|Yes| B
+    E -->|No| F[Remaining strategies]
+```
+
+This process is useful, but it is not the same as finding all Nash equilibria.
+
+## Coordination games
+
+A coordination game has multiple equilibria, and players prefer to match each other's actions.
+
+Example:
+
+|  | L | R |
+|---|---:|---:|
+| U | $(2,2)$ | $(0,0)$ |
+| D | $(0,0)$ | $(1,1)$ |
+
+There are two Nash equilibria:
+
+$$
+(U,L)
+$$
+
+and
+
+$$
+(D,R).
+$$
+
+The problem is not conflict alone. The problem is selecting the same equilibrium.
+
+## Prisoners' dilemma
+
+The prisoners' dilemma shows how individually rational behaviour can lead to a collectively worse outcome.
+
+The usual structure is:
+
+|  | Cooperate | Defect |
+|---|---:|---:|
+| Cooperate | good for both | sucker payoff |
+| Defect | temptation payoff | bad for both |
+
+Each player has an incentive to defect, but mutual defection is worse than mutual cooperation.
+
+This is why Nash equilibrium should not be confused with social optimality.
+
+## Mixed strategies
+
+A mixed strategy is a probability distribution over pure strategies.
+
+If Player 1 chooses $U$ with probability $p$ and $D$ with probability $1-p$, then Player 1's mixed strategy is
+
+$$
+\sigma_1=(p,1-p).
+$$
+
+Mixed strategies are useful when no pure-strategy equilibrium exists or when players need to keep opponents indifferent.
+
+A mixed-strategy equilibrium requires each player to be willing to randomize among the strategies used with positive probability.
+
+## Expected payoff
+
+If Player 2 plays $L$ with probability $q$ and $R$ with probability $1-q$, Player 1's expected payoff from $U$ is
+
+$$
+U_1(U,q)
+=
+q u_1(U,L)+(1-q)u_1(U,R).
+$$
+
+Player 1's expected payoff from $D$ is
+
+$$
+U_1(D,q)
+=
+q u_1(D,L)+(1-q)u_1(D,R).
+$$
+
+If Player 1 mixes between $U$ and $D$, then they must be indifferent:
+
+$$
+U_1(U,q)=U_1(D,q).
+$$
+
+This condition is often used to solve mixed equilibria.
+
+## Normal form and extensive form
+
+A dynamic game can often be converted into normal form by listing each player's complete strategies.
+
+However, the normal form may hide timing and credibility.
+
+| Representation | Strength | Weakness |
+|---|---|---|
+| Normal form | clear strategy-payoff structure | hides timing |
+| Extensive form | shows sequence and information | can be larger and more complex |
+
+For sequential games, the extensive form is usually better for reasoning about credibility and subgame perfection.
+
+## Common mistakes
+
+### 1. Confusing actions with strategies
+
+In static games, an action and strategy may look similar. In dynamic games, a strategy is a complete plan.
+
+### 2. Reading payoffs in the wrong order
+
+In a payoff pair $(a,b)$, the first number usually belongs to Player 1 and the second to Player 2.
+
+### 3. Treating Nash equilibrium as the best social outcome
+
+A Nash equilibrium may be inefficient.
+
+### 4. Removing strategies incorrectly
+
+Only dominated strategies should be removed under dominance reasoning.
+
+### 5. Ignoring mixed strategies
+
+A game may have no pure equilibrium but still have a mixed equilibrium.
+
+## Checklist
+
+When analysing a normal-form game, ask:
+
+1. Who are the players?
+2. What are their strategies?
+3. What are the payoffs?
+4. What is each player's best response to each opponent strategy?
+5. Are there dominant or dominated strategies?
+6. Are there mutual best responses?
+7. Are there multiple equilibria?
+8. Is there a mixed equilibrium?
+9. Is the equilibrium efficient?
+10. What does the result mean substantively?
+
+## Related pages
+
+- [Game Types](index.qmd)
+- [Game Theory Notes](../game-theory.qmd)
+- [Nash Equilibrium](../equilibriums/nash.qmd)
+- [Subgame Perfect Equilibrium](../equilibriums/subgame-perfect.qmd)
+- [Optimization](../../foundations/optimization.qmd)
+- [Probability](../../foundations/probability.qmd)

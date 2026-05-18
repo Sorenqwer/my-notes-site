@@ -1,49 +1,294 @@
 ---
 title: "Methods Map"
 toc: true
+page-layout: full
 ---
-## Matching questions to methods
- 
-Different research questions call for different empirical strategies.
+
+A method should match the research question. Criminology uses many kinds of evidence because crime is partly hidden, institutionally recorded, socially interpreted, and unevenly distributed.
+
+This page maps common research questions to suitable methods.
+
+## The basic decision
+
+The first question is not “Which method should I use?” but:
+
+> What kind of question am I asking?
 
 ```{mermaid}
 flowchart TD
-    A[Research Question] --> B[Describe Patterns]
-    A --> C[Explain Mechanisms]
-    A --> D[Estimate Causal Effects]
-    A --> E[Predict Risk or Outcomes]
- 
-    B --> B1[Descriptive Statistics]
-    B --> B2[Maps and Trend Plots]
-    B --> B3[Typologies]
- 
-    C --> C1[Theory Building]
-    C --> C2[Qualitative Evidence]
-    C --> C3[Process Tracing]
- 
+    A[Research question] --> B[Describe patterns]
+    A --> C[Explain mechanisms]
+    A --> D[Estimate causal effects]
+    A --> E[Predict risk or outcomes]
+    A --> F[Interpret meaning or experience]
+    A --> G[Evaluate institutions or policy]
+
+    B --> B1[Descriptive statistics]
+    B --> B2[Maps and trend plots]
+
+    C --> C1[Theory building]
+    C --> C2[Process tracing]
+    C --> C3[Qualitative evidence]
+
     D --> D1[Experiments]
-    D --> D2[Natural Experiments]
-    D --> D3[Difference-in-Differences]
-    D --> D4[Regression Discontinuity]
-    D --> D5[Instrumental Variables]
- 
-    E --> E1[Supervised Learning]
-    E --> E2[Validation and Calibration]
-    E --> E3[Forecast Comparison]
+    D --> D2[Quasi-experiments]
+    D --> D3[Difference-in-differences]
+    D --> D4[Regression discontinuity]
+    D --> D5[Instrumental variables]
+
+    E --> E1[Prediction models]
+    E --> E2[Validation]
+    E --> E3[Calibration]
+
+    F --> F1[Interviews]
+    F --> F2[Ethnography]
+    F --> F3[Discourse or document analysis]
+
+    G --> G1[Process evaluation]
+    G --> G2[Outcome evaluation]
+    G --> G3[Cost-benefit analysis]
 ```
 
 ## Descriptive questions
 
-Use descriptive statistics, maps, trend plots, and typologies when the question is: *what is happening, where, and to whom?*
+Descriptive questions ask:
+
+> What is happening?
+
+Examples:
+
+- How has recorded burglary changed over time?
+- Which areas have high rates of violent crime?
+- Which groups report lower trust in police?
+- How do case outcomes vary across courts?
+
+Useful methods include:
+
+- summary statistics;
+- rates and ratios;
+- time-series plots;
+- maps;
+- cross-tabulations;
+- administrative data summaries;
+- victimization survey summaries.
+
+Description is not weak. Good description is often the foundation for good explanation.
 
 ## Mechanism questions
 
-Use theory-building, qualitative evidence, process tracing, or model-based explanation when the question is: *why does this pattern arise?*
+Mechanism questions ask:
+
+> How or why does this pattern arise?
+
+Examples:
+
+- Why might victims choose not to report?
+- How do peer groups shape offending?
+- How does labeling affect future opportunity?
+- Why might aggressive enforcement reduce trust?
+
+Useful methods include:
+
+- qualitative interviews;
+- ethnography;
+- case studies;
+- process tracing;
+- formal modelling;
+- theory-guided empirical analysis;
+- mixed-method designs.
+
+Mechanism evidence often needs more than one source.
+
+```{mermaid}
+flowchart LR
+    A[Observed pattern] --> B[Possible mechanism]
+    B --> C[Observable implication]
+    C --> D[Evidence]
+    D --> E[Revised explanation]
+```
 
 ## Causal questions
 
-Use experiments, natural experiments, difference-in-differences, regression discontinuity, instrumental variables, or matching when the question is: *what is the effect of an intervention or exposure?*
+Causal questions ask:
+
+> What is the effect of X on Y?
+
+Examples:
+
+- Does hotspot policing reduce crime?
+- Does incarceration reduce future offending?
+- Does CCTV reduce theft?
+- Does procedural justice training improve trust?
+- Does a sentencing reform change prison populations?
+
+Useful methods include:
+
+- randomized experiments;
+- natural experiments;
+- difference-in-differences;
+- regression discontinuity;
+- instrumental variables;
+- matching;
+- panel models.
+
+Causal designs need a credible comparison. The key problem is usually the counterfactual:
+
+> What would have happened without the treatment?
 
 ## Prediction questions
 
-Use supervised learning, validation, calibration checks, and error analysis when the question is: *who or where is at higher risk?*
+Prediction questions ask:
+
+> Can we forecast risk or classify outcomes?
+
+Examples:
+
+- Which locations are at higher risk of burglary?
+- Which cases are likely to drop out?
+- Which offenders are likely to reoffend?
+- Which online accounts are likely to be fraudulent?
+
+Useful methods include:
+
+- logistic regression;
+- decision trees;
+- random forests;
+- gradient boosting;
+- survival models;
+- validation and calibration checks;
+- error analysis.
+
+Prediction is not the same as causal explanation. A variable may predict an outcome without causing it.
+
+## Interpretive questions
+
+Interpretive questions ask:
+
+> What meaning do actors attach to behaviour, institutions, or experiences?
+
+Examples:
+
+- How do young people understand police stops?
+- How do victims interpret justice?
+- How do offenders justify rule-breaking?
+- How do practitioners understand discretion?
+
+Useful methods include:
+
+- interviews;
+- focus groups;
+- ethnography;
+- discourse analysis;
+- document analysis;
+- thematic coding.
+
+Interpretive work is especially useful when the research question concerns meaning, identity, legitimacy, fear, stigma, or experience.
+
+## Evaluation questions
+
+Evaluation questions ask:
+
+> Did a programme or policy work, how did it work, and at what cost?
+
+Examples:
+
+- Did an intervention reduce reoffending?
+- Was the programme implemented as intended?
+- Did the policy create displacement?
+- Did the benefits justify the cost?
+- Did the intervention affect groups unequally?
+
+Useful methods include:
+
+- process evaluation;
+- outcome evaluation;
+- impact evaluation;
+- cost-benefit analysis;
+- implementation analysis;
+- mixed-method evaluation.
+
+A strong evaluation separates:
+
+1. whether the programme was implemented;
+2. whether outcomes changed;
+3. whether the programme caused the change;
+4. whether the change was worth the cost.
+
+## Data sources
+
+Criminology uses multiple data sources.
+
+| Data source | Strength | Limitation |
+|---|---|---|
+| Police records | detailed official events | affected by reporting and recording |
+| Court records | legal process and outcomes | only includes cases entering courts |
+| Prison/probation records | correctional contact | selected population |
+| Victimization surveys | captures unreported victimization | recall and survey design issues |
+| Self-report surveys | captures hidden offending | honesty and sample issues |
+| Interviews | meaning and mechanism | limited generalizability |
+| Ethnography | deep contextual insight | time-intensive and local |
+| Spatial data | place concentration | boundary and exposure issues |
+| Network data | relational structure | missing ties and privacy constraints |
+| Digital trace data | scale and behaviour logs | platform bias and access limits |
+
+No data source is perfect. The method should acknowledge what the data can and cannot show.
+
+## Matching table
+
+| Question type | Example question | Suitable methods |
+|---|---|---|
+| Descriptive | Where is crime concentrated? | maps, rates, trend plots |
+| Mechanism | Why do victims not report? | interviews, process tracing, reporting model |
+| Causal | Did the policy reduce crime? | experiment, DiD, RD, IV |
+| Predictive | Who is at high risk? | machine learning, validation, calibration |
+| Interpretive | How do people experience policing? | interviews, ethnography |
+| Institutional | How does the court process cases? | administrative data, process evaluation |
+| Network | How does crime diffuse? | network analysis, diffusion models |
+
+## Common mistakes
+
+### 1. Using a causal language with descriptive evidence
+
+A correlation or trend does not automatically identify an effect.
+
+### 2. Treating prediction as explanation
+
+A predictive variable is not necessarily a causal mechanism.
+
+### 3. Ignoring measurement process
+
+Crime data are produced through reporting, detection, and recording.
+
+### 4. Choosing method before question
+
+The research question should determine the method.
+
+### 5. Ignoring implementation
+
+A policy cannot work as designed if it was not implemented as designed.
+
+### 6. Overgeneralizing from one data source
+
+Different sources capture different parts of the crime process.
+
+## Method-selection checklist
+
+1. What is the research question?
+2. Is it descriptive, causal, predictive, interpretive, institutional, or mechanism-focused?
+3. What is the unit of analysis?
+4. What is the outcome?
+5. Is the outcome true crime, recorded crime, reporting, detection, or institutional response?
+6. What comparison is needed?
+7. What data source is available?
+8. What does the data miss?
+9. What alternative explanations remain?
+10. What kind of claim can the method support?
+
+## Related pages
+
+- [Criminology Toolkit](index.qmd)
+- [Glossary](glossary.qmd)
+- [Modeling Checklist](modeling-checklist.qmd)
+- [Criminology Foundations](../notes/foundations/index.qmd)
+- [Metrics](../../notes/metrics.qmd)
+- [Probability](../../foundations/probability.qmd)

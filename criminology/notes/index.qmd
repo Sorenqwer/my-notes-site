@@ -1,59 +1,331 @@
 ---
-title: "Criminology notes"
-page-layout: full
+title: "Criminology Notes"
 toc: true
+page-layout: full
 ---
-## How these criminology notes are organised
- 
-The criminology section is organised around mechanisms, institutions, models, and substantive topics.
- 
+
+These notes study crime, deviance, social control, and institutions through mechanisms. The aim is not only to list theories, but to ask how behaviour is produced, constrained, recorded, punished, justified, and changed.
+
+The criminology section is organised around five layers:
+
+1. **Foundations**: core concepts and measurement problems.
+2. **Mechanisms**: causal and behavioural processes.
+3. **Institutions**: police, courts, corrections, and governance.
+4. **Models**: formal or semi-formal tools for thinking clearly.
+5. **Topics**: substantive crime areas such as violence, property crime, cybercrime, and drug markets.
+
+## Map of the criminology notes
+
 ```{mermaid}
 flowchart TD
-    A[Criminology] --> B[Foundations]
+    A[Criminology Notes] --> B[Foundations]
     A --> C[Mechanisms]
     A --> D[Institutions]
     A --> E[Models]
     A --> F[Topics]
- 
-    B --> B1[Core Concepts]
+
+    B --> B1[Crime and deviance]
     B --> B2[Measurement]
-    B --> B3[Research Questions]
- 
+    B --> B3[Recorded crime vs true crime]
+
     C --> C1[Self-control]
-    C --> C2[Opportunity and Routine Activity]
-    C --> C3[Legitimacy and Compliance]
-    C --> C4[Social Interactions]
-    C --> C5[Life-course Processes]
- 
+    C --> C2[Opportunity and routine activity]
+    C --> C3[Social interactions]
+    C --> C4[Legitimacy and compliance]
+    C --> C5[Labeling and stigma]
+    C --> C6[Life-course processes]
+    C --> C7[Inequality and trust]
+
     D --> D1[Policing]
     D --> D2[Courts]
     D --> D3[Corrections]
- 
-    E --> E1[Inspection Games]
-    E --> E2[Co-offending Games]
-    E --> E3[Network Crime]
-    E --> E4[Reporting and Trust]
- 
-    F --> F1[Violent Crime]
-    F --> F2[Property Crime]
-    F --> F3[White-collar Crime]
+
+    E --> E1[Inspection games]
+    E --> E2[Co-offending games]
+    E --> E3[Network crime]
+    E --> E4[Reporting and trust]
+    E --> E5[Plea bargaining]
+    E --> E6[Allocation dynamics]
+
+    F --> F1[Violent crime]
+    F --> F2[Property crime]
+    F --> F3[White-collar crime]
     F --> F4[Cybercrime]
-    F --> F5[Organized Crime]
-    F --> F6[Drug Markets]
+    F --> F5[Organized crime]
+    F --> F6[Drug markets]
 ```
 
-## Start here
-- [Foundations](foundations/index.qmd)
-- [Mechanisms](mechanisms/index.qmd)
-- [Institutions](institutions/index.qmd)
-- [Topics](topics/index.qmd)
-- [Models](models/index.qmd)
+The structure is meant to help connect theories with mechanisms and mechanisms with evidence.
 
----
+## Main sections
 
-## How this section is organized
-1) **Foundations**: definitions + units of analysis + measurement caveats  
-2) **Mechanisms**: theory families (channels)  
-3) **Institutions**: policing/courts/corrections as strategic systems  
-4) **Topics**: substantive crime domains  
-5) **Models**: canonical strategic/dynamic representations
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Foundations
+
+Core criminological concepts: crime, deviance, measurement, recorded crime, hidden crime, harm, social control, and explanation.
+
+[Open →](foundations/index.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Mechanisms
+
+Behavioural and social processes that generate crime or compliance: self-control, opportunity, social interaction, legitimacy, labeling, life-course dynamics, inequality, and trust.
+
+[Open →](mechanisms/index.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Institutions
+
+How formal institutions respond to crime: policing, courts, corrections, enforcement, legitimacy, discretion, and incentives.
+
+[Open →](institutions/index.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Models
+
+Analytical tools for thinking about crime: inspection games, co-offending games, network crime, reporting and trust, plea bargaining, and allocation dynamics.
+
+[Open →](models/index.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Topics
+
+Substantive crime areas: violent crime, property crime, organized crime, white-collar crime, cybercrime, and drug markets.
+
+[Open →](topics/index.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Toolkit
+
+Glossary, methods map, and modelling checklist for criminology pages.
+
+[Open →](../toolkit/index.qmd)
+:::
+:::
+
+:::
+
+## The basic analytical chain
+
+A useful criminological explanation usually connects context, mechanism, behaviour, measurement, and response.
+
+```{mermaid}
+flowchart LR
+    A[Social or institutional context] --> B[Mechanism]
+    B --> C[Behaviour]
+    C --> D[Observed data]
+    D --> E[Interpretation]
+    E --> F[Policy response]
+```
+
+This chain also shows where mistakes can occur. A change in recorded crime may reflect a change in actual offending, reporting, detection, classification, or enforcement intensity.
+
+## Crime as behaviour and record
+
+One of the most important distinctions in criminology is the difference between **true crime** and **recorded crime**.
+
+True crime refers to events that actually occur. Recorded crime refers to events that appear in official data.
+
+These are not the same.
+
+```{mermaid}
+flowchart TD
+    A[Crime event occurs] --> B{Victim or witness reports?}
+    B -->|No| C[Hidden crime]
+    B -->|Yes| D{Police record the event?}
+    D -->|No| E[Unrecorded reported event]
+    D -->|Yes| F[Recorded crime]
+    F --> G[Official statistics]
+```
+
+This distinction matters because many empirical claims rely on recorded data. A rise in recorded crime may mean more offending, better reporting, changed police practice, or changed classification.
+
+## Mechanisms before labels
+
+A theory is most useful when it identifies a mechanism.
+
+For example:
+
+| Theory family | Possible mechanism |
+|---|---|
+| Deterrence | Sanctions change expected costs |
+| Routine activity | Crime occurs when opportunity, target, and weak guardianship coincide |
+| Self-control | Impulsivity affects sensitivity to immediate reward |
+| Social learning | Behaviour spreads through peers and reinforcement |
+| Labeling | Official reaction changes identity and opportunity |
+| Legitimacy | Perceived fairness affects willingness to comply |
+| Life-course theory | Turning points change constraints and attachments |
+
+The same crime type can involve several mechanisms at once. Violent crime may involve self-control, retaliation, peer norms, alcohol, weapon access, and weak guardianship.
+
+## Institutions and incentives
+
+Criminology is also about institutions. Police, courts, prisons, probation systems, regulators, communities, and firms all respond to crime under constraints.
+
+Institutions face their own incentives:
+
+- limited budgets;
+- imperfect information;
+- political pressure;
+- legal constraints;
+- legitimacy concerns;
+- discretion;
+- error;
+- unequal visibility across groups and places.
+
+A good institutional analysis asks not only whether an intervention works, but also how it changes incentives and behaviour across the system.
+
+## Why models are useful
+
+Models do not replace empirical evidence or qualitative interpretation. They help clarify assumptions.
+
+A model can show:
+
+- who the actors are;
+- what choices they face;
+- what information they have;
+- what incentives matter;
+- what outcome should be expected;
+- what would change under a policy intervention.
+
+```{mermaid}
+flowchart TD
+    A[Criminological question] --> B[Identify actors]
+    B --> C[Specify choices]
+    C --> D[Specify information]
+    D --> E[Specify payoffs or incentives]
+    E --> F[Derive prediction]
+    F --> G[Compare with evidence]
+```
+
+This is especially useful when the same policy may have different effects depending on reporting, deterrence, displacement, trust, and institutional response.
+
+## Example: deterrence as a mechanism
+
+A simple deterrence argument says that offending becomes less attractive when expected punishment increases.
+
+Expected punishment can be written roughly as
+
+$$
+\text{Expected punishment}
+=
+\Pr(\text{caught}) \times \text{sanction severity}.
+$$
+
+A deterrence policy may increase either the probability of detection or the severity of punishment.
+
+But the mechanism is not automatic. The effect depends on whether potential offenders perceive the risk, whether they are responsive to future consequences, whether opportunities remain available, and whether enforcement is legitimate.
+
+This is why a simple model should be paired with institutional and behavioural interpretation.
+
+## Example: reporting and trust
+
+Recorded crime depends partly on reporting. Reporting depends partly on trust.
+
+```{mermaid}
+flowchart LR
+    A[Crime or victimization] --> B{Report to authorities?}
+    B -->|Yes| C[Case enters official data]
+    B -->|No| D[Hidden from official data]
+    E[Trust in institutions] --> B
+    F[Expected benefit of reporting] --> B
+    G[Expected cost or stigma] --> B
+```
+
+This means recorded crime can rise even when true crime does not rise, if victims become more willing to report. It can also fall even when true crime does not fall, if trust declines.
+
+## Suggested reading paths
+
+### If you are new to criminology
+
+1. [Foundations](foundations/index.qmd)
+2. [Opportunity and routine activity](mechanisms/opportunity-routine.qmd)
+3. [Self-control](mechanisms/self-control.qmd)
+4. [Legitimacy and compliance](mechanisms/legitimacy-compliance.qmd)
+5. [Topics](topics/index.qmd)
+
+### If you want mechanisms
+
+1. [Mechanisms](mechanisms/index.qmd)
+2. [Social interactions](mechanisms/social-interactions.qmd)
+3. [Opportunity and routine activity](mechanisms/opportunity-routine.qmd)
+4. [Labeling and stigma](mechanisms/labeling-stigma.qmd)
+5. [Life-course processes](mechanisms/life-course.qmd)
+
+### If you want institutions
+
+1. [Institutions](institutions/index.qmd)
+2. [Policing](institutions/policing.qmd)
+3. [Courts](institutions/courts.qmd)
+4. [Corrections](institutions/corrections.qmd)
+
+### If you want models
+
+1. [Models](models/index.qmd)
+2. [Inspection games](models/inspection-games.qmd)
+3. [Reporting and trust](models/reporting-trust.qmd)
+4. [Network crime](models/network-crime.qmd)
+5. [Plea bargaining](models/plea-bargaining.qmd)
+
+## Common mistakes
+
+### 1. Treating recorded crime as true crime
+
+Official statistics are valuable, but they are shaped by reporting, recording, policing, and classification.
+
+### 2. Naming a theory without explaining the mechanism
+
+A label is not an explanation. The mechanism should show how one thing produces another.
+
+### 3. Ignoring institutions
+
+Crime policy works through institutions, and institutions have incentives, constraints, and errors.
+
+### 4. Assuming punishment works mechanically
+
+Deterrence depends on perceived risk, responsiveness, legitimacy, and available alternatives.
+
+### 5. Ignoring displacement
+
+An intervention may move crime across time, space, target, method, or offence type.
+
+### 6. Separating theory and measurement
+
+The way crime is measured affects the conclusions that can be drawn from evidence.
+
+## How these notes connect to the rest of the site
+
+Criminology connects naturally with game theory and psychology.
+
+Game theory helps analyse enforcement, inspection, reporting, bargaining, cooperation, and strategic adaptation.
+
+Psychology helps analyse impulse, identity, emotion, trauma, social cognition, moral judgement, and compliance.
+
+Foundations help keep the reasoning clear: optimization for incentives, probability for uncertainty, dynamic reasoning for future consequences, and networks for social structure.
+
+## Related pages
+
+- [Criminology home](../index.qmd)
+- [Criminology toolkit](../toolkit/index.qmd)
+- [Game Theory Notes](../../notes/game-theory.qmd)
+- [Dynamic reasoning](../../foundations/dynamic-reasoning.qmd)
+- [Probability](../../foundations/probability.qmd)
+- [Psychology](../../psychology/index.qmd)

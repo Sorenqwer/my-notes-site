@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../../styles.css">
@@ -130,9 +134,30 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#mechanisms-to-connect" id="toc-mechanisms-to-connect" class="nav-link active" data-scroll-target="#mechanisms-to-connect">Mechanisms to connect</a></li>
-  <li><a href="#models-to-try" id="toc-models-to-try" class="nav-link" data-scroll-target="#models-to-try">Models to try</a></li>
-  <li><a href="#notes-to-add-later" id="toc-notes-to-add-later" class="nav-link" data-scroll-target="#notes-to-add-later">Notes to add later</a></li>
+  <li><a href="#basic-mechanism-map" id="toc-basic-mechanism-map" class="nav-link active" data-scroll-target="#basic-mechanism-map">Basic mechanism map</a></li>
+  <li><a href="#core-mechanisms" id="toc-core-mechanisms" class="nav-link" data-scroll-target="#core-mechanisms">Core mechanisms</a>
+  <ul class="collapse">
+  <li><a href="#agency-problems" id="toc-agency-problems" class="nav-link" data-scroll-target="#agency-problems">Agency problems</a></li>
+  <li><a href="#information-asymmetry" id="toc-information-asymmetry" class="nav-link" data-scroll-target="#information-asymmetry">Information asymmetry</a></li>
+  <li><a href="#weak-monitoring" id="toc-weak-monitoring" class="nav-link" data-scroll-target="#weak-monitoring">Weak monitoring</a></li>
+  <li><a href="#incentive-pressure" id="toc-incentive-pressure" class="nav-link" data-scroll-target="#incentive-pressure">Incentive pressure</a></li>
+  <li><a href="#neutralization" id="toc-neutralization" class="nav-link" data-scroll-target="#neutralization">Neutralization</a></li>
+  </ul></li>
+  <li><a href="#measurement-issues" id="toc-measurement-issues" class="nav-link" data-scroll-target="#measurement-issues">Measurement issues</a></li>
+  <li><a href="#principal-agent-model" id="toc-principal-agent-model" class="nav-link" data-scroll-target="#principal-agent-model">Principal-agent model</a></li>
+  <li><a href="#audit-logic" id="toc-audit-logic" class="nav-link" data-scroll-target="#audit-logic">Audit logic</a></li>
+  <li><a href="#policy-trade-offs" id="toc-policy-trade-offs" class="nav-link" data-scroll-target="#policy-trade-offs">Policy trade-offs</a></li>
+  <li><a href="#compliance-theatre" id="toc-compliance-theatre" class="nav-link" data-scroll-target="#compliance-theatre">Compliance theatre</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#treating-white-collar-crime-as-victimless" id="toc-treating-white-collar-crime-as-victimless" class="nav-link" data-scroll-target="#treating-white-collar-crime-as-victimless">1. Treating white-collar crime as victimless</a></li>
+  <li><a href="#focusing-only-on-individual-greed" id="toc-focusing-only-on-individual-greed" class="nav-link" data-scroll-target="#focusing-only-on-individual-greed">2. Focusing only on individual greed</a></li>
+  <li><a href="#treating-compliance-programmes-as-proof-of-compliance" id="toc-treating-compliance-programmes-as-proof-of-compliance" class="nav-link" data-scroll-target="#treating-compliance-programmes-as-proof-of-compliance">3. Treating compliance programmes as proof of compliance</a></li>
+  <li><a href="#ignoring-detection-bias" id="toc-ignoring-detection-bias" class="nav-link" data-scroll-target="#ignoring-detection-bias">4. Ignoring detection bias</a></li>
+  <li><a href="#ignoring-civil-and-administrative-enforcement" id="toc-ignoring-civil-and-administrative-enforcement" class="nav-link" data-scroll-target="#ignoring-civil-and-administrative-enforcement">5. Ignoring civil and administrative enforcement</a></li>
+  </ul></li>
+  <li><a href="#checklist-for-analysing-white-collar-crime" id="toc-checklist-for-analysing-white-collar-crime" class="nav-link" data-scroll-target="#checklist-for-analysing-white-collar-crime">Checklist for analysing white-collar crime</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -158,27 +183,274 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>White-collar crime involves illegal or harmful conduct carried out through professional, organizational, or financial roles.</p>
-<section id="mechanisms-to-connect" class="level2">
-<h2 class="anchored" data-anchor-id="mechanisms-to-connect">Mechanisms to connect</h2>
-<ul>
-<li>agency problems</li>
-<li>moral neutralization</li>
-<li>compliance incentives</li>
-<li>regulatory capture</li>
-</ul>
+<p>White-collar crime refers to illegal or harmful conduct carried out through professional, corporate, financial, bureaucratic, or organizational roles. Examples include fraud, insider trading, corruption, false accounting, regulatory violations, wage theft, bribery, tax evasion, and unsafe corporate practices.</p>
+<p>The key feature is not simply that the offender is wealthy. The key feature is that the offence is enabled by legitimate roles, organizations, expertise, trust, and access.</p>
+<section id="basic-mechanism-map" class="level2">
+<h2 class="anchored" data-anchor-id="basic-mechanism-map">Basic mechanism map</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[White-Collar Crime] --&gt; B[Organizational access]
+    A --&gt; C[Information advantage]
+    A --&gt; D[Weak monitoring]
+    A --&gt; E[Incentive pressure]
+    A --&gt; F[Neutralization]
+
+    B --&gt; B1[Role-based authority]
+    B --&gt; B2[Control over records]
+
+    C --&gt; C1[Complex products]
+    C --&gt; C2[Asymmetric information]
+
+    D --&gt; D1[Audit limits]
+    D --&gt; D2[Regulatory gaps]
+
+    E --&gt; E1[Profit targets]
+    E --&gt; E2[Career rewards]
+
+    F --&gt; F1[Everyone does it]
+    F --&gt; F2[No direct victim]
+    F --&gt; F3[Only bending rules]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>White-collar crime often depends on the gap between formal rules and actual organizational incentives.</p>
 </section>
-<section id="models-to-try" class="level2">
-<h2 class="anchored" data-anchor-id="models-to-try">Models to try</h2>
-<ul>
-<li>principal-agent models</li>
-<li>inspection and audit games</li>
-<li>signaling and disclosure models</li>
-</ul>
+<section id="core-mechanisms" class="level2">
+<h2 class="anchored" data-anchor-id="core-mechanisms">Core mechanisms</h2>
+<section id="agency-problems" class="level3">
+<h3 class="anchored" data-anchor-id="agency-problems">Agency problems</h3>
+<p>An agent may act against the interests of a principal. Managers, employees, advisers, or contractors may exploit their role for private benefit.</p>
 </section>
-<section id="notes-to-add-later" class="level2">
-<h2 class="anchored" data-anchor-id="notes-to-add-later">Notes to add later</h2>
-<p>Add empirical examples, key definitions, and one diagram linking mechanism → prediction → measurement.</p>
+<section id="information-asymmetry" class="level3">
+<h3 class="anchored" data-anchor-id="information-asymmetry">Information asymmetry</h3>
+<p>White-collar crime often involves one side knowing more than another. This can make fraud, concealment, manipulation, or misreporting easier.</p>
+</section>
+<section id="weak-monitoring" class="level3">
+<h3 class="anchored" data-anchor-id="weak-monitoring">Weak monitoring</h3>
+<p>Complex organizations are difficult to monitor. Auditors, regulators, customers, and shareholders may not observe misconduct until much later.</p>
+</section>
+<section id="incentive-pressure" class="level3">
+<h3 class="anchored" data-anchor-id="incentive-pressure">Incentive pressure</h3>
+<p>Targets, bonuses, competition, and organizational culture can reward risky or illegal conduct.</p>
+</section>
+<section id="neutralization" class="level3">
+<h3 class="anchored" data-anchor-id="neutralization">Neutralization</h3>
+<p>Offenders may justify misconduct by denying harm, blaming the system, or reframing violations as normal business practice.</p>
+</section>
+</section>
+<section id="measurement-issues" class="level2">
+<h2 class="anchored" data-anchor-id="measurement-issues">Measurement issues</h2>
+<p>White-collar crime is difficult to measure.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Issue</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Low visibility</td>
+<td>victims may not know they were harmed</td>
+</tr>
+<tr class="even">
+<td>Complex evidence</td>
+<td>misconduct may require expert investigation</td>
+</tr>
+<tr class="odd">
+<td>Regulatory dependence</td>
+<td>detection depends on audit and enforcement</td>
+</tr>
+<tr class="even">
+<td>Organizational concealment</td>
+<td>records may be manipulated</td>
+</tr>
+<tr class="odd">
+<td>Ambiguous harm</td>
+<td>harm may be delayed, diffuse, or collective</td>
+</tr>
+<tr class="even">
+<td>Civil/criminal boundary</td>
+<td>cases may be handled administratively rather than criminally</td>
+</tr>
+</tbody>
+</table>
+<p>Recorded white-collar crime is often closer to detected white-collar crime than true white-collar crime.</p>
+</section>
+<section id="principal-agent-model" class="level2">
+<h2 class="anchored" data-anchor-id="principal-agent-model">Principal-agent model</h2>
+<p>A simple model treats misconduct as an agency problem.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Principal delegates task] --&gt; B[Agent controls information or action]
+    B --&gt; C{Monitor effectively?}
+    C --&gt;|Yes| D[Compliance more likely]
+    C --&gt;|No| E[Opportunity for misconduct]
+    E --&gt; F[Private gain]
+    F --&gt; G[Possible detection and sanction]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The central problem is that the agent has both opportunity and private information.</p>
+</section>
+<section id="audit-logic" class="level2">
+<h2 class="anchored" data-anchor-id="audit-logic">Audit logic</h2>
+<p>A regulator or firm may audit only some cases because monitoring is costly.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Possible violation] --&gt; B{Audit?}
+    B --&gt;|No| C[Violation may remain hidden]
+    B --&gt;|Yes| D{Detected?}
+    D --&gt;|No| E[No sanction]
+    D --&gt;|Yes| F[Penalty or correction]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This connects white-collar crime to inspection games.</p>
+</section>
+<section id="policy-trade-offs" class="level2">
+<h2 class="anchored" data-anchor-id="policy-trade-offs">Policy trade-offs</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Policy</th>
+<th>Mechanism</th>
+<th>Possible limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>More audits</td>
+<td>raises detection risk</td>
+<td>costly and selective</td>
+</tr>
+<tr class="even">
+<td>Whistleblower protection</td>
+<td>increases internal reporting</td>
+<td>retaliation and credibility issues</td>
+</tr>
+<tr class="odd">
+<td>Compliance systems</td>
+<td>improves monitoring</td>
+<td>may become symbolic</td>
+</tr>
+<tr class="even">
+<td>Stronger penalties</td>
+<td>increases expected cost</td>
+<td>only if detection is plausible</td>
+</tr>
+<tr class="odd">
+<td>Transparency rules</td>
+<td>reduces information asymmetry</td>
+<td>may overload users with information</td>
+</tr>
+<tr class="even">
+<td>Individual liability</td>
+<td>targets decision-makers</td>
+<td>difficult to prove intent</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="compliance-theatre" class="level2">
+<h2 class="anchored" data-anchor-id="compliance-theatre">Compliance theatre</h2>
+<p>A special problem in white-collar crime is <strong>compliance theatre</strong>: organizations create formal compliance structures that look good externally but do not change internal incentives.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Formal compliance rule] --&gt; B[Box-ticking]
+    B --&gt; C[Appearance of control]
+    C --&gt; D[Weak behavioural change]
+    D --&gt; E[Misconduct risk remains]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This is why policy must examine implementation, not only formal rules.</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="treating-white-collar-crime-as-victimless" class="level3">
+<h3 class="anchored" data-anchor-id="treating-white-collar-crime-as-victimless">1. Treating white-collar crime as victimless</h3>
+<p>Harm can be diffuse, delayed, financial, physical, environmental, or institutional.</p>
+</section>
+<section id="focusing-only-on-individual-greed" class="level3">
+<h3 class="anchored" data-anchor-id="focusing-only-on-individual-greed">2. Focusing only on individual greed</h3>
+<p>Organizational incentives and culture may matter as much as individual motive.</p>
+</section>
+<section id="treating-compliance-programmes-as-proof-of-compliance" class="level3">
+<h3 class="anchored" data-anchor-id="treating-compliance-programmes-as-proof-of-compliance">3. Treating compliance programmes as proof of compliance</h3>
+<p>Formal systems may exist without meaningful enforcement.</p>
+</section>
+<section id="ignoring-detection-bias" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-detection-bias">4. Ignoring detection bias</h3>
+<p>Observed cases are shaped by audit, regulation, whistleblowing, and investigation.</p>
+</section>
+<section id="ignoring-civil-and-administrative-enforcement" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-civil-and-administrative-enforcement">5. Ignoring civil and administrative enforcement</h3>
+<p>Many white-collar harms are handled outside criminal prosecution.</p>
+</section>
+</section>
+<section id="checklist-for-analysing-white-collar-crime" class="level2">
+<h2 class="anchored" data-anchor-id="checklist-for-analysing-white-collar-crime">Checklist for analysing white-collar crime</h2>
+<ol type="1">
+<li>What role or organization enabled the misconduct?</li>
+<li>Who had information advantage?</li>
+<li>Who was supposed to monitor?</li>
+<li>What incentive pressure existed?</li>
+<li>Who was harmed, and how?</li>
+<li>Was the harm direct, diffuse, delayed, or hidden?</li>
+<li>How was the misconduct detected?</li>
+<li>Was enforcement criminal, civil, administrative, or internal?</li>
+<li>Did compliance systems actually affect behaviour?</li>
+<li>What reform targets the mechanism?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../../../criminology/notes/topics/index.html">Topics</a></li>
+<li><a href="../../../criminology/notes/models/inspection-games.html">Inspection games</a></li>
+<li><a href="../../../criminology/notes/mechanisms/incentives-deterrence.html">Incentives and deterrence</a></li>
+<li><a href="../../../criminology/notes/institutions/index.html">Institutions</a></li>
+<li><a href="../../../criminology/toolkit/methods-map.html">Methods Map</a></li>
+<li><a href="../../../criminology/toolkit/modeling-checklist.html">Modeling Checklist</a></li>
+</ul>
 
 
 </section>

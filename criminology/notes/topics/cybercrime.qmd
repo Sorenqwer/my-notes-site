@@ -1,23 +1,177 @@
 ---
 title: "Cybercrime"
 toc: true
+page-layout: full
 ---
 
-Cybercrime is offending mediated by digital systems and shaped by scale, anonymity, automation, platform design, and jurisdictional limits.
+Cybercrime refers to offences that use digital systems as targets, tools, environments, or markets. It includes hacking, malware, phishing, online fraud, identity theft, ransomware, platform abuse, data theft, harassment, and illicit online marketplaces.
 
-## Mechanisms to connect
+Cybercrime is not one mechanism. It is a domain shaped by scale, anonymity, automation, weak attribution, platform design, and cross-border enforcement problems.
 
-- low marginal cost of repeated attempts
-- anonymity and attribution problems
-- social engineering
-- cross-border enforcement frictions
+## Basic mechanism map
 
-## Models to try
+```{mermaid}
+flowchart TD
+    A[Cybercrime] --> B[Technical opportunity]
+    A --> C[Anonymity and attribution]
+    A --> D[Automation and scale]
+    A --> E[Human vulnerability]
+    A --> F[Platform and market structure]
 
-- attacker-defender games
-- phishing as persuasion
-- inspection games with costly monitoring
+    B --> B1[Software weakness]
+    B --> B2[Credential exposure]
 
-## Notes to add later
+    C --> C1[Hidden identity]
+    C --> C2[Cross-border actors]
 
-Add empirical examples, key definitions, and one diagram linking mechanism → prediction → measurement.
+    D --> D1[Mass attempts]
+    D --> D2[Low marginal cost]
+
+    E --> E1[Phishing]
+    E --> E2[Social engineering]
+
+    F --> F1[Online markets]
+    F --> F2[Platform rules]
+    F --> F3[Data economies]
+```
+
+The distinctive feature of cybercrime is that one actor can target many victims at low marginal cost.
+
+## Core mechanisms
+
+### Automation
+
+Digital tools allow repeated attempts at scale. A fraud attempt with a very low success rate may still be profitable if the cost per attempt is tiny.
+
+### Anonymity and weak attribution
+
+Cyber offenders can hide identity, location, or responsibility. This reduces expected detection and complicates enforcement.
+
+### Social engineering
+
+Many cybercrimes exploit human behaviour rather than only technical weaknesses. Phishing, romance scams, and impersonation attacks rely on trust, urgency, fear, or confusion.
+
+### Platform dependency
+
+Cybercrime often occurs through platforms, payment systems, social media, marketplaces, cloud services, or messaging apps. Platform rules shape opportunity.
+
+### Cross-border enforcement
+
+Victims, offenders, servers, financial intermediaries, and platforms may be in different jurisdictions.
+
+## Measurement issues
+
+Cybercrime is hard to measure.
+
+| Issue | Why it matters |
+|---|---|
+| Underreporting | victims may feel shame or see reporting as useless |
+| Misclassification | incidents may be recorded as fraud, harassment, or data breach |
+| Private handling | firms may resolve incidents internally |
+| Cross-border cases | jurisdiction complicates recording |
+| Rapid change | offence methods evolve quickly |
+| Technical uncertainty | victims may not know how the offence occurred |
+
+Recorded cybercrime usually captures only part of the problem.
+
+## Attacker-defender logic
+
+Cybercrime can be represented as an attacker-defender game.
+
+```{mermaid}
+flowchart LR
+    A[Defender chooses security level] --> B[Attacker observes or infers weakness]
+    B --> C[Attacker chooses target or method]
+    C --> D{Attack succeeds?}
+    D -->|Yes| E[Loss to victim]
+    D -->|No| F[Attack cost or failure]
+    E --> G[Defender updates security]
+    F --> G
+```
+
+The strategic point is adaptation. Defenders harden systems, attackers search for weaker targets or new methods.
+
+## Phishing as persuasion
+
+Phishing can be understood as manipulative communication.
+
+```{mermaid}
+flowchart TD
+    A[Attacker sends message] --> B[Victim interprets credibility]
+    B --> C{Trust message?}
+    C -->|Yes| D[Click, pay, or reveal credentials]
+    C -->|No| E[Ignore or report]
+    D --> F[Loss or account compromise]
+```
+
+The message works when it changes beliefs or triggers action before verification.
+
+## Policy trade-offs
+
+| Policy | Mechanism | Possible limitation |
+|---|---|---|
+| Security education | reduces human vulnerability | training fatigue |
+| Multi-factor authentication | reduces credential misuse | adoption and usability issues |
+| Platform moderation | disrupts abuse at scale | false positives and evasion |
+| Incident reporting rules | improves visibility | firms may under-disclose |
+| International cooperation | improves enforcement | slow and politically difficult |
+| Payment tracing | disrupts monetization | offenders adapt to alternatives |
+
+## Cybercrime and displacement
+
+Cyber offenders adapt quickly. Removing one method may shift activity to another.
+
+```{mermaid}
+flowchart LR
+    A[Security improvement] --> B[Original attack becomes harder]
+    B --> C[Attacker adapts]
+    C --> D[New target]
+    C --> E[New method]
+    C --> F[New platform]
+```
+
+This does not mean prevention is useless. It means policy should consider adaptation.
+
+## Common mistakes
+
+### 1. Treating cybercrime as purely technical
+
+Many cybercrimes exploit psychology, trust, institutions, and markets.
+
+### 2. Ignoring scale
+
+Low success rates can still be profitable at large scale.
+
+### 3. Treating victims as careless
+
+Cybercrime often involves sophisticated manipulation and structural vulnerability.
+
+### 4. Ignoring platforms
+
+Platforms shape opportunity, visibility, reporting, and enforcement.
+
+### 5. Ignoring cross-border enforcement
+
+Jurisdiction is often central to the problem.
+
+## Checklist for analysing cybercrime
+
+1. Is the digital system the target, tool, environment, or market?
+2. What is the offender trying to gain?
+3. Is the mechanism technical, psychological, economic, or mixed?
+4. What makes the target vulnerable?
+5. How does anonymity or attribution matter?
+6. Is automation or scale important?
+7. Which platform or intermediary is involved?
+8. How is the incident measured?
+9. What intervention changes the offender's expected payoff?
+10. How might offenders adapt?
+
+## Related pages
+
+- [Topics](index.qmd)
+- [Inspection games](../models/inspection-games.qmd)
+- [Reporting and trust](../models/reporting-trust.qmd)
+- [Network crime](../models/network-crime.qmd)
+- [Opportunity and routine activity](../mechanisms/opportunity-routine.qmd)
+- [Psychology and game theory](../../../psychology/overlaps/game-theory.qmd)

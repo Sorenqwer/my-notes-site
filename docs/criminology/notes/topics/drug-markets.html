@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../../styles.css">
@@ -130,9 +134,31 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#mechanisms-to-connect" id="toc-mechanisms-to-connect" class="nav-link active" data-scroll-target="#mechanisms-to-connect">Mechanisms to connect</a></li>
-  <li><a href="#models-to-try" id="toc-models-to-try" class="nav-link" data-scroll-target="#models-to-try">Models to try</a></li>
-  <li><a href="#notes-to-add-later" id="toc-notes-to-add-later" class="nav-link" data-scroll-target="#notes-to-add-later">Notes to add later</a></li>
+  <li><a href="#basic-mechanism-map" id="toc-basic-mechanism-map" class="nav-link active" data-scroll-target="#basic-mechanism-map">Basic mechanism map</a></li>
+  <li><a href="#core-mechanisms" id="toc-core-mechanisms" class="nav-link" data-scroll-target="#core-mechanisms">Core mechanisms</a>
+  <ul class="collapse">
+  <li><a href="#demand-persistence" id="toc-demand-persistence" class="nav-link" data-scroll-target="#demand-persistence">Demand persistence</a></li>
+  <li><a href="#risk-premium" id="toc-risk-premium" class="nav-link" data-scroll-target="#risk-premium">Risk premium</a></li>
+  <li><a href="#non-contractibility" id="toc-non-contractibility" class="nav-link" data-scroll-target="#non-contractibility">Non-contractibility</a></li>
+  <li><a href="#enforcement-displacement" id="toc-enforcement-displacement" class="nav-link" data-scroll-target="#enforcement-displacement">Enforcement displacement</a></li>
+  <li><a href="#public-health-harm" id="toc-public-health-harm" class="nav-link" data-scroll-target="#public-health-harm">Public health harm</a></li>
+  </ul></li>
+  <li><a href="#measurement-issues" id="toc-measurement-issues" class="nav-link" data-scroll-target="#measurement-issues">Measurement issues</a></li>
+  <li><a href="#illicit-market-logic" id="toc-illicit-market-logic" class="nav-link" data-scroll-target="#illicit-market-logic">Illicit market logic</a></li>
+  <li><a href="#violence-in-drug-markets" id="toc-violence-in-drug-markets" class="nav-link" data-scroll-target="#violence-in-drug-markets">Violence in drug markets</a></li>
+  <li><a href="#enforcement-and-adaptation" id="toc-enforcement-and-adaptation" class="nav-link" data-scroll-target="#enforcement-and-adaptation">Enforcement and adaptation</a></li>
+  <li><a href="#public-health-approach" id="toc-public-health-approach" class="nav-link" data-scroll-target="#public-health-approach">Public health approach</a></li>
+  <li><a href="#policy-trade-offs" id="toc-policy-trade-offs" class="nav-link" data-scroll-target="#policy-trade-offs">Policy trade-offs</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#treating-drug-markets-as-simple-supply-problems" id="toc-treating-drug-markets-as-simple-supply-problems" class="nav-link" data-scroll-target="#treating-drug-markets-as-simple-supply-problems">1. Treating drug markets as simple supply problems</a></li>
+  <li><a href="#using-arrests-as-direct-evidence-of-market-size" id="toc-using-arrests-as-direct-evidence-of-market-size" class="nav-link" data-scroll-target="#using-arrests-as-direct-evidence-of-market-size">2. Using arrests as direct evidence of market size</a></li>
+  <li><a href="#ignoring-public-health-outcomes" id="toc-ignoring-public-health-outcomes" class="nav-link" data-scroll-target="#ignoring-public-health-outcomes">3. Ignoring public health outcomes</a></li>
+  <li><a href="#ignoring-displacement" id="toc-ignoring-displacement" class="nav-link" data-scroll-target="#ignoring-displacement">4. Ignoring displacement</a></li>
+  <li><a href="#treating-all-substances-as-the-same" id="toc-treating-all-substances-as-the-same" class="nav-link" data-scroll-target="#treating-all-substances-as-the-same">5. Treating all substances as the same</a></li>
+  </ul></li>
+  <li><a href="#checklist-for-analysing-drug-markets" id="toc-checklist-for-analysing-drug-markets" class="nav-link" data-scroll-target="#checklist-for-analysing-drug-markets">Checklist for analysing drug markets</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -158,27 +184,298 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Drug markets combine illicit exchange, dependence, enforcement, violence, and substitution. Policy pressure often changes market structure rather than simply eliminating demand.</p>
-<section id="mechanisms-to-connect" class="level2">
-<h2 class="anchored" data-anchor-id="mechanisms-to-connect">Mechanisms to connect</h2>
-<ul>
-<li>demand persistence</li>
-<li>enforcement displacement</li>
-<li>violence under non-contractibility</li>
-<li>risk premia and price changes</li>
-</ul>
+<p>Drug markets involve the production, distribution, sale, purchase, and consumption of prohibited or regulated substances. They combine demand, dependence, illicit exchange, enforcement risk, violence, public health, stigma, and institutional response.</p>
+<p>Drug markets are useful for studying how policy changes market structure rather than simply turning behaviour on or off.</p>
+<section id="basic-mechanism-map" class="level2">
+<h2 class="anchored" data-anchor-id="basic-mechanism-map">Basic mechanism map</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Drug Markets] --&gt; B[Demand]
+    A --&gt; C[Supply and distribution]
+    A --&gt; D[Enforcement risk]
+    A --&gt; E[Violence and governance]
+    A --&gt; F[Health and harm]
+
+    B --&gt; B1[Dependence]
+    B --&gt; B2[Recreation]
+    B --&gt; B3[Social context]
+
+    C --&gt; C1[Dealers]
+    C --&gt; C2[Networks]
+    C --&gt; C3[Territory]
+
+    D --&gt; D1[Detection]
+    D --&gt; D2[Sanction]
+    D --&gt; D3[Risk premium]
+
+    E --&gt; E1[Dispute resolution]
+    E --&gt; E2[Retaliation]
+    E --&gt; E3[Market control]
+
+    F --&gt; F1[Overdose]
+    F --&gt; F2[Contamination]
+    F --&gt; F3[Treatment access]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The key feature of illicit drug markets is that demand and supply persist under legal risk, but the form of the market changes.</p>
 </section>
-<section id="models-to-try" class="level2">
-<h2 class="anchored" data-anchor-id="models-to-try">Models to try</h2>
-<ul>
-<li>illicit market equilibrium</li>
-<li>enforcement and displacement models</li>
-<li>network models of distribution</li>
-</ul>
+<section id="core-mechanisms" class="level2">
+<h2 class="anchored" data-anchor-id="core-mechanisms">Core mechanisms</h2>
+<section id="demand-persistence" class="level3">
+<h3 class="anchored" data-anchor-id="demand-persistence">Demand persistence</h3>
+<p>Demand may persist because of dependence, recreation, pain, social environment, or economic opportunity. Enforcement alone may not remove demand.</p>
 </section>
-<section id="notes-to-add-later" class="level2">
-<h2 class="anchored" data-anchor-id="notes-to-add-later">Notes to add later</h2>
-<p>Add empirical examples, key definitions, and one diagram linking mechanism → prediction → measurement.</p>
+<section id="risk-premium" class="level3">
+<h3 class="anchored" data-anchor-id="risk-premium">Risk premium</h3>
+<p>Illegality raises costs and risks. Sellers may require higher returns to compensate for punishment risk, seizure, violence, and uncertainty.</p>
+</section>
+<section id="non-contractibility" class="level3">
+<h3 class="anchored" data-anchor-id="non-contractibility">Non-contractibility</h3>
+<p>Illegal market participants cannot rely on courts. This increases the importance of reputation, violence, trust, and repeated exchange.</p>
+</section>
+<section id="enforcement-displacement" class="level3">
+<h3 class="anchored" data-anchor-id="enforcement-displacement">Enforcement displacement</h3>
+<p>Enforcement may move markets across places, platforms, methods, or substances.</p>
+</section>
+<section id="public-health-harm" class="level3">
+<h3 class="anchored" data-anchor-id="public-health-harm">Public health harm</h3>
+<p>Drug policy affects not only crime, but also overdose, contamination, treatment access, stigma, and willingness to seek help.</p>
+</section>
+</section>
+<section id="measurement-issues" class="level2">
+<h2 class="anchored" data-anchor-id="measurement-issues">Measurement issues</h2>
+<p>Drug markets are partly hidden and enforcement-dependent.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Issue</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Arrest data</td>
+<td>reflects enforcement intensity as well as behaviour</td>
+</tr>
+<tr class="even">
+<td>Seizure data</td>
+<td>reflects detection and policing strategy</td>
+</tr>
+<tr class="odd">
+<td>Self-report data</td>
+<td>may understate stigmatized behaviour</td>
+</tr>
+<tr class="even">
+<td>Health data</td>
+<td>captures harm but not full market activity</td>
+</tr>
+<tr class="odd">
+<td>Price and purity</td>
+<td>may indicate market pressure but are hard to measure</td>
+</tr>
+<tr class="even">
+<td>Open-air visibility</td>
+<td>visible markets are easier to police and count</td>
+</tr>
+</tbody>
+</table>
+<p>A rise in drug arrests may mean more drug activity, more enforcement, or changed policing priorities.</p>
+</section>
+<section id="illicit-market-logic" class="level2">
+<h2 class="anchored" data-anchor-id="illicit-market-logic">Illicit market logic</h2>
+<p>A simple market view begins with supply and demand, but illegality adds enforcement risk.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Demand] --&gt; C[Illicit exchange]
+    B[Supply] --&gt; C
+    D[Enforcement risk] --&gt; E[Risk premium]
+    E --&gt; C
+    C --&gt; F[Price, purity, availability]
+    F --&gt; G[Consumption and harm]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Enforcement can raise costs, but the effect depends on market adaptation and demand elasticity.</p>
+</section>
+<section id="violence-in-drug-markets" class="level2">
+<h2 class="anchored" data-anchor-id="violence-in-drug-markets">Violence in drug markets</h2>
+<p>Violence may arise because illegal market participants cannot use legal institutions to resolve disputes.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Illicit transaction] --&gt; B{Dispute or betrayal?}
+    B --&gt;|No| C[Exchange continues]
+    B --&gt;|Yes| D{Legal enforcement available?}
+    D --&gt;|No| E[Self-help enforcement]
+    E --&gt; F[Threats or violence]
+    D --&gt;|Yes| G[Formal dispute resolution]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Violence is therefore connected to governance, trust, and market structure.</p>
+</section>
+<section id="enforcement-and-adaptation" class="level2">
+<h2 class="anchored" data-anchor-id="enforcement-and-adaptation">Enforcement and adaptation</h2>
+<p>Drug markets often adapt to enforcement.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Enforcement pressure] --&gt; B[Higher risk]
+    B --&gt; C[Market adaptation]
+    C --&gt; D[New location]
+    C --&gt; E[New method]
+    C --&gt; F[New substance]
+    C --&gt; G[More hidden transactions]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This means policy analysis should look beyond immediate arrests.</p>
+</section>
+<section id="public-health-approach" class="level2">
+<h2 class="anchored" data-anchor-id="public-health-approach">Public health approach</h2>
+<p>A public health approach focuses on reducing harm, not only reducing supply.</p>
+<p>Possible mechanisms include:</p>
+<ul>
+<li>treatment access;</li>
+<li>harm reduction;</li>
+<li>overdose prevention;</li>
+<li>safer consumption information;</li>
+<li>reduced stigma;</li>
+<li>housing and support;</li>
+<li>substitution treatment;</li>
+<li>early intervention.</li>
+</ul>
+<p>This approach changes the outcome of interest from “number of arrests” to harm, survival, treatment, and stability.</p>
+</section>
+<section id="policy-trade-offs" class="level2">
+<h2 class="anchored" data-anchor-id="policy-trade-offs">Policy trade-offs</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Policy</th>
+<th>Intended mechanism</th>
+<th>Possible risk</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Supply enforcement</td>
+<td>raises cost and risk</td>
+<td>displacement, violence, hidden markets</td>
+</tr>
+<tr class="even">
+<td>Demand reduction</td>
+<td>lowers consumption</td>
+<td>slow and support-dependent</td>
+</tr>
+<tr class="odd">
+<td>Treatment</td>
+<td>reduces dependence-related demand</td>
+<td>access and retention challenges</td>
+</tr>
+<tr class="even">
+<td>Harm reduction</td>
+<td>reduces death and injury</td>
+<td>political resistance</td>
+</tr>
+<tr class="odd">
+<td>Decriminalization</td>
+<td>reduces justice-system harm</td>
+<td>depends on health infrastructure</td>
+</tr>
+<tr class="even">
+<td>Market regulation</td>
+<td>reduces illicit control</td>
+<td>design and compliance challenges</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="treating-drug-markets-as-simple-supply-problems" class="level3">
+<h3 class="anchored" data-anchor-id="treating-drug-markets-as-simple-supply-problems">1. Treating drug markets as simple supply problems</h3>
+<p>Demand, dependence, substitution, and social context matter.</p>
+</section>
+<section id="using-arrests-as-direct-evidence-of-market-size" class="level3">
+<h3 class="anchored" data-anchor-id="using-arrests-as-direct-evidence-of-market-size">2. Using arrests as direct evidence of market size</h3>
+<p>Arrests are strongly shaped by enforcement.</p>
+</section>
+<section id="ignoring-public-health-outcomes" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-public-health-outcomes">3. Ignoring public health outcomes</h3>
+<p>Policy may reduce visible dealing but increase overdose or contamination risk.</p>
+</section>
+<section id="ignoring-displacement" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-displacement">4. Ignoring displacement</h3>
+<p>Markets can move across space, method, or substance.</p>
+</section>
+<section id="treating-all-substances-as-the-same" class="level3">
+<h3 class="anchored" data-anchor-id="treating-all-substances-as-the-same">5. Treating all substances as the same</h3>
+<p>Different drugs have different markets, harms, users, and enforcement dynamics.</p>
+</section>
+</section>
+<section id="checklist-for-analysing-drug-markets" class="level2">
+<h2 class="anchored" data-anchor-id="checklist-for-analysing-drug-markets">Checklist for analysing drug markets</h2>
+<ol type="1">
+<li>Which substance or market is being studied?</li>
+<li>What drives demand?</li>
+<li>How is supply organized?</li>
+<li>How does enforcement affect risk and price?</li>
+<li>What role does violence play?</li>
+<li>What data source is being used?</li>
+<li>Does the measure reflect behaviour or enforcement?</li>
+<li>Is displacement likely?</li>
+<li>What public health outcomes matter?</li>
+<li>What policy trade-off is involved?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../../../criminology/notes/topics/index.html">Topics</a></li>
+<li><a href="../../../criminology/notes/topics/organized-crime.html">Organized crime</a></li>
+<li><a href="../../../criminology/notes/models/network-crime.html">Network crime</a></li>
+<li><a href="../../../criminology/notes/models/inspection-games.html">Inspection games</a></li>
+<li><a href="../../../criminology/notes/mechanisms/social-interactions.html">Social interactions</a></li>
+<li><a href="../../../criminology/notes/institutions/index.html">Institutions</a></li>
+<li><a href="../../../criminology/toolkit/methods-map.html">Methods Map</a></li>
+</ul>
 
 
 </section>

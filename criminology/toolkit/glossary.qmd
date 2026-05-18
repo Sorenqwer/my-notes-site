@@ -1,25 +1,261 @@
 ---
 title: "Glossary"
 toc: true
+page-layout: full
 ---
 
-**Deterrence**  
-Sanctions reduce offending by changing expected costs.
+This glossary defines recurring terms used across the criminology notes. The definitions are intentionally compact. They are meant to support reading, not replace full theory pages.
 
-**Incapacitation**  
-Crime reduction by physically preventing offending, usually through custody or restriction.
+## Core concepts
 
-**Rehabilitation**  
-Interventions aimed at changing skills, constraints, preferences, or circumstances.
+### Crime
 
-**Legitimacy**  
-The perceived rightfulness of an authority or institution.
+Behaviour prohibited by criminal law and subject to formal sanction.
 
-**Routine activity theory**  
-Crime depends on the convergence of motivated offenders, suitable targets, and lack of capable guardianship.
+### Deviance
 
-**Labeling**  
-Official or social reactions to deviance can alter identity, opportunity, and future behaviour.
+Behaviour that violates social norms. Deviance is not always criminal, and crime is not always treated as equally deviant.
 
-**Displacement**  
-A change in crime location, timing, target, method, or type after an intervention.
+### Harm
+
+Damage or injury to persons, groups, communities, institutions, or social relations. Some harmful acts are not criminalized.
+
+### Criminalization
+
+The process through which behaviour becomes defined and treated as criminal.
+
+### Social control
+
+Formal or informal processes that regulate behaviour. Formal social control includes police, courts, and law. Informal social control includes family, peers, communities, and norms.
+
+### Victimization
+
+The experience of being harmed by crime or deviant behaviour.
+
+### Offending
+
+Engaging in behaviour defined as criminal or rule-breaking.
+
+### Desistance
+
+The process through which a person stops offending over time.
+
+## Measurement terms
+
+### True crime
+
+The actual amount of crime that occurs, whether or not it is reported or recorded.
+
+### Recorded crime
+
+Crime that appears in official records.
+
+### Hidden crime
+
+Crime that occurs but does not appear in official statistics.
+
+### Reporting
+
+The process by which a victim, witness, or institution communicates an event to authorities.
+
+### Detection
+
+The process by which authorities discover an offence.
+
+### Recording
+
+The institutional classification and entry of an event into official data.
+
+### Prevalence
+
+The proportion of a population experiencing or engaging in an event during a period.
+
+### Incidence
+
+The number of events occurring during a period.
+
+### Rate
+
+A count normalized by population, exposure, time, or opportunity.
+
+### Clearance
+
+A case outcome indicating that an offence has been resolved or attributed according to official criteria. Clearance does not always mean conviction.
+
+## Mechanism terms
+
+### Deterrence
+
+The idea that expected punishment can reduce offending by increasing expected costs.
+
+### Certainty
+
+The perceived or actual probability of punishment.
+
+### Severity
+
+The harshness of punishment if imposed.
+
+### Celerity
+
+The speed with which punishment follows the offence.
+
+### Incapacitation
+
+Crime reduction by physically preventing a person from offending, often through custody or restriction.
+
+### Rehabilitation
+
+Intervention aimed at changing skills, constraints, behaviour, or circumstances associated with offending.
+
+### Routine activity
+
+The idea that crime occurs when a motivated offender, suitable target, and lack of capable guardianship converge.
+
+### Guardianship
+
+Presence of people, institutions, technologies, or conditions that reduce opportunity for crime.
+
+### Opportunity
+
+A situational condition that makes offending easier, more attractive, or less risky.
+
+### Self-control
+
+Capacity to regulate impulses, delay gratification, and consider longer-term consequences.
+
+### Present bias
+
+Overweighting immediate rewards or costs relative to future consequences.
+
+### Peer effect
+
+Influence of peers on behaviour through learning, pressure, imitation, approval, or opportunity.
+
+### Social learning
+
+Learning behaviour, motives, techniques, or justifications through interaction with others.
+
+### Labeling
+
+The process by which official or social reaction changes identity, status, opportunity, or future behaviour.
+
+### Stigma
+
+Negative social marking that can reduce opportunity, trust, and social standing.
+
+### Legitimacy
+
+The perceived rightfulness of an authority, law, or institution.
+
+### Procedural justice
+
+Fairness of decision-making processes, including voice, neutrality, respect, and trustworthy motives.
+
+### Compliance
+
+Behaviour that follows rules, laws, or institutional expectations.
+
+## Institution terms
+
+### Police discretion
+
+The room police have to decide whether and how to intervene, record, warn, arrest, or escalate.
+
+### Prosecution
+
+The legal process of bringing charges against a defendant.
+
+### Plea bargaining
+
+Negotiation in which a defendant may plead guilty in exchange for concessions, reduced charges, or sentencing expectations.
+
+### Conviction
+
+A formal legal finding of guilt.
+
+### Sentencing
+
+The formal assignment of punishment or legal consequence after conviction.
+
+### Probation
+
+Community-based supervision, usually imposed instead of or after custody.
+
+### Parole
+
+Conditional release from custody under supervision.
+
+### Reentry
+
+The process of returning to community life after incarceration.
+
+### Recidivism
+
+Reoffending after prior contact with the criminal justice system.
+
+## Model terms
+
+### Actor
+
+A person, institution, group, or organization that makes choices in a model.
+
+### Choice
+
+An action available to an actor.
+
+### Information
+
+What an actor knows or observes when choosing.
+
+### Payoff
+
+What an actor gains, loses, values, or avoids.
+
+### Strategy
+
+A complete plan of action, especially in strategic settings.
+
+### Equilibrium
+
+A stable pattern of behaviour in which actors have no relevant incentive to deviate, given the model.
+
+### Inspection game
+
+A model in which one actor may violate a rule and another actor may inspect or monitor.
+
+### Reporting game
+
+A model in which a victim or witness decides whether to report, often depending on trust, cost, and expected response.
+
+### Network model
+
+A model where relationships among actors affect behaviour, diffusion, opportunity, or enforcement.
+
+### Displacement
+
+A change in crime location, time, target, method, or type after an intervention.
+
+### Diffusion of benefits
+
+A reduction in crime beyond the directly targeted area or group.
+
+## Common contrasts
+
+| Term 1 | Term 2 | Difference |
+|---|---|---|
+| Crime | Deviance | Legal violation versus norm violation |
+| True crime | Recorded crime | Actual events versus official records |
+| Incidence | Prevalence | Number of events versus share affected |
+| Deterrence | Incapacitation | Discouraging behaviour versus physically preventing it |
+| Rehabilitation | Punishment | Changing behaviour versus imposing sanction |
+| Legitimacy | Fear | Voluntary acceptance versus coercive compliance |
+| Description | Explanation | Pattern identification versus mechanism |
+
+## Related pages
+
+- [Criminology Toolkit](index.qmd)
+- [Methods Map](methods-map.qmd)
+- [Modeling Checklist](modeling-checklist.qmd)
+- [Criminology Foundations](../notes/foundations/index.qmd)
+- [Mechanisms](../notes/mechanisms/index.qmd)

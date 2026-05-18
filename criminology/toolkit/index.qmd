@@ -1,16 +1,46 @@
 ---
-title: "Toolkit"
+title: "Criminology Toolkit"
 toc: true
+page-layout: full
 ---
 
-This toolkit collects reusable concepts for reading, modeling, and writing criminology notes.
+The toolkit collects reusable resources for criminology pages: definitions, methods, modelling steps, and checks for moving from a topic to a clear explanation.
+
+It is meant to support the rest of the criminology section rather than replace it.
+
+## Toolkit map
+
+```{mermaid}
+flowchart TD
+    A[Criminology Toolkit] --> B[Glossary]
+    A --> C[Methods Map]
+    A --> D[Modeling Checklist]
+
+    B --> B1[Core terms]
+    B --> B2[Measurement concepts]
+    B --> B3[Theory labels]
+
+    C --> C1[Descriptive questions]
+    C --> C2[Causal questions]
+    C --> C3[Mechanism questions]
+    C --> C4[Prediction questions]
+
+    D --> D1[Actors]
+    D --> D2[Choices]
+    D --> D3[Information]
+    D --> D4[Payoffs]
+    D --> D5[Timing]
+```
+
+## Toolkit pages
 
 ::: {.grid .gap-3}
 
 ::: {.g-col-12 .g-col-md-4}
 ::: {.card}
 ### Glossary
-Core terms used across criminology pages.
+
+Short definitions of core criminology terms, measurement concepts, institutional vocabulary, and modelling language.
 
 [Open →](glossary.qmd)
 :::
@@ -18,8 +48,9 @@ Core terms used across criminology pages.
 
 ::: {.g-col-12 .g-col-md-4}
 ::: {.card}
-### Methods map
-Match research questions with empirical strategies.
+### Methods Map
+
+A guide for matching research questions with suitable empirical or analytical methods.
 
 [Open →](methods-map.qmd)
 :::
@@ -27,11 +58,54 @@ Match research questions with empirical strategies.
 
 ::: {.g-col-12 .g-col-md-4}
 ::: {.card}
-### Modeling checklist
-Turn a crime problem into a model.
+### Modeling Checklist
+
+A step-by-step checklist for turning a criminological problem into a simple model.
 
 [Open →](modeling-checklist.qmd)
 :::
 :::
 
 :::
+
+## How to use the toolkit
+
+Use the toolkit when a page feels unclear.
+
+If the problem is vocabulary, use the [Glossary](glossary.qmd).
+
+If the problem is research design, use the [Methods Map](methods-map.qmd).
+
+If the problem is model structure, use the [Modeling Checklist](modeling-checklist.qmd).
+
+```{mermaid}
+flowchart LR
+    A[Unclear page] --> B{What is unclear?}
+    B -->|Terms| C[Glossary]
+    B -->|Evidence or design| D[Methods Map]
+    B -->|Actors and incentives| E[Modeling Checklist]
+```
+
+## From topic to analysis
+
+A criminology page should usually move through this chain:
+
+```{mermaid}
+flowchart TD
+    A[Topic] --> B[Definition]
+    B --> C[Mechanism]
+    C --> D[Evidence or measurement]
+    D --> E[Institutional context]
+    E --> F[Model or framework]
+    F --> G[Policy implication]
+```
+
+The toolkit supports this chain by making each step more explicit.
+
+## Related pages
+
+- [Criminology Notes](../notes/index.qmd)
+- [Foundations](../notes/foundations/index.qmd)
+- [Mechanisms](../notes/mechanisms/index.qmd)
+- [Models](../notes/models/index.qmd)
+- [Topics](../notes/topics/index.qmd)

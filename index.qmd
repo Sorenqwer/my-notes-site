@@ -1,8 +1,6 @@
 ---
 title: "Margins of Rationality"
-body-classes: home
 page-layout: full
-title-block-banner: false
 toc: false
 
 
@@ -14,5 +12,155 @@ toc: false
 
 ---
 
-[Notes →](notes/index.qmd) · [Foundations →](foundations/index.qmd) · [PDFs →](pdfs/index.qmd) · [Criminology →](criminology/index.qmd) · [Psychology →](psychology/index.qmd)
+## Main map
 
+```{mermaid}
+flowchart TD
+    A[Margins of Rationality] --> B[Notes]
+    A --> C[Foundations]
+    A --> D[Criminology]
+    A --> E[Psychology]
+    A --> F[PDFs]
+
+    B --> B1[Game Theory]
+    B --> B2[Game Types]
+    B --> B3[Equilibrium Concepts]
+    B --> B4[Metrics]
+
+    C --> C1[Optimization]
+    C --> C2[Probability]
+    C --> C3[Dynamic Reasoning]
+    C --> C4[Fixed Points]
+
+    D --> D1[Mechanisms]
+    D --> D2[Institutions]
+    D --> D3[Models]
+    D --> D4[Topics]
+
+    E --> E1[Cognition]
+    E --> E2[Emotion and Motivation]
+    E --> E3[Mental Health]
+    E --> E4[Overlaps]
+
+    F --> F1[Downloadable Notes]
+```
+
+## Sections
+
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Notes
+
+Game theory, game types, equilibrium concepts, metrics, and strategic reasoning.
+
+[Open Notes →](notes/index.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Foundations
+
+Optimization, probability, dynamic reasoning, fixed points, convexity, and linear algebra.
+
+[Open Foundations →](foundations/index.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Criminology
+
+Crime, institutions, mechanisms, models, topics, and research tools.
+
+[Open Criminology →](criminology/index.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Psychology
+
+Cognition, emotion, motivation, mental health, therapy tools, and overlaps with strategic reasoning.
+
+[Open Psychology →](psychology/index.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### PDFs
+
+Downloadable notes, handouts, and compiled materials.
+
+[Open PDFs →](pdfs/index.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### About
+
+What this site is for and how the sections fit together.
+
+[Open About →](about.qmd)
+:::
+:::
+
+:::
+
+## Reading paths
+
+### If you want game theory
+
+1. [Game Theory Notes](notes/game-theory.qmd)
+2. [Game Types](notes/game-types/index.qmd)
+3. [Equilibrium Concepts](notes/equilibriums/index.qmd)
+4. [Optimization](foundations/optimization.qmd)
+5. [Probability](foundations/probability.qmd)
+6. [Dynamic Reasoning](foundations/dynamic-reasoning.qmd)
+
+### If you want criminology
+
+1. [Criminology Notes](criminology/notes/index.qmd)
+2. [Criminology Foundations](criminology/notes/foundations/index.qmd)
+3. [Mechanisms](criminology/notes/mechanisms/index.qmd)
+4. [Institutions](criminology/notes/institutions/index.qmd)
+5. [Models](criminology/notes/models/index.qmd)
+6. [Topics](criminology/notes/topics/index.qmd)
+
+### If you want the mathematical tools
+
+1. [Optimization](foundations/optimization.qmd)
+2. [Probability](foundations/probability.qmd)
+3. [Dynamic Reasoning](foundations/dynamic-reasoning.qmd)
+4. [Fixed Points](foundations/fixed-points.qmd)
+5. [Convexity](foundations/convexity.qmd)
+6. [Linear Algebra](foundations/linear-algebra.qmd)
+
+## Core theme
+
+Many social situations have the same underlying structure:
+
+```{mermaid}
+flowchart LR
+    A[Uncertainty] --> B[Beliefs]
+    B --> C[Choices]
+    C --> D[Strategic interaction]
+    D --> E[Institutions]
+    E --> F[Outcomes]
+    F --> G[Learning or feedback]
+    G --> B
+```
+
+The site studies this loop from different angles: formal models, criminological mechanisms, psychological processes, and institutional settings.
+
+## Current focus
+
+The site is currently being expanded around three priorities:
+
+1. building useful anchor pages for game theory and foundations;
+2. turning criminology placeholders into mechanism-based notes;
+3. adding diagrams that show logical structure and concept connections.

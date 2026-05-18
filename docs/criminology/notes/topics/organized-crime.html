@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../../styles.css">
@@ -130,9 +134,30 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#mechanisms-to-connect" id="toc-mechanisms-to-connect" class="nav-link active" data-scroll-target="#mechanisms-to-connect">Mechanisms to connect</a></li>
-  <li><a href="#models-to-try" id="toc-models-to-try" class="nav-link" data-scroll-target="#models-to-try">Models to try</a></li>
-  <li><a href="#notes-to-add-later" id="toc-notes-to-add-later" class="nav-link" data-scroll-target="#notes-to-add-later">Notes to add later</a></li>
+  <li><a href="#basic-mechanism-map" id="toc-basic-mechanism-map" class="nav-link active" data-scroll-target="#basic-mechanism-map">Basic mechanism map</a></li>
+  <li><a href="#core-mechanisms" id="toc-core-mechanisms" class="nav-link" data-scroll-target="#core-mechanisms">Core mechanisms</a>
+  <ul class="collapse">
+  <li><a href="#illegal-governance" id="toc-illegal-governance" class="nav-link" data-scroll-target="#illegal-governance">Illegal governance</a></li>
+  <li><a href="#reputation" id="toc-reputation" class="nav-link" data-scroll-target="#reputation">Reputation</a></li>
+  <li><a href="#violence" id="toc-violence" class="nav-link" data-scroll-target="#violence">Violence</a></li>
+  <li><a href="#corruption" id="toc-corruption" class="nav-link" data-scroll-target="#corruption">Corruption</a></li>
+  <li><a href="#network-resilience" id="toc-network-resilience" class="nav-link" data-scroll-target="#network-resilience">Network resilience</a></li>
+  </ul></li>
+  <li><a href="#measurement-issues" id="toc-measurement-issues" class="nav-link" data-scroll-target="#measurement-issues">Measurement issues</a></li>
+  <li><a href="#repeated-exchange-model" id="toc-repeated-exchange-model" class="nav-link" data-scroll-target="#repeated-exchange-model">Repeated exchange model</a></li>
+  <li><a href="#corruption-as-protection" id="toc-corruption-as-protection" class="nav-link" data-scroll-target="#corruption-as-protection">Corruption as protection</a></li>
+  <li><a href="#policy-trade-offs" id="toc-policy-trade-offs" class="nav-link" data-scroll-target="#policy-trade-offs">Policy trade-offs</a></li>
+  <li><a href="#organized-crime-and-violence" id="toc-organized-crime-and-violence" class="nav-link" data-scroll-target="#organized-crime-and-violence">Organized crime and violence</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#treating-organized-crime-as-a-fixed-hierarchy" id="toc-treating-organized-crime-as-a-fixed-hierarchy" class="nav-link" data-scroll-target="#treating-organized-crime-as-a-fixed-hierarchy">1. Treating organized crime as a fixed hierarchy</a></li>
+  <li><a href="#ignoring-governance" id="toc-ignoring-governance" class="nav-link" data-scroll-target="#ignoring-governance">2. Ignoring governance</a></li>
+  <li><a href="#treating-violence-as-random" id="toc-treating-violence-as-random" class="nav-link" data-scroll-target="#treating-violence-as-random">3. Treating violence as random</a></li>
+  <li><a href="#ignoring-corruption" id="toc-ignoring-corruption" class="nav-link" data-scroll-target="#ignoring-corruption">4. Ignoring corruption</a></li>
+  <li><a href="#assuming-removal-of-leaders-ends-the-organization" id="toc-assuming-removal-of-leaders-ends-the-organization" class="nav-link" data-scroll-target="#assuming-removal-of-leaders-ends-the-organization">5. Assuming removal of leaders ends the organization</a></li>
+  </ul></li>
+  <li><a href="#checklist-for-analysing-organized-crime" id="toc-checklist-for-analysing-organized-crime" class="nav-link" data-scroll-target="#checklist-for-analysing-organized-crime">Checklist for analysing organized crime</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -158,27 +183,274 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Organized crime can be treated as illicit coordination under weak legal enforceability: groups govern exchange, maintain discipline, and adapt to enforcement.</p>
-<section id="mechanisms-to-connect" class="level2">
-<h2 class="anchored" data-anchor-id="mechanisms-to-connect">Mechanisms to connect</h2>
-<ul>
-<li>reputation and internal discipline</li>
-<li>violence as governance</li>
-<li>corruption and protection</li>
-<li>network resilience</li>
-</ul>
+<p>Organized crime involves coordinated illegal activity that is structured, repeated, and often protected by reputation, violence, corruption, secrecy, or governance. It may involve illicit markets, extortion, trafficking, fraud, protection, smuggling, cybercrime, or control over territory and networks.</p>
+<p>The key feature is organization under illegality. Since illegal agreements cannot rely on ordinary courts, organized crime often develops alternative enforcement mechanisms.</p>
+<section id="basic-mechanism-map" class="level2">
+<h2 class="anchored" data-anchor-id="basic-mechanism-map">Basic mechanism map</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Organized Crime] --&gt; B[Illicit coordination]
+    A --&gt; C[Governance]
+    A --&gt; D[Violence or threat]
+    A --&gt; E[Corruption]
+    A --&gt; F[Market structure]
+
+    B --&gt; B1[Roles]
+    B --&gt; B2[Networks]
+    B --&gt; B3[Repeated exchange]
+
+    C --&gt; C1[Dispute resolution]
+    C --&gt; C2[Rule enforcement]
+
+    D --&gt; D1[Reputation]
+    D --&gt; D2[Intimidation]
+
+    E --&gt; E1[Protection]
+    E --&gt; E2[Information leakage]
+
+    F --&gt; F1[Demand]
+    F --&gt; F2[Supply chains]
+    F --&gt; F3[Risk premium]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Organized crime is not just “crime by groups.” It is crime where coordination, enforcement, and continuity matter.</p>
 </section>
-<section id="models-to-try" class="level2">
-<h2 class="anchored" data-anchor-id="models-to-try">Models to try</h2>
-<ul>
-<li>network games</li>
-<li>repeated-game enforcement</li>
-<li>principal-agent problems in illicit organizations</li>
-</ul>
+<section id="core-mechanisms" class="level2">
+<h2 class="anchored" data-anchor-id="core-mechanisms">Core mechanisms</h2>
+<section id="illegal-governance" class="level3">
+<h3 class="anchored" data-anchor-id="illegal-governance">Illegal governance</h3>
+<p>Organized groups may provide enforcement, protection, dispute resolution, and contract discipline in illegal markets.</p>
 </section>
-<section id="notes-to-add-later" class="level2">
-<h2 class="anchored" data-anchor-id="notes-to-add-later">Notes to add later</h2>
-<p>Add empirical examples, key definitions, and one diagram linking mechanism → prediction → measurement.</p>
+<section id="reputation" class="level3">
+<h3 class="anchored" data-anchor-id="reputation">Reputation</h3>
+<p>Reputation can substitute for legal enforcement. A group may maintain a reputation for violence or reliability to control behaviour.</p>
+</section>
+<section id="violence" class="level3">
+<h3 class="anchored" data-anchor-id="violence">Violence</h3>
+<p>Violence can be used to punish betrayal, deter rivals, discipline members, intimidate witnesses, or regulate markets.</p>
+</section>
+<section id="corruption" class="level3">
+<h3 class="anchored" data-anchor-id="corruption">Corruption</h3>
+<p>Corruption reduces enforcement risk, provides information, protects markets, or allows illegal activity to operate under legal cover.</p>
+</section>
+<section id="network-resilience" class="level3">
+<h3 class="anchored" data-anchor-id="network-resilience">Network resilience</h3>
+<p>Organized crime may survive enforcement because roles and ties can shift. Removing one actor may not destroy the structure.</p>
+</section>
+</section>
+<section id="measurement-issues" class="level2">
+<h2 class="anchored" data-anchor-id="measurement-issues">Measurement issues</h2>
+<p>Organized crime is difficult to observe.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Issue</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hidden structure</td>
+<td>membership and hierarchy are often unknown</td>
+</tr>
+<tr class="even">
+<td>Witness intimidation</td>
+<td>reporting and cooperation may be suppressed</td>
+</tr>
+<tr class="odd">
+<td>Corruption</td>
+<td>institutional data may be compromised</td>
+</tr>
+<tr class="even">
+<td>Market secrecy</td>
+<td>transactions are hidden</td>
+</tr>
+<tr class="odd">
+<td>Network adaptation</td>
+<td>groups reorganize after enforcement</td>
+</tr>
+<tr class="even">
+<td>Legal ambiguity</td>
+<td>some activities mix legal and illegal businesses</td>
+</tr>
+</tbody>
+</table>
+<p>Data often come from investigations, prosecutions, intelligence, interviews, seizures, or network reconstruction. Each source is partial.</p>
+</section>
+<section id="repeated-exchange-model" class="level2">
+<h2 class="anchored" data-anchor-id="repeated-exchange-model">Repeated exchange model</h2>
+<p>Illegal markets face a problem: participants cannot use ordinary legal contract enforcement.</p>
+<p>Repeated interaction can partly solve this.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Illegal exchange] --&gt; B{Can parties trust each other?}
+    B --&gt;|No| C[High betrayal risk]
+    B --&gt;|Yes| D[Repeated cooperation]
+    D --&gt; E[Reputation]
+    E --&gt; F[Future business]
+    C --&gt; G[Violence or enforcement]
+    G --&gt; E
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The same mechanism that supports cooperation within the group can also produce violence against outsiders or defectors.</p>
+</section>
+<section id="corruption-as-protection" class="level2">
+<h2 class="anchored" data-anchor-id="corruption-as-protection">Corruption as protection</h2>
+<p>Corruption can be modelled as an exchange between criminal actors and officials.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Criminal group] --&gt; B[Payment or favour]
+    B --&gt; C[Corrupt official]
+    C --&gt; D[Protection, information, or non-enforcement]
+    D --&gt; E[Lower expected punishment]
+    E --&gt; F[Illicit market stability]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Corruption changes expected costs and can make illegal markets more durable.</p>
+</section>
+<section id="policy-trade-offs" class="level2">
+<h2 class="anchored" data-anchor-id="policy-trade-offs">Policy trade-offs</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Policy</th>
+<th>Mechanism</th>
+<th>Possible limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Arrest leaders</td>
+<td>disrupts hierarchy</td>
+<td>may create succession violence</td>
+</tr>
+<tr class="even">
+<td>Asset seizure</td>
+<td>reduces resources</td>
+<td>groups may hide assets</td>
+</tr>
+<tr class="odd">
+<td>Anti-corruption enforcement</td>
+<td>raises protection cost</td>
+<td>politically difficult</td>
+</tr>
+<tr class="even">
+<td>Witness protection</td>
+<td>increases cooperation</td>
+<td>expensive and trust-dependent</td>
+</tr>
+<tr class="odd">
+<td>Market disruption</td>
+<td>raises transaction cost</td>
+<td>may displace activity</td>
+</tr>
+<tr class="even">
+<td>Network targeting</td>
+<td>attacks central nodes</td>
+<td>network may adapt</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="organized-crime-and-violence" class="level2">
+<h2 class="anchored" data-anchor-id="organized-crime-and-violence">Organized crime and violence</h2>
+<p>Violence may increase when markets are unstable. Strong groups may reduce visible violence by governing markets, while fragmented competition may increase conflict.</p>
+<p>This creates a difficult policy issue:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Enforcement pressure] --&gt; B[Market disruption]
+    B --&gt; C[Power vacuum]
+    C --&gt; D[Rival competition]
+    D --&gt; E[Violence risk]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This does not mean enforcement is bad. It means enforcement can have transitional effects that should be anticipated.</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="treating-organized-crime-as-a-fixed-hierarchy" class="level3">
+<h3 class="anchored" data-anchor-id="treating-organized-crime-as-a-fixed-hierarchy">1. Treating organized crime as a fixed hierarchy</h3>
+<p>Some groups are hierarchical, but others are networked, flexible, or project-based.</p>
+</section>
+<section id="ignoring-governance" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-governance">2. Ignoring governance</h3>
+<p>Organized crime may provide illegal order, not only disorder.</p>
+</section>
+<section id="treating-violence-as-random" class="level3">
+<h3 class="anchored" data-anchor-id="treating-violence-as-random">3. Treating violence as random</h3>
+<p>Violence may serve strategic functions such as discipline, reputation, and market control.</p>
+</section>
+<section id="ignoring-corruption" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-corruption">4. Ignoring corruption</h3>
+<p>Corruption can be central to durability.</p>
+</section>
+<section id="assuming-removal-of-leaders-ends-the-organization" class="level3">
+<h3 class="anchored" data-anchor-id="assuming-removal-of-leaders-ends-the-organization">5. Assuming removal of leaders ends the organization</h3>
+<p>Networks may adapt after leadership removal.</p>
+</section>
+</section>
+<section id="checklist-for-analysing-organized-crime" class="level2">
+<h2 class="anchored" data-anchor-id="checklist-for-analysing-organized-crime">Checklist for analysing organized crime</h2>
+<ol type="1">
+<li>What activity or market is being organized?</li>
+<li>What roles exist?</li>
+<li>How are agreements enforced?</li>
+<li>What role does violence play?</li>
+<li>What role does corruption play?</li>
+<li>Is the structure hierarchical or networked?</li>
+<li>How does the group manage betrayal?</li>
+<li>How is the activity measured?</li>
+<li>What happens if enforcement disrupts the group?</li>
+<li>What unintended effects may follow?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../../../criminology/notes/topics/index.html">Topics</a></li>
+<li><a href="../../../criminology/notes/models/network-crime.html">Network crime</a></li>
+<li><a href="../../../criminology/notes/models/co-offending-games.html">Co-offending games</a></li>
+<li><a href="../../../criminology/notes/models/inspection-games.html">Inspection games</a></li>
+<li><a href="../../../criminology/notes/mechanisms/social-interactions.html">Social interactions</a></li>
+<li><a href="../../../criminology/notes/institutions/index.html">Institutions</a></li>
+</ul>
 
 
 </section>

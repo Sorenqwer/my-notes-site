@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Dynamic reasoning – Margins of Rationality</title>
+<title>Dynamic Reasoning – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -163,12 +163,32 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#backward-induction-extensive-form-games" id="toc-backward-induction-extensive-form-games" class="nav-link active" data-scroll-target="#backward-induction-extensive-form-games">Backward induction (extensive-form games)</a></li>
-  <li><a href="#solving-a-dynamic-game-by-backward-induction" id="toc-solving-a-dynamic-game-by-backward-induction" class="nav-link" data-scroll-target="#solving-a-dynamic-game-by-backward-induction">Solving a dynamic game by backward induction</a></li>
-  <li><a href="#why-timing-matters" id="toc-why-timing-matters" class="nav-link" data-scroll-target="#why-timing-matters">Why timing matters</a></li>
-  <li><a href="#a-tiny-game-tree-diagram" id="toc-a-tiny-game-tree-diagram" class="nav-link" data-scroll-target="#a-tiny-game-tree-diagram">A tiny game tree (diagram)</a></li>
-  <li><a href="#one-step-backward-induction" id="toc-one-step-backward-induction" class="nav-link" data-scroll-target="#one-step-backward-induction">One-step backward induction</a></li>
-  <li><a href="#bellman-idea-optional-for-dynamic-optimization" id="toc-bellman-idea-optional-for-dynamic-optimization" class="nav-link" data-scroll-target="#bellman-idea-optional-for-dynamic-optimization">Bellman idea (optional, for dynamic optimization)</a></li>
+  <li><a href="#why-dynamic-reasoning-matters" id="toc-why-dynamic-reasoning-matters" class="nav-link active" data-scroll-target="#why-dynamic-reasoning-matters">Why dynamic reasoning matters</a></li>
+  <li><a href="#histories-and-continuation" id="toc-histories-and-continuation" class="nav-link" data-scroll-target="#histories-and-continuation">Histories and continuation</a></li>
+  <li><a href="#strategies-in-dynamic-games" id="toc-strategies-in-dynamic-games" class="nav-link" data-scroll-target="#strategies-in-dynamic-games">Strategies in dynamic games</a></li>
+  <li><a href="#the-logic-of-backward-induction" id="toc-the-logic-of-backward-induction" class="nav-link" data-scroll-target="#the-logic-of-backward-induction">The logic of backward induction</a></li>
+  <li><a href="#a-small-example" id="toc-a-small-example" class="nav-link" data-scroll-target="#a-small-example">A small example</a></li>
+  <li><a href="#credibility" id="toc-credibility" class="nav-link" data-scroll-target="#credibility">Credibility</a></li>
+  <li><a href="#sequential-rationality" id="toc-sequential-rationality" class="nav-link" data-scroll-target="#sequential-rationality">Sequential rationality</a></li>
+  <li><a href="#subgames" id="toc-subgames" class="nav-link" data-scroll-target="#subgames">Subgames</a></li>
+  <li><a href="#backward-induction-and-subgame-perfection" id="toc-backward-induction-and-subgame-perfection" class="nav-link" data-scroll-target="#backward-induction-and-subgame-perfection">Backward induction and subgame perfection</a></li>
+  <li><a href="#perfect-information-and-imperfect-information" id="toc-perfect-information-and-imperfect-information" class="nav-link" data-scroll-target="#perfect-information-and-imperfect-information">Perfect information and imperfect information</a></li>
+  <li><a href="#continuation-payoffs" id="toc-continuation-payoffs" class="nav-link" data-scroll-target="#continuation-payoffs">Continuation payoffs</a></li>
+  <li><a href="#dynamic-incentives" id="toc-dynamic-incentives" class="nav-link" data-scroll-target="#dynamic-incentives">Dynamic incentives</a></li>
+  <li><a href="#repeated-games" id="toc-repeated-games" class="nav-link" data-scroll-target="#repeated-games">Repeated games</a></li>
+  <li><a href="#commitment" id="toc-commitment" class="nav-link" data-scroll-target="#commitment">Commitment</a></li>
+  <li><a href="#dynamic-reasoning-in-bayesian-settings" id="toc-dynamic-reasoning-in-bayesian-settings" class="nav-link" data-scroll-target="#dynamic-reasoning-in-bayesian-settings">Dynamic reasoning in Bayesian settings</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#solving-from-the-beginning" id="toc-solving-from-the-beginning" class="nav-link" data-scroll-target="#solving-from-the-beginning">1. Solving from the beginning</a></li>
+  <li><a href="#confusing-actions-and-strategies" id="toc-confusing-actions-and-strategies" class="nav-link" data-scroll-target="#confusing-actions-and-strategies">2. Confusing actions and strategies</a></li>
+  <li><a href="#ignoring-off-path-behaviour" id="toc-ignoring-off-path-behaviour" class="nav-link" data-scroll-target="#ignoring-off-path-behaviour">3. Ignoring off-path behaviour</a></li>
+  <li><a href="#treating-threats-as-automatically-credible" id="toc-treating-threats-as-automatically-credible" class="nav-link" data-scroll-target="#treating-threats-as-automatically-credible">4. Treating threats as automatically credible</a></li>
+  <li><a href="#forgetting-beliefs" id="toc-forgetting-beliefs" class="nav-link" data-scroll-target="#forgetting-beliefs">5. Forgetting beliefs</a></li>
+  <li><a href="#confusing-backward-induction-with-equilibrium" id="toc-confusing-backward-induction-with-equilibrium" class="nav-link" data-scroll-target="#confusing-backward-induction-with-equilibrium">6. Confusing backward induction with equilibrium</a></li>
+  </ul></li>
+  <li><a href="#checklist-for-dynamic-games" id="toc-checklist-for-dynamic-games" class="nav-link" data-scroll-target="#checklist-for-dynamic-games">Checklist for dynamic games</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -177,7 +197,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Dynamic reasoning</h1>
+<h1 class="title">Dynamic Reasoning</h1>
 </div>
 
 
@@ -194,75 +214,196 @@ window.Quarto = {
 </header>
 
 
-<section id="backward-induction-extensive-form-games" class="level2">
-<h2 class="anchored" data-anchor-id="backward-induction-extensive-form-games">Backward induction (extensive-form games)</h2>
-<p>In finite game trees with perfect information, <strong>backward induction</strong> solves from the end:</p>
-<ol type="1">
-<li>decide optimal actions at the last decision nodes<br>
-</li>
-<li>replace subgames by their continuation payoffs<br>
-</li>
-<li>move backward to the start</li>
-</ol>
-<p><strong>Intuition.</strong> Future choices discipline earlier choices.</p>
-</section>
-<section id="solving-a-dynamic-game-by-backward-induction" class="level2">
-<h2 class="anchored" data-anchor-id="solving-a-dynamic-game-by-backward-induction">Solving a dynamic game by backward induction</h2>
-<p>Backward induction solves a game by reasoning from the end of the game back to the beginning.</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TD
-    A[Start at Terminal Nodes] --&gt; B[Find Last Mover's Optimal Action]
-    B --&gt; C[Replace Continuation Game with Resulting Payoffs]
-    C --&gt; D[Move to Previous Decision Node]
-    D --&gt; E[Find That Player's Optimal Action]
-    E --&gt; F[Repeat This Process]
-    F --&gt; G[Reach the Initial Node]
-    G --&gt; H[Obtain the Subgame Perfect Equilibrium Path]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</section>
-<section id="why-timing-matters" class="level2">
-<h2 class="anchored" data-anchor-id="why-timing-matters">Why timing matters</h2>
+<p>Dynamic reasoning studies decisions that unfold over time. In a static problem, a player chooses once. In a dynamic problem, players act after histories, observe earlier moves, form expectations about later moves, and ask whether threats or promises are credible.</p>
+<p>This page introduces the logic behind backward induction, sequential rationality, credibility, continuation payoffs, and dynamic equilibrium.</p>
+<section id="why-dynamic-reasoning-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-dynamic-reasoning-matters">Why dynamic reasoning matters</h2>
+<p>Timing changes strategic behaviour.</p>
+<p>In a simultaneous game, each player chooses without observing the current action of the other. In a dynamic game, one player may observe an earlier move and respond. This creates new strategic possibilities:</p>
+<ul>
+<li>threats;</li>
+<li>promises;</li>
+<li>commitment;</li>
+<li>reputation;</li>
+<li>punishment;</li>
+<li>learning;</li>
+<li>signalling;</li>
+<li>waiting;</li>
+<li>delay.</li>
+</ul>
+<p>A dynamic game is not just a static game with time added. The order of moves can change the result.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
-    A[Timing of Moves] --&gt; B[Who Moves When]
-    B --&gt; C[What Each Player Knows]
-    C --&gt; D[What Actions Are Credible]
-    D --&gt; E[Equilibrium Outcome]
+    A[Static reasoning] --&gt; B[What is my best response now?]
+    C[Dynamic reasoning] --&gt; D[What will happen later?]
+    D --&gt; E[What is credible later?]
+    E --&gt; F[What should I do now?]
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
+<p>Dynamic reasoning therefore often works backwards: to decide what should happen now, we first ask what would happen later.</p>
 </section>
-<section id="a-tiny-game-tree-diagram" class="level2">
-<h2 class="anchored" data-anchor-id="a-tiny-game-tree-diagram">A tiny game tree (diagram)</h2>
-<p>Below is a simple sequential choice: Player 1 chooses <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span>, then Player 2 chooses <span class="math inline">\(L\)</span> or <span class="math inline">\(R\)</span>.</p>
+<section id="histories-and-continuation" class="level2">
+<h2 class="anchored" data-anchor-id="histories-and-continuation">Histories and continuation</h2>
+<p>A <strong>history</strong> is a sequence of actions that has occurred so far.</p>
+<p>For example, in a simple two-stage game:</p>
+<ol type="1">
+<li>Player 1 chooses <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span>.</li>
+<li>Player 2 observes Player 1’s action.</li>
+<li>Player 2 chooses <span class="math inline">\(L\)</span> or <span class="math inline">\(R\)</span>.</li>
+</ol>
+<p>After Player 1 chooses <span class="math inline">\(A\)</span>, the history is</p>
+<p><span class="math display">\[
+h = A.
+\]</span></p>
+<p>After Player 1 chooses <span class="math inline">\(B\)</span>, the history is</p>
+<p><span class="math display">\[
+h = B.
+\]</span></p>
+<p>Player 2 may choose differently after different histories. This is why a strategy in a dynamic game must specify what a player would do after every relevant history.</p>
+</section>
+<section id="strategies-in-dynamic-games" class="level2">
+<h2 class="anchored" data-anchor-id="strategies-in-dynamic-games">Strategies in dynamic games</h2>
+<p>In a static game, a strategy can often be thought of as one action.</p>
+<p>In a dynamic game, a strategy is a <strong>complete contingent plan</strong>. It says what the player will do at every decision point where they may be called to move.</p>
+<p>For example, if Player 2 moves after either <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span>, then a strategy for Player 2 must specify:</p>
+<p><span class="math display">\[
+s_2(A)
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+s_2(B).
+\]</span></p>
+<p>A complete strategy might be:</p>
+<p><span class="math display">\[
+s_2 = (L \text{ after } A,\ R \text{ after } B).
+\]</span></p>
+<p>This matters because equilibrium requires optimality not only along the path that actually occurs, but also after possible histories that might not occur.</p>
+</section>
+<section id="the-logic-of-backward-induction" class="level2">
+<h2 class="anchored" data-anchor-id="the-logic-of-backward-induction">The logic of backward induction</h2>
+<p>Backward induction solves a finite dynamic game by starting from the final decision nodes and moving backward to the beginning.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TD
-  S((Start)) --&gt;|P1: A| A(( ))
-  S --&gt;|P1: B| B(( ))
-  A --&gt;|P2: L| AL["(2,1)"]
-  A --&gt;|P2: R| AR["(0,0)"]
-  B --&gt;|P2: L| BL["(1,2)"]
-  B --&gt;|P2: R| BR["(3,0)"]
+    A[Start at terminal decision nodes] --&gt; B[Find the last mover's optimal action]
+    B --&gt; C[Replace the continuation with resulting payoffs]
+    C --&gt; D[Move to the previous decision node]
+    D --&gt; E[Find that player's optimal action]
+    E --&gt; F[Repeat the process]
+    F --&gt; G[Reach the initial node]
+    G --&gt; H[Obtain the predicted path]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The key idea is simple:</p>
+<blockquote class="blockquote">
+<p>To know what a player should do now, first determine what later players would rationally do.</p>
+</blockquote>
+<p>Backward induction is therefore reasoning from the future back to the present.</p>
+</section>
+<section id="a-small-example" class="level2">
+<h2 class="anchored" data-anchor-id="a-small-example">A small example</h2>
+<p>Suppose Player 1 chooses whether to <strong>Enter</strong> or <strong>Stay Out</strong>.</p>
+<p>If Player 1 stays out, the game ends. If Player 1 enters, Player 2 chooses whether to <strong>Fight</strong> or <strong>Accommodate</strong>.</p>
+<p>The game has this structure:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Player 1: Enter or Stay Out] --&gt; B[Stay Out]
+    A --&gt; C[Enter]
+    C --&gt; D[Player 2: Fight or Accommodate]
+    D --&gt; E[Fight]
+    D --&gt; F[Accommodate]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>To solve this game, do not start by asking whether Player 1 should enter. Start at Player 2’s decision node.</p>
+<p>If Player 2 would prefer to accommodate rather than fight after entry, then Player 1 anticipates accommodation. Player 1’s entry decision should be evaluated against that expected response.</p>
+<p>If Player 2 would prefer to fight after entry, then Player 1 anticipates fighting. Player 1’s entry decision may change.</p>
+<p>The first move depends on the credible second move.</p>
+</section>
+<section id="credibility" class="level2">
+<h2 class="anchored" data-anchor-id="credibility">Credibility</h2>
+<p>A threat is <strong>credible</strong> if the player would actually want to carry it out when the time comes.</p>
+<p>A promise is <strong>credible</strong> if the player would actually want to honour it when the time comes.</p>
+<p>In dynamic games, announcements alone are not enough. What matters is whether the announced behaviour is sequentially optimal.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Threat or promise] --&gt; B{Would the player carry it out later?}
+    B --&gt;|Yes| C[Credible]
+    B --&gt;|No| D[Not credible]
+    C --&gt; E[Affects current behaviour]
+    D --&gt; F[Should be ignored in equilibrium]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This is one of the most important lessons of dynamic reasoning: future behaviour must be optimal when the future arrives.</p>
+</section>
+<section id="sequential-rationality" class="level2">
+<h2 class="anchored" data-anchor-id="sequential-rationality">Sequential rationality</h2>
+<p>A strategy is sequentially rational if it prescribes optimal behaviour at every decision point, given the player’s beliefs and continuation payoffs.</p>
+<p>This is stronger than simply being optimal at the start of the game.</p>
+<p>For example, a player may announce:</p>
+<blockquote class="blockquote">
+<p>“If you enter, I will fight.”</p>
+</blockquote>
+<p>But if fighting is costly and accommodation is better after entry occurs, then fighting is not sequentially rational. The threat is not credible.</p>
+<p>Sequential rationality asks:</p>
+<blockquote class="blockquote">
+<p>At each point in the game, given the history so far, is this action optimal from that point onward?</p>
+</blockquote>
+</section>
+<section id="subgames" class="level2">
+<h2 class="anchored" data-anchor-id="subgames">Subgames</h2>
+<p>A <strong>subgame</strong> is a part of a dynamic game that begins at a decision node and includes all later actions and payoffs from that node onward.</p>
+<p>A strategy profile is a <strong>subgame perfect equilibrium</strong> if it induces a Nash equilibrium in every subgame.</p>
+<p>The intuition is:</p>
+<blockquote class="blockquote">
+<p>A dynamic equilibrium should remain rational after every possible history.</p>
+</blockquote>
+<p>This rules out equilibria supported by non-credible threats.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Dynamic Game] --&gt; B[Subgame 1]
+    A --&gt; C[Subgame 2]
+    A --&gt; D[Subgame 3]
+    B --&gt; E[Optimal continuation]
+    C --&gt; F[Optimal continuation]
+    D --&gt; G[Optimal continuation]
+    E --&gt; H[Subgame Perfect Equilibrium]
+    F --&gt; H
+    G --&gt; H
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -270,36 +411,229 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="one-step-backward-induction" class="level2">
-<h2 class="anchored" data-anchor-id="one-step-backward-induction">One-step backward induction</h2>
-<div class="callout callout-style-default callout-note callout-titled" title="Backward induction steps">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="backward-induction-and-subgame-perfection" class="level2">
+<h2 class="anchored" data-anchor-id="backward-induction-and-subgame-perfection">Backward induction and subgame perfection</h2>
+<p>In finite games with perfect information, backward induction produces a subgame perfect equilibrium.</p>
+<p>The relationship is:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Finite dynamic game] --&gt; B[Perfect information]
+    B --&gt; C[Backward induction]
+    C --&gt; D[Optimal action in every subgame]
+    D --&gt; E[Subgame perfect equilibrium]
+</pre>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Backward induction steps
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Step 1 (Player 2):</strong><br>
-After <span class="math inline">\(A\)</span>: compare <span class="math inline">\((2,1)\)</span> vs <span class="math inline">\((0,0)\)</span> → choose <strong>L</strong> (since <span class="math inline">\(1&gt;0\)</span>).<br>
-After <span class="math inline">\(B\)</span>: compare <span class="math inline">\((1,2)\)</span> vs <span class="math inline">\((3,0)\)</span> → choose <strong>L</strong> (since <span class="math inline">\(2&gt;0\)</span>).</p>
-<p><strong>Step 2 (Player 1):</strong><br>
-If <span class="math inline">\(A\)</span> → payoff <span class="math inline">\(2\)</span>.<br>
-If <span class="math inline">\(B\)</span> → payoff <span class="math inline">\(1\)</span>.<br>
-So choose <strong>A</strong>.</p>
-<p><strong>Outcome:</strong> <span class="math inline">\((A,L)\)</span>.</p>
+<p></p></figure><p></p>
 </div>
 </div>
+</div>
+<p>Backward induction is a procedure.<br>
+Subgame perfection is a solution concept.</p>
+<p>They are related, but not identical.</p>
 </section>
-<section id="bellman-idea-optional-for-dynamic-optimization" class="level2">
-<h2 class="anchored" data-anchor-id="bellman-idea-optional-for-dynamic-optimization">Bellman idea (optional, for dynamic optimization)</h2>
-<p>Dynamic programming often writes:</p>
+<section id="perfect-information-and-imperfect-information" class="level2">
+<h2 class="anchored" data-anchor-id="perfect-information-and-imperfect-information">Perfect information and imperfect information</h2>
+<p>A game has <strong>perfect information</strong> if every player observes all previous actions before choosing.</p>
+<p>A game has <strong>imperfect information</strong> if some player does not observe some earlier action, or if decision nodes are grouped into information sets.</p>
+<p>Perfect-information games can often be solved by backward induction. Imperfect-information games may require beliefs.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Dynamic Game] --&gt; B{Does each player observe all previous actions?}
+    B --&gt;|Yes| C[Perfect Information]
+    B --&gt;|No| D[Imperfect Information]
+    C --&gt; E[Backward Induction]
+    D --&gt; F[Beliefs and information sets]
+    F --&gt; G[Perfect Bayesian or sequential equilibrium]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>When players do not know exactly where they are in the game, dynamic reasoning becomes belief-based.</p>
+</section>
+<section id="continuation-payoffs" class="level2">
+<h2 class="anchored" data-anchor-id="continuation-payoffs">Continuation payoffs</h2>
+<p>A <strong>continuation payoff</strong> is the payoff a player expects from a point in the game onward.</p>
+<p>Dynamic reasoning often compares current actions by asking how they change future continuation payoffs.</p>
+<p>For example, in a repeated relationship, cheating today may give a current benefit but reduce future continuation value.</p>
+<p>The basic comparison is:</p>
 <p><span class="math display">\[
-V(s)=\max_{a\in A(s)}\bigl\{ r(s,a) + \beta V(s') \bigr\}.
+\text{current payoff} + \text{future continuation payoff}.
 \]</span></p>
-<p>Same “optimize now + value of continuation” logic.</p>
+<p>If a player discounts the future by <span class="math inline">\(\delta \in (0,1)\)</span>, then the value of a stream of future payoffs may be written as</p>
+<p><span class="math display">\[
+U
+=
+u_0
++
+\delta u_1
++
+\delta^2 u_2
++
+\cdots.
+\]</span></p>
+<p>The discount factor <span class="math inline">\(\delta\)</span> measures patience. A higher <span class="math inline">\(\delta\)</span> means the player cares more about future payoffs.</p>
+</section>
+<section id="dynamic-incentives" class="level2">
+<h2 class="anchored" data-anchor-id="dynamic-incentives">Dynamic incentives</h2>
+<p>A dynamic incentive exists when current behaviour is shaped by future consequences.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Action today] --&gt; B[Observed by others]
+    B --&gt; C[Future response]
+    C --&gt; D[Continuation payoff]
+    D --&gt; E[Current incentive]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This logic appears in:</p>
+<ul>
+<li>repeated games;</li>
+<li>reputation models;</li>
+<li>relational contracts;</li>
+<li>crime and punishment;</li>
+<li>trust and betrayal;</li>
+<li>cooperation and retaliation;</li>
+<li>political promises;</li>
+<li>institutional enforcement.</li>
+</ul>
+<p>The strategic force is the same: future responses can discipline current behaviour.</p>
+</section>
+<section id="repeated-games" class="level2">
+<h2 class="anchored" data-anchor-id="repeated-games">Repeated games</h2>
+<p>Repeated games are dynamic games where the same stage game is played more than once.</p>
+<p>Repetition can support cooperation because players can reward or punish one another across time.</p>
+<p>For example, suppose cooperation gives long-run benefits but defection gives a short-run gain. Cooperation may be sustained if the future loss from punishment is larger than the current gain from defection.</p>
+<p>A typical incentive condition has the form:</p>
+<p><span class="math display">\[
+\text{gain from deviation}
+\leq
+\text{future loss from punishment}.
+\]</span></p>
+<p>This is one of the central ideas behind repeated-game cooperation.</p>
+</section>
+<section id="commitment" class="level2">
+<h2 class="anchored" data-anchor-id="commitment">Commitment</h2>
+<p>Commitment changes dynamic reasoning by changing what future actions are available or attractive.</p>
+<p>A player has commitment power if they can bind themselves to a future action.</p>
+<p>Without commitment, a promise may fail because the player will later want to break it.</p>
+<p>With commitment, the same promise may become credible.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Future action] --&gt; B{Can the player commit?}
+    B --&gt;|No| C[Future self may revise action]
+    B --&gt;|Yes| D[Future action becomes fixed or costly to change]
+    C --&gt; E[Credibility problem]
+    D --&gt; F[Credibility strengthened]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Commitment is important in contracts, bargaining, monetary policy, deterrence, and institutional design.</p>
+</section>
+<section id="dynamic-reasoning-in-bayesian-settings" class="level2">
+<h2 class="anchored" data-anchor-id="dynamic-reasoning-in-bayesian-settings">Dynamic reasoning in Bayesian settings</h2>
+<p>When dynamic games include incomplete information, players must reason about both future actions and beliefs.</p>
+<p>For example, if a sender sends a message, the receiver may update beliefs about the sender’s type. The receiver then chooses a response. The sender anticipates this response when choosing the message.</p>
+<p>The reasoning chain is:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Sender has type] --&gt; B[Sender chooses message or action]
+    B --&gt; C[Receiver observes signal]
+    C --&gt; D[Receiver updates belief]
+    D --&gt; E[Receiver chooses response]
+    E --&gt; F[Sender anticipates this when choosing]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This is the logic behind signaling, cheap talk, reputation, and perfect Bayesian equilibrium.</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="solving-from-the-beginning" class="level3">
+<h3 class="anchored" data-anchor-id="solving-from-the-beginning">1. Solving from the beginning</h3>
+<p>In finite perfect-information games, solve from the end first. The first move depends on later credible responses.</p>
+</section>
+<section id="confusing-actions-and-strategies" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-actions-and-strategies">2. Confusing actions and strategies</h3>
+<p>In dynamic games, a strategy is a complete plan for every relevant decision point.</p>
+</section>
+<section id="ignoring-off-path-behaviour" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-off-path-behaviour">3. Ignoring off-path behaviour</h3>
+<p>Equilibrium may require specifying what players would do after histories that do not occur on the equilibrium path.</p>
+</section>
+<section id="treating-threats-as-automatically-credible" class="level3">
+<h3 class="anchored" data-anchor-id="treating-threats-as-automatically-credible">4. Treating threats as automatically credible</h3>
+<p>A threat affects behaviour only if it is optimal to carry out when the time comes.</p>
+</section>
+<section id="forgetting-beliefs" class="level3">
+<h3 class="anchored" data-anchor-id="forgetting-beliefs">5. Forgetting beliefs</h3>
+<p>In dynamic games with incomplete information, players must update beliefs after observations.</p>
+</section>
+<section id="confusing-backward-induction-with-equilibrium" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-backward-induction-with-equilibrium">6. Confusing backward induction with equilibrium</h3>
+<p>Backward induction is a method. Subgame perfect equilibrium is a solution concept.</p>
+</section>
+</section>
+<section id="checklist-for-dynamic-games" class="level2">
+<h2 class="anchored" data-anchor-id="checklist-for-dynamic-games">Checklist for dynamic games</h2>
+<p>When analysing a dynamic game, ask:</p>
+<ol type="1">
+<li>Who moves first?</li>
+<li>Who moves later?</li>
+<li>What does each player observe before choosing?</li>
+<li>What are the possible histories?</li>
+<li>What is each player’s complete strategy?</li>
+<li>What happens at the final decision nodes?</li>
+<li>Which threats or promises are credible?</li>
+<li>Are actions optimal in every subgame?</li>
+<li>Are beliefs needed?</li>
+<li>What is the equilibrium path?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../notes/game-theory.html">Game Theory Notes</a></li>
+<li><a href="../notes/game-types/extensive-form.html">Extensive-form games</a></li>
+<li><a href="../notes/game-types/repeated.html">Repeated games</a></li>
+<li><a href="../notes/game-types/cheap-talk.html">Cheap talk</a></li>
+<li><a href="../notes/game-types/signaling.html">Signaling</a></li>
+<li><a href="../notes/equilibriums/subgame-perfect.html">Subgame perfect equilibrium</a></li>
+<li><a href="../notes/equilibriums/perfect-bayesian.html">Perfect Bayesian equilibrium</a></li>
+<li><a href="../notes/equilibriums/sequential-equilibrium.html">Sequential equilibrium</a></li>
+<li><a href="../foundations/probability.html">Probability</a></li>
+<li><a href="../foundations/optimization.html">Optimization</a></li>
+</ul>
 
 
 </section>

@@ -1,13 +1,242 @@
 ---
 title: "Foundations"
-toc: false
+toc: true
+page-layout: full
 ---
 
+The foundations section collects the mathematical and conceptual tools used across the site. These pages are not separate from the substantive notes. They are the background machinery behind game theory, criminology models, psychology overlaps, and rationality under uncertainty.
 
-- [Linear algebra](linear-algebra.qmd)
-- [Probability](probability.qmd)
-- [Optimization](optimization.qmd)
-- [Convexity & concavity](convexity.qmd)
-- [Fixed points & correspondences](fixed-points.qmd)
-- [Dynamic reasoning](dynamic-reasoning.qmd)
-- [Information & beliefs (measure-lite)](information-measure-lite.qmd)
+The aim is practical: each foundation page should help explain how to read, build, or interpret a model.
+
+## Map of the foundations section
+
+```{mermaid}
+flowchart TD
+    A[Foundations] --> B[Optimization]
+    A --> C[Probability]
+    A --> D[Dynamic Reasoning]
+    A --> E[Fixed Points]
+    A --> F[Convexity]
+    A --> G[Linear Algebra]
+
+    B --> B1[Choice]
+    B --> B2[Argmax]
+    B --> B3[Best Responses]
+
+    C --> C1[Uncertainty]
+    C --> C2[Beliefs]
+    C --> C3[Bayesian Updating]
+
+    D --> D1[Timing]
+    D --> D2[Backward Induction]
+    D --> D3[Credibility]
+
+    E --> E1[Equilibrium as fixed point]
+    E --> E2[Existence arguments]
+
+    F --> F1[Concavity]
+    F --> F2[Feasible sets]
+    F --> F3[Optimization structure]
+
+    G --> G1[Vectors]
+    G --> G2[Matrices]
+    G --> G3[Systems]
+```
+
+The core idea is that formal models usually combine several foundations at once. A Bayesian game, for example, uses probability for beliefs, optimization for best responses, and fixed-point reasoning for equilibrium.
+
+## Main foundation pages
+
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Optimization
+
+The language of choice: objectives, constraints, argmax notation, first-order conditions, best responses, and comparative statics.
+
+[Open →](optimization.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Probability
+
+The language of uncertainty: events, random variables, expectation, mixed strategies, conditional probability, Bayes' rule, signals, types, and posterior beliefs.
+
+[Open →](probability.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Dynamic Reasoning
+
+The language of time: histories, continuation payoffs, backward induction, credibility, sequential rationality, and dynamic incentives.
+
+[Open →](dynamic-reasoning.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Fixed Points
+
+The language of equilibrium existence: when a process, mapping, or best-response system returns to itself.
+
+[Open →](fixed-points.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Convexity
+
+The language of shape: convex sets, concavity, mixtures, feasible regions, and why optimization problems become easier when structure is well behaved.
+
+[Open →](convexity.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Linear Algebra
+
+The language of systems: vectors, matrices, transformations, linear equations, mixtures, and state representations.
+
+[Open →](linear-algebra.qmd)
+:::
+:::
+
+:::
+
+## How these tools connect
+
+Many models can be read as a chain:
+
+```{mermaid}
+flowchart LR
+    A[Model primitives] --> B[Choice problem]
+    B --> C[Optimization]
+    C --> D[Best response]
+    D --> E[Equilibrium condition]
+    E --> F[Interpretation]
+```
+
+For models with uncertainty, the chain becomes:
+
+```{mermaid}
+flowchart LR
+    A[Uncertain state or type] --> B[Prior belief]
+    B --> C[Signal or action]
+    C --> D[Posterior belief]
+    D --> E[Expected payoff]
+    E --> F[Optimal action]
+```
+
+For dynamic models, the chain becomes:
+
+```{mermaid}
+flowchart LR
+    A[History] --> B[Continuation game]
+    B --> C[Continuation payoff]
+    C --> D[Credible action]
+    D --> E[Current incentive]
+```
+
+These diagrams are deliberately simple. Their purpose is to show that formal reasoning usually follows a small number of repeatable patterns.
+
+## Suggested reading order
+
+If you are reading the site from the beginning, use this order:
+
+1. [Optimization](optimization.qmd)
+2. [Probability](probability.qmd)
+3. [Dynamic reasoning](dynamic-reasoning.qmd)
+4. [Fixed points](fixed-points.qmd)
+5. [Convexity](convexity.qmd)
+6. [Linear algebra](linear-algebra.qmd)
+
+This order works because optimization and probability appear almost everywhere. Dynamic reasoning becomes important once timing matters. Fixed points, convexity, and linear algebra become more important when the models become more abstract.
+
+## Foundations for game theory
+
+Game theory uses all of these tools.
+
+| Foundation | Use in game theory |
+|---|---|
+| Optimization | Best responses and payoff maximization |
+| Probability | Mixed strategies, beliefs, types, and signals |
+| Dynamic reasoning | Sequential moves, credibility, and backward induction |
+| Fixed points | Existence of equilibrium |
+| Convexity | Strategy spaces, mixtures, and well-behaved optimization |
+| Linear algebra | Mixed strategies, systems of equations, and matrix representation |
+
+A Nash equilibrium can be understood as a fixed point of best-response reasoning. A Bayesian equilibrium combines optimization with beliefs. A dynamic equilibrium combines optimization with histories and continuation values.
+
+## Foundations for criminology
+
+The same tools also appear in criminology.
+
+| Foundation | Use in criminology |
+|---|---|
+| Optimization | Choice under incentives, sanctions, and opportunity |
+| Probability | Risk, detection, reporting, and uncertainty |
+| Dynamic reasoning | deterrence, retaliation, reputation, and life-course processes |
+| Fixed points | social norms and stable patterns of behaviour |
+| Convexity | trade-offs in policy design and resource allocation |
+| Linear algebra | networks, transitions, and population-level systems |
+
+The goal is not to reduce crime to equations. The goal is to make assumptions visible and to understand how mechanisms generate predictions.
+
+## Foundations for psychology
+
+Psychology overlaps with these foundations when studying belief formation, bounded reasoning, learning, preference, emotion, and social cognition.
+
+For example:
+
+- probability helps describe belief updating;
+- optimization helps define rational benchmarks;
+- dynamic reasoning helps analyse planning and self-control;
+- fixed points help describe stable expectations or norms;
+- convexity helps formalise trade-offs;
+- linear algebra helps represent cognitive or social systems.
+
+This is where the site's broader theme appears: rationality is not only a property of isolated individuals. It is shaped by uncertainty, interaction, time, and institutions.
+
+## How to use the foundation pages
+
+Each foundation page should be read with three questions:
+
+1. **What problem does this tool solve?**
+2. **Where does it appear in a model?**
+3. **What mistake does it help prevent?**
+
+For example, optimization prevents vague claims about “choosing well.” Probability prevents vague claims about “uncertainty.” Dynamic reasoning prevents vague claims about “future threats.” Fixed points prevent vague claims about “stable outcomes.”
+
+## Common mistakes
+
+### 1. Treating foundations as detached mathematics
+
+The tools are useful because they organise substantive arguments. They should be connected to models and examples.
+
+### 2. Memorising formulas without knowing the role
+
+A formula matters because it does something in an argument: maximizes, updates, compares, verifies, or predicts.
+
+### 3. Skipping assumptions
+
+Most formal results depend on assumptions such as differentiability, concavity, complete information, common knowledge, or finite action spaces.
+
+### 4. Ignoring interpretation
+
+A mathematical solution is not the end of the analysis. The final step is to explain what the result means.
+
+## Related sections
+
+- [Game Theory Notes](../notes/game-theory.qmd)
+- [Game types](../notes/game-types/index.qmd)
+- [Equilibrium concepts](../notes/equilibriums/index.qmd)
+- [Criminology notes](../criminology/notes/index.qmd)
+- [Psychology](../psychology/index.qmd)

@@ -1,19 +1,106 @@
 ---
 title: "About"
-image: profile.jpg
-about:
-  template: jolla
-  links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com
-    - icon: linkedin
-      text: LinkedIn
-      href: https://linkedin.com
-    - icon: github
-      text: Github
-      href: https://github.com
-
+toc: true
 ---
 
-About this blog
+**Margins of Rationality** is a personal academic notes site about strategic reasoning, rationality, institutions, crime, psychology, and the mathematical tools used to study them.
+
+The site is built as a working notebook rather than a finished textbook. Some pages are conceptual maps. Some are technical notes. Some are short guides for reading formal models. The common theme is the boundary between rational structure and real behaviour.
+
+## Main idea
+
+Rationality is rarely simple.
+
+People choose under uncertainty. They respond to incentives, beliefs, institutions, emotions, histories, norms, and other people. A model can clarify this structure, but it can also hide assumptions if used carelessly.
+
+This site tries to keep both sides visible:
+
+- the formal structure of models;
+- the behavioural and institutional limits of those models.
+
+## Main sections
+
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Notes
+
+Game theory, game types, equilibrium concepts, and metrics.
+
+[Open →](notes/index.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Foundations
+
+Optimization, probability, dynamic reasoning, fixed points, convexity, and linear algebra.
+
+[Open →](foundations/index.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Criminology
+
+Crime, institutions, mechanisms, models, and topics.
+
+[Open →](criminology/index.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Psychology
+
+Psychology foundations, topics, and overlaps with game theory and decision-making.
+
+[Open →](psychology/index.qmd)
+:::
+:::
+
+:::
+
+## What the site is for
+
+The site is meant to support:
+
+- learning and reviewing formal concepts;
+- connecting theory pages with examples;
+- organizing research notes;
+- explaining mechanisms visually;
+- building a bridge between game theory, criminology, and psychology;
+- keeping track of ideas that may later become essays, teaching materials, or research projects.
+
+## Style of the notes
+
+The notes favour:
+
+- short definitions;
+- diagrams where useful;
+- explicit assumptions;
+- simple examples before abstract claims;
+- comparison tables;
+- links between related concepts;
+- warnings about common mistakes.
+
+The goal is clarity before completeness.
+
+## Why “Margins of Rationality”?
+
+The title points to the edges of rational-choice reasoning.
+
+At the centre are clean models: players, strategies, beliefs, payoffs, and equilibrium.
+
+At the margins are the complications that make human behaviour interesting: uncertainty, misperception, self-control, identity, trust, institutions, social norms, stigma, emotion, and bounded reasoning.
+
+The site studies both the centre and the margins.
+
+## Current status
+
+This is a living site. Pages may be expanded, reorganized, or rewritten over time. Some pages are full notes; others are maps or placeholders for future development.
+
+The long-term goal is to build a coherent set of notes that can be read across fields rather than only within one discipline.

@@ -1,21 +1,370 @@
 ---
 title: "Metrics"
 toc: true
+page-layout: full
 ---
 
-Metrics pages collect small measurement concepts used across notes.
+Metrics are tools for making comparisons precise. They turn concepts into quantities, but they also introduce assumptions. A metric is useful only when we understand what it measures, what it leaves out, and how it can be misread.
 
-## Common distinctions
+This page collects basic measurement ideas used across the site.
 
-- **Rate vs count:** a count records events; a rate normalizes by population, exposure, time, or opportunity.
-- **Stock vs flow:** a stock is measured at a point in time; a flow is measured over an interval.
-- **Latent concept vs observed proxy:** the thing we care about may not be directly observed.
-- **Precision vs interpretability:** a complex measure may predict better but explain less clearly.
+## Why metrics matter
 
-## To add later
+Many arguments depend on measurement.
 
-- crime rates and reporting bias
-- belief accuracy
-- inequality measures
-- network centrality
-- welfare and payoff comparisons
+In game theory, we compare payoffs, beliefs, welfare, strategies, and equilibrium outcomes.
+
+In criminology, we compare crime counts, rates, reporting, risk, harm, institutional outcomes, and policy effects.
+
+In psychology, we compare behaviour, beliefs, symptoms, responses, and decision patterns.
+
+```{mermaid}
+flowchart LR
+    A[Concept] --> B[Metric]
+    B --> C[Comparison]
+    C --> D[Interpretation]
+    D --> E[Decision or argument]
+```
+
+The danger is that the metric may look precise while the underlying concept remains unclear.
+
+## Count and rate
+
+A **count** records the number of events.
+
+A **rate** normalizes the count by a relevant denominator.
+
+For example:
+
+$$
+\text{Crime rate}
+=
+\frac{\text{Number of crimes}}{\text{Population}}
+\times 100{,}000.
+$$
+
+Counts are useful for scale. Rates are useful for comparison.
+
+If City A has more crimes than City B, it may simply have a larger population. A rate adjusts for this.
+
+## Choosing the denominator
+
+A rate depends on the denominator.
+
+Possible denominators include:
+
+- population;
+- households;
+- firms;
+- users;
+- opportunities;
+- time exposed;
+- number of transactions;
+- number of police stops;
+- number of cases;
+- number of people at risk.
+
+Different denominators answer different questions.
+
+For example, burglary per resident and burglary per household are not the same measure.
+
+## Stock and flow
+
+A **stock** is measured at a point in time.  
+A **flow** is measured over an interval.
+
+Examples:
+
+| Concept | Stock | Flow |
+|---|---|---|
+| prison population | people in prison on a date | admissions or releases per year |
+| unemployment | people unemployed now | people entering unemployment |
+| cases | pending cases | new filings |
+| beliefs | current probability belief | belief update after signal |
+
+Stock-flow confusion is common. A system can have a high stock because inflow is high, outflow is low, or duration is long.
+
+## Prevalence and incidence
+
+**Prevalence** asks how widespread something is in a population.
+
+**Incidence** asks how many new events occur over a period.
+
+For example:
+
+```text
+prevalence: share of people victimized this year
+incidence: number of victimization events this year
+```
+
+If the same person is victimized multiple times, incidence may be high even when prevalence is lower.
+
+## Risk and probability
+
+A risk is often represented as a probability.
+
+For example:
+
+$$
+\Pr(\text{victimization})
+$$
+
+or
+
+$$
+\Pr(\text{detection} \mid \text{offending}).
+$$
+
+Conditional probabilities are especially important.
+
+For example:
+
+$$
+\Pr(\text{recorded} \mid \text{reported})
+$$
+
+is different from
+
+$$
+\Pr(\text{reported} \mid \text{crime occurred}).
+$$
+
+```{mermaid}
+flowchart TD
+    A[Crime occurs] --> B{Reported?}
+    B -->|Yes| C{Recorded?}
+    B -->|No| D[Hidden]
+    C -->|Yes| E[Recorded crime]
+    C -->|No| F[Reported but unrecorded]
+```
+
+Each transition has its own probability.
+
+## Expected value
+
+Expected value is a probability-weighted average.
+
+If outcome $x_k$ occurs with probability $p_k$, then
+
+$$
+\mathbb{E}[X]
+=
+\sum_k p_k x_k.
+$$
+
+Expected value is central to decision theory, deterrence, and game theory.
+
+For example, expected punishment can be written as:
+
+$$
+\mathbb{E}[\text{punishment}]
+=
+\Pr(\text{caught}) \times \text{sanction}.
+$$
+
+This simple expression is useful, but incomplete. It assumes the actor perceives the probability and sanction, and that they are responsive to expected future costs.
+
+## Accuracy, precision, and bias
+
+A metric can fail in different ways.
+
+| Term | Meaning |
+|---|---|
+| Accuracy | closeness to the true value |
+| Precision | consistency or narrowness of measurement |
+| Bias | systematic error |
+| Noise | random variation |
+| Validity | whether the measure captures the intended concept |
+| Reliability | whether measurement is consistent |
+
+A measure can be precise but biased. It can be reliable but invalid.
+
+For example, recorded crime can be measured consistently but still fail to capture true crime if reporting is low.
+
+## Proxy measures
+
+A **proxy** is a measurable variable used to approximate a harder-to-measure concept.
+
+Examples:
+
+| Concept | Possible proxy |
+|---|---|
+| trust in police | survey response or reporting behaviour |
+| offending | arrest, conviction, self-report, victimization data |
+| social disorder | calls for service, complaints, observation |
+| deterrence | perceived detection risk |
+| harm | injury, loss, trauma, cost |
+| ability | test score or qualification |
+
+A proxy should never be treated as identical to the concept.
+
+## Latent concepts
+
+Some concepts are not directly observed. These are latent concepts.
+
+Examples:
+
+- trust;
+- fear;
+- self-control;
+- legitimacy;
+- belief;
+- intention;
+- risk perception;
+- social cohesion.
+
+Latent concepts require careful measurement. A single proxy may capture only one dimension.
+
+```{mermaid}
+flowchart LR
+    A[Latent concept] --> B[Survey item]
+    A --> C[Observed behaviour]
+    A --> D[Administrative record]
+    B --> E[Inference]
+    C --> E
+    D --> E
+```
+
+Using several measures can improve interpretation.
+
+## Belief accuracy
+
+In models of rationality and strategic interaction, we may ask whether beliefs are accurate.
+
+Suppose the true probability of an event is $p$, while a person believes it is $\hat p$.
+
+A simple error measure is:
+
+$$
+|\hat p - p|.
+$$
+
+Belief accuracy matters in:
+
+- Bayesian updating;
+- deterrence;
+- risk perception;
+- trust;
+- reputation;
+- learning;
+- prediction.
+
+A person may behave “rationally” given their belief, even if the belief itself is inaccurate.
+
+## Payoff comparison
+
+Game theory often compares payoffs across actions.
+
+Player $i$ prefers action $a$ over action $b$ when
+
+$$
+u_i(a) > u_i(b).
+$$
+
+In strategic settings, payoffs depend on what others do:
+
+$$
+u_i(a_i,a_{-i}).
+$$
+
+Payoff comparisons become best-response comparisons:
+
+$$
+a_i^*
+\in
+\arg\max_{a_i}
+u_i(a_i,a_{-i}).
+$$
+
+The metric here is not necessarily money. It is an ordering of outcomes.
+
+## Welfare comparison
+
+Welfare comparisons ask whether one outcome is socially better than another.
+
+A simple utilitarian welfare function is:
+
+$$
+W = \sum_i u_i.
+$$
+
+But welfare comparison can be difficult because:
+
+- utility may not be comparable across people;
+- distribution may matter;
+- rights and fairness may matter;
+- harm may be multidimensional;
+- some costs are hidden or delayed.
+
+A model may identify an efficient outcome, but policy interpretation still requires ethical judgement.
+
+## Rates over time
+
+When comparing rates over time, ask:
+
+1. Did the numerator change?
+2. Did the denominator change?
+3. Did measurement practice change?
+4. Did reporting change?
+5. Did the population at risk change?
+6. Did the category definition change?
+
+```{mermaid}
+flowchart LR
+    A[Observed rate change] --> B[Numerator change]
+    A --> C[Denominator change]
+    A --> D[Measurement change]
+    A --> E[Reporting change]
+    A --> F[Real behavioural change]
+```
+
+A trend is not automatically an explanation.
+
+## Common mistakes
+
+### 1. Comparing counts when rates are needed
+
+A larger place may have more events simply because it has more people or opportunities.
+
+### 2. Using the wrong denominator
+
+The denominator should match the population at risk.
+
+### 3. Treating proxy as concept
+
+A proxy is evidence about a concept, not the concept itself.
+
+### 4. Ignoring measurement process
+
+Metrics are produced through institutions, surveys, instruments, or coding rules.
+
+### 5. Confusing prediction with explanation
+
+A variable may predict an outcome without causing it.
+
+### 6. Ignoring uncertainty
+
+Point estimates should be interpreted with uncertainty, variation, and possible error in mind.
+
+## Checklist for using a metric
+
+1. What concept is being measured?
+2. What is the exact metric?
+3. What is the numerator?
+4. What is the denominator?
+5. What is the unit of analysis?
+6. Is it a count, rate, stock, flow, prevalence, or incidence?
+7. Is the measure a direct measure or proxy?
+8. What measurement process produced it?
+9. What bias or missingness may exist?
+10. What comparison is being made?
+11. What interpretation is justified?
+12. What interpretation would be too strong?
+
+## Related pages
+
+- [Probability](../foundations/probability.qmd)
+- [Optimization](../foundations/optimization.qmd)
+- [Game Theory Notes](game-theory.qmd)
+- [Criminology Foundations](../criminology/notes/foundations/index.qmd)
+- [Methods Map](../criminology/toolkit/methods-map.qmd)

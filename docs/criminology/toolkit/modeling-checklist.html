@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -130,12 +134,29 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#actors" id="toc-actors" class="nav-link active" data-scroll-target="#actors">1. Actors</a></li>
-  <li><a href="#choices" id="toc-choices" class="nav-link" data-scroll-target="#choices">2. Choices</a></li>
-  <li><a href="#information" id="toc-information" class="nav-link" data-scroll-target="#information">3. Information</a></li>
-  <li><a href="#payoffs" id="toc-payoffs" class="nav-link" data-scroll-target="#payoffs">4. Payoffs</a></li>
-  <li><a href="#timing" id="toc-timing" class="nav-link" data-scroll-target="#timing">5. Timing</a></li>
-  <li><a href="#measurement" id="toc-measurement" class="nav-link" data-scroll-target="#measurement">6. Measurement</a></li>
+  <li><a href="#the-basic-modelling-chain" id="toc-the-basic-modelling-chain" class="nav-link active" data-scroll-target="#the-basic-modelling-chain">The basic modelling chain</a></li>
+  <li><a href="#step-1-define-the-problem" id="toc-step-1-define-the-problem" class="nav-link" data-scroll-target="#step-1-define-the-problem">Step 1: Define the problem</a></li>
+  <li><a href="#step-2-identify-actors" id="toc-step-2-identify-actors" class="nav-link" data-scroll-target="#step-2-identify-actors">Step 2: Identify actors</a></li>
+  <li><a href="#step-3-define-choices" id="toc-step-3-define-choices" class="nav-link" data-scroll-target="#step-3-define-choices">Step 3: Define choices</a></li>
+  <li><a href="#step-4-specify-information" id="toc-step-4-specify-information" class="nav-link" data-scroll-target="#step-4-specify-information">Step 4: Specify information</a></li>
+  <li><a href="#step-5-define-payoffs" id="toc-step-5-define-payoffs" class="nav-link" data-scroll-target="#step-5-define-payoffs">Step 5: Define payoffs</a></li>
+  <li><a href="#step-6-choose-timing" id="toc-step-6-choose-timing" class="nav-link" data-scroll-target="#step-6-choose-timing">Step 6: Choose timing</a></li>
+  <li><a href="#step-7-choose-the-solution-concept-or-prediction" id="toc-step-7-choose-the-solution-concept-or-prediction" class="nav-link" data-scroll-target="#step-7-choose-the-solution-concept-or-prediction">Step 7: Choose the solution concept or prediction</a></li>
+  <li><a href="#step-8-interpret-the-result" id="toc-step-8-interpret-the-result" class="nav-link" data-scroll-target="#step-8-interpret-the-result">Step 8: Interpret the result</a></li>
+  <li><a href="#step-9-connect-to-evidence" id="toc-step-9-connect-to-evidence" class="nav-link" data-scroll-target="#step-9-connect-to-evidence">Step 9: Connect to evidence</a></li>
+  <li><a href="#example-reporting-model" id="toc-example-reporting-model" class="nav-link" data-scroll-target="#example-reporting-model">Example: reporting model</a></li>
+  <li><a href="#example-inspection-game" id="toc-example-inspection-game" class="nav-link" data-scroll-target="#example-inspection-game">Example: inspection game</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#including-too-many-actors" id="toc-including-too-many-actors" class="nav-link" data-scroll-target="#including-too-many-actors">1. Including too many actors</a></li>
+  <li><a href="#making-choices-vague" id="toc-making-choices-vague" class="nav-link" data-scroll-target="#making-choices-vague">2. Making choices vague</a></li>
+  <li><a href="#ignoring-information" id="toc-ignoring-information" class="nav-link" data-scroll-target="#ignoring-information">3. Ignoring information</a></li>
+  <li><a href="#treating-payoffs-as-only-money" id="toc-treating-payoffs-as-only-money" class="nav-link" data-scroll-target="#treating-payoffs-as-only-money">4. Treating payoffs as only money</a></li>
+  <li><a href="#confusing-model-outcome-with-data" id="toc-confusing-model-outcome-with-data" class="nav-link" data-scroll-target="#confusing-model-outcome-with-data">5. Confusing model outcome with data</a></li>
+  <li><a href="#jumping-from-model-to-policy" id="toc-jumping-from-model-to-policy" class="nav-link" data-scroll-target="#jumping-from-model-to-policy">6. Jumping from model to policy</a></li>
+  </ul></li>
+  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist">Checklist</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -161,29 +182,480 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="actors" class="level2">
-<h2 class="anchored" data-anchor-id="actors">1. Actors</h2>
-<p>Who chooses? Possible actors include offenders, victims, police, courts, regulators, firms, peers, and communities.</p>
+<p>This checklist helps turn a criminological question into a simple model. The goal is not to force every topic into mathematics. The goal is to make assumptions explicit.</p>
+<p>A model should clarify actors, choices, information, incentives, timing, and expected outcomes.</p>
+<section id="the-basic-modelling-chain" class="level2">
+<h2 class="anchored" data-anchor-id="the-basic-modelling-chain">The basic modelling chain</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Research problem] --&gt; B[Actors]
+    B --&gt; C[Choices]
+    C --&gt; D[Information]
+    D --&gt; E[Payoffs and constraints]
+    E --&gt; F[Timing]
+    F --&gt; G[Solution or prediction]
+    G --&gt; H[Interpretation]
+    H --&gt; I[Evidence and limitations]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>A weak model skips steps. A strong model makes each step visible.</p>
 </section>
-<section id="choices" class="level2">
-<h2 class="anchored" data-anchor-id="choices">2. Choices</h2>
-<p>What are the available actions? Keep the first version small: offend/not offend, report/not report, inspect/not inspect.</p>
+<section id="step-1-define-the-problem" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-define-the-problem">Step 1: Define the problem</h2>
+<p>Start with the behaviour or institution you want to explain.</p>
+<p>Examples:</p>
+<ul>
+<li>Why do some victims not report crime?</li>
+<li>How does monitoring affect rule-breaking?</li>
+<li>Why do co-offenders cooperate?</li>
+<li>How do police allocate patrols?</li>
+<li>Why do defendants accept plea bargains?</li>
+<li>How does cybercrime scale across platforms?</li>
+</ul>
+<p>Write the problem in one sentence:</p>
+<pre class="text"><code>I want to explain why [actor] chooses [action] under [condition].</code></pre>
 </section>
-<section id="information" class="level2">
-<h2 class="anchored" data-anchor-id="information">3. Information</h2>
-<p>Who knows what? Separate objective risk from perceived risk, and private information from common knowledge.</p>
+<section id="step-2-identify-actors" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-identify-actors">Step 2: Identify actors</h2>
+<p>Actors are the decision-makers in the model.</p>
+<p>Possible actors include:</p>
+<ul>
+<li>offender;</li>
+<li>victim;</li>
+<li>witness;</li>
+<li>police;</li>
+<li>prosecutor;</li>
+<li>defendant;</li>
+<li>judge;</li>
+<li>prison authority;</li>
+<li>regulator;</li>
+<li>firm;</li>
+<li>peer group;</li>
+<li>community;</li>
+<li>platform;</li>
+<li>criminal organization.</li>
+</ul>
+<p>A model should not include every possible actor. Include actors only if their choices are central to the mechanism.</p>
 </section>
-<section id="payoffs" class="level2">
-<h2 class="anchored" data-anchor-id="payoffs">4. Payoffs</h2>
-<p>What are the benefits, costs, sanctions, social rewards, stigma, or emotional payoffs?</p>
+<section id="step-3-define-choices" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-define-choices">Step 3: Define choices</h2>
+<p>Each actor needs a choice set.</p>
+<p>Examples:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Actor</th>
+<th>Possible choices</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>offender</td>
+<td>offend / not offend</td>
+</tr>
+<tr class="even">
+<td>police</td>
+<td>inspect / not inspect</td>
+</tr>
+<tr class="odd">
+<td>victim</td>
+<td>report / not report</td>
+</tr>
+<tr class="even">
+<td>prosecutor</td>
+<td>charge / dismiss / bargain</td>
+</tr>
+<tr class="odd">
+<td>defendant</td>
+<td>accept plea / reject plea</td>
+</tr>
+<tr class="even">
+<td>co-offender</td>
+<td>cooperate / betray</td>
+</tr>
+<tr class="odd">
+<td>regulator</td>
+<td>audit / not audit</td>
+</tr>
+<tr class="even">
+<td>platform</td>
+<td>moderate / ignore / report</td>
+</tr>
+</tbody>
+</table>
+<p>Keep the first version small. A two-action model is often enough to clarify the mechanism.</p>
 </section>
-<section id="timing" class="level2">
-<h2 class="anchored" data-anchor-id="timing">5. Timing</h2>
-<p>Is the interaction simultaneous, sequential, repeated, or networked?</p>
+<section id="step-4-specify-information" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-specify-information">Step 4: Specify information</h2>
+<p>Ask what each actor knows when choosing.</p>
+<p>Information may include:</p>
+<ul>
+<li>detection probability;</li>
+<li>sanction severity;</li>
+<li>police presence;</li>
+<li>evidence strength;</li>
+<li>co-offender reliability;</li>
+<li>institutional trust;</li>
+<li>victim willingness to report;</li>
+<li>type of offender;</li>
+<li>strength of social ties;</li>
+<li>platform rules;</li>
+<li>legal consequences.</li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Actor] --&gt; B[Observed information]
+    A --&gt; C[Unobserved information]
+    C --&gt; D[Beliefs]
+    B --&gt; E[Choice]
+    D --&gt; E
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>If actors are uncertain, beliefs must be part of the model.</p>
 </section>
-<section id="measurement" class="level2">
-<h2 class="anchored" data-anchor-id="measurement">6. Measurement</h2>
-<p>What observable variable corresponds to the theoretical object? Recorded crime is not the same as true crime.</p>
+<section id="step-5-define-payoffs" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-define-payoffs">Step 5: Define payoffs</h2>
+<p>Payoffs represent what actors care about.</p>
+<p>In criminology, payoffs can include:</p>
+<ul>
+<li>money;</li>
+<li>status;</li>
+<li>revenge;</li>
+<li>fear;</li>
+<li>shame;</li>
+<li>punishment;</li>
+<li>time;</li>
+<li>effort;</li>
+<li>moral cost;</li>
+<li>legal risk;</li>
+<li>stigma;</li>
+<li>trust;</li>
+<li>safety;</li>
+<li>future opportunity;</li>
+<li>institutional legitimacy.</li>
+</ul>
+<p>Do not assume payoffs are purely financial unless the model requires it.</p>
+</section>
+<section id="step-6-choose-timing" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-choose-timing">Step 6: Choose timing</h2>
+<p>Timing determines the model type.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Timing] --&gt; B[Simultaneous]
+    A --&gt; C[Sequential]
+    A --&gt; D[Repeated]
+    A --&gt; E[Networked]
+
+    B --&gt; B1[Normal-form game]
+    C --&gt; C1[Extensive-form game]
+    D --&gt; D1[Repeated game]
+    E --&gt; E1[Network model]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Examples:</p>
+<ul>
+<li>Offender and police choose simultaneously: inspection game.</li>
+<li>Offender acts, victim reports, police respond: sequential game.</li>
+<li>Community and police interact repeatedly: repeated trust game.</li>
+<li>Offending spreads through peers: network model.</li>
+</ul>
+</section>
+<section id="step-7-choose-the-solution-concept-or-prediction" class="level2">
+<h2 class="anchored" data-anchor-id="step-7-choose-the-solution-concept-or-prediction">Step 7: Choose the solution concept or prediction</h2>
+<p>The solution concept depends on the model.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Model type</th>
+<th>Typical solution or prediction</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>One-person choice model</td>
+<td>optimal action</td>
+</tr>
+<tr class="even">
+<td>Simultaneous game</td>
+<td>Nash equilibrium</td>
+</tr>
+<tr class="odd">
+<td>Sequential game</td>
+<td>backward induction or subgame perfection</td>
+</tr>
+<tr class="even">
+<td>Incomplete-information game</td>
+<td>Bayesian reasoning</td>
+</tr>
+<tr class="odd">
+<td>Repeated game</td>
+<td>cooperation, punishment, reputation</td>
+</tr>
+<tr class="even">
+<td>Network model</td>
+<td>diffusion, centrality, clustering</td>
+</tr>
+<tr class="odd">
+<td>Empirical prediction model</td>
+<td>validation and error analysis</td>
+</tr>
+</tbody>
+</table>
+<p>Not every model needs a formal equilibrium. Sometimes the purpose is to clarify a mechanism or generate testable predictions.</p>
+</section>
+<section id="step-8-interpret-the-result" class="level2">
+<h2 class="anchored" data-anchor-id="step-8-interpret-the-result">Step 8: Interpret the result</h2>
+<p>A model result should be translated back into criminological language.</p>
+<p>For example, if the model says:</p>
+<pre class="text"><code>offending falls when detection probability rises</code></pre>
+<p>then interpret:</p>
+<ul>
+<li>Do actors perceive detection risk?</li>
+<li>Is enforcement evenly distributed?</li>
+<li>Does crime displace?</li>
+<li>Does trust change?</li>
+<li>Does recorded crime rise because detection rises?</li>
+<li>What are the unintended consequences?</li>
+</ul>
+<p>Interpretation prevents the model from becoming detached from reality.</p>
+</section>
+<section id="step-9-connect-to-evidence" class="level2">
+<h2 class="anchored" data-anchor-id="step-9-connect-to-evidence">Step 9: Connect to evidence</h2>
+<p>Every model should suggest observable implications.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Model prediction] --&gt; B[Observable implication]
+    B --&gt; C[Data source]
+    C --&gt; D[Evidence]
+    D --&gt; E[Revise model]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>For example:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model claim</th>
+<th>Observable implication</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>deterrence works through perceived risk</td>
+<td>perceived risk should change before behaviour changes</td>
+</tr>
+<tr class="even">
+<td>trust affects reporting</td>
+<td>low-trust groups should report less, holding victimization constant</td>
+</tr>
+<tr class="odd">
+<td>peer effects matter</td>
+<td>behaviour should cluster through social ties</td>
+</tr>
+<tr class="even">
+<td>stigma affects reoffending</td>
+<td>formal contact should affect later opportunity</td>
+</tr>
+<tr class="odd">
+<td>displacement occurs</td>
+<td>crime should move across place, time, target, or method</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-reporting-model" class="level2">
+<h2 class="anchored" data-anchor-id="example-reporting-model">Example: reporting model</h2>
+<p>Problem:</p>
+<pre class="text"><code>Why might victims not report crime?</code></pre>
+<p>Actors:</p>
+<ul>
+<li>victim;</li>
+<li>police or institution.</li>
+</ul>
+<p>Victim choices:</p>
+<ul>
+<li>report;</li>
+<li>do not report.</li>
+</ul>
+<p>Information:</p>
+<ul>
+<li>expected police response;</li>
+<li>perceived cost of reporting;</li>
+<li>trust in institution;</li>
+<li>fear of retaliation;</li>
+<li>seriousness of harm.</li>
+</ul>
+<p>Payoffs:</p>
+<pre class="text"><code>report if expected benefit of reporting &gt; expected cost of reporting</code></pre>
+<p>Mechanism:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Victimization] --&gt; B[Expected benefit of reporting]
+    C[Cost, fear, stigma] --&gt; D[Reporting decision]
+    B --&gt; D
+    E[Institutional trust] --&gt; D
+    D --&gt; F[Recorded or hidden crime]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Prediction:</p>
+<ul>
+<li>higher trust should increase reporting;</li>
+<li>higher stigma or retaliation risk should reduce reporting;</li>
+<li>recorded crime may rise if reporting increases.</li>
+</ul>
+</section>
+<section id="example-inspection-game" class="level2">
+<h2 class="anchored" data-anchor-id="example-inspection-game">Example: inspection game</h2>
+<p>Problem:</p>
+<pre class="text"><code>How does monitoring affect rule-breaking?</code></pre>
+<p>Actors:</p>
+<ul>
+<li>potential offender;</li>
+<li>authority.</li>
+</ul>
+<p>Choices:</p>
+<ul>
+<li>offender: offend or comply;</li>
+<li>authority: inspect or not inspect.</li>
+</ul>
+<p>Information:</p>
+<ul>
+<li>offender may not know whether inspection occurs;</li>
+<li>authority may not know whether offending occurs.</li>
+</ul>
+<p>Payoffs:</p>
+<ul>
+<li>offending gives gain if undetected;</li>
+<li>inspection is costly;</li>
+<li>punishment reduces payoff if detected.</li>
+</ul>
+<p>Mechanism:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Inspection probability] --&gt; B[Expected punishment]
+    B --&gt; C[Offending incentive]
+    C --&gt; D[Observed offending]
+    A --&gt; E[Detection and recorded crime]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Prediction:</p>
+<ul>
+<li>higher perceived inspection risk should reduce offending;</li>
+<li>higher inspection may increase recorded crime in the short run;</li>
+<li>offenders may adapt if monitoring is predictable.</li>
+</ul>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="including-too-many-actors" class="level3">
+<h3 class="anchored" data-anchor-id="including-too-many-actors">1. Including too many actors</h3>
+<p>Start simple. Add actors only when they change the mechanism.</p>
+</section>
+<section id="making-choices-vague" class="level3">
+<h3 class="anchored" data-anchor-id="making-choices-vague">2. Making choices vague</h3>
+<p>Choices should be specific enough to analyse.</p>
+</section>
+<section id="ignoring-information" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-information">3. Ignoring information</h3>
+<p>Strategic behaviour depends heavily on what actors know or believe.</p>
+</section>
+<section id="treating-payoffs-as-only-money" class="level3">
+<h3 class="anchored" data-anchor-id="treating-payoffs-as-only-money">4. Treating payoffs as only money</h3>
+<p>Status, fear, legitimacy, shame, and time may matter.</p>
+</section>
+<section id="confusing-model-outcome-with-data" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-model-outcome-with-data">5. Confusing model outcome with data</h3>
+<p>The model may predict true offending, while the data may measure recorded crime.</p>
+</section>
+<section id="jumping-from-model-to-policy" class="level3">
+<h3 class="anchored" data-anchor-id="jumping-from-model-to-policy">6. Jumping from model to policy</h3>
+<p>Policy requires evidence, implementation, ethics, and institutional feasibility.</p>
+</section>
+</section>
+<section id="checklist" class="level2">
+<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
+<p>Use this checklist before writing a model page:</p>
+<ol type="1">
+<li>What is the behaviour or institution being explained?</li>
+<li>Who are the actors?</li>
+<li>What choices do they have?</li>
+<li>What does each actor know?</li>
+<li>What is uncertain?</li>
+<li>What beliefs matter?</li>
+<li>What does each actor value?</li>
+<li>What are the constraints?</li>
+<li>What is the timing?</li>
+<li>Is the interaction one-shot, repeated, or networked?</li>
+<li>What solution concept or prediction is appropriate?</li>
+<li>What observable implication follows?</li>
+<li>What data could test or illustrate the prediction?</li>
+<li>What does the model ignore?</li>
+<li>What policy implication is safe to draw?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../../criminology/toolkit/index.html">Criminology Toolkit</a></li>
+<li><a href="../../criminology/toolkit/methods-map.html">Methods Map</a></li>
+<li><a href="../../criminology/toolkit/glossary.html">Glossary</a></li>
+<li><a href="../../criminology/notes/models/index.html">Criminology Models</a></li>
+<li><a href="../../notes/game-theory.html">Game Theory Notes</a></li>
+<li><a href="../../foundations/optimization.html">Optimization</a></li>
+<li><a href="../../foundations/probability.html">Probability</a></li>
+<li><a href="../../foundations/dynamic-reasoning.html">Dynamic reasoning</a></li>
+</ul>
 
 
 </section>

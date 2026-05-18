@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../../styles.css">
@@ -125,11 +129,33 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#map-of-topic-pages" id="toc-map-of-topic-pages" class="nav-link active" data-scroll-target="#map-of-topic-pages">Map of topic pages</a></li>
+  <li><a href="#topic-pages" id="toc-topic-pages" class="nav-link" data-scroll-target="#topic-pages">Topic pages</a></li>
+  <li><a href="#topic-page-template" id="toc-topic-page-template" class="nav-link" data-scroll-target="#topic-page-template">Topic-page template</a></li>
+  <li><a href="#comparing-topic-areas" id="toc-comparing-topic-areas" class="nav-link" data-scroll-target="#comparing-topic-areas">Comparing topic areas</a></li>
+  <li><a href="#from-topic-to-mechanism" id="toc-from-topic-to-mechanism" class="nav-link" data-scroll-target="#from-topic-to-mechanism">From topic to mechanism</a></li>
+  <li><a href="#from-topic-to-model" id="toc-from-topic-to-model" class="nav-link" data-scroll-target="#from-topic-to-model">From topic to model</a></li>
+  <li><a href="#policy-comparison" id="toc-policy-comparison" class="nav-link" data-scroll-target="#policy-comparison">Policy comparison</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#treating-a-topic-as-a-mechanism" id="toc-treating-a-topic-as-a-mechanism" class="nav-link" data-scroll-target="#treating-a-topic-as-a-mechanism">1. Treating a topic as a mechanism</a></li>
+  <li><a href="#treating-official-data-as-complete" id="toc-treating-official-data-as-complete" class="nav-link" data-scroll-target="#treating-official-data-as-complete">2. Treating official data as complete</a></li>
+  <li><a href="#assuming-one-policy-fits-all-crime-types" id="toc-assuming-one-policy-fits-all-crime-types" class="nav-link" data-scroll-target="#assuming-one-policy-fits-all-crime-types">3. Assuming one policy fits all crime types</a></li>
+  <li><a href="#ignoring-adaptation" id="toc-ignoring-adaptation" class="nav-link" data-scroll-target="#ignoring-adaptation">4. Ignoring adaptation</a></li>
+  <li><a href="#ignoring-harm-variation" id="toc-ignoring-harm-variation" class="nav-link" data-scroll-target="#ignoring-harm-variation">5. Ignoring harm variation</a></li>
+  </ul></li>
+  <li><a href="#suggested-reading-order" id="toc-suggested-reading-order" class="nav-link" data-scroll-target="#suggested-reading-order">Suggested reading order</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -138,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -150,53 +176,318 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Topic pages are application hubs: each one connects a crime domain to mechanisms, models, institutions, and measurement problems.</p>
+<p>Topic pages apply criminological mechanisms, institutional analysis, and models to substantive crime areas. They are not meant to be isolated summaries. Each topic should connect crime type, mechanism, measurement, evidence, and policy.</p>
+<p>The goal is to ask: what kind of behaviour is being studied, why does it occur, how is it measured, and what does intervention change?</p>
+<section id="map-of-topic-pages" class="level2">
+<h2 class="anchored" data-anchor-id="map-of-topic-pages">Map of topic pages</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Criminology Topics] --&gt; B[Violent Crime]
+    A --&gt; C[Property Crime]
+    A --&gt; D[Organized Crime]
+    A --&gt; E[White-Collar Crime]
+    A --&gt; F[Cybercrime]
+    A --&gt; G[Drug Markets]
+
+    B --&gt; B1[Conflict]
+    B --&gt; B2[Retaliation]
+    B --&gt; B3[Weapons and alcohol]
+    B --&gt; B4[Peer norms]
+
+    C --&gt; C1[Opportunity]
+    C --&gt; C2[Targets]
+    C --&gt; C3[Guardianship]
+    C --&gt; C4[Displacement]
+
+    D --&gt; D1[Coordination]
+    D --&gt; D2[Governance]
+    D --&gt; D3[Corruption]
+    D --&gt; D4[Violence]
+
+    E --&gt; E1[Organizations]
+    E --&gt; E2[Compliance]
+    E --&gt; E3[Agency problems]
+    E --&gt; E4[Regulation]
+
+    F --&gt; F1[Anonymity]
+    F --&gt; F2[Automation]
+    F --&gt; F3[Platforms]
+    F --&gt; F4[Cross-border enforcement]
+
+    G --&gt; G1[Demand]
+    G --&gt; G2[Illicit exchange]
+    G --&gt; G3[Enforcement pressure]
+    G --&gt; G4[Violence and substitution]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Each topic can involve several mechanisms at once. For example, drug markets may involve demand, addiction, organized distribution, enforcement displacement, violence, and institutional mistrust.</p>
+</section>
+<section id="topic-pages" class="level2">
+<h2 class="anchored" data-anchor-id="topic-pages">Topic pages</h2>
 <div class="grid gap-3">
 <div class="g-col-12 g-col-md-4">
 <section id="violent-crime" class="level3 card">
 <h3 class="anchored" data-anchor-id="violent-crime">Violent Crime</h3>
-<p>Violent crime involves the use or threat of physical force.</p>
+<p>Physical force, threat, conflict, retaliation, weapon use, peer norms, alcohol, and social context.</p>
 <p><a href="../../../criminology/notes/topics/violent-crime.html">Open →</a></p>
 </section>
 </div>
 <div class="g-col-12 g-col-md-4">
 <section id="property-crime" class="level3 card">
 <h3 class="anchored" data-anchor-id="property-crime">Property Crime</h3>
-<p>Property crime concerns theft, burglary, damage, and taking.</p>
+<p>Theft, burglary, damage, target selection, guardianship, routine activity, and opportunity structure.</p>
 <p><a href="../../../criminology/notes/topics/property-crime.html">Open →</a></p>
 </section>
 </div>
 <div class="g-col-12 g-col-md-4">
 <section id="organized-crime" class="level3 card">
 <h3 class="anchored" data-anchor-id="organized-crime">Organized Crime</h3>
-<p>Organized crime can be treated as illicit coordination under weak legal enforceability: groups govern exchange, maintain discipline, and adapt to enforcement.</p>
+<p>Illicit coordination, governance, violence, reputation, corruption, and market protection.</p>
 <p><a href="../../../criminology/notes/topics/organized-crime.html">Open →</a></p>
 </section>
 </div>
 <div class="g-col-12 g-col-md-4">
 <section id="white-collar-crime" class="level3 card">
 <h3 class="anchored" data-anchor-id="white-collar-crime">White-Collar Crime</h3>
-<p>White-collar crime involves illegal or harmful conduct carried out through professional, organizational, or financial roles.</p>
+<p>Illegal or harmful conduct through professional, financial, organizational, or regulatory roles.</p>
 <p><a href="../../../criminology/notes/topics/white-collar.html">Open →</a></p>
 </section>
 </div>
 <div class="g-col-12 g-col-md-4">
 <section id="cybercrime" class="level3 card">
 <h3 class="anchored" data-anchor-id="cybercrime">Cybercrime</h3>
-<p>Cybercrime is offending mediated by digital systems and shaped by scale, anonymity, automation, platform design, and jurisdictional limits.</p>
+<p>Digital offending shaped by anonymity, automation, scale, platform design, and jurisdictional limits.</p>
 <p><a href="../../../criminology/notes/topics/cybercrime.html">Open →</a></p>
 </section>
 </div>
 <div class="g-col-12 g-col-md-4">
 <section id="drug-markets" class="level3 card">
 <h3 class="anchored" data-anchor-id="drug-markets">Drug Markets</h3>
-<p>Drug markets combine illicit exchange, dependence, enforcement, violence, and substitution.</p>
+<p>Illicit exchange, demand, dependence, distribution networks, enforcement pressure, and violence.</p>
 <p><a href="../../../criminology/notes/topics/drug-markets.html">Open →</a></p>
 </section>
 </div>
 </div>
+</section>
+<section id="topic-page-template" class="level2">
+<h2 class="anchored" data-anchor-id="topic-page-template">Topic-page template</h2>
+<p>Each topic should ideally follow this structure:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Define the crime type] --&gt; B[Identify main behaviours]
+    B --&gt; C[Identify mechanisms]
+    C --&gt; D[Discuss measurement problems]
+    D --&gt; E[Connect to institutions]
+    E --&gt; F[Use simple models]
+    F --&gt; G[Evaluate policy trade-offs]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This prevents topic pages from becoming mere lists of facts. The focus should remain analytical.</p>
+</section>
+<section id="comparing-topic-areas" class="level2">
+<h2 class="anchored" data-anchor-id="comparing-topic-areas">Comparing topic areas</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Topic</th>
+<th>Central mechanisms</th>
+<th>Major measurement issue</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Violent crime</td>
+<td>conflict, retaliation, emotion, peer norms, weapons</td>
+<td>underreporting and seriousness variation</td>
+</tr>
+<tr class="even">
+<td>Property crime</td>
+<td>opportunity, target suitability, guardianship</td>
+<td>reporting depends on insurance, value, and trust</td>
+</tr>
+<tr class="odd">
+<td>Organized crime</td>
+<td>illicit governance, reputation, corruption, violence</td>
+<td>hidden structure and weak observability</td>
+</tr>
+<tr class="even">
+<td>White-collar crime</td>
+<td>agency problems, compliance failure, regulatory gaps</td>
+<td>detection depends on audit and investigation</td>
+</tr>
+<tr class="odd">
+<td>Cybercrime</td>
+<td>anonymity, automation, social engineering, platforms</td>
+<td>cross-border attribution and underreporting</td>
+</tr>
+<tr class="even">
+<td>Drug markets</td>
+<td>demand, addiction, enforcement pressure, substitution</td>
+<td>hidden transactions and enforcement bias</td>
+</tr>
+</tbody>
+</table>
+<p>This table is only a starting point. Each crime area contains internal diversity.</p>
+</section>
+<section id="from-topic-to-mechanism" class="level2">
+<h2 class="anchored" data-anchor-id="from-topic-to-mechanism">From topic to mechanism</h2>
+<p>A substantive topic is not yet an explanation. To explain a crime pattern, we need a mechanism.</p>
+<p>For example:</p>
+<pre class="text"><code>property crime
+→ opportunity and weak guardianship
+→ target selection
+→ spatial concentration</code></pre>
+<p>or:</p>
+<pre class="text"><code>violent crime
+→ conflict plus peer audience
+→ status threat
+→ retaliation</code></pre>
+<p>or:</p>
+<pre class="text"><code>white-collar crime
+→ agency problem plus weak monitoring
+→ rule violation
+→ delayed detection</code></pre>
+<p>The move from topic to mechanism is the move from description to explanation.</p>
+</section>
+<section id="from-topic-to-model" class="level2">
+<h2 class="anchored" data-anchor-id="from-topic-to-model">From topic to model</h2>
+<p>Topic pages also connect to models.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Topic</th>
+<th>Possible model</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Violent crime</td>
+<td>repeated conflict or retaliation game</td>
+</tr>
+<tr class="even">
+<td>Property crime</td>
+<td>target-selection or inspection game</td>
+</tr>
+<tr class="odd">
+<td>Organized crime</td>
+<td>repeated enforcement and reputation model</td>
+</tr>
+<tr class="even">
+<td>White-collar crime</td>
+<td>principal-agent or audit game</td>
+</tr>
+<tr class="odd">
+<td>Cybercrime</td>
+<td>attacker-defender game</td>
+</tr>
+<tr class="even">
+<td>Drug markets</td>
+<td>illicit market equilibrium or network model</td>
+</tr>
+</tbody>
+</table>
+<p>The model should be chosen because it clarifies a mechanism.</p>
+</section>
+<section id="policy-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="policy-comparison">Policy comparison</h2>
+<p>Different topics create different policy problems.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Crime topic] --&gt; B[Mechanism]
+    B --&gt; C[Institutional response]
+    C --&gt; D[Behavioural adaptation]
+    D --&gt; E[Policy outcome]
+    E --&gt; F[Unintended effects]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>For example, enforcement against drug markets may reduce visible dealing in one place while shifting activity elsewhere. Cybercrime enforcement may remove one platform while offenders migrate to another. White-collar regulation may reduce some misconduct while creating compliance theatre.</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="treating-a-topic-as-a-mechanism" class="level3">
+<h3 class="anchored" data-anchor-id="treating-a-topic-as-a-mechanism">1. Treating a topic as a mechanism</h3>
+<p>“Cybercrime” is not a mechanism. It is a domain. The mechanism may be anonymity, automation, deception, or weak enforcement.</p>
+</section>
+<section id="treating-official-data-as-complete" class="level3">
+<h3 class="anchored" data-anchor-id="treating-official-data-as-complete">2. Treating official data as complete</h3>
+<p>Many topic areas are heavily underreported or dependent on detection.</p>
+</section>
+<section id="assuming-one-policy-fits-all-crime-types" class="level3">
+<h3 class="anchored" data-anchor-id="assuming-one-policy-fits-all-crime-types">3. Assuming one policy fits all crime types</h3>
+<p>Violent crime, cybercrime, fraud, and drug markets respond to different mechanisms.</p>
+</section>
+<section id="ignoring-adaptation" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-adaptation">4. Ignoring adaptation</h3>
+<p>Offenders, institutions, and markets adapt to interventions.</p>
+</section>
+<section id="ignoring-harm-variation" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-harm-variation">5. Ignoring harm variation</h3>
+<p>The same legal category may contain events with very different harms.</p>
+</section>
+</section>
+<section id="suggested-reading-order" class="level2">
+<h2 class="anchored" data-anchor-id="suggested-reading-order">Suggested reading order</h2>
+<p>A good route is:</p>
+<ol type="1">
+<li><a href="../../../criminology/notes/topics/violent-crime.html">Violent crime</a></li>
+<li><a href="../../../criminology/notes/topics/property-crime.html">Property crime</a></li>
+<li><a href="../../../criminology/notes/topics/white-collar.html">White-collar crime</a></li>
+<li><a href="../../../criminology/notes/topics/cybercrime.html">Cybercrime</a></li>
+<li><a href="../../../criminology/notes/topics/organized-crime.html">Organized crime</a></li>
+<li><a href="../../../criminology/notes/topics/drug-markets.html">Drug markets</a></li>
+</ol>
+<p>Or, if reading by mechanism:</p>
+<ol type="1">
+<li><a href="../../../criminology/notes/mechanisms/opportunity-routine.html">Opportunity and routine activity</a></li>
+<li><a href="../../../criminology/notes/mechanisms/social-interactions.html">Social interactions</a></li>
+<li><a href="../../../criminology/notes/mechanisms/legitimacy-compliance.html">Legitimacy and compliance</a></li>
+<li><a href="../../../criminology/notes/models/network-crime.html">Network crime</a></li>
+<li><a href="../../../criminology/notes/models/inspection-games.html">Inspection games</a></li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../../../criminology/notes/index.html">Criminology Notes</a></li>
+<li><a href="../../../criminology/notes/foundations/index.html">Foundations</a></li>
+<li><a href="../../../criminology/notes/mechanisms/index.html">Mechanisms</a></li>
+<li><a href="../../../criminology/notes/institutions/index.html">Institutions</a></li>
+<li><a href="../../../criminology/notes/models/index.html">Models</a></li>
+<li><a href="../../../criminology/toolkit/methods-map.html">Methods Map</a></li>
+<li><a href="../../../criminology/toolkit/modeling-checklist.html">Modeling Checklist</a></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

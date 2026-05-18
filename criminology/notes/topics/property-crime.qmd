@@ -1,23 +1,217 @@
 ---
 title: "Property Crime"
 toc: true
+page-layout: full
 ---
 
-Property crime concerns theft, burglary, damage, and taking. The central question is how opportunity and expected payoff interact with enforcement and guardianship.
+Property crime involves taking, damaging, entering, or interfering with property. It includes theft, burglary, vehicle crime, robbery with property motives, vandalism, shoplifting, and fraud-like low-level acquisition offences.
 
-## Mechanisms to connect
+Property crime is especially useful for studying opportunity, target selection, guardianship, routine activity, and displacement.
 
-- target attractiveness
-- guardianship and surveillance
-- routine activity
-- displacement after intervention
+## Basic mechanism map
 
-## Models to try
+```{mermaid}
+flowchart TD
+    A[Property Crime] --> B[Motivation]
+    A --> C[Opportunity]
+    A --> D[Target]
+    A --> E[Guardianship]
+    A --> F[Market or disposal]
 
-- search and target-selection models
-- inspection games
-- spatial hot-spot models
+    B --> B1[Need or gain]
+    B --> B2[Peer influence]
+    B --> B3[Low perceived risk]
 
-## Notes to add later
+    C --> C1[Access]
+    C --> C2[Timing]
+    C --> C3[Location]
 
-Add empirical examples, key definitions, and one diagram linking mechanism → prediction → measurement.
+    D --> D1[Value]
+    D --> D2[Visibility]
+    D --> D3[Portability]
+
+    E --> E1[People nearby]
+    E --> E2[Locks and alarms]
+    E --> E3[Surveillance]
+
+    F --> F1[Resale]
+    F --> F2[Informal markets]
+    F --> F3[Online platforms]
+```
+
+The key idea is that property crime often depends less on deep motivation and more on the immediate structure of opportunity.
+
+## Routine activity logic
+
+Routine activity theory argues that crime becomes more likely when three elements converge:
+
+1. a motivated offender;
+2. a suitable target;
+3. absence of capable guardianship.
+
+```{mermaid}
+flowchart LR
+    A[Motivated offender] --> D[Crime event]
+    B[Suitable target] --> D
+    C[Weak guardianship] --> D
+```
+
+This framework is especially useful for burglary, theft, vehicle crime, and shoplifting.
+
+## Target suitability
+
+A target is more suitable when it is valuable, visible, accessible, removable, and weakly protected.
+
+For example, a bicycle locked in a hidden alley with a weak lock is more suitable than a bicycle locked in a crowded area with strong surveillance.
+
+Target suitability depends on:
+
+- value;
+- portability;
+- visibility;
+- accessibility;
+- traceability;
+- guardianship;
+- resale possibilities.
+
+## Guardianship
+
+Guardianship does not only mean police. It can include:
+
+- neighbours;
+- passers-by;
+- staff;
+- lighting;
+- locks;
+- alarms;
+- CCTV;
+- platform moderation;
+- transaction monitoring;
+- design of space.
+
+Guardianship changes the expected risk and difficulty of offending.
+
+## Measurement issues
+
+Property crime has several measurement problems.
+
+| Issue | Why it matters |
+|---|---|
+| Insurance incentives | some incidents are reported mainly for claims |
+| Low-value offences | small losses may not be reported |
+| Business reporting | firms may record losses internally rather than report |
+| Repeat victimization | one location or person may experience many events |
+| Classification | theft, burglary, robbery, and fraud may be separated legally |
+| Online resale | stolen property markets may be hard to observe |
+
+Recorded property crime can fall because offending falls, but also because reporting falls or insurance behaviour changes.
+
+## A simple target-selection model
+
+A property offender may choose among possible targets by comparing expected gain and expected cost.
+
+A simple expression is:
+
+$$
+\text{Expected payoff}
+=
+\text{value of target}
+-
+\Pr(\text{caught}) \times \text{sanction}
+-
+\text{effort cost}.
+$$
+
+The offender chooses the target with the highest expected payoff.
+
+```{mermaid}
+flowchart LR
+    A[Target value] --> D[Expected payoff]
+    B[Detection risk] --> D
+    C[Effort cost] --> D
+    D --> E[Target choice]
+    E --> F[Crime concentration]
+```
+
+This model explains why crime can cluster around attractive targets and weakly guarded places.
+
+## Displacement
+
+Property crime interventions often raise the issue of displacement.
+
+If one target becomes harder, offending may move to:
+
+- another place;
+- another time;
+- another target;
+- another method;
+- another offence type.
+
+```{mermaid}
+flowchart TD
+    A[Intervention] --> B[Target becomes harder]
+    B --> C{Offender adapts?}
+    C -->|No| D[Crime reduction]
+    C -->|Yes| E[Displacement]
+    E --> F[Place]
+    E --> G[Time]
+    E --> H[Target]
+    E --> I[Method]
+```
+
+Displacement is possible, but not automatic. Some interventions reduce crime without full displacement because offenders do not always find equally attractive alternatives.
+
+## Policy trade-offs
+
+| Policy | Mechanism | Possible risk |
+|---|---|---|
+| Better locks | increases effort cost | benefits depend on adoption |
+| CCTV | increases detection risk | may shift crime elsewhere |
+| Street lighting | increases guardianship | effect varies by context |
+| Hotspot patrol | increases perceived risk | may affect trust |
+| Product marking | lowers resale value | requires market checks |
+| Platform monitoring | disrupts stolen-goods markets | privacy and enforcement concerns |
+
+## Common mistakes
+
+### 1. Treating property crime as purely economic
+
+Material gain matters, but peer influence, drug markets, habit, status, and opportunity may also matter.
+
+### 2. Ignoring target suitability
+
+Not all targets are equally attractive or accessible.
+
+### 3. Assuming displacement is complete
+
+Offenders may not perfectly substitute to other targets.
+
+### 4. Treating recorded crime as true crime
+
+Reporting varies by value, insurance, trust, and victim type.
+
+### 5. Ignoring repeat victimization
+
+Some people, firms, or places are victimized repeatedly.
+
+## Checklist for analysing property crime
+
+1. What kind of property crime is being studied?
+2. What is the target?
+3. What makes the target suitable?
+4. What guardianship exists?
+5. What is the expected gain?
+6. What is the perceived risk?
+7. How is the crime reported and recorded?
+8. Is repeat victimization present?
+9. Could displacement occur?
+10. What policy mechanism is being used?
+
+## Related pages
+
+- [Topics](index.qmd)
+- [Opportunity and routine activity](../mechanisms/opportunity-routine.qmd)
+- [Inspection games](../models/inspection-games.qmd)
+- [Allocation dynamics](../models/allocation-dynamics.qmd)
+- [Reporting and trust](../models/reporting-trust.qmd)
+- [Metrics](../../../notes/metrics.qmd)

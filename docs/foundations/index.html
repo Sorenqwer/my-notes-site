@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -125,9 +129,32 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#map-of-the-foundations-section" id="toc-map-of-the-foundations-section" class="nav-link active" data-scroll-target="#map-of-the-foundations-section">Map of the foundations section</a></li>
+  <li><a href="#main-foundation-pages" id="toc-main-foundation-pages" class="nav-link" data-scroll-target="#main-foundation-pages">Main foundation pages</a></li>
+  <li><a href="#how-these-tools-connect" id="toc-how-these-tools-connect" class="nav-link" data-scroll-target="#how-these-tools-connect">How these tools connect</a></li>
+  <li><a href="#suggested-reading-order" id="toc-suggested-reading-order" class="nav-link" data-scroll-target="#suggested-reading-order">Suggested reading order</a></li>
+  <li><a href="#foundations-for-game-theory" id="toc-foundations-for-game-theory" class="nav-link" data-scroll-target="#foundations-for-game-theory">Foundations for game theory</a></li>
+  <li><a href="#foundations-for-criminology" id="toc-foundations-for-criminology" class="nav-link" data-scroll-target="#foundations-for-criminology">Foundations for criminology</a></li>
+  <li><a href="#foundations-for-psychology" id="toc-foundations-for-psychology" class="nav-link" data-scroll-target="#foundations-for-psychology">Foundations for psychology</a></li>
+  <li><a href="#how-to-use-the-foundation-pages" id="toc-how-to-use-the-foundation-pages" class="nav-link" data-scroll-target="#how-to-use-the-foundation-pages">How to use the foundation pages</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#treating-foundations-as-detached-mathematics" id="toc-treating-foundations-as-detached-mathematics" class="nav-link" data-scroll-target="#treating-foundations-as-detached-mathematics">1. Treating foundations as detached mathematics</a></li>
+  <li><a href="#memorising-formulas-without-knowing-the-role" id="toc-memorising-formulas-without-knowing-the-role" class="nav-link" data-scroll-target="#memorising-formulas-without-knowing-the-role">2. Memorising formulas without knowing the role</a></li>
+  <li><a href="#skipping-assumptions" id="toc-skipping-assumptions" class="nav-link" data-scroll-target="#skipping-assumptions">3. Skipping assumptions</a></li>
+  <li><a href="#ignoring-interpretation" id="toc-ignoring-interpretation" class="nav-link" data-scroll-target="#ignoring-interpretation">4. Ignoring interpretation</a></li>
+  </ul></li>
+  <li><a href="#related-sections" id="toc-related-sections" class="nav-link" data-scroll-target="#related-sections">Related sections</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -136,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -148,17 +175,311 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<ul>
-<li><a href="../foundations/linear-algebra.html">Linear algebra</a></li>
-<li><a href="../foundations/probability.html">Probability</a></li>
+<p>The foundations section collects the mathematical and conceptual tools used across the site. These pages are not separate from the substantive notes. They are the background machinery behind game theory, criminology models, psychology overlaps, and rationality under uncertainty.</p>
+<p>The aim is practical: each foundation page should help explain how to read, build, or interpret a model.</p>
+<section id="map-of-the-foundations-section" class="level2">
+<h2 class="anchored" data-anchor-id="map-of-the-foundations-section">Map of the foundations section</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Foundations] --&gt; B[Optimization]
+    A --&gt; C[Probability]
+    A --&gt; D[Dynamic Reasoning]
+    A --&gt; E[Fixed Points]
+    A --&gt; F[Convexity]
+    A --&gt; G[Linear Algebra]
+
+    B --&gt; B1[Choice]
+    B --&gt; B2[Argmax]
+    B --&gt; B3[Best Responses]
+
+    C --&gt; C1[Uncertainty]
+    C --&gt; C2[Beliefs]
+    C --&gt; C3[Bayesian Updating]
+
+    D --&gt; D1[Timing]
+    D --&gt; D2[Backward Induction]
+    D --&gt; D3[Credibility]
+
+    E --&gt; E1[Equilibrium as fixed point]
+    E --&gt; E2[Existence arguments]
+
+    F --&gt; F1[Concavity]
+    F --&gt; F2[Feasible sets]
+    F --&gt; F3[Optimization structure]
+
+    G --&gt; G1[Vectors]
+    G --&gt; G2[Matrices]
+    G --&gt; G3[Systems]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The core idea is that formal models usually combine several foundations at once. A Bayesian game, for example, uses probability for beliefs, optimization for best responses, and fixed-point reasoning for equilibrium.</p>
+</section>
+<section id="main-foundation-pages" class="level2">
+<h2 class="anchored" data-anchor-id="main-foundation-pages">Main foundation pages</h2>
+<div class="grid gap-3">
+<div class="g-col-12 g-col-md-6">
+<section id="optimization" class="level3 card">
+<h3 class="anchored" data-anchor-id="optimization">Optimization</h3>
+<p>The language of choice: objectives, constraints, argmax notation, first-order conditions, best responses, and comparative statics.</p>
+<p><a href="../foundations/optimization.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="probability" class="level3 card">
+<h3 class="anchored" data-anchor-id="probability">Probability</h3>
+<p>The language of uncertainty: events, random variables, expectation, mixed strategies, conditional probability, Bayes’ rule, signals, types, and posterior beliefs.</p>
+<p><a href="../foundations/probability.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="dynamic-reasoning" class="level3 card">
+<h3 class="anchored" data-anchor-id="dynamic-reasoning">Dynamic Reasoning</h3>
+<p>The language of time: histories, continuation payoffs, backward induction, credibility, sequential rationality, and dynamic incentives.</p>
+<p><a href="../foundations/dynamic-reasoning.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="fixed-points" class="level3 card">
+<h3 class="anchored" data-anchor-id="fixed-points">Fixed Points</h3>
+<p>The language of equilibrium existence: when a process, mapping, or best-response system returns to itself.</p>
+<p><a href="../foundations/fixed-points.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="convexity" class="level3 card">
+<h3 class="anchored" data-anchor-id="convexity">Convexity</h3>
+<p>The language of shape: convex sets, concavity, mixtures, feasible regions, and why optimization problems become easier when structure is well behaved.</p>
+<p><a href="../foundations/convexity.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="linear-algebra" class="level3 card">
+<h3 class="anchored" data-anchor-id="linear-algebra">Linear Algebra</h3>
+<p>The language of systems: vectors, matrices, transformations, linear equations, mixtures, and state representations.</p>
+<p><a href="../foundations/linear-algebra.html">Open →</a></p>
+</section>
+</div>
+</div>
+</section>
+<section id="how-these-tools-connect" class="level2">
+<h2 class="anchored" data-anchor-id="how-these-tools-connect">How these tools connect</h2>
+<p>Many models can be read as a chain:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Model primitives] --&gt; B[Choice problem]
+    B --&gt; C[Optimization]
+    C --&gt; D[Best response]
+    D --&gt; E[Equilibrium condition]
+    E --&gt; F[Interpretation]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>For models with uncertainty, the chain becomes:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Uncertain state or type] --&gt; B[Prior belief]
+    B --&gt; C[Signal or action]
+    C --&gt; D[Posterior belief]
+    D --&gt; E[Expected payoff]
+    E --&gt; F[Optimal action]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>For dynamic models, the chain becomes:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[History] --&gt; B[Continuation game]
+    B --&gt; C[Continuation payoff]
+    C --&gt; D[Credible action]
+    D --&gt; E[Current incentive]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>These diagrams are deliberately simple. Their purpose is to show that formal reasoning usually follows a small number of repeatable patterns.</p>
+</section>
+<section id="suggested-reading-order" class="level2">
+<h2 class="anchored" data-anchor-id="suggested-reading-order">Suggested reading order</h2>
+<p>If you are reading the site from the beginning, use this order:</p>
+<ol type="1">
 <li><a href="../foundations/optimization.html">Optimization</a></li>
-<li><a href="../foundations/convexity.html">Convexity &amp; concavity</a></li>
-<li><a href="../foundations/fixed-points.html">Fixed points &amp; correspondences</a></li>
+<li><a href="../foundations/probability.html">Probability</a></li>
 <li><a href="../foundations/dynamic-reasoning.html">Dynamic reasoning</a></li>
-<li><a href="../foundations/information-measure-lite.html">Information &amp; beliefs (measure-lite)</a></li>
+<li><a href="../foundations/fixed-points.html">Fixed points</a></li>
+<li><a href="../foundations/convexity.html">Convexity</a></li>
+<li><a href="../foundations/linear-algebra.html">Linear algebra</a></li>
+</ol>
+<p>This order works because optimization and probability appear almost everywhere. Dynamic reasoning becomes important once timing matters. Fixed points, convexity, and linear algebra become more important when the models become more abstract.</p>
+</section>
+<section id="foundations-for-game-theory" class="level2">
+<h2 class="anchored" data-anchor-id="foundations-for-game-theory">Foundations for game theory</h2>
+<p>Game theory uses all of these tools.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Foundation</th>
+<th>Use in game theory</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Optimization</td>
+<td>Best responses and payoff maximization</td>
+</tr>
+<tr class="even">
+<td>Probability</td>
+<td>Mixed strategies, beliefs, types, and signals</td>
+</tr>
+<tr class="odd">
+<td>Dynamic reasoning</td>
+<td>Sequential moves, credibility, and backward induction</td>
+</tr>
+<tr class="even">
+<td>Fixed points</td>
+<td>Existence of equilibrium</td>
+</tr>
+<tr class="odd">
+<td>Convexity</td>
+<td>Strategy spaces, mixtures, and well-behaved optimization</td>
+</tr>
+<tr class="even">
+<td>Linear algebra</td>
+<td>Mixed strategies, systems of equations, and matrix representation</td>
+</tr>
+</tbody>
+</table>
+<p>A Nash equilibrium can be understood as a fixed point of best-response reasoning. A Bayesian equilibrium combines optimization with beliefs. A dynamic equilibrium combines optimization with histories and continuation values.</p>
+</section>
+<section id="foundations-for-criminology" class="level2">
+<h2 class="anchored" data-anchor-id="foundations-for-criminology">Foundations for criminology</h2>
+<p>The same tools also appear in criminology.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Foundation</th>
+<th>Use in criminology</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Optimization</td>
+<td>Choice under incentives, sanctions, and opportunity</td>
+</tr>
+<tr class="even">
+<td>Probability</td>
+<td>Risk, detection, reporting, and uncertainty</td>
+</tr>
+<tr class="odd">
+<td>Dynamic reasoning</td>
+<td>deterrence, retaliation, reputation, and life-course processes</td>
+</tr>
+<tr class="even">
+<td>Fixed points</td>
+<td>social norms and stable patterns of behaviour</td>
+</tr>
+<tr class="odd">
+<td>Convexity</td>
+<td>trade-offs in policy design and resource allocation</td>
+</tr>
+<tr class="even">
+<td>Linear algebra</td>
+<td>networks, transitions, and population-level systems</td>
+</tr>
+</tbody>
+</table>
+<p>The goal is not to reduce crime to equations. The goal is to make assumptions visible and to understand how mechanisms generate predictions.</p>
+</section>
+<section id="foundations-for-psychology" class="level2">
+<h2 class="anchored" data-anchor-id="foundations-for-psychology">Foundations for psychology</h2>
+<p>Psychology overlaps with these foundations when studying belief formation, bounded reasoning, learning, preference, emotion, and social cognition.</p>
+<p>For example:</p>
+<ul>
+<li>probability helps describe belief updating;</li>
+<li>optimization helps define rational benchmarks;</li>
+<li>dynamic reasoning helps analyse planning and self-control;</li>
+<li>fixed points help describe stable expectations or norms;</li>
+<li>convexity helps formalise trade-offs;</li>
+<li>linear algebra helps represent cognitive or social systems.</li>
+</ul>
+<p>This is where the site’s broader theme appears: rationality is not only a property of isolated individuals. It is shaped by uncertainty, interaction, time, and institutions.</p>
+</section>
+<section id="how-to-use-the-foundation-pages" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-use-the-foundation-pages">How to use the foundation pages</h2>
+<p>Each foundation page should be read with three questions:</p>
+<ol type="1">
+<li><strong>What problem does this tool solve?</strong></li>
+<li><strong>Where does it appear in a model?</strong></li>
+<li><strong>What mistake does it help prevent?</strong></li>
+</ol>
+<p>For example, optimization prevents vague claims about “choosing well.” Probability prevents vague claims about “uncertainty.” Dynamic reasoning prevents vague claims about “future threats.” Fixed points prevent vague claims about “stable outcomes.”</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="treating-foundations-as-detached-mathematics" class="level3">
+<h3 class="anchored" data-anchor-id="treating-foundations-as-detached-mathematics">1. Treating foundations as detached mathematics</h3>
+<p>The tools are useful because they organise substantive arguments. They should be connected to models and examples.</p>
+</section>
+<section id="memorising-formulas-without-knowing-the-role" class="level3">
+<h3 class="anchored" data-anchor-id="memorising-formulas-without-knowing-the-role">2. Memorising formulas without knowing the role</h3>
+<p>A formula matters because it does something in an argument: maximizes, updates, compares, verifies, or predicts.</p>
+</section>
+<section id="skipping-assumptions" class="level3">
+<h3 class="anchored" data-anchor-id="skipping-assumptions">3. Skipping assumptions</h3>
+<p>Most formal results depend on assumptions such as differentiability, concavity, complete information, common knowledge, or finite action spaces.</p>
+</section>
+<section id="ignoring-interpretation" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-interpretation">4. Ignoring interpretation</h3>
+<p>A mathematical solution is not the end of the analysis. The final step is to explain what the result means.</p>
+</section>
+</section>
+<section id="related-sections" class="level2">
+<h2 class="anchored" data-anchor-id="related-sections">Related sections</h2>
+<ul>
+<li><a href="../notes/game-theory.html">Game Theory Notes</a></li>
+<li><a href="../notes/game-types/index.html">Game types</a></li>
+<li><a href="../notes/equilibriums/index.html">Equilibrium concepts</a></li>
+<li><a href="../criminology/notes/index.html">Criminology notes</a></li>
+<li><a href="../psychology/index.html">Psychology</a></li>
 </ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

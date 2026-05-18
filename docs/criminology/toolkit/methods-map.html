@@ -134,11 +134,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#matching-questions-to-methods" id="toc-matching-questions-to-methods" class="nav-link active" data-scroll-target="#matching-questions-to-methods">Matching questions to methods</a></li>
+  <li><a href="#the-basic-decision" id="toc-the-basic-decision" class="nav-link active" data-scroll-target="#the-basic-decision">The basic decision</a></li>
   <li><a href="#descriptive-questions" id="toc-descriptive-questions" class="nav-link" data-scroll-target="#descriptive-questions">Descriptive questions</a></li>
   <li><a href="#mechanism-questions" id="toc-mechanism-questions" class="nav-link" data-scroll-target="#mechanism-questions">Mechanism questions</a></li>
   <li><a href="#causal-questions" id="toc-causal-questions" class="nav-link" data-scroll-target="#causal-questions">Causal questions</a></li>
   <li><a href="#prediction-questions" id="toc-prediction-questions" class="nav-link" data-scroll-target="#prediction-questions">Prediction questions</a></li>
+  <li><a href="#interpretive-questions" id="toc-interpretive-questions" class="nav-link" data-scroll-target="#interpretive-questions">Interpretive questions</a></li>
+  <li><a href="#evaluation-questions" id="toc-evaluation-questions" class="nav-link" data-scroll-target="#evaluation-questions">Evaluation questions</a></li>
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data sources</a></li>
+  <li><a href="#matching-table" id="toc-matching-table" class="nav-link" data-scroll-target="#matching-table">Matching table</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#using-a-causal-language-with-descriptive-evidence" id="toc-using-a-causal-language-with-descriptive-evidence" class="nav-link" data-scroll-target="#using-a-causal-language-with-descriptive-evidence">1. Using a causal language with descriptive evidence</a></li>
+  <li><a href="#treating-prediction-as-explanation" id="toc-treating-prediction-as-explanation" class="nav-link" data-scroll-target="#treating-prediction-as-explanation">2. Treating prediction as explanation</a></li>
+  <li><a href="#ignoring-measurement-process" id="toc-ignoring-measurement-process" class="nav-link" data-scroll-target="#ignoring-measurement-process">3. Ignoring measurement process</a></li>
+  <li><a href="#choosing-method-before-question" id="toc-choosing-method-before-question" class="nav-link" data-scroll-target="#choosing-method-before-question">4. Choosing method before question</a></li>
+  <li><a href="#ignoring-implementation" id="toc-ignoring-implementation" class="nav-link" data-scroll-target="#ignoring-implementation">5. Ignoring implementation</a></li>
+  <li><a href="#overgeneralizing-from-one-data-source" id="toc-overgeneralizing-from-one-data-source" class="nav-link" data-scroll-target="#overgeneralizing-from-one-data-source">6. Overgeneralizing from one data source</a></li>
+  </ul></li>
+  <li><a href="#method-selection-checklist" id="toc-method-selection-checklist" class="nav-link" data-scroll-target="#method-selection-checklist">Method-selection checklist</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -164,37 +179,51 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="matching-questions-to-methods" class="level2">
-<h2 class="anchored" data-anchor-id="matching-questions-to-methods">Matching questions to methods</h2>
-<p>Different research questions call for different empirical strategies.</p>
+<p>A method should match the research question. Criminology uses many kinds of evidence because crime is partly hidden, institutionally recorded, socially interpreted, and unevenly distributed.</p>
+<p>This page maps common research questions to suitable methods.</p>
+<section id="the-basic-decision" class="level2">
+<h2 class="anchored" data-anchor-id="the-basic-decision">The basic decision</h2>
+<p>The first question is not “Which method should I use?” but:</p>
+<blockquote class="blockquote">
+<p>What kind of question am I asking?</p>
+</blockquote>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TD
-    A[Research Question] --&gt; B[Describe Patterns]
-    A --&gt; C[Explain Mechanisms]
-    A --&gt; D[Estimate Causal Effects]
-    A --&gt; E[Predict Risk or Outcomes]
- 
-    B --&gt; B1[Descriptive Statistics]
-    B --&gt; B2[Maps and Trend Plots]
-    B --&gt; B3[Typologies]
- 
-    C --&gt; C1[Theory Building]
-    C --&gt; C2[Qualitative Evidence]
-    C --&gt; C3[Process Tracing]
- 
+    A[Research question] --&gt; B[Describe patterns]
+    A --&gt; C[Explain mechanisms]
+    A --&gt; D[Estimate causal effects]
+    A --&gt; E[Predict risk or outcomes]
+    A --&gt; F[Interpret meaning or experience]
+    A --&gt; G[Evaluate institutions or policy]
+
+    B --&gt; B1[Descriptive statistics]
+    B --&gt; B2[Maps and trend plots]
+
+    C --&gt; C1[Theory building]
+    C --&gt; C2[Process tracing]
+    C --&gt; C3[Qualitative evidence]
+
     D --&gt; D1[Experiments]
-    D --&gt; D2[Natural Experiments]
-    D --&gt; D3[Difference-in-Differences]
-    D --&gt; D4[Regression Discontinuity]
-    D --&gt; D5[Instrumental Variables]
- 
-    E --&gt; E1[Supervised Learning]
-    E --&gt; E2[Validation and Calibration]
-    E --&gt; E3[Forecast Comparison]
+    D --&gt; D2[Quasi-experiments]
+    D --&gt; D3[Difference-in-differences]
+    D --&gt; D4[Regression discontinuity]
+    D --&gt; D5[Instrumental variables]
+
+    E --&gt; E1[Prediction models]
+    E --&gt; E2[Validation]
+    E --&gt; E3[Calibration]
+
+    F --&gt; F1[Interviews]
+    F --&gt; F2[Ethnography]
+    F --&gt; F3[Discourse or document analysis]
+
+    G --&gt; G1[Process evaluation]
+    G --&gt; G2[Outcome evaluation]
+    G --&gt; G3[Cost-benefit analysis]
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -204,19 +233,356 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="descriptive-questions" class="level2">
 <h2 class="anchored" data-anchor-id="descriptive-questions">Descriptive questions</h2>
-<p>Use descriptive statistics, maps, trend plots, and typologies when the question is: <em>what is happening, where, and to whom?</em></p>
+<p>Descriptive questions ask:</p>
+<blockquote class="blockquote">
+<p>What is happening?</p>
+</blockquote>
+<p>Examples:</p>
+<ul>
+<li>How has recorded burglary changed over time?</li>
+<li>Which areas have high rates of violent crime?</li>
+<li>Which groups report lower trust in police?</li>
+<li>How do case outcomes vary across courts?</li>
+</ul>
+<p>Useful methods include:</p>
+<ul>
+<li>summary statistics;</li>
+<li>rates and ratios;</li>
+<li>time-series plots;</li>
+<li>maps;</li>
+<li>cross-tabulations;</li>
+<li>administrative data summaries;</li>
+<li>victimization survey summaries.</li>
+</ul>
+<p>Description is not weak. Good description is often the foundation for good explanation.</p>
 </section>
 <section id="mechanism-questions" class="level2">
 <h2 class="anchored" data-anchor-id="mechanism-questions">Mechanism questions</h2>
-<p>Use theory-building, qualitative evidence, process tracing, or model-based explanation when the question is: <em>why does this pattern arise?</em></p>
+<p>Mechanism questions ask:</p>
+<blockquote class="blockquote">
+<p>How or why does this pattern arise?</p>
+</blockquote>
+<p>Examples:</p>
+<ul>
+<li>Why might victims choose not to report?</li>
+<li>How do peer groups shape offending?</li>
+<li>How does labeling affect future opportunity?</li>
+<li>Why might aggressive enforcement reduce trust?</li>
+</ul>
+<p>Useful methods include:</p>
+<ul>
+<li>qualitative interviews;</li>
+<li>ethnography;</li>
+<li>case studies;</li>
+<li>process tracing;</li>
+<li>formal modelling;</li>
+<li>theory-guided empirical analysis;</li>
+<li>mixed-method designs.</li>
+</ul>
+<p>Mechanism evidence often needs more than one source.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Observed pattern] --&gt; B[Possible mechanism]
+    B --&gt; C[Observable implication]
+    C --&gt; D[Evidence]
+    D --&gt; E[Revised explanation]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 </section>
 <section id="causal-questions" class="level2">
 <h2 class="anchored" data-anchor-id="causal-questions">Causal questions</h2>
-<p>Use experiments, natural experiments, difference-in-differences, regression discontinuity, instrumental variables, or matching when the question is: <em>what is the effect of an intervention or exposure?</em></p>
+<p>Causal questions ask:</p>
+<blockquote class="blockquote">
+<p>What is the effect of X on Y?</p>
+</blockquote>
+<p>Examples:</p>
+<ul>
+<li>Does hotspot policing reduce crime?</li>
+<li>Does incarceration reduce future offending?</li>
+<li>Does CCTV reduce theft?</li>
+<li>Does procedural justice training improve trust?</li>
+<li>Does a sentencing reform change prison populations?</li>
+</ul>
+<p>Useful methods include:</p>
+<ul>
+<li>randomized experiments;</li>
+<li>natural experiments;</li>
+<li>difference-in-differences;</li>
+<li>regression discontinuity;</li>
+<li>instrumental variables;</li>
+<li>matching;</li>
+<li>panel models.</li>
+</ul>
+<p>Causal designs need a credible comparison. The key problem is usually the counterfactual:</p>
+<blockquote class="blockquote">
+<p>What would have happened without the treatment?</p>
+</blockquote>
 </section>
 <section id="prediction-questions" class="level2">
 <h2 class="anchored" data-anchor-id="prediction-questions">Prediction questions</h2>
-<p>Use supervised learning, validation, calibration checks, and error analysis when the question is: <em>who or where is at higher risk?</em></p>
+<p>Prediction questions ask:</p>
+<blockquote class="blockquote">
+<p>Can we forecast risk or classify outcomes?</p>
+</blockquote>
+<p>Examples:</p>
+<ul>
+<li>Which locations are at higher risk of burglary?</li>
+<li>Which cases are likely to drop out?</li>
+<li>Which offenders are likely to reoffend?</li>
+<li>Which online accounts are likely to be fraudulent?</li>
+</ul>
+<p>Useful methods include:</p>
+<ul>
+<li>logistic regression;</li>
+<li>decision trees;</li>
+<li>random forests;</li>
+<li>gradient boosting;</li>
+<li>survival models;</li>
+<li>validation and calibration checks;</li>
+<li>error analysis.</li>
+</ul>
+<p>Prediction is not the same as causal explanation. A variable may predict an outcome without causing it.</p>
+</section>
+<section id="interpretive-questions" class="level2">
+<h2 class="anchored" data-anchor-id="interpretive-questions">Interpretive questions</h2>
+<p>Interpretive questions ask:</p>
+<blockquote class="blockquote">
+<p>What meaning do actors attach to behaviour, institutions, or experiences?</p>
+</blockquote>
+<p>Examples:</p>
+<ul>
+<li>How do young people understand police stops?</li>
+<li>How do victims interpret justice?</li>
+<li>How do offenders justify rule-breaking?</li>
+<li>How do practitioners understand discretion?</li>
+</ul>
+<p>Useful methods include:</p>
+<ul>
+<li>interviews;</li>
+<li>focus groups;</li>
+<li>ethnography;</li>
+<li>discourse analysis;</li>
+<li>document analysis;</li>
+<li>thematic coding.</li>
+</ul>
+<p>Interpretive work is especially useful when the research question concerns meaning, identity, legitimacy, fear, stigma, or experience.</p>
+</section>
+<section id="evaluation-questions" class="level2">
+<h2 class="anchored" data-anchor-id="evaluation-questions">Evaluation questions</h2>
+<p>Evaluation questions ask:</p>
+<blockquote class="blockquote">
+<p>Did a programme or policy work, how did it work, and at what cost?</p>
+</blockquote>
+<p>Examples:</p>
+<ul>
+<li>Did an intervention reduce reoffending?</li>
+<li>Was the programme implemented as intended?</li>
+<li>Did the policy create displacement?</li>
+<li>Did the benefits justify the cost?</li>
+<li>Did the intervention affect groups unequally?</li>
+</ul>
+<p>Useful methods include:</p>
+<ul>
+<li>process evaluation;</li>
+<li>outcome evaluation;</li>
+<li>impact evaluation;</li>
+<li>cost-benefit analysis;</li>
+<li>implementation analysis;</li>
+<li>mixed-method evaluation.</li>
+</ul>
+<p>A strong evaluation separates:</p>
+<ol type="1">
+<li>whether the programme was implemented;</li>
+<li>whether outcomes changed;</li>
+<li>whether the programme caused the change;</li>
+<li>whether the change was worth the cost.</li>
+</ol>
+</section>
+<section id="data-sources" class="level2">
+<h2 class="anchored" data-anchor-id="data-sources">Data sources</h2>
+<p>Criminology uses multiple data sources.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data source</th>
+<th>Strength</th>
+<th>Limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Police records</td>
+<td>detailed official events</td>
+<td>affected by reporting and recording</td>
+</tr>
+<tr class="even">
+<td>Court records</td>
+<td>legal process and outcomes</td>
+<td>only includes cases entering courts</td>
+</tr>
+<tr class="odd">
+<td>Prison/probation records</td>
+<td>correctional contact</td>
+<td>selected population</td>
+</tr>
+<tr class="even">
+<td>Victimization surveys</td>
+<td>captures unreported victimization</td>
+<td>recall and survey design issues</td>
+</tr>
+<tr class="odd">
+<td>Self-report surveys</td>
+<td>captures hidden offending</td>
+<td>honesty and sample issues</td>
+</tr>
+<tr class="even">
+<td>Interviews</td>
+<td>meaning and mechanism</td>
+<td>limited generalizability</td>
+</tr>
+<tr class="odd">
+<td>Ethnography</td>
+<td>deep contextual insight</td>
+<td>time-intensive and local</td>
+</tr>
+<tr class="even">
+<td>Spatial data</td>
+<td>place concentration</td>
+<td>boundary and exposure issues</td>
+</tr>
+<tr class="odd">
+<td>Network data</td>
+<td>relational structure</td>
+<td>missing ties and privacy constraints</td>
+</tr>
+<tr class="even">
+<td>Digital trace data</td>
+<td>scale and behaviour logs</td>
+<td>platform bias and access limits</td>
+</tr>
+</tbody>
+</table>
+<p>No data source is perfect. The method should acknowledge what the data can and cannot show.</p>
+</section>
+<section id="matching-table" class="level2">
+<h2 class="anchored" data-anchor-id="matching-table">Matching table</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Question type</th>
+<th>Example question</th>
+<th>Suitable methods</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Descriptive</td>
+<td>Where is crime concentrated?</td>
+<td>maps, rates, trend plots</td>
+</tr>
+<tr class="even">
+<td>Mechanism</td>
+<td>Why do victims not report?</td>
+<td>interviews, process tracing, reporting model</td>
+</tr>
+<tr class="odd">
+<td>Causal</td>
+<td>Did the policy reduce crime?</td>
+<td>experiment, DiD, RD, IV</td>
+</tr>
+<tr class="even">
+<td>Predictive</td>
+<td>Who is at high risk?</td>
+<td>machine learning, validation, calibration</td>
+</tr>
+<tr class="odd">
+<td>Interpretive</td>
+<td>How do people experience policing?</td>
+<td>interviews, ethnography</td>
+</tr>
+<tr class="even">
+<td>Institutional</td>
+<td>How does the court process cases?</td>
+<td>administrative data, process evaluation</td>
+</tr>
+<tr class="odd">
+<td>Network</td>
+<td>How does crime diffuse?</td>
+<td>network analysis, diffusion models</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="using-a-causal-language-with-descriptive-evidence" class="level3">
+<h3 class="anchored" data-anchor-id="using-a-causal-language-with-descriptive-evidence">1. Using a causal language with descriptive evidence</h3>
+<p>A correlation or trend does not automatically identify an effect.</p>
+</section>
+<section id="treating-prediction-as-explanation" class="level3">
+<h3 class="anchored" data-anchor-id="treating-prediction-as-explanation">2. Treating prediction as explanation</h3>
+<p>A predictive variable is not necessarily a causal mechanism.</p>
+</section>
+<section id="ignoring-measurement-process" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-measurement-process">3. Ignoring measurement process</h3>
+<p>Crime data are produced through reporting, detection, and recording.</p>
+</section>
+<section id="choosing-method-before-question" class="level3">
+<h3 class="anchored" data-anchor-id="choosing-method-before-question">4. Choosing method before question</h3>
+<p>The research question should determine the method.</p>
+</section>
+<section id="ignoring-implementation" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-implementation">5. Ignoring implementation</h3>
+<p>A policy cannot work as designed if it was not implemented as designed.</p>
+</section>
+<section id="overgeneralizing-from-one-data-source" class="level3">
+<h3 class="anchored" data-anchor-id="overgeneralizing-from-one-data-source">6. Overgeneralizing from one data source</h3>
+<p>Different sources capture different parts of the crime process.</p>
+</section>
+</section>
+<section id="method-selection-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="method-selection-checklist">Method-selection checklist</h2>
+<ol type="1">
+<li>What is the research question?</li>
+<li>Is it descriptive, causal, predictive, interpretive, institutional, or mechanism-focused?</li>
+<li>What is the unit of analysis?</li>
+<li>What is the outcome?</li>
+<li>Is the outcome true crime, recorded crime, reporting, detection, or institutional response?</li>
+<li>What comparison is needed?</li>
+<li>What data source is available?</li>
+<li>What does the data miss?</li>
+<li>What alternative explanations remain?</li>
+<li>What kind of claim can the method support?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../../criminology/toolkit/index.html">Criminology Toolkit</a></li>
+<li><a href="../../criminology/toolkit/glossary.html">Glossary</a></li>
+<li><a href="../../criminology/toolkit/modeling-checklist.html">Modeling Checklist</a></li>
+<li><a href="../../criminology/notes/foundations/index.html">Criminology Foundations</a></li>
+<li><a href="../../notes/metrics.html">Metrics</a></li>
+<li><a href="../../foundations/probability.html">Probability</a></li>
+</ul>
 
 
 </section>

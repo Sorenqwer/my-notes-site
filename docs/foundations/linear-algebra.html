@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Linear algebra – Margins of Rationality</title>
+<title>Linear Algebra – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -159,9 +163,31 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#mixed-strategies-as-vectors" id="toc-mixed-strategies-as-vectors" class="nav-link active" data-scroll-target="#mixed-strategies-as-vectors">Mixed strategies as vectors</a></li>
-  <li><a href="#payoff-matrices-and-expected-payoff" id="toc-payoff-matrices-and-expected-payoff" class="nav-link" data-scroll-target="#payoff-matrices-and-expected-payoff">Payoff matrices and expected payoff</a></li>
-  <li><a href="#example-22-game" id="toc-example-22-game" class="nav-link" data-scroll-target="#example-22-game">Example: 2×2 game</a></li>
+  <li><a href="#why-linear-algebra-matters" id="toc-why-linear-algebra-matters" class="nav-link active" data-scroll-target="#why-linear-algebra-matters">Why linear algebra matters</a></li>
+  <li><a href="#vectors" id="toc-vectors" class="nav-link" data-scroll-target="#vectors">Vectors</a></li>
+  <li><a href="#vector-addition" id="toc-vector-addition" class="nav-link" data-scroll-target="#vector-addition">Vector addition</a></li>
+  <li><a href="#scalar-multiplication" id="toc-scalar-multiplication" class="nav-link" data-scroll-target="#scalar-multiplication">Scalar multiplication</a></li>
+  <li><a href="#dot-product" id="toc-dot-product" class="nav-link" data-scroll-target="#dot-product">Dot product</a></li>
+  <li><a href="#matrices" id="toc-matrices" class="nav-link" data-scroll-target="#matrices">Matrices</a></li>
+  <li><a href="#matrix-vector-multiplication" id="toc-matrix-vector-multiplication" class="nav-link" data-scroll-target="#matrix-vector-multiplication">Matrix-vector multiplication</a></li>
+  <li><a href="#systems-of-equations" id="toc-systems-of-equations" class="nav-link" data-scroll-target="#systems-of-equations">Systems of equations</a></li>
+  <li><a href="#payoff-matrices" id="toc-payoff-matrices" class="nav-link" data-scroll-target="#payoff-matrices">Payoff matrices</a></li>
+  <li><a href="#expected-payoff-with-matrices" id="toc-expected-payoff-with-matrices" class="nav-link" data-scroll-target="#expected-payoff-with-matrices">Expected payoff with matrices</a></li>
+  <li><a href="#probability-vectors" id="toc-probability-vectors" class="nav-link" data-scroll-target="#probability-vectors">Probability vectors</a></li>
+  <li><a href="#transition-matrices" id="toc-transition-matrices" class="nav-link" data-scroll-target="#transition-matrices">Transition matrices</a></li>
+  <li><a href="#networks-and-adjacency-matrices" id="toc-networks-and-adjacency-matrices" class="nav-link" data-scroll-target="#networks-and-adjacency-matrices">Networks and adjacency matrices</a></li>
+  <li><a href="#eigenvectors-and-steady-states" id="toc-eigenvectors-and-steady-states" class="nav-link" data-scroll-target="#eigenvectors-and-steady-states">Eigenvectors and steady states</a></li>
+  <li><a href="#linear-algebra-and-fixed-points" id="toc-linear-algebra-and-fixed-points" class="nav-link" data-scroll-target="#linear-algebra-and-fixed-points">Linear algebra and fixed points</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#ignoring-dimensions" id="toc-ignoring-dimensions" class="nav-link" data-scroll-target="#ignoring-dimensions">1. Ignoring dimensions</a></li>
+  <li><a href="#confusing-rows-and-columns" id="toc-confusing-rows-and-columns" class="nav-link" data-scroll-target="#confusing-rows-and-columns">2. Confusing rows and columns</a></li>
+  <li><a href="#treating-matrices-as-just-tables" id="toc-treating-matrices-as-just-tables" class="nav-link" data-scroll-target="#treating-matrices-as-just-tables">3. Treating matrices as just tables</a></li>
+  <li><a href="#forgetting-probability-constraints" id="toc-forgetting-probability-constraints" class="nav-link" data-scroll-target="#forgetting-probability-constraints">4. Forgetting probability constraints</a></li>
+  <li><a href="#confusing-adjacency-with-intensity" id="toc-confusing-adjacency-with-intensity" class="nav-link" data-scroll-target="#confusing-adjacency-with-intensity">5. Confusing adjacency with intensity</a></li>
+  </ul></li>
+  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist">Checklist</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -170,7 +196,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Linear algebra</h1>
+<h1 class="title">Linear Algebra</h1>
 </div>
 
 
@@ -187,53 +213,473 @@ window.Quarto = {
 </header>
 
 
-<section id="mixed-strategies-as-vectors" class="level2">
-<h2 class="anchored" data-anchor-id="mixed-strategies-as-vectors">Mixed strategies as vectors</h2>
-<p>A mixed strategy is a probability vector over pure actions. If player <span class="math inline">\(i\)</span> has <span class="math inline">\(m\)</span> pure actions, a mixed strategy is</p>
-<p><span class="math display">\[
-\Delta^{m-1}=\left\{x\in\mathbb{R}^m:\; x_k\ge 0\;\forall k,\;\sum_{k=1}^m x_k = 1\right\},
-\]</span></p>
-<p>the <span class="math inline">\((m-1)\)</span>-simplex.</p>
-<p><strong>Intuition.</strong> You can think of <span class="math inline">\(x\)</span> as a “weighting” of actions. The simplex condition just says: nonnegative weights that sum to 1.</p>
+<p>Linear algebra is the language of vectors, matrices, systems, and transformations. It appears in game theory, statistics, networks, Markov processes, mixed strategies, and models with many interacting parts.</p>
+<p>This page gives the basic ideas needed for reading the notes.</p>
+<section id="why-linear-algebra-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-linear-algebra-matters">Why linear algebra matters</h2>
+<p>Many objects in social science can be represented as lists of numbers.</p>
+<p>Examples:</p>
+<ul>
+<li>a mixed strategy;</li>
+<li>a belief over states;</li>
+<li>a payoff vector;</li>
+<li>a network adjacency matrix;</li>
+<li>a transition matrix;</li>
+<li>a feature vector in data analysis;</li>
+<li>a system of equations.</li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Linear Algebra] --&gt; B[Vectors]
+    A --&gt; C[Matrices]
+    A --&gt; D[Systems of equations]
+    A --&gt; E[Transformations]
+    A --&gt; F[Networks and transitions]
+
+    B --&gt; B1[Strategies]
+    B --&gt; B2[Beliefs]
+    B --&gt; B3[Payoffs]
+
+    C --&gt; C1[Games]
+    C --&gt; C2[Networks]
+    C --&gt; C3[Data]
+
+    F --&gt; F1[Markov chains]
+    F --&gt; F2[Diffusion]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The point is not to make everything abstract. The point is to organize many related numbers cleanly.</p>
 </section>
-<section id="payoff-matrices-and-expected-payoff" class="level2">
-<h2 class="anchored" data-anchor-id="payoff-matrices-and-expected-payoff">Payoff matrices and expected payoff</h2>
-<p>In a two-player normal-form game, let player 1 have <span class="math inline">\(m\)</span> actions and player 2 have <span class="math inline">\(n\)</span> actions. Let <span class="math inline">\(A\in\mathbb{R}^{m\times n}\)</span> be player 1’s payoff matrix (and <span class="math inline">\(B\)</span> for player 2). If player 1 plays <span class="math inline">\(x\in\Delta^{m-1}\)</span> and player 2 plays <span class="math inline">\(y\in\Delta^{n-1}\)</span>, then player 1’s expected payoff is</p>
+<section id="vectors" class="level2">
+<h2 class="anchored" data-anchor-id="vectors">Vectors</h2>
+<p>A vector is an ordered list of numbers.</p>
+<p>For example,</p>
 <p><span class="math display">\[
-u_1(x,y)=x^\top A y.
-\]</span></p>
-<p><strong>Intuition.</strong> First compute expected payoffs against each of player 2’s pure actions (<span class="math inline">\(Ay\)</span>). Then average those numbers using player 1’s mixing weights (<span class="math inline">\(x^\top\)</span>).</p>
-</section>
-<section id="example-22-game" class="level2">
-<h2 class="anchored" data-anchor-id="example-22-game">Example: 2×2 game</h2>
-<p>Suppose</p>
-<p><span class="math display">\[
-A=\begin{pmatrix}
-2 &amp; 0\\
-1 &amp; 3
-\end{pmatrix},\quad
-x=\begin{pmatrix}0.4\\0.6\end{pmatrix},\quad
-y=\begin{pmatrix}0.25\\0.75\end{pmatrix}.
-\]</span></p>
-<p>Compute</p>
-<p><span class="math display">\[
-Ay=
+x=
 \begin{pmatrix}
-2 &amp; 0\\
-1 &amp; 3
+2\\
+5\\
+1
+\end{pmatrix}.
+\]</span></p>
+<p>A vector can represent a point, a bundle, a strategy, a belief, or a collection of variables.</p>
+<p>In game theory, a mixed strategy over three actions may be written as</p>
+<p><span class="math display">\[
+\sigma=
+\begin{pmatrix}
+0.2\\
+0.5\\
+0.3
+\end{pmatrix}.
+\]</span></p>
+<p>The entries are probabilities, so they are nonnegative and sum to one.</p>
+</section>
+<section id="vector-addition" class="level2">
+<h2 class="anchored" data-anchor-id="vector-addition">Vector addition</h2>
+<p>If</p>
+<p><span class="math display">\[
+x=
+\begin{pmatrix}
+x_1\\
+x_2
 \end{pmatrix}
+\quad
+\text{and}
+\quad
+y=
 \begin{pmatrix}
-0.25\\0.75
+y_1\\
+y_2
+\end{pmatrix},
+\]</span></p>
+<p>then</p>
+<p><span class="math display">\[
+x+y=
+\begin{pmatrix}
+x_1+y_1\\
+x_2+y_2
+\end{pmatrix}.
+\]</span></p>
+<p>Vector addition is component-by-component.</p>
+</section>
+<section id="scalar-multiplication" class="level2">
+<h2 class="anchored" data-anchor-id="scalar-multiplication">Scalar multiplication</h2>
+<p>If <span class="math inline">\(\alpha\)</span> is a number and</p>
+<p><span class="math display">\[
+x=
+\begin{pmatrix}
+x_1\\
+x_2
+\end{pmatrix},
+\]</span></p>
+<p>then</p>
+<p><span class="math display">\[
+\alpha x=
+\begin{pmatrix}
+\alpha x_1\\
+\alpha x_2
+\end{pmatrix}.
+\]</span></p>
+<p>This is important for convex combinations:</p>
+<p><span class="math display">\[
+\alpha x+(1-\alpha)y.
+\]</span></p>
+</section>
+<section id="dot-product" class="level2">
+<h2 class="anchored" data-anchor-id="dot-product">Dot product</h2>
+<p>The dot product of two vectors is</p>
+<p><span class="math display">\[
+x \cdot y
+=
+\sum_{k=1}^{n}x_k y_k.
+\]</span></p>
+<p>For example,</p>
+<p><span class="math display">\[
+\begin{pmatrix}
+1\\
+2\\
+3
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+4\\
+5\\
+6
+\end{pmatrix}
+=
+1\cdot 4+2\cdot 5+3\cdot 6
+=
+32.
+\]</span></p>
+<p>In probability, expected value can be written as a dot product:</p>
+<p><span class="math display">\[
+\mathbb{E}[X]=p \cdot x.
+\]</span></p>
+<p>where <span class="math inline">\(p\)</span> is a probability vector and <span class="math inline">\(x\)</span> is an outcome vector.</p>
+</section>
+<section id="matrices" class="level2">
+<h2 class="anchored" data-anchor-id="matrices">Matrices</h2>
+<p>A matrix is a rectangular array of numbers.</p>
+<p>For example,</p>
+<p><span class="math display">\[
+A=
+\begin{pmatrix}
+1 &amp; 2\\
+3 &amp; 4
+\end{pmatrix}.
+\]</span></p>
+<p>Matrices can represent:</p>
+<ul>
+<li>payoff tables;</li>
+<li>systems of equations;</li>
+<li>transformations;</li>
+<li>networks;</li>
+<li>transition probabilities;</li>
+<li>data tables.</li>
+</ul>
+</section>
+<section id="matrix-vector-multiplication" class="level2">
+<h2 class="anchored" data-anchor-id="matrix-vector-multiplication">Matrix-vector multiplication</h2>
+<p>If</p>
+<p><span class="math display">\[
+A=
+\begin{pmatrix}
+1 &amp; 2\\
+3 &amp; 4
+\end{pmatrix}
+\quad
+\text{and}
+\quad
+x=
+\begin{pmatrix}
+5\\
+6
+\end{pmatrix},
+\]</span></p>
+<p>then</p>
+<p><span class="math display">\[
+Ax=
+\begin{pmatrix}
+1\cdot5+2\cdot6\\
+3\cdot5+4\cdot6
 \end{pmatrix}
 =
 \begin{pmatrix}
-0.5\\
-2.5
-\end{pmatrix},
-\qquad
-u_1(x,y)=x^\top(Ay)=0.4\cdot 0.5+0.6\cdot 2.5=1.7.
+17\\
+39
+\end{pmatrix}.
 \]</span></p>
-<p>So the mixed-vs-mixed expected payoff is <span class="math inline">\(1.7\)</span> for player 1.</p>
+<p>Matrix multiplication combines rows of the matrix with the vector.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Matrix] --&gt; C[Transformation]
+    B[Vector input] --&gt; C
+    C --&gt; D[Vector output]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="systems-of-equations" class="level2">
+<h2 class="anchored" data-anchor-id="systems-of-equations">Systems of equations</h2>
+<p>A linear system can be written as</p>
+<p><span class="math display">\[
+Ax=b.
+\]</span></p>
+<p>For example:</p>
+<p><span class="math display">\[
+\begin{cases}
+x+y=5,\\
+2x-y=1.
+\end{cases}
+\]</span></p>
+<p>This can be written as</p>
+<p><span class="math display">\[
+\begin{pmatrix}
+1 &amp; 1\\
+2 &amp; -1
+\end{pmatrix}
+\begin{pmatrix}
+x\\
+y
+\end{pmatrix}
+=
+\begin{pmatrix}
+5\\
+1
+\end{pmatrix}.
+\]</span></p>
+<p>Linear algebra gives compact methods for solving such systems.</p>
+</section>
+<section id="payoff-matrices" class="level2">
+<h2 class="anchored" data-anchor-id="payoff-matrices">Payoff matrices</h2>
+<p>A normal-form game can be represented with payoff matrices.</p>
+<p>For example, if Player 1 has two actions and Player 2 has two actions, Player 1’s payoffs can be written as</p>
+<p><span class="math display">\[
+U_1=
+\begin{pmatrix}
+u_1(A,L) &amp; u_1(A,R)\\
+u_1(B,L) &amp; u_1(B,R)
+\end{pmatrix}.
+\]</span></p>
+<p>Player 2 has a corresponding payoff matrix.</p>
+<p>If Player 1 uses mixed strategy <span class="math inline">\(p\)</span> and Player 2 uses mixed strategy <span class="math inline">\(q\)</span>, expected payoffs can be computed using matrix notation.</p>
+</section>
+<section id="expected-payoff-with-matrices" class="level2">
+<h2 class="anchored" data-anchor-id="expected-payoff-with-matrices">Expected payoff with matrices</h2>
+<p>Suppose Player 1’s payoff matrix is <span class="math inline">\(U_1\)</span>. Let <span class="math inline">\(p\)</span> be Player 1’s mixed strategy vector and <span class="math inline">\(q\)</span> be Player 2’s mixed strategy vector.</p>
+<p>Then Player 1’s expected payoff can be written as</p>
+<p><span class="math display">\[
+p^\top U_1 q.
+\]</span></p>
+<p>This expression means:</p>
+<ol type="1">
+<li>Player 1 randomizes according to <span class="math inline">\(p\)</span>;</li>
+<li>Player 2 randomizes according to <span class="math inline">\(q\)</span>;</li>
+<li>the payoff matrix assigns payoffs to action pairs;</li>
+<li>the expression averages over all possible action pairs.</li>
+</ol>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Player 1 mixed strategy p] --&gt; D[Expected payoff]
+    B[Payoff matrix U] --&gt; D
+    C[Player 2 mixed strategy q] --&gt; D
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="probability-vectors" class="level2">
+<h2 class="anchored" data-anchor-id="probability-vectors">Probability vectors</h2>
+<p>A probability vector has nonnegative entries that sum to one.</p>
+<p>For example,</p>
+<p><span class="math display">\[
+p=
+\begin{pmatrix}
+0.1\\
+0.6\\
+0.3
+\end{pmatrix}.
+\]</span></p>
+<p>This can represent beliefs over three states:</p>
+<p><span class="math display">\[
+\theta_1,\theta_2,\theta_3.
+\]</span></p>
+<p>A Bayesian update changes the probability vector after observing evidence.</p>
+</section>
+<section id="transition-matrices" class="level2">
+<h2 class="anchored" data-anchor-id="transition-matrices">Transition matrices</h2>
+<p>A transition matrix describes movement between states.</p>
+<p>For example,</p>
+<p><span class="math display">\[
+P=
+\begin{pmatrix}
+0.8 &amp; 0.2\\
+0.3 &amp; 0.7
+\end{pmatrix}.
+\]</span></p>
+<p>If the current state distribution is</p>
+<p><span class="math display">\[
+v_t=
+\begin{pmatrix}
+0.5\\
+0.5
+\end{pmatrix},
+\]</span></p>
+<p>then the next state distribution can be written as</p>
+<p><span class="math display">\[
+v_{t+1}=P^\top v_t
+\]</span></p>
+<p>or with the alternative row-vector convention,</p>
+<p><span class="math display">\[
+v_{t+1}=v_t P.
+\]</span></p>
+<p>The convention should always be made clear.</p>
+<p>Transition matrices are useful for learning, Markov chains, population dynamics, and repeated processes.</p>
+</section>
+<section id="networks-and-adjacency-matrices" class="level2">
+<h2 class="anchored" data-anchor-id="networks-and-adjacency-matrices">Networks and adjacency matrices</h2>
+<p>A network can be represented by an adjacency matrix.</p>
+<p>If there are three people, an adjacency matrix might be</p>
+<p><span class="math display">\[
+A=
+\begin{pmatrix}
+0 &amp; 1 &amp; 1\\
+1 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0
+\end{pmatrix}.
+\]</span></p>
+<p>A value of 1 means a tie exists. A value of 0 means no tie exists.</p>
+<p>Networks can represent:</p>
+<ul>
+<li>friendship;</li>
+<li>communication;</li>
+<li>co-offending;</li>
+<li>trade;</li>
+<li>influence;</li>
+<li>information flow;</li>
+<li>institutional links.</li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Social network] --&gt; B[Adjacency matrix]
+    B --&gt; C[Centrality]
+    B --&gt; D[Diffusion]
+    B --&gt; E[Clusters]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="eigenvectors-and-steady-states" class="level2">
+<h2 class="anchored" data-anchor-id="eigenvectors-and-steady-states">Eigenvectors and steady states</h2>
+<p>An eigenvector of a matrix <span class="math inline">\(A\)</span> is a nonzero vector <span class="math inline">\(v\)</span> such that</p>
+<p><span class="math display">\[
+Av=\lambda v.
+\]</span></p>
+<p>The matrix changes the length of the vector but not its direction.</p>
+<p>Eigenvectors appear in:</p>
+<ul>
+<li>network centrality;</li>
+<li>Markov-chain steady states;</li>
+<li>dynamic systems;</li>
+<li>principal components;</li>
+<li>stability analysis.</li>
+</ul>
+<p>A steady-state distribution in a Markov process often satisfies</p>
+<p><span class="math display">\[
+\pi P = \pi.
+\]</span></p>
+<p>This is also a fixed-point condition.</p>
+</section>
+<section id="linear-algebra-and-fixed-points" class="level2">
+<h2 class="anchored" data-anchor-id="linear-algebra-and-fixed-points">Linear algebra and fixed points</h2>
+<p>Some fixed points can be written as linear equations.</p>
+<p>For example,</p>
+<p><span class="math display">\[
+x = Ax.
+\]</span></p>
+<p>This can be rewritten as</p>
+<p><span class="math display">\[
+(I-A)x=0.
+\]</span></p>
+<p>This connects linear algebra to equilibrium, steady states, and dynamic systems.</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="ignoring-dimensions" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-dimensions">1. Ignoring dimensions</h3>
+<p>Matrix multiplication only works when dimensions match.</p>
+</section>
+<section id="confusing-rows-and-columns" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-rows-and-columns">2. Confusing rows and columns</h3>
+<p>Always check whether vectors are written as row vectors or column vectors.</p>
+</section>
+<section id="treating-matrices-as-just-tables" class="level3">
+<h3 class="anchored" data-anchor-id="treating-matrices-as-just-tables">3. Treating matrices as just tables</h3>
+<p>Matrices can represent transformations, not only stored numbers.</p>
+</section>
+<section id="forgetting-probability-constraints" class="level3">
+<h3 class="anchored" data-anchor-id="forgetting-probability-constraints">4. Forgetting probability constraints</h3>
+<p>A probability vector must have nonnegative entries that sum to one.</p>
+</section>
+<section id="confusing-adjacency-with-intensity" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-adjacency-with-intensity">5. Confusing adjacency with intensity</h3>
+<p>A network matrix may record whether a tie exists or how strong the tie is. These are different.</p>
+</section>
+</section>
+<section id="checklist" class="level2">
+<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
+<p>When using linear algebra, ask:</p>
+<ol type="1">
+<li>What does the vector represent?</li>
+<li>What does the matrix represent?</li>
+<li>Are dimensions compatible?</li>
+<li>Are entries numbers, probabilities, payoffs, or ties?</li>
+<li>Is the vector a row or column?</li>
+<li>Is the matrix transforming a vector or storing data?</li>
+<li>Are probability constraints satisfied?</li>
+<li>Does the system describe a static relation or dynamic transition?</li>
+<li>Is there a fixed point or steady state?</li>
+<li>What is the substantive interpretation?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../foundations/probability.html">Probability</a></li>
+<li><a href="../foundations/optimization.html">Optimization</a></li>
+<li><a href="../foundations/fixed-points.html">Fixed Points</a></li>
+<li><a href="../foundations/convexity.html">Convexity</a></li>
+<li><a href="../notes/game-types/normal-form.html">Normal-form Games</a></li>
+<li><a href="../criminology/notes/models/network-crime.html">Network Crime</a></li>
+</ul>
 
 
 </section>

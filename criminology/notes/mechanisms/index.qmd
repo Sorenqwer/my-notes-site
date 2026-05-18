@@ -1,18 +1,288 @@
 ---
 title: "Mechanisms"
 toc: true
+page-layout: full
 ---
 
-Mechanism pages present theory families as **channels** that generate crime patterns. Each page follows:
+Mechanism pages explain how crime, compliance, reporting, punishment, and desistance are produced. Instead of treating theories as labels, this section treats them as channels: each mechanism describes a process linking context to behaviour.
 
-**stylized facts → mechanism → canonical primitives → predictions → later-on analysis (model links)**
+A useful mechanism should answer:
 
-## Core mechanisms
-- [Incentives & deterrence](incentives-deterrence.qmd)
-- [Opportunity & routine activity](opportunity-routine.qmd)
-- [Social interactions & networks](social-interactions.qmd)
-- [Legitimacy, trust & compliance](legitimacy-compliance.qmd)
-- [Inequality, deprivation & social trust](inequality-trust.qmd)
-- [Life-course dynamics (onset and desistance)](life-course.qmd)
-- [Self-control and present bias (behavioral microfoundations)](self-control.qmd)
-- [Labeling, stigma & system contact](labeling-stigma.qmd)
+> What changes, who responds, why do they respond, and what outcome follows?
+
+## Mechanism-first criminology
+
+A theory becomes analytically useful when it identifies a mechanism.
+
+```{mermaid}
+flowchart LR
+    A[Context or condition] --> B[Mechanism]
+    B --> C[Behavioural response]
+    C --> D[Observed pattern]
+    D --> E[Evidence or policy implication]
+```
+
+For example, deterrence is not just the claim that punishment reduces crime. The mechanism is that perceived sanction risk changes expected costs. If people do not perceive the risk, or if they are not responsive to future consequences, the mechanism may be weak.
+
+## Map of core mechanisms
+
+```{mermaid}
+flowchart TD
+    A[Crime and Compliance Mechanisms] --> B[Incentives and Deterrence]
+    A --> C[Opportunity and Routine Activity]
+    A --> D[Self-Control and Present Bias]
+    A --> E[Social Interactions and Networks]
+    A --> F[Legitimacy and Compliance]
+    A --> G[Labeling and Stigma]
+    A --> H[Life-Course Dynamics]
+    A --> I[Inequality and Trust]
+
+    B --> B1[Expected costs]
+    B --> B2[Sanction risk]
+    B --> B3[Perceived deterrence]
+
+    C --> C1[Suitable targets]
+    C --> C2[Guardianship]
+    C --> C3[Opportunity structure]
+
+    D --> D1[Impulsivity]
+    D --> D2[Short-run rewards]
+    D --> D3[Weak future weighting]
+
+    E --> E1[Peer effects]
+    E --> E2[Learning]
+    E --> E3[Diffusion]
+
+    F --> F1[Fairness]
+    F --> F2[Trust]
+    F --> F3[Voluntary compliance]
+
+    G --> G1[Identity]
+    G --> G2[Stigma]
+    G --> G3[Reduced opportunities]
+
+    H --> H1[Onset]
+    H --> H2[Turning points]
+    H --> H3[Desistance]
+
+    I --> I1[Relative deprivation]
+    I --> I2[Low social trust]
+    I --> I3[Institutional exclusion]
+```
+
+These mechanisms can combine. A single crime pattern may involve opportunity, peer influence, weak guardianship, low trust, and institutional response at the same time.
+
+## Core mechanism pages
+
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Incentives and Deterrence
+
+How expected costs, sanction risk, severity, certainty, and perceived punishment shape behaviour.
+
+[Open →](incentives-deterrence.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Opportunity and Routine Activity
+
+How crime depends on motivated actors, suitable targets, weak guardianship, and everyday movement patterns.
+
+[Open →](opportunity-routine.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Social Interactions and Networks
+
+How peers, groups, networks, imitation, reputation, and local norms shape offending and compliance.
+
+[Open →](social-interactions.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Legitimacy, Trust, and Compliance
+
+How perceived fairness, procedural justice, institutional trust, and moral alignment affect willingness to obey or cooperate.
+
+[Open →](legitimacy-compliance.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Inequality, Deprivation, and Social Trust
+
+How unequal opportunity, relative deprivation, exclusion, and low trust can shape crime and disorder.
+
+[Open →](inequality-trust.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Life-Course Dynamics
+
+How offending changes across age, turning points, social bonds, employment, family, and institutional contact.
+
+[Open →](life-course.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Self-Control and Present Bias
+
+How impulsivity, short-term reward, limited foresight, and self-regulation affect offending decisions.
+
+[Open →](self-control.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Labeling, Stigma, and System Contact
+
+How official reaction, stigma, identity, and reduced opportunity can create secondary consequences.
+
+[Open →](labeling-stigma.qmd)
+:::
+:::
+
+:::
+
+## A simple mechanism template
+
+Each mechanism page should ideally answer the same basic questions.
+
+```{mermaid}
+flowchart TD
+    A[Starting condition] --> B[Actor or group affected]
+    B --> C[Perception or constraint changes]
+    C --> D[Incentive or identity changes]
+    D --> E[Behaviour changes]
+    E --> F[Aggregate pattern]
+    F --> G[Measurement issue]
+    G --> H[Policy implication]
+```
+
+This template helps avoid vague explanations. It forces the page to specify the pathway from cause to outcome.
+
+## Mechanisms and evidence
+
+A mechanism should generate observable implications.
+
+For example:
+
+| Mechanism | Expected observable pattern |
+|---|---|
+| Deterrence | Offending falls when perceived detection risk rises |
+| Routine activity | Crime clusters where targets and weak guardianship coincide |
+| Peer effects | Behaviour spreads through social ties or group settings |
+| Legitimacy | Cooperation increases when authorities are seen as fair |
+| Labeling | Formal contact may increase future exclusion or offending risk |
+| Life-course | Turning points alter offending trajectories |
+| Self-control | Immediate rewards weigh more heavily than delayed costs |
+
+Evidence does not need to be purely quantitative. Mechanisms can be studied through interviews, ethnography, administrative data, experiments, quasi-experiments, case studies, and formal modelling.
+
+## Mechanisms and models
+
+Mechanisms can often be translated into simple models.
+
+```{mermaid}
+flowchart LR
+    A[Mechanism] --> B[Actors]
+    B --> C[Choices]
+    C --> D[Information]
+    D --> E[Payoffs or constraints]
+    E --> F[Prediction]
+    F --> G[Evidence]
+```
+
+For example:
+
+- deterrence can become an inspection game;
+- reporting can become a trust and cooperation game;
+- co-offending can become a coordination game;
+- social diffusion can become a network model;
+- plea bargaining can become an asymmetric-information model.
+
+This is why the mechanism section connects directly to the models section.
+
+## Mechanisms and policy
+
+Policy works through mechanisms. A policy intervention does not simply “reduce crime” in the abstract. It changes incentives, opportunities, beliefs, constraints, or institutional behaviour.
+
+Examples:
+
+| Policy type | Mechanism it may target |
+|---|---|
+| More patrols | Detection risk and guardianship |
+| CCTV | Visibility, deterrence, evidence generation |
+| Youth programmes | Peer networks, opportunity, self-control |
+| Procedural justice training | Legitimacy and trust |
+| Rehabilitation | skills, constraints, identity, and future orientation |
+| Record expungement | stigma and opportunity after system contact |
+| Hotspot policing | spatial concentration and resource allocation |
+
+A good policy analysis should ask which mechanism the policy is supposed to activate.
+
+## Common mistakes
+
+### 1. Naming a theory instead of explaining it
+
+Saying “this is deterrence” is not enough. Explain how perceived cost changes behaviour.
+
+### 2. Assuming one mechanism explains everything
+
+Most crime patterns are multi-mechanism. Violence, for example, may involve peers, alcohol, retaliation, opportunity, and low guardianship.
+
+### 3. Ignoring measurement
+
+If the outcome is recorded crime, the mechanism may affect reporting or detection rather than actual offending.
+
+### 4. Treating policy as direct cause
+
+Policy effects depend on institutional implementation and behavioural response.
+
+### 5. Ignoring time
+
+Some mechanisms are immediate, while others unfold across years.
+
+### 6. Confusing individual and aggregate mechanisms
+
+Individual-level explanations do not automatically explain area-level crime rates.
+
+## Suggested reading order
+
+A good order is:
+
+1. [Incentives and deterrence](incentives-deterrence.qmd)
+2. [Opportunity and routine activity](opportunity-routine.qmd)
+3. [Social interactions and networks](social-interactions.qmd)
+4. [Legitimacy, trust, and compliance](legitimacy-compliance.qmd)
+5. [Self-control and present bias](self-control.qmd)
+6. [Labeling, stigma, and system contact](labeling-stigma.qmd)
+7. [Life-course dynamics](life-course.qmd)
+8. [Inequality, deprivation, and social trust](inequality-trust.qmd)
+
+## Related pages
+
+- [Criminology Notes](../index.qmd)
+- [Criminology Foundations](../foundations/index.qmd)
+- [Institutions](../institutions/index.qmd)
+- [Models](../models/index.qmd)
+- [Topics](../topics/index.qmd)
+- [Inspection games](../models/inspection-games.qmd)
+- [Reporting and trust](../models/reporting-trust.qmd)
+- [Network crime](../models/network-crime.qmd)
+- [Dynamic reasoning](../../../foundations/dynamic-reasoning.qmd)
+- [Game Theory Notes](../../../notes/game-theory.qmd)

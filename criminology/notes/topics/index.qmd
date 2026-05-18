@@ -1,64 +1,262 @@
 ---
 title: "Topics"
 toc: true
+page-layout: full
 ---
 
-Topic pages are application hubs: each one connects a crime domain to mechanisms, models, institutions, and measurement problems.
+Topic pages apply criminological mechanisms, institutional analysis, and models to substantive crime areas. They are not meant to be isolated summaries. Each topic should connect crime type, mechanism, measurement, evidence, and policy.
+
+The goal is to ask: what kind of behaviour is being studied, why does it occur, how is it measured, and what does intervention change?
+
+## Map of topic pages
+
+```{mermaid}
+flowchart TD
+    A[Criminology Topics] --> B[Violent Crime]
+    A --> C[Property Crime]
+    A --> D[Organized Crime]
+    A --> E[White-Collar Crime]
+    A --> F[Cybercrime]
+    A --> G[Drug Markets]
+
+    B --> B1[Conflict]
+    B --> B2[Retaliation]
+    B --> B3[Weapons and alcohol]
+    B --> B4[Peer norms]
+
+    C --> C1[Opportunity]
+    C --> C2[Targets]
+    C --> C3[Guardianship]
+    C --> C4[Displacement]
+
+    D --> D1[Coordination]
+    D --> D2[Governance]
+    D --> D3[Corruption]
+    D --> D4[Violence]
+
+    E --> E1[Organizations]
+    E --> E2[Compliance]
+    E --> E3[Agency problems]
+    E --> E4[Regulation]
+
+    F --> F1[Anonymity]
+    F --> F2[Automation]
+    F --> F3[Platforms]
+    F --> F4[Cross-border enforcement]
+
+    G --> G1[Demand]
+    G --> G2[Illicit exchange]
+    G --> G3[Enforcement pressure]
+    G --> G4[Violence and substitution]
+```
+
+Each topic can involve several mechanisms at once. For example, drug markets may involve demand, addiction, organized distribution, enforcement displacement, violence, and institutional mistrust.
+
+## Topic pages
 
 ::: {.grid .gap-3}
 
 ::: {.g-col-12 .g-col-md-4}
 ::: {.card}
 ### Violent Crime
-Violent crime involves the use or threat of physical force.
+
+Physical force, threat, conflict, retaliation, weapon use, peer norms, alcohol, and social context.
 
 [Open →](violent-crime.qmd)
 :::
-::: 
+:::
 
 ::: {.g-col-12 .g-col-md-4}
 ::: {.card}
 ### Property Crime
-Property crime concerns theft, burglary, damage, and taking.
+
+Theft, burglary, damage, target selection, guardianship, routine activity, and opportunity structure.
 
 [Open →](property-crime.qmd)
 :::
-::: 
+:::
 
 ::: {.g-col-12 .g-col-md-4}
 ::: {.card}
 ### Organized Crime
-Organized crime can be treated as illicit coordination under weak legal enforceability: groups govern exchange, maintain discipline, and adapt to enforcement.
+
+Illicit coordination, governance, violence, reputation, corruption, and market protection.
 
 [Open →](organized-crime.qmd)
 :::
-::: 
+:::
 
 ::: {.g-col-12 .g-col-md-4}
 ::: {.card}
 ### White-Collar Crime
-White-collar crime involves illegal or harmful conduct carried out through professional, organizational, or financial roles.
+
+Illegal or harmful conduct through professional, financial, organizational, or regulatory roles.
 
 [Open →](white-collar.qmd)
 :::
-::: 
+:::
 
 ::: {.g-col-12 .g-col-md-4}
 ::: {.card}
 ### Cybercrime
-Cybercrime is offending mediated by digital systems and shaped by scale, anonymity, automation, platform design, and jurisdictional limits.
+
+Digital offending shaped by anonymity, automation, scale, platform design, and jurisdictional limits.
 
 [Open →](cybercrime.qmd)
 :::
-::: 
+:::
 
 ::: {.g-col-12 .g-col-md-4}
 ::: {.card}
 ### Drug Markets
-Drug markets combine illicit exchange, dependence, enforcement, violence, and substitution.
+
+Illicit exchange, demand, dependence, distribution networks, enforcement pressure, and violence.
 
 [Open →](drug-markets.qmd)
 :::
-::: 
+:::
 
 :::
+
+## Topic-page template
+
+Each topic should ideally follow this structure:
+
+```{mermaid}
+flowchart TD
+    A[Define the crime type] --> B[Identify main behaviours]
+    B --> C[Identify mechanisms]
+    C --> D[Discuss measurement problems]
+    D --> E[Connect to institutions]
+    E --> F[Use simple models]
+    F --> G[Evaluate policy trade-offs]
+```
+
+This prevents topic pages from becoming mere lists of facts. The focus should remain analytical.
+
+## Comparing topic areas
+
+| Topic | Central mechanisms | Major measurement issue |
+|---|---|---|
+| Violent crime | conflict, retaliation, emotion, peer norms, weapons | underreporting and seriousness variation |
+| Property crime | opportunity, target suitability, guardianship | reporting depends on insurance, value, and trust |
+| Organized crime | illicit governance, reputation, corruption, violence | hidden structure and weak observability |
+| White-collar crime | agency problems, compliance failure, regulatory gaps | detection depends on audit and investigation |
+| Cybercrime | anonymity, automation, social engineering, platforms | cross-border attribution and underreporting |
+| Drug markets | demand, addiction, enforcement pressure, substitution | hidden transactions and enforcement bias |
+
+This table is only a starting point. Each crime area contains internal diversity.
+
+## From topic to mechanism
+
+A substantive topic is not yet an explanation. To explain a crime pattern, we need a mechanism.
+
+For example:
+
+```text
+property crime
+→ opportunity and weak guardianship
+→ target selection
+→ spatial concentration
+```
+
+or:
+
+```text
+violent crime
+→ conflict plus peer audience
+→ status threat
+→ retaliation
+```
+
+or:
+
+```text
+white-collar crime
+→ agency problem plus weak monitoring
+→ rule violation
+→ delayed detection
+```
+
+The move from topic to mechanism is the move from description to explanation.
+
+## From topic to model
+
+Topic pages also connect to models.
+
+| Topic | Possible model |
+|---|---|
+| Violent crime | repeated conflict or retaliation game |
+| Property crime | target-selection or inspection game |
+| Organized crime | repeated enforcement and reputation model |
+| White-collar crime | principal-agent or audit game |
+| Cybercrime | attacker-defender game |
+| Drug markets | illicit market equilibrium or network model |
+
+The model should be chosen because it clarifies a mechanism.
+
+## Policy comparison
+
+Different topics create different policy problems.
+
+```{mermaid}
+flowchart LR
+    A[Crime topic] --> B[Mechanism]
+    B --> C[Institutional response]
+    C --> D[Behavioural adaptation]
+    D --> E[Policy outcome]
+    E --> F[Unintended effects]
+```
+
+For example, enforcement against drug markets may reduce visible dealing in one place while shifting activity elsewhere. Cybercrime enforcement may remove one platform while offenders migrate to another. White-collar regulation may reduce some misconduct while creating compliance theatre.
+
+## Common mistakes
+
+### 1. Treating a topic as a mechanism
+
+“Cybercrime” is not a mechanism. It is a domain. The mechanism may be anonymity, automation, deception, or weak enforcement.
+
+### 2. Treating official data as complete
+
+Many topic areas are heavily underreported or dependent on detection.
+
+### 3. Assuming one policy fits all crime types
+
+Violent crime, cybercrime, fraud, and drug markets respond to different mechanisms.
+
+### 4. Ignoring adaptation
+
+Offenders, institutions, and markets adapt to interventions.
+
+### 5. Ignoring harm variation
+
+The same legal category may contain events with very different harms.
+
+## Suggested reading order
+
+A good route is:
+
+1. [Violent crime](violent-crime.qmd)
+2. [Property crime](property-crime.qmd)
+3. [White-collar crime](white-collar.qmd)
+4. [Cybercrime](cybercrime.qmd)
+5. [Organized crime](organized-crime.qmd)
+6. [Drug markets](drug-markets.qmd)
+
+Or, if reading by mechanism:
+
+1. [Opportunity and routine activity](../mechanisms/opportunity-routine.qmd)
+2. [Social interactions](../mechanisms/social-interactions.qmd)
+3. [Legitimacy and compliance](../mechanisms/legitimacy-compliance.qmd)
+4. [Network crime](../models/network-crime.qmd)
+5. [Inspection games](../models/inspection-games.qmd)
+
+## Related pages
+
+- [Criminology Notes](../index.qmd)
+- [Foundations](../foundations/index.qmd)
+- [Mechanisms](../mechanisms/index.qmd)
+- [Institutions](../institutions/index.qmd)
+- [Models](../models/index.qmd)
+- [Methods Map](../../toolkit/methods-map.qmd)
+- [Modeling Checklist](../../toolkit/modeling-checklist.qmd)

@@ -1,10 +1,279 @@
 ---
 title: "Institutions"
 toc: true
+page-layout: full
 ---
 
-Institutions are **strategic actors** (objectives, constraints, incentives). This section treats policing, courts, and corrections as part of an equilibrium system.
+Institutions shape how crime is defined, detected, processed, punished, prevented, and recorded. In criminology, institutions are not only background conditions. They are strategic actors with incentives, constraints, errors, legitimacy problems, and information limits.
 
-- [Policing](policing.qmd)
-- [Courts (charging, plea bargaining, sentencing)](courts.qmd)
-- [Corrections (incarceration, supervision, reentry)](corrections.qmd)
+This section focuses on policing, courts, corrections, and the broader institutional chain connecting crime events to official responses.
+
+## Why institutions matter
+
+A crime event does not automatically become a criminal justice outcome. It must pass through many institutional stages.
+
+```{mermaid}
+flowchart LR
+    A[Crime or alleged crime] --> B[Reporting or detection]
+    B --> C[Police response]
+    C --> D[Investigation]
+    D --> E[Charging decision]
+    E --> F[Court process]
+    F --> G[Sentence or dismissal]
+    G --> H[Correctional or community supervision]
+    H --> I[Long-term consequences]
+```
+
+Each stage involves discretion. Each stage can create error, inequality, delay, deterrence, legitimacy, or distrust.
+
+## Main institution pages
+
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Policing
+
+Police as detection, enforcement, order maintenance, service provision, and legitimacy-producing institutions.
+
+[Open →](policing.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Courts
+
+Courts as institutions of adjudication, bargaining, legal classification, procedural fairness, and case processing.
+
+[Open →](courts.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Corrections
+
+Prisons, probation, parole, rehabilitation, incapacitation, reentry, stigma, and long-term institutional effects.
+
+[Open →](corrections.qmd)
+:::
+:::
+
+:::
+
+## The institutional chain
+
+A useful way to analyse institutions is to follow the case pathway.
+
+```{mermaid}
+flowchart TD
+    A[Event] --> B{Observed?}
+    B -->|No| C[No institutional case]
+    B -->|Yes| D{Reported or detected?}
+    D -->|No| E[Hidden from system]
+    D -->|Yes| F[Police contact]
+    F --> G{Recorded?}
+    G -->|No| H[No official crime record]
+    G -->|Yes| I[Official record]
+    I --> J{Suspect identified?}
+    J -->|No| K[Unsolved case]
+    J -->|Yes| L[Charge or diversion decision]
+    L --> M[Court or settlement process]
+    M --> N[Outcome]
+```
+
+This chain shows why official criminal justice data are institutionally produced. They are not pure measurements of social behaviour.
+
+## Institutions as strategic actors
+
+Institutions respond to incentives and constraints.
+
+Police may respond to crime rates, public pressure, budgets, political priorities, legal rules, performance targets, and community relations.
+
+Courts may respond to caseload pressure, evidence quality, plea bargaining incentives, procedural rules, and sentencing guidelines.
+
+Correctional systems may respond to capacity, public safety claims, rehabilitation goals, labour constraints, and political pressure.
+
+```{mermaid}
+flowchart LR
+    A[Institutional constraints] --> B[Institutional incentives]
+    B --> C[Discretionary decisions]
+    C --> D[Observed justice outcomes]
+    D --> E[Public trust or distrust]
+    E --> B
+```
+
+The feedback loop matters. Institutional action changes public trust, and public trust changes reporting, cooperation, compliance, and legitimacy.
+
+## Policing
+
+Policing is not only enforcement. Police also produce information.
+
+Police activity affects:
+
+- detection;
+- recorded crime;
+- perceived risk;
+- public trust;
+- community cooperation;
+- informal order;
+- visibility of certain groups;
+- legitimacy of law.
+
+This makes policing central to both crime control and crime measurement.
+
+A simple policing mechanism may look like:
+
+```{mermaid}
+flowchart LR
+    A[Patrol or monitoring] --> B[Perceived detection risk]
+    B --> C[Behavioural response]
+    A --> D[Actual detection]
+    D --> E[Recorded crime]
+    A --> F[Community experience]
+    F --> G[Trust and cooperation]
+```
+
+The same intervention can increase recorded crime by increasing detection, even if underlying offending falls.
+
+## Courts
+
+Courts process cases under uncertainty.
+
+Key questions include:
+
+- How strong is the evidence?
+- What is the expected trial outcome?
+- What are the costs of delay?
+- What are the incentives to accept a plea?
+- How does procedural fairness affect legitimacy?
+- How do sentencing rules shape bargaining?
+
+Court outcomes are not only legal outcomes. They are also negotiated outcomes produced under institutional pressure.
+
+```{mermaid}
+flowchart LR
+    A[Evidence strength] --> B[Charging and bargaining]
+    C[Trial risk] --> B
+    D[Caseload pressure] --> B
+    E[Legal rights and procedure] --> B
+    B --> F[Case outcome]
+```
+
+## Corrections
+
+Corrections include prisons, probation, parole, rehabilitation, and reentry.
+
+Correctional institutions can produce different mechanisms:
+
+| Mechanism | Possible effect |
+|---|---|
+| Incapacitation | prevents offending during custody |
+| Deterrence | discourages future offending through expected punishment |
+| Rehabilitation | changes skills, constraints, or behaviour |
+| Stigma | reduces future opportunity |
+| Network exposure | connects people to criminogenic networks |
+| Reentry support | reduces barriers after release |
+
+Correctional policy therefore involves trade-offs. A sanction can reduce crime through incapacitation while increasing future risk through stigma or disrupted employment.
+
+## Legitimacy and institutional trust
+
+Institutions do not only change incentives. They also shape whether people view law as rightful.
+
+Legitimacy matters because voluntary compliance and cooperation are partly trust-based.
+
+```{mermaid}
+flowchart TD
+    A[Procedural fairness] --> B[Institutional legitimacy]
+    B --> C[Trust]
+    C --> D[Reporting and cooperation]
+    C --> E[Voluntary compliance]
+    D --> F[Institutional effectiveness]
+    E --> F
+```
+
+When legitimacy falls, institutions may need more coercion to produce the same behavioural outcome. That can further reduce trust.
+
+## Institutional errors
+
+Criminal justice institutions face several kinds of error.
+
+| Error type | Meaning |
+|---|---|
+| False positive | treating an innocent person as guilty |
+| False negative | failing to detect or sanction actual wrongdoing |
+| Classification error | recording an event under the wrong category |
+| Discretionary bias | unequal treatment across people or places |
+| Process error | delay, lost evidence, weak procedure, or inconsistent decision-making |
+
+Institutional analysis should ask where errors enter the chain and who bears their cost.
+
+## Policy questions
+
+Institutional policy should be analysed through mechanisms.
+
+Examples:
+
+| Policy | Mechanism to examine |
+|---|---|
+| Hotspot policing | concentration of patrol and deterrence |
+| Body-worn cameras | accountability, evidence, and behaviour change |
+| Procedural justice training | legitimacy and cooperation |
+| Sentencing reform | deterrence, incapacitation, proportionality, prison population |
+| Diversion | reduced stigma and alternative intervention |
+| Reentry programmes | employment, housing, support, and desistance |
+
+The key question is not simply whether a policy is “tough” or “soft.” The key question is what mechanism it activates and what consequences it produces.
+
+## Common mistakes
+
+### 1. Treating institutions as neutral recording devices
+
+Institutions shape the data they produce.
+
+### 2. Ignoring discretion
+
+Rules matter, but discretionary interpretation and implementation also matter.
+
+### 3. Equating more enforcement with less crime
+
+More enforcement may increase detection and recorded crime, change displacement, or reduce trust.
+
+### 4. Ignoring legitimacy
+
+Compliance is not only produced by fear of punishment.
+
+### 5. Treating punishment as one mechanism
+
+Punishment can deter, incapacitate, stigmatize, rehabilitate, or destabilize.
+
+### 6. Ignoring feedback
+
+Institutional action changes future behaviour, cooperation, reporting, and trust.
+
+## Checklist for institutional analysis
+
+1. Which institution is acting?
+2. What choices does it have?
+3. What information does it observe?
+4. What incentives and constraints does it face?
+5. Where does discretion enter?
+6. What errors are possible?
+7. How does the institution affect recorded data?
+8. How does it affect trust and legitimacy?
+9. What feedback effects may follow?
+10. Which groups bear the costs and benefits?
+
+## Related pages
+
+- [Criminology Notes](../index.qmd)
+- [Mechanisms](../mechanisms/index.qmd)
+- [Models](../models/index.qmd)
+- [Topics](../topics/index.qmd)
+- [Reporting and trust](../models/reporting-trust.qmd)
+- [Inspection games](../models/inspection-games.qmd)
+- [Plea bargaining](../models/plea-bargaining.qmd)
+- [Legitimacy and compliance](../mechanisms/legitimacy-compliance.qmd)
+- [Dynamic reasoning](../../../foundations/dynamic-reasoning.qmd)

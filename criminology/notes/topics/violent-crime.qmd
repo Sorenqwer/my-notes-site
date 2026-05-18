@@ -1,46 +1,162 @@
 ---
 title: "Violent Crime"
 toc: true
+page-layout: full
 ---
 
-Violent crime involves the use or threat of physical force. It is best studied through individual propensity, situational triggers, social relations, and institutional response.
+Violent crime involves the use, threat, or attempted use of physical force. It includes behaviours such as assault, robbery, homicide, domestic violence, sexual violence, and group-based violence. These behaviours differ greatly in motive, severity, setting, and institutional response, so violent crime should not be treated as one simple category.
 
-## A simple mechanism map
- 
-Violent crime can be understood as the joint product of individual predispositions, situational triggers, and social environments.
- 
+A useful analysis of violent crime usually connects individual factors, situational triggers, social context, weapons, institutions, and measurement.
+
+## Basic mechanism map
+
 ```{mermaid}
 flowchart TD
-    A[Individual Factors] --> D[Violent Behaviour]
-    B[Situational Triggers] --> D
-    C[Social Environment] --> D
- 
-    A --> A1[Impulsivity]
-    A --> A2[Self-control]
-    A --> A3[Past Victimization]
- 
-    B --> B1[Conflict]
-    B --> B2[Alcohol or Intoxication]
-    B --> B3[Weapon Availability]
- 
-    C --> C1[Peer Effects]
-    C --> C2[Local Norms]
-    C --> C3[Low Trust and Weak Guardianship]
+    A[Violent crime] --> B[Individual factors]
+    A --> C[Situational triggers]
+    A --> D[Social environment]
+    A --> E[Institutional context]
+
+    B --> B1[Impulsivity]
+    B --> B2[Trauma or victimization]
+    B --> B3[Substance use]
+
+    C --> C1[Conflict]
+    C --> C2[Status threat]
+    C --> C3[Weapon availability]
+
+    D --> D1[Peer audience]
+    D --> D2[Retaliation norms]
+    D --> D3[Low trust]
+
+    E --> E1[Policing]
+    E --> E2[Reporting]
+    E --> E3[Protection and support]
 ```
 
-## Mechanisms to connect
+Violence often occurs when several mechanisms combine. A conflict may escalate because of intoxication, peer pressure, weapon access, low trust in authorities, and expectations of retaliation.
 
-- retaliation and status contests
-- alcohol, impulsivity, and self-control
-- peer effects and local norms
-- perceived legitimacy of police and courts
+## Core mechanisms
 
-## Models to try
+### Conflict escalation
 
-- repeated conflict and retaliation games
-- deterrence models with perceived sanction risk
-- network diffusion of violence
+Many violent events begin as disputes. The key question is why a dispute becomes physical. Escalation may depend on emotion, perceived disrespect, alcohol, audience effects, weapon availability, or fear of appearing weak.
 
-## Notes to add later
+### Retaliation
 
-Add empirical examples, key definitions, and one diagram linking mechanism → prediction → measurement.
+Violence can become self-reinforcing when one act creates pressure for revenge. Retaliation is especially important when formal institutions are not trusted to resolve disputes.
+
+### Status and identity
+
+In some contexts, violence functions as a way to defend reputation, masculinity, group identity, or status. The payoff is not only material. It may include respect, fear, belonging, or avoidance of humiliation.
+
+### Opportunity and guardianship
+
+Violence is also situational. Some settings create more opportunities for violence because of crowding, alcohol, weak guardianship, or repeated contact between conflicting groups.
+
+### Coercive control
+
+Domestic and intimate partner violence cannot be understood only as isolated incidents. In many cases, violence is part of a broader pattern of control, fear, dependency, surveillance, and isolation.
+
+## Measurement issues
+
+Violent crime is not measured perfectly.
+
+| Issue | Why it matters |
+|---|---|
+| Underreporting | Many violent events, especially domestic and sexual violence, are not reported |
+| Severity variation | The same legal category may include very different levels of harm |
+| Recording practices | Police classification can change recorded trends |
+| Victim-offender relationship | Stranger violence and domestic violence have different mechanisms |
+| Hospital data | Medical records may capture injuries that police data miss |
+| Fear and trauma | Harm may persist beyond the physical event |
+
+A rise in recorded violent crime may reflect more violence, better reporting, changed recording rules, or greater institutional attention.
+
+## A simple retaliation model
+
+Violence can be modelled as a repeated interaction where failure to retaliate may reduce status, while retaliation creates future risk.
+
+```{mermaid}
+flowchart LR
+    A[Initial conflict] --> B[Perceived disrespect or harm]
+    B --> C{Retaliate?}
+    C -->|Yes| D[Immediate status or revenge payoff]
+    C -->|No| E[Possible loss of status]
+    D --> F[Future retaliation risk]
+    E --> G[Conflict may fade]
+```
+
+The policy implication is that reducing violence may require changing the expected payoff from retaliation, creating safe alternatives, and increasing trust in non-violent dispute resolution.
+
+## Institutional response
+
+Institutions affect violent crime through several channels:
+
+- emergency protection;
+- deterrence;
+- incapacitation;
+- support for victims;
+- conflict mediation;
+- legitimacy and trust;
+- weapon control;
+- treatment and rehabilitation;
+- hotspot or focused deterrence strategies.
+
+The same intervention may have different effects depending on whether the violence is domestic, group-based, situational, or economically motivated.
+
+## Policy trade-offs
+
+| Policy | Possible benefit | Possible risk |
+|---|---|---|
+| Increased patrol | higher guardianship and deterrence | reduced trust if aggressive or unequal |
+| Focused deterrence | targets high-risk conflicts | depends on legitimacy and implementation |
+| Weapon restrictions | reduces lethality | displacement to other methods possible |
+| Victim support | increases safety and reporting | requires trust and access |
+| Mediation | reduces retaliation | may be inappropriate for coercive abuse |
+| Rehabilitation | addresses behaviour and trauma | slow and resource-intensive |
+
+## Common mistakes
+
+### 1. Treating all violence as the same
+
+Domestic violence, street violence, robbery, homicide, and group conflict may involve different mechanisms.
+
+### 2. Ignoring the victim-offender relationship
+
+Violence between strangers differs from violence between intimate partners, family members, peers, or rivals.
+
+### 3. Treating violence as purely impulsive
+
+Some violence is impulsive, but some is strategic, retaliatory, coercive, or reputation-based.
+
+### 4. Ignoring reporting
+
+Recorded violent crime may change because reporting changes.
+
+### 5. Ignoring institutions
+
+Trust in police and courts can shape whether people report, seek help, retaliate, or remain silent.
+
+## Checklist for analysing violent crime
+
+1. What type of violence is being studied?
+2. Who is involved?
+3. What is the relationship between victim and offender?
+4. What situational trigger is present?
+5. Is the violence expressive, instrumental, retaliatory, coercive, or mixed?
+6. What role do peers, weapons, alcohol, or place play?
+7. How is the violence measured?
+8. What institutional response is available?
+9. What policy mechanism is being proposed?
+10. What unintended consequences are possible?
+
+## Related pages
+
+- [Topics](index.qmd)
+- [Social interactions](../mechanisms/social-interactions.qmd)
+- [Self-control](../mechanisms/self-control.qmd)
+- [Opportunity and routine activity](../mechanisms/opportunity-routine.qmd)
+- [Legitimacy and compliance](../mechanisms/legitimacy-compliance.qmd)
+- [Network crime](../models/network-crime.qmd)
+- [Reporting and trust](../models/reporting-trust.qmd)

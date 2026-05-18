@@ -1,13 +1,324 @@
 ---
-title: "Models"
+title: "Criminology Models"
 toc: true
+page-layout: full
 ---
 
-These pages provide canonical strategic/dynamic representations used in theory-first criminology.
+Models are simplified representations of criminological mechanisms. They help make assumptions explicit: who acts, what they choose, what they know, what they value, and how institutions respond.
 
-- [Inspection games (deterrence & monitoring)](inspection-games.qmd)
-- [Plea bargaining (asymmetric information)](plea-bargaining.qmd)
-- [Reporting & trust (legitimacy and cooperation)](reporting-trust.qmd)
-- [Co-offending games (coordination and betrayal)](co-offending-games.qmd)
-- [Network crime (diffusion and complements)](network-crime.qmd)
-- [Allocation dynamics (hotspots and resource allocation)](allocation-dynamics.qmd)
+The purpose of this section is not to make criminology artificially mathematical. The purpose is to use models as disciplined thinking tools.
+
+## Why use models?
+
+A model helps answer questions such as:
+
+- Who are the actors?
+- What choices are available?
+- What information does each actor have?
+- What incentives or constraints matter?
+- What outcome should we expect?
+- What would change under a different policy?
+
+```{mermaid}
+flowchart LR
+    A[Criminological problem] --> B[Actors]
+    B --> C[Choices]
+    C --> D[Information]
+    D --> E[Payoffs or constraints]
+    E --> F[Prediction]
+    F --> G[Evidence or policy test]
+```
+
+A good model is not a full description of the world. It is a controlled way to isolate a mechanism.
+
+## Map of criminology models
+
+```{mermaid}
+flowchart TD
+    A[Criminology Models] --> B[Inspection Games]
+    A --> C[Reporting and Trust]
+    A --> D[Co-offending Games]
+    A --> E[Network Crime]
+    A --> F[Plea Bargaining]
+    A --> G[Allocation Dynamics]
+
+    B --> B1[Monitoring]
+    B --> B2[Deterrence]
+    B --> B3[Detection risk]
+
+    C --> C1[Victim or witness decision]
+    C --> C2[Institutional trust]
+    C --> C3[Recorded crime]
+
+    D --> D1[Coordination]
+    D --> D2[Betrayal risk]
+    D --> D3[Group offending]
+
+    E --> E1[Diffusion]
+    E --> E2[Peer effects]
+    E --> E3[Central actors]
+
+    F --> F1[Asymmetric information]
+    F --> F2[Trial risk]
+    F --> F3[Bargaining]
+
+    G --> G1[Hotspots]
+    G --> G2[Resource allocation]
+    G --> G3[Displacement]
+```
+
+These models connect directly to mechanisms. Deterrence can be modelled as inspection. Reporting can be modelled as cooperation under trust. Co-offending can be modelled as coordination. Crime diffusion can be modelled through networks.
+
+## Model pages
+
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Inspection Games
+
+Models of monitoring, deterrence, enforcement, detection risk, and strategic adaptation between rule-breakers and authorities.
+
+[Open →](inspection-games.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Plea Bargaining
+
+A model of bargaining under uncertainty, asymmetric information, trial risk, and institutional pressure.
+
+[Open →](plea-bargaining.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Reporting and Trust
+
+Models of victim or witness reporting, institutional trust, cooperation, hidden crime, and recorded crime.
+
+[Open →](reporting-trust.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Co-offending Games
+
+Models of coordination, mutual trust, betrayal risk, group crime, and collective action.
+
+[Open →](co-offending-games.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Network Crime
+
+Models of social ties, diffusion, peer effects, central actors, and network disruption.
+
+[Open →](network-crime.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Allocation Dynamics
+
+Models of enforcement resources, hotspots, spatial concentration, displacement, and feedback over time.
+
+[Open →](allocation-dynamics.qmd)
+:::
+:::
+
+:::
+
+## From mechanism to model
+
+A mechanism explains a process. A model formalises the process enough to examine its implications.
+
+```{mermaid}
+flowchart TD
+    A[Mechanism] --> B[Choose actors]
+    B --> C[Define actions]
+    C --> D[Define information]
+    D --> E[Define payoffs]
+    E --> F[Choose timing]
+    F --> G[Choose solution concept]
+    G --> H[Derive prediction]
+    H --> I[Interpret criminologically]
+```
+
+For example, deterrence as a mechanism can become an inspection game:
+
+```text
+authority chooses monitor/not monitor
+individual chooses offend/not offend
+payoffs depend on gain, punishment, monitoring cost, and detection probability
+```
+
+This model can then ask how behaviour changes when monitoring becomes cheaper, punishment becomes harsher, or detection becomes more likely.
+
+## Matching models to questions
+
+| Research question | Useful model |
+|---|---|
+| How does monitoring affect offending? | Inspection game |
+| Why do victims report or stay silent? | Reporting and trust model |
+| Why do offenders cooperate with one another? | Co-offending game |
+| How does crime spread through groups? | Network crime model |
+| Why do defendants accept plea deals? | Plea bargaining model |
+| How should police allocate scarce resources? | Allocation dynamics model |
+
+The model should be chosen because it fits the mechanism, not because it looks sophisticated.
+
+## Actors and choices
+
+Every model begins by identifying actors and choices.
+
+Examples:
+
+| Model | Actors | Choices |
+|---|---|---|
+| Inspection game | offender, authority | offend/comply; inspect/not inspect |
+| Reporting model | victim/witness, police | report/not report; respond/not respond |
+| Co-offending game | potential co-offenders | join/not join; cooperate/betray |
+| Plea bargaining | prosecutor, defendant | offer/accept/reject; trial/settle |
+| Network model | connected individuals | offend, transmit information, recruit, withdraw |
+| Allocation model | enforcement agency, offenders | allocate patrols; move, offend, avoid |
+
+A model is unclear if the actors and choices are unclear.
+
+## Information
+
+Information is often the most important part of criminological modelling.
+
+Actors may be uncertain about:
+
+- detection risk;
+- sanction severity;
+- police presence;
+- victim reporting;
+- co-offender loyalty;
+- evidence strength;
+- court outcomes;
+- institutional response;
+- peer behaviour;
+- market conditions.
+
+Incomplete information can change the result completely. It can create signaling, screening, reputation, mistrust, overreaction, or hidden behaviour.
+
+## Payoffs and constraints
+
+Payoffs do not need to mean money. In criminology, payoffs may include:
+
+- material gain;
+- physical risk;
+- punishment;
+- shame;
+- status;
+- revenge;
+- addiction;
+- fear;
+- stigma;
+- legal cost;
+- moral cost;
+- future opportunity;
+- institutional legitimacy.
+
+A good model should avoid pretending that all motivations are the same. But it should still be clear about what is being assumed.
+
+## Timing
+
+Timing determines the logic of the model.
+
+```{mermaid}
+flowchart TD
+    A[Choose timing] --> B[Simultaneous]
+    A --> C[Sequential]
+    A --> D[Repeated]
+    A --> E[Networked or dynamic]
+
+    B --> B1[Nash equilibrium]
+    C --> C1[Backward induction or SPE]
+    D --> D1[Reputation and punishment]
+    E --> E1[Diffusion and feedback]
+```
+
+For example, deterrence may look different if police move first, offenders move first, or both adapt over time.
+
+## Interpretation
+
+The final step is interpretation. A model result should be translated back into criminological language.
+
+A model may produce a result like:
+
+$$
+\Pr(\text{offend}) \text{ decreases when } \Pr(\text{detection}) \text{ increases}.
+$$
+
+But the interpretation should ask:
+
+- Do people perceive detection risk accurately?
+- Which groups are most affected?
+- Does enforcement change reporting?
+- Does crime move elsewhere?
+- Does legitimacy rise or fall?
+- Are there unintended consequences?
+
+Without interpretation, a model is only algebra.
+
+## Common mistakes
+
+### 1. Adding too many features too early
+
+A useful first model should be simple. Add complexity only when it clarifies the mechanism.
+
+### 2. Forgetting the unit of analysis
+
+A model of individual offending is not the same as a model of neighbourhood crime rates.
+
+### 3. Treating payoffs as purely monetary
+
+Status, fear, shame, addiction, trust, and identity may matter.
+
+### 4. Ignoring institutions
+
+Police, courts, prisons, regulators, and communities are strategic actors too.
+
+### 5. Ignoring measurement
+
+A model may predict true crime, but the available data may measure recorded crime.
+
+### 6. Treating model results as automatic policy advice
+
+A model clarifies one mechanism. Policy requires institutional, empirical, and ethical interpretation.
+
+## Checklist for building a criminology model
+
+1. What crime, behaviour, or institution is being studied?
+2. Who are the actors?
+3. What choices do they have?
+4. What information does each actor have?
+5. What are the payoffs, constraints, or motivations?
+6. What is the timing?
+7. Is the interaction one-shot, repeated, or networked?
+8. What solution concept is appropriate?
+9. What prediction does the model produce?
+10. What measurement problem might affect evidence?
+11. What would the model miss?
+12. What policy implication, if any, follows?
+
+## Related pages
+
+- [Criminology Notes](../index.qmd)
+- [Mechanisms](../mechanisms/index.qmd)
+- [Institutions](../institutions/index.qmd)
+- [Topics](../topics/index.qmd)
+- [Modeling Checklist](../../toolkit/modeling-checklist.qmd)
+- [Game Theory Notes](../../../notes/game-theory.qmd)
+- [Dynamic reasoning](../../../foundations/dynamic-reasoning.qmd)
+- [Probability](../../../foundations/probability.qmd)
+- [Optimization](../../../foundations/optimization.qmd)

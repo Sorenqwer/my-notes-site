@@ -163,12 +163,34 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#argmax-and-best-responses" id="toc-argmax-and-best-responses" class="nav-link active" data-scroll-target="#argmax-and-best-responses">Argmax and best responses</a></li>
+  <li><a href="#the-basic-structure" id="toc-the-basic-structure" class="nav-link active" data-scroll-target="#the-basic-structure">The basic structure</a></li>
   <li><a href="#the-logic-of-optimization" id="toc-the-logic-of-optimization" class="nav-link" data-scroll-target="#the-logic-of-optimization">The logic of optimization</a></li>
-  <li><a href="#foc-soc-unconstrained" id="toc-foc-soc-unconstrained" class="nav-link" data-scroll-target="#foc-soc-unconstrained">FOC / SOC (unconstrained)</a></li>
-  <li><a href="#kkt-conditions-constrained" id="toc-kkt-conditions-constrained" class="nav-link" data-scroll-target="#kkt-conditions-constrained">KKT conditions (constrained)</a></li>
-  <li><a href="#constrained-optimization-at-a-glance" id="toc-constrained-optimization-at-a-glance" class="nav-link" data-scroll-target="#constrained-optimization-at-a-glance">Constrained optimization at a glance</a></li>
-  <li><a href="#example-best-response-with-a-constraint" id="toc-example-best-response-with-a-constraint" class="nav-link" data-scroll-target="#example-best-response-with-a-constraint">Example: best response with a constraint</a></li>
+  <li><a href="#argmax-notation" id="toc-argmax-notation" class="nav-link" data-scroll-target="#argmax-notation">Argmax notation</a></li>
+  <li><a href="#interior-and-boundary-solutions" id="toc-interior-and-boundary-solutions" class="nav-link" data-scroll-target="#interior-and-boundary-solutions">Interior and boundary solutions</a></li>
+  <li><a href="#first-order-condition" id="toc-first-order-condition" class="nav-link" data-scroll-target="#first-order-condition">First-order condition</a></li>
+  <li><a href="#second-order-condition" id="toc-second-order-condition" class="nav-link" data-scroll-target="#second-order-condition">Second-order condition</a></li>
+  <li><a href="#concavity" id="toc-concavity" class="nav-link" data-scroll-target="#concavity">Concavity</a></li>
+  <li><a href="#optimization-and-best-responses" id="toc-optimization-and-best-responses" class="nav-link" data-scroll-target="#optimization-and-best-responses">Optimization and best responses</a></li>
+  <li><a href="#example-best-response-in-a-cournot-game" id="toc-example-best-response-in-a-cournot-game" class="nav-link" data-scroll-target="#example-best-response-in-a-cournot-game">Example: best response in a Cournot game</a></li>
+  <li><a href="#constrained-optimization" id="toc-constrained-optimization" class="nav-link" data-scroll-target="#constrained-optimization">Constrained optimization</a></li>
+  <li><a href="#lagrangian-method" id="toc-lagrangian-method" class="nav-link" data-scroll-target="#lagrangian-method">Lagrangian method</a></li>
+  <li><a href="#kkt-conditions" id="toc-kkt-conditions" class="nav-link" data-scroll-target="#kkt-conditions">KKT conditions</a></li>
+  <li><a href="#binding-and-non-binding-constraints" id="toc-binding-and-non-binding-constraints" class="nav-link" data-scroll-target="#binding-and-non-binding-constraints">Binding and non-binding constraints</a></li>
+  <li><a href="#example-constrained-optimization" id="toc-example-constrained-optimization" class="nav-link" data-scroll-target="#example-constrained-optimization">Example: constrained optimization</a></li>
+  <li><a href="#boundary-example" id="toc-boundary-example" class="nav-link" data-scroll-target="#boundary-example">Boundary example</a></li>
+  <li><a href="#comparative-statics" id="toc-comparative-statics" class="nav-link" data-scroll-target="#comparative-statics">Comparative statics</a></li>
+  <li><a href="#optimization-versus-equilibrium" id="toc-optimization-versus-equilibrium" class="nav-link" data-scroll-target="#optimization-versus-equilibrium">Optimization versus equilibrium</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#confusing-max-and-argmax" id="toc-confusing-max-and-argmax" class="nav-link" data-scroll-target="#confusing-max-and-argmax">1. Confusing max and argmax</a></li>
+  <li><a href="#ignoring-the-feasible-set" id="toc-ignoring-the-feasible-set" class="nav-link" data-scroll-target="#ignoring-the-feasible-set">2. Ignoring the feasible set</a></li>
+  <li><a href="#applying-foc-to-boundary-solutions" id="toc-applying-foc-to-boundary-solutions" class="nav-link" data-scroll-target="#applying-foc-to-boundary-solutions">3. Applying FOC to boundary solutions</a></li>
+  <li><a href="#forgetting-the-second-order-condition" id="toc-forgetting-the-second-order-condition" class="nav-link" data-scroll-target="#forgetting-the-second-order-condition">4. Forgetting the second-order condition</a></li>
+  <li><a href="#treating-best-responses-as-fixed-numbers" id="toc-treating-best-responses-as-fixed-numbers" class="nav-link" data-scroll-target="#treating-best-responses-as-fixed-numbers">5. Treating best responses as fixed numbers</a></li>
+  <li><a href="#forgetting-interpretation" id="toc-forgetting-interpretation" class="nav-link" data-scroll-target="#forgetting-interpretation">6. Forgetting interpretation</a></li>
+  </ul></li>
+  <li><a href="#checklist-for-solving-an-optimization-problem" id="toc-checklist-for-solving-an-optimization-problem" class="nav-link" data-scroll-target="#checklist-for-solving-an-optimization-problem">Checklist for solving an optimization problem</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -194,13 +216,29 @@ window.Quarto = {
 </header>
 
 
-<section id="argmax-and-best-responses" class="level2">
-<h2 class="anchored" data-anchor-id="argmax-and-best-responses">Argmax and best responses</h2>
-<p>A best response is an optimization problem. Given others’ strategies <span class="math inline">\(s_{-i}\)</span>, player <span class="math inline">\(i\)</span> chooses</p>
+<p>Optimization is the language of choice. In economics and game theory, many arguments begin with a simple question:</p>
+<blockquote class="blockquote">
+<p>Given the available options, which choice gives the highest payoff, utility, profit, or value?</p>
+</blockquote>
+<p>This page collects the basic optimization tools needed for strategic reasoning: objective functions, constraints, argmax notation, first-order conditions, second-order conditions, and constrained optimization.</p>
+<section id="the-basic-structure" class="level2">
+<h2 class="anchored" data-anchor-id="the-basic-structure">The basic structure</h2>
+<p>An optimization problem has three parts:</p>
+<ol type="1">
+<li><strong>Choice variable</strong>: what the decision-maker controls.</li>
+<li><strong>Objective function</strong>: what the decision-maker wants to maximize or minimize.</li>
+<li><strong>Feasible set</strong>: which choices are allowed.</li>
+</ol>
+<p>A simple maximization problem can be written as</p>
 <p><span class="math display">\[
-BR_i(s_{-i})\in \arg\max_{s_i\in S_i} u_i(s_i,s_{-i}).
+\max_{x \in X} f(x),
 \]</span></p>
-<p><strong>Intuition.</strong> A Nash equilibrium is a fixed point of best responses: everyone is already choosing an argmax given others.</p>
+<p>where <span class="math inline">\(x\)</span> is the choice variable, <span class="math inline">\(X\)</span> is the feasible set, and <span class="math inline">\(f(x)\)</span> is the objective function.</p>
+<p>The solution is written as</p>
+<p><span class="math display">\[
+x^* \in \arg\max_{x \in X} f(x).
+\]</span></p>
+<p>This means that <span class="math inline">\(x^*\)</span> is a choice that achieves the highest value of <span class="math inline">\(f(x)\)</span> among all feasible choices.</p>
 </section>
 <section id="the-logic-of-optimization" class="level2">
 <h2 class="anchored" data-anchor-id="the-logic-of-optimization">The logic of optimization</h2>
@@ -211,57 +249,155 @@ BR_i(s_{-i})\in \arg\max_{s_i\in S_i} u_i(s_i,s_{-i}).
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TD
-    A[Start with an Objective] --&gt; B[Define the Choice Variable]
-    B --&gt; C[Identify Constraints]
-    C --&gt; D[Write Feasible Set]
-    D --&gt; E[Check Interior or Boundary Solution]
-    E --&gt; F[Apply FOC if Differentiable]
-    F --&gt; G[Apply SOC or Curvature Check]
-    G --&gt; H[Obtain Candidate Optimum]
-    H --&gt; I[Interpret Economically]
+    A[Start with an objective] --&gt; B[Define the choice variable]
+    B --&gt; C[Identify constraints]
+    C --&gt; D[Write the feasible set]
+    D --&gt; E[Check interior or boundary solution]
+    E --&gt; F[Apply FOC if differentiable]
+    F --&gt; G[Apply SOC or curvature check]
+    G --&gt; H[Obtain candidate optimum]
+    H --&gt; I[Interpret the result]
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
+<p>The workflow matters because many mistakes come from applying calculus before defining the feasible set.</p>
 </section>
-<section id="foc-soc-unconstrained" class="level2">
-<h2 class="anchored" data-anchor-id="foc-soc-unconstrained">FOC / SOC (unconstrained)</h2>
-<p>If <span class="math inline">\(f\)</span> is differentiable and you maximize over an interval, an interior optimum <span class="math inline">\(x^*\)</span> satisfies the <strong>first-order condition</strong> (FOC)</p>
+<section id="argmax-notation" class="level2">
+<h2 class="anchored" data-anchor-id="argmax-notation">Argmax notation</h2>
+<p>The notation</p>
+<p><span class="math display">\[
+\arg\max_{x \in X} f(x)
+\]</span></p>
+<p>means “the value or values of <span class="math inline">\(x\)</span> that maximize <span class="math inline">\(f(x)\)</span> over the set <span class="math inline">\(X\)</span>.”</p>
+<p>This is different from</p>
+<p><span class="math display">\[
+\max_{x \in X} f(x).
+\]</span></p>
+<p>The expression <span class="math inline">\(\max f(x)\)</span> gives the <strong>maximum value</strong> of the objective function.<br>
+The expression <span class="math inline">\(\arg\max f(x)\)</span> gives the <strong>choice that achieves</strong> that value.</p>
+<p>For example, suppose</p>
+<p><span class="math display">\[
+f(x)=2x-x^2.
+\]</span></p>
+<p>The maximum occurs at <span class="math inline">\(x=1\)</span>. The maximum value is</p>
+<p><span class="math display">\[
+f(1)=2(1)-1^2=1.
+\]</span></p>
+<p>So:</p>
+<p><span class="math display">\[
+\arg\max_x f(x)=1,
+\]</span></p>
+<p>but</p>
+<p><span class="math display">\[
+\max_x f(x)=1.
+\]</span></p>
+<p>In this example the argmax and the maximum value happen to be numerically the same, but conceptually they are different.</p>
+</section>
+<section id="interior-and-boundary-solutions" class="level2">
+<h2 class="anchored" data-anchor-id="interior-and-boundary-solutions">Interior and boundary solutions</h2>
+<p>A solution is an <strong>interior solution</strong> if it lies strictly inside the feasible set. A solution is a <strong>boundary solution</strong> if it occurs at the edge of the feasible set.</p>
+<p>This distinction matters because first-order conditions usually identify interior candidates. Boundary solutions may not satisfy the usual condition <span class="math inline">\(f'(x)=0\)</span>.</p>
+<p>For example, consider</p>
+<p><span class="math display">\[
+\max_{x \in [0,1]} x.
+\]</span></p>
+<p>The solution is</p>
+<p><span class="math display">\[
+x^*=1.
+\]</span></p>
+<p>But</p>
+<p><span class="math display">\[
+f'(x)=1,
+\]</span></p>
+<p>so there is no point where <span class="math inline">\(f'(x)=0\)</span>. The optimum is at the boundary.</p>
+</section>
+<section id="first-order-condition" class="level2">
+<h2 class="anchored" data-anchor-id="first-order-condition">First-order condition</h2>
+<p>If <span class="math inline">\(f\)</span> is differentiable and <span class="math inline">\(x^*\)</span> is an interior optimum, then the <strong>first-order condition</strong> is</p>
 <p><span class="math display">\[
 f'(x^*)=0.
 \]</span></p>
-<p>If <span class="math inline">\(f\)</span> is twice differentiable, the <strong>second-order condition</strong> (SOC) for a local maximum is</p>
+<p>The intuition is that, at an interior optimum, a small movement to the left or right should not improve the objective.</p>
+<p>For example, suppose</p>
+<p><span class="math display">\[
+f(x)=2x-x^2.
+\]</span></p>
+<p>Then</p>
+<p><span class="math display">\[
+f'(x)=2-2x.
+\]</span></p>
+<p>Set the derivative equal to zero:</p>
+<p><span class="math display">\[
+2-2x=0.
+\]</span></p>
+<p>So</p>
+<p><span class="math display">\[
+x^*=1.
+\]</span></p>
+<p>The first-order condition gives a candidate optimum.</p>
+</section>
+<section id="second-order-condition" class="level2">
+<h2 class="anchored" data-anchor-id="second-order-condition">Second-order condition</h2>
+<p>The first-order condition alone is not enough. It finds stationary points, but a stationary point may be a maximum, a minimum, or neither.</p>
+<p>If <span class="math inline">\(f\)</span> is twice differentiable, the <strong>second-order condition</strong> for a local maximum is</p>
 <p><span class="math display">\[
 f''(x^*)&lt;0.
 \]</span></p>
-<p><strong>Intuition.</strong> FOC finds stationary points; SOC checks that the curve bends downward.</p>
-</section>
-<section id="kkt-conditions-constrained" class="level2">
-<h2 class="anchored" data-anchor-id="kkt-conditions-constrained">KKT conditions (constrained)</h2>
-<p>For maximizing <span class="math inline">\(f(x)\)</span> subject to inequality constraints <span class="math inline">\(g_j(x)\le 0\)</span>, define the Lagrangian</p>
+<p>For the example above,</p>
 <p><span class="math display">\[
-\mathcal{L}(x,\lambda)=f(x)-\sum_{j}\lambda_j g_j(x),
-\qquad \lambda_j\ge 0.
+f(x)=2x-x^2,
 \]</span></p>
-<p>KKT conditions (at an optimum, under standard regularity assumptions) include: - <strong>Stationarity:</strong> <span class="math inline">\(\nabla_x \mathcal{L}(x^*,\lambda^*)=0\)</span> - <strong>Primal feasibility:</strong> <span class="math inline">\(g_j(x^*)\le 0\)</span> - <strong>Dual feasibility:</strong> <span class="math inline">\(\lambda_j^*\ge 0\)</span> - <strong>Complementary slackness:</strong> <span class="math inline">\(\lambda_j^* g_j(x^*)=0\)</span> for all <span class="math inline">\(j\)</span></p>
-<p><strong>Intuition.</strong> Constraints either bind (then they get a positive “shadow price” <span class="math inline">\(\lambda_j\)</span>) or don’t bind (then <span class="math inline">\(\lambda_j=0\)</span>).</p>
+<p>so</p>
+<p><span class="math display">\[
+f''(x)=-2&lt;0.
+\]</span></p>
+<p>Therefore <span class="math inline">\(x^*=1\)</span> is a local maximum.</p>
 </section>
-<section id="constrained-optimization-at-a-glance" class="level2">
-<h2 class="anchored" data-anchor-id="constrained-optimization-at-a-glance">Constrained optimization at a glance</h2>
+<section id="concavity" class="level2">
+<h2 class="anchored" data-anchor-id="concavity">Concavity</h2>
+<p>Concavity gives a stronger and cleaner way to verify a maximum.</p>
+<p>If <span class="math inline">\(f\)</span> is concave, then any point satisfying the first-order condition is a global maximum. If <span class="math inline">\(f\)</span> is strictly concave, the maximum is unique.</p>
+<p>A function is concave when it bends downward. Formally, <span class="math inline">\(f\)</span> is concave if for all <span class="math inline">\(x,y\)</span> and all <span class="math inline">\(\alpha \in [0,1]\)</span>,</p>
+<p><span class="math display">\[
+f(\alpha x+(1-\alpha)y)
+\geq
+\alpha f(x)+(1-\alpha)f(y).
+\]</span></p>
+<p>The intuition is that the value of a mixture is at least as high as the mixture of values.</p>
+<p>Concavity is useful in economics because it often represents diminishing marginal returns.</p>
+</section>
+<section id="optimization-and-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="optimization-and-best-responses">Optimization and best responses</h2>
+<p>A best response in game theory is an optimization problem.</p>
+<p>Given the strategies of other players, <span class="math inline">\(s_{-i}\)</span>, player <span class="math inline">\(i\)</span> chooses a strategy <span class="math inline">\(s_i\)</span> that maximizes their payoff:</p>
+<p><span class="math display">\[
+BR_i(s_{-i})
+\in
+\arg\max_{s_i \in S_i} u_i(s_i,s_{-i}).
+\]</span></p>
+<p>This says:</p>
+<blockquote class="blockquote">
+<p>Hold everyone else’s strategies fixed, then choose the best available response.</p>
+</blockquote>
+<p>A Nash equilibrium is a profile of strategies where everyone is already choosing a best response:</p>
+<p><span class="math display">\[
+s_i^* \in BR_i(s_{-i}^*)
+\quad \text{for every player } i.
+\]</span></p>
+<p>So optimization is not separate from equilibrium analysis. It is the local decision problem inside equilibrium reasoning.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
-    A[Objective Function] --&gt; C[Optimization Problem]
-    B[Constraint Set] --&gt; C
-    C --&gt; D[Feasible Choices]
-    D --&gt; E[Candidate Solution]
-    E --&gt; F[Check Optimality Conditions]
-    F --&gt; G[Interpret Shadow Value or Trade-off]
+    A[Other players' strategies] --&gt; B[Player's optimization problem]
+    B --&gt; C[Best response]
+    C --&gt; D[All players best responding]
+    D --&gt; E[Nash equilibrium]
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -269,17 +405,360 @@ f''(x^*)&lt;0.
 </div>
 </div>
 </section>
-<section id="example-best-response-with-a-constraint" class="level2">
-<h2 class="anchored" data-anchor-id="example-best-response-with-a-constraint">Example: best response with a constraint</h2>
-<p>Maximize <span class="math inline">\(f(x)=2x-x^2\)</span> subject to <span class="math inline">\(x\ge 0\)</span>.</p>
-<p>Write the constraint as <span class="math inline">\(g(x)=-x\le 0\)</span>. Lagrangian:</p>
+<section id="example-best-response-in-a-cournot-game" class="level2">
+<h2 class="anchored" data-anchor-id="example-best-response-in-a-cournot-game">Example: best response in a Cournot game</h2>
+<p>Suppose two firms choose quantities <span class="math inline">\(q_1\)</span> and <span class="math inline">\(q_2\)</span>. Market price is</p>
 <p><span class="math display">\[
-\mathcal{L}(x,\lambda)= (2x-x^2)-\lambda(-x)=2x-x^2+\lambda x.
+P = a - b(q_1+q_2),
 \]</span></p>
-<p>KKT: - Stationarity: <span class="math inline">\(\frac{\partial \mathcal{L}}{\partial x}=2-2x+\lambda=0\)</span> - Primal feasibility: <span class="math inline">\(x\ge 0\)</span> - Dual feasibility: <span class="math inline">\(\lambda\ge 0\)</span> - Complementary slackness: <span class="math inline">\(\lambda x=0\)</span></p>
-<p>From stationarity: <span class="math inline">\(2-2x+\lambda=0 \Rightarrow x=1+\lambda/2\)</span>.</p>
-<p>If <span class="math inline">\(x&gt;0\)</span>, then complementary slackness implies <span class="math inline">\(\lambda=0\)</span>, so <span class="math inline">\(x=1\)</span>. Check feasibility: <span class="math inline">\(1\ge 0\)</span> yes. So the solution is <span class="math inline">\(x^*=1\)</span>.</p>
-<p>(If the unconstrained maximizer had been negative, the constraint would bind and you’d get <span class="math inline">\(x^*=0\)</span> with <span class="math inline">\(\lambda&gt;0\)</span>.)</p>
+<p>and firm <span class="math inline">\(i\)</span> has constant marginal cost <span class="math inline">\(c\)</span>.</p>
+<p>Firm 1’s profit is</p>
+<p><span class="math display">\[
+\pi_1(q_1,q_2)
+=
+(a-b(q_1+q_2))q_1-cq_1.
+\]</span></p>
+<p>Simplify:</p>
+<p><span class="math display">\[
+\pi_1(q_1,q_2)
+=
+(a-c)q_1-bq_1^2-bq_1q_2.
+\]</span></p>
+<p>Firm 1 chooses <span class="math inline">\(q_1\)</span> taking <span class="math inline">\(q_2\)</span> as given:</p>
+<p><span class="math display">\[
+\max_{q_1 \geq 0}
+(a-c)q_1-bq_1^2-bq_1q_2.
+\]</span></p>
+<p>The first-order condition is</p>
+<p><span class="math display">\[
+\frac{\partial \pi_1}{\partial q_1}
+=
+(a-c)-2bq_1-bq_2=0.
+\]</span></p>
+<p>Solving for <span class="math inline">\(q_1\)</span> gives firm 1’s best response:</p>
+<p><span class="math display">\[
+q_1
+=
+\frac{a-c-bq_2}{2b}.
+\]</span></p>
+<p>With the non-negativity constraint, the best response is</p>
+<p><span class="math display">\[
+BR_1(q_2)
+=
+\max\left\{0,\frac{a-c-bq_2}{2b}\right\}.
+\]</span></p>
+<p>This example shows why optimization is the foundation of best-response analysis.</p>
+</section>
+<section id="constrained-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="constrained-optimization">Constrained optimization</h2>
+<p>Many choices are constrained. Consumers face budgets, firms face capacity, players face strategy restrictions, and institutions face feasibility constraints.</p>
+<p>A constrained optimization problem can be written as</p>
+<p><span class="math display">\[
+\max_x f(x)
+\quad \text{subject to} \quad g(x)\leq 0.
+\]</span></p>
+<p>The objective says what the decision-maker wants.<br>
+The constraint says what the decision-maker is allowed to do.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Objective function] --&gt; C[Optimization problem]
+    B[Constraint set] --&gt; C
+    C --&gt; D[Feasible choices]
+    D --&gt; E[Candidate solution]
+    E --&gt; F[Check optimality conditions]
+    F --&gt; G[Interpret trade-off]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="lagrangian-method" class="level2">
+<h2 class="anchored" data-anchor-id="lagrangian-method">Lagrangian method</h2>
+<p>For an equality-constrained problem,</p>
+<p><span class="math display">\[
+\max_x f(x)
+\quad \text{subject to} \quad h(x)=0,
+\]</span></p>
+<p>the Lagrangian is</p>
+<p><span class="math display">\[
+\mathcal{L}(x,\lambda)=f(x)-\lambda h(x).
+\]</span></p>
+<p>The first-order conditions are</p>
+<p><span class="math display">\[
+\frac{\partial \mathcal{L}}{\partial x}=0
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\frac{\partial \mathcal{L}}{\partial \lambda}=0.
+\]</span></p>
+<p>The multiplier <span class="math inline">\(\lambda\)</span> measures the shadow value of relaxing the constraint.</p>
+<p>In economic terms, a shadow value tells us how much the objective would improve if the constraint became slightly less restrictive.</p>
+</section>
+<section id="kkt-conditions" class="level2">
+<h2 class="anchored" data-anchor-id="kkt-conditions">KKT conditions</h2>
+<p>For inequality constraints, use the Karush-Kuhn-Tucker conditions.</p>
+<p>Consider</p>
+<p><span class="math display">\[
+\max_x f(x)
+\quad \text{subject to} \quad g_j(x)\leq 0
+\quad \text{for } j=1,\ldots,m.
+\]</span></p>
+<p>The Lagrangian is</p>
+<p><span class="math display">\[
+\mathcal{L}(x,\lambda)
+=
+f(x)-\sum_{j=1}^m \lambda_j g_j(x),
+\qquad
+\lambda_j \geq 0.
+\]</span></p>
+<p>The KKT conditions are:</p>
+<ol type="1">
+<li><strong>Stationarity</strong></li>
+</ol>
+<p><span class="math display">\[
+\nabla_x \mathcal{L}(x^*,\lambda^*)=0.
+\]</span></p>
+<ol start="2" type="1">
+<li><strong>Primal feasibility</strong></li>
+</ol>
+<p><span class="math display">\[
+g_j(x^*)\leq 0
+\quad \text{for all } j.
+\]</span></p>
+<ol start="3" type="1">
+<li><strong>Dual feasibility</strong></li>
+</ol>
+<p><span class="math display">\[
+\lambda_j^* \geq 0
+\quad \text{for all } j.
+\]</span></p>
+<ol start="4" type="1">
+<li><strong>Complementary slackness</strong></li>
+</ol>
+<p><span class="math display">\[
+\lambda_j^* g_j(x^*)=0
+\quad \text{for all } j.
+\]</span></p>
+<p>The intuition is simple:</p>
+<ul>
+<li>if a constraint does not bind, its multiplier is zero;</li>
+<li>if a constraint binds, its multiplier may be positive.</li>
+</ul>
+</section>
+<section id="binding-and-non-binding-constraints" class="level2">
+<h2 class="anchored" data-anchor-id="binding-and-non-binding-constraints">Binding and non-binding constraints</h2>
+<p>A constraint is <strong>binding</strong> if it holds with equality at the optimum.</p>
+<p>For example, if the constraint is</p>
+<p><span class="math display">\[
+x \leq 10,
+\]</span></p>
+<p>then it binds when</p>
+<p><span class="math display">\[
+x^*=10.
+\]</span></p>
+<p>A constraint is <strong>non-binding</strong> if it does not restrict the optimum.</p>
+<p>In KKT terms:</p>
+<p><span class="math display">\[
+\lambda_j^* g_j(x^*)=0.
+\]</span></p>
+<p>This means either:</p>
+<p><span class="math display">\[
+\lambda_j^*=0,
+\]</span></p>
+<p>or</p>
+<p><span class="math display">\[
+g_j(x^*)=0.
+\]</span></p>
+<p>So a constraint either has no shadow value, or it binds.</p>
+</section>
+<section id="example-constrained-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="example-constrained-optimization">Example: constrained optimization</h2>
+<p>Maximize</p>
+<p><span class="math display">\[
+f(x)=2x-x^2
+\]</span></p>
+<p>subject to</p>
+<p><span class="math display">\[
+x\geq 0.
+\]</span></p>
+<p>Write the constraint as</p>
+<p><span class="math display">\[
+g(x)=-x\leq 0.
+\]</span></p>
+<p>The Lagrangian is</p>
+<p><span class="math display">\[
+\mathcal{L}(x,\lambda)
+=
+2x-x^2-\lambda(-x)
+=
+2x-x^2+\lambda x.
+\]</span></p>
+<p>The KKT conditions are:</p>
+<p><span class="math display">\[
+\frac{\partial \mathcal{L}}{\partial x}
+=
+2-2x+\lambda=0,
+\]</span></p>
+<p><span class="math display">\[
+x\geq 0,
+\]</span></p>
+<p><span class="math display">\[
+\lambda \geq 0,
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\lambda x=0.
+\]</span></p>
+<p>From stationarity,</p>
+<p><span class="math display">\[
+2-2x+\lambda=0.
+\]</span></p>
+<p>So</p>
+<p><span class="math display">\[
+x=1+\frac{\lambda}{2}.
+\]</span></p>
+<p>If <span class="math inline">\(x&gt;0\)</span>, then complementary slackness implies</p>
+<p><span class="math display">\[
+\lambda=0.
+\]</span></p>
+<p>Therefore</p>
+<p><span class="math display">\[
+x^*=1.
+\]</span></p>
+<p>This is feasible, so the solution is</p>
+<p><span class="math display">\[
+x^*=1.
+\]</span></p>
+<p>The constraint does not bind.</p>
+</section>
+<section id="boundary-example" class="level2">
+<h2 class="anchored" data-anchor-id="boundary-example">Boundary example</h2>
+<p>Now consider</p>
+<p><span class="math display">\[
+\max_{x\geq 0} -x.
+\]</span></p>
+<p>The unconstrained objective is decreasing, so the best feasible choice is</p>
+<p><span class="math display">\[
+x^*=0.
+\]</span></p>
+<p>Here the constraint binds. The decision-maker would like to choose a lower value of <span class="math inline">\(x\)</span>, but the feasible set does not allow it.</p>
+<p>This kind of example is important because not every optimum is found by setting the derivative equal to zero.</p>
+</section>
+<section id="comparative-statics" class="level2">
+<h2 class="anchored" data-anchor-id="comparative-statics">Comparative statics</h2>
+<p>Comparative statics asks how the solution changes when a parameter changes.</p>
+<p>Suppose the optimal choice is</p>
+<p><span class="math display">\[
+x^*(a).
+\]</span></p>
+<p>A comparative static asks:</p>
+<p><span class="math display">\[
+\frac{d x^*(a)}{d a}.
+\]</span></p>
+<p>In words:</p>
+<blockquote class="blockquote">
+<p>When the parameter <span class="math inline">\(a\)</span> changes, how does the optimal choice change?</p>
+</blockquote>
+<p>In game theory, comparative statics often ask how equilibrium strategies change when costs, benefits, information, discount factors, or enforcement probabilities change.</p>
+<p>For example:</p>
+<ul>
+<li>How does a firm’s quantity change when marginal cost rises?</li>
+<li>How does crime change when the probability of detection rises?</li>
+<li>How does cooperation change when players become more patient?</li>
+<li>How does communication change when preferences become more aligned?</li>
+</ul>
+</section>
+<section id="optimization-versus-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="optimization-versus-equilibrium">Optimization versus equilibrium</h2>
+<p>Optimization is individual. Equilibrium is collective.</p>
+<p>An individual optimization problem asks:</p>
+<p><span class="math display">\[
+\max_{s_i \in S_i} u_i(s_i,s_{-i}).
+\]</span></p>
+<p>An equilibrium asks whether every player is solving their own optimization problem at the same time:</p>
+<p><span class="math display">\[
+s_i^* \in \arg\max_{s_i \in S_i} u_i(s_i,s_{-i}^*)
+\quad
+\text{for every } i.
+\]</span></p>
+<p>This is the bridge from calculus to game theory.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Individual choice problem] --&gt; B[Best response]
+    B --&gt; C[Best-response system]
+    C --&gt; D[Fixed point]
+    D --&gt; E[Equilibrium]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="confusing-max-and-argmax" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-max-and-argmax">1. Confusing max and argmax</h3>
+<p>The maximum is the value of the objective. The argmax is the choice that achieves it.</p>
+</section>
+<section id="ignoring-the-feasible-set" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-the-feasible-set">2. Ignoring the feasible set</h3>
+<p>An unconstrained optimum may be infeasible. Always check constraints.</p>
+</section>
+<section id="applying-foc-to-boundary-solutions" class="level3">
+<h3 class="anchored" data-anchor-id="applying-foc-to-boundary-solutions">3. Applying FOC to boundary solutions</h3>
+<p>The first-order condition is necessary for interior optima, not for all optima.</p>
+</section>
+<section id="forgetting-the-second-order-condition" class="level3">
+<h3 class="anchored" data-anchor-id="forgetting-the-second-order-condition">4. Forgetting the second-order condition</h3>
+<p>A stationary point may be a maximum, minimum, or saddle point.</p>
+</section>
+<section id="treating-best-responses-as-fixed-numbers" class="level3">
+<h3 class="anchored" data-anchor-id="treating-best-responses-as-fixed-numbers">5. Treating best responses as fixed numbers</h3>
+<p>Best responses usually depend on other players’ strategies. A best response is often a function, not just a single value.</p>
+</section>
+<section id="forgetting-interpretation" class="level3">
+<h3 class="anchored" data-anchor-id="forgetting-interpretation">6. Forgetting interpretation</h3>
+<p>Solving the math is only part of the work. The final step is explaining what the result means in the model.</p>
+</section>
+</section>
+<section id="checklist-for-solving-an-optimization-problem" class="level2">
+<h2 class="anchored" data-anchor-id="checklist-for-solving-an-optimization-problem">Checklist for solving an optimization problem</h2>
+<p>Use this checklist before moving to equilibrium analysis:</p>
+<ol type="1">
+<li>What is the choice variable?</li>
+<li>What is the objective function?</li>
+<li>What is the feasible set?</li>
+<li>Is the problem constrained or unconstrained?</li>
+<li>Is the solution interior or on the boundary?</li>
+<li>Can FOC be used?</li>
+<li>Does SOC or concavity confirm a maximum?</li>
+<li>What does the solution mean economically?</li>
+<li>How does the solution change when parameters change?</li>
+<li>If this is a game, how does this become a best response?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../notes/game-theory.html">Game Theory Notes</a></li>
+<li><a href="../notes/game-types/normal-form.html">Normal-form games</a></li>
+<li><a href="../notes/equilibriums/nash.html">Nash equilibrium</a></li>
+<li><a href="../notes/game-types/normal-form.html">Cournot-style strategic reasoning</a></li>
+<li><a href="../foundations/dynamic-reasoning.html">Dynamic reasoning</a></li>
+<li><a href="../foundations/fixed-points.html">Fixed points</a></li>
+<li><a href="../foundations/convexity.html">Convexity</a></li>
+</ul>
 
 
 </section>

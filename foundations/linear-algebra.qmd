@@ -1,58 +1,507 @@
 ---
-title: "Linear algebra"
+title: "Linear Algebra"
 toc: true
+page-layout: full
 ---
 
-## Mixed strategies as vectors
-A mixed strategy is a probability vector over pure actions. If player $i$ has $m$ pure actions, a mixed strategy is
+Linear algebra is the language of vectors, matrices, systems, and transformations. It appears in game theory, statistics, networks, Markov processes, mixed strategies, and models with many interacting parts.
+
+This page gives the basic ideas needed for reading the notes.
+
+## Why linear algebra matters
+
+Many objects in social science can be represented as lists of numbers.
+
+Examples:
+
+- a mixed strategy;
+- a belief over states;
+- a payoff vector;
+- a network adjacency matrix;
+- a transition matrix;
+- a feature vector in data analysis;
+- a system of equations.
+
+```{mermaid}
+flowchart TD
+    A[Linear Algebra] --> B[Vectors]
+    A --> C[Matrices]
+    A --> D[Systems of equations]
+    A --> E[Transformations]
+    A --> F[Networks and transitions]
+
+    B --> B1[Strategies]
+    B --> B2[Beliefs]
+    B --> B3[Payoffs]
+
+    C --> C1[Games]
+    C --> C2[Networks]
+    C --> C3[Data]
+
+    F --> F1[Markov chains]
+    F --> F2[Diffusion]
+```
+
+The point is not to make everything abstract. The point is to organize many related numbers cleanly.
+
+## Vectors
+
+A vector is an ordered list of numbers.
+
+For example,
 
 $$
-\Delta^{m-1}=\left\{x\in\mathbb{R}^m:\; x_k\ge 0\;\forall k,\;\sum_{k=1}^m x_k = 1\right\},
-$$
-
-the $(m-1)$-simplex.
-
-**Intuition.** You can think of $x$ as a “weighting” of actions. The simplex condition just says: nonnegative weights that sum to 1.
-
-## Payoff matrices and expected payoff
-In a two-player normal-form game, let player 1 have $m$ actions and player 2 have $n$ actions. Let $A\in\mathbb{R}^{m\times n}$ be player 1’s payoff matrix (and $B$ for player 2). If player 1 plays $x\in\Delta^{m-1}$ and player 2 plays $y\in\Delta^{n-1}$, then player 1’s expected payoff is
-
-$$
-u_1(x,y)=x^\top A y.
-$$
-
-**Intuition.** First compute expected payoffs against each of player 2’s pure actions ($Ay$). Then average those numbers using player 1’s mixing weights ($x^\top$).
-
-## Example: 2×2 game
-Suppose
-
-$$
-A=\begin{pmatrix}
-2 & 0\\
-1 & 3
-\end{pmatrix},\quad
-x=\begin{pmatrix}0.4\\0.6\end{pmatrix},\quad
-y=\begin{pmatrix}0.25\\0.75\end{pmatrix}.
-$$
-
-Compute
-
-$$
-Ay=
+x=
 \begin{pmatrix}
-2 & 0\\
-1 & 3
+2\\
+5\\
+1
+\end{pmatrix}.
+$$
+
+A vector can represent a point, a bundle, a strategy, a belief, or a collection of variables.
+
+In game theory, a mixed strategy over three actions may be written as
+
+$$
+\sigma=
+\begin{pmatrix}
+0.2\\
+0.5\\
+0.3
+\end{pmatrix}.
+$$
+
+The entries are probabilities, so they are nonnegative and sum to one.
+
+## Vector addition
+
+If
+
+$$
+x=
+\begin{pmatrix}
+x_1\\
+x_2
 \end{pmatrix}
+\quad
+\text{and}
+\quad
+y=
 \begin{pmatrix}
-0.25\\0.75
+y_1\\
+y_2
+\end{pmatrix},
+$$
+
+then
+
+$$
+x+y=
+\begin{pmatrix}
+x_1+y_1\\
+x_2+y_2
+\end{pmatrix}.
+$$
+
+Vector addition is component-by-component.
+
+## Scalar multiplication
+
+If $\alpha$ is a number and
+
+$$
+x=
+\begin{pmatrix}
+x_1\\
+x_2
+\end{pmatrix},
+$$
+
+then
+
+$$
+\alpha x=
+\begin{pmatrix}
+\alpha x_1\\
+\alpha x_2
+\end{pmatrix}.
+$$
+
+This is important for convex combinations:
+
+$$
+\alpha x+(1-\alpha)y.
+$$
+
+## Dot product
+
+The dot product of two vectors is
+
+$$
+x \cdot y
+=
+\sum_{k=1}^{n}x_k y_k.
+$$
+
+For example,
+
+$$
+\begin{pmatrix}
+1\\
+2\\
+3
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+4\\
+5\\
+6
+\end{pmatrix}
+=
+1\cdot 4+2\cdot 5+3\cdot 6
+=
+32.
+$$
+
+In probability, expected value can be written as a dot product:
+
+$$
+\mathbb{E}[X]=p \cdot x.
+$$
+
+where $p$ is a probability vector and $x$ is an outcome vector.
+
+## Matrices
+
+A matrix is a rectangular array of numbers.
+
+For example,
+
+$$
+A=
+\begin{pmatrix}
+1 & 2\\
+3 & 4
+\end{pmatrix}.
+$$
+
+Matrices can represent:
+
+- payoff tables;
+- systems of equations;
+- transformations;
+- networks;
+- transition probabilities;
+- data tables.
+
+## Matrix-vector multiplication
+
+If
+
+$$
+A=
+\begin{pmatrix}
+1 & 2\\
+3 & 4
+\end{pmatrix}
+\quad
+\text{and}
+\quad
+x=
+\begin{pmatrix}
+5\\
+6
+\end{pmatrix},
+$$
+
+then
+
+$$
+Ax=
+\begin{pmatrix}
+1\cdot5+2\cdot6\\
+3\cdot5+4\cdot6
 \end{pmatrix}
 =
 \begin{pmatrix}
-0.5\\
-2.5
-\end{pmatrix},
-\qquad
-u_1(x,y)=x^\top(Ay)=0.4\cdot 0.5+0.6\cdot 2.5=1.7.
+17\\
+39
+\end{pmatrix}.
 $$
 
-So the mixed-vs-mixed expected payoff is $1.7$ for player 1.
+Matrix multiplication combines rows of the matrix with the vector.
+
+```{mermaid}
+flowchart LR
+    A[Matrix] --> C[Transformation]
+    B[Vector input] --> C
+    C --> D[Vector output]
+```
+
+## Systems of equations
+
+A linear system can be written as
+
+$$
+Ax=b.
+$$
+
+For example:
+
+$$
+\begin{cases}
+x+y=5,\\
+2x-y=1.
+\end{cases}
+$$
+
+This can be written as
+
+$$
+\begin{pmatrix}
+1 & 1\\
+2 & -1
+\end{pmatrix}
+\begin{pmatrix}
+x\\
+y
+\end{pmatrix}
+=
+\begin{pmatrix}
+5\\
+1
+\end{pmatrix}.
+$$
+
+Linear algebra gives compact methods for solving such systems.
+
+## Payoff matrices
+
+A normal-form game can be represented with payoff matrices.
+
+For example, if Player 1 has two actions and Player 2 has two actions, Player 1's payoffs can be written as
+
+$$
+U_1=
+\begin{pmatrix}
+u_1(A,L) & u_1(A,R)\\
+u_1(B,L) & u_1(B,R)
+\end{pmatrix}.
+$$
+
+Player 2 has a corresponding payoff matrix.
+
+If Player 1 uses mixed strategy $p$ and Player 2 uses mixed strategy $q$, expected payoffs can be computed using matrix notation.
+
+## Expected payoff with matrices
+
+Suppose Player 1's payoff matrix is $U_1$. Let $p$ be Player 1's mixed strategy vector and $q$ be Player 2's mixed strategy vector.
+
+Then Player 1's expected payoff can be written as
+
+$$
+p^\top U_1 q.
+$$
+
+This expression means:
+
+1. Player 1 randomizes according to $p$;
+2. Player 2 randomizes according to $q$;
+3. the payoff matrix assigns payoffs to action pairs;
+4. the expression averages over all possible action pairs.
+
+```{mermaid}
+flowchart LR
+    A[Player 1 mixed strategy p] --> D[Expected payoff]
+    B[Payoff matrix U] --> D
+    C[Player 2 mixed strategy q] --> D
+```
+
+## Probability vectors
+
+A probability vector has nonnegative entries that sum to one.
+
+For example,
+
+$$
+p=
+\begin{pmatrix}
+0.1\\
+0.6\\
+0.3
+\end{pmatrix}.
+$$
+
+This can represent beliefs over three states:
+
+$$
+\theta_1,\theta_2,\theta_3.
+$$
+
+A Bayesian update changes the probability vector after observing evidence.
+
+## Transition matrices
+
+A transition matrix describes movement between states.
+
+For example,
+
+$$
+P=
+\begin{pmatrix}
+0.8 & 0.2\\
+0.3 & 0.7
+\end{pmatrix}.
+$$
+
+If the current state distribution is
+
+$$
+v_t=
+\begin{pmatrix}
+0.5\\
+0.5
+\end{pmatrix},
+$$
+
+then the next state distribution can be written as
+
+$$
+v_{t+1}=P^\top v_t
+$$
+
+or with the alternative row-vector convention,
+
+$$
+v_{t+1}=v_t P.
+$$
+
+The convention should always be made clear.
+
+Transition matrices are useful for learning, Markov chains, population dynamics, and repeated processes.
+
+## Networks and adjacency matrices
+
+A network can be represented by an adjacency matrix.
+
+If there are three people, an adjacency matrix might be
+
+$$
+A=
+\begin{pmatrix}
+0 & 1 & 1\\
+1 & 0 & 0\\
+1 & 0 & 0
+\end{pmatrix}.
+$$
+
+A value of 1 means a tie exists. A value of 0 means no tie exists.
+
+Networks can represent:
+
+- friendship;
+- communication;
+- co-offending;
+- trade;
+- influence;
+- information flow;
+- institutional links.
+
+```{mermaid}
+flowchart TD
+    A[Social network] --> B[Adjacency matrix]
+    B --> C[Centrality]
+    B --> D[Diffusion]
+    B --> E[Clusters]
+```
+
+## Eigenvectors and steady states
+
+An eigenvector of a matrix $A$ is a nonzero vector $v$ such that
+
+$$
+Av=\lambda v.
+$$
+
+The matrix changes the length of the vector but not its direction.
+
+Eigenvectors appear in:
+
+- network centrality;
+- Markov-chain steady states;
+- dynamic systems;
+- principal components;
+- stability analysis.
+
+A steady-state distribution in a Markov process often satisfies
+
+$$
+\pi P = \pi.
+$$
+
+This is also a fixed-point condition.
+
+## Linear algebra and fixed points
+
+Some fixed points can be written as linear equations.
+
+For example,
+
+$$
+x = Ax.
+$$
+
+This can be rewritten as
+
+$$
+(I-A)x=0.
+$$
+
+This connects linear algebra to equilibrium, steady states, and dynamic systems.
+
+## Common mistakes
+
+### 1. Ignoring dimensions
+
+Matrix multiplication only works when dimensions match.
+
+### 2. Confusing rows and columns
+
+Always check whether vectors are written as row vectors or column vectors.
+
+### 3. Treating matrices as just tables
+
+Matrices can represent transformations, not only stored numbers.
+
+### 4. Forgetting probability constraints
+
+A probability vector must have nonnegative entries that sum to one.
+
+### 5. Confusing adjacency with intensity
+
+A network matrix may record whether a tie exists or how strong the tie is. These are different.
+
+## Checklist
+
+When using linear algebra, ask:
+
+1. What does the vector represent?
+2. What does the matrix represent?
+3. Are dimensions compatible?
+4. Are entries numbers, probabilities, payoffs, or ties?
+5. Is the vector a row or column?
+6. Is the matrix transforming a vector or storing data?
+7. Are probability constraints satisfied?
+8. Does the system describe a static relation or dynamic transition?
+9. Is there a fixed point or steady state?
+10. What is the substantive interpretation?
+
+## Related pages
+
+- [Probability](probability.qmd)
+- [Optimization](optimization.qmd)
+- [Fixed Points](fixed-points.qmd)
+- [Convexity](convexity.qmd)
+- [Normal-form Games](../notes/game-types/normal-form.qmd)
+- [Network Crime](../criminology/notes/models/network-crime.qmd)
