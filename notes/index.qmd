@@ -1,42 +1,162 @@
 ---
 title: "Notes"
-toc: false
+toc: true
+page-layout: full
 ---
 
-- [Game types](game-types/index.qmd)
-- [Equilibria](equilibriums/index.qmd)
+This section collects the main technical notes of the site. The focus is on strategic reasoning, equilibrium concepts, model structure, and the mathematical tools needed to read game-theoretic arguments carefully.
 
-## A map of equilibrium concepts
- 
-The diagram below shows how common equilibrium concepts relate to one another.
- 
+The notes are organised around three layers:
+
+1. **Game types**: what kind of strategic environment we are studying.
+2. **Equilibrium concepts**: what it means for behaviour to be stable or rational.
+3. **Metrics and foundations**: how we measure, compare, and formalise objects in the model.
+
+## Map of the notes section
+
 ```{mermaid}
 flowchart TD
-    A[Equilibrium Concepts] --> B[Nash Equilibrium]
-    A --> C[Bayesian Nash Equilibrium]
-    A --> D[Subgame Perfect Equilibrium]
-    A --> E[Refinements]
-    A --> F[Broader Notions]
- 
-    D --> D1[Sequential Rationality]
- 
-    E --> E1[Trembling-hand Perfect]
-    E --> E2[Proper Equilibrium]
-    E --> E3[Sequential Equilibrium]
- 
-    F --> F1[Correlated Equilibrium]
-    F --> F2[Rationalizability]
+    A[Notes] --> B[Game Theory Overview]
+    A --> C[Game Types]
+    A --> D[Equilibrium Concepts]
+    A --> E[Metrics]
+
+    B --> B1[Players]
+    B --> B2[Strategies]
+    B --> B3[Information]
+    B --> B4[Payoffs]
+
+    C --> C1[Static Games]
+    C --> C2[Dynamic Games]
+    C --> C3[Bayesian Games]
+    C --> C4[Repeated Games]
+    C --> C5[Communication Games]
+
+    D --> D1[Nash Equilibrium]
+    D --> D2[Subgame Perfect Equilibrium]
+    D --> D3[Bayesian Nash Equilibrium]
+    D --> D4[Perfect Bayesian Equilibrium]
+    D --> D5[Refinements]
+
+    E --> E1[Rates and Counts]
+    E --> E2[Beliefs and Accuracy]
+    E --> E3[Welfare and Payoff Comparisons]
 ```
 
-## From basic equilibrium to refinements
- 
+This map is meant as a guide rather than a strict reading order. In practice, the same model often involves several layers at once. For example, a signaling game is both a game type, an information problem, and an equilibrium problem.
+
+## Main pages
+
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Game Theory Overview
+
+A central introduction to strategic interaction, best responses, Nash equilibrium, dynamic games, Bayesian games, repeated games, and communication.
+
+[Open →](game-theory.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Game Types
+
+A map of different strategic environments: normal-form games, extensive-form games, Bayesian games, repeated games, cheap talk, signaling, bargaining, auctions, global games, evolutionary games, and network games.
+
+[Open →](game-types/index.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Equilibrium Concepts
+
+A guide to Nash equilibrium, subgame perfection, Bayesian Nash equilibrium, perfect Bayesian equilibrium, sequential equilibrium, refinements, correlated equilibrium, rationalizability, and babbling equilibrium.
+
+[Open →](equilibriums/index.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Metrics
+
+A small toolkit for thinking about measurement: rates, counts, stocks, flows, proxies, precision, interpretability, and payoff comparisons.
+
+[Open →](metrics.qmd)
+:::
+:::
+
+:::
+
+## Suggested reading paths
+
+Different readers may want different entry points.
+
+### If you are new to game theory
+
+1. [Game Theory Overview](game-theory.qmd)
+2. [Normal-form games](game-types/normal-form.qmd)
+3. [Nash equilibrium](equilibriums/nash.qmd)
+4. [Extensive-form games](game-types/extensive-form.qmd)
+5. [Subgame perfect equilibrium](equilibriums/subgame-perfect.qmd)
+
+### If you want dynamic and sequential reasoning
+
+1. [Extensive-form games](game-types/extensive-form.qmd)
+2. [Subgame perfect equilibrium](equilibriums/subgame-perfect.qmd)
+3. [Repeated games](game-types/repeated.qmd)
+4. [Perfect Bayesian equilibrium](equilibriums/perfect-bayesian.qmd)
+5. [Sequential equilibrium](equilibriums/sequential-equilibrium.qmd)
+
+### If you want information and communication
+
+1. [Bayesian games](game-types/bayesian.qmd)
+2. [Bayesian Nash equilibrium](equilibriums/bayesian-nash.qmd)
+3. [Cheap talk](game-types/cheap-talk.qmd)
+4. [Signaling](game-types/signaling.qmd)
+5. [Screening and mechanism design](game-types/screening-mechanism.qmd)
+
+### If you want equilibrium refinements
+
+1. [Equilibrium concepts](equilibriums/index.qmd)
+2. [Trembling-hand perfect equilibrium](equilibriums/trembling-hand-perfect.qmd)
+3. [Proper equilibrium](equilibriums/proper-equilibrium.qmd)
+4. [Sequential equilibrium](equilibriums/sequential-equilibrium.qmd)
+5. [Rationalizability](equilibriums/rationalizability.qmd)
+
+## How to use these notes
+
+Game theory is easiest to learn when every page is read with four questions in mind:
+
+1. **Who are the players?**
+2. **What can they do?**
+3. **What do they know?**
+4. **Why is the proposed behaviour stable?**
+
+Most mistakes in game-theoretic reasoning come from skipping one of these questions. A model may look formal, but if the players, strategies, information, or payoffs are unclear, the equilibrium result will also be unclear.
+
 ```{mermaid}
 flowchart LR
-    A[Nash Equilibrium] --> B[Dynamic Consistency Concerns]
-    B --> C[Subgame Perfect Equilibrium]
-    C --> D[Off-path Belief Concerns]
-    D --> E[Sequential Equilibrium]
-    C --> F[Robustness to Mistakes]
-    F --> G[Trembling-hand Perfect]
-    G --> H[Proper Equilibrium]
+    A[Players] --> E[Game]
+    B[Strategies] --> E
+    C[Information] --> E
+    D[Payoffs] --> E
+    E --> F[Solution Concept]
+    F --> G[Equilibrium]
+    G --> H[Interpretation]
 ```
+
+## Related sections
+
+The notes section connects closely to the foundations pages:
+
+- [Foundations](../foundations/index.qmd)
+- [Optimization](../foundations/optimization.qmd)
+- [Probability](../foundations/probability.qmd)
+- [Dynamic reasoning](../foundations/dynamic-reasoning.qmd)
+- [Fixed points](../foundations/fixed-points.qmd)
+
+The same tools also appear in the criminology and psychology sections, especially when modelling institutions, compliance, trust, social interaction, and bounded reasoning.
