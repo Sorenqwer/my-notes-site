@@ -1,105 +1,301 @@
 ---
 title: "Game Theory Notes"
 toc: true
+page-layout: full
 ---
- 
-Game theory studies situations in which outcomes depend not only on one person's choice, but also on the choices, beliefs, and incentives of others. It is useful whenever behaviour is strategic: each player asks not only "What should I do?", but also "What will others do, and what do they think I will do?"
- 
+
+Game theory studies situations in which outcomes depend not only on one person's choice, but also on the choices, beliefs, and incentives of others. It is useful whenever behaviour is **strategic**: each player asks not only *“What should I do?”*, but also *“What will others do, what do they believe, and how will they respond?”*
+
+The aim of these notes is not to turn every social situation into a mathematical puzzle. It is to build a disciplined language for thinking about interdependence: conflict, cooperation, credibility, information, bargaining, punishment, trust, and reputation.
+
+## The basic idea
+
+A decision problem becomes a game when one person's payoff depends on another person's action. In an ordinary optimization problem, the decision-maker chooses the best action against a fixed environment. In a game, the “environment” also thinks, chooses, reacts, and sometimes tries to anticipate you.
+
+```{mermaid}
+flowchart LR
+    A[Ordinary choice] --> B[Choose best action against fixed conditions]
+    C[Strategic choice] --> D[Choose best action while anticipating others]
+    D --> E[Others are also anticipating you]
+    E --> F[Equilibrium reasoning]
+```
+
+This is why game theory is central to economics, politics, law, criminology, psychology, and everyday social life. Prices, contracts, promises, threats, negotiations, norms, crime, trust, and communication often depend on strategic interaction.
+
 ## How the field fits together
- 
+
 The diagram below gives a simple map of the main branches of game theory.
- 
+
 ```{mermaid}
 flowchart TD
     A[Game Theory] --> B[Static Games]
     A --> C[Dynamic Games]
     A --> D[Bayesian Games]
     A --> E[Repeated Games]
-    A --> F[Cooperative and Bargaining Settings]
- 
-    B --> B1[Nash Equilibrium]
-    B --> B2[Mixed Strategies]
-    B --> B3[Best Responses]
- 
+    A --> F[Communication Games]
+
+    B --> B1[Normal Form]
+    B --> B2[Best Responses]
+    B --> B3[Nash Equilibrium]
+
     C --> C1[Extensive Form]
     C --> C2[Backward Induction]
     C --> C3[Subgame Perfect Equilibrium]
- 
+
     D --> D1[Types]
     D --> D2[Beliefs]
     D --> D3[Bayesian Nash Equilibrium]
- 
+
     E --> E1[Reputation]
     E --> E2[Punishment]
-    E --> E3[Long-run Incentives]
- 
-    F --> F1[Bargaining]
-    F --> F2[Coalitions]
-    F --> F3[Surplus Division]
+    E --> E3[Cooperation over Time]
+
+    F --> F1[Cheap Talk]
+    F --> F2[Signaling]
+    F --> F3[Screening]
 ```
- 
-The point of the map is not to memorise labels. It is to see how each part of the subject changes one modelling ingredient: timing, information, repetition, or the possibility of binding cooperation.
- 
+
+The point of the map is not to memorise labels. It is to see how each part of the subject changes one modelling ingredient: timing, information, repetition, or communication.
+
 ## Basic ingredients of a game
+
 A game normally specifies four objects:
- 
+
 1. **Players**: the decision-makers.
 2. **Strategies**: the complete plans available to each player.
 3. **Information**: what each player knows when they choose.
 4. **Payoffs**: how each player ranks the possible outcomes.
- 
+
 A simple normal-form game can be written as
- 
+
 $$
 G = \langle N, (S_i)_{i \in N}, (u_i)_{i \in N} \rangle,
 $$
- 
+
 where $N$ is the set of players, $S_i$ is player $i$'s strategy set, and $u_i$ is player $i$'s payoff function.
- 
-## A basic workflow for analysing a game
- 
+
+For a strategy profile $s=(s_1,\ldots,s_n)$, player $i$'s payoff is written as
+
+$$
+u_i(s_i,s_{-i}),
+$$
+
+where $s_i$ is player $i$'s own strategy and $s_{-i}$ denotes the strategies chosen by everyone else.
+
+## The modelling workflow
+
 A useful way to study a game is to move from primitives to solution concept in a fixed order.
- 
+
 ```{mermaid}
 flowchart TD
-    A[Identify Players] --> B[Specify Actions or Strategies]
-    B --> C[Specify Information]
-    C --> D[Write Payoffs]
-    D --> E[Identify Timing]
-    E --> F[Choose Appropriate Solution Concept]
-    F --> G[Solve for Equilibrium]
-    G --> H[Interpret Behaviour and Comparative Statics]
+    A[Identify players] --> B[Specify actions or strategies]
+    B --> C[Specify information]
+    C --> D[Write payoffs]
+    D --> E[Identify timing]
+    E --> F[Choose solution concept]
+    F --> G[Solve for equilibrium]
+    G --> H[Interpret behaviour]
+    H --> I[Check comparative statics]
 ```
- 
+
 This workflow prevents a common mistake: solving for an equilibrium before the game itself has been clearly defined.
- 
+
+## Best responses
+
+The most basic object in game theory is the **best response**. Given the strategies of others, player $i$ chooses a strategy that maximizes their payoff:
+
+$$
+BR_i(s_{-i}) \in \arg\max_{s_i \in S_i} u_i(s_i,s_{-i}).
+$$
+
+The best response idea is simple but powerful. It says that a player's action should be judged relative to what they believe others are doing.
+
+For example, if a firm believes its competitor will set a low price, its best response may be to set a low price too. If it believes the competitor will set a high price, its best response may change. Strategic behaviour is therefore conditional behaviour.
+
 ## Nash equilibrium
- 
-A Nash equilibrium is a strategy profile in which every player is choosing a best response to the strategies of the others. Formally, a strategy profile $s^* = (s_1^*, \ldots, s_n^*)$ is a Nash equilibrium if, for every player $i$,
- 
+
+A **Nash equilibrium** is a strategy profile in which every player is choosing a best response to the strategies of the others. Formally, a strategy profile $s^* = (s_1^*, \ldots, s_n^*)$ is a Nash equilibrium if, for every player $i$,
+
 $$
-u_i(s_i^*, s_{-i}^*) \geq u_i(s_i, s_{-i}^*) \quad \text{for all } s_i \in S_i.
+u_i(s_i^*, s_{-i}^*) \geq u_i(s_i, s_{-i}^*) 
+\quad \text{for all } s_i \in S_i.
 $$
- 
-The key idea is mutual optimality: no player wants to deviate alone, taking the others' strategies as given.
- 
+
+The key idea is **mutual optimality**: no player wants to deviate alone, taking the others' strategies as given.
+
+A Nash equilibrium does **not** necessarily mean that the outcome is socially good, fair, efficient, or morally desirable. It only means that no individual player has a unilateral incentive to change their strategy.
+
+This distinction is important. A bad outcome can be stable if each player is individually responding optimally to the incentives they face.
+
+## Static games
+
+In a **static game**, players choose actions without observing the current actions of others. The standard representation is the normal form, usually shown as a payoff matrix.
+
+Static games are useful for studying:
+
+- price competition
+- public goods contribution
+- coordination problems
+- one-shot conflict
+- voting or participation decisions
+- inspection and enforcement problems
+
+The main solution concept is usually Nash equilibrium.
+
+See: [Normal-form games](game-types/normal-form.qmd).
+
 ## Dynamic games
- 
-In dynamic games, timing matters. A player may observe earlier actions before choosing later actions. This creates questions about credibility: a threat or promise must be optimal when the time comes to carry it out.
- 
-Backward induction is the usual starting point. In finite games with perfect information, one solves from the end of the game backwards.
- 
+
+In a **dynamic game**, timing matters. Players move in sequence, observe earlier actions, or make plans that unfold over time.
+
+Dynamic games introduce a new question: **credibility**.
+
+A player may announce a threat or promise, but the announcement matters only if it is optimal to carry it out when the time comes. This is why dynamic games often require stronger solution concepts than ordinary Nash equilibrium.
+
+The standard method in finite perfect-information games is **backward induction**: solve from the end of the game back to the beginning.
+
+```{mermaid}
+flowchart TD
+    A[Look at the final decision nodes] --> B[Find the last mover's optimal action]
+    B --> C[Replace the continuation with payoffs]
+    C --> D[Move one step backward]
+    D --> E[Find the previous player's optimal action]
+    E --> F[Continue until the initial node]
+    F --> G[Obtain subgame perfect equilibrium]
+```
+
+See: [Extensive-form games](game-types/extensive-form.qmd) and [Dynamic reasoning](../foundations/dynamic-reasoning.qmd).
+
 ## Bayesian games
- 
-Bayesian games introduce incomplete information. A player may not know another player's type, payoff, cost, or intention. Instead, players hold beliefs over possible types and update those beliefs when signals or actions are observed.
- 
+
+A **Bayesian game** introduces incomplete information. A player may not know another player's type, payoff, cost, ability, preference, or intention.
+
+Instead of knowing the whole game directly, players hold beliefs over possible types. These beliefs become part of strategic reasoning.
+
+A Bayesian game usually includes:
+
+- a set of players
+- a set of possible types for each player
+- a prior belief over types
+- strategy sets conditional on type
+- payoffs that may depend on type
+
+The central solution concept is **Bayesian Nash equilibrium**, where each type of each player chooses a best response given beliefs and other players' type-contingent strategies.
+
+See: [Bayesian games](game-types/bayesian.qmd), [Bayesian Nash equilibrium](equilibriums/bayesian-nash.qmd), and [Probability](../foundations/probability.qmd).
+
 ## Repeated games
- 
-Repeated games study how current behaviour can be shaped by future consequences. Cooperation may be sustained not because players are kind, but because deviation today can trigger punishment tomorrow.
- 
+
+A **repeated game** studies what happens when the same strategic situation occurs more than once. Repetition changes incentives because current actions can affect future behaviour.
+
+Cooperation may be sustained not because players are kind, but because deviation today can trigger punishment tomorrow.
+
+The basic repeated-game logic is:
+
+```{mermaid}
+flowchart LR
+    A[Current action] --> B[Observed by others]
+    B --> C[Changes future beliefs or strategies]
+    C --> D[Future reward or punishment]
+    D --> E[Current incentive]
+```
+
+Repeated games are useful for studying:
+
+- cooperation
+- reputation
+- collusion
+- trust
+- social norms
+- long-term relationships
+- informal enforcement
+
+See: [Repeated games](game-types/repeated.qmd).
+
+## Communication games
+
+Communication becomes strategic when one player has information and another player must decide whether to believe, ignore, or interpret the message.
+
+There are several important cases:
+
+| Type | Main idea |
+|---|---|
+| **Cheap talk** | Messages are costless and non-binding |
+| **Signaling** | Messages or actions may be costly and informative |
+| **Screening** | The uninformed side designs choices to reveal information |
+| **Mechanism design** | The designer structures incentives to elicit behaviour or information |
+
+A central question is whether information can be transmitted when players' interests are not perfectly aligned.
+
+See: [Cheap talk](game-types/cheap-talk.qmd), [Signaling](game-types/signaling.qmd), and [Screening & mechanism design](game-types/screening-mechanism.qmd).
+
+## Equilibrium concepts
+
+Different games require different equilibrium concepts. The choice of equilibrium concept depends on what the model needs to discipline.
+
+| Situation | Typical solution concept | What it disciplines |
+|---|---|---|
+| Simultaneous choice | Nash equilibrium | Mutual best responses |
+| Sequential choice | Subgame perfect equilibrium | Credibility and sequential rationality |
+| Incomplete information | Bayesian Nash equilibrium | Type-contingent optimality |
+| Dynamic incomplete information | Perfect Bayesian / sequential equilibrium | Beliefs and sequential rationality |
+| Robustness to small mistakes | Trembling-hand perfect equilibrium | Stability under perturbations |
+| Correlated recommendations | Correlated equilibrium | Obedience to signals |
+| Strategic reasoning without equilibrium | Rationalizability | Survival of best-response reasoning |
+
+See: [Equilibrium concepts](equilibriums/index.qmd).
+
+## Efficiency and welfare
+
+Equilibrium analysis is not the same as welfare analysis. A game may have an equilibrium that is inefficient.
+
+A classic example is the prisoners' dilemma. Each player has an individual incentive to defect, but mutual defection makes both players worse off than mutual cooperation.
+
+This creates one of the central themes of game theory:
+
+> individually rational behaviour can produce collectively undesirable outcomes.
+
+The tension between private incentives and collective welfare appears in public goods problems, arms races, price wars, overuse of common resources, and many forms of institutional failure.
+
+## Common modelling mistakes
+
+### 1. Confusing actions and strategies
+
+An action is a move at one decision point. A strategy is a complete plan. In dynamic games, a strategy must say what the player would do at every relevant information set, even after histories that do not occur in equilibrium.
+
+### 2. Solving before defining the game
+
+Before solving, specify players, strategies, information, timing, and payoffs. Many errors come from unclear primitives.
+
+### 3. Treating equilibrium as moral approval
+
+An equilibrium is a stability concept, not a claim that the outcome is good.
+
+### 4. Ignoring off-path behaviour
+
+In dynamic games, what players would do after unreached histories can affect whether threats and promises are credible.
+
+### 5. Forgetting beliefs
+
+In Bayesian and signaling games, actions cannot be understood without beliefs. What matters is not only what is true, but what players infer from what they observe.
+
+## How to read these notes
+
+A good reading order is:
+
+1. Start with [Optimization](../foundations/optimization.qmd), especially argmax and best responses.
+2. Read [Probability](../foundations/probability.qmd), especially belief updating.
+3. Read [Normal-form games](game-types/normal-form.qmd).
+4. Read [Nash equilibrium](equilibriums/nash.qmd).
+5. Move to [Extensive-form games](game-types/extensive-form.qmd) and [Subgame perfect equilibrium](equilibriums/subgame-perfect.qmd).
+6. Then read [Bayesian games](game-types/bayesian.qmd), [Repeated games](game-types/repeated.qmd), and [Cheap talk](game-types/cheap-talk.qmd).
+
 ## Related pages
+
 - [Game types](game-types/index.qmd)
 - [Equilibrium concepts](equilibriums/index.qmd)
+- [Equilibrium cheat sheet](equilibriums/cheat-sheet.qmd)
+- [Metrics](metrics.qmd)
 - [Dynamic reasoning](../foundations/dynamic-reasoning.qmd)
 - [Probability and belief updating](../foundations/probability.qmd)
 - [Optimization](../foundations/optimization.qmd)
