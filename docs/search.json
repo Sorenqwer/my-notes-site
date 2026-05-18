@@ -5035,44 +5035,100 @@
   {
     "objectID": "notes/game-types/index.html",
     "href": "notes/game-types/index.html",
-    "title": "Game types",
+    "title": "Game Types",
     "section": "",
-    "text": "Normal-form (simultaneous move)"
+    "text": "Game types describe the strategic environment before we choose an equilibrium concept. They answer questions such as: Do players move at the same time or in sequence? Do they know each other’s payoffs? Is the game played once or repeatedly? Can players communicate? Are they connected through a network?\nThis page gives a map of the main game forms used across the notes."
   },
   {
-    "objectID": "notes/game-types/index.html#static-games",
-    "href": "notes/game-types/index.html#static-games",
-    "title": "Game types",
-    "section": "",
-    "text": "Normal-form (simultaneous move)"
+    "objectID": "notes/game-types/index.html#the-basic-classification",
+    "href": "notes/game-types/index.html#the-basic-classification",
+    "title": "Game Types",
+    "section": "The basic classification",
+    "text": "The basic classification\nA game can often be classified by four modelling choices:\n\nTiming: simultaneous or sequential.\nInformation: complete or incomplete.\nFrequency: one-shot or repeated.\nCommunication and structure: messages, signals, networks, bargaining, auctions, or learning.\n\n\n\n\n\n\nflowchart TD\n    A[Game Types] --&gt; B[Timing]\n    A --&gt; C[Information]\n    A --&gt; D[Repetition]\n    A --&gt; E[Communication]\n    A --&gt; F[Market and social structure]\n\n    B --&gt; B1[Static Games]\n    B --&gt; B2[Dynamic Games]\n\n    C --&gt; C1[Complete Information]\n    C --&gt; C2[Incomplete Information]\n\n    D --&gt; D1[One-shot Games]\n    D --&gt; D2[Repeated Games]\n\n    E --&gt; E1[Cheap Talk]\n    E --&gt; E2[Signaling]\n    E --&gt; E3[Screening]\n\n    F --&gt; F1[Bargaining]\n    F --&gt; F2[Auctions]\n    F --&gt; F3[Network Games]\n    F --&gt; F4[Evolutionary and Learning Models]\n\n\n\n\n\n\nThe categories overlap. For example, a signaling game is usually dynamic, incomplete-information, and communicative. A repeated game may also include incomplete information and reputation. The classification is useful because it tells us what kind of reasoning the model requires."
   },
   {
-    "objectID": "notes/game-types/index.html#dynamic-games",
-    "href": "notes/game-types/index.html#dynamic-games",
-    "title": "Game types",
-    "section": "Dynamic games",
-    "text": "Dynamic games\n\nExtensive-form (sequential, perfect information)\nRepeated games"
+    "objectID": "notes/game-types/index.html#main-families-of-games",
+    "href": "notes/game-types/index.html#main-families-of-games",
+    "title": "Game Types",
+    "section": "Main families of games",
+    "text": "Main families of games\n\n\n\nNormal-form games\nStatic games in which players choose strategies without observing current actions by others. Useful for simultaneous-move interaction, coordination, conflict, and basic Nash equilibrium analysis.\nOpen →\n\n\n\n\nExtensive-form games\nDynamic games represented by decision nodes, branches, information sets, and terminal payoffs. Useful for sequential reasoning, credibility, and backward induction.\nOpen →\n\n\n\n\nBayesian games\nGames with incomplete information, where players may have private types and beliefs about others.\nOpen →\n\n\n\n\nRepeated games\nGames in which the same strategic situation occurs more than once. Useful for cooperation, punishment, reputation, and long-run incentives.\nOpen →"
   },
   {
-    "objectID": "notes/game-types/index.html#incomplete-information-communication",
-    "href": "notes/game-types/index.html#incomplete-information-communication",
-    "title": "Game types",
-    "section": "Incomplete information + communication",
-    "text": "Incomplete information + communication\n\nBayesian games\nCheap talk\nSignaling\nScreening & mechanism design"
+    "objectID": "notes/game-types/index.html#communication-and-information-design",
+    "href": "notes/game-types/index.html#communication-and-information-design",
+    "title": "Game Types",
+    "section": "Communication and information design",
+    "text": "Communication and information design\n\n\n\nCheap talk\nA sender sends a costless, non-binding message to a receiver. The key question is whether information can be transmitted without commitment.\nOpen →\n\n\n\n\nSignaling\nAn informed player takes an action that may reveal private information. The signal can be informative because it is costly or strategically separating.\nOpen →\n\n\n\n\nScreening and mechanism design\nThe uninformed side designs choices, contracts, or mechanisms to induce information revelation or desired behaviour.\nOpen →"
   },
   {
-    "objectID": "notes/game-types/index.html#canonical-econ-applications",
-    "href": "notes/game-types/index.html#canonical-econ-applications",
-    "title": "Game types",
-    "section": "Canonical econ applications",
-    "text": "Canonical econ applications\n\nBargaining\nAuctions"
+    "objectID": "notes/game-types/index.html#economic-and-social-applications",
+    "href": "notes/game-types/index.html#economic-and-social-applications",
+    "title": "Game Types",
+    "section": "Economic and social applications",
+    "text": "Economic and social applications\n\n\n\nBargaining\nPlayers negotiate over surplus division, agreement, delay, outside options, and commitment.\nOpen →\n\n\n\n\nAuctions\nBidders compete under rules that determine allocation and payment. Auctions connect incentives, information, and mechanism design.\nOpen →\n\n\n\n\nGlobal games\nSmall uncertainty about fundamentals can select among multiple equilibria and explain coordination under incomplete information.\nOpen →\n\n\n\n\nEvolutionary games and learning\nBehaviour changes through adaptation, imitation, reinforcement, or population dynamics rather than full rational calculation.\nOpen →\n\n\n\n\nNetwork games\nPlayers interact through social, economic, or institutional networks. The structure of connections affects incentives and outcomes.\nOpen →"
   },
   {
-    "objectID": "notes/game-types/index.html#selection-dynamics-and-structure",
-    "href": "notes/game-types/index.html#selection-dynamics-and-structure",
-    "title": "Game types",
-    "section": "Selection, dynamics, and structure",
-    "text": "Selection, dynamics, and structure\n\nGlobal games / equilibrium selection\nEvolutionary games & learning\nNetwork games"
+    "objectID": "notes/game-types/index.html#how-to-choose-a-game-type",
+    "href": "notes/game-types/index.html#how-to-choose-a-game-type",
+    "title": "Game Types",
+    "section": "How to choose a game type",
+    "text": "How to choose a game type\nThe following decision tree gives a practical way to choose a modelling form.\n\n\n\n\n\nflowchart TD\n    A[What is the strategic situation?] --&gt; B{Do players move simultaneously?}\n\n    B --&gt;|Yes| C[Normal-form game]\n    B --&gt;|No, sequence matters| D[Extensive-form game]\n\n    C --&gt; E{Is there private information?}\n    D --&gt; F{Is there private information?}\n\n    E --&gt;|No| G[Complete-information static game]\n    E --&gt;|Yes| H[Bayesian game]\n\n    F --&gt;|No| I[Dynamic complete-information game]\n    F --&gt;|Yes| J[Dynamic incomplete-information game]\n\n    G --&gt; K[Nash equilibrium]\n    H --&gt; L[Bayesian Nash equilibrium]\n    I --&gt; M[Backward induction or SPE]\n    J --&gt; N[PBE or sequential equilibrium]\n\n    A --&gt; O{Is the interaction repeated?}\n    O --&gt;|Yes| P[Repeated game]\n    P --&gt; Q[Reputation, punishment, cooperation]\n\n    A --&gt; R{Is communication central?}\n    R --&gt;|Costless messages| S[Cheap talk]\n    R --&gt;|Costly or informative actions| T[Signaling]\n    R --&gt;|Menu or contract design| U[Screening or mechanism design]\n\n\n\n\n\n\nThis tree is not meant to be mechanical. It is a way to prevent confusion between the strategic environment and the solution concept."
+  },
+  {
+    "objectID": "notes/game-types/index.html#timing-static-versus-dynamic-games",
+    "href": "notes/game-types/index.html#timing-static-versus-dynamic-games",
+    "title": "Game Types",
+    "section": "Timing: static versus dynamic games",
+    "text": "Timing: static versus dynamic games\nThe first distinction is timing.\nIn a static game, players make choices without observing the current choices of others. This does not always mean the game literally happens at the same instant. It means that no player can condition their current action on the current action of another player.\nIn a dynamic game, at least one player moves after observing something about earlier play. Dynamic games require attention to histories, information sets, and credibility.\n\n\n\n\n\n\n\n\nQuestion\nStatic game\nDynamic game\n\n\n\n\nHow are choices made?\nSimultaneously or without observation\nSequentially or over time\n\n\nStandard representation\nNormal form\nExtensive form\n\n\nMain object\nStrategy profile\nStrategy profile over histories\n\n\nMain issue\nMutual best response\nCredibility and continuation behaviour\n\n\nTypical solution\nNash equilibrium\nBackward induction or subgame perfection"
+  },
+  {
+    "objectID": "notes/game-types/index.html#information-complete-versus-incomplete-information",
+    "href": "notes/game-types/index.html#information-complete-versus-incomplete-information",
+    "title": "Game Types",
+    "section": "Information: complete versus incomplete information",
+    "text": "Information: complete versus incomplete information\nA game has complete information when the relevant payoffs, players, strategies, and structure of the game are commonly known.\nA game has incomplete information when at least one player is uncertain about another player’s type, payoff, cost, ability, preference, or intention.\nIncomplete information changes the model because players must reason with beliefs.\n\n\n\n\n\nflowchart LR\n    A[Incomplete Information] --&gt; B[Private Types]\n    B --&gt; C[Beliefs]\n    C --&gt; D[Type-contingent Strategies]\n    D --&gt; E[Bayesian Equilibrium]\n\n\n\n\n\n\nThis is the bridge between game theory and probability. In Bayesian games, a strategy is not just an action. It is a plan that specifies what each type would do."
+  },
+  {
+    "objectID": "notes/game-types/index.html#repetition-and-reputation",
+    "href": "notes/game-types/index.html#repetition-and-reputation",
+    "title": "Game Types",
+    "section": "Repetition and reputation",
+    "text": "Repetition and reputation\nRepetition changes incentives because actions today affect future responses.\nA player may cooperate today not because cooperation is immediately optimal, but because defection would damage future payoffs. This logic appears in repeated trade, collusion, social norms, trust, and informal enforcement.\n\n\n\n\n\nflowchart LR\n    A[Current behaviour] --&gt; B[Observed by others]\n    B --&gt; C[Beliefs updated]\n    C --&gt; D[Future treatment changes]\n    D --&gt; E[Current incentive changes]\n\n\n\n\n\n\nRepeated games therefore connect equilibrium reasoning to reputation and history."
+  },
+  {
+    "objectID": "notes/game-types/index.html#communication-games",
+    "href": "notes/game-types/index.html#communication-games",
+    "title": "Game Types",
+    "section": "Communication games",
+    "text": "Communication games\nCommunication games ask whether messages, signals, or contracts can transmit information.\n\n\n\n\n\n\n\n\nGame type\nWho has information?\nMain question\n\n\n\n\nCheap talk\nSender\nCan costless messages be informative?\n\n\nSignaling\nSender\nCan costly actions reveal type?\n\n\nScreening\nReceiver or designer\nCan menus induce self-selection?\n\n\nMechanism design\nDesigner\nCan rules align incentives with desired outcomes?\n\n\n\nCommunication is strategically interesting because messages are not automatically believed. A message matters only when it changes beliefs and the sender has an incentive to send it."
+  },
+  {
+    "objectID": "notes/game-types/index.html#structure-markets-networks-and-learning",
+    "href": "notes/game-types/index.html#structure-markets-networks-and-learning",
+    "title": "Game Types",
+    "section": "Structure: markets, networks, and learning",
+    "text": "Structure: markets, networks, and learning\nNot all strategic interaction is best represented as a small two-player game. Some models focus on structure.\nAuctions study allocation under bidding rules.\nBargaining studies surplus division and agreement.\nNetwork games study how links among agents shape incentives.\nEvolutionary games study how behaviour changes across populations or time.\nGlobal games study equilibrium selection when players face noisy information about fundamentals.\nThese models are useful when the environment itself is doing important explanatory work."
+  },
+  {
+    "objectID": "notes/game-types/index.html#suggested-reading-paths",
+    "href": "notes/game-types/index.html#suggested-reading-paths",
+    "title": "Game Types",
+    "section": "Suggested reading paths",
+    "text": "Suggested reading paths\n\nIf you are starting from basic game theory\n\nNormal-form games\nNash equilibrium\nExtensive-form games\nSubgame perfect equilibrium\n\n\n\nIf you are interested in information\n\nBayesian games\nBayesian Nash equilibrium\nCheap talk\nSignaling\nScreening and mechanism design\n\n\n\nIf you are interested in long-run interaction\n\nRepeated games\nSubgame perfect equilibrium\nPerfect Bayesian equilibrium\nReputation-related communication games\n\n\n\nIf you are interested in applications\n\nBargaining\nAuctions\nNetwork games\nGlobal games\nEvolutionary games and learning"
+  },
+  {
+    "objectID": "notes/game-types/index.html#common-mistakes",
+    "href": "notes/game-types/index.html#common-mistakes",
+    "title": "Game Types",
+    "section": "Common mistakes",
+    "text": "Common mistakes\n\n1. Confusing game type with equilibrium concept\n“Bayesian game” is a type of game. “Bayesian Nash equilibrium” is a solution concept for that type of game.\n\n\n2. Thinking static means unchanging\nA static game means choices are not conditioned on current observation of others’ actions. It does not mean the real-world situation has no time dimension.\n\n\n3. Forgetting that strategies are complete plans\nIn dynamic games, a strategy must specify what a player would do after every relevant history, not only along the equilibrium path.\n\n\n4. Treating communication as automatically informative\nMessages are informative only when incentives support truthful or partially informative communication.\n\n\n5. Ignoring information structure\nMany models differ only in what players know. Changing the information structure can change the equilibrium completely."
+  },
+  {
+    "objectID": "notes/game-types/index.html#related-pages",
+    "href": "notes/game-types/index.html#related-pages",
+    "title": "Game Types",
+    "section": "Related pages",
+    "text": "Related pages\n\nGame Theory Notes\nEquilibrium concepts\nOptimization\nProbability\nDynamic reasoning\nPsychology and game theory"
   },
   {
     "objectID": "notes/game-types/network-games.html",

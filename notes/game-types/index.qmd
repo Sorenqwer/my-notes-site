@@ -1,26 +1,360 @@
 ---
-title: "Game types"
+title: "Game Types"
 toc: true
+page-layout: full
 ---
 
-## Static games
-- [Normal-form (simultaneous move)](normal-form.qmd)
+Game types describe the strategic environment before we choose an equilibrium concept. They answer questions such as: Do players move at the same time or in sequence? Do they know each other's payoffs? Is the game played once or repeatedly? Can players communicate? Are they connected through a network?
 
-## Dynamic games
-- [Extensive-form (sequential, perfect information)](extensive-form.qmd)
-- [Repeated games](repeated.qmd)
+This page gives a map of the main game forms used across the notes.
 
-## Incomplete information + communication
-- [Bayesian games](bayesian.qmd)
-- [Cheap talk](cheap-talk.qmd)
-- [Signaling](signaling.qmd)
-- [Screening & mechanism design](screening-mechanism.qmd)
+## The basic classification
 
-## Canonical econ applications
-- [Bargaining](bargaining.qmd)
-- [Auctions](auctions.qmd)
+A game can often be classified by four modelling choices:
 
-## Selection, dynamics, and structure
-- [Global games / equilibrium selection](global-games.qmd)
-- [Evolutionary games & learning](evolutionary-learning.qmd)
-- [Network games](network-games.qmd)
+1. **Timing**: simultaneous or sequential.
+2. **Information**: complete or incomplete.
+3. **Frequency**: one-shot or repeated.
+4. **Communication and structure**: messages, signals, networks, bargaining, auctions, or learning.
+
+```{mermaid}
+flowchart TD
+    A[Game Types] --> B[Timing]
+    A --> C[Information]
+    A --> D[Repetition]
+    A --> E[Communication]
+    A --> F[Market and social structure]
+
+    B --> B1[Static Games]
+    B --> B2[Dynamic Games]
+
+    C --> C1[Complete Information]
+    C --> C2[Incomplete Information]
+
+    D --> D1[One-shot Games]
+    D --> D2[Repeated Games]
+
+    E --> E1[Cheap Talk]
+    E --> E2[Signaling]
+    E --> E3[Screening]
+
+    F --> F1[Bargaining]
+    F --> F2[Auctions]
+    F --> F3[Network Games]
+    F --> F4[Evolutionary and Learning Models]
+```
+
+The categories overlap. For example, a signaling game is usually dynamic, incomplete-information, and communicative. A repeated game may also include incomplete information and reputation. The classification is useful because it tells us what kind of reasoning the model requires.
+
+## Main families of games
+
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Normal-form games
+
+Static games in which players choose strategies without observing current actions by others. Useful for simultaneous-move interaction, coordination, conflict, and basic Nash equilibrium analysis.
+
+[Open →](normal-form.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Extensive-form games
+
+Dynamic games represented by decision nodes, branches, information sets, and terminal payoffs. Useful for sequential reasoning, credibility, and backward induction.
+
+[Open →](extensive-form.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Bayesian games
+
+Games with incomplete information, where players may have private types and beliefs about others.
+
+[Open →](bayesian.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Repeated games
+
+Games in which the same strategic situation occurs more than once. Useful for cooperation, punishment, reputation, and long-run incentives.
+
+[Open →](repeated.qmd)
+:::
+:::
+
+:::
+
+## Communication and information design
+
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Cheap talk
+
+A sender sends a costless, non-binding message to a receiver. The key question is whether information can be transmitted without commitment.
+
+[Open →](cheap-talk.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Signaling
+
+An informed player takes an action that may reveal private information. The signal can be informative because it is costly or strategically separating.
+
+[Open →](signaling.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Screening and mechanism design
+
+The uninformed side designs choices, contracts, or mechanisms to induce information revelation or desired behaviour.
+
+[Open →](screening-mechanism.qmd)
+:::
+:::
+
+:::
+
+## Economic and social applications
+
+::: {.grid .gap-3}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Bargaining
+
+Players negotiate over surplus division, agreement, delay, outside options, and commitment.
+
+[Open →](bargaining.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Auctions
+
+Bidders compete under rules that determine allocation and payment. Auctions connect incentives, information, and mechanism design.
+
+[Open →](auctions.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Global games
+
+Small uncertainty about fundamentals can select among multiple equilibria and explain coordination under incomplete information.
+
+[Open →](global-games.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Evolutionary games and learning
+
+Behaviour changes through adaptation, imitation, reinforcement, or population dynamics rather than full rational calculation.
+
+[Open →](evolutionary-learning.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card}
+### Network games
+
+Players interact through social, economic, or institutional networks. The structure of connections affects incentives and outcomes.
+
+[Open →](network-games.qmd)
+:::
+:::
+
+:::
+
+## How to choose a game type
+
+The following decision tree gives a practical way to choose a modelling form.
+
+```{mermaid}
+flowchart TD
+    A[What is the strategic situation?] --> B{Do players move simultaneously?}
+
+    B -->|Yes| C[Normal-form game]
+    B -->|No, sequence matters| D[Extensive-form game]
+
+    C --> E{Is there private information?}
+    D --> F{Is there private information?}
+
+    E -->|No| G[Complete-information static game]
+    E -->|Yes| H[Bayesian game]
+
+    F -->|No| I[Dynamic complete-information game]
+    F -->|Yes| J[Dynamic incomplete-information game]
+
+    G --> K[Nash equilibrium]
+    H --> L[Bayesian Nash equilibrium]
+    I --> M[Backward induction or SPE]
+    J --> N[PBE or sequential equilibrium]
+
+    A --> O{Is the interaction repeated?}
+    O -->|Yes| P[Repeated game]
+    P --> Q[Reputation, punishment, cooperation]
+
+    A --> R{Is communication central?}
+    R -->|Costless messages| S[Cheap talk]
+    R -->|Costly or informative actions| T[Signaling]
+    R -->|Menu or contract design| U[Screening or mechanism design]
+```
+
+This tree is not meant to be mechanical. It is a way to prevent confusion between the strategic environment and the solution concept.
+
+## Timing: static versus dynamic games
+
+The first distinction is timing.
+
+In a **static game**, players make choices without observing the current choices of others. This does not always mean the game literally happens at the same instant. It means that no player can condition their current action on the current action of another player.
+
+In a **dynamic game**, at least one player moves after observing something about earlier play. Dynamic games require attention to histories, information sets, and credibility.
+
+| Question | Static game | Dynamic game |
+|---|---|---|
+| How are choices made? | Simultaneously or without observation | Sequentially or over time |
+| Standard representation | Normal form | Extensive form |
+| Main object | Strategy profile | Strategy profile over histories |
+| Main issue | Mutual best response | Credibility and continuation behaviour |
+| Typical solution | Nash equilibrium | Backward induction or subgame perfection |
+
+## Information: complete versus incomplete information
+
+A game has **complete information** when the relevant payoffs, players, strategies, and structure of the game are commonly known.
+
+A game has **incomplete information** when at least one player is uncertain about another player's type, payoff, cost, ability, preference, or intention.
+
+Incomplete information changes the model because players must reason with beliefs.
+
+```{mermaid}
+flowchart LR
+    A[Incomplete Information] --> B[Private Types]
+    B --> C[Beliefs]
+    C --> D[Type-contingent Strategies]
+    D --> E[Bayesian Equilibrium]
+```
+
+This is the bridge between game theory and probability. In Bayesian games, a strategy is not just an action. It is a plan that specifies what each type would do.
+
+## Repetition and reputation
+
+Repetition changes incentives because actions today affect future responses.
+
+A player may cooperate today not because cooperation is immediately optimal, but because defection would damage future payoffs. This logic appears in repeated trade, collusion, social norms, trust, and informal enforcement.
+
+```{mermaid}
+flowchart LR
+    A[Current behaviour] --> B[Observed by others]
+    B --> C[Beliefs updated]
+    C --> D[Future treatment changes]
+    D --> E[Current incentive changes]
+```
+
+Repeated games therefore connect equilibrium reasoning to reputation and history.
+
+## Communication games
+
+Communication games ask whether messages, signals, or contracts can transmit information.
+
+| Game type | Who has information? | Main question |
+|---|---|---|
+| Cheap talk | Sender | Can costless messages be informative? |
+| Signaling | Sender | Can costly actions reveal type? |
+| Screening | Receiver or designer | Can menus induce self-selection? |
+| Mechanism design | Designer | Can rules align incentives with desired outcomes? |
+
+Communication is strategically interesting because messages are not automatically believed. A message matters only when it changes beliefs and the sender has an incentive to send it.
+
+## Structure: markets, networks, and learning
+
+Not all strategic interaction is best represented as a small two-player game. Some models focus on structure.
+
+**Auctions** study allocation under bidding rules.  
+**Bargaining** studies surplus division and agreement.  
+**Network games** study how links among agents shape incentives.  
+**Evolutionary games** study how behaviour changes across populations or time.  
+**Global games** study equilibrium selection when players face noisy information about fundamentals.
+
+These models are useful when the environment itself is doing important explanatory work.
+
+## Suggested reading paths
+
+### If you are starting from basic game theory
+
+1. [Normal-form games](normal-form.qmd)
+2. [Nash equilibrium](../equilibriums/nash.qmd)
+3. [Extensive-form games](extensive-form.qmd)
+4. [Subgame perfect equilibrium](../equilibriums/subgame-perfect.qmd)
+
+### If you are interested in information
+
+1. [Bayesian games](bayesian.qmd)
+2. [Bayesian Nash equilibrium](../equilibriums/bayesian-nash.qmd)
+3. [Cheap talk](cheap-talk.qmd)
+4. [Signaling](signaling.qmd)
+5. [Screening and mechanism design](screening-mechanism.qmd)
+
+### If you are interested in long-run interaction
+
+1. [Repeated games](repeated.qmd)
+2. [Subgame perfect equilibrium](../equilibriums/subgame-perfect.qmd)
+3. [Perfect Bayesian equilibrium](../equilibriums/perfect-bayesian.qmd)
+4. [Reputation-related communication games](cheap-talk.qmd)
+
+### If you are interested in applications
+
+1. [Bargaining](bargaining.qmd)
+2. [Auctions](auctions.qmd)
+3. [Network games](network-games.qmd)
+4. [Global games](global-games.qmd)
+5. [Evolutionary games and learning](evolutionary-learning.qmd)
+
+## Common mistakes
+
+### 1. Confusing game type with equilibrium concept
+
+“Bayesian game” is a type of game. “Bayesian Nash equilibrium” is a solution concept for that type of game.
+
+### 2. Thinking static means unchanging
+
+A static game means choices are not conditioned on current observation of others' actions. It does not mean the real-world situation has no time dimension.
+
+### 3. Forgetting that strategies are complete plans
+
+In dynamic games, a strategy must specify what a player would do after every relevant history, not only along the equilibrium path.
+
+### 4. Treating communication as automatically informative
+
+Messages are informative only when incentives support truthful or partially informative communication.
+
+### 5. Ignoring information structure
+
+Many models differ only in what players know. Changing the information structure can change the equilibrium completely.
+
+## Related pages
+
+- [Game Theory Notes](../game-theory.qmd)
+- [Equilibrium concepts](../equilibriums/index.qmd)
+- [Optimization](../../foundations/optimization.qmd)
+- [Probability](../../foundations/probability.qmd)
+- [Dynamic reasoning](../../foundations/dynamic-reasoning.qmd)
+- [Psychology and game theory](../../psychology/overlaps/game-theory.qmd)

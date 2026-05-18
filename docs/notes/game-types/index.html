@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Game types – Margins of Rationality</title>
+<title>Game Types – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -130,11 +134,32 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#static-games" id="toc-static-games" class="nav-link active" data-scroll-target="#static-games">Static games</a></li>
-  <li><a href="#dynamic-games" id="toc-dynamic-games" class="nav-link" data-scroll-target="#dynamic-games">Dynamic games</a></li>
-  <li><a href="#incomplete-information-communication" id="toc-incomplete-information-communication" class="nav-link" data-scroll-target="#incomplete-information-communication">Incomplete information + communication</a></li>
-  <li><a href="#canonical-econ-applications" id="toc-canonical-econ-applications" class="nav-link" data-scroll-target="#canonical-econ-applications">Canonical econ applications</a></li>
-  <li><a href="#selection-dynamics-and-structure" id="toc-selection-dynamics-and-structure" class="nav-link" data-scroll-target="#selection-dynamics-and-structure">Selection, dynamics, and structure</a></li>
+  <li><a href="#the-basic-classification" id="toc-the-basic-classification" class="nav-link active" data-scroll-target="#the-basic-classification">The basic classification</a></li>
+  <li><a href="#main-families-of-games" id="toc-main-families-of-games" class="nav-link" data-scroll-target="#main-families-of-games">Main families of games</a></li>
+  <li><a href="#communication-and-information-design" id="toc-communication-and-information-design" class="nav-link" data-scroll-target="#communication-and-information-design">Communication and information design</a></li>
+  <li><a href="#economic-and-social-applications" id="toc-economic-and-social-applications" class="nav-link" data-scroll-target="#economic-and-social-applications">Economic and social applications</a></li>
+  <li><a href="#how-to-choose-a-game-type" id="toc-how-to-choose-a-game-type" class="nav-link" data-scroll-target="#how-to-choose-a-game-type">How to choose a game type</a></li>
+  <li><a href="#timing-static-versus-dynamic-games" id="toc-timing-static-versus-dynamic-games" class="nav-link" data-scroll-target="#timing-static-versus-dynamic-games">Timing: static versus dynamic games</a></li>
+  <li><a href="#information-complete-versus-incomplete-information" id="toc-information-complete-versus-incomplete-information" class="nav-link" data-scroll-target="#information-complete-versus-incomplete-information">Information: complete versus incomplete information</a></li>
+  <li><a href="#repetition-and-reputation" id="toc-repetition-and-reputation" class="nav-link" data-scroll-target="#repetition-and-reputation">Repetition and reputation</a></li>
+  <li><a href="#communication-games" id="toc-communication-games" class="nav-link" data-scroll-target="#communication-games">Communication games</a></li>
+  <li><a href="#structure-markets-networks-and-learning" id="toc-structure-markets-networks-and-learning" class="nav-link" data-scroll-target="#structure-markets-networks-and-learning">Structure: markets, networks, and learning</a></li>
+  <li><a href="#suggested-reading-paths" id="toc-suggested-reading-paths" class="nav-link" data-scroll-target="#suggested-reading-paths">Suggested reading paths</a>
+  <ul class="collapse">
+  <li><a href="#if-you-are-starting-from-basic-game-theory" id="toc-if-you-are-starting-from-basic-game-theory" class="nav-link" data-scroll-target="#if-you-are-starting-from-basic-game-theory">If you are starting from basic game theory</a></li>
+  <li><a href="#if-you-are-interested-in-information" id="toc-if-you-are-interested-in-information" class="nav-link" data-scroll-target="#if-you-are-interested-in-information">If you are interested in information</a></li>
+  <li><a href="#if-you-are-interested-in-long-run-interaction" id="toc-if-you-are-interested-in-long-run-interaction" class="nav-link" data-scroll-target="#if-you-are-interested-in-long-run-interaction">If you are interested in long-run interaction</a></li>
+  <li><a href="#if-you-are-interested-in-applications" id="toc-if-you-are-interested-in-applications" class="nav-link" data-scroll-target="#if-you-are-interested-in-applications">If you are interested in applications</a></li>
+  </ul></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#confusing-game-type-with-equilibrium-concept" id="toc-confusing-game-type-with-equilibrium-concept" class="nav-link" data-scroll-target="#confusing-game-type-with-equilibrium-concept">1. Confusing game type with equilibrium concept</a></li>
+  <li><a href="#thinking-static-means-unchanging" id="toc-thinking-static-means-unchanging" class="nav-link" data-scroll-target="#thinking-static-means-unchanging">2. Thinking static means unchanging</a></li>
+  <li><a href="#forgetting-that-strategies-are-complete-plans" id="toc-forgetting-that-strategies-are-complete-plans" class="nav-link" data-scroll-target="#forgetting-that-strategies-are-complete-plans">3. Forgetting that strategies are complete plans</a></li>
+  <li><a href="#treating-communication-as-automatically-informative" id="toc-treating-communication-as-automatically-informative" class="nav-link" data-scroll-target="#treating-communication-as-automatically-informative">4. Treating communication as automatically informative</a></li>
+  <li><a href="#ignoring-information-structure" id="toc-ignoring-information-structure" class="nav-link" data-scroll-target="#ignoring-information-structure">5. Ignoring information structure</a></li>
+  </ul></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -143,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Game types</h1>
+<h1 class="title">Game Types</h1>
 </div>
 
 
@@ -160,41 +185,413 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="static-games" class="level2">
-<h2 class="anchored" data-anchor-id="static-games">Static games</h2>
-<ul>
-<li><a href="../../notes/game-types/normal-form.html">Normal-form (simultaneous move)</a></li>
-</ul>
+<p>Game types describe the strategic environment before we choose an equilibrium concept. They answer questions such as: Do players move at the same time or in sequence? Do they know each other’s payoffs? Is the game played once or repeatedly? Can players communicate? Are they connected through a network?</p>
+<p>This page gives a map of the main game forms used across the notes.</p>
+<section id="the-basic-classification" class="level2">
+<h2 class="anchored" data-anchor-id="the-basic-classification">The basic classification</h2>
+<p>A game can often be classified by four modelling choices:</p>
+<ol type="1">
+<li><strong>Timing</strong>: simultaneous or sequential.</li>
+<li><strong>Information</strong>: complete or incomplete.</li>
+<li><strong>Frequency</strong>: one-shot or repeated.</li>
+<li><strong>Communication and structure</strong>: messages, signals, networks, bargaining, auctions, or learning.</li>
+</ol>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Game Types] --&gt; B[Timing]
+    A --&gt; C[Information]
+    A --&gt; D[Repetition]
+    A --&gt; E[Communication]
+    A --&gt; F[Market and social structure]
+
+    B --&gt; B1[Static Games]
+    B --&gt; B2[Dynamic Games]
+
+    C --&gt; C1[Complete Information]
+    C --&gt; C2[Incomplete Information]
+
+    D --&gt; D1[One-shot Games]
+    D --&gt; D2[Repeated Games]
+
+    E --&gt; E1[Cheap Talk]
+    E --&gt; E2[Signaling]
+    E --&gt; E3[Screening]
+
+    F --&gt; F1[Bargaining]
+    F --&gt; F2[Auctions]
+    F --&gt; F3[Network Games]
+    F --&gt; F4[Evolutionary and Learning Models]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The categories overlap. For example, a signaling game is usually dynamic, incomplete-information, and communicative. A repeated game may also include incomplete information and reputation. The classification is useful because it tells us what kind of reasoning the model requires.</p>
 </section>
-<section id="dynamic-games" class="level2">
-<h2 class="anchored" data-anchor-id="dynamic-games">Dynamic games</h2>
-<ul>
-<li><a href="../../notes/game-types/extensive-form.html">Extensive-form (sequential, perfect information)</a></li>
-<li><a href="../../notes/game-types/repeated.html">Repeated games</a></li>
-</ul>
+<section id="main-families-of-games" class="level2">
+<h2 class="anchored" data-anchor-id="main-families-of-games">Main families of games</h2>
+<div class="grid gap-3">
+<div class="g-col-12 g-col-md-6">
+<section id="normal-form-games" class="level3 card">
+<h3 class="anchored" data-anchor-id="normal-form-games">Normal-form games</h3>
+<p>Static games in which players choose strategies without observing current actions by others. Useful for simultaneous-move interaction, coordination, conflict, and basic Nash equilibrium analysis.</p>
+<p><a href="../../notes/game-types/normal-form.html">Open →</a></p>
 </section>
-<section id="incomplete-information-communication" class="level2">
-<h2 class="anchored" data-anchor-id="incomplete-information-communication">Incomplete information + communication</h2>
-<ul>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="extensive-form-games" class="level3 card">
+<h3 class="anchored" data-anchor-id="extensive-form-games">Extensive-form games</h3>
+<p>Dynamic games represented by decision nodes, branches, information sets, and terminal payoffs. Useful for sequential reasoning, credibility, and backward induction.</p>
+<p><a href="../../notes/game-types/extensive-form.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="bayesian-games" class="level3 card">
+<h3 class="anchored" data-anchor-id="bayesian-games">Bayesian games</h3>
+<p>Games with incomplete information, where players may have private types and beliefs about others.</p>
+<p><a href="../../notes/game-types/bayesian.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="repeated-games" class="level3 card">
+<h3 class="anchored" data-anchor-id="repeated-games">Repeated games</h3>
+<p>Games in which the same strategic situation occurs more than once. Useful for cooperation, punishment, reputation, and long-run incentives.</p>
+<p><a href="../../notes/game-types/repeated.html">Open →</a></p>
+</section>
+</div>
+</div>
+</section>
+<section id="communication-and-information-design" class="level2">
+<h2 class="anchored" data-anchor-id="communication-and-information-design">Communication and information design</h2>
+<div class="grid gap-3">
+<div class="g-col-12 g-col-md-4">
+<section id="cheap-talk" class="level3 card">
+<h3 class="anchored" data-anchor-id="cheap-talk">Cheap talk</h3>
+<p>A sender sends a costless, non-binding message to a receiver. The key question is whether information can be transmitted without commitment.</p>
+<p><a href="../../notes/game-types/cheap-talk.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-4">
+<section id="signaling" class="level3 card">
+<h3 class="anchored" data-anchor-id="signaling">Signaling</h3>
+<p>An informed player takes an action that may reveal private information. The signal can be informative because it is costly or strategically separating.</p>
+<p><a href="../../notes/game-types/signaling.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-4">
+<section id="screening-and-mechanism-design" class="level3 card">
+<h3 class="anchored" data-anchor-id="screening-and-mechanism-design">Screening and mechanism design</h3>
+<p>The uninformed side designs choices, contracts, or mechanisms to induce information revelation or desired behaviour.</p>
+<p><a href="../../notes/game-types/screening-mechanism.html">Open →</a></p>
+</section>
+</div>
+</div>
+</section>
+<section id="economic-and-social-applications" class="level2">
+<h2 class="anchored" data-anchor-id="economic-and-social-applications">Economic and social applications</h2>
+<div class="grid gap-3">
+<div class="g-col-12 g-col-md-4">
+<section id="bargaining" class="level3 card">
+<h3 class="anchored" data-anchor-id="bargaining">Bargaining</h3>
+<p>Players negotiate over surplus division, agreement, delay, outside options, and commitment.</p>
+<p><a href="../../notes/game-types/bargaining.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-4">
+<section id="auctions" class="level3 card">
+<h3 class="anchored" data-anchor-id="auctions">Auctions</h3>
+<p>Bidders compete under rules that determine allocation and payment. Auctions connect incentives, information, and mechanism design.</p>
+<p><a href="../../notes/game-types/auctions.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-4">
+<section id="global-games" class="level3 card">
+<h3 class="anchored" data-anchor-id="global-games">Global games</h3>
+<p>Small uncertainty about fundamentals can select among multiple equilibria and explain coordination under incomplete information.</p>
+<p><a href="../../notes/game-types/global-games.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-4">
+<section id="evolutionary-games-and-learning" class="level3 card">
+<h3 class="anchored" data-anchor-id="evolutionary-games-and-learning">Evolutionary games and learning</h3>
+<p>Behaviour changes through adaptation, imitation, reinforcement, or population dynamics rather than full rational calculation.</p>
+<p><a href="../../notes/game-types/evolutionary-learning.html">Open →</a></p>
+</section>
+</div>
+<div class="g-col-12 g-col-md-4">
+<section id="network-games" class="level3 card">
+<h3 class="anchored" data-anchor-id="network-games">Network games</h3>
+<p>Players interact through social, economic, or institutional networks. The structure of connections affects incentives and outcomes.</p>
+<p><a href="../../notes/game-types/network-games.html">Open →</a></p>
+</section>
+</div>
+</div>
+</section>
+<section id="how-to-choose-a-game-type" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-choose-a-game-type">How to choose a game type</h2>
+<p>The following decision tree gives a practical way to choose a modelling form.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[What is the strategic situation?] --&gt; B{Do players move simultaneously?}
+
+    B --&gt;|Yes| C[Normal-form game]
+    B --&gt;|No, sequence matters| D[Extensive-form game]
+
+    C --&gt; E{Is there private information?}
+    D --&gt; F{Is there private information?}
+
+    E --&gt;|No| G[Complete-information static game]
+    E --&gt;|Yes| H[Bayesian game]
+
+    F --&gt;|No| I[Dynamic complete-information game]
+    F --&gt;|Yes| J[Dynamic incomplete-information game]
+
+    G --&gt; K[Nash equilibrium]
+    H --&gt; L[Bayesian Nash equilibrium]
+    I --&gt; M[Backward induction or SPE]
+    J --&gt; N[PBE or sequential equilibrium]
+
+    A --&gt; O{Is the interaction repeated?}
+    O --&gt;|Yes| P[Repeated game]
+    P --&gt; Q[Reputation, punishment, cooperation]
+
+    A --&gt; R{Is communication central?}
+    R --&gt;|Costless messages| S[Cheap talk]
+    R --&gt;|Costly or informative actions| T[Signaling]
+    R --&gt;|Menu or contract design| U[Screening or mechanism design]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This tree is not meant to be mechanical. It is a way to prevent confusion between the strategic environment and the solution concept.</p>
+</section>
+<section id="timing-static-versus-dynamic-games" class="level2">
+<h2 class="anchored" data-anchor-id="timing-static-versus-dynamic-games">Timing: static versus dynamic games</h2>
+<p>The first distinction is timing.</p>
+<p>In a <strong>static game</strong>, players make choices without observing the current choices of others. This does not always mean the game literally happens at the same instant. It means that no player can condition their current action on the current action of another player.</p>
+<p>In a <strong>dynamic game</strong>, at least one player moves after observing something about earlier play. Dynamic games require attention to histories, information sets, and credibility.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Question</th>
+<th>Static game</th>
+<th>Dynamic game</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>How are choices made?</td>
+<td>Simultaneously or without observation</td>
+<td>Sequentially or over time</td>
+</tr>
+<tr class="even">
+<td>Standard representation</td>
+<td>Normal form</td>
+<td>Extensive form</td>
+</tr>
+<tr class="odd">
+<td>Main object</td>
+<td>Strategy profile</td>
+<td>Strategy profile over histories</td>
+</tr>
+<tr class="even">
+<td>Main issue</td>
+<td>Mutual best response</td>
+<td>Credibility and continuation behaviour</td>
+</tr>
+<tr class="odd">
+<td>Typical solution</td>
+<td>Nash equilibrium</td>
+<td>Backward induction or subgame perfection</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="information-complete-versus-incomplete-information" class="level2">
+<h2 class="anchored" data-anchor-id="information-complete-versus-incomplete-information">Information: complete versus incomplete information</h2>
+<p>A game has <strong>complete information</strong> when the relevant payoffs, players, strategies, and structure of the game are commonly known.</p>
+<p>A game has <strong>incomplete information</strong> when at least one player is uncertain about another player’s type, payoff, cost, ability, preference, or intention.</p>
+<p>Incomplete information changes the model because players must reason with beliefs.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Incomplete Information] --&gt; B[Private Types]
+    B --&gt; C[Beliefs]
+    C --&gt; D[Type-contingent Strategies]
+    D --&gt; E[Bayesian Equilibrium]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This is the bridge between game theory and probability. In Bayesian games, a strategy is not just an action. It is a plan that specifies what each type would do.</p>
+</section>
+<section id="repetition-and-reputation" class="level2">
+<h2 class="anchored" data-anchor-id="repetition-and-reputation">Repetition and reputation</h2>
+<p>Repetition changes incentives because actions today affect future responses.</p>
+<p>A player may cooperate today not because cooperation is immediately optimal, but because defection would damage future payoffs. This logic appears in repeated trade, collusion, social norms, trust, and informal enforcement.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Current behaviour] --&gt; B[Observed by others]
+    B --&gt; C[Beliefs updated]
+    C --&gt; D[Future treatment changes]
+    D --&gt; E[Current incentive changes]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Repeated games therefore connect equilibrium reasoning to reputation and history.</p>
+</section>
+<section id="communication-games" class="level2">
+<h2 class="anchored" data-anchor-id="communication-games">Communication games</h2>
+<p>Communication games ask whether messages, signals, or contracts can transmit information.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Game type</th>
+<th>Who has information?</th>
+<th>Main question</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cheap talk</td>
+<td>Sender</td>
+<td>Can costless messages be informative?</td>
+</tr>
+<tr class="even">
+<td>Signaling</td>
+<td>Sender</td>
+<td>Can costly actions reveal type?</td>
+</tr>
+<tr class="odd">
+<td>Screening</td>
+<td>Receiver or designer</td>
+<td>Can menus induce self-selection?</td>
+</tr>
+<tr class="even">
+<td>Mechanism design</td>
+<td>Designer</td>
+<td>Can rules align incentives with desired outcomes?</td>
+</tr>
+</tbody>
+</table>
+<p>Communication is strategically interesting because messages are not automatically believed. A message matters only when it changes beliefs and the sender has an incentive to send it.</p>
+</section>
+<section id="structure-markets-networks-and-learning" class="level2">
+<h2 class="anchored" data-anchor-id="structure-markets-networks-and-learning">Structure: markets, networks, and learning</h2>
+<p>Not all strategic interaction is best represented as a small two-player game. Some models focus on structure.</p>
+<p><strong>Auctions</strong> study allocation under bidding rules.<br>
+<strong>Bargaining</strong> studies surplus division and agreement.<br>
+<strong>Network games</strong> study how links among agents shape incentives.<br>
+<strong>Evolutionary games</strong> study how behaviour changes across populations or time.<br>
+<strong>Global games</strong> study equilibrium selection when players face noisy information about fundamentals.</p>
+<p>These models are useful when the environment itself is doing important explanatory work.</p>
+</section>
+<section id="suggested-reading-paths" class="level2">
+<h2 class="anchored" data-anchor-id="suggested-reading-paths">Suggested reading paths</h2>
+<section id="if-you-are-starting-from-basic-game-theory" class="level3">
+<h3 class="anchored" data-anchor-id="if-you-are-starting-from-basic-game-theory">If you are starting from basic game theory</h3>
+<ol type="1">
+<li><a href="../../notes/game-types/normal-form.html">Normal-form games</a></li>
+<li><a href="../../notes/equilibriums/nash.html">Nash equilibrium</a></li>
+<li><a href="../../notes/game-types/extensive-form.html">Extensive-form games</a></li>
+<li><a href="../../notes/equilibriums/subgame-perfect.html">Subgame perfect equilibrium</a></li>
+</ol>
+</section>
+<section id="if-you-are-interested-in-information" class="level3">
+<h3 class="anchored" data-anchor-id="if-you-are-interested-in-information">If you are interested in information</h3>
+<ol type="1">
 <li><a href="../../notes/game-types/bayesian.html">Bayesian games</a></li>
+<li><a href="../../notes/equilibriums/bayesian-nash.html">Bayesian Nash equilibrium</a></li>
 <li><a href="../../notes/game-types/cheap-talk.html">Cheap talk</a></li>
 <li><a href="../../notes/game-types/signaling.html">Signaling</a></li>
-<li><a href="../../notes/game-types/screening-mechanism.html">Screening &amp; mechanism design</a></li>
-</ul>
+<li><a href="../../notes/game-types/screening-mechanism.html">Screening and mechanism design</a></li>
+</ol>
 </section>
-<section id="canonical-econ-applications" class="level2">
-<h2 class="anchored" data-anchor-id="canonical-econ-applications">Canonical econ applications</h2>
-<ul>
+<section id="if-you-are-interested-in-long-run-interaction" class="level3">
+<h3 class="anchored" data-anchor-id="if-you-are-interested-in-long-run-interaction">If you are interested in long-run interaction</h3>
+<ol type="1">
+<li><a href="../../notes/game-types/repeated.html">Repeated games</a></li>
+<li><a href="../../notes/equilibriums/subgame-perfect.html">Subgame perfect equilibrium</a></li>
+<li><a href="../../notes/equilibriums/perfect-bayesian.html">Perfect Bayesian equilibrium</a></li>
+<li><a href="../../notes/game-types/cheap-talk.html">Reputation-related communication games</a></li>
+</ol>
+</section>
+<section id="if-you-are-interested-in-applications" class="level3">
+<h3 class="anchored" data-anchor-id="if-you-are-interested-in-applications">If you are interested in applications</h3>
+<ol type="1">
 <li><a href="../../notes/game-types/bargaining.html">Bargaining</a></li>
 <li><a href="../../notes/game-types/auctions.html">Auctions</a></li>
-</ul>
-</section>
-<section id="selection-dynamics-and-structure" class="level2">
-<h2 class="anchored" data-anchor-id="selection-dynamics-and-structure">Selection, dynamics, and structure</h2>
-<ul>
-<li><a href="../../notes/game-types/global-games.html">Global games / equilibrium selection</a></li>
-<li><a href="../../notes/game-types/evolutionary-learning.html">Evolutionary games &amp; learning</a></li>
 <li><a href="../../notes/game-types/network-games.html">Network games</a></li>
+<li><a href="../../notes/game-types/global-games.html">Global games</a></li>
+<li><a href="../../notes/game-types/evolutionary-learning.html">Evolutionary games and learning</a></li>
+</ol>
+</section>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="confusing-game-type-with-equilibrium-concept" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-game-type-with-equilibrium-concept">1. Confusing game type with equilibrium concept</h3>
+<p>“Bayesian game” is a type of game. “Bayesian Nash equilibrium” is a solution concept for that type of game.</p>
+</section>
+<section id="thinking-static-means-unchanging" class="level3">
+<h3 class="anchored" data-anchor-id="thinking-static-means-unchanging">2. Thinking static means unchanging</h3>
+<p>A static game means choices are not conditioned on current observation of others’ actions. It does not mean the real-world situation has no time dimension.</p>
+</section>
+<section id="forgetting-that-strategies-are-complete-plans" class="level3">
+<h3 class="anchored" data-anchor-id="forgetting-that-strategies-are-complete-plans">3. Forgetting that strategies are complete plans</h3>
+<p>In dynamic games, a strategy must specify what a player would do after every relevant history, not only along the equilibrium path.</p>
+</section>
+<section id="treating-communication-as-automatically-informative" class="level3">
+<h3 class="anchored" data-anchor-id="treating-communication-as-automatically-informative">4. Treating communication as automatically informative</h3>
+<p>Messages are informative only when incentives support truthful or partially informative communication.</p>
+</section>
+<section id="ignoring-information-structure" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-information-structure">5. Ignoring information structure</h3>
+<p>Many models differ only in what players know. Changing the information structure can change the equilibrium completely.</p>
+</section>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../../notes/game-theory.html">Game Theory Notes</a></li>
+<li><a href="../../notes/equilibriums/index.html">Equilibrium concepts</a></li>
+<li><a href="../../foundations/optimization.html">Optimization</a></li>
+<li><a href="../../foundations/probability.html">Probability</a></li>
+<li><a href="../../foundations/dynamic-reasoning.html">Dynamic reasoning</a></li>
+<li><a href="../../psychology/overlaps/game-theory.html">Psychology and game theory</a></li>
 </ul>
 
 
