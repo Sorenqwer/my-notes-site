@@ -1,0 +1,151 @@
+/* ---------- Fonts (put at TOP) ---------- */
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap");
+
+:root{
+  --font-script: "Great Vibes", "Snell Roundhand", "Apple Chancery", cursive;
+  --font-body: "Source Serif 4", ui-serif, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+/* Body text + default typography */
+body{
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+
+  /* Background (site-wide) */
+  background: url("images/hero.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Navbar site title in script */
+.navbar-brand{
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: 1.55rem;
+  letter-spacing: 0.2px;
+}
+
+/* Page title in script */
+.quarto-title-block .title{
+  font-family: var(--font-script);
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+/* Headings stay readable (serif) */
+h1,h2,h3,h4,h5,h6{
+  font-family: var(--font-body);
+}
+
+/* Code stays mono */
+code, pre, kbd, samp{
+  font-family: var(--font-mono);
+}
+
+/* Keep the title area clean */
+.quarto-title-block{
+  background: transparent;
+}
+
+/* ---------- Book-page panel (all pages) ---------- */
+main.content{
+  /* Paper look: warm tone + subtle grain */
+  background-color: rgba(255, 255, 255, 0.93);
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(0,0,0,0.03), transparent 55%),
+    radial-gradient(circle at 82% 72%, rgba(0,0,0,0.02), transparent 60%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(0,0,0,0.012),
+      rgba(0,0,0,0.012) 1px,
+      transparent 1px,
+      transparent 7px
+    );
+
+  border: 1px solid rgba(0,0,0,0.07);
+  border-radius: 14px;
+
+  width: 76vw;          /* ~3/4 screen */
+  max-width: 860px;     /* book-ish line length */
+  min-height: 72vh;     /* avoids tiny panels */
+
+  padding: 1.75rem 2rem;
+  margin: 2.75rem auto;
+
+  /* Optional page-edge highlight (subtle, not a drop shadow) */
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.65);
+}
+
+main.content p{
+  margin: 0.85rem 0;
+}
+
+/* Optional: homepage slightly lighter so background shows more */
+body.home main.content{
+  background-color: rgba(255, 255, 255, 0.88);
+}
+
+/* ---------- Margin rails (wide screens) ---------- */
+body::before,
+body::after{
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(0,0,0,0.08);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before{ left: 6vw; }
+body::after{ right: 6vw; }
+
+/* Keep content above the rails */
+main.content,
+.quarto-title-block{
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 900px){
+  body{
+    font-size: 16px;
+  }
+
+  .navbar-brand{
+    font-size: 1.35rem;
+  }
+
+  /* Rails off on mobile */
+  body::before, body::after{ display: none; }
+
+  main.content{
+    width: calc(100vw - 1.5rem);
+    max-width: none;
+    min-height: 0;
+    margin: 1rem auto;
+    padding: 1.15rem 1.15rem;
+    border-radius: 12px;
+  }
+}
+
+/* --- Card grid helpers (Quarto/Bootstrap) --- */
+.grid .card {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Keep the last paragraph (typically your Open link) pinned to the bottom */
+.grid .card p:last-child {
+  margin-top: auto;
+}
+
+/* Optional: remove the "indent" look of list/paragraph spacing inside cards */
+.grid .card > *:last-child {
+  margin-bottom: 0;
+}

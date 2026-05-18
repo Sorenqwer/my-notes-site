@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Margins of Rationality</title>
+<link>https://sorenqwer.github.io/my-notes-site/posts/</link>
+<atom:link href="https://sorenqwer.github.io/my-notes-site/posts/index.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.8.27</generator>
+<lastBuildDate>Thu, 12 Feb 2026 16:00:00 GMT</lastBuildDate>
+<item>
+  <title>First post</title>
+  <link>https://sorenqwer.github.io/my-notes-site/posts/2026-02-13-first-post.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This is my first post. I’ll use this space for short writeups and reading notes.</p>
+
+
+
+ ]]></description>
+  <category>notes</category>
+  <category>updates</category>
+  <guid>https://sorenqwer.github.io/my-notes-site/posts/2026-02-13-first-post.html</guid>
+  <pubDate>Thu, 12 Feb 2026 16:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
