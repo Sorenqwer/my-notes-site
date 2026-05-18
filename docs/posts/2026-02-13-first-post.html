@@ -165,6 +165,203 @@ ul.task-list li input[type="checkbox"] {
 
 
 </main> <!-- /main -->
+<script>
+(function () {
+  const OVERLAY_ID = "mor-diagram-zoom-overlay";
+
+  function inMainContent(el) {
+    const main = document.querySelector("main.content");
+    return main && main.contains(el);
+  }
+
+  function isMermaidSvg(el) {
+    if (!el) return false;
+    const tag = el.tagName ? el.tagName.toLowerCase() : "";
+    if (tag !== "svg") return false;
+
+    const id = el.getAttribute("id") || "";
+    return (
+      id.toLowerCase().includes("mermaid") ||
+      el.closest(".mermaid") ||
+      el.closest(".cell-output-display")
+    );
+  }
+
+  function findZoomTarget(start) {
+    if (!(start instanceof Element)) return null;
+
+    const candidate = start.closest(
+      "main.content img, main.content .mermaid svg, main.content svg, main.content pre.mermaid"
+    );
+
+    if (!candidate) return null;
+    if (!inMainContent(candidate)) return null;
+    if (candidate.closest(".navbar, #quarto-header, #quarto-search, .mor-diagram-zoom-overlay")) return null;
+
+    const tag = candidate.tagName.toLowerCase();
+
+    if (tag === "img") return candidate;
+    if (tag === "pre" && candidate.classList.contains("mermaid")) return candidate;
+    if (tag === "svg" && isMermaidSvg(candidate)) return candidate;
+
+    return null;
+  }
+
+  function cloneZoomContent(target) {
+    const tag = target.tagName.toLowerCase();
+
+    if (tag === "img") {
+      const img = document.createElement("img");
+      img.src = target.currentSrc || target.src;
+      img.alt = target.alt || "Expanded image";
+      img.className = "mor-zoomed-image";
+      return img;
+    }
+
+    if (tag === "svg") {
+      const svg = target.cloneNode(true);
+      svg.classList.add("mor-zoomed-svg");
+      svg.removeAttribute("width");
+      svg.removeAttribute("height");
+      svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+      return svg;
+    }
+
+    if (tag === "pre" && target.classList.contains("mermaid")) {
+      const pre = target.cloneNode(true);
+      pre.classList.add("mor-zoomed-mermaid-pre");
+      return pre;
+    }
+
+    return null;
+  }
+
+  function closeZoom() {
+    const overlay = document.getElementById(OVERLAY_ID);
+    if (overlay) overlay.remove();
+    document.body.classList.remove("mor-zoom-open");
+  }
+
+  function openZoom(target) {
+    const content = cloneZoomContent(target);
+    if (!content) return;
+
+    closeZoom();
+
+    const overlay = document.createElement("div");
+    overlay.id = OVERLAY_ID;
+    overlay.className = "mor-diagram-zoom-overlay";
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-modal", "true");
+    overlay.setAttribute("aria-label", "Expanded diagram");
+
+    const panel = document.createElement("div");
+    panel.className = "mor-diagram-zoom-panel";
+
+    const toolbar = document.createElement("div");
+    toolbar.className = "mor-diagram-zoom-toolbar";
+
+    const hint = document.createElement("div");
+    hint.className = "mor-diagram-zoom-hint";
+    hint.textContent = "Double-clicked diagram/image · press Esc or click × to close";
+
+    const closeButton = document.createElement("button");
+    closeButton.className = "mor-diagram-zoom-close";
+    closeButton.type = "button";
+    closeButton.setAttribute("aria-label", "Close expanded diagram");
+    closeButton.textContent = "×";
+
+    const stage = document.createElement("div");
+    stage.className = "mor-diagram-zoom-stage";
+    stage.appendChild(content);
+
+    toolbar.appendChild(hint);
+    toolbar.appendChild(closeButton);
+    panel.appendChild(toolbar);
+    panel.appendChild(stage);
+    overlay.appendChild(panel);
+    document.body.appendChild(overlay);
+    document.body.classList.add("mor-zoom-open");
+
+    closeButton.focus();
+
+    closeButton.addEventListener("click", closeZoom);
+
+    overlay.addEventListener("click", function (event) {
+      if (event.target === overlay) closeZoom();
+    });
+  }
+
+  function markZoomables() {
+    const main = document.querySelector("main.content");
+    if (!main) return;
+
+    const candidates = main.querySelectorAll("img, .mermaid svg, svg, pre.mermaid");
+
+    candidates.forEach(function (el) {
+      const target = findZoomTarget(el);
+      if (!target) return;
+
+      target.classList.add("mor-zoomable");
+      target.setAttribute("title", "Double-click to enlarge");
+
+      if (!target.hasAttribute("tabindex")) {
+        target.setAttribute("tabindex", "0");
+      }
+
+      if (!target.hasAttribute("aria-label")) {
+        target.setAttribute("aria-label", "Double-click to enlarge");
+      }
+    });
+  }
+
+  function initDiagramZoom() {
+    markZoomables();
+
+    document.addEventListener("dblclick", function (event) {
+      const target = findZoomTarget(event.target);
+      if (!target) return;
+
+      event.preventDefault();
+      openZoom(target);
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeZoom();
+        return;
+      }
+
+      if ((event.key === "Enter" || event.key === " ") && event.target) {
+        const target = findZoomTarget(event.target);
+        if (!target) return;
+
+        event.preventDefault();
+        openZoom(target);
+      }
+    });
+
+    const observer = new MutationObserver(function () {
+      markZoomables();
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    setTimeout(markZoomables, 300);
+    setTimeout(markZoomables, 1000);
+    setTimeout(markZoomables, 2000);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initDiagramZoom);
+  } else {
+    initDiagramZoom();
+  }
+})();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

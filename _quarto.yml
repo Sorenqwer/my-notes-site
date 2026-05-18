@@ -25,6 +25,8 @@ format:
   html:
     mermaid: {}
     css: styles.css
+    include-after-body:
+      - _includes/diagram-zoom.html
     toc: false
     page-layout: full
     title-block-style: plain
