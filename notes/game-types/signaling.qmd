@@ -1,48 +1,294 @@
 ---
-title: "Signaling games"
+title: "Signaling"
 toc: true
+page-layout: full
 ---
 
-## What it is
-A signaling game is a dynamic game with **private information**: a sender knows their type, chooses a signal (often costly), then a receiver responds.
+Signaling games study situations where an informed sender takes an action that may reveal private information to an uninformed receiver.
 
-## What’s special
-- Signals can be credible when different types face different costs/benefits (incentive compatibility).
-- Typical outcomes: **separating** (types choose different signals), **pooling** (same signal), or **semi-separating**.
-- Beliefs and off-path beliefs matter (PBE / sequential equilibrium ideas).
+Unlike cheap talk, a signal often has a cost or direct payoff consequence. This cost can make the signal credible when different types face different costs or benefits.
 
-## One example (education as a signal)
-Types: high ability $H$ and low ability $L$.  
-Sender chooses education level $e\ge 0$; receiver (employer) offers wage $w(e)$.
+## Basic structure
 
-- Education is more costly for $L$ than $H$ (single-crossing idea):
-  $$
-  c_L(e) > c_H(e)\ \text{for } e>0.
-  $$
-- Employer wants to pay higher wages if they believe the worker is $H$.
+A signaling game usually has this timing:
 
-A separating equilibrium can exist where $H$ chooses a higher $e$ and $L$ chooses a lower $e$, because mimicking is too costly for $L$. The signal works because it changes beliefs and is differentially costly.
+1. Nature chooses the sender's type.
+2. The sender observes their own type.
+3. The sender chooses a signal.
+4. The receiver observes the signal.
+5. The receiver forms a belief and chooses an action.
+6. Payoffs are realized.
 
+```{mermaid}
+flowchart LR
+    A[Nature chooses type] --> B[Sender observes type]
+    B --> C[Sender chooses signal]
+    C --> D[Receiver observes signal]
+    D --> E[Receiver updates belief]
+    E --> F[Receiver chooses action]
+    F --> G[Payoffs realized]
+```
 
-## Story
-A scholarship committee can’t observe applicant ability directly. Applicants can choose to take a difficult certification exam. High-ability students find it less costly; low-ability students find it very costly. The committee conditions its funding decision on the signal.
+Signaling is dynamic and involves incomplete information, so it usually requires belief-based equilibrium concepts such as perfect Bayesian equilibrium.
 
-## Model
-- Types: $\theta\in\{H,L\}$, prior $p$
-- Signal: $e\in\{0,1\}$ with costs $c_H(1)<c_L(1)$ and $c_H(0)=c_L(0)=0$
-- Receiver chooses reward based on beliefs after observing $e$
+## Why signaling matters
 
-## Equilibrium (separating vs pooling)
-Let the reward be $w_H$ if perceived high type and $w_L$ otherwise.
+Many social and economic actions are partly informative.
 
-A separating equilibrium with $H$ choosing $e=1$ and $L$ choosing $e=0$ requires:
+Examples:
+
+- education may signal ability;
+- prices may signal quality;
+- costly effort may signal commitment;
+- apologies may signal remorse;
+- investment may signal confidence;
+- violence may signal toughness;
+- compliance systems may signal responsibility;
+- credentials may signal competence.
+
+The key question is whether the signal separates types or merely creates appearance.
+
+## Types and signals
+
+Let the sender's type be:
+
 $$
-w_H-c_H(1)\ge w_L
-\quad\text{and}\quad
-w_H-c_L(1)\le w_L.
+\theta \in \Theta.
 $$
 
-## Later-on analysis
-- **Pooling:** if costs aren’t different enough, both types choose the same signal (signal loses meaning).
-- **Off-path beliefs:** dynamic equilibrium concepts differ in how they restrict beliefs after unexpected signals.
-- **Continuous effort:** allowing $e$ continuous yields richer separating thresholds and comparative statics.
+Let the sender choose signal:
+
+$$
+s \in S.
+$$
+
+The receiver observes $s$ but not $\theta$.
+
+The receiver forms belief:
+
+$$
+\mu(\theta \mid s).
+$$
+
+Then the receiver chooses action:
+
+$$
+a \in A.
+$$
+
+A signaling equilibrium specifies:
+
+1. sender signal choices for each type;
+2. receiver beliefs after each signal;
+3. receiver actions after each signal.
+
+## Separating equilibrium
+
+In a separating equilibrium, different types choose different signals.
+
+```{mermaid}
+flowchart TD
+    A[High type] --> B[Signal H]
+    C[Low type] --> D[Signal L]
+    B --> E[Receiver believes high type]
+    D --> F[Receiver believes low type]
+```
+
+Separating equilibria transmit information. The receiver can infer the sender's type from the observed signal.
+
+## Pooling equilibrium
+
+In a pooling equilibrium, different types choose the same signal.
+
+```{mermaid}
+flowchart TD
+    A[High type] --> C[Same signal]
+    B[Low type] --> C
+    C --> D[Receiver cannot distinguish types]
+    D --> E[Receiver uses pooled belief]
+```
+
+Pooling equilibria transmit less information. The receiver's belief after the pooled signal is based on the prior or equilibrium mixture.
+
+## Semi-separating equilibrium
+
+In a semi-separating equilibrium, at least one type randomizes, or the signal only partly reveals type.
+
+```{mermaid}
+flowchart LR
+    A[Types] --> B[Signals partly overlap]
+    B --> C[Receiver updates beliefs partially]
+    C --> D[Receiver response depends on posterior]
+```
+
+Semi-separating equilibria are common when incentives are close or when full separation is too costly.
+
+## Costly signals
+
+A signal can be credible when it is less costly for one type than another.
+
+For example, suppose education is easier for high-ability workers than low-ability workers. Then high education may signal high ability if low-ability workers find it too costly to imitate.
+
+The logic is:
+
+```{mermaid}
+flowchart TD
+    A[High type] --> B[Low cost of signal]
+    C[Low type] --> D[High cost of signal]
+    B --> E[High type sends signal]
+    D --> F[Low type does not imitate]
+    E --> G[Signal becomes credible]
+```
+
+This is the single-crossing intuition.
+
+## Incentive compatibility
+
+A separating equilibrium requires incentive compatibility.
+
+Each type must prefer the signal assigned to that type over imitating another type.
+
+For high type $H$ and low type $L$, a separating equilibrium may require:
+
+$$
+U_H(s_H,a_H) \geq U_H(s_L,a_L),
+$$
+
+and
+
+$$
+U_L(s_L,a_L) \geq U_L(s_H,a_H).
+$$
+
+The first condition says the high type does not want to mimic the low type.  
+The second says the low type does not want to mimic the high type.
+
+## Receiver beliefs
+
+Receiver beliefs must be consistent with observed signals on the equilibrium path.
+
+If signal $s_H$ is sent only by high type in equilibrium, then:
+
+$$
+\mu(H\mid s_H)=1.
+$$
+
+If signal $s_L$ is sent only by low type, then:
+
+$$
+\mu(L\mid s_L)=1.
+$$
+
+If both types send the same signal, the receiver's posterior is the prior conditional on pooling.
+
+Off-path beliefs are more delicate and can affect equilibrium plausibility.
+
+## Education signaling example
+
+In an education signaling model:
+
+- workers know their own ability;
+- firms do not observe ability;
+- workers choose education level;
+- firms observe education and offer wages;
+- education is less costly for high-ability workers.
+
+```{mermaid}
+flowchart LR
+    A[Worker ability type] --> B[Education choice]
+    B --> C[Firm observes education]
+    C --> D[Firm updates belief]
+    D --> E[Wage offer]
+```
+
+Education may not directly increase productivity in a pure signaling model. It may work because it separates types.
+
+## Signaling versus human capital
+
+Education can be interpreted in two ways.
+
+| Interpretation | Main idea |
+|---|---|
+| Human capital | education increases productivity |
+| Signaling | education reveals productivity or ability |
+
+Real education may do both. The model separates the mechanisms.
+
+## Signaling and social behaviour
+
+Signaling is not only economic.
+
+Examples:
+
+| Domain | Signal | Possible type being inferred |
+|---|---|---|
+| politics | costly commitment | ideological seriousness |
+| crime | retaliation | toughness or willingness to punish |
+| organizations | compliance programme | responsibility or legal caution |
+| relationships | apology | remorse or sincerity |
+| markets | warranty | product quality |
+| academia | credential | ability or training |
+
+The key question is always whether the signal is incentive-compatible.
+
+## Cheap talk versus signaling
+
+| Feature | Cheap talk | Signaling |
+|---|---|---|
+| Cost | costless | often costly |
+| Direct payoff effect | none | may directly affect payoff |
+| Credibility source | preference alignment | differential cost or incentive |
+| Main issue | can messages be informative? | can actions reveal type? |
+
+Cheap talk can reveal information without cost if preferences are aligned. Signaling can reveal information even with conflict if imitation is too costly.
+
+## Common mistakes
+
+### 1. Treating every observable action as a signal
+
+An action is a signal only if it changes beliefs about hidden information.
+
+### 2. Ignoring signal cost
+
+If imitation is costless, separation may fail.
+
+### 3. Forgetting receiver beliefs
+
+The receiver's action depends on posterior beliefs.
+
+### 4. Assuming separating equilibrium always exists
+
+Separation requires incentive compatibility.
+
+### 5. Confusing signaling with productivity
+
+A signal may reveal ability without causing ability.
+
+### 6. Ignoring off-path beliefs
+
+Unexpected signals can support or undermine equilibria.
+
+## Checklist
+
+When analysing a signaling game, ask:
+
+1. What is the sender's private type?
+2. What signal can the sender choose?
+3. Does the signal have a cost?
+4. Does the cost differ by type?
+5. What does the receiver observe?
+6. What beliefs does the receiver form?
+7. What action does the receiver choose?
+8. Is the proposed equilibrium separating, pooling, or semi-separating?
+9. Are incentive compatibility conditions satisfied?
+10. Are off-path beliefs reasonable?
+
+## Related pages
+
+- [Game Types](index.qmd)
+- [Bayesian Games](bayesian.qmd)
+- [Cheap Talk](cheap-talk.qmd)
+- [Screening and Mechanism Design](screening-mechanism.qmd)
+- [Perfect Bayesian Equilibrium](../equilibriums/perfect-bayesian.qmd)
+- [Sequential Equilibrium](../equilibriums/sequential-equilibrium.qmd)
+- [Probability](../../foundations/probability.qmd)

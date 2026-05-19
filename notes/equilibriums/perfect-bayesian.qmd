@@ -1,91 +1,245 @@
 ---
-title: "Perfect Bayesian equilibrium (PBE)"
+title: "Perfect Bayesian Equilibrium"
 toc: true
+page-layout: full
 ---
 
-## What it is
-A **Perfect Bayesian equilibrium** is a pair **(strategies, beliefs)** in a dynamic game with incomplete information such that:
+Perfect Bayesian equilibrium is a solution concept for dynamic games with incomplete information. It combines sequential rationality with beliefs.
 
-1) **Sequential rationality:** at every information set, each player’s action is optimal given their beliefs and others’ strategies.
-2) **Belief consistency (Bayes on-path):** beliefs are updated using Bayes’ rule wherever possible along the equilibrium path.
+The central idea is:
 
-Off-path (zero-probability) histories require beliefs to be specified; this can create multiple PBEs.
+> players should act optimally at every point, given their beliefs, and beliefs should be updated consistently whenever possible.
 
-## Where it shows up
-- Signaling games (education, quality signals)
-- Screening models with dynamic interaction
-- Any extensive-form game with imperfect information
+Perfect Bayesian equilibrium is especially important for signaling games, cheap-talk games, reputation models, and dynamic Bayesian games.
 
-## How to solve (recipe)
-1) Guess an equilibrium form (separating / pooling / semi-separating).
-2) Specify strategies for all players.
-3) Derive beliefs using Bayes’ rule **on-path**.
-4) Check sequential rationality at every information set:
-   - receiver best-responds given beliefs,
-   - sender type best-responds given receiver strategy.
-5) Specify off-path beliefs and verify no profitable deviations.
+## Why PBE is needed
 
----
+Bayesian Nash equilibrium handles incomplete information, but it is not enough for dynamic games where players observe actions and update beliefs over time.
 
-## Solved example (pooling PBE in a signaling game)
+Subgame perfect equilibrium handles dynamic games, but it may not fully discipline beliefs after observed actions.
 
-### Problem (context + question)
-Types: worker $\theta\in\{H,L\}$ with $\Pr(H)=p$.
+Perfect Bayesian equilibrium combines both concerns.
 
-Worker chooses education $e\in\{0,1\}$. Employer observes $e$ and offers wage $w\in\{w_H,w_L\}$.
+```{mermaid}
+flowchart TD
+    A[Dynamic game] --> B[Need sequential rationality]
+    C[Incomplete information] --> D[Need beliefs]
+    B --> E[Perfect Bayesian Equilibrium]
+    D --> E
+```
 
-Productivity:
-- If type $H$: output value is $2$
-- If type $L$: output value is $1$
+## Main components
 
-Employer is competitive and pays expected productivity given beliefs:
-- pay $w_H=2$ if believes $H$ for sure,
-- pay $w_L=1$ if believes $L$ for sure,
-- pay $w=p\cdot 2+(1-p)\cdot 1 = 1+p$ if belief is $\Pr(H)=p$.
+A perfect Bayesian equilibrium includes:
 
-Education costs:
-- $c_H(1)=0.2$, $c_L(1)=0.8$, and $c_H(0)=c_L(0)=0$.
+1. strategies for all players;
+2. beliefs at information sets;
+3. sequential rationality;
+4. belief consistency using Bayes' rule wherever possible.
 
-**Question:** Construct a pooling PBE where both types choose $e=0$.
+```{mermaid}
+flowchart LR
+    A[Strategies] --> C[PBE]
+    B[Beliefs] --> C
+    C --> D[Sequential rationality]
+    C --> E[Bayesian updating]
+```
 
-### Solution
-We propose a pooling strategy:
-- Worker: $e(\theta)=0$ for both $\theta\in\{H,L\}$.
-- Employer: after observing $e=0$, pay $w(0)=1+p$ (belief equals prior); after $e=1$, specify an off-path belief.
+Strategies say what players do.  
+Beliefs say what players think has happened or what type they face.
 
-**Step 1 (beliefs on-path):**
-Since both types choose $e=0$, observing $e=0$ yields posterior $\Pr(H\mid e=0)=p$. So paying $w(0)=1+p$ is consistent.
+## Sequential rationality
 
-**Step 2 (employer sequential rationality):**
-Given belief $p$ after $e=0$, competitive wage is $1+p$. Good.
+Sequential rationality means that at every information set, each player's strategy must be optimal given their belief and the continuation strategies.
 
-Now choose an off-path belief after $e=1$. Let employer believe $\Pr(H\mid e=1)=0$ (i.e., “only low types deviate”), so employer pays $w(1)=1$.
+In words:
 
-**Step 3 (worker incentive constraints):**
-- Type $H$ payoff if follow pooling ($e=0$): $1+p$.
-  If deviate to $e=1$: wage $1$ minus cost $0.2$ → $1-0.2=0.8$.
-  So $H$ does not deviate if $1+p \ge 0.8$, which holds for all $p\in[0,1]$.
+> whenever a player is called to move, the prescribed action must maximize expected payoff from that point onward.
 
-- Type $L$ payoff if follow pooling: $1+p$.
-  If deviate to $e=1$: wage $1$ minus cost $0.8$ → $0.2$.
-  So $L$ never deviates.
+This requirement applies both on and off the equilibrium path.
 
-**Result (pooling PBE):**
-- Worker: both types choose $e=0$.
-- Employer beliefs: $\Pr(H\mid e=0)=p$; off-path set $\Pr(H\mid e=1)=0$.
-- Employer wages: $w(0)=1+p$, $w(1)=1$.
+## Beliefs
 
-### Check
-- Beliefs on-path follow Bayes’ rule.
-- Actions are optimal at each information set given beliefs.
-So it is a PBE.
+Beliefs describe the probability a player assigns to possible nodes, states, or types at an information set.
 
-### Takeaway
-PBE requires beliefs; off-path beliefs can support pooling by punishing deviations.
+For example, after observing message $m$, a receiver may believe:
 
----
+$$
+\mu(H\mid m)=0.7.
+$$
 
-## Later-on analysis
-- Pooling PBEs can be fragile: refinements (sequential equilibrium, intuitive criterion) restrict off-path beliefs.
-- Separating PBEs require incentive compatibility inequalities (high type willing to signal; low type not).
-- PBE is a practical workhorse; just be explicit about beliefs and on/off-path behavior.
+This means the receiver assigns probability 0.7 to the sender being high type after observing message $m$.
+
+The receiver then chooses an action that maximizes expected payoff under this belief.
+
+## Bayes' rule on path
+
+If an information set is reached with positive probability in equilibrium, beliefs must be updated by Bayes' rule.
+
+For a message $m$:
+
+$$
+\mu(\theta\mid m)
+=
+\frac{
+\Pr(m\mid \theta)\Pr(\theta)
+}{
+\sum_{\theta'}\Pr(m\mid \theta')\Pr(\theta')
+}.
+$$
+
+```{mermaid}
+flowchart LR
+    A[Prior belief] --> B[Observed action or message]
+    B --> C[Bayes' rule]
+    C --> D[Posterior belief]
+    D --> E[Sequentially rational response]
+```
+
+## Off-path beliefs
+
+If an information set is reached with zero probability in equilibrium, Bayes' rule may not pin down beliefs.
+
+These are off-path beliefs.
+
+PBE allows some freedom in off-path beliefs, but the beliefs still influence whether the equilibrium is plausible.
+
+```{mermaid}
+flowchart TD
+    A[Observation] --> B{Positive probability in equilibrium?}
+    B -->|Yes| C[Beliefs pinned down by Bayes' rule]
+    B -->|No| D[Off-path beliefs not fully pinned down]
+    C --> E[Receiver response]
+    D --> E
+```
+
+This is one reason sequential equilibrium is sometimes preferred: it imposes stronger consistency requirements.
+
+## PBE in signaling games
+
+In a signaling game, a PBE specifies:
+
+1. sender signal choice for each type;
+2. receiver belief after each signal;
+3. receiver action after each signal;
+4. optimality for sender and receiver;
+5. Bayes-consistent beliefs on path.
+
+```{mermaid}
+flowchart LR
+    A[Sender type] --> B[Signal strategy]
+    B --> C[Receiver belief]
+    C --> D[Receiver action]
+    D --> E[Sender incentive compatibility]
+```
+
+A separating PBE has different types sending different signals.  
+A pooling PBE has different types sending the same signal.
+
+## Separating PBE
+
+In a separating PBE:
+
+$$
+s(H) \neq s(L).
+$$
+
+The receiver can infer type from signal.
+
+For example:
+
+$$
+\mu(H\mid s_H)=1,
+$$
+
+and
+
+$$
+\mu(L\mid s_L)=1.
+$$
+
+The sender types must prefer their assigned signals, and the receiver must best respond to the inferred type.
+
+## Pooling PBE
+
+In a pooling PBE:
+
+$$
+s(H)=s(L).
+$$
+
+Both types send the same signal.
+
+The receiver cannot infer the type from the pooled signal and uses the prior belief after observing it.
+
+Off-path beliefs after unexpected signals can be important for sustaining the pooling equilibrium.
+
+## Cheap talk and PBE
+
+Cheap-talk games are often solved using PBE.
+
+A cheap-talk PBE requires:
+
+- sender messages are optimal given expected receiver responses;
+- receiver actions are optimal given beliefs after messages;
+- beliefs are updated by Bayes' rule when possible.
+
+Babbling equilibria are PBE in many cheap-talk games.
+
+## PBE versus SPE
+
+| Concept | Used for | Main requirement |
+|---|---|---|
+| SPE | dynamic complete-information games | Nash equilibrium in every subgame |
+| PBE | dynamic incomplete-information games | sequential rationality plus beliefs |
+| Sequential equilibrium | dynamic incomplete-information games | stronger belief consistency |
+
+PBE is more general than SPE for games where beliefs matter.
+
+## Common mistakes
+
+### 1. Giving strategies but no beliefs
+
+A PBE requires both strategies and beliefs.
+
+### 2. Checking only on-path optimality
+
+Sequential rationality must hold at every information set.
+
+### 3. Ignoring Bayes' rule
+
+On-path beliefs must be consistent with Bayes' rule.
+
+### 4. Treating off-path beliefs as irrelevant
+
+Off-path beliefs can support or destroy candidate equilibria.
+
+### 5. Using BNE when actions reveal information over time
+
+Dynamic updating usually requires PBE or sequential equilibrium.
+
+## Checklist
+
+When checking PBE, ask:
+
+1. What are the players and types?
+2. What are the histories and information sets?
+3. What strategy is assigned to each player or type?
+4. What beliefs are assigned at each information set?
+5. Are beliefs on path derived by Bayes' rule?
+6. Is each player sequentially rational given beliefs?
+7. Are sender incentive constraints satisfied?
+8. Are receiver responses optimal?
+9. What happens after off-path actions?
+10. Is a stronger refinement needed?
+
+## Related pages
+
+- [Equilibrium Concepts](index.qmd)
+- [Bayesian Nash Equilibrium](bayesian-nash.qmd)
+- [Sequential Equilibrium](sequential-equilibrium.qmd)
+- [Subgame Perfect Equilibrium](subgame-perfect.qmd)
+- [Bayesian Games](../game-types/bayesian.qmd)
+- [Signaling](../game-types/signaling.qmd)
+- [Cheap Talk](../game-types/cheap-talk.qmd)
+- [Probability](../../foundations/probability.qmd)

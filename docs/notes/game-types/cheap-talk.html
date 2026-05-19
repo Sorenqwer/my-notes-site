@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Cheap talk – Margins of Rationality</title>
+<title>Cheap Talk – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -159,18 +163,28 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
-  <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
-  <li><a href="#one-example" id="toc-one-example" class="nav-link" data-scroll-target="#one-example">One example</a>
+  <li><a href="#basic-structure" id="toc-basic-structure" class="nav-link active" data-scroll-target="#basic-structure">Basic structure</a></li>
+  <li><a href="#why-cheap-talk-is-puzzling" id="toc-why-cheap-talk-is-puzzling" class="nav-link" data-scroll-target="#why-cheap-talk-is-puzzling">Why cheap talk is puzzling</a></li>
+  <li><a href="#sender-and-receiver" id="toc-sender-and-receiver" class="nav-link" data-scroll-target="#sender-and-receiver">Sender and receiver</a></li>
+  <li><a href="#messages" id="toc-messages" class="nav-link" data-scroll-target="#messages">Messages</a></li>
+  <li><a href="#beliefs" id="toc-beliefs" class="nav-link" data-scroll-target="#beliefs">Beliefs</a></li>
+  <li><a href="#informative-and-uninformative-communication" id="toc-informative-and-uninformative-communication" class="nav-link" data-scroll-target="#informative-and-uninformative-communication">Informative and uninformative communication</a></li>
+  <li><a href="#babbling-equilibrium" id="toc-babbling-equilibrium" class="nav-link" data-scroll-target="#babbling-equilibrium">Babbling equilibrium</a></li>
+  <li><a href="#when-can-cheap-talk-be-informative" id="toc-when-can-cheap-talk-be-informative" class="nav-link" data-scroll-target="#when-can-cheap-talk-be-informative">When can cheap talk be informative?</a></li>
+  <li><a href="#bias" id="toc-bias" class="nav-link" data-scroll-target="#bias">Bias</a></li>
+  <li><a href="#partition-equilibria" id="toc-partition-equilibria" class="nav-link" data-scroll-target="#partition-equilibria">Partition equilibria</a></li>
+  <li><a href="#cheap-talk-and-deception" id="toc-cheap-talk-and-deception" class="nav-link" data-scroll-target="#cheap-talk-and-deception">Cheap talk and deception</a></li>
+  <li><a href="#cheap-talk-versus-signaling" id="toc-cheap-talk-versus-signaling" class="nav-link" data-scroll-target="#cheap-talk-versus-signaling">Cheap talk versus signaling</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
   <ul class="collapse">
-  <li><a href="#setup-a-stylized-version" id="toc-setup-a-stylized-version" class="nav-link" data-scroll-target="#setup-a-stylized-version">Setup (a stylized version)</a></li>
-  <li><a href="#key-idea" id="toc-key-idea" class="nav-link" data-scroll-target="#key-idea">Key idea</a></li>
+  <li><a href="#assuming-costless-messages-are-always-meaningless" id="toc-assuming-costless-messages-are-always-meaningless" class="nav-link" data-scroll-target="#assuming-costless-messages-are-always-meaningless">1. Assuming costless messages are always meaningless</a></li>
+  <li><a href="#assuming-messages-are-automatically-truthful" id="toc-assuming-messages-are-automatically-truthful" class="nav-link" data-scroll-target="#assuming-messages-are-automatically-truthful">2. Assuming messages are automatically truthful</a></li>
+  <li><a href="#ignoring-receiver-beliefs" id="toc-ignoring-receiver-beliefs" class="nav-link" data-scroll-target="#ignoring-receiver-beliefs">3. Ignoring receiver beliefs</a></li>
+  <li><a href="#confusing-babbling-with-no-communication" id="toc-confusing-babbling-with-no-communication" class="nav-link" data-scroll-target="#confusing-babbling-with-no-communication">4. Confusing babbling with no communication</a></li>
+  <li><a href="#treating-off-path-beliefs-as-irrelevant" id="toc-treating-off-path-beliefs-as-irrelevant" class="nav-link" data-scroll-target="#treating-off-path-beliefs-as-irrelevant">5. Treating off-path beliefs as irrelevant</a></li>
   </ul></li>
-  <li><a href="#story" id="toc-story" class="nav-link" data-scroll-target="#story">Story</a></li>
-  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
-  <li><a href="#core-math-quadratic-loss-bias" id="toc-core-math-quadratic-loss-bias" class="nav-link" data-scroll-target="#core-math-quadratic-loss-bias">Core math (quadratic loss, bias)</a></li>
-  <li><a href="#equilibrium-what-to-expect" id="toc-equilibrium-what-to-expect" class="nav-link" data-scroll-target="#equilibrium-what-to-expect">Equilibrium (what to expect)</a></li>
-  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
+  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist">Checklist</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -179,7 +193,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Cheap talk</h1>
+<h1 class="title">Cheap Talk</h1>
 </div>
 
 
@@ -196,71 +210,354 @@ window.Quarto = {
 </header>
 
 
-<section id="what-it-is" class="level2">
-<h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
-<p>Cheap talk is communication that is <strong>costless</strong> and <strong>non-binding</strong>: a sender sends a message, then a receiver chooses an action.</p>
+<p>Cheap talk is communication that is costless, non-binding, and directly payoff-irrelevant. A sender sends a message, and a receiver chooses an action after hearing it.</p>
+<p>The central question is:</p>
+<blockquote class="blockquote">
+<p>Can information be transmitted when messages are free and interests are not perfectly aligned?</p>
+</blockquote>
+<p>Cheap talk is important because many real interactions involve advice, promises, claims, warnings, recommendations, excuses, and persuasion without formal commitment.</p>
+<section id="basic-structure" class="level2">
+<h2 class="anchored" data-anchor-id="basic-structure">Basic structure</h2>
+<p>A cheap-talk game usually has three stages:</p>
+<ol type="1">
+<li>Nature determines the sender’s private information.</li>
+<li>The sender sends a costless message.</li>
+<li>The receiver observes the message and chooses an action.</li>
+</ol>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Nature chooses state or type] --&gt; B[Sender observes information]
+    B --&gt; C[Sender sends costless message]
+    C --&gt; D[Receiver observes message]
+    D --&gt; E[Receiver chooses action]
+    E --&gt; F[Payoffs realized]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The message has no direct payoff effect. It matters only if it changes the receiver’s belief and action.</p>
 </section>
-<section id="whats-special" class="level2">
-<h2 class="anchored" data-anchor-id="whats-special">What’s special</h2>
+<section id="why-cheap-talk-is-puzzling" class="level2">
+<h2 class="anchored" data-anchor-id="why-cheap-talk-is-puzzling">Why cheap talk is puzzling</h2>
+<p>If messages are free, why would anyone believe them?</p>
+<p>A sender may want to manipulate the receiver. If the receiver knows this, the receiver may ignore the message. If messages are ignored, communication becomes uninformative.</p>
+<p>This creates the basic cheap-talk tension:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Sender has private information] --&gt; B[Sender may benefit from influencing receiver]
+    B --&gt; C[Receiver anticipates bias]
+    C --&gt; D[Receiver may discount or ignore message]
+    D --&gt; E[Communication may collapse]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Cheap talk is therefore not automatically informative.</p>
+</section>
+<section id="sender-and-receiver" class="level2">
+<h2 class="anchored" data-anchor-id="sender-and-receiver">Sender and receiver</h2>
+<p>The sender has information. The receiver has decision power.</p>
+<p>For example:</p>
 <ul>
-<li>Messages have no direct payoff effect, so credibility comes only from <strong>aligned incentives</strong>.</li>
-<li>Information can still be partially transmitted when preferences are not too misaligned.</li>
-<li>Outcomes typically depend on how strongly the sender wants to bias the receiver’s action.</li>
+<li>an expert advises a policymaker;</li>
+<li>a seller describes product quality;</li>
+<li>a suspect gives an explanation;</li>
+<li>a doctor recommends treatment;</li>
+<li>a friend gives advice;</li>
+<li>a manager reports project progress;</li>
+<li>a lobbyist communicates with a regulator.</li>
 </ul>
+<p>Cheap talk appears whenever one side knows something and the other side must decide how much to trust the message.</p>
 </section>
-<section id="one-example" class="level2">
-<h2 class="anchored" data-anchor-id="one-example">One example</h2>
-<section id="setup-a-stylized-version" class="level3">
-<h3 class="anchored" data-anchor-id="setup-a-stylized-version">Setup (a stylized version)</h3>
-<ul>
-<li>State: <span class="math inline">\(\theta \in [0,1]\)</span> is known to the sender.</li>
-<li>Message: <span class="math inline">\(m\)</span> is any costless statement.</li>
-<li>Receiver chooses action <span class="math inline">\(a\in[0,1]\)</span>.</li>
-</ul>
-<p>Payoffs: - Receiver wants <span class="math inline">\(a\)</span> close to <span class="math inline">\(\theta\)</span>. - Sender wants <span class="math inline">\(a\)</span> close to <span class="math inline">\(\theta + b\)</span> (bias <span class="math inline">\(b&gt;0\)</span>).</p>
-</section>
-<section id="key-idea" class="level3">
-<h3 class="anchored" data-anchor-id="key-idea">Key idea</h3>
-<p>If the bias <span class="math inline">\(b\)</span> is small, the sender can truthfully separate states into <strong>intervals</strong> (“coarse truth”), and the receiver best-responds by choosing the expected state within the reported interval. If <span class="math inline">\(b\)</span> is large, communication becomes uninformative (pooling).</p>
-</section>
-</section>
-<section id="story" class="level2">
-<h2 class="anchored" data-anchor-id="story">Story</h2>
-<p>You ask a friend for a restaurant recommendation in a new city. Your friend knows the options. But your tastes differ: they love loud, spicy places; you want calm and mild. They aren’t lying—they just have a bias.</p>
-<p>Cheap talk studies whether costless messages can still transmit information when incentives aren’t perfectly aligned.</p>
-</section>
-<section id="model" class="level2">
-<h2 class="anchored" data-anchor-id="model">Model</h2>
-<ul>
-<li>State <span class="math inline">\(\theta\)</span> known to sender</li>
-<li>Message <span class="math inline">\(m\)</span> is costless and non-binding</li>
-<li>Receiver chooses action <span class="math inline">\(a\)</span></li>
-<li>Preferences are biased</li>
-</ul>
-</section>
-<section id="core-math-quadratic-loss-bias" class="level2">
-<h2 class="anchored" data-anchor-id="core-math-quadratic-loss-bias">Core math (quadratic loss, bias)</h2>
-<p>Let <span class="math inline">\(\theta\in[0,1]\)</span>, <span class="math inline">\(a\in[0,1]\)</span>.</p>
-<p>Receiver: <span class="math display">\[
-u_R=-(a-\theta)^2
+<section id="messages" class="level2">
+<h2 class="anchored" data-anchor-id="messages">Messages</h2>
+<p>Messages are often written as:</p>
+<p><span class="math display">\[
+m \in M.
 \]</span></p>
-<p>Sender (bias <span class="math inline">\(b&gt;0\)</span>): <span class="math display">\[
-u_S=-(a-(\theta+b))^2
+<p>A sender’s strategy maps information into messages.</p>
+<p>If the sender observes state <span class="math inline">\(\theta\)</span>, a messaging strategy is:</p>
+<p><span class="math display">\[
+\sigma_S(\theta) \in M.
 \]</span></p>
+<p>The receiver’s strategy maps messages into actions:</p>
+<p><span class="math display">\[
+\sigma_R(m) \in A.
+\]</span></p>
+<p>A cheap-talk equilibrium specifies both a sender messaging rule and a receiver response rule.</p>
 </section>
-<section id="equilibrium-what-to-expect" class="level2">
-<h2 class="anchored" data-anchor-id="equilibrium-what-to-expect">Equilibrium (what to expect)</h2>
+<section id="beliefs" class="level2">
+<h2 class="anchored" data-anchor-id="beliefs">Beliefs</h2>
+<p>After hearing message <span class="math inline">\(m\)</span>, the receiver forms a belief about the state:</p>
+<p><span class="math display">\[
+\mu(\theta \mid m).
+\]</span></p>
+<p>If message <span class="math inline">\(m\)</span> is sent with positive probability in equilibrium, beliefs are updated using Bayes’ rule:</p>
+<p><span class="math display">\[
+\mu(\theta \mid m)
+=
+\frac{
+\Pr(m\mid \theta)\Pr(\theta)
+}{
+\sum_{\theta'}\Pr(m\mid \theta')\Pr(\theta')
+}.
+\]</span></p>
+<p>The receiver then chooses an action that maximizes expected payoff given this posterior belief.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Message] --&gt; B[Receiver posterior belief]
+    B --&gt; C[Expected payoff from each action]
+    C --&gt; D[Receiver best response]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="informative-and-uninformative-communication" class="level2">
+<h2 class="anchored" data-anchor-id="informative-and-uninformative-communication">Informative and uninformative communication</h2>
+<p>Cheap talk may be:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fully revealing</td>
+<td>different states induce different messages</td>
+</tr>
+<tr class="even">
+<td>Partially revealing</td>
+<td>messages reveal coarse information</td>
+</tr>
+<tr class="odd">
+<td>Babbling</td>
+<td>messages reveal no information</td>
+</tr>
+<tr class="even">
+<td>Pooling</td>
+<td>multiple types send the same message</td>
+</tr>
+<tr class="odd">
+<td>Separating</td>
+<td>different types send different messages</td>
+</tr>
+</tbody>
+</table>
+<p>A babbling equilibrium always exists in many cheap-talk games: the sender’s message is ignored, so the sender has no reason to choose one message over another.</p>
+</section>
+<section id="babbling-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="babbling-equilibrium">Babbling equilibrium</h2>
+<p>In a babbling equilibrium:</p>
+<ol type="1">
+<li>all types of sender send messages that do not affect beliefs;</li>
+<li>the receiver ignores the message;</li>
+<li>the receiver chooses the action optimal under the prior.</li>
+</ol>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Sender sends message] --&gt; B[Receiver ignores message]
+    B --&gt; C[Receiver uses prior belief]
+    C --&gt; D[Receiver chooses prior-optimal action]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Babbling is uninformative communication. It is strategically stable because messages do not change the receiver’s action.</p>
+</section>
+<section id="when-can-cheap-talk-be-informative" class="level2">
+<h2 class="anchored" data-anchor-id="when-can-cheap-talk-be-informative">When can cheap talk be informative?</h2>
+<p>Cheap talk can be informative when sender and receiver interests are sufficiently aligned.</p>
+<p>If the sender benefits when the receiver chooses an action close to the truth, then the sender may have an incentive to communicate honestly or partially honestly.</p>
+<p>If the sender always wants the receiver to choose a higher action than the receiver would prefer, full truth-telling may fail, but coarse communication may still be possible.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Preference alignment] --&gt; B{High enough?}
+    B --&gt;|Yes| C[Informative communication possible]
+    B --&gt;|No| D[Babbling or very coarse communication]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The degree of conflict shapes how much information can be transmitted.</p>
+</section>
+<section id="bias" class="level2">
+<h2 class="anchored" data-anchor-id="bias">Bias</h2>
+<p>A common cheap-talk model has a sender who is biased relative to the receiver.</p>
+<p>For example, the receiver wants to choose action <span class="math inline">\(a\)</span> close to state <span class="math inline">\(\theta\)</span>:</p>
+<p><span class="math display">\[
+u_R(a,\theta)=-(a-\theta)^2.
+\]</span></p>
+<p>The sender wants the receiver’s action to be shifted upward by bias <span class="math inline">\(b\)</span>:</p>
+<p><span class="math display">\[
+u_S(a,\theta)=-(a-(\theta+b))^2.
+\]</span></p>
+<p>If <span class="math inline">\(b=0\)</span>, preferences are aligned.<br>
+If <span class="math inline">\(b&gt;0\)</span>, the sender wants a higher action than the receiver would choose under full information.</p>
+<p>The larger the bias, the harder informative communication becomes.</p>
+</section>
+<section id="partition-equilibria" class="level2">
+<h2 class="anchored" data-anchor-id="partition-equilibria">Partition equilibria</h2>
+<p>In some cheap-talk games, equilibrium communication partitions the state space.</p>
+<p>The sender does not reveal the exact state. Instead, the sender sends a message indicating that the state lies in a range.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Low states] --&gt; D[Message 1]
+    B[Middle states] --&gt; E[Message 2]
+    C[High states] --&gt; F[Message 3]
+    D --&gt; G[Receiver chooses action for interval]
+    E --&gt; H[Receiver chooses action for interval]
+    F --&gt; I[Receiver chooses action for interval]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This is partial information transmission.</p>
+</section>
+<section id="cheap-talk-and-deception" class="level2">
+<h2 class="anchored" data-anchor-id="cheap-talk-and-deception">Cheap talk and deception</h2>
+<p>Cheap talk is useful for thinking about deception because messages can move beliefs without being costly or binding.</p>
+<p>However, deception is not always simply “lying.” A sender may:</p>
 <ul>
-<li>There is always a <strong>babbling</strong> equilibrium: messages convey no information and the receiver chooses a constant action (based on the prior).</li>
-<li>When bias is not too large, there are <strong>partition</strong> equilibria: the sender truthfully reveals which interval <span class="math inline">\(\theta\)</span> lies in; the receiver responds with the conditional mean of that interval.</li>
+<li>reveal fully;</li>
+<li>pool with other types;</li>
+<li>exaggerate;</li>
+<li>understate;</li>
+<li>send vague messages;</li>
+<li>stay silent;</li>
+<li>use ambiguity strategically.</li>
 </ul>
+<p>The receiver’s interpretation depends on equilibrium beliefs.</p>
 </section>
-<section id="later-on-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<section id="cheap-talk-versus-signaling" class="level2">
+<h2 class="anchored" data-anchor-id="cheap-talk-versus-signaling">Cheap talk versus signaling</h2>
+<p>Cheap talk differs from signaling.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Cheap talk</th>
+<th>Signaling</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Message/action cost</td>
+<td>costless</td>
+<td>often costly</td>
+</tr>
+<tr class="even">
+<td>Direct payoff effect</td>
+<td>none</td>
+<td>may affect payoffs directly</td>
+</tr>
+<tr class="odd">
+<td>Information source</td>
+<td>strategic message</td>
+<td>costly action or signal</td>
+</tr>
+<tr class="even">
+<td>Credibility</td>
+<td>from incentives and equilibrium</td>
+<td>often from differential costs</td>
+</tr>
+</tbody>
+</table>
+<p>Cheap talk can be credible only through aligned incentives or equilibrium structure. Signaling can be credible because different types face different costs or benefits from sending signals.</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="assuming-costless-messages-are-always-meaningless" class="level3">
+<h3 class="anchored" data-anchor-id="assuming-costless-messages-are-always-meaningless">1. Assuming costless messages are always meaningless</h3>
+<p>Cheap talk can be informative when incentives are sufficiently aligned.</p>
+</section>
+<section id="assuming-messages-are-automatically-truthful" class="level3">
+<h3 class="anchored" data-anchor-id="assuming-messages-are-automatically-truthful">2. Assuming messages are automatically truthful</h3>
+<p>Cheap talk requires incentive compatibility. Truthful messages must be optimal for the sender.</p>
+</section>
+<section id="ignoring-receiver-beliefs" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-receiver-beliefs">3. Ignoring receiver beliefs</h3>
+<p>Messages matter only through beliefs and receiver actions.</p>
+</section>
+<section id="confusing-babbling-with-no-communication" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-babbling-with-no-communication">4. Confusing babbling with no communication</h3>
+<p>Babbling may involve messages, but messages carry no information.</p>
+</section>
+<section id="treating-off-path-beliefs-as-irrelevant" class="level3">
+<h3 class="anchored" data-anchor-id="treating-off-path-beliefs-as-irrelevant">5. Treating off-path beliefs as irrelevant</h3>
+<p>Unexpected messages may affect whether a proposed equilibrium is plausible.</p>
+</section>
+</section>
+<section id="checklist" class="level2">
+<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
+<p>When analysing a cheap-talk game, ask:</p>
+<ol type="1">
+<li>What does the sender know?</li>
+<li>What does the receiver need to decide?</li>
+<li>What messages are available?</li>
+<li>Are messages costly or binding?</li>
+<li>What are the sender’s preferences?</li>
+<li>What are the receiver’s preferences?</li>
+<li>Are preferences aligned or biased?</li>
+<li>How does each message change beliefs?</li>
+<li>What is the receiver’s best response to each belief?</li>
+<li>Is the sender willing to send the proposed message?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
 <ul>
-<li><strong>More alignment → more information:</strong> smaller bias typically supports finer partitions.</li>
-<li><strong>Credibility via commitment:</strong> if the sender could commit to a rule (information design), outcomes change drastically.</li>
-<li><strong>Costly messages → signaling:</strong> adding costs turns cheap talk into signaling.</li>
+<li><a href="../../notes/game-types/index.html">Game Types</a></li>
+<li><a href="../../notes/game-theory.html">Game Theory Notes</a></li>
+<li><a href="../../notes/game-types/bayesian.html">Bayesian Games</a></li>
+<li><a href="../../notes/game-types/signaling.html">Signaling</a></li>
+<li><a href="../../notes/game-types/screening-mechanism.html">Screening and Mechanism Design</a></li>
+<li><a href="../../notes/equilibriums/babbling.html">Babbling Equilibrium</a></li>
+<li><a href="../../notes/equilibriums/perfect-bayesian.html">Perfect Bayesian Equilibrium</a></li>
+<li><a href="../../foundations/probability.html">Probability</a></li>
 </ul>
 
 

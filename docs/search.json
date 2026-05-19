@@ -1437,184 +1437,345 @@
   {
     "objectID": "notes/game-types/screening-mechanism.html",
     "href": "notes/game-types/screening-mechanism.html",
-    "title": "Screening & mechanism design",
+    "title": "Screening and Mechanism Design",
     "section": "",
-    "text": "Screening (principal–agent with adverse selection) studies how a principal designs a menu of contracts to induce agents to reveal private information. Mechanism design generalizes this: choose rules to implement outcomes given strategic agents."
+    "text": "Screening and mechanism design study how an uninformed party can structure choices, contracts, rules, or menus to induce informed parties to reveal information or choose desirable actions.\nIn signaling, the informed side moves to reveal information.\nIn screening, the uninformed side designs the environment."
   },
   {
-    "objectID": "notes/game-types/screening-mechanism.html#what-it-is",
-    "href": "notes/game-types/screening-mechanism.html#what-it-is",
-    "title": "Screening & mechanism design",
-    "section": "",
-    "text": "Screening (principal–agent with adverse selection) studies how a principal designs a menu of contracts to induce agents to reveal private information. Mechanism design generalizes this: choose rules to implement outcomes given strategic agents."
+    "objectID": "notes/game-types/screening-mechanism.html#basic-idea",
+    "href": "notes/game-types/screening-mechanism.html#basic-idea",
+    "title": "Screening and Mechanism Design",
+    "section": "Basic idea",
+    "text": "Basic idea\nScreening begins with private information.\nThe uninformed side cannot directly observe type, so it offers a menu of choices. Different types may self-select into different options.\n\n\n\n\n\nflowchart LR\n    A[Private types] --&gt; B[Designer offers menu]\n    B --&gt; C[Types choose options]\n    C --&gt; D[Choices reveal information]\n    D --&gt; E[Allocation or contract]\n\n\n\n\n\n\nThe menu works only if each type prefers the option intended for that type."
   },
   {
-    "objectID": "notes/game-types/screening-mechanism.html#whats-special",
-    "href": "notes/game-types/screening-mechanism.html#whats-special",
-    "title": "Screening & mechanism design",
-    "section": "What’s special",
-    "text": "What’s special\n\nKey constraint: incentive compatibility (each type prefers its intended option).\nParticipation (individual rationality) often binds for the lowest type.\nDesign trades off efficiency vs information rents."
+    "objectID": "notes/game-types/screening-mechanism.html#screening-versus-signaling",
+    "href": "notes/game-types/screening-mechanism.html#screening-versus-signaling",
+    "title": "Screening and Mechanism Design",
+    "section": "Screening versus signaling",
+    "text": "Screening versus signaling\n\n\n\n\n\n\n\n\nFeature\nSignaling\nScreening\n\n\n\n\nWho has private information?\nsender / informed agent\nagent / informed side\n\n\nWho moves to reveal information?\ninformed side\nuninformed designer creates menu\n\n\nMain object\nsignal\nmenu or mechanism\n\n\nKey condition\nincentive-compatible signaling\nself-selection\n\n\n\nExamples:\n\nsignaling: worker chooses education to reveal ability;\nscreening: employer offers contracts to separate worker types."
   },
   {
-    "objectID": "notes/game-types/screening-mechanism.html#one-example-two-type-contract-menu",
-    "href": "notes/game-types/screening-mechanism.html#one-example-two-type-contract-menu",
-    "title": "Screening & mechanism design",
-    "section": "One example (two-type contract menu)",
-    "text": "One example (two-type contract menu)\nAgent type \\(\\theta\\in\\{H,L\\}\\) (productivity). Principal offers contracts \\((w,q)\\): wage and required output.\nUtility: \\(u = w - c(q,\\theta)\\), where \\(c(q,H) &lt; c(q,L)\\) (high type has lower cost).\nPrincipal wants higher \\(q\\) from \\(H\\) but must prevent \\(H\\) from pretending to be \\(L\\).\nSolution sketch. The optimal menu typically: - distorts the low-type contract downward (lower \\(q\\)) to reduce information rents, - gives the high type a contract with higher \\(q\\) and positive rent, - satisfies IC constraints: \\(H\\) prefers \\(H\\)-contract; \\(L\\) prefers \\(L\\)-contract."
+    "objectID": "notes/game-types/screening-mechanism.html#types-and-menus",
+    "href": "notes/game-types/screening-mechanism.html#types-and-menus",
+    "title": "Screening and Mechanism Design",
+    "section": "Types and menus",
+    "text": "Types and menus\nSuppose there are two types:\n\\[\n\\theta \\in \\{H,L\\}.\n\\]\nThe designer offers a menu:\n\\[\n(x_H,t_H), (x_L,t_L).\n\\]\nEach type chooses one option.\nA separating menu induces:\n\\[\nH \\text{ chooses } (x_H,t_H),\n\\]\nand\n\\[\nL \\text{ chooses } (x_L,t_L).\n\\]"
   },
   {
-    "objectID": "notes/game-types/screening-mechanism.html#story",
-    "href": "notes/game-types/screening-mechanism.html#story",
-    "title": "Screening & mechanism design",
-    "section": "Story",
-    "text": "Story\nAn insurer can’t observe customer risk. It offers two plans (a menu). Customers self-select. The insurer designs the menu so each type reveals itself by choosing the plan intended for it."
+    "objectID": "notes/game-types/screening-mechanism.html#incentive-compatibility",
+    "href": "notes/game-types/screening-mechanism.html#incentive-compatibility",
+    "title": "Screening and Mechanism Design",
+    "section": "Incentive compatibility",
+    "text": "Incentive compatibility\nIncentive compatibility means each type prefers the option designed for that type.\nFor type \\(H\\):\n\\[\nU_H(x_H,t_H) \\geq U_H(x_L,t_L).\n\\]\nFor type \\(L\\):\n\\[\nU_L(x_L,t_L) \\geq U_L(x_H,t_H).\n\\]\nThese are self-selection constraints.\n\n\n\n\n\nflowchart TD\n    A[Menu offered] --&gt; B[High type compares options]\n    A --&gt; C[Low type compares options]\n    B --&gt; D{High chooses high option?}\n    C --&gt; E{Low chooses low option?}\n    D --&gt; F[Incentive compatibility]\n    E --&gt; F"
   },
   {
-    "objectID": "notes/game-types/screening-mechanism.html#model",
-    "href": "notes/game-types/screening-mechanism.html#model",
-    "title": "Screening & mechanism design",
-    "section": "Model",
-    "text": "Model\n\nTypes \\(\\theta\\in\\{H,L\\}\\) privately known\nContracts \\((p,q)\\): premium \\(p\\) and coverage \\(q\\)\nUtility: \\(u_\\theta(p,q)=v_\\theta(q)-p\\)\nGoal: maximize profit subject to incentive constraints"
+    "objectID": "notes/game-types/screening-mechanism.html#participation-constraints",
+    "href": "notes/game-types/screening-mechanism.html#participation-constraints",
+    "title": "Screening and Mechanism Design",
+    "section": "Participation constraints",
+    "text": "Participation constraints\nParticipation constraints ensure each type prefers participating to opting out.\nFor type \\(\\theta\\):\n\\[\nU_\\theta(\\text{assigned option}) \\geq \\bar U_\\theta.\n\\]\nHere \\(\\bar U_\\theta\\) is the outside option.\nA contract may separate types but still fail if some type refuses to participate."
   },
   {
-    "objectID": "notes/game-types/screening-mechanism.html#equilibrium-constraints-icir",
-    "href": "notes/game-types/screening-mechanism.html#equilibrium-constraints-icir",
-    "title": "Screening & mechanism design",
-    "section": "Equilibrium constraints (IC/IR)",
-    "text": "Equilibrium constraints (IC/IR)\nIncentive compatibility: \\[\nu_H(p_H,q_H)\\ge u_H(p_L,q_L),\n\\qquad\nu_L(p_L,q_L)\\ge u_L(p_H,q_H).\n\\]\nIndividual rationality: \\[\nu_\\theta(p_\\theta,q_\\theta)\\ge 0 \\quad (\\theta\\in\\{H,L\\}).\n\\]"
+    "objectID": "notes/game-types/screening-mechanism.html#adverse-selection",
+    "href": "notes/game-types/screening-mechanism.html#adverse-selection",
+    "title": "Screening and Mechanism Design",
+    "section": "Adverse selection",
+    "text": "Adverse selection\nAdverse selection occurs when one side has private information before exchange.\nExamples:\n\ninsurance buyers know more about their risk than insurers;\nworkers know more about ability than employers;\nborrowers know more about default risk than lenders;\nsellers know more about product quality than buyers.\n\nScreening tries to design choices that reduce the problem."
   },
   {
-    "objectID": "notes/game-types/screening-mechanism.html#what-the-solution-typically-looks-like-high-level",
-    "href": "notes/game-types/screening-mechanism.html#what-the-solution-typically-looks-like-high-level",
-    "title": "Screening & mechanism design",
-    "section": "What the solution typically looks like (high-level)",
-    "text": "What the solution typically looks like (high-level)\n\nLow-type contract is often distorted (less generous) to reduce information rents.\nHigh type receives more generous terms and may earn positive information rent."
+    "objectID": "notes/game-types/screening-mechanism.html#insurance-screening-example",
+    "href": "notes/game-types/screening-mechanism.html#insurance-screening-example",
+    "title": "Screening and Mechanism Design",
+    "section": "Insurance screening example",
+    "text": "Insurance screening example\nAn insurer may not know whether a customer is high-risk or low-risk.\nIt can offer a menu:\n\nhigh premium, full coverage;\nlow premium, partial coverage.\n\nDifferent risk types may select different contracts.\n\n\n\n\n\nflowchart LR\n    A[Insurer offers contract menu] --&gt; B[High-risk customer]\n    A --&gt; C[Low-risk customer]\n    B --&gt; D[Chooses more coverage]\n    C --&gt; E[Chooses less coverage]\n    D --&gt; F[Information revealed by choice]\n    E --&gt; F\n\n\n\n\n\n\nThe menu screens types through self-selection."
   },
   {
-    "objectID": "notes/game-types/screening-mechanism.html#later-on-analysis",
-    "href": "notes/game-types/screening-mechanism.html#later-on-analysis",
-    "title": "Screening & mechanism design",
-    "section": "Later-on analysis",
-    "text": "Later-on analysis\n\nMoral hazard: if effort is hidden too, the design problem changes (adverse selection + moral hazard).\nMultiple dimensions: risk + risk aversion produces richer menus.\nMechanism design view: “contract menus” are a specific mechanism; the general theory asks what outcomes are implementable."
+    "objectID": "notes/game-types/screening-mechanism.html#mechanism-design",
+    "href": "notes/game-types/screening-mechanism.html#mechanism-design",
+    "title": "Screening and Mechanism Design",
+    "section": "Mechanism design",
+    "text": "Mechanism design\nMechanism design asks a broader question:\n\nHow should rules be designed so that self-interested agents produce a desired outcome?\n\nA mechanism specifies:\n\nmessages or reports agents can send;\nhow reports determine allocations;\nhow transfers or payoffs are assigned.\n\n\n\n\n\n\nflowchart TD\n    A[Designer objective] --&gt; B[Choose mechanism]\n    B --&gt; C[Agents report or choose]\n    C --&gt; D[Outcome rule]\n    D --&gt; E[Incentives determine behaviour]\n    E --&gt; F[Implemented outcome]\n\n\n\n\n\n\nMechanism design is sometimes called reverse game theory because we start with the desired outcome and design the game."
+  },
+  {
+    "objectID": "notes/game-types/screening-mechanism.html#revelation-principle",
+    "href": "notes/game-types/screening-mechanism.html#revelation-principle",
+    "title": "Screening and Mechanism Design",
+    "section": "Revelation principle",
+    "text": "Revelation principle\nThe revelation principle says, roughly:\n\nif an outcome can be implemented by some mechanism, it can often be implemented by a direct mechanism where agents truthfully report their types.\n\nThis does not mean people are naturally truthful. It means the mechanism can be designed so that truth-telling is incentive compatible.\nA direct mechanism asks agents to report types:\n\\[\n\\hat\\theta_i.\n\\]\nTruthful reporting requires:\n\\[\n\\theta_i \\text{ reports } \\theta_i\n\\]\nto be optimal."
+  },
+  {
+    "objectID": "notes/game-types/screening-mechanism.html#incentive-compatibility-in-direct-mechanisms",
+    "href": "notes/game-types/screening-mechanism.html#incentive-compatibility-in-direct-mechanisms",
+    "title": "Screening and Mechanism Design",
+    "section": "Incentive compatibility in direct mechanisms",
+    "text": "Incentive compatibility in direct mechanisms\nA direct mechanism is incentive compatible if every type prefers truthful reporting.\nFor type \\(\\theta\\):\n\\[\nU_\\theta(\\text{outcome after reporting } \\theta)\n\\geq\nU_\\theta(\\text{outcome after reporting } \\hat\\theta)\n\\]\nfor all possible misreports \\(\\hat\\theta\\).\nThis is the same self-selection idea expressed through reports."
+  },
+  {
+    "objectID": "notes/game-types/screening-mechanism.html#applications",
+    "href": "notes/game-types/screening-mechanism.html#applications",
+    "title": "Screening and Mechanism Design",
+    "section": "Applications",
+    "text": "Applications\nScreening and mechanism design appear in:\n\n\n\nDomain\nExample\n\n\n\n\ninsurance\nseparating high-risk and low-risk customers\n\n\nlabour\ncontracts for different ability or effort types\n\n\nregulation\ninducing firms to reveal costs\n\n\nauctions\nallocating goods to high-valuation bidders\n\n\npublic goods\neliciting willingness to pay\n\n\ntaxation\ndesigning incentives under private income or effort\n\n\ncriminal justice\nplea bargains under private evidence or risk\n\n\nplatforms\nrules that induce reporting or moderation"
+  },
+  {
+    "objectID": "notes/game-types/screening-mechanism.html#screening-and-criminology",
+    "href": "notes/game-types/screening-mechanism.html#screening-and-criminology",
+    "title": "Screening and Mechanism Design",
+    "section": "Screening and criminology",
+    "text": "Screening and criminology\nScreening logic can also appear in criminology and institutions.\nExamples:\n\npolice use behaviour or context to infer risk;\ncourts use plea decisions to infer case strength;\noffenders use tests to screen co-offender reliability;\nplatforms design reporting systems to distinguish abuse from noise;\nregulators design audits to induce compliance.\n\nThe same logic applies: private information creates selection problems."
+  },
+  {
+    "objectID": "notes/game-types/screening-mechanism.html#common-mistakes",
+    "href": "notes/game-types/screening-mechanism.html#common-mistakes",
+    "title": "Screening and Mechanism Design",
+    "section": "Common mistakes",
+    "text": "Common mistakes\n\n1. Confusing screening with signaling\nScreening is designed by the uninformed side. Signaling is chosen by the informed side.\n\n\n2. Forgetting participation constraints\nA menu must be acceptable, not only separating.\n\n\n3. Ignoring incentive compatibility\nA proposed menu fails if types want to imitate each other.\n\n\n4. Assuming truth-telling without mechanism design\nTruthful reporting must be made optimal.\n\n\n5. Treating the revelation principle as behavioural honesty\nThe revelation principle is a design result, not a psychological claim."
+  },
+  {
+    "objectID": "notes/game-types/screening-mechanism.html#checklist",
+    "href": "notes/game-types/screening-mechanism.html#checklist",
+    "title": "Screening and Mechanism Design",
+    "section": "Checklist",
+    "text": "Checklist\nWhen analysing screening or mechanism design, ask:\n\nWho has private information?\nWho designs the menu or mechanism?\nWhat are the possible types?\nWhat options are offered?\nWhat is each type supposed to choose?\nAre incentive compatibility constraints satisfied?\nAre participation constraints satisfied?\nWhat outcome does the designer want?\nCan truthful reporting be made optimal?\nWhat information is revealed by choices?"
+  },
+  {
+    "objectID": "notes/game-types/screening-mechanism.html#related-pages",
+    "href": "notes/game-types/screening-mechanism.html#related-pages",
+    "title": "Screening and Mechanism Design",
+    "section": "Related pages",
+    "text": "Related pages\n\nGame Types\nBayesian Games\nSignaling\nCheap Talk\nBayesian Nash Equilibrium\nPerfect Bayesian Equilibrium\nOptimization"
   },
   {
     "objectID": "notes/game-types/cheap-talk.html",
     "href": "notes/game-types/cheap-talk.html",
-    "title": "Cheap talk",
+    "title": "Cheap Talk",
     "section": "",
-    "text": "Cheap talk is communication that is costless and non-binding: a sender sends a message, then a receiver chooses an action."
+    "text": "Cheap talk is communication that is costless, non-binding, and directly payoff-irrelevant. A sender sends a message, and a receiver chooses an action after hearing it.\nThe central question is:\nCheap talk is important because many real interactions involve advice, promises, claims, warnings, recommendations, excuses, and persuasion without formal commitment."
   },
   {
-    "objectID": "notes/game-types/cheap-talk.html#what-it-is",
-    "href": "notes/game-types/cheap-talk.html#what-it-is",
-    "title": "Cheap talk",
-    "section": "",
-    "text": "Cheap talk is communication that is costless and non-binding: a sender sends a message, then a receiver chooses an action."
+    "objectID": "notes/game-types/cheap-talk.html#basic-structure",
+    "href": "notes/game-types/cheap-talk.html#basic-structure",
+    "title": "Cheap Talk",
+    "section": "Basic structure",
+    "text": "Basic structure\nA cheap-talk game usually has three stages:\n\nNature determines the sender’s private information.\nThe sender sends a costless message.\nThe receiver observes the message and chooses an action.\n\n\n\n\n\n\nflowchart LR\n    A[Nature chooses state or type] --&gt; B[Sender observes information]\n    B --&gt; C[Sender sends costless message]\n    C --&gt; D[Receiver observes message]\n    D --&gt; E[Receiver chooses action]\n    E --&gt; F[Payoffs realized]\n\n\n\n\n\n\nThe message has no direct payoff effect. It matters only if it changes the receiver’s belief and action."
   },
   {
-    "objectID": "notes/game-types/cheap-talk.html#whats-special",
-    "href": "notes/game-types/cheap-talk.html#whats-special",
-    "title": "Cheap talk",
-    "section": "What’s special",
-    "text": "What’s special\n\nMessages have no direct payoff effect, so credibility comes only from aligned incentives.\nInformation can still be partially transmitted when preferences are not too misaligned.\nOutcomes typically depend on how strongly the sender wants to bias the receiver’s action."
+    "objectID": "notes/game-types/cheap-talk.html#why-cheap-talk-is-puzzling",
+    "href": "notes/game-types/cheap-talk.html#why-cheap-talk-is-puzzling",
+    "title": "Cheap Talk",
+    "section": "Why cheap talk is puzzling",
+    "text": "Why cheap talk is puzzling\nIf messages are free, why would anyone believe them?\nA sender may want to manipulate the receiver. If the receiver knows this, the receiver may ignore the message. If messages are ignored, communication becomes uninformative.\nThis creates the basic cheap-talk tension:\n\n\n\n\n\nflowchart LR\n    A[Sender has private information] --&gt; B[Sender may benefit from influencing receiver]\n    B --&gt; C[Receiver anticipates bias]\n    C --&gt; D[Receiver may discount or ignore message]\n    D --&gt; E[Communication may collapse]\n\n\n\n\n\n\nCheap talk is therefore not automatically informative."
   },
   {
-    "objectID": "notes/game-types/cheap-talk.html#one-example",
-    "href": "notes/game-types/cheap-talk.html#one-example",
-    "title": "Cheap talk",
-    "section": "One example",
-    "text": "One example\n\nSetup (a stylized version)\n\nState: \\(\\theta \\in [0,1]\\) is known to the sender.\nMessage: \\(m\\) is any costless statement.\nReceiver chooses action \\(a\\in[0,1]\\).\n\nPayoffs: - Receiver wants \\(a\\) close to \\(\\theta\\). - Sender wants \\(a\\) close to \\(\\theta + b\\) (bias \\(b&gt;0\\)).\n\n\nKey idea\nIf the bias \\(b\\) is small, the sender can truthfully separate states into intervals (“coarse truth”), and the receiver best-responds by choosing the expected state within the reported interval. If \\(b\\) is large, communication becomes uninformative (pooling)."
+    "objectID": "notes/game-types/cheap-talk.html#sender-and-receiver",
+    "href": "notes/game-types/cheap-talk.html#sender-and-receiver",
+    "title": "Cheap Talk",
+    "section": "Sender and receiver",
+    "text": "Sender and receiver\nThe sender has information. The receiver has decision power.\nFor example:\n\nan expert advises a policymaker;\na seller describes product quality;\na suspect gives an explanation;\na doctor recommends treatment;\na friend gives advice;\na manager reports project progress;\na lobbyist communicates with a regulator.\n\nCheap talk appears whenever one side knows something and the other side must decide how much to trust the message."
   },
   {
-    "objectID": "notes/game-types/cheap-talk.html#story",
-    "href": "notes/game-types/cheap-talk.html#story",
-    "title": "Cheap talk",
-    "section": "Story",
-    "text": "Story\nYou ask a friend for a restaurant recommendation in a new city. Your friend knows the options. But your tastes differ: they love loud, spicy places; you want calm and mild. They aren’t lying—they just have a bias.\nCheap talk studies whether costless messages can still transmit information when incentives aren’t perfectly aligned."
+    "objectID": "notes/game-types/cheap-talk.html#messages",
+    "href": "notes/game-types/cheap-talk.html#messages",
+    "title": "Cheap Talk",
+    "section": "Messages",
+    "text": "Messages\nMessages are often written as:\n\\[\nm \\in M.\n\\]\nA sender’s strategy maps information into messages.\nIf the sender observes state \\(\\theta\\), a messaging strategy is:\n\\[\n\\sigma_S(\\theta) \\in M.\n\\]\nThe receiver’s strategy maps messages into actions:\n\\[\n\\sigma_R(m) \\in A.\n\\]\nA cheap-talk equilibrium specifies both a sender messaging rule and a receiver response rule."
   },
   {
-    "objectID": "notes/game-types/cheap-talk.html#model",
-    "href": "notes/game-types/cheap-talk.html#model",
-    "title": "Cheap talk",
-    "section": "Model",
-    "text": "Model\n\nState \\(\\theta\\) known to sender\nMessage \\(m\\) is costless and non-binding\nReceiver chooses action \\(a\\)\nPreferences are biased"
+    "objectID": "notes/game-types/cheap-talk.html#beliefs",
+    "href": "notes/game-types/cheap-talk.html#beliefs",
+    "title": "Cheap Talk",
+    "section": "Beliefs",
+    "text": "Beliefs\nAfter hearing message \\(m\\), the receiver forms a belief about the state:\n\\[\n\\mu(\\theta \\mid m).\n\\]\nIf message \\(m\\) is sent with positive probability in equilibrium, beliefs are updated using Bayes’ rule:\n\\[\n\\mu(\\theta \\mid m)\n=\n\\frac{\n\\Pr(m\\mid \\theta)\\Pr(\\theta)\n}{\n\\sum_{\\theta'}\\Pr(m\\mid \\theta')\\Pr(\\theta')\n}.\n\\]\nThe receiver then chooses an action that maximizes expected payoff given this posterior belief.\n\n\n\n\n\nflowchart LR\n    A[Message] --&gt; B[Receiver posterior belief]\n    B --&gt; C[Expected payoff from each action]\n    C --&gt; D[Receiver best response]"
   },
   {
-    "objectID": "notes/game-types/cheap-talk.html#core-math-quadratic-loss-bias",
-    "href": "notes/game-types/cheap-talk.html#core-math-quadratic-loss-bias",
-    "title": "Cheap talk",
-    "section": "Core math (quadratic loss, bias)",
-    "text": "Core math (quadratic loss, bias)\nLet \\(\\theta\\in[0,1]\\), \\(a\\in[0,1]\\).\nReceiver: \\[\nu_R=-(a-\\theta)^2\n\\]\nSender (bias \\(b&gt;0\\)): \\[\nu_S=-(a-(\\theta+b))^2\n\\]"
+    "objectID": "notes/game-types/cheap-talk.html#informative-and-uninformative-communication",
+    "href": "notes/game-types/cheap-talk.html#informative-and-uninformative-communication",
+    "title": "Cheap Talk",
+    "section": "Informative and uninformative communication",
+    "text": "Informative and uninformative communication\nCheap talk may be:\n\n\n\nType\nMeaning\n\n\n\n\nFully revealing\ndifferent states induce different messages\n\n\nPartially revealing\nmessages reveal coarse information\n\n\nBabbling\nmessages reveal no information\n\n\nPooling\nmultiple types send the same message\n\n\nSeparating\ndifferent types send different messages\n\n\n\nA babbling equilibrium always exists in many cheap-talk games: the sender’s message is ignored, so the sender has no reason to choose one message over another."
   },
   {
-    "objectID": "notes/game-types/cheap-talk.html#equilibrium-what-to-expect",
-    "href": "notes/game-types/cheap-talk.html#equilibrium-what-to-expect",
-    "title": "Cheap talk",
-    "section": "Equilibrium (what to expect)",
-    "text": "Equilibrium (what to expect)\n\nThere is always a babbling equilibrium: messages convey no information and the receiver chooses a constant action (based on the prior).\nWhen bias is not too large, there are partition equilibria: the sender truthfully reveals which interval \\(\\theta\\) lies in; the receiver responds with the conditional mean of that interval."
+    "objectID": "notes/game-types/cheap-talk.html#babbling-equilibrium",
+    "href": "notes/game-types/cheap-talk.html#babbling-equilibrium",
+    "title": "Cheap Talk",
+    "section": "Babbling equilibrium",
+    "text": "Babbling equilibrium\nIn a babbling equilibrium:\n\nall types of sender send messages that do not affect beliefs;\nthe receiver ignores the message;\nthe receiver chooses the action optimal under the prior.\n\n\n\n\n\n\nflowchart LR\n    A[Sender sends message] --&gt; B[Receiver ignores message]\n    B --&gt; C[Receiver uses prior belief]\n    C --&gt; D[Receiver chooses prior-optimal action]\n\n\n\n\n\n\nBabbling is uninformative communication. It is strategically stable because messages do not change the receiver’s action."
   },
   {
-    "objectID": "notes/game-types/cheap-talk.html#later-on-analysis",
-    "href": "notes/game-types/cheap-talk.html#later-on-analysis",
-    "title": "Cheap talk",
-    "section": "Later-on analysis",
-    "text": "Later-on analysis\n\nMore alignment → more information: smaller bias typically supports finer partitions.\nCredibility via commitment: if the sender could commit to a rule (information design), outcomes change drastically.\nCostly messages → signaling: adding costs turns cheap talk into signaling."
+    "objectID": "notes/game-types/cheap-talk.html#when-can-cheap-talk-be-informative",
+    "href": "notes/game-types/cheap-talk.html#when-can-cheap-talk-be-informative",
+    "title": "Cheap Talk",
+    "section": "When can cheap talk be informative?",
+    "text": "When can cheap talk be informative?\nCheap talk can be informative when sender and receiver interests are sufficiently aligned.\nIf the sender benefits when the receiver chooses an action close to the truth, then the sender may have an incentive to communicate honestly or partially honestly.\nIf the sender always wants the receiver to choose a higher action than the receiver would prefer, full truth-telling may fail, but coarse communication may still be possible.\n\n\n\n\n\nflowchart TD\n    A[Preference alignment] --&gt; B{High enough?}\n    B --&gt;|Yes| C[Informative communication possible]\n    B --&gt;|No| D[Babbling or very coarse communication]\n\n\n\n\n\n\nThe degree of conflict shapes how much information can be transmitted."
+  },
+  {
+    "objectID": "notes/game-types/cheap-talk.html#bias",
+    "href": "notes/game-types/cheap-talk.html#bias",
+    "title": "Cheap Talk",
+    "section": "Bias",
+    "text": "Bias\nA common cheap-talk model has a sender who is biased relative to the receiver.\nFor example, the receiver wants to choose action \\(a\\) close to state \\(\\theta\\):\n\\[\nu_R(a,\\theta)=-(a-\\theta)^2.\n\\]\nThe sender wants the receiver’s action to be shifted upward by bias \\(b\\):\n\\[\nu_S(a,\\theta)=-(a-(\\theta+b))^2.\n\\]\nIf \\(b=0\\), preferences are aligned.\nIf \\(b&gt;0\\), the sender wants a higher action than the receiver would choose under full information.\nThe larger the bias, the harder informative communication becomes."
+  },
+  {
+    "objectID": "notes/game-types/cheap-talk.html#partition-equilibria",
+    "href": "notes/game-types/cheap-talk.html#partition-equilibria",
+    "title": "Cheap Talk",
+    "section": "Partition equilibria",
+    "text": "Partition equilibria\nIn some cheap-talk games, equilibrium communication partitions the state space.\nThe sender does not reveal the exact state. Instead, the sender sends a message indicating that the state lies in a range.\n\n\n\n\n\nflowchart LR\n    A[Low states] --&gt; D[Message 1]\n    B[Middle states] --&gt; E[Message 2]\n    C[High states] --&gt; F[Message 3]\n    D --&gt; G[Receiver chooses action for interval]\n    E --&gt; H[Receiver chooses action for interval]\n    F --&gt; I[Receiver chooses action for interval]\n\n\n\n\n\n\nThis is partial information transmission."
+  },
+  {
+    "objectID": "notes/game-types/cheap-talk.html#cheap-talk-and-deception",
+    "href": "notes/game-types/cheap-talk.html#cheap-talk-and-deception",
+    "title": "Cheap Talk",
+    "section": "Cheap talk and deception",
+    "text": "Cheap talk and deception\nCheap talk is useful for thinking about deception because messages can move beliefs without being costly or binding.\nHowever, deception is not always simply “lying.” A sender may:\n\nreveal fully;\npool with other types;\nexaggerate;\nunderstate;\nsend vague messages;\nstay silent;\nuse ambiguity strategically.\n\nThe receiver’s interpretation depends on equilibrium beliefs."
+  },
+  {
+    "objectID": "notes/game-types/cheap-talk.html#cheap-talk-versus-signaling",
+    "href": "notes/game-types/cheap-talk.html#cheap-talk-versus-signaling",
+    "title": "Cheap Talk",
+    "section": "Cheap talk versus signaling",
+    "text": "Cheap talk versus signaling\nCheap talk differs from signaling.\n\n\n\n\n\n\n\n\nFeature\nCheap talk\nSignaling\n\n\n\n\nMessage/action cost\ncostless\noften costly\n\n\nDirect payoff effect\nnone\nmay affect payoffs directly\n\n\nInformation source\nstrategic message\ncostly action or signal\n\n\nCredibility\nfrom incentives and equilibrium\noften from differential costs\n\n\n\nCheap talk can be credible only through aligned incentives or equilibrium structure. Signaling can be credible because different types face different costs or benefits from sending signals."
+  },
+  {
+    "objectID": "notes/game-types/cheap-talk.html#common-mistakes",
+    "href": "notes/game-types/cheap-talk.html#common-mistakes",
+    "title": "Cheap Talk",
+    "section": "Common mistakes",
+    "text": "Common mistakes\n\n1. Assuming costless messages are always meaningless\nCheap talk can be informative when incentives are sufficiently aligned.\n\n\n2. Assuming messages are automatically truthful\nCheap talk requires incentive compatibility. Truthful messages must be optimal for the sender.\n\n\n3. Ignoring receiver beliefs\nMessages matter only through beliefs and receiver actions.\n\n\n4. Confusing babbling with no communication\nBabbling may involve messages, but messages carry no information.\n\n\n5. Treating off-path beliefs as irrelevant\nUnexpected messages may affect whether a proposed equilibrium is plausible."
+  },
+  {
+    "objectID": "notes/game-types/cheap-talk.html#checklist",
+    "href": "notes/game-types/cheap-talk.html#checklist",
+    "title": "Cheap Talk",
+    "section": "Checklist",
+    "text": "Checklist\nWhen analysing a cheap-talk game, ask:\n\nWhat does the sender know?\nWhat does the receiver need to decide?\nWhat messages are available?\nAre messages costly or binding?\nWhat are the sender’s preferences?\nWhat are the receiver’s preferences?\nAre preferences aligned or biased?\nHow does each message change beliefs?\nWhat is the receiver’s best response to each belief?\nIs the sender willing to send the proposed message?"
+  },
+  {
+    "objectID": "notes/game-types/cheap-talk.html#related-pages",
+    "href": "notes/game-types/cheap-talk.html#related-pages",
+    "title": "Cheap Talk",
+    "section": "Related pages",
+    "text": "Related pages\n\nGame Types\nGame Theory Notes\nBayesian Games\nSignaling\nScreening and Mechanism Design\nBabbling Equilibrium\nPerfect Bayesian Equilibrium\nProbability"
   },
   {
     "objectID": "notes/game-types/signaling.html",
     "href": "notes/game-types/signaling.html",
-    "title": "Signaling games",
+    "title": "Signaling",
     "section": "",
-    "text": "A signaling game is a dynamic game with private information: a sender knows their type, chooses a signal (often costly), then a receiver responds."
+    "text": "Signaling games study situations where an informed sender takes an action that may reveal private information to an uninformed receiver.\nUnlike cheap talk, a signal often has a cost or direct payoff consequence. This cost can make the signal credible when different types face different costs or benefits."
   },
   {
-    "objectID": "notes/game-types/signaling.html#what-it-is",
-    "href": "notes/game-types/signaling.html#what-it-is",
-    "title": "Signaling games",
-    "section": "",
-    "text": "A signaling game is a dynamic game with private information: a sender knows their type, chooses a signal (often costly), then a receiver responds."
+    "objectID": "notes/game-types/signaling.html#basic-structure",
+    "href": "notes/game-types/signaling.html#basic-structure",
+    "title": "Signaling",
+    "section": "Basic structure",
+    "text": "Basic structure\nA signaling game usually has this timing:\n\nNature chooses the sender’s type.\nThe sender observes their own type.\nThe sender chooses a signal.\nThe receiver observes the signal.\nThe receiver forms a belief and chooses an action.\nPayoffs are realized.\n\n\n\n\n\n\nflowchart LR\n    A[Nature chooses type] --&gt; B[Sender observes type]\n    B --&gt; C[Sender chooses signal]\n    C --&gt; D[Receiver observes signal]\n    D --&gt; E[Receiver updates belief]\n    E --&gt; F[Receiver chooses action]\n    F --&gt; G[Payoffs realized]\n\n\n\n\n\n\nSignaling is dynamic and involves incomplete information, so it usually requires belief-based equilibrium concepts such as perfect Bayesian equilibrium."
   },
   {
-    "objectID": "notes/game-types/signaling.html#whats-special",
-    "href": "notes/game-types/signaling.html#whats-special",
-    "title": "Signaling games",
-    "section": "What’s special",
-    "text": "What’s special\n\nSignals can be credible when different types face different costs/benefits (incentive compatibility).\nTypical outcomes: separating (types choose different signals), pooling (same signal), or semi-separating.\nBeliefs and off-path beliefs matter (PBE / sequential equilibrium ideas)."
+    "objectID": "notes/game-types/signaling.html#why-signaling-matters",
+    "href": "notes/game-types/signaling.html#why-signaling-matters",
+    "title": "Signaling",
+    "section": "Why signaling matters",
+    "text": "Why signaling matters\nMany social and economic actions are partly informative.\nExamples:\n\neducation may signal ability;\nprices may signal quality;\ncostly effort may signal commitment;\napologies may signal remorse;\ninvestment may signal confidence;\nviolence may signal toughness;\ncompliance systems may signal responsibility;\ncredentials may signal competence.\n\nThe key question is whether the signal separates types or merely creates appearance."
   },
   {
-    "objectID": "notes/game-types/signaling.html#one-example-education-as-a-signal",
-    "href": "notes/game-types/signaling.html#one-example-education-as-a-signal",
-    "title": "Signaling games",
-    "section": "One example (education as a signal)",
-    "text": "One example (education as a signal)\nTypes: high ability \\(H\\) and low ability \\(L\\).\nSender chooses education level \\(e\\ge 0\\); receiver (employer) offers wage \\(w(e)\\).\n\nEducation is more costly for \\(L\\) than \\(H\\) (single-crossing idea): \\[\nc_L(e) &gt; c_H(e)\\ \\text{for } e&gt;0.\n\\]\nEmployer wants to pay higher wages if they believe the worker is \\(H\\).\n\nA separating equilibrium can exist where \\(H\\) chooses a higher \\(e\\) and \\(L\\) chooses a lower \\(e\\), because mimicking is too costly for \\(L\\). The signal works because it changes beliefs and is differentially costly."
+    "objectID": "notes/game-types/signaling.html#types-and-signals",
+    "href": "notes/game-types/signaling.html#types-and-signals",
+    "title": "Signaling",
+    "section": "Types and signals",
+    "text": "Types and signals\nLet the sender’s type be:\n\\[\n\\theta \\in \\Theta.\n\\]\nLet the sender choose signal:\n\\[\ns \\in S.\n\\]\nThe receiver observes \\(s\\) but not \\(\\theta\\).\nThe receiver forms belief:\n\\[\n\\mu(\\theta \\mid s).\n\\]\nThen the receiver chooses action:\n\\[\na \\in A.\n\\]\nA signaling equilibrium specifies:\n\nsender signal choices for each type;\nreceiver beliefs after each signal;\nreceiver actions after each signal."
   },
   {
-    "objectID": "notes/game-types/signaling.html#story",
-    "href": "notes/game-types/signaling.html#story",
-    "title": "Signaling games",
-    "section": "Story",
-    "text": "Story\nA scholarship committee can’t observe applicant ability directly. Applicants can choose to take a difficult certification exam. High-ability students find it less costly; low-ability students find it very costly. The committee conditions its funding decision on the signal."
+    "objectID": "notes/game-types/signaling.html#separating-equilibrium",
+    "href": "notes/game-types/signaling.html#separating-equilibrium",
+    "title": "Signaling",
+    "section": "Separating equilibrium",
+    "text": "Separating equilibrium\nIn a separating equilibrium, different types choose different signals.\n\n\n\n\n\nflowchart TD\n    A[High type] --&gt; B[Signal H]\n    C[Low type] --&gt; D[Signal L]\n    B --&gt; E[Receiver believes high type]\n    D --&gt; F[Receiver believes low type]\n\n\n\n\n\n\nSeparating equilibria transmit information. The receiver can infer the sender’s type from the observed signal."
   },
   {
-    "objectID": "notes/game-types/signaling.html#model",
-    "href": "notes/game-types/signaling.html#model",
-    "title": "Signaling games",
-    "section": "Model",
-    "text": "Model\n\nTypes: \\(\\theta\\in\\{H,L\\}\\), prior \\(p\\)\nSignal: \\(e\\in\\{0,1\\}\\) with costs \\(c_H(1)&lt;c_L(1)\\) and \\(c_H(0)=c_L(0)=0\\)\nReceiver chooses reward based on beliefs after observing \\(e\\)"
+    "objectID": "notes/game-types/signaling.html#pooling-equilibrium",
+    "href": "notes/game-types/signaling.html#pooling-equilibrium",
+    "title": "Signaling",
+    "section": "Pooling equilibrium",
+    "text": "Pooling equilibrium\nIn a pooling equilibrium, different types choose the same signal.\n\n\n\n\n\nflowchart TD\n    A[High type] --&gt; C[Same signal]\n    B[Low type] --&gt; C\n    C --&gt; D[Receiver cannot distinguish types]\n    D --&gt; E[Receiver uses pooled belief]\n\n\n\n\n\n\nPooling equilibria transmit less information. The receiver’s belief after the pooled signal is based on the prior or equilibrium mixture."
   },
   {
-    "objectID": "notes/game-types/signaling.html#equilibrium-separating-vs-pooling",
-    "href": "notes/game-types/signaling.html#equilibrium-separating-vs-pooling",
-    "title": "Signaling games",
-    "section": "Equilibrium (separating vs pooling)",
-    "text": "Equilibrium (separating vs pooling)\nLet the reward be \\(w_H\\) if perceived high type and \\(w_L\\) otherwise.\nA separating equilibrium with \\(H\\) choosing \\(e=1\\) and \\(L\\) choosing \\(e=0\\) requires: \\[\nw_H-c_H(1)\\ge w_L\n\\quad\\text{and}\\quad\nw_H-c_L(1)\\le w_L.\n\\]"
+    "objectID": "notes/game-types/signaling.html#semi-separating-equilibrium",
+    "href": "notes/game-types/signaling.html#semi-separating-equilibrium",
+    "title": "Signaling",
+    "section": "Semi-separating equilibrium",
+    "text": "Semi-separating equilibrium\nIn a semi-separating equilibrium, at least one type randomizes, or the signal only partly reveals type.\n\n\n\n\n\nflowchart LR\n    A[Types] --&gt; B[Signals partly overlap]\n    B --&gt; C[Receiver updates beliefs partially]\n    C --&gt; D[Receiver response depends on posterior]\n\n\n\n\n\n\nSemi-separating equilibria are common when incentives are close or when full separation is too costly."
   },
   {
-    "objectID": "notes/game-types/signaling.html#later-on-analysis",
-    "href": "notes/game-types/signaling.html#later-on-analysis",
-    "title": "Signaling games",
-    "section": "Later-on analysis",
-    "text": "Later-on analysis\n\nPooling: if costs aren’t different enough, both types choose the same signal (signal loses meaning).\nOff-path beliefs: dynamic equilibrium concepts differ in how they restrict beliefs after unexpected signals.\nContinuous effort: allowing \\(e\\) continuous yields richer separating thresholds and comparative statics."
+    "objectID": "notes/game-types/signaling.html#costly-signals",
+    "href": "notes/game-types/signaling.html#costly-signals",
+    "title": "Signaling",
+    "section": "Costly signals",
+    "text": "Costly signals\nA signal can be credible when it is less costly for one type than another.\nFor example, suppose education is easier for high-ability workers than low-ability workers. Then high education may signal high ability if low-ability workers find it too costly to imitate.\nThe logic is:\n\n\n\n\n\nflowchart TD\n    A[High type] --&gt; B[Low cost of signal]\n    C[Low type] --&gt; D[High cost of signal]\n    B --&gt; E[High type sends signal]\n    D --&gt; F[Low type does not imitate]\n    E --&gt; G[Signal becomes credible]\n\n\n\n\n\n\nThis is the single-crossing intuition."
+  },
+  {
+    "objectID": "notes/game-types/signaling.html#incentive-compatibility",
+    "href": "notes/game-types/signaling.html#incentive-compatibility",
+    "title": "Signaling",
+    "section": "Incentive compatibility",
+    "text": "Incentive compatibility\nA separating equilibrium requires incentive compatibility.\nEach type must prefer the signal assigned to that type over imitating another type.\nFor high type \\(H\\) and low type \\(L\\), a separating equilibrium may require:\n\\[\nU_H(s_H,a_H) \\geq U_H(s_L,a_L),\n\\]\nand\n\\[\nU_L(s_L,a_L) \\geq U_L(s_H,a_H).\n\\]\nThe first condition says the high type does not want to mimic the low type.\nThe second says the low type does not want to mimic the high type."
+  },
+  {
+    "objectID": "notes/game-types/signaling.html#receiver-beliefs",
+    "href": "notes/game-types/signaling.html#receiver-beliefs",
+    "title": "Signaling",
+    "section": "Receiver beliefs",
+    "text": "Receiver beliefs\nReceiver beliefs must be consistent with observed signals on the equilibrium path.\nIf signal \\(s_H\\) is sent only by high type in equilibrium, then:\n\\[\n\\mu(H\\mid s_H)=1.\n\\]\nIf signal \\(s_L\\) is sent only by low type, then:\n\\[\n\\mu(L\\mid s_L)=1.\n\\]\nIf both types send the same signal, the receiver’s posterior is the prior conditional on pooling.\nOff-path beliefs are more delicate and can affect equilibrium plausibility."
+  },
+  {
+    "objectID": "notes/game-types/signaling.html#education-signaling-example",
+    "href": "notes/game-types/signaling.html#education-signaling-example",
+    "title": "Signaling",
+    "section": "Education signaling example",
+    "text": "Education signaling example\nIn an education signaling model:\n\nworkers know their own ability;\nfirms do not observe ability;\nworkers choose education level;\nfirms observe education and offer wages;\neducation is less costly for high-ability workers.\n\n\n\n\n\n\nflowchart LR\n    A[Worker ability type] --&gt; B[Education choice]\n    B --&gt; C[Firm observes education]\n    C --&gt; D[Firm updates belief]\n    D --&gt; E[Wage offer]\n\n\n\n\n\n\nEducation may not directly increase productivity in a pure signaling model. It may work because it separates types."
+  },
+  {
+    "objectID": "notes/game-types/signaling.html#signaling-versus-human-capital",
+    "href": "notes/game-types/signaling.html#signaling-versus-human-capital",
+    "title": "Signaling",
+    "section": "Signaling versus human capital",
+    "text": "Signaling versus human capital\nEducation can be interpreted in two ways.\n\n\n\nInterpretation\nMain idea\n\n\n\n\nHuman capital\neducation increases productivity\n\n\nSignaling\neducation reveals productivity or ability\n\n\n\nReal education may do both. The model separates the mechanisms."
+  },
+  {
+    "objectID": "notes/game-types/signaling.html#signaling-and-social-behaviour",
+    "href": "notes/game-types/signaling.html#signaling-and-social-behaviour",
+    "title": "Signaling",
+    "section": "Signaling and social behaviour",
+    "text": "Signaling and social behaviour\nSignaling is not only economic.\nExamples:\n\n\n\n\n\n\n\n\nDomain\nSignal\nPossible type being inferred\n\n\n\n\npolitics\ncostly commitment\nideological seriousness\n\n\ncrime\nretaliation\ntoughness or willingness to punish\n\n\norganizations\ncompliance programme\nresponsibility or legal caution\n\n\nrelationships\napology\nremorse or sincerity\n\n\nmarkets\nwarranty\nproduct quality\n\n\nacademia\ncredential\nability or training\n\n\n\nThe key question is always whether the signal is incentive-compatible."
+  },
+  {
+    "objectID": "notes/game-types/signaling.html#cheap-talk-versus-signaling",
+    "href": "notes/game-types/signaling.html#cheap-talk-versus-signaling",
+    "title": "Signaling",
+    "section": "Cheap talk versus signaling",
+    "text": "Cheap talk versus signaling\n\n\n\n\n\n\n\n\nFeature\nCheap talk\nSignaling\n\n\n\n\nCost\ncostless\noften costly\n\n\nDirect payoff effect\nnone\nmay directly affect payoff\n\n\nCredibility source\npreference alignment\ndifferential cost or incentive\n\n\nMain issue\ncan messages be informative?\ncan actions reveal type?\n\n\n\nCheap talk can reveal information without cost if preferences are aligned. Signaling can reveal information even with conflict if imitation is too costly."
+  },
+  {
+    "objectID": "notes/game-types/signaling.html#common-mistakes",
+    "href": "notes/game-types/signaling.html#common-mistakes",
+    "title": "Signaling",
+    "section": "Common mistakes",
+    "text": "Common mistakes\n\n1. Treating every observable action as a signal\nAn action is a signal only if it changes beliefs about hidden information.\n\n\n2. Ignoring signal cost\nIf imitation is costless, separation may fail.\n\n\n3. Forgetting receiver beliefs\nThe receiver’s action depends on posterior beliefs.\n\n\n4. Assuming separating equilibrium always exists\nSeparation requires incentive compatibility.\n\n\n5. Confusing signaling with productivity\nA signal may reveal ability without causing ability.\n\n\n6. Ignoring off-path beliefs\nUnexpected signals can support or undermine equilibria."
+  },
+  {
+    "objectID": "notes/game-types/signaling.html#checklist",
+    "href": "notes/game-types/signaling.html#checklist",
+    "title": "Signaling",
+    "section": "Checklist",
+    "text": "Checklist\nWhen analysing a signaling game, ask:\n\nWhat is the sender’s private type?\nWhat signal can the sender choose?\nDoes the signal have a cost?\nDoes the cost differ by type?\nWhat does the receiver observe?\nWhat beliefs does the receiver form?\nWhat action does the receiver choose?\nIs the proposed equilibrium separating, pooling, or semi-separating?\nAre incentive compatibility conditions satisfied?\nAre off-path beliefs reasonable?"
+  },
+  {
+    "objectID": "notes/game-types/signaling.html#related-pages",
+    "href": "notes/game-types/signaling.html#related-pages",
+    "title": "Signaling",
+    "section": "Related pages",
+    "text": "Related pages\n\nGame Types\nBayesian Games\nCheap Talk\nScreening and Mechanism Design\nPerfect Bayesian Equilibrium\nSequential Equilibrium\nProbability"
   },
   {
     "objectID": "notes/game-types/evolutionary-learning.html",
@@ -2123,44 +2284,107 @@
   {
     "objectID": "notes/equilibriums/sequential-equilibrium.html",
     "href": "notes/equilibriums/sequential-equilibrium.html",
-    "title": "Sequential equilibrium",
+    "title": "Sequential Equilibrium",
     "section": "",
-    "text": "A sequential equilibrium is a refinement of PBE. It is a pair (strategies, beliefs) such that:\n\nSequential rationality: strategies are optimal at every information set given beliefs.\nConsistency: beliefs come from strategies via Bayes’ rule as limits of fully mixed (“trembling”) strategies.\n\nThis “tremble” requirement disciplines off-path beliefs: beliefs must be justifiable by small mistakes."
+    "text": "Sequential equilibrium is a refinement for dynamic games with incomplete information. It strengthens perfect Bayesian equilibrium by requiring strategies to be sequentially rational and beliefs to be consistent as limits of fully mixed strategies.\nThe central idea is:"
   },
   {
-    "objectID": "notes/equilibriums/sequential-equilibrium.html#what-it-is",
-    "href": "notes/equilibriums/sequential-equilibrium.html#what-it-is",
-    "title": "Sequential equilibrium",
-    "section": "",
-    "text": "A sequential equilibrium is a refinement of PBE. It is a pair (strategies, beliefs) such that:\n\nSequential rationality: strategies are optimal at every information set given beliefs.\nConsistency: beliefs come from strategies via Bayes’ rule as limits of fully mixed (“trembling”) strategies.\n\nThis “tremble” requirement disciplines off-path beliefs: beliefs must be justifiable by small mistakes."
+    "objectID": "notes/equilibriums/sequential-equilibrium.html#why-sequential-equilibrium-matters",
+    "href": "notes/equilibriums/sequential-equilibrium.html#why-sequential-equilibrium-matters",
+    "title": "Sequential Equilibrium",
+    "section": "Why sequential equilibrium matters",
+    "text": "Why sequential equilibrium matters\nPerfect Bayesian equilibrium requires sequential rationality and Bayes’ rule where possible. But off-path beliefs may still be too flexible.\nSequential equilibrium adds stronger discipline to beliefs.\n\n\n\n\n\nflowchart LR\n    A[PBE] --&gt; B[Sequential rationality]\n    A --&gt; C[Beliefs]\n    C --&gt; D[Off-path freedom]\n    D --&gt; E[Sequential equilibrium adds consistency]\n\n\n\n\n\n\nThis makes sequential equilibrium useful when off-path beliefs matter."
   },
   {
-    "objectID": "notes/equilibriums/sequential-equilibrium.html#where-it-shows-up",
-    "href": "notes/equilibriums/sequential-equilibrium.html#where-it-shows-up",
-    "title": "Sequential equilibrium",
-    "section": "Where it shows up",
-    "text": "Where it shows up\n\nSignaling games and dynamic games with imperfect information\nAny setting where PBE has many equilibria due to arbitrary off-path beliefs\nRefinement discussions in micro theory / game theory texts"
+    "objectID": "notes/equilibriums/sequential-equilibrium.html#assessment",
+    "href": "notes/equilibriums/sequential-equilibrium.html#assessment",
+    "title": "Sequential Equilibrium",
+    "section": "Assessment",
+    "text": "Assessment\nA sequential equilibrium is defined as an assessment:\n\\[\n(\\sigma,\\mu),\n\\]\nwhere:\n\n\n\nObject\nMeaning\n\n\n\n\n\\(\\sigma\\)\nstrategy profile\n\n\n\\(\\mu\\)\nsystem of beliefs\n\n\n\nThe assessment must satisfy:\n\nsequential rationality;\nconsistency."
   },
   {
-    "objectID": "notes/equilibriums/sequential-equilibrium.html#how-to-solve-recipe",
-    "href": "notes/equilibriums/sequential-equilibrium.html#how-to-solve-recipe",
-    "title": "Sequential equilibrium",
-    "section": "How to solve (recipe)",
-    "text": "How to solve (recipe)\n\nStart from a candidate PBE.\nAdd small probabilities (trembles) so every action is played with positive probability.\nCompute beliefs via Bayes’ rule under the perturbed strategy.\nTake limits as trembles go to zero:\n\nif beliefs converge, they are consistent.\n\nCheck sequential rationality with those beliefs."
+    "objectID": "notes/equilibriums/sequential-equilibrium.html#sequential-rationality",
+    "href": "notes/equilibriums/sequential-equilibrium.html#sequential-rationality",
+    "title": "Sequential Equilibrium",
+    "section": "Sequential rationality",
+    "text": "Sequential rationality\nSequential rationality means every player chooses optimally at every information set, given beliefs and continuation strategies.\nFor each information set, the prescribed strategy must maximize expected continuation payoff.\n\n\n\n\n\nflowchart LR\n    A[Information set] --&gt; B[Belief over nodes]\n    B --&gt; C[Expected continuation payoff]\n    C --&gt; D[Optimal action]\n\n\n\n\n\n\nThis is similar to PBE."
   },
   {
-    "objectID": "notes/equilibriums/sequential-equilibrium.html#solved-example-why-some-off-path-beliefs-are-not-credible",
-    "href": "notes/equilibriums/sequential-equilibrium.html#solved-example-why-some-off-path-beliefs-are-not-credible",
-    "title": "Sequential equilibrium",
-    "section": "Solved example (why some off-path beliefs are not credible)",
-    "text": "Solved example (why some off-path beliefs are not credible)\n\nProblem (context + question)\nConsider the pooling PBE from the PBE page: - Both types choose \\(e=0\\). - Off-path belief after \\(e=1\\) is \\(\\Pr(H\\mid e=1)=0\\).\nQuestion: Explain the consistency idea: what must be true for such an off-path belief to be allowed under sequential equilibrium?\n\n\nSolution\nSequential equilibrium requires off-path beliefs to be limits of Bayes-updated beliefs from fully mixed strategies.\nSo imagine a perturbed (trembling) strategy where: - Type \\(H\\) plays \\(e=1\\) with small probability \\(\\varepsilon_H&gt;0\\), - Type \\(L\\) plays \\(e=1\\) with small probability \\(\\varepsilon_L&gt;0\\).\nThen, upon observing \\(e=1\\), Bayes’ rule gives: \\[\n\\Pr(H\\mid e=1)=\\frac{p\\,\\varepsilon_H}{p\\,\\varepsilon_H+(1-p)\\,\\varepsilon_L}.\n\\]\nNow consider the limit as trembles vanish. The limiting belief depends on the relative rate at which \\(\\varepsilon_H\\) and \\(\\varepsilon_L\\) go to zero.\n\nIf \\(\\varepsilon_H/\\varepsilon_L \\to 0\\), then \\(\\Pr(H\\mid e=1)\\to 0\\).\nIf \\(\\varepsilon_H/\\varepsilon_L \\to \\infty\\), then \\(\\Pr(H\\mid e=1)\\to 1\\).\nIf \\(\\varepsilon_H/\\varepsilon_L \\to k\\in(0,\\infty)\\), then the limit is an interior number in \\((0,1)\\).\n\nResult: The off-path belief \\(\\Pr(H\\mid e=1)=0\\) is consistent only if the perturbations imply that, in the limit, type \\(H\\) is vanishingly less likely than type \\(L\\) to make that mistake.\n\n\nCheck\nThis belief is not “free”: it must be explainable by a sequence of fully mixed strategies.\n\n\nTakeaway\nSequential equilibrium restricts off-path beliefs by requiring them to arise from plausible small mistakes."
+    "objectID": "notes/equilibriums/sequential-equilibrium.html#consistency",
+    "href": "notes/equilibriums/sequential-equilibrium.html#consistency",
+    "title": "Sequential Equilibrium",
+    "section": "Consistency",
+    "text": "Consistency\nConsistency is the stronger belief requirement.\nBeliefs should be obtainable as limits of beliefs generated by completely mixed strategy profiles.\nA completely mixed strategy assigns positive probability to every action. This ensures every information set is reached with positive probability, so Bayes’ rule can be applied everywhere.\nThen we take a limit as trembles go to zero.\n\n\n\n\n\nflowchart TD\n    A[Completely mixed strategies] --&gt; B[Every information set reached]\n    B --&gt; C[Bayes' rule applies everywhere]\n    C --&gt; D[Generate beliefs]\n    D --&gt; E[Take limit]\n    E --&gt; F[Consistent beliefs]\n\n\n\n\n\n\nThis prevents arbitrary off-path beliefs that cannot be justified by small mistakes."
   },
   {
-    "objectID": "notes/equilibriums/sequential-equilibrium.html#later-on-analysis",
-    "href": "notes/equilibriums/sequential-equilibrium.html#later-on-analysis",
-    "title": "Sequential equilibrium",
-    "section": "Later-on analysis",
-    "text": "Later-on analysis\n\nSequential equilibrium is often closer to how theorists think about “reasonable beliefs” off-path.\nStronger refinements (e.g., intuitive criterion) impose additional structure.\nFor applied work, PBE is common; for selection arguments, sequential equilibrium is a useful upgrade."
+    "objectID": "notes/equilibriums/sequential-equilibrium.html#sequential-equilibrium-versus-pbe",
+    "href": "notes/equilibriums/sequential-equilibrium.html#sequential-equilibrium-versus-pbe",
+    "title": "Sequential Equilibrium",
+    "section": "Sequential equilibrium versus PBE",
+    "text": "Sequential equilibrium versus PBE\n\n\n\n\n\n\n\n\nConcept\nSequential rationality\nBelief requirement\n\n\n\n\nPBE\nyes\nBayes’ rule on path; off-path beliefs often flexible\n\n\nSequential equilibrium\nyes\nbeliefs must be consistent limits of fully mixed strategies\n\n\n\nEvery sequential equilibrium is generally a PBE, but not every PBE is sequential."
+  },
+  {
+    "objectID": "notes/equilibriums/sequential-equilibrium.html#why-completely-mixed-strategies",
+    "href": "notes/equilibriums/sequential-equilibrium.html#why-completely-mixed-strategies",
+    "title": "Sequential Equilibrium",
+    "section": "Why completely mixed strategies?",
+    "text": "Why completely mixed strategies?\nIf every action has positive probability, then every information set can be reached.\nThat means beliefs can always be computed by Bayes’ rule.\nThe idea is that even if an action is not supposed to occur in equilibrium, it could occur as a small mistake or tremble.\nBeliefs after unexpected actions should be consistent with the relative likelihood of such mistakes."
+  },
+  {
+    "objectID": "notes/equilibriums/sequential-equilibrium.html#example-intuition",
+    "href": "notes/equilibriums/sequential-equilibrium.html#example-intuition",
+    "title": "Sequential Equilibrium",
+    "section": "Example intuition",
+    "text": "Example intuition\nSuppose a receiver observes an unexpected signal.\nPBE may allow many possible beliefs after that signal.\nSequential equilibrium asks:\n\nIf the unexpected signal occurred because of very small mistakes, which type would be more likely to make that mistake?\n\nThis gives off-path beliefs more structure."
+  },
+  {
+    "objectID": "notes/equilibriums/sequential-equilibrium.html#relation-to-trembling-hand-perfection",
+    "href": "notes/equilibriums/sequential-equilibrium.html#relation-to-trembling-hand-perfection",
+    "title": "Sequential Equilibrium",
+    "section": "Relation to trembling-hand perfection",
+    "text": "Relation to trembling-hand perfection\nBoth sequential equilibrium and trembling-hand perfection use the idea of small mistakes, but in different ways.\n\n\n\n\n\n\n\nConcept\nMain object\n\n\n\n\nTrembling-hand perfect equilibrium\nrobustness of strategies to small mistakes\n\n\nSequential equilibrium\nconsistency of beliefs and sequential rationality\n\n\nProper equilibrium\nrelative likelihood of more costly mistakes\n\n\n\nSequential equilibrium is especially designed for extensive-form games with imperfect information."
+  },
+  {
+    "objectID": "notes/equilibriums/sequential-equilibrium.html#beliefs-at-information-sets",
+    "href": "notes/equilibriums/sequential-equilibrium.html#beliefs-at-information-sets",
+    "title": "Sequential Equilibrium",
+    "section": "Beliefs at information sets",
+    "text": "Beliefs at information sets\nIn an extensive-form game, an information set may contain several decision nodes.\nA belief assigns probabilities to these nodes.\nFor example, if information set \\(I\\) contains nodes \\(x\\) and \\(y\\), beliefs may be:\n\\[\n\\mu(x\\mid I)=0.6,\n\\]\nand\n\\[\n\\mu(y\\mid I)=0.4.\n\\]\nThe player’s optimal action depends on expected payoff under these beliefs."
+  },
+  {
+    "objectID": "notes/equilibriums/sequential-equilibrium.html#sequential-equilibrium-in-signaling",
+    "href": "notes/equilibriums/sequential-equilibrium.html#sequential-equilibrium-in-signaling",
+    "title": "Sequential Equilibrium",
+    "section": "Sequential equilibrium in signaling",
+    "text": "Sequential equilibrium in signaling\nIn a signaling game, sequential equilibrium can restrict off-path beliefs after unexpected signals.\nFor example, in a pooling equilibrium, both types send the same signal. If the receiver observes an unexpected signal, PBE may allow arbitrary beliefs. Sequential equilibrium asks whether those beliefs can be justified by small probabilities of each type deviating.\n\n\n\n\n\nflowchart LR\n    A[Pooling signal observed normally] --&gt; B[Receiver uses pooled belief]\n    C[Unexpected signal] --&gt; D[Need off-path belief]\n    D --&gt; E[Sequential consistency restricts belief]"
+  },
+  {
+    "objectID": "notes/equilibriums/sequential-equilibrium.html#why-it-is-stronger",
+    "href": "notes/equilibriums/sequential-equilibrium.html#why-it-is-stronger",
+    "title": "Sequential Equilibrium",
+    "section": "Why it is stronger",
+    "text": "Why it is stronger\nSequential equilibrium is stronger because it connects beliefs to possible trembles.\nIt rules out some equilibria that rely on unreasonable beliefs after unexpected events.\nHowever, it can also be more technically demanding than PBE."
+  },
+  {
+    "objectID": "notes/equilibriums/sequential-equilibrium.html#common-mistakes",
+    "href": "notes/equilibriums/sequential-equilibrium.html#common-mistakes",
+    "title": "Sequential Equilibrium",
+    "section": "Common mistakes",
+    "text": "Common mistakes\n\n1. Treating sequential equilibrium as the same as PBE\nSequential equilibrium has a stronger consistency requirement.\n\n\n2. Ignoring beliefs\nSequential equilibrium is an assessment: strategies plus beliefs.\n\n\n3. Thinking consistency means only Bayes’ rule on path\nConsistency also disciplines off-path beliefs through limits.\n\n\n4. Forgetting sequential rationality\nBeliefs alone are not enough. Actions must be optimal given beliefs.\n\n\n5. Confusing trembles with actual behaviour\nTrembles are a refinement device, not necessarily a literal behavioural claim."
+  },
+  {
+    "objectID": "notes/equilibriums/sequential-equilibrium.html#checklist",
+    "href": "notes/equilibriums/sequential-equilibrium.html#checklist",
+    "title": "Sequential Equilibrium",
+    "section": "Checklist",
+    "text": "Checklist\nWhen checking sequential equilibrium, ask:\n\nWhat is the strategy profile?\nWhat beliefs are assigned at each information set?\nAre strategies sequentially rational given beliefs?\nCan beliefs be generated by fully mixed strategies?\nDo those fully mixed strategies converge to the proposed strategy?\nDo the induced beliefs converge to the proposed beliefs?\nAre off-path beliefs justified by this limiting process?\nIs the assessment also a PBE?\nWhat equilibria are ruled out by consistency?\nIs the refinement substantively important in this model?"
+  },
+  {
+    "objectID": "notes/equilibriums/sequential-equilibrium.html#related-pages",
+    "href": "notes/equilibriums/sequential-equilibrium.html#related-pages",
+    "title": "Sequential Equilibrium",
+    "section": "Related pages",
+    "text": "Related pages\n\nEquilibrium Concepts\nPerfect Bayesian Equilibrium\nTrembling-hand Perfect Equilibrium\nProper Equilibrium\nSignaling\nCheap Talk\nDynamic Reasoning"
   },
   {
     "objectID": "notes/equilibriums/nash.html",
@@ -6253,86 +6477,219 @@
   {
     "objectID": "notes/equilibriums/babbling.html",
     "href": "notes/equilibriums/babbling.html",
-    "title": "Babbling equilibrium (cheap talk)",
+    "title": "Babbling Equilibrium",
     "section": "",
-    "text": "In cheap talk, messages are costless and non-binding. A babbling equilibrium is one in which messages convey no information: the receiver’s action does not depend on the message, and the sender is indifferent across messages.\nBabbling equilibria exist very generally and serve as a baseline."
+    "text": "A babbling equilibrium is a cheap-talk equilibrium in which messages carry no information. The sender may still send messages, but the receiver ignores them.\nThe central idea is:\nBabbling is important because it shows that costless communication is not automatically informative."
   },
   {
-    "objectID": "notes/equilibriums/babbling.html#what-it-is",
-    "href": "notes/equilibriums/babbling.html#what-it-is",
-    "title": "Babbling equilibrium (cheap talk)",
-    "section": "",
-    "text": "In cheap talk, messages are costless and non-binding. A babbling equilibrium is one in which messages convey no information: the receiver’s action does not depend on the message, and the sender is indifferent across messages.\nBabbling equilibria exist very generally and serve as a baseline."
+    "objectID": "notes/equilibriums/babbling.html#basic-structure",
+    "href": "notes/equilibriums/babbling.html#basic-structure",
+    "title": "Babbling Equilibrium",
+    "section": "Basic structure",
+    "text": "Basic structure\nIn a cheap-talk game:\n\nthe sender observes private information;\nthe sender sends a message;\nthe receiver observes the message;\nthe receiver chooses an action.\n\nIn a babbling equilibrium, the receiver’s action does not depend on the message.\n\n\n\n\n\nflowchart LR\n    A[Sender observes information] --&gt; B[Sender sends message]\n    B --&gt; C[Receiver hears message]\n    C --&gt; D[Receiver ignores message]\n    D --&gt; E[Receiver acts on prior]\n\n\n\n\n\n\nThe message is strategically irrelevant."
   },
   {
-    "objectID": "notes/equilibriums/babbling.html#where-it-shows-up",
-    "href": "notes/equilibriums/babbling.html#where-it-shows-up",
-    "title": "Babbling equilibrium (cheap talk)",
-    "section": "Where it shows up",
-    "text": "Where it shows up\n\nCheap talk models (sender–receiver)\nCommunication settings with strong preference misalignment\nAs the “uninformative” benchmark when discussing informative equilibria (partition, separating)"
+    "objectID": "notes/equilibriums/babbling.html#definition",
+    "href": "notes/equilibriums/babbling.html#definition",
+    "title": "Babbling Equilibrium",
+    "section": "Definition",
+    "text": "Definition\nA babbling equilibrium is an equilibrium where:\n\nthe receiver’s belief after each on-path message is the same as the prior;\nthe receiver chooses the same action regardless of message;\nthe sender has no incentive to choose a different message because messages do not affect the receiver’s action.\n\nIf the receiver ignores all messages, then the sender is indifferent among messages."
   },
   {
-    "objectID": "notes/equilibriums/babbling.html#how-to-solve-recipe",
-    "href": "notes/equilibriums/babbling.html#how-to-solve-recipe",
-    "title": "Babbling equilibrium (cheap talk)",
-    "section": "How to solve (recipe)",
-    "text": "How to solve (recipe)\n\nMake the receiver ignore messages: choose the same action after any message.\nSet receiver beliefs equal to the prior (or any belief consistent with ignoring messages).\nVerify receiver optimality under those beliefs.\nVerify sender indifference: since messages don’t affect actions, any message is optimal."
+    "objectID": "notes/equilibriums/babbling.html#why-babbling-is-an-equilibrium",
+    "href": "notes/equilibriums/babbling.html#why-babbling-is-an-equilibrium",
+    "title": "Babbling Equilibrium",
+    "section": "Why babbling is an equilibrium",
+    "text": "Why babbling is an equilibrium\nBabbling is self-confirming.\n\n\n\n\n\nflowchart TD\n    A[Receiver expects messages to be uninformative] --&gt; B[Receiver ignores messages]\n    B --&gt; C[Messages do not affect action]\n    C --&gt; D[Sender has no incentive to choose informative messages]\n    D --&gt; A\n\n\n\n\n\n\nBecause the receiver does not respond to messages, the sender cannot benefit from carefully choosing a message. Since the sender does not choose messages informatively, the receiver is right to ignore them."
   },
   {
-    "objectID": "notes/equilibriums/babbling.html#solved-example-fully-worked",
-    "href": "notes/equilibriums/babbling.html#solved-example-fully-worked",
-    "title": "Babbling equilibrium (cheap talk)",
-    "section": "Solved example (fully worked)",
-    "text": "Solved example (fully worked)\n\nProblem (context + question)\nA sender observes \\(\\theta\\in\\{0,1\\}\\) with prior \\(\\Pr(\\theta=1)=1/2\\). Sender sends costless message \\(m\\in\\{\\text{low},\\text{high}\\}\\). Receiver chooses action \\(a\\in\\{0,1\\}\\).\nReceiver payoff: \\[\nu_R(a,\\theta)=\\mathbf{1}\\{a=\\theta\\}.\n\\]\nSender payoff (biased toward \\(a=1\\)): \\[\nu_S(a,\\theta)=\\mathbf{1}\\{a=1\\}.\n\\]\nQuestion: Exhibit a babbling equilibrium (strategies + beliefs) and verify it.\n\n\nSolution\nA babbling equilibrium has receiver ignore the message.\nStep 1 (receiver best response when ignoring messages): Under the prior, \\(\\Pr(\\theta=1)=1/2\\). Then - payoff from \\(a=1\\) is \\(1/2\\), - payoff from \\(a=0\\) is \\(1/2\\).\nReceiver is indifferent, so a valid best response is: \\[\na=0 \\quad \\text{after both messages}.\n\\]\nStep 2 (sender incentives): If the receiver always plays \\(a=0\\), sender payoff is always \\(0\\) regardless of message. So the sender is indifferent and can send any message.\nLet sender strategy be: always send “high”.\nStep 3 (beliefs): Receiver beliefs do not depend on the message (since messages are ignored). Keep the prior: \\[\n\\Pr(\\theta=1\\mid m)=1/2 \\quad \\text{for both } m\\in\\{\\text{low},\\text{high}\\}.\n\\]\nResult (babbling equilibrium): - Sender: always send “high”. - Receiver: always choose \\(a=0\\). - Beliefs: posterior equals prior after any message.\n\n\nCheck\n\nReceiver optimality: given prior, \\(a=0\\) is a best response (ties).\nSender optimality: given receiver ignores messages, any message is optimal.\nBeliefs are consistent with the equilibrium (receiver does not condition on \\(m\\)).\n\n\n\nTakeaway\nBabbling equilibria always exist because cheap messages can be ignored."
+    "objectID": "notes/equilibriums/babbling.html#prior-based-action",
+    "href": "notes/equilibriums/babbling.html#prior-based-action",
+    "title": "Babbling Equilibrium",
+    "section": "Prior-based action",
+    "text": "Prior-based action\nIf the receiver ignores the message, the receiver chooses the action that maximizes expected payoff under the prior belief.\nIf the state is \\(\\theta\\), and the receiver chooses action \\(a\\), then the receiver solves:\n\\[\na^*\n\\in\n\\arg\\max_{a\\in A}\n\\sum_{\\theta}\nu_R(a,\\theta)\\Pr(\\theta).\n\\]\nThe message does not enter the receiver’s decision."
   },
   {
-    "objectID": "notes/equilibriums/babbling.html#later-on-analysis",
-    "href": "notes/equilibriums/babbling.html#later-on-analysis",
-    "title": "Babbling equilibrium (cheap talk)",
-    "section": "Later-on analysis",
-    "text": "Later-on analysis\n\nInformative equilibria require structure: partial alignment, restrictions on message space, or repeated interaction.\nAdding costs converts cheap talk into signaling, where credibility can be restored.\nMany refinements aim to rule out “unreasonable” beliefs or equilibria, but babbling is a genuine equilibrium prediction in many environments."
+    "objectID": "notes/equilibriums/babbling.html#beliefs",
+    "href": "notes/equilibriums/babbling.html#beliefs",
+    "title": "Babbling Equilibrium",
+    "section": "Beliefs",
+    "text": "Beliefs\nIn a babbling equilibrium, on-path messages do not change beliefs.\nFor message \\(m\\):\n\\[\n\\mu(\\theta\\mid m)=\\Pr(\\theta).\n\\]\nThe posterior equals the prior.\nThis is what it means for the message to carry no information."
+  },
+  {
+    "objectID": "notes/equilibriums/babbling.html#example-intuition",
+    "href": "notes/equilibriums/babbling.html#example-intuition",
+    "title": "Babbling Equilibrium",
+    "section": "Example intuition",
+    "text": "Example intuition\nSuppose an expert knows whether a project is good or bad. The decision-maker must decide whether to approve it.\nIf the expert always wants approval, regardless of the true project quality, then the expert may always say:\nThe project is good.\nThe decision-maker anticipates this and ignores the message.\nThe message becomes babble."
+  },
+  {
+    "objectID": "notes/equilibriums/babbling.html#babbling-and-pooling",
+    "href": "notes/equilibriums/babbling.html#babbling-and-pooling",
+    "title": "Babbling Equilibrium",
+    "section": "Babbling and pooling",
+    "text": "Babbling and pooling\nBabbling is related to pooling, but they are not identical.\nIn a pooling equilibrium, multiple types send the same message.\nIn a babbling equilibrium, the receiver’s action does not depend on the message.\n\n\n\nConcept\nMeaning\n\n\n\n\nPooling\ndifferent types choose the same message or signal\n\n\nBabbling\nmessages do not affect beliefs or actions\n\n\n\nA pooling equilibrium can be informative if the pooled group still changes beliefs relative to some other message. Babbling is fully uninformative."
+  },
+  {
+    "objectID": "notes/equilibriums/babbling.html#babbling-and-cheap-talk",
+    "href": "notes/equilibriums/babbling.html#babbling-and-cheap-talk",
+    "title": "Babbling Equilibrium",
+    "section": "Babbling and cheap talk",
+    "text": "Babbling and cheap talk\nBabbling is especially common in cheap-talk games because messages are costless and non-binding.\nIf sender and receiver preferences are too misaligned, informative communication may fail. The receiver ignores messages, and the sender cannot credibly transmit information.\n\n\n\n\n\nflowchart LR\n    A[Preference conflict] --&gt; B[Receiver distrusts message]\n    B --&gt; C[Message ignored]\n    C --&gt; D[Babbling equilibrium]"
+  },
+  {
+    "objectID": "notes/equilibriums/babbling.html#always-exists-intuition",
+    "href": "notes/equilibriums/babbling.html#always-exists-intuition",
+    "title": "Babbling Equilibrium",
+    "section": "Always exists intuition",
+    "text": "Always exists intuition\nIn many cheap-talk games, a babbling equilibrium always exists.\nThe logic is:\n\nreceiver ignores messages;\nsender messages do not affect payoffs;\nsender is willing to send any message;\nreceiver’s belief that messages are uninformative is confirmed.\n\nThis does not mean babbling is the only equilibrium. Informative equilibria may also exist when preferences are sufficiently aligned."
+  },
+  {
+    "objectID": "notes/equilibriums/babbling.html#babbling-versus-informative-equilibrium",
+    "href": "notes/equilibriums/babbling.html#babbling-versus-informative-equilibrium",
+    "title": "Babbling Equilibrium",
+    "section": "Babbling versus informative equilibrium",
+    "text": "Babbling versus informative equilibrium\n\n\n\nFeature\nBabbling\nInformative communication\n\n\n\n\nMessage changes belief?\nno\nyes\n\n\nMessage changes action?\nno\nyes\n\n\nSender strategy depends on type?\nnot meaningfully\nyes\n\n\nReceiver learns from message?\nno\npartly or fully\n\n\nRequires aligned interests?\nno\nusually some alignment\n\n\n\nBabbling is the baseline. Informative communication requires additional incentive structure."
+  },
+  {
+    "objectID": "notes/equilibriums/babbling.html#off-path-messages",
+    "href": "notes/equilibriums/babbling.html#off-path-messages",
+    "title": "Babbling Equilibrium",
+    "section": "Off-path messages",
+    "text": "Off-path messages\nOff-path messages are messages that are not expected in equilibrium.\nIn babbling equilibria, off-path beliefs can matter if a receiver might react strongly to an unexpected message.\nA proposed babbling equilibrium should specify:\n\nwhat beliefs the receiver holds after each message;\nwhat action the receiver takes after each message;\nwhy the sender does not want to deviate."
+  },
+  {
+    "objectID": "notes/equilibriums/babbling.html#babbling-and-real-communication",
+    "href": "notes/equilibriums/babbling.html#babbling-and-real-communication",
+    "title": "Babbling Equilibrium",
+    "section": "Babbling and real communication",
+    "text": "Babbling and real communication\nBabbling does not mean people are literally silent or meaningless. It means the message does not change strategic beliefs or actions.\nReal examples may include:\n\nempty campaign promises;\nroutine corporate statements;\nexcuses known to be self-serving;\nwarnings from biased sources;\ncheap apologies without behavioural consequence;\nunverifiable claims from interested parties.\n\nThe words may have social meaning, but in the model they transmit no payoff-relevant information."
+  },
+  {
+    "objectID": "notes/equilibriums/babbling.html#common-mistakes",
+    "href": "notes/equilibriums/babbling.html#common-mistakes",
+    "title": "Babbling Equilibrium",
+    "section": "Common mistakes",
+    "text": "Common mistakes\n\n1. Thinking babbling means no message is sent\nMessages may be sent. They are just ignored.\n\n\n2. Thinking babbling means irrationality\nBabbling can be fully rational in equilibrium.\n\n\n3. Confusing babbling with lying\nBabbling is about informativeness, not necessarily truth or falsehood.\n\n\n4. Ignoring receiver action\nBabbling requires the receiver’s action not to depend on the message.\n\n\n5. Assuming babbling is the only possible cheap-talk equilibrium\nInformative cheap-talk equilibria may exist under sufficient preference alignment."
+  },
+  {
+    "objectID": "notes/equilibriums/babbling.html#checklist",
+    "href": "notes/equilibriums/babbling.html#checklist",
+    "title": "Babbling Equilibrium",
+    "section": "Checklist",
+    "text": "Checklist\nWhen checking a babbling equilibrium, ask:\n\nWhat information does the sender observe?\nWhat messages are available?\nDoes the receiver’s belief change after messages?\nDoes the receiver’s action change after messages?\nIs the receiver’s action optimal under the prior?\nIs the sender indifferent among messages?\nCould any message profitably change the receiver’s action?\nAre off-path beliefs specified?\nAre there possible informative equilibria too?\nWhat does babbling mean substantively in this case?"
+  },
+  {
+    "objectID": "notes/equilibriums/babbling.html#related-pages",
+    "href": "notes/equilibriums/babbling.html#related-pages",
+    "title": "Babbling Equilibrium",
+    "section": "Related pages",
+    "text": "Related pages\n\nEquilibrium Concepts\nCheap Talk\nPerfect Bayesian Equilibrium\nBayesian Games\nSignaling\nProbability"
   },
   {
     "objectID": "notes/equilibriums/perfect-bayesian.html",
     "href": "notes/equilibriums/perfect-bayesian.html",
-    "title": "Perfect Bayesian equilibrium (PBE)",
+    "title": "Perfect Bayesian Equilibrium",
     "section": "",
-    "text": "A Perfect Bayesian equilibrium is a pair (strategies, beliefs) in a dynamic game with incomplete information such that:\n\nSequential rationality: at every information set, each player’s action is optimal given their beliefs and others’ strategies.\nBelief consistency (Bayes on-path): beliefs are updated using Bayes’ rule wherever possible along the equilibrium path.\n\nOff-path (zero-probability) histories require beliefs to be specified; this can create multiple PBEs."
+    "text": "Perfect Bayesian equilibrium is a solution concept for dynamic games with incomplete information. It combines sequential rationality with beliefs.\nThe central idea is:\nPerfect Bayesian equilibrium is especially important for signaling games, cheap-talk games, reputation models, and dynamic Bayesian games."
   },
   {
-    "objectID": "notes/equilibriums/perfect-bayesian.html#what-it-is",
-    "href": "notes/equilibriums/perfect-bayesian.html#what-it-is",
-    "title": "Perfect Bayesian equilibrium (PBE)",
-    "section": "",
-    "text": "A Perfect Bayesian equilibrium is a pair (strategies, beliefs) in a dynamic game with incomplete information such that:\n\nSequential rationality: at every information set, each player’s action is optimal given their beliefs and others’ strategies.\nBelief consistency (Bayes on-path): beliefs are updated using Bayes’ rule wherever possible along the equilibrium path.\n\nOff-path (zero-probability) histories require beliefs to be specified; this can create multiple PBEs."
+    "objectID": "notes/equilibriums/perfect-bayesian.html#why-pbe-is-needed",
+    "href": "notes/equilibriums/perfect-bayesian.html#why-pbe-is-needed",
+    "title": "Perfect Bayesian Equilibrium",
+    "section": "Why PBE is needed",
+    "text": "Why PBE is needed\nBayesian Nash equilibrium handles incomplete information, but it is not enough for dynamic games where players observe actions and update beliefs over time.\nSubgame perfect equilibrium handles dynamic games, but it may not fully discipline beliefs after observed actions.\nPerfect Bayesian equilibrium combines both concerns.\n\n\n\n\n\nflowchart TD\n    A[Dynamic game] --&gt; B[Need sequential rationality]\n    C[Incomplete information] --&gt; D[Need beliefs]\n    B --&gt; E[Perfect Bayesian Equilibrium]\n    D --&gt; E"
   },
   {
-    "objectID": "notes/equilibriums/perfect-bayesian.html#where-it-shows-up",
-    "href": "notes/equilibriums/perfect-bayesian.html#where-it-shows-up",
-    "title": "Perfect Bayesian equilibrium (PBE)",
-    "section": "Where it shows up",
-    "text": "Where it shows up\n\nSignaling games (education, quality signals)\nScreening models with dynamic interaction\nAny extensive-form game with imperfect information"
+    "objectID": "notes/equilibriums/perfect-bayesian.html#main-components",
+    "href": "notes/equilibriums/perfect-bayesian.html#main-components",
+    "title": "Perfect Bayesian Equilibrium",
+    "section": "Main components",
+    "text": "Main components\nA perfect Bayesian equilibrium includes:\n\nstrategies for all players;\nbeliefs at information sets;\nsequential rationality;\nbelief consistency using Bayes’ rule wherever possible.\n\n\n\n\n\n\nflowchart LR\n    A[Strategies] --&gt; C[PBE]\n    B[Beliefs] --&gt; C\n    C --&gt; D[Sequential rationality]\n    C --&gt; E[Bayesian updating]\n\n\n\n\n\n\nStrategies say what players do.\nBeliefs say what players think has happened or what type they face."
   },
   {
-    "objectID": "notes/equilibriums/perfect-bayesian.html#how-to-solve-recipe",
-    "href": "notes/equilibriums/perfect-bayesian.html#how-to-solve-recipe",
-    "title": "Perfect Bayesian equilibrium (PBE)",
-    "section": "How to solve (recipe)",
-    "text": "How to solve (recipe)\n\nGuess an equilibrium form (separating / pooling / semi-separating).\nSpecify strategies for all players.\nDerive beliefs using Bayes’ rule on-path.\nCheck sequential rationality at every information set:\n\nreceiver best-responds given beliefs,\nsender type best-responds given receiver strategy.\n\nSpecify off-path beliefs and verify no profitable deviations."
+    "objectID": "notes/equilibriums/perfect-bayesian.html#sequential-rationality",
+    "href": "notes/equilibriums/perfect-bayesian.html#sequential-rationality",
+    "title": "Perfect Bayesian Equilibrium",
+    "section": "Sequential rationality",
+    "text": "Sequential rationality\nSequential rationality means that at every information set, each player’s strategy must be optimal given their belief and the continuation strategies.\nIn words:\n\nwhenever a player is called to move, the prescribed action must maximize expected payoff from that point onward.\n\nThis requirement applies both on and off the equilibrium path."
   },
   {
-    "objectID": "notes/equilibriums/perfect-bayesian.html#solved-example-pooling-pbe-in-a-signaling-game",
-    "href": "notes/equilibriums/perfect-bayesian.html#solved-example-pooling-pbe-in-a-signaling-game",
-    "title": "Perfect Bayesian equilibrium (PBE)",
-    "section": "Solved example (pooling PBE in a signaling game)",
-    "text": "Solved example (pooling PBE in a signaling game)\n\nProblem (context + question)\nTypes: worker \\(\\theta\\in\\{H,L\\}\\) with \\(\\Pr(H)=p\\).\nWorker chooses education \\(e\\in\\{0,1\\}\\). Employer observes \\(e\\) and offers wage \\(w\\in\\{w_H,w_L\\}\\).\nProductivity: - If type \\(H\\): output value is \\(2\\) - If type \\(L\\): output value is \\(1\\)\nEmployer is competitive and pays expected productivity given beliefs: - pay \\(w_H=2\\) if believes \\(H\\) for sure, - pay \\(w_L=1\\) if believes \\(L\\) for sure, - pay \\(w=p\\cdot 2+(1-p)\\cdot 1 = 1+p\\) if belief is \\(\\Pr(H)=p\\).\nEducation costs: - \\(c_H(1)=0.2\\), \\(c_L(1)=0.8\\), and \\(c_H(0)=c_L(0)=0\\).\nQuestion: Construct a pooling PBE where both types choose \\(e=0\\).\n\n\nSolution\nWe propose a pooling strategy: - Worker: \\(e(\\theta)=0\\) for both \\(\\theta\\in\\{H,L\\}\\). - Employer: after observing \\(e=0\\), pay \\(w(0)=1+p\\) (belief equals prior); after \\(e=1\\), specify an off-path belief.\nStep 1 (beliefs on-path): Since both types choose \\(e=0\\), observing \\(e=0\\) yields posterior \\(\\Pr(H\\mid e=0)=p\\). So paying \\(w(0)=1+p\\) is consistent.\nStep 2 (employer sequential rationality): Given belief \\(p\\) after \\(e=0\\), competitive wage is \\(1+p\\). Good.\nNow choose an off-path belief after \\(e=1\\). Let employer believe \\(\\Pr(H\\mid e=1)=0\\) (i.e., “only low types deviate”), so employer pays \\(w(1)=1\\).\nStep 3 (worker incentive constraints): - Type \\(H\\) payoff if follow pooling (\\(e=0\\)): \\(1+p\\). If deviate to \\(e=1\\): wage \\(1\\) minus cost \\(0.2\\) → \\(1-0.2=0.8\\). So \\(H\\) does not deviate if \\(1+p \\ge 0.8\\), which holds for all \\(p\\in[0,1]\\).\n\nType \\(L\\) payoff if follow pooling: \\(1+p\\). If deviate to \\(e=1\\): wage \\(1\\) minus cost \\(0.8\\) → \\(0.2\\). So \\(L\\) never deviates.\n\nResult (pooling PBE): - Worker: both types choose \\(e=0\\). - Employer beliefs: \\(\\Pr(H\\mid e=0)=p\\); off-path set \\(\\Pr(H\\mid e=1)=0\\). - Employer wages: \\(w(0)=1+p\\), \\(w(1)=1\\).\n\n\nCheck\n\nBeliefs on-path follow Bayes’ rule.\nActions are optimal at each information set given beliefs. So it is a PBE.\n\n\n\nTakeaway\nPBE requires beliefs; off-path beliefs can support pooling by punishing deviations."
+    "objectID": "notes/equilibriums/perfect-bayesian.html#beliefs",
+    "href": "notes/equilibriums/perfect-bayesian.html#beliefs",
+    "title": "Perfect Bayesian Equilibrium",
+    "section": "Beliefs",
+    "text": "Beliefs\nBeliefs describe the probability a player assigns to possible nodes, states, or types at an information set.\nFor example, after observing message \\(m\\), a receiver may believe:\n\\[\n\\mu(H\\mid m)=0.7.\n\\]\nThis means the receiver assigns probability 0.7 to the sender being high type after observing message \\(m\\).\nThe receiver then chooses an action that maximizes expected payoff under this belief."
   },
   {
-    "objectID": "notes/equilibriums/perfect-bayesian.html#later-on-analysis",
-    "href": "notes/equilibriums/perfect-bayesian.html#later-on-analysis",
-    "title": "Perfect Bayesian equilibrium (PBE)",
-    "section": "Later-on analysis",
-    "text": "Later-on analysis\n\nPooling PBEs can be fragile: refinements (sequential equilibrium, intuitive criterion) restrict off-path beliefs.\nSeparating PBEs require incentive compatibility inequalities (high type willing to signal; low type not).\nPBE is a practical workhorse; just be explicit about beliefs and on/off-path behavior."
+    "objectID": "notes/equilibriums/perfect-bayesian.html#bayes-rule-on-path",
+    "href": "notes/equilibriums/perfect-bayesian.html#bayes-rule-on-path",
+    "title": "Perfect Bayesian Equilibrium",
+    "section": "Bayes’ rule on path",
+    "text": "Bayes’ rule on path\nIf an information set is reached with positive probability in equilibrium, beliefs must be updated by Bayes’ rule.\nFor a message \\(m\\):\n\\[\n\\mu(\\theta\\mid m)\n=\n\\frac{\n\\Pr(m\\mid \\theta)\\Pr(\\theta)\n}{\n\\sum_{\\theta'}\\Pr(m\\mid \\theta')\\Pr(\\theta')\n}.\n\\]\n\n\n\n\n\nflowchart LR\n    A[Prior belief] --&gt; B[Observed action or message]\n    B --&gt; C[Bayes' rule]\n    C --&gt; D[Posterior belief]\n    D --&gt; E[Sequentially rational response]"
+  },
+  {
+    "objectID": "notes/equilibriums/perfect-bayesian.html#off-path-beliefs",
+    "href": "notes/equilibriums/perfect-bayesian.html#off-path-beliefs",
+    "title": "Perfect Bayesian Equilibrium",
+    "section": "Off-path beliefs",
+    "text": "Off-path beliefs\nIf an information set is reached with zero probability in equilibrium, Bayes’ rule may not pin down beliefs.\nThese are off-path beliefs.\nPBE allows some freedom in off-path beliefs, but the beliefs still influence whether the equilibrium is plausible.\n\n\n\n\n\nflowchart TD\n    A[Observation] --&gt; B{Positive probability in equilibrium?}\n    B --&gt;|Yes| C[Beliefs pinned down by Bayes' rule]\n    B --&gt;|No| D[Off-path beliefs not fully pinned down]\n    C --&gt; E[Receiver response]\n    D --&gt; E\n\n\n\n\n\n\nThis is one reason sequential equilibrium is sometimes preferred: it imposes stronger consistency requirements."
+  },
+  {
+    "objectID": "notes/equilibriums/perfect-bayesian.html#pbe-in-signaling-games",
+    "href": "notes/equilibriums/perfect-bayesian.html#pbe-in-signaling-games",
+    "title": "Perfect Bayesian Equilibrium",
+    "section": "PBE in signaling games",
+    "text": "PBE in signaling games\nIn a signaling game, a PBE specifies:\n\nsender signal choice for each type;\nreceiver belief after each signal;\nreceiver action after each signal;\noptimality for sender and receiver;\nBayes-consistent beliefs on path.\n\n\n\n\n\n\nflowchart LR\n    A[Sender type] --&gt; B[Signal strategy]\n    B --&gt; C[Receiver belief]\n    C --&gt; D[Receiver action]\n    D --&gt; E[Sender incentive compatibility]\n\n\n\n\n\n\nA separating PBE has different types sending different signals.\nA pooling PBE has different types sending the same signal."
+  },
+  {
+    "objectID": "notes/equilibriums/perfect-bayesian.html#separating-pbe",
+    "href": "notes/equilibriums/perfect-bayesian.html#separating-pbe",
+    "title": "Perfect Bayesian Equilibrium",
+    "section": "Separating PBE",
+    "text": "Separating PBE\nIn a separating PBE:\n\\[\ns(H) \\neq s(L).\n\\]\nThe receiver can infer type from signal.\nFor example:\n\\[\n\\mu(H\\mid s_H)=1,\n\\]\nand\n\\[\n\\mu(L\\mid s_L)=1.\n\\]\nThe sender types must prefer their assigned signals, and the receiver must best respond to the inferred type."
+  },
+  {
+    "objectID": "notes/equilibriums/perfect-bayesian.html#pooling-pbe",
+    "href": "notes/equilibriums/perfect-bayesian.html#pooling-pbe",
+    "title": "Perfect Bayesian Equilibrium",
+    "section": "Pooling PBE",
+    "text": "Pooling PBE\nIn a pooling PBE:\n\\[\ns(H)=s(L).\n\\]\nBoth types send the same signal.\nThe receiver cannot infer the type from the pooled signal and uses the prior belief after observing it.\nOff-path beliefs after unexpected signals can be important for sustaining the pooling equilibrium."
+  },
+  {
+    "objectID": "notes/equilibriums/perfect-bayesian.html#cheap-talk-and-pbe",
+    "href": "notes/equilibriums/perfect-bayesian.html#cheap-talk-and-pbe",
+    "title": "Perfect Bayesian Equilibrium",
+    "section": "Cheap talk and PBE",
+    "text": "Cheap talk and PBE\nCheap-talk games are often solved using PBE.\nA cheap-talk PBE requires:\n\nsender messages are optimal given expected receiver responses;\nreceiver actions are optimal given beliefs after messages;\nbeliefs are updated by Bayes’ rule when possible.\n\nBabbling equilibria are PBE in many cheap-talk games."
+  },
+  {
+    "objectID": "notes/equilibriums/perfect-bayesian.html#pbe-versus-spe",
+    "href": "notes/equilibriums/perfect-bayesian.html#pbe-versus-spe",
+    "title": "Perfect Bayesian Equilibrium",
+    "section": "PBE versus SPE",
+    "text": "PBE versus SPE\n\n\n\n\n\n\n\n\nConcept\nUsed for\nMain requirement\n\n\n\n\nSPE\ndynamic complete-information games\nNash equilibrium in every subgame\n\n\nPBE\ndynamic incomplete-information games\nsequential rationality plus beliefs\n\n\nSequential equilibrium\ndynamic incomplete-information games\nstronger belief consistency\n\n\n\nPBE is more general than SPE for games where beliefs matter."
+  },
+  {
+    "objectID": "notes/equilibriums/perfect-bayesian.html#common-mistakes",
+    "href": "notes/equilibriums/perfect-bayesian.html#common-mistakes",
+    "title": "Perfect Bayesian Equilibrium",
+    "section": "Common mistakes",
+    "text": "Common mistakes\n\n1. Giving strategies but no beliefs\nA PBE requires both strategies and beliefs.\n\n\n2. Checking only on-path optimality\nSequential rationality must hold at every information set.\n\n\n3. Ignoring Bayes’ rule\nOn-path beliefs must be consistent with Bayes’ rule.\n\n\n4. Treating off-path beliefs as irrelevant\nOff-path beliefs can support or destroy candidate equilibria.\n\n\n5. Using BNE when actions reveal information over time\nDynamic updating usually requires PBE or sequential equilibrium."
+  },
+  {
+    "objectID": "notes/equilibriums/perfect-bayesian.html#checklist",
+    "href": "notes/equilibriums/perfect-bayesian.html#checklist",
+    "title": "Perfect Bayesian Equilibrium",
+    "section": "Checklist",
+    "text": "Checklist\nWhen checking PBE, ask:\n\nWhat are the players and types?\nWhat are the histories and information sets?\nWhat strategy is assigned to each player or type?\nWhat beliefs are assigned at each information set?\nAre beliefs on path derived by Bayes’ rule?\nIs each player sequentially rational given beliefs?\nAre sender incentive constraints satisfied?\nAre receiver responses optimal?\nWhat happens after off-path actions?\nIs a stronger refinement needed?"
+  },
+  {
+    "objectID": "notes/equilibriums/perfect-bayesian.html#related-pages",
+    "href": "notes/equilibriums/perfect-bayesian.html#related-pages",
+    "title": "Perfect Bayesian Equilibrium",
+    "section": "Related pages",
+    "text": "Related pages\n\nEquilibrium Concepts\nBayesian Nash Equilibrium\nSequential Equilibrium\nSubgame Perfect Equilibrium\nBayesian Games\nSignaling\nCheap Talk\nProbability"
   },
   {
     "objectID": "notes/equilibriums/subgame-perfect.html",

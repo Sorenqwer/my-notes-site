@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Screening &amp; mechanism design – Margins of Rationality</title>
+<title>Screening and Mechanism Design – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -159,14 +163,28 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
-  <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
-  <li><a href="#one-example-two-type-contract-menu" id="toc-one-example-two-type-contract-menu" class="nav-link" data-scroll-target="#one-example-two-type-contract-menu">One example (two-type contract menu)</a></li>
-  <li><a href="#story" id="toc-story" class="nav-link" data-scroll-target="#story">Story</a></li>
-  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
-  <li><a href="#equilibrium-constraints-icir" id="toc-equilibrium-constraints-icir" class="nav-link" data-scroll-target="#equilibrium-constraints-icir">Equilibrium constraints (IC/IR)</a></li>
-  <li><a href="#what-the-solution-typically-looks-like-high-level" id="toc-what-the-solution-typically-looks-like-high-level" class="nav-link" data-scroll-target="#what-the-solution-typically-looks-like-high-level">What the solution typically looks like (high-level)</a></li>
-  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
+  <li><a href="#basic-idea" id="toc-basic-idea" class="nav-link active" data-scroll-target="#basic-idea">Basic idea</a></li>
+  <li><a href="#screening-versus-signaling" id="toc-screening-versus-signaling" class="nav-link" data-scroll-target="#screening-versus-signaling">Screening versus signaling</a></li>
+  <li><a href="#types-and-menus" id="toc-types-and-menus" class="nav-link" data-scroll-target="#types-and-menus">Types and menus</a></li>
+  <li><a href="#incentive-compatibility" id="toc-incentive-compatibility" class="nav-link" data-scroll-target="#incentive-compatibility">Incentive compatibility</a></li>
+  <li><a href="#participation-constraints" id="toc-participation-constraints" class="nav-link" data-scroll-target="#participation-constraints">Participation constraints</a></li>
+  <li><a href="#adverse-selection" id="toc-adverse-selection" class="nav-link" data-scroll-target="#adverse-selection">Adverse selection</a></li>
+  <li><a href="#insurance-screening-example" id="toc-insurance-screening-example" class="nav-link" data-scroll-target="#insurance-screening-example">Insurance screening example</a></li>
+  <li><a href="#mechanism-design" id="toc-mechanism-design" class="nav-link" data-scroll-target="#mechanism-design">Mechanism design</a></li>
+  <li><a href="#revelation-principle" id="toc-revelation-principle" class="nav-link" data-scroll-target="#revelation-principle">Revelation principle</a></li>
+  <li><a href="#incentive-compatibility-in-direct-mechanisms" id="toc-incentive-compatibility-in-direct-mechanisms" class="nav-link" data-scroll-target="#incentive-compatibility-in-direct-mechanisms">Incentive compatibility in direct mechanisms</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications">Applications</a></li>
+  <li><a href="#screening-and-criminology" id="toc-screening-and-criminology" class="nav-link" data-scroll-target="#screening-and-criminology">Screening and criminology</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#confusing-screening-with-signaling" id="toc-confusing-screening-with-signaling" class="nav-link" data-scroll-target="#confusing-screening-with-signaling">1. Confusing screening with signaling</a></li>
+  <li><a href="#forgetting-participation-constraints" id="toc-forgetting-participation-constraints" class="nav-link" data-scroll-target="#forgetting-participation-constraints">2. Forgetting participation constraints</a></li>
+  <li><a href="#ignoring-incentive-compatibility" id="toc-ignoring-incentive-compatibility" class="nav-link" data-scroll-target="#ignoring-incentive-compatibility">3. Ignoring incentive compatibility</a></li>
+  <li><a href="#assuming-truth-telling-without-mechanism-design" id="toc-assuming-truth-telling-without-mechanism-design" class="nav-link" data-scroll-target="#assuming-truth-telling-without-mechanism-design">4. Assuming truth-telling without mechanism design</a></li>
+  <li><a href="#treating-the-revelation-principle-as-behavioural-honesty" id="toc-treating-the-revelation-principle-as-behavioural-honesty" class="nav-link" data-scroll-target="#treating-the-revelation-principle-as-behavioural-honesty">5. Treating the revelation principle as behavioural honesty</a></li>
+  </ul></li>
+  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist">Checklist</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -175,7 +193,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Screening &amp; mechanism design</h1>
+<h1 class="title">Screening and Mechanism Design</h1>
 </div>
 
 
@@ -192,62 +210,345 @@ window.Quarto = {
 </header>
 
 
-<section id="what-it-is" class="level2">
-<h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
-<p>Screening (principal–agent with adverse selection) studies how a principal designs a menu of contracts to induce agents to reveal private information. Mechanism design generalizes this: choose rules to implement outcomes given strategic agents.</p>
+<p>Screening and mechanism design study how an uninformed party can structure choices, contracts, rules, or menus to induce informed parties to reveal information or choose desirable actions.</p>
+<p>In signaling, the informed side moves to reveal information.<br>
+In screening, the uninformed side designs the environment.</p>
+<section id="basic-idea" class="level2">
+<h2 class="anchored" data-anchor-id="basic-idea">Basic idea</h2>
+<p>Screening begins with private information.</p>
+<p>The uninformed side cannot directly observe type, so it offers a menu of choices. Different types may self-select into different options.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Private types] --&gt; B[Designer offers menu]
+    B --&gt; C[Types choose options]
+    C --&gt; D[Choices reveal information]
+    D --&gt; E[Allocation or contract]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The menu works only if each type prefers the option intended for that type.</p>
 </section>
-<section id="whats-special" class="level2">
-<h2 class="anchored" data-anchor-id="whats-special">What’s special</h2>
+<section id="screening-versus-signaling" class="level2">
+<h2 class="anchored" data-anchor-id="screening-versus-signaling">Screening versus signaling</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Signaling</th>
+<th>Screening</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Who has private information?</td>
+<td>sender / informed agent</td>
+<td>agent / informed side</td>
+</tr>
+<tr class="even">
+<td>Who moves to reveal information?</td>
+<td>informed side</td>
+<td>uninformed designer creates menu</td>
+</tr>
+<tr class="odd">
+<td>Main object</td>
+<td>signal</td>
+<td>menu or mechanism</td>
+</tr>
+<tr class="even">
+<td>Key condition</td>
+<td>incentive-compatible signaling</td>
+<td>self-selection</td>
+</tr>
+</tbody>
+</table>
+<p>Examples:</p>
 <ul>
-<li>Key constraint: <strong>incentive compatibility</strong> (each type prefers its intended option).</li>
-<li>Participation (individual rationality) often binds for the lowest type.</li>
-<li>Design trades off efficiency vs information rents.</li>
+<li>signaling: worker chooses education to reveal ability;</li>
+<li>screening: employer offers contracts to separate worker types.</li>
 </ul>
 </section>
-<section id="one-example-two-type-contract-menu" class="level2">
-<h2 class="anchored" data-anchor-id="one-example-two-type-contract-menu">One example (two-type contract menu)</h2>
-<p>Agent type <span class="math inline">\(\theta\in\{H,L\}\)</span> (productivity). Principal offers contracts <span class="math inline">\((w,q)\)</span>: wage and required output.</p>
-<p>Utility: <span class="math inline">\(u = w - c(q,\theta)\)</span>, where <span class="math inline">\(c(q,H) &lt; c(q,L)\)</span> (high type has lower cost).</p>
-<p>Principal wants higher <span class="math inline">\(q\)</span> from <span class="math inline">\(H\)</span> but must prevent <span class="math inline">\(H\)</span> from pretending to be <span class="math inline">\(L\)</span>.</p>
-<p><strong>Solution sketch.</strong> The optimal menu typically: - distorts the low-type contract downward (lower <span class="math inline">\(q\)</span>) to reduce information rents, - gives the high type a contract with higher <span class="math inline">\(q\)</span> and positive rent, - satisfies IC constraints: <span class="math inline">\(H\)</span> prefers <span class="math inline">\(H\)</span>-contract; <span class="math inline">\(L\)</span> prefers <span class="math inline">\(L\)</span>-contract.</p>
-</section>
-<section id="story" class="level2">
-<h2 class="anchored" data-anchor-id="story">Story</h2>
-<p>An insurer can’t observe customer risk. It offers two plans (a menu). Customers self-select. The insurer designs the menu so each type reveals itself by choosing the plan intended for it.</p>
-</section>
-<section id="model" class="level2">
-<h2 class="anchored" data-anchor-id="model">Model</h2>
-<ul>
-<li>Types <span class="math inline">\(\theta\in\{H,L\}\)</span> privately known</li>
-<li>Contracts <span class="math inline">\((p,q)\)</span>: premium <span class="math inline">\(p\)</span> and coverage <span class="math inline">\(q\)</span></li>
-<li>Utility: <span class="math inline">\(u_\theta(p,q)=v_\theta(q)-p\)</span></li>
-<li>Goal: maximize profit subject to incentive constraints</li>
-</ul>
-</section>
-<section id="equilibrium-constraints-icir" class="level2">
-<h2 class="anchored" data-anchor-id="equilibrium-constraints-icir">Equilibrium constraints (IC/IR)</h2>
-<p>Incentive compatibility: <span class="math display">\[
-u_H(p_H,q_H)\ge u_H(p_L,q_L),
-\qquad
-u_L(p_L,q_L)\ge u_L(p_H,q_H).
+<section id="types-and-menus" class="level2">
+<h2 class="anchored" data-anchor-id="types-and-menus">Types and menus</h2>
+<p>Suppose there are two types:</p>
+<p><span class="math display">\[
+\theta \in \{H,L\}.
 \]</span></p>
-<p>Individual rationality: <span class="math display">\[
-u_\theta(p_\theta,q_\theta)\ge 0 \quad (\theta\in\{H,L\}).
+<p>The designer offers a menu:</p>
+<p><span class="math display">\[
+(x_H,t_H), (x_L,t_L).
+\]</span></p>
+<p>Each type chooses one option.</p>
+<p>A separating menu induces:</p>
+<p><span class="math display">\[
+H \text{ chooses } (x_H,t_H),
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+L \text{ chooses } (x_L,t_L).
 \]</span></p>
 </section>
-<section id="what-the-solution-typically-looks-like-high-level" class="level2">
-<h2 class="anchored" data-anchor-id="what-the-solution-typically-looks-like-high-level">What the solution typically looks like (high-level)</h2>
-<ul>
-<li>Low-type contract is often <strong>distorted</strong> (less generous) to reduce information rents.</li>
-<li>High type receives more generous terms and may earn positive information rent.</li>
-</ul>
+<section id="incentive-compatibility" class="level2">
+<h2 class="anchored" data-anchor-id="incentive-compatibility">Incentive compatibility</h2>
+<p>Incentive compatibility means each type prefers the option designed for that type.</p>
+<p>For type <span class="math inline">\(H\)</span>:</p>
+<p><span class="math display">\[
+U_H(x_H,t_H) \geq U_H(x_L,t_L).
+\]</span></p>
+<p>For type <span class="math inline">\(L\)</span>:</p>
+<p><span class="math display">\[
+U_L(x_L,t_L) \geq U_L(x_H,t_H).
+\]</span></p>
+<p>These are self-selection constraints.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Menu offered] --&gt; B[High type compares options]
+    A --&gt; C[Low type compares options]
+    B --&gt; D{High chooses high option?}
+    C --&gt; E{Low chooses low option?}
+    D --&gt; F[Incentive compatibility]
+    E --&gt; F
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 </section>
-<section id="later-on-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<section id="participation-constraints" class="level2">
+<h2 class="anchored" data-anchor-id="participation-constraints">Participation constraints</h2>
+<p>Participation constraints ensure each type prefers participating to opting out.</p>
+<p>For type <span class="math inline">\(\theta\)</span>:</p>
+<p><span class="math display">\[
+U_\theta(\text{assigned option}) \geq \bar U_\theta.
+\]</span></p>
+<p>Here <span class="math inline">\(\bar U_\theta\)</span> is the outside option.</p>
+<p>A contract may separate types but still fail if some type refuses to participate.</p>
+</section>
+<section id="adverse-selection" class="level2">
+<h2 class="anchored" data-anchor-id="adverse-selection">Adverse selection</h2>
+<p>Adverse selection occurs when one side has private information before exchange.</p>
+<p>Examples:</p>
 <ul>
-<li><strong>Moral hazard:</strong> if effort is hidden too, the design problem changes (adverse selection + moral hazard).</li>
-<li><strong>Multiple dimensions:</strong> risk + risk aversion produces richer menus.</li>
-<li><strong>Mechanism design view:</strong> “contract menus” are a specific mechanism; the general theory asks what outcomes are implementable.</li>
+<li>insurance buyers know more about their risk than insurers;</li>
+<li>workers know more about ability than employers;</li>
+<li>borrowers know more about default risk than lenders;</li>
+<li>sellers know more about product quality than buyers.</li>
+</ul>
+<p>Screening tries to design choices that reduce the problem.</p>
+</section>
+<section id="insurance-screening-example" class="level2">
+<h2 class="anchored" data-anchor-id="insurance-screening-example">Insurance screening example</h2>
+<p>An insurer may not know whether a customer is high-risk or low-risk.</p>
+<p>It can offer a menu:</p>
+<ul>
+<li>high premium, full coverage;</li>
+<li>low premium, partial coverage.</li>
+</ul>
+<p>Different risk types may select different contracts.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Insurer offers contract menu] --&gt; B[High-risk customer]
+    A --&gt; C[Low-risk customer]
+    B --&gt; D[Chooses more coverage]
+    C --&gt; E[Chooses less coverage]
+    D --&gt; F[Information revealed by choice]
+    E --&gt; F
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The menu screens types through self-selection.</p>
+</section>
+<section id="mechanism-design" class="level2">
+<h2 class="anchored" data-anchor-id="mechanism-design">Mechanism design</h2>
+<p>Mechanism design asks a broader question:</p>
+<blockquote class="blockquote">
+<p>How should rules be designed so that self-interested agents produce a desired outcome?</p>
+</blockquote>
+<p>A mechanism specifies:</p>
+<ul>
+<li>messages or reports agents can send;</li>
+<li>how reports determine allocations;</li>
+<li>how transfers or payoffs are assigned.</li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Designer objective] --&gt; B[Choose mechanism]
+    B --&gt; C[Agents report or choose]
+    C --&gt; D[Outcome rule]
+    D --&gt; E[Incentives determine behaviour]
+    E --&gt; F[Implemented outcome]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Mechanism design is sometimes called reverse game theory because we start with the desired outcome and design the game.</p>
+</section>
+<section id="revelation-principle" class="level2">
+<h2 class="anchored" data-anchor-id="revelation-principle">Revelation principle</h2>
+<p>The revelation principle says, roughly:</p>
+<blockquote class="blockquote">
+<p>if an outcome can be implemented by some mechanism, it can often be implemented by a direct mechanism where agents truthfully report their types.</p>
+</blockquote>
+<p>This does not mean people are naturally truthful. It means the mechanism can be designed so that truth-telling is incentive compatible.</p>
+<p>A direct mechanism asks agents to report types:</p>
+<p><span class="math display">\[
+\hat\theta_i.
+\]</span></p>
+<p>Truthful reporting requires:</p>
+<p><span class="math display">\[
+\theta_i \text{ reports } \theta_i
+\]</span></p>
+<p>to be optimal.</p>
+</section>
+<section id="incentive-compatibility-in-direct-mechanisms" class="level2">
+<h2 class="anchored" data-anchor-id="incentive-compatibility-in-direct-mechanisms">Incentive compatibility in direct mechanisms</h2>
+<p>A direct mechanism is incentive compatible if every type prefers truthful reporting.</p>
+<p>For type <span class="math inline">\(\theta\)</span>:</p>
+<p><span class="math display">\[
+U_\theta(\text{outcome after reporting } \theta)
+\geq
+U_\theta(\text{outcome after reporting } \hat\theta)
+\]</span></p>
+<p>for all possible misreports <span class="math inline">\(\hat\theta\)</span>.</p>
+<p>This is the same self-selection idea expressed through reports.</p>
+</section>
+<section id="applications" class="level2">
+<h2 class="anchored" data-anchor-id="applications">Applications</h2>
+<p>Screening and mechanism design appear in:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Domain</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>insurance</td>
+<td>separating high-risk and low-risk customers</td>
+</tr>
+<tr class="even">
+<td>labour</td>
+<td>contracts for different ability or effort types</td>
+</tr>
+<tr class="odd">
+<td>regulation</td>
+<td>inducing firms to reveal costs</td>
+</tr>
+<tr class="even">
+<td>auctions</td>
+<td>allocating goods to high-valuation bidders</td>
+</tr>
+<tr class="odd">
+<td>public goods</td>
+<td>eliciting willingness to pay</td>
+</tr>
+<tr class="even">
+<td>taxation</td>
+<td>designing incentives under private income or effort</td>
+</tr>
+<tr class="odd">
+<td>criminal justice</td>
+<td>plea bargains under private evidence or risk</td>
+</tr>
+<tr class="even">
+<td>platforms</td>
+<td>rules that induce reporting or moderation</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="screening-and-criminology" class="level2">
+<h2 class="anchored" data-anchor-id="screening-and-criminology">Screening and criminology</h2>
+<p>Screening logic can also appear in criminology and institutions.</p>
+<p>Examples:</p>
+<ul>
+<li>police use behaviour or context to infer risk;</li>
+<li>courts use plea decisions to infer case strength;</li>
+<li>offenders use tests to screen co-offender reliability;</li>
+<li>platforms design reporting systems to distinguish abuse from noise;</li>
+<li>regulators design audits to induce compliance.</li>
+</ul>
+<p>The same logic applies: private information creates selection problems.</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="confusing-screening-with-signaling" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-screening-with-signaling">1. Confusing screening with signaling</h3>
+<p>Screening is designed by the uninformed side. Signaling is chosen by the informed side.</p>
+</section>
+<section id="forgetting-participation-constraints" class="level3">
+<h3 class="anchored" data-anchor-id="forgetting-participation-constraints">2. Forgetting participation constraints</h3>
+<p>A menu must be acceptable, not only separating.</p>
+</section>
+<section id="ignoring-incentive-compatibility" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-incentive-compatibility">3. Ignoring incentive compatibility</h3>
+<p>A proposed menu fails if types want to imitate each other.</p>
+</section>
+<section id="assuming-truth-telling-without-mechanism-design" class="level3">
+<h3 class="anchored" data-anchor-id="assuming-truth-telling-without-mechanism-design">4. Assuming truth-telling without mechanism design</h3>
+<p>Truthful reporting must be made optimal.</p>
+</section>
+<section id="treating-the-revelation-principle-as-behavioural-honesty" class="level3">
+<h3 class="anchored" data-anchor-id="treating-the-revelation-principle-as-behavioural-honesty">5. Treating the revelation principle as behavioural honesty</h3>
+<p>The revelation principle is a design result, not a psychological claim.</p>
+</section>
+</section>
+<section id="checklist" class="level2">
+<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
+<p>When analysing screening or mechanism design, ask:</p>
+<ol type="1">
+<li>Who has private information?</li>
+<li>Who designs the menu or mechanism?</li>
+<li>What are the possible types?</li>
+<li>What options are offered?</li>
+<li>What is each type supposed to choose?</li>
+<li>Are incentive compatibility constraints satisfied?</li>
+<li>Are participation constraints satisfied?</li>
+<li>What outcome does the designer want?</li>
+<li>Can truthful reporting be made optimal?</li>
+<li>What information is revealed by choices?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../../notes/game-types/index.html">Game Types</a></li>
+<li><a href="../../notes/game-types/bayesian.html">Bayesian Games</a></li>
+<li><a href="../../notes/game-types/signaling.html">Signaling</a></li>
+<li><a href="../../notes/game-types/cheap-talk.html">Cheap Talk</a></li>
+<li><a href="../../notes/equilibriums/bayesian-nash.html">Bayesian Nash Equilibrium</a></li>
+<li><a href="../../notes/equilibriums/perfect-bayesian.html">Perfect Bayesian Equilibrium</a></li>
+<li><a href="../../foundations/optimization.html">Optimization</a></li>
 </ul>
 
 

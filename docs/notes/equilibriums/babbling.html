@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Babbling equilibrium (cheap talk) – Margins of Rationality</title>
+<title>Babbling Equilibrium – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -159,17 +163,28 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
-  <li><a href="#where-it-shows-up" id="toc-where-it-shows-up" class="nav-link" data-scroll-target="#where-it-shows-up">Where it shows up</a></li>
-  <li><a href="#how-to-solve-recipe" id="toc-how-to-solve-recipe" class="nav-link" data-scroll-target="#how-to-solve-recipe">How to solve (recipe)</a></li>
-  <li><a href="#solved-example-fully-worked" id="toc-solved-example-fully-worked" class="nav-link" data-scroll-target="#solved-example-fully-worked">Solved example (fully worked)</a>
+  <li><a href="#basic-structure" id="toc-basic-structure" class="nav-link active" data-scroll-target="#basic-structure">Basic structure</a></li>
+  <li><a href="#definition" id="toc-definition" class="nav-link" data-scroll-target="#definition">Definition</a></li>
+  <li><a href="#why-babbling-is-an-equilibrium" id="toc-why-babbling-is-an-equilibrium" class="nav-link" data-scroll-target="#why-babbling-is-an-equilibrium">Why babbling is an equilibrium</a></li>
+  <li><a href="#prior-based-action" id="toc-prior-based-action" class="nav-link" data-scroll-target="#prior-based-action">Prior-based action</a></li>
+  <li><a href="#beliefs" id="toc-beliefs" class="nav-link" data-scroll-target="#beliefs">Beliefs</a></li>
+  <li><a href="#example-intuition" id="toc-example-intuition" class="nav-link" data-scroll-target="#example-intuition">Example intuition</a></li>
+  <li><a href="#babbling-and-pooling" id="toc-babbling-and-pooling" class="nav-link" data-scroll-target="#babbling-and-pooling">Babbling and pooling</a></li>
+  <li><a href="#babbling-and-cheap-talk" id="toc-babbling-and-cheap-talk" class="nav-link" data-scroll-target="#babbling-and-cheap-talk">Babbling and cheap talk</a></li>
+  <li><a href="#always-exists-intuition" id="toc-always-exists-intuition" class="nav-link" data-scroll-target="#always-exists-intuition">Always exists intuition</a></li>
+  <li><a href="#babbling-versus-informative-equilibrium" id="toc-babbling-versus-informative-equilibrium" class="nav-link" data-scroll-target="#babbling-versus-informative-equilibrium">Babbling versus informative equilibrium</a></li>
+  <li><a href="#off-path-messages" id="toc-off-path-messages" class="nav-link" data-scroll-target="#off-path-messages">Off-path messages</a></li>
+  <li><a href="#babbling-and-real-communication" id="toc-babbling-and-real-communication" class="nav-link" data-scroll-target="#babbling-and-real-communication">Babbling and real communication</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
   <ul class="collapse">
-  <li><a href="#problem-context-question" id="toc-problem-context-question" class="nav-link" data-scroll-target="#problem-context-question">Problem (context + question)</a></li>
-  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
-  <li><a href="#check" id="toc-check" class="nav-link" data-scroll-target="#check">Check</a></li>
-  <li><a href="#takeaway" id="toc-takeaway" class="nav-link" data-scroll-target="#takeaway">Takeaway</a></li>
+  <li><a href="#thinking-babbling-means-no-message-is-sent" id="toc-thinking-babbling-means-no-message-is-sent" class="nav-link" data-scroll-target="#thinking-babbling-means-no-message-is-sent">1. Thinking babbling means no message is sent</a></li>
+  <li><a href="#thinking-babbling-means-irrationality" id="toc-thinking-babbling-means-irrationality" class="nav-link" data-scroll-target="#thinking-babbling-means-irrationality">2. Thinking babbling means irrationality</a></li>
+  <li><a href="#confusing-babbling-with-lying" id="toc-confusing-babbling-with-lying" class="nav-link" data-scroll-target="#confusing-babbling-with-lying">3. Confusing babbling with lying</a></li>
+  <li><a href="#ignoring-receiver-action" id="toc-ignoring-receiver-action" class="nav-link" data-scroll-target="#ignoring-receiver-action">4. Ignoring receiver action</a></li>
+  <li><a href="#assuming-babbling-is-the-only-possible-cheap-talk-equilibrium" id="toc-assuming-babbling-is-the-only-possible-cheap-talk-equilibrium" class="nav-link" data-scroll-target="#assuming-babbling-is-the-only-possible-cheap-talk-equilibrium">5. Assuming babbling is the only possible cheap-talk equilibrium</a></li>
   </ul></li>
-  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
+  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist">Checklist</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -178,7 +193,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Babbling equilibrium (cheap talk)</h1>
+<h1 class="title">Babbling Equilibrium</h1>
 </div>
 
 
@@ -195,76 +210,272 @@ window.Quarto = {
 </header>
 
 
-<section id="what-it-is" class="level2">
-<h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
-<p>In cheap talk, messages are costless and non-binding. A <strong>babbling equilibrium</strong> is one in which messages convey no information: the receiver’s action does not depend on the message, and the sender is indifferent across messages.</p>
-<p>Babbling equilibria exist very generally and serve as a baseline.</p>
-</section>
-<section id="where-it-shows-up" class="level2">
-<h2 class="anchored" data-anchor-id="where-it-shows-up">Where it shows up</h2>
-<ul>
-<li>Cheap talk models (sender–receiver)</li>
-<li>Communication settings with strong preference misalignment</li>
-<li>As the “uninformative” benchmark when discussing informative equilibria (partition, separating)</li>
-</ul>
-</section>
-<section id="how-to-solve-recipe" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-solve-recipe">How to solve (recipe)</h2>
+<p>A babbling equilibrium is a cheap-talk equilibrium in which messages carry no information. The sender may still send messages, but the receiver ignores them.</p>
+<p>The central idea is:</p>
+<blockquote class="blockquote">
+<p>communication occurs, but it does not change beliefs or actions.</p>
+</blockquote>
+<p>Babbling is important because it shows that costless communication is not automatically informative.</p>
+<section id="basic-structure" class="level2">
+<h2 class="anchored" data-anchor-id="basic-structure">Basic structure</h2>
+<p>In a cheap-talk game:</p>
 <ol type="1">
-<li>Make the receiver ignore messages: choose the same action after any message.</li>
-<li>Set receiver beliefs equal to the prior (or any belief consistent with ignoring messages).</li>
-<li>Verify receiver optimality under those beliefs.</li>
-<li>Verify sender indifference: since messages don’t affect actions, any message is optimal.</li>
+<li>the sender observes private information;</li>
+<li>the sender sends a message;</li>
+<li>the receiver observes the message;</li>
+<li>the receiver chooses an action.</li>
 </ol>
-<hr>
+<p>In a babbling equilibrium, the receiver’s action does not depend on the message.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Sender observes information] --&gt; B[Sender sends message]
+    B --&gt; C[Receiver hears message]
+    C --&gt; D[Receiver ignores message]
+    D --&gt; E[Receiver acts on prior]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The message is strategically irrelevant.</p>
 </section>
-<section id="solved-example-fully-worked" class="level2">
-<h2 class="anchored" data-anchor-id="solved-example-fully-worked">Solved example (fully worked)</h2>
-<section id="problem-context-question" class="level3">
-<h3 class="anchored" data-anchor-id="problem-context-question">Problem (context + question)</h3>
-<p>A sender observes <span class="math inline">\(\theta\in\{0,1\}\)</span> with prior <span class="math inline">\(\Pr(\theta=1)=1/2\)</span>. Sender sends costless message <span class="math inline">\(m\in\{\text{low},\text{high}\}\)</span>. Receiver chooses action <span class="math inline">\(a\in\{0,1\}\)</span>.</p>
-<p>Receiver payoff: <span class="math display">\[
-u_R(a,\theta)=\mathbf{1}\{a=\theta\}.
-\]</span></p>
-<p>Sender payoff (biased toward <span class="math inline">\(a=1\)</span>): <span class="math display">\[
-u_S(a,\theta)=\mathbf{1}\{a=1\}.
-\]</span></p>
-<p><strong>Question:</strong> Exhibit a babbling equilibrium (strategies + beliefs) and verify it.</p>
+<section id="definition" class="level2">
+<h2 class="anchored" data-anchor-id="definition">Definition</h2>
+<p>A babbling equilibrium is an equilibrium where:</p>
+<ol type="1">
+<li>the receiver’s belief after each on-path message is the same as the prior;</li>
+<li>the receiver chooses the same action regardless of message;</li>
+<li>the sender has no incentive to choose a different message because messages do not affect the receiver’s action.</li>
+</ol>
+<p>If the receiver ignores all messages, then the sender is indifferent among messages.</p>
 </section>
-<section id="solution" class="level3">
-<h3 class="anchored" data-anchor-id="solution">Solution</h3>
-<p>A babbling equilibrium has receiver ignore the message.</p>
-<p><strong>Step 1 (receiver best response when ignoring messages):</strong> Under the prior, <span class="math inline">\(\Pr(\theta=1)=1/2\)</span>. Then - payoff from <span class="math inline">\(a=1\)</span> is <span class="math inline">\(1/2\)</span>, - payoff from <span class="math inline">\(a=0\)</span> is <span class="math inline">\(1/2\)</span>.</p>
-<p>Receiver is indifferent, so a valid best response is: <span class="math display">\[
-a=0 \quad \text{after both messages}.
-\]</span></p>
-<p><strong>Step 2 (sender incentives):</strong> If the receiver always plays <span class="math inline">\(a=0\)</span>, sender payoff is always <span class="math inline">\(0\)</span> regardless of message. So the sender is indifferent and can send any message.</p>
-<p>Let sender strategy be: always send “high”.</p>
-<p><strong>Step 3 (beliefs):</strong> Receiver beliefs do not depend on the message (since messages are ignored). Keep the prior: <span class="math display">\[
-\Pr(\theta=1\mid m)=1/2 \quad \text{for both } m\in\{\text{low},\text{high}\}.
-\]</span></p>
-<p><strong>Result (babbling equilibrium):</strong> - Sender: always send “high”. - Receiver: always choose <span class="math inline">\(a=0\)</span>. - Beliefs: posterior equals prior after any message.</p>
+<section id="why-babbling-is-an-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="why-babbling-is-an-equilibrium">Why babbling is an equilibrium</h2>
+<p>Babbling is self-confirming.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Receiver expects messages to be uninformative] --&gt; B[Receiver ignores messages]
+    B --&gt; C[Messages do not affect action]
+    C --&gt; D[Sender has no incentive to choose informative messages]
+    D --&gt; A
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Because the receiver does not respond to messages, the sender cannot benefit from carefully choosing a message. Since the sender does not choose messages informatively, the receiver is right to ignore them.</p>
 </section>
-<section id="check" class="level3">
-<h3 class="anchored" data-anchor-id="check">Check</h3>
+<section id="prior-based-action" class="level2">
+<h2 class="anchored" data-anchor-id="prior-based-action">Prior-based action</h2>
+<p>If the receiver ignores the message, the receiver chooses the action that maximizes expected payoff under the prior belief.</p>
+<p>If the state is <span class="math inline">\(\theta\)</span>, and the receiver chooses action <span class="math inline">\(a\)</span>, then the receiver solves:</p>
+<p><span class="math display">\[
+a^*
+\in
+\arg\max_{a\in A}
+\sum_{\theta}
+u_R(a,\theta)\Pr(\theta).
+\]</span></p>
+<p>The message does not enter the receiver’s decision.</p>
+</section>
+<section id="beliefs" class="level2">
+<h2 class="anchored" data-anchor-id="beliefs">Beliefs</h2>
+<p>In a babbling equilibrium, on-path messages do not change beliefs.</p>
+<p>For message <span class="math inline">\(m\)</span>:</p>
+<p><span class="math display">\[
+\mu(\theta\mid m)=\Pr(\theta).
+\]</span></p>
+<p>The posterior equals the prior.</p>
+<p>This is what it means for the message to carry no information.</p>
+</section>
+<section id="example-intuition" class="level2">
+<h2 class="anchored" data-anchor-id="example-intuition">Example intuition</h2>
+<p>Suppose an expert knows whether a project is good or bad. The decision-maker must decide whether to approve it.</p>
+<p>If the expert always wants approval, regardless of the true project quality, then the expert may always say:</p>
+<pre class="text"><code>The project is good.</code></pre>
+<p>The decision-maker anticipates this and ignores the message.</p>
+<p>The message becomes babble.</p>
+</section>
+<section id="babbling-and-pooling" class="level2">
+<h2 class="anchored" data-anchor-id="babbling-and-pooling">Babbling and pooling</h2>
+<p>Babbling is related to pooling, but they are not identical.</p>
+<p>In a pooling equilibrium, multiple types send the same message.</p>
+<p>In a babbling equilibrium, the receiver’s action does not depend on the message.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pooling</td>
+<td>different types choose the same message or signal</td>
+</tr>
+<tr class="even">
+<td>Babbling</td>
+<td>messages do not affect beliefs or actions</td>
+</tr>
+</tbody>
+</table>
+<p>A pooling equilibrium can be informative if the pooled group still changes beliefs relative to some other message. Babbling is fully uninformative.</p>
+</section>
+<section id="babbling-and-cheap-talk" class="level2">
+<h2 class="anchored" data-anchor-id="babbling-and-cheap-talk">Babbling and cheap talk</h2>
+<p>Babbling is especially common in cheap-talk games because messages are costless and non-binding.</p>
+<p>If sender and receiver preferences are too misaligned, informative communication may fail. The receiver ignores messages, and the sender cannot credibly transmit information.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Preference conflict] --&gt; B[Receiver distrusts message]
+    B --&gt; C[Message ignored]
+    C --&gt; D[Babbling equilibrium]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="always-exists-intuition" class="level2">
+<h2 class="anchored" data-anchor-id="always-exists-intuition">Always exists intuition</h2>
+<p>In many cheap-talk games, a babbling equilibrium always exists.</p>
+<p>The logic is:</p>
+<ol type="1">
+<li>receiver ignores messages;</li>
+<li>sender messages do not affect payoffs;</li>
+<li>sender is willing to send any message;</li>
+<li>receiver’s belief that messages are uninformative is confirmed.</li>
+</ol>
+<p>This does not mean babbling is the only equilibrium. Informative equilibria may also exist when preferences are sufficiently aligned.</p>
+</section>
+<section id="babbling-versus-informative-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="babbling-versus-informative-equilibrium">Babbling versus informative equilibrium</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Babbling</th>
+<th>Informative communication</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Message changes belief?</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td>Message changes action?</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr class="odd">
+<td>Sender strategy depends on type?</td>
+<td>not meaningfully</td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td>Receiver learns from message?</td>
+<td>no</td>
+<td>partly or fully</td>
+</tr>
+<tr class="odd">
+<td>Requires aligned interests?</td>
+<td>no</td>
+<td>usually some alignment</td>
+</tr>
+</tbody>
+</table>
+<p>Babbling is the baseline. Informative communication requires additional incentive structure.</p>
+</section>
+<section id="off-path-messages" class="level2">
+<h2 class="anchored" data-anchor-id="off-path-messages">Off-path messages</h2>
+<p>Off-path messages are messages that are not expected in equilibrium.</p>
+<p>In babbling equilibria, off-path beliefs can matter if a receiver might react strongly to an unexpected message.</p>
+<p>A proposed babbling equilibrium should specify:</p>
 <ul>
-<li>Receiver optimality: given prior, <span class="math inline">\(a=0\)</span> is a best response (ties).</li>
-<li>Sender optimality: given receiver ignores messages, any message is optimal.</li>
-<li>Beliefs are consistent with the equilibrium (receiver does not condition on <span class="math inline">\(m\)</span>).</li>
+<li>what beliefs the receiver holds after each message;</li>
+<li>what action the receiver takes after each message;</li>
+<li>why the sender does not want to deviate.</li>
 </ul>
 </section>
-<section id="takeaway" class="level3">
-<h3 class="anchored" data-anchor-id="takeaway">Takeaway</h3>
-<p>Babbling equilibria always exist because cheap messages can be ignored.</p>
-<hr>
-</section>
-</section>
-<section id="later-on-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<section id="babbling-and-real-communication" class="level2">
+<h2 class="anchored" data-anchor-id="babbling-and-real-communication">Babbling and real communication</h2>
+<p>Babbling does not mean people are literally silent or meaningless. It means the message does not change strategic beliefs or actions.</p>
+<p>Real examples may include:</p>
 <ul>
-<li>Informative equilibria require structure: partial alignment, restrictions on message space, or repeated interaction.</li>
-<li>Adding costs converts cheap talk into signaling, where credibility can be restored.</li>
-<li>Many refinements aim to rule out “unreasonable” beliefs or equilibria, but babbling is a genuine equilibrium prediction in many environments.</li>
+<li>empty campaign promises;</li>
+<li>routine corporate statements;</li>
+<li>excuses known to be self-serving;</li>
+<li>warnings from biased sources;</li>
+<li>cheap apologies without behavioural consequence;</li>
+<li>unverifiable claims from interested parties.</li>
+</ul>
+<p>The words may have social meaning, but in the model they transmit no payoff-relevant information.</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="thinking-babbling-means-no-message-is-sent" class="level3">
+<h3 class="anchored" data-anchor-id="thinking-babbling-means-no-message-is-sent">1. Thinking babbling means no message is sent</h3>
+<p>Messages may be sent. They are just ignored.</p>
+</section>
+<section id="thinking-babbling-means-irrationality" class="level3">
+<h3 class="anchored" data-anchor-id="thinking-babbling-means-irrationality">2. Thinking babbling means irrationality</h3>
+<p>Babbling can be fully rational in equilibrium.</p>
+</section>
+<section id="confusing-babbling-with-lying" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-babbling-with-lying">3. Confusing babbling with lying</h3>
+<p>Babbling is about informativeness, not necessarily truth or falsehood.</p>
+</section>
+<section id="ignoring-receiver-action" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-receiver-action">4. Ignoring receiver action</h3>
+<p>Babbling requires the receiver’s action not to depend on the message.</p>
+</section>
+<section id="assuming-babbling-is-the-only-possible-cheap-talk-equilibrium" class="level3">
+<h3 class="anchored" data-anchor-id="assuming-babbling-is-the-only-possible-cheap-talk-equilibrium">5. Assuming babbling is the only possible cheap-talk equilibrium</h3>
+<p>Informative cheap-talk equilibria may exist under sufficient preference alignment.</p>
+</section>
+</section>
+<section id="checklist" class="level2">
+<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
+<p>When checking a babbling equilibrium, ask:</p>
+<ol type="1">
+<li>What information does the sender observe?</li>
+<li>What messages are available?</li>
+<li>Does the receiver’s belief change after messages?</li>
+<li>Does the receiver’s action change after messages?</li>
+<li>Is the receiver’s action optimal under the prior?</li>
+<li>Is the sender indifferent among messages?</li>
+<li>Could any message profitably change the receiver’s action?</li>
+<li>Are off-path beliefs specified?</li>
+<li>Are there possible informative equilibria too?</li>
+<li>What does babbling mean substantively in this case?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../../notes/equilibriums/index.html">Equilibrium Concepts</a></li>
+<li><a href="../../notes/game-types/cheap-talk.html">Cheap Talk</a></li>
+<li><a href="../../notes/equilibriums/perfect-bayesian.html">Perfect Bayesian Equilibrium</a></li>
+<li><a href="../../notes/game-types/bayesian.html">Bayesian Games</a></li>
+<li><a href="../../notes/game-types/signaling.html">Signaling</a></li>
+<li><a href="../../foundations/probability.html">Probability</a></li>
 </ul>
 
 

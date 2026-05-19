@@ -1,83 +1,228 @@
 ---
-title: "Babbling equilibrium (cheap talk)"
+title: "Babbling Equilibrium"
 toc: true
+page-layout: full
 ---
 
-## What it is
-In cheap talk, messages are costless and non-binding. A **babbling equilibrium** is one in which messages convey no information: the receiver’s action does not depend on the message, and the sender is indifferent across messages.
+A babbling equilibrium is a cheap-talk equilibrium in which messages carry no information. The sender may still send messages, but the receiver ignores them.
 
-Babbling equilibria exist very generally and serve as a baseline.
+The central idea is:
 
-## Where it shows up
-- Cheap talk models (sender–receiver)
-- Communication settings with strong preference misalignment
-- As the “uninformative” benchmark when discussing informative equilibria (partition, separating)
+> communication occurs, but it does not change beliefs or actions.
 
-## How to solve (recipe)
-1) Make the receiver ignore messages: choose the same action after any message.
-2) Set receiver beliefs equal to the prior (or any belief consistent with ignoring messages).
-3) Verify receiver optimality under those beliefs.
-4) Verify sender indifference: since messages don’t affect actions, any message is optimal.
+Babbling is important because it shows that costless communication is not automatically informative.
 
----
+## Basic structure
 
-## Solved example (fully worked)
+In a cheap-talk game:
 
-### Problem (context + question)
-A sender observes $\theta\in\{0,1\}$ with prior $\Pr(\theta=1)=1/2$. Sender sends costless message $m\in\{\text{low},\text{high}\}$. Receiver chooses action $a\in\{0,1\}$.
+1. the sender observes private information;
+2. the sender sends a message;
+3. the receiver observes the message;
+4. the receiver chooses an action.
 
-Receiver payoff:
+In a babbling equilibrium, the receiver's action does not depend on the message.
+
+```{mermaid}
+flowchart LR
+    A[Sender observes information] --> B[Sender sends message]
+    B --> C[Receiver hears message]
+    C --> D[Receiver ignores message]
+    D --> E[Receiver acts on prior]
+```
+
+The message is strategically irrelevant.
+
+## Definition
+
+A babbling equilibrium is an equilibrium where:
+
+1. the receiver's belief after each on-path message is the same as the prior;
+2. the receiver chooses the same action regardless of message;
+3. the sender has no incentive to choose a different message because messages do not affect the receiver's action.
+
+If the receiver ignores all messages, then the sender is indifferent among messages.
+
+## Why babbling is an equilibrium
+
+Babbling is self-confirming.
+
+```{mermaid}
+flowchart TD
+    A[Receiver expects messages to be uninformative] --> B[Receiver ignores messages]
+    B --> C[Messages do not affect action]
+    C --> D[Sender has no incentive to choose informative messages]
+    D --> A
+```
+
+Because the receiver does not respond to messages, the sender cannot benefit from carefully choosing a message. Since the sender does not choose messages informatively, the receiver is right to ignore them.
+
+## Prior-based action
+
+If the receiver ignores the message, the receiver chooses the action that maximizes expected payoff under the prior belief.
+
+If the state is $\theta$, and the receiver chooses action $a$, then the receiver solves:
+
 $$
-u_R(a,\theta)=\mathbf{1}\{a=\theta\}.
+a^*
+\in
+\arg\max_{a\in A}
+\sum_{\theta}
+u_R(a,\theta)\Pr(\theta).
 $$
 
-Sender payoff (biased toward $a=1$):
+The message does not enter the receiver's decision.
+
+## Beliefs
+
+In a babbling equilibrium, on-path messages do not change beliefs.
+
+For message $m$:
+
 $$
-u_S(a,\theta)=\mathbf{1}\{a=1\}.
-$$
-
-**Question:** Exhibit a babbling equilibrium (strategies + beliefs) and verify it.
-
-### Solution
-A babbling equilibrium has receiver ignore the message.
-
-**Step 1 (receiver best response when ignoring messages):**
-Under the prior, $\Pr(\theta=1)=1/2$. Then
-- payoff from $a=1$ is $1/2$,
-- payoff from $a=0$ is $1/2$.
-
-Receiver is indifferent, so a valid best response is:
-$$
-a=0 \quad \text{after both messages}.
+\mu(\theta\mid m)=\Pr(\theta).
 $$
 
-**Step 2 (sender incentives):**
-If the receiver always plays $a=0$, sender payoff is always $0$ regardless of message. So the sender is indifferent and can send any message.
+The posterior equals the prior.
 
-Let sender strategy be: always send “high”.
+This is what it means for the message to carry no information.
 
-**Step 3 (beliefs):**
-Receiver beliefs do not depend on the message (since messages are ignored). Keep the prior:
-$$
-\Pr(\theta=1\mid m)=1/2 \quad \text{for both } m\in\{\text{low},\text{high}\}.
-$$
+## Example intuition
 
-**Result (babbling equilibrium):**
-- Sender: always send “high”.
-- Receiver: always choose $a=0$.
-- Beliefs: posterior equals prior after any message.
+Suppose an expert knows whether a project is good or bad. The decision-maker must decide whether to approve it.
 
-### Check
-- Receiver optimality: given prior, $a=0$ is a best response (ties).
-- Sender optimality: given receiver ignores messages, any message is optimal.
-- Beliefs are consistent with the equilibrium (receiver does not condition on $m$).
+If the expert always wants approval, regardless of the true project quality, then the expert may always say:
 
-### Takeaway
-Babbling equilibria always exist because cheap messages can be ignored.
+```text
+The project is good.
+```
 
----
+The decision-maker anticipates this and ignores the message.
 
-## Later-on analysis
-- Informative equilibria require structure: partial alignment, restrictions on message space, or repeated interaction.
-- Adding costs converts cheap talk into signaling, where credibility can be restored.
-- Many refinements aim to rule out “unreasonable” beliefs or equilibria, but babbling is a genuine equilibrium prediction in many environments.
+The message becomes babble.
+
+## Babbling and pooling
+
+Babbling is related to pooling, but they are not identical.
+
+In a pooling equilibrium, multiple types send the same message.
+
+In a babbling equilibrium, the receiver's action does not depend on the message.
+
+| Concept | Meaning |
+|---|---|
+| Pooling | different types choose the same message or signal |
+| Babbling | messages do not affect beliefs or actions |
+
+A pooling equilibrium can be informative if the pooled group still changes beliefs relative to some other message. Babbling is fully uninformative.
+
+## Babbling and cheap talk
+
+Babbling is especially common in cheap-talk games because messages are costless and non-binding.
+
+If sender and receiver preferences are too misaligned, informative communication may fail. The receiver ignores messages, and the sender cannot credibly transmit information.
+
+```{mermaid}
+flowchart LR
+    A[Preference conflict] --> B[Receiver distrusts message]
+    B --> C[Message ignored]
+    C --> D[Babbling equilibrium]
+```
+
+## Always exists intuition
+
+In many cheap-talk games, a babbling equilibrium always exists.
+
+The logic is:
+
+1. receiver ignores messages;
+2. sender messages do not affect payoffs;
+3. sender is willing to send any message;
+4. receiver's belief that messages are uninformative is confirmed.
+
+This does not mean babbling is the only equilibrium. Informative equilibria may also exist when preferences are sufficiently aligned.
+
+## Babbling versus informative equilibrium
+
+| Feature | Babbling | Informative communication |
+|---|---|---|
+| Message changes belief? | no | yes |
+| Message changes action? | no | yes |
+| Sender strategy depends on type? | not meaningfully | yes |
+| Receiver learns from message? | no | partly or fully |
+| Requires aligned interests? | no | usually some alignment |
+
+Babbling is the baseline. Informative communication requires additional incentive structure.
+
+## Off-path messages
+
+Off-path messages are messages that are not expected in equilibrium.
+
+In babbling equilibria, off-path beliefs can matter if a receiver might react strongly to an unexpected message.
+
+A proposed babbling equilibrium should specify:
+
+- what beliefs the receiver holds after each message;
+- what action the receiver takes after each message;
+- why the sender does not want to deviate.
+
+## Babbling and real communication
+
+Babbling does not mean people are literally silent or meaningless. It means the message does not change strategic beliefs or actions.
+
+Real examples may include:
+
+- empty campaign promises;
+- routine corporate statements;
+- excuses known to be self-serving;
+- warnings from biased sources;
+- cheap apologies without behavioural consequence;
+- unverifiable claims from interested parties.
+
+The words may have social meaning, but in the model they transmit no payoff-relevant information.
+
+## Common mistakes
+
+### 1. Thinking babbling means no message is sent
+
+Messages may be sent. They are just ignored.
+
+### 2. Thinking babbling means irrationality
+
+Babbling can be fully rational in equilibrium.
+
+### 3. Confusing babbling with lying
+
+Babbling is about informativeness, not necessarily truth or falsehood.
+
+### 4. Ignoring receiver action
+
+Babbling requires the receiver's action not to depend on the message.
+
+### 5. Assuming babbling is the only possible cheap-talk equilibrium
+
+Informative cheap-talk equilibria may exist under sufficient preference alignment.
+
+## Checklist
+
+When checking a babbling equilibrium, ask:
+
+1. What information does the sender observe?
+2. What messages are available?
+3. Does the receiver's belief change after messages?
+4. Does the receiver's action change after messages?
+5. Is the receiver's action optimal under the prior?
+6. Is the sender indifferent among messages?
+7. Could any message profitably change the receiver's action?
+8. Are off-path beliefs specified?
+9. Are there possible informative equilibria too?
+10. What does babbling mean substantively in this case?
+
+## Related pages
+
+- [Equilibrium Concepts](index.qmd)
+- [Cheap Talk](../game-types/cheap-talk.qmd)
+- [Perfect Bayesian Equilibrium](perfect-bayesian.qmd)
+- [Bayesian Games](../game-types/bayesian.qmd)
+- [Signaling](../game-types/signaling.qmd)
+- [Probability](../../foundations/probability.qmd)

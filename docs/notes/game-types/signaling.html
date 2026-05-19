@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Signaling games – Margins of Rationality</title>
+<title>Signaling – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -159,13 +163,30 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
-  <li><a href="#whats-special" id="toc-whats-special" class="nav-link" data-scroll-target="#whats-special">What’s special</a></li>
-  <li><a href="#one-example-education-as-a-signal" id="toc-one-example-education-as-a-signal" class="nav-link" data-scroll-target="#one-example-education-as-a-signal">One example (education as a signal)</a></li>
-  <li><a href="#story" id="toc-story" class="nav-link" data-scroll-target="#story">Story</a></li>
-  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
-  <li><a href="#equilibrium-separating-vs-pooling" id="toc-equilibrium-separating-vs-pooling" class="nav-link" data-scroll-target="#equilibrium-separating-vs-pooling">Equilibrium (separating vs pooling)</a></li>
-  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
+  <li><a href="#basic-structure" id="toc-basic-structure" class="nav-link active" data-scroll-target="#basic-structure">Basic structure</a></li>
+  <li><a href="#why-signaling-matters" id="toc-why-signaling-matters" class="nav-link" data-scroll-target="#why-signaling-matters">Why signaling matters</a></li>
+  <li><a href="#types-and-signals" id="toc-types-and-signals" class="nav-link" data-scroll-target="#types-and-signals">Types and signals</a></li>
+  <li><a href="#separating-equilibrium" id="toc-separating-equilibrium" class="nav-link" data-scroll-target="#separating-equilibrium">Separating equilibrium</a></li>
+  <li><a href="#pooling-equilibrium" id="toc-pooling-equilibrium" class="nav-link" data-scroll-target="#pooling-equilibrium">Pooling equilibrium</a></li>
+  <li><a href="#semi-separating-equilibrium" id="toc-semi-separating-equilibrium" class="nav-link" data-scroll-target="#semi-separating-equilibrium">Semi-separating equilibrium</a></li>
+  <li><a href="#costly-signals" id="toc-costly-signals" class="nav-link" data-scroll-target="#costly-signals">Costly signals</a></li>
+  <li><a href="#incentive-compatibility" id="toc-incentive-compatibility" class="nav-link" data-scroll-target="#incentive-compatibility">Incentive compatibility</a></li>
+  <li><a href="#receiver-beliefs" id="toc-receiver-beliefs" class="nav-link" data-scroll-target="#receiver-beliefs">Receiver beliefs</a></li>
+  <li><a href="#education-signaling-example" id="toc-education-signaling-example" class="nav-link" data-scroll-target="#education-signaling-example">Education signaling example</a></li>
+  <li><a href="#signaling-versus-human-capital" id="toc-signaling-versus-human-capital" class="nav-link" data-scroll-target="#signaling-versus-human-capital">Signaling versus human capital</a></li>
+  <li><a href="#signaling-and-social-behaviour" id="toc-signaling-and-social-behaviour" class="nav-link" data-scroll-target="#signaling-and-social-behaviour">Signaling and social behaviour</a></li>
+  <li><a href="#cheap-talk-versus-signaling" id="toc-cheap-talk-versus-signaling" class="nav-link" data-scroll-target="#cheap-talk-versus-signaling">Cheap talk versus signaling</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
+  <ul class="collapse">
+  <li><a href="#treating-every-observable-action-as-a-signal" id="toc-treating-every-observable-action-as-a-signal" class="nav-link" data-scroll-target="#treating-every-observable-action-as-a-signal">1. Treating every observable action as a signal</a></li>
+  <li><a href="#ignoring-signal-cost" id="toc-ignoring-signal-cost" class="nav-link" data-scroll-target="#ignoring-signal-cost">2. Ignoring signal cost</a></li>
+  <li><a href="#forgetting-receiver-beliefs" id="toc-forgetting-receiver-beliefs" class="nav-link" data-scroll-target="#forgetting-receiver-beliefs">3. Forgetting receiver beliefs</a></li>
+  <li><a href="#assuming-separating-equilibrium-always-exists" id="toc-assuming-separating-equilibrium-always-exists" class="nav-link" data-scroll-target="#assuming-separating-equilibrium-always-exists">4. Assuming separating equilibrium always exists</a></li>
+  <li><a href="#confusing-signaling-with-productivity" id="toc-confusing-signaling-with-productivity" class="nav-link" data-scroll-target="#confusing-signaling-with-productivity">5. Confusing signaling with productivity</a></li>
+  <li><a href="#ignoring-off-path-beliefs" id="toc-ignoring-off-path-beliefs" class="nav-link" data-scroll-target="#ignoring-off-path-beliefs">6. Ignoring off-path beliefs</a></li>
+  </ul></li>
+  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist">Checklist</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -174,7 +195,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Signaling games</h1>
+<h1 class="title">Signaling</h1>
 </div>
 
 
@@ -191,57 +212,392 @@ window.Quarto = {
 </header>
 
 
-<section id="what-it-is" class="level2">
-<h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
-<p>A signaling game is a dynamic game with <strong>private information</strong>: a sender knows their type, chooses a signal (often costly), then a receiver responds.</p>
+<p>Signaling games study situations where an informed sender takes an action that may reveal private information to an uninformed receiver.</p>
+<p>Unlike cheap talk, a signal often has a cost or direct payoff consequence. This cost can make the signal credible when different types face different costs or benefits.</p>
+<section id="basic-structure" class="level2">
+<h2 class="anchored" data-anchor-id="basic-structure">Basic structure</h2>
+<p>A signaling game usually has this timing:</p>
+<ol type="1">
+<li>Nature chooses the sender’s type.</li>
+<li>The sender observes their own type.</li>
+<li>The sender chooses a signal.</li>
+<li>The receiver observes the signal.</li>
+<li>The receiver forms a belief and chooses an action.</li>
+<li>Payoffs are realized.</li>
+</ol>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Nature chooses type] --&gt; B[Sender observes type]
+    B --&gt; C[Sender chooses signal]
+    C --&gt; D[Receiver observes signal]
+    D --&gt; E[Receiver updates belief]
+    E --&gt; F[Receiver chooses action]
+    F --&gt; G[Payoffs realized]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Signaling is dynamic and involves incomplete information, so it usually requires belief-based equilibrium concepts such as perfect Bayesian equilibrium.</p>
 </section>
-<section id="whats-special" class="level2">
-<h2 class="anchored" data-anchor-id="whats-special">What’s special</h2>
+<section id="why-signaling-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-signaling-matters">Why signaling matters</h2>
+<p>Many social and economic actions are partly informative.</p>
+<p>Examples:</p>
 <ul>
-<li>Signals can be credible when different types face different costs/benefits (incentive compatibility).</li>
-<li>Typical outcomes: <strong>separating</strong> (types choose different signals), <strong>pooling</strong> (same signal), or <strong>semi-separating</strong>.</li>
-<li>Beliefs and off-path beliefs matter (PBE / sequential equilibrium ideas).</li>
+<li>education may signal ability;</li>
+<li>prices may signal quality;</li>
+<li>costly effort may signal commitment;</li>
+<li>apologies may signal remorse;</li>
+<li>investment may signal confidence;</li>
+<li>violence may signal toughness;</li>
+<li>compliance systems may signal responsibility;</li>
+<li>credentials may signal competence.</li>
 </ul>
+<p>The key question is whether the signal separates types or merely creates appearance.</p>
 </section>
-<section id="one-example-education-as-a-signal" class="level2">
-<h2 class="anchored" data-anchor-id="one-example-education-as-a-signal">One example (education as a signal)</h2>
-<p>Types: high ability <span class="math inline">\(H\)</span> and low ability <span class="math inline">\(L\)</span>.<br>
-Sender chooses education level <span class="math inline">\(e\ge 0\)</span>; receiver (employer) offers wage <span class="math inline">\(w(e)\)</span>.</p>
-<ul>
-<li>Education is more costly for <span class="math inline">\(L\)</span> than <span class="math inline">\(H\)</span> (single-crossing idea): <span class="math display">\[
-c_L(e) &gt; c_H(e)\ \text{for } e&gt;0.
-\]</span></li>
-<li>Employer wants to pay higher wages if they believe the worker is <span class="math inline">\(H\)</span>.</li>
-</ul>
-<p>A separating equilibrium can exist where <span class="math inline">\(H\)</span> chooses a higher <span class="math inline">\(e\)</span> and <span class="math inline">\(L\)</span> chooses a lower <span class="math inline">\(e\)</span>, because mimicking is too costly for <span class="math inline">\(L\)</span>. The signal works because it changes beliefs and is differentially costly.</p>
-</section>
-<section id="story" class="level2">
-<h2 class="anchored" data-anchor-id="story">Story</h2>
-<p>A scholarship committee can’t observe applicant ability directly. Applicants can choose to take a difficult certification exam. High-ability students find it less costly; low-ability students find it very costly. The committee conditions its funding decision on the signal.</p>
-</section>
-<section id="model" class="level2">
-<h2 class="anchored" data-anchor-id="model">Model</h2>
-<ul>
-<li>Types: <span class="math inline">\(\theta\in\{H,L\}\)</span>, prior <span class="math inline">\(p\)</span></li>
-<li>Signal: <span class="math inline">\(e\in\{0,1\}\)</span> with costs <span class="math inline">\(c_H(1)&lt;c_L(1)\)</span> and <span class="math inline">\(c_H(0)=c_L(0)=0\)</span></li>
-<li>Receiver chooses reward based on beliefs after observing <span class="math inline">\(e\)</span></li>
-</ul>
-</section>
-<section id="equilibrium-separating-vs-pooling" class="level2">
-<h2 class="anchored" data-anchor-id="equilibrium-separating-vs-pooling">Equilibrium (separating vs pooling)</h2>
-<p>Let the reward be <span class="math inline">\(w_H\)</span> if perceived high type and <span class="math inline">\(w_L\)</span> otherwise.</p>
-<p>A separating equilibrium with <span class="math inline">\(H\)</span> choosing <span class="math inline">\(e=1\)</span> and <span class="math inline">\(L\)</span> choosing <span class="math inline">\(e=0\)</span> requires: <span class="math display">\[
-w_H-c_H(1)\ge w_L
-\quad\text{and}\quad
-w_H-c_L(1)\le w_L.
+<section id="types-and-signals" class="level2">
+<h2 class="anchored" data-anchor-id="types-and-signals">Types and signals</h2>
+<p>Let the sender’s type be:</p>
+<p><span class="math display">\[
+\theta \in \Theta.
 \]</span></p>
+<p>Let the sender choose signal:</p>
+<p><span class="math display">\[
+s \in S.
+\]</span></p>
+<p>The receiver observes <span class="math inline">\(s\)</span> but not <span class="math inline">\(\theta\)</span>.</p>
+<p>The receiver forms belief:</p>
+<p><span class="math display">\[
+\mu(\theta \mid s).
+\]</span></p>
+<p>Then the receiver chooses action:</p>
+<p><span class="math display">\[
+a \in A.
+\]</span></p>
+<p>A signaling equilibrium specifies:</p>
+<ol type="1">
+<li>sender signal choices for each type;</li>
+<li>receiver beliefs after each signal;</li>
+<li>receiver actions after each signal.</li>
+</ol>
 </section>
-<section id="later-on-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
+<section id="separating-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="separating-equilibrium">Separating equilibrium</h2>
+<p>In a separating equilibrium, different types choose different signals.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[High type] --&gt; B[Signal H]
+    C[Low type] --&gt; D[Signal L]
+    B --&gt; E[Receiver believes high type]
+    D --&gt; F[Receiver believes low type]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Separating equilibria transmit information. The receiver can infer the sender’s type from the observed signal.</p>
+</section>
+<section id="pooling-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="pooling-equilibrium">Pooling equilibrium</h2>
+<p>In a pooling equilibrium, different types choose the same signal.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[High type] --&gt; C[Same signal]
+    B[Low type] --&gt; C
+    C --&gt; D[Receiver cannot distinguish types]
+    D --&gt; E[Receiver uses pooled belief]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Pooling equilibria transmit less information. The receiver’s belief after the pooled signal is based on the prior or equilibrium mixture.</p>
+</section>
+<section id="semi-separating-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="semi-separating-equilibrium">Semi-separating equilibrium</h2>
+<p>In a semi-separating equilibrium, at least one type randomizes, or the signal only partly reveals type.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Types] --&gt; B[Signals partly overlap]
+    B --&gt; C[Receiver updates beliefs partially]
+    C --&gt; D[Receiver response depends on posterior]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Semi-separating equilibria are common when incentives are close or when full separation is too costly.</p>
+</section>
+<section id="costly-signals" class="level2">
+<h2 class="anchored" data-anchor-id="costly-signals">Costly signals</h2>
+<p>A signal can be credible when it is less costly for one type than another.</p>
+<p>For example, suppose education is easier for high-ability workers than low-ability workers. Then high education may signal high ability if low-ability workers find it too costly to imitate.</p>
+<p>The logic is:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[High type] --&gt; B[Low cost of signal]
+    C[Low type] --&gt; D[High cost of signal]
+    B --&gt; E[High type sends signal]
+    D --&gt; F[Low type does not imitate]
+    E --&gt; G[Signal becomes credible]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This is the single-crossing intuition.</p>
+</section>
+<section id="incentive-compatibility" class="level2">
+<h2 class="anchored" data-anchor-id="incentive-compatibility">Incentive compatibility</h2>
+<p>A separating equilibrium requires incentive compatibility.</p>
+<p>Each type must prefer the signal assigned to that type over imitating another type.</p>
+<p>For high type <span class="math inline">\(H\)</span> and low type <span class="math inline">\(L\)</span>, a separating equilibrium may require:</p>
+<p><span class="math display">\[
+U_H(s_H,a_H) \geq U_H(s_L,a_L),
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+U_L(s_L,a_L) \geq U_L(s_H,a_H).
+\]</span></p>
+<p>The first condition says the high type does not want to mimic the low type.<br>
+The second says the low type does not want to mimic the high type.</p>
+</section>
+<section id="receiver-beliefs" class="level2">
+<h2 class="anchored" data-anchor-id="receiver-beliefs">Receiver beliefs</h2>
+<p>Receiver beliefs must be consistent with observed signals on the equilibrium path.</p>
+<p>If signal <span class="math inline">\(s_H\)</span> is sent only by high type in equilibrium, then:</p>
+<p><span class="math display">\[
+\mu(H\mid s_H)=1.
+\]</span></p>
+<p>If signal <span class="math inline">\(s_L\)</span> is sent only by low type, then:</p>
+<p><span class="math display">\[
+\mu(L\mid s_L)=1.
+\]</span></p>
+<p>If both types send the same signal, the receiver’s posterior is the prior conditional on pooling.</p>
+<p>Off-path beliefs are more delicate and can affect equilibrium plausibility.</p>
+</section>
+<section id="education-signaling-example" class="level2">
+<h2 class="anchored" data-anchor-id="education-signaling-example">Education signaling example</h2>
+<p>In an education signaling model:</p>
 <ul>
-<li><strong>Pooling:</strong> if costs aren’t different enough, both types choose the same signal (signal loses meaning).</li>
-<li><strong>Off-path beliefs:</strong> dynamic equilibrium concepts differ in how they restrict beliefs after unexpected signals.</li>
-<li><strong>Continuous effort:</strong> allowing <span class="math inline">\(e\)</span> continuous yields richer separating thresholds and comparative statics.</li>
+<li>workers know their own ability;</li>
+<li>firms do not observe ability;</li>
+<li>workers choose education level;</li>
+<li>firms observe education and offer wages;</li>
+<li>education is less costly for high-ability workers.</li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Worker ability type] --&gt; B[Education choice]
+    B --&gt; C[Firm observes education]
+    C --&gt; D[Firm updates belief]
+    D --&gt; E[Wage offer]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Education may not directly increase productivity in a pure signaling model. It may work because it separates types.</p>
+</section>
+<section id="signaling-versus-human-capital" class="level2">
+<h2 class="anchored" data-anchor-id="signaling-versus-human-capital">Signaling versus human capital</h2>
+<p>Education can be interpreted in two ways.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Interpretation</th>
+<th>Main idea</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Human capital</td>
+<td>education increases productivity</td>
+</tr>
+<tr class="even">
+<td>Signaling</td>
+<td>education reveals productivity or ability</td>
+</tr>
+</tbody>
+</table>
+<p>Real education may do both. The model separates the mechanisms.</p>
+</section>
+<section id="signaling-and-social-behaviour" class="level2">
+<h2 class="anchored" data-anchor-id="signaling-and-social-behaviour">Signaling and social behaviour</h2>
+<p>Signaling is not only economic.</p>
+<p>Examples:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Domain</th>
+<th>Signal</th>
+<th>Possible type being inferred</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>politics</td>
+<td>costly commitment</td>
+<td>ideological seriousness</td>
+</tr>
+<tr class="even">
+<td>crime</td>
+<td>retaliation</td>
+<td>toughness or willingness to punish</td>
+</tr>
+<tr class="odd">
+<td>organizations</td>
+<td>compliance programme</td>
+<td>responsibility or legal caution</td>
+</tr>
+<tr class="even">
+<td>relationships</td>
+<td>apology</td>
+<td>remorse or sincerity</td>
+</tr>
+<tr class="odd">
+<td>markets</td>
+<td>warranty</td>
+<td>product quality</td>
+</tr>
+<tr class="even">
+<td>academia</td>
+<td>credential</td>
+<td>ability or training</td>
+</tr>
+</tbody>
+</table>
+<p>The key question is always whether the signal is incentive-compatible.</p>
+</section>
+<section id="cheap-talk-versus-signaling" class="level2">
+<h2 class="anchored" data-anchor-id="cheap-talk-versus-signaling">Cheap talk versus signaling</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Cheap talk</th>
+<th>Signaling</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cost</td>
+<td>costless</td>
+<td>often costly</td>
+</tr>
+<tr class="even">
+<td>Direct payoff effect</td>
+<td>none</td>
+<td>may directly affect payoff</td>
+</tr>
+<tr class="odd">
+<td>Credibility source</td>
+<td>preference alignment</td>
+<td>differential cost or incentive</td>
+</tr>
+<tr class="even">
+<td>Main issue</td>
+<td>can messages be informative?</td>
+<td>can actions reveal type?</td>
+</tr>
+</tbody>
+</table>
+<p>Cheap talk can reveal information without cost if preferences are aligned. Signaling can reveal information even with conflict if imitation is too costly.</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="treating-every-observable-action-as-a-signal" class="level3">
+<h3 class="anchored" data-anchor-id="treating-every-observable-action-as-a-signal">1. Treating every observable action as a signal</h3>
+<p>An action is a signal only if it changes beliefs about hidden information.</p>
+</section>
+<section id="ignoring-signal-cost" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-signal-cost">2. Ignoring signal cost</h3>
+<p>If imitation is costless, separation may fail.</p>
+</section>
+<section id="forgetting-receiver-beliefs" class="level3">
+<h3 class="anchored" data-anchor-id="forgetting-receiver-beliefs">3. Forgetting receiver beliefs</h3>
+<p>The receiver’s action depends on posterior beliefs.</p>
+</section>
+<section id="assuming-separating-equilibrium-always-exists" class="level3">
+<h3 class="anchored" data-anchor-id="assuming-separating-equilibrium-always-exists">4. Assuming separating equilibrium always exists</h3>
+<p>Separation requires incentive compatibility.</p>
+</section>
+<section id="confusing-signaling-with-productivity" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-signaling-with-productivity">5. Confusing signaling with productivity</h3>
+<p>A signal may reveal ability without causing ability.</p>
+</section>
+<section id="ignoring-off-path-beliefs" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-off-path-beliefs">6. Ignoring off-path beliefs</h3>
+<p>Unexpected signals can support or undermine equilibria.</p>
+</section>
+</section>
+<section id="checklist" class="level2">
+<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
+<p>When analysing a signaling game, ask:</p>
+<ol type="1">
+<li>What is the sender’s private type?</li>
+<li>What signal can the sender choose?</li>
+<li>Does the signal have a cost?</li>
+<li>Does the cost differ by type?</li>
+<li>What does the receiver observe?</li>
+<li>What beliefs does the receiver form?</li>
+<li>What action does the receiver choose?</li>
+<li>Is the proposed equilibrium separating, pooling, or semi-separating?</li>
+<li>Are incentive compatibility conditions satisfied?</li>
+<li>Are off-path beliefs reasonable?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../../notes/game-types/index.html">Game Types</a></li>
+<li><a href="../../notes/game-types/bayesian.html">Bayesian Games</a></li>
+<li><a href="../../notes/game-types/cheap-talk.html">Cheap Talk</a></li>
+<li><a href="../../notes/game-types/screening-mechanism.html">Screening and Mechanism Design</a></li>
+<li><a href="../../notes/equilibriums/perfect-bayesian.html">Perfect Bayesian Equilibrium</a></li>
+<li><a href="../../notes/equilibriums/sequential-equilibrium.html">Sequential Equilibrium</a></li>
+<li><a href="../../foundations/probability.html">Probability</a></li>
 </ul>
 
 

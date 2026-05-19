@@ -1,55 +1,283 @@
 ---
-title: "Screening & mechanism design"
+title: "Screening and Mechanism Design"
 toc: true
+page-layout: full
 ---
 
-## What it is
-Screening (principal–agent with adverse selection) studies how a principal designs a menu of contracts to induce agents to reveal private information. Mechanism design generalizes this: choose rules to implement outcomes given strategic agents.
+Screening and mechanism design study how an uninformed party can structure choices, contracts, rules, or menus to induce informed parties to reveal information or choose desirable actions.
 
-## What’s special
-- Key constraint: **incentive compatibility** (each type prefers its intended option).
-- Participation (individual rationality) often binds for the lowest type.
-- Design trades off efficiency vs information rents.
+In signaling, the informed side moves to reveal information.  
+In screening, the uninformed side designs the environment.
 
-## One example (two-type contract menu)
-Agent type $\theta\in\{H,L\}$ (productivity). Principal offers contracts $(w,q)$: wage and required output.
+## Basic idea
 
-Utility: $u = w - c(q,\theta)$, where $c(q,H) < c(q,L)$ (high type has lower cost).
+Screening begins with private information.
 
-Principal wants higher $q$ from $H$ but must prevent $H$ from pretending to be $L$.
+The uninformed side cannot directly observe type, so it offers a menu of choices. Different types may self-select into different options.
 
-**Solution sketch.** The optimal menu typically:
-- distorts the low-type contract downward (lower $q$) to reduce information rents,
-- gives the high type a contract with higher $q$ and positive rent,
-- satisfies IC constraints: $H$ prefers $H$-contract; $L$ prefers $L$-contract.
+```{mermaid}
+flowchart LR
+    A[Private types] --> B[Designer offers menu]
+    B --> C[Types choose options]
+    C --> D[Choices reveal information]
+    D --> E[Allocation or contract]
+```
 
-## Story
-An insurer can’t observe customer risk. It offers two plans (a menu). Customers self-select. The insurer designs the menu so each type reveals itself by choosing the plan intended for it.
+The menu works only if each type prefers the option intended for that type.
 
-## Model
-- Types $\theta\in\{H,L\}$ privately known
-- Contracts $(p,q)$: premium $p$ and coverage $q$
-- Utility: $u_\theta(p,q)=v_\theta(q)-p$
-- Goal: maximize profit subject to incentive constraints
+## Screening versus signaling
 
-## Equilibrium constraints (IC/IR)
-Incentive compatibility:
+| Feature | Signaling | Screening |
+|---|---|---|
+| Who has private information? | sender / informed agent | agent / informed side |
+| Who moves to reveal information? | informed side | uninformed designer creates menu |
+| Main object | signal | menu or mechanism |
+| Key condition | incentive-compatible signaling | self-selection |
+
+Examples:
+
+- signaling: worker chooses education to reveal ability;
+- screening: employer offers contracts to separate worker types.
+
+## Types and menus
+
+Suppose there are two types:
+
 $$
-u_H(p_H,q_H)\ge u_H(p_L,q_L),
-\qquad
-u_L(p_L,q_L)\ge u_L(p_H,q_H).
+\theta \in \{H,L\}.
 $$
 
-Individual rationality:
+The designer offers a menu:
+
 $$
-u_\theta(p_\theta,q_\theta)\ge 0 \quad (\theta\in\{H,L\}).
+(x_H,t_H), (x_L,t_L).
 $$
 
-## What the solution typically looks like (high-level)
-- Low-type contract is often **distorted** (less generous) to reduce information rents.
-- High type receives more generous terms and may earn positive information rent.
+Each type chooses one option.
 
-## Later-on analysis
-- **Moral hazard:** if effort is hidden too, the design problem changes (adverse selection + moral hazard).
-- **Multiple dimensions:** risk + risk aversion produces richer menus.
-- **Mechanism design view:** “contract menus” are a specific mechanism; the general theory asks what outcomes are implementable.
+A separating menu induces:
+
+$$
+H \text{ chooses } (x_H,t_H),
+$$
+
+and
+
+$$
+L \text{ chooses } (x_L,t_L).
+$$
+
+## Incentive compatibility
+
+Incentive compatibility means each type prefers the option designed for that type.
+
+For type $H$:
+
+$$
+U_H(x_H,t_H) \geq U_H(x_L,t_L).
+$$
+
+For type $L$:
+
+$$
+U_L(x_L,t_L) \geq U_L(x_H,t_H).
+$$
+
+These are self-selection constraints.
+
+```{mermaid}
+flowchart TD
+    A[Menu offered] --> B[High type compares options]
+    A --> C[Low type compares options]
+    B --> D{High chooses high option?}
+    C --> E{Low chooses low option?}
+    D --> F[Incentive compatibility]
+    E --> F
+```
+
+## Participation constraints
+
+Participation constraints ensure each type prefers participating to opting out.
+
+For type $\theta$:
+
+$$
+U_\theta(\text{assigned option}) \geq \bar U_\theta.
+$$
+
+Here $\bar U_\theta$ is the outside option.
+
+A contract may separate types but still fail if some type refuses to participate.
+
+## Adverse selection
+
+Adverse selection occurs when one side has private information before exchange.
+
+Examples:
+
+- insurance buyers know more about their risk than insurers;
+- workers know more about ability than employers;
+- borrowers know more about default risk than lenders;
+- sellers know more about product quality than buyers.
+
+Screening tries to design choices that reduce the problem.
+
+## Insurance screening example
+
+An insurer may not know whether a customer is high-risk or low-risk.
+
+It can offer a menu:
+
+- high premium, full coverage;
+- low premium, partial coverage.
+
+Different risk types may select different contracts.
+
+```{mermaid}
+flowchart LR
+    A[Insurer offers contract menu] --> B[High-risk customer]
+    A --> C[Low-risk customer]
+    B --> D[Chooses more coverage]
+    C --> E[Chooses less coverage]
+    D --> F[Information revealed by choice]
+    E --> F
+```
+
+The menu screens types through self-selection.
+
+## Mechanism design
+
+Mechanism design asks a broader question:
+
+> How should rules be designed so that self-interested agents produce a desired outcome?
+
+A mechanism specifies:
+
+- messages or reports agents can send;
+- how reports determine allocations;
+- how transfers or payoffs are assigned.
+
+```{mermaid}
+flowchart TD
+    A[Designer objective] --> B[Choose mechanism]
+    B --> C[Agents report or choose]
+    C --> D[Outcome rule]
+    D --> E[Incentives determine behaviour]
+    E --> F[Implemented outcome]
+```
+
+Mechanism design is sometimes called reverse game theory because we start with the desired outcome and design the game.
+
+## Revelation principle
+
+The revelation principle says, roughly:
+
+> if an outcome can be implemented by some mechanism, it can often be implemented by a direct mechanism where agents truthfully report their types.
+
+This does not mean people are naturally truthful. It means the mechanism can be designed so that truth-telling is incentive compatible.
+
+A direct mechanism asks agents to report types:
+
+$$
+\hat\theta_i.
+$$
+
+Truthful reporting requires:
+
+$$
+\theta_i \text{ reports } \theta_i
+$$
+
+to be optimal.
+
+## Incentive compatibility in direct mechanisms
+
+A direct mechanism is incentive compatible if every type prefers truthful reporting.
+
+For type $\theta$:
+
+$$
+U_\theta(\text{outcome after reporting } \theta)
+\geq
+U_\theta(\text{outcome after reporting } \hat\theta)
+$$
+
+for all possible misreports $\hat\theta$.
+
+This is the same self-selection idea expressed through reports.
+
+## Applications
+
+Screening and mechanism design appear in:
+
+| Domain | Example |
+|---|---|
+| insurance | separating high-risk and low-risk customers |
+| labour | contracts for different ability or effort types |
+| regulation | inducing firms to reveal costs |
+| auctions | allocating goods to high-valuation bidders |
+| public goods | eliciting willingness to pay |
+| taxation | designing incentives under private income or effort |
+| criminal justice | plea bargains under private evidence or risk |
+| platforms | rules that induce reporting or moderation |
+
+## Screening and criminology
+
+Screening logic can also appear in criminology and institutions.
+
+Examples:
+
+- police use behaviour or context to infer risk;
+- courts use plea decisions to infer case strength;
+- offenders use tests to screen co-offender reliability;
+- platforms design reporting systems to distinguish abuse from noise;
+- regulators design audits to induce compliance.
+
+The same logic applies: private information creates selection problems.
+
+## Common mistakes
+
+### 1. Confusing screening with signaling
+
+Screening is designed by the uninformed side. Signaling is chosen by the informed side.
+
+### 2. Forgetting participation constraints
+
+A menu must be acceptable, not only separating.
+
+### 3. Ignoring incentive compatibility
+
+A proposed menu fails if types want to imitate each other.
+
+### 4. Assuming truth-telling without mechanism design
+
+Truthful reporting must be made optimal.
+
+### 5. Treating the revelation principle as behavioural honesty
+
+The revelation principle is a design result, not a psychological claim.
+
+## Checklist
+
+When analysing screening or mechanism design, ask:
+
+1. Who has private information?
+2. Who designs the menu or mechanism?
+3. What are the possible types?
+4. What options are offered?
+5. What is each type supposed to choose?
+6. Are incentive compatibility constraints satisfied?
+7. Are participation constraints satisfied?
+8. What outcome does the designer want?
+9. Can truthful reporting be made optimal?
+10. What information is revealed by choices?
+
+## Related pages
+
+- [Game Types](index.qmd)
+- [Bayesian Games](bayesian.qmd)
+- [Signaling](signaling.qmd)
+- [Cheap Talk](cheap-talk.qmd)
+- [Bayesian Nash Equilibrium](../equilibriums/bayesian-nash.qmd)
+- [Perfect Bayesian Equilibrium](../equilibriums/perfect-bayesian.qmd)
+- [Optimization](../../foundations/optimization.qmd)

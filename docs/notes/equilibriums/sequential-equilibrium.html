@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sequential equilibrium – Margins of Rationality</title>
+<title>Sequential Equilibrium – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -159,17 +163,27 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-it-is" id="toc-what-it-is" class="nav-link active" data-scroll-target="#what-it-is">What it is</a></li>
-  <li><a href="#where-it-shows-up" id="toc-where-it-shows-up" class="nav-link" data-scroll-target="#where-it-shows-up">Where it shows up</a></li>
-  <li><a href="#how-to-solve-recipe" id="toc-how-to-solve-recipe" class="nav-link" data-scroll-target="#how-to-solve-recipe">How to solve (recipe)</a></li>
-  <li><a href="#solved-example-why-some-off-path-beliefs-are-not-credible" id="toc-solved-example-why-some-off-path-beliefs-are-not-credible" class="nav-link" data-scroll-target="#solved-example-why-some-off-path-beliefs-are-not-credible">Solved example (why some off-path beliefs are not credible)</a>
+  <li><a href="#why-sequential-equilibrium-matters" id="toc-why-sequential-equilibrium-matters" class="nav-link active" data-scroll-target="#why-sequential-equilibrium-matters">Why sequential equilibrium matters</a></li>
+  <li><a href="#assessment" id="toc-assessment" class="nav-link" data-scroll-target="#assessment">Assessment</a></li>
+  <li><a href="#sequential-rationality" id="toc-sequential-rationality" class="nav-link" data-scroll-target="#sequential-rationality">Sequential rationality</a></li>
+  <li><a href="#consistency" id="toc-consistency" class="nav-link" data-scroll-target="#consistency">Consistency</a></li>
+  <li><a href="#sequential-equilibrium-versus-pbe" id="toc-sequential-equilibrium-versus-pbe" class="nav-link" data-scroll-target="#sequential-equilibrium-versus-pbe">Sequential equilibrium versus PBE</a></li>
+  <li><a href="#why-completely-mixed-strategies" id="toc-why-completely-mixed-strategies" class="nav-link" data-scroll-target="#why-completely-mixed-strategies">Why completely mixed strategies?</a></li>
+  <li><a href="#example-intuition" id="toc-example-intuition" class="nav-link" data-scroll-target="#example-intuition">Example intuition</a></li>
+  <li><a href="#relation-to-trembling-hand-perfection" id="toc-relation-to-trembling-hand-perfection" class="nav-link" data-scroll-target="#relation-to-trembling-hand-perfection">Relation to trembling-hand perfection</a></li>
+  <li><a href="#beliefs-at-information-sets" id="toc-beliefs-at-information-sets" class="nav-link" data-scroll-target="#beliefs-at-information-sets">Beliefs at information sets</a></li>
+  <li><a href="#sequential-equilibrium-in-signaling" id="toc-sequential-equilibrium-in-signaling" class="nav-link" data-scroll-target="#sequential-equilibrium-in-signaling">Sequential equilibrium in signaling</a></li>
+  <li><a href="#why-it-is-stronger" id="toc-why-it-is-stronger" class="nav-link" data-scroll-target="#why-it-is-stronger">Why it is stronger</a></li>
+  <li><a href="#common-mistakes" id="toc-common-mistakes" class="nav-link" data-scroll-target="#common-mistakes">Common mistakes</a>
   <ul class="collapse">
-  <li><a href="#problem-context-question" id="toc-problem-context-question" class="nav-link" data-scroll-target="#problem-context-question">Problem (context + question)</a></li>
-  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
-  <li><a href="#check" id="toc-check" class="nav-link" data-scroll-target="#check">Check</a></li>
-  <li><a href="#takeaway" id="toc-takeaway" class="nav-link" data-scroll-target="#takeaway">Takeaway</a></li>
+  <li><a href="#treating-sequential-equilibrium-as-the-same-as-pbe" id="toc-treating-sequential-equilibrium-as-the-same-as-pbe" class="nav-link" data-scroll-target="#treating-sequential-equilibrium-as-the-same-as-pbe">1. Treating sequential equilibrium as the same as PBE</a></li>
+  <li><a href="#ignoring-beliefs" id="toc-ignoring-beliefs" class="nav-link" data-scroll-target="#ignoring-beliefs">2. Ignoring beliefs</a></li>
+  <li><a href="#thinking-consistency-means-only-bayes-rule-on-path" id="toc-thinking-consistency-means-only-bayes-rule-on-path" class="nav-link" data-scroll-target="#thinking-consistency-means-only-bayes-rule-on-path">3. Thinking consistency means only Bayes’ rule on path</a></li>
+  <li><a href="#forgetting-sequential-rationality" id="toc-forgetting-sequential-rationality" class="nav-link" data-scroll-target="#forgetting-sequential-rationality">4. Forgetting sequential rationality</a></li>
+  <li><a href="#confusing-trembles-with-actual-behaviour" id="toc-confusing-trembles-with-actual-behaviour" class="nav-link" data-scroll-target="#confusing-trembles-with-actual-behaviour">5. Confusing trembles with actual behaviour</a></li>
   </ul></li>
-  <li><a href="#later-on-analysis" id="toc-later-on-analysis" class="nav-link" data-scroll-target="#later-on-analysis">Later-on analysis</a></li>
+  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist">Checklist</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
@@ -178,7 +192,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Sequential equilibrium</h1>
+<h1 class="title">Sequential Equilibrium</h1>
 </div>
 
 
@@ -195,75 +209,277 @@ window.Quarto = {
 </header>
 
 
-<section id="what-it-is" class="level2">
-<h2 class="anchored" data-anchor-id="what-it-is">What it is</h2>
-<p>A <strong>sequential equilibrium</strong> is a refinement of PBE. It is a pair <strong>(strategies, beliefs)</strong> such that:</p>
-<ol type="1">
-<li><strong>Sequential rationality:</strong> strategies are optimal at every information set given beliefs.</li>
-<li><strong>Consistency:</strong> beliefs come from strategies via Bayes’ rule <strong>as limits of fully mixed (“trembling”) strategies</strong>.</li>
-</ol>
-<p>This “tremble” requirement disciplines off-path beliefs: beliefs must be justifiable by small mistakes.</p>
+<p>Sequential equilibrium is a refinement for dynamic games with incomplete information. It strengthens perfect Bayesian equilibrium by requiring strategies to be sequentially rational and beliefs to be consistent as limits of fully mixed strategies.</p>
+<p>The central idea is:</p>
+<blockquote class="blockquote">
+<p>players act optimally at every information set, and beliefs should be justified by nearby completely mixed behaviour.</p>
+</blockquote>
+<section id="why-sequential-equilibrium-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-sequential-equilibrium-matters">Why sequential equilibrium matters</h2>
+<p>Perfect Bayesian equilibrium requires sequential rationality and Bayes’ rule where possible. But off-path beliefs may still be too flexible.</p>
+<p>Sequential equilibrium adds stronger discipline to beliefs.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[PBE] --&gt; B[Sequential rationality]
+    A --&gt; C[Beliefs]
+    C --&gt; D[Off-path freedom]
+    D --&gt; E[Sequential equilibrium adds consistency]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This makes sequential equilibrium useful when off-path beliefs matter.</p>
 </section>
-<section id="where-it-shows-up" class="level2">
-<h2 class="anchored" data-anchor-id="where-it-shows-up">Where it shows up</h2>
-<ul>
-<li>Signaling games and dynamic games with imperfect information</li>
-<li>Any setting where PBE has many equilibria due to arbitrary off-path beliefs</li>
-<li>Refinement discussions in micro theory / game theory texts</li>
-</ul>
-</section>
-<section id="how-to-solve-recipe" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-solve-recipe">How to solve (recipe)</h2>
-<ol type="1">
-<li>Start from a candidate PBE.</li>
-<li>Add small probabilities (trembles) so every action is played with positive probability.</li>
-<li>Compute beliefs via Bayes’ rule under the perturbed strategy.</li>
-<li>Take limits as trembles go to zero:
-<ul>
-<li>if beliefs converge, they are consistent.</li>
-</ul></li>
-<li>Check sequential rationality with those beliefs.</li>
-</ol>
-<hr>
-</section>
-<section id="solved-example-why-some-off-path-beliefs-are-not-credible" class="level2">
-<h2 class="anchored" data-anchor-id="solved-example-why-some-off-path-beliefs-are-not-credible">Solved example (why some off-path beliefs are not credible)</h2>
-<section id="problem-context-question" class="level3">
-<h3 class="anchored" data-anchor-id="problem-context-question">Problem (context + question)</h3>
-<p>Consider the pooling PBE from the PBE page: - Both types choose <span class="math inline">\(e=0\)</span>. - Off-path belief after <span class="math inline">\(e=1\)</span> is <span class="math inline">\(\Pr(H\mid e=1)=0\)</span>.</p>
-<p><strong>Question:</strong> Explain the consistency idea: what must be true for such an off-path belief to be allowed under sequential equilibrium?</p>
-</section>
-<section id="solution" class="level3">
-<h3 class="anchored" data-anchor-id="solution">Solution</h3>
-<p>Sequential equilibrium requires off-path beliefs to be limits of Bayes-updated beliefs from <strong>fully mixed</strong> strategies.</p>
-<p>So imagine a perturbed (trembling) strategy where: - Type <span class="math inline">\(H\)</span> plays <span class="math inline">\(e=1\)</span> with small probability <span class="math inline">\(\varepsilon_H&gt;0\)</span>, - Type <span class="math inline">\(L\)</span> plays <span class="math inline">\(e=1\)</span> with small probability <span class="math inline">\(\varepsilon_L&gt;0\)</span>.</p>
-<p>Then, upon observing <span class="math inline">\(e=1\)</span>, Bayes’ rule gives: <span class="math display">\[
-\Pr(H\mid e=1)=\frac{p\,\varepsilon_H}{p\,\varepsilon_H+(1-p)\,\varepsilon_L}.
+<section id="assessment" class="level2">
+<h2 class="anchored" data-anchor-id="assessment">Assessment</h2>
+<p>A sequential equilibrium is defined as an assessment:</p>
+<p><span class="math display">\[
+(\sigma,\mu),
 \]</span></p>
-<p>Now consider the limit as trembles vanish. The limiting belief depends on the <em>relative</em> rate at which <span class="math inline">\(\varepsilon_H\)</span> and <span class="math inline">\(\varepsilon_L\)</span> go to zero.</p>
+<p>where:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Object</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\sigma\)</span></td>
+<td>strategy profile</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mu\)</span></td>
+<td>system of beliefs</td>
+</tr>
+</tbody>
+</table>
+<p>The assessment must satisfy:</p>
+<ol type="1">
+<li>sequential rationality;</li>
+<li>consistency.</li>
+</ol>
+</section>
+<section id="sequential-rationality" class="level2">
+<h2 class="anchored" data-anchor-id="sequential-rationality">Sequential rationality</h2>
+<p>Sequential rationality means every player chooses optimally at every information set, given beliefs and continuation strategies.</p>
+<p>For each information set, the prescribed strategy must maximize expected continuation payoff.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Information set] --&gt; B[Belief over nodes]
+    B --&gt; C[Expected continuation payoff]
+    C --&gt; D[Optimal action]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This is similar to PBE.</p>
+</section>
+<section id="consistency" class="level2">
+<h2 class="anchored" data-anchor-id="consistency">Consistency</h2>
+<p>Consistency is the stronger belief requirement.</p>
+<p>Beliefs should be obtainable as limits of beliefs generated by completely mixed strategy profiles.</p>
+<p>A completely mixed strategy assigns positive probability to every action. This ensures every information set is reached with positive probability, so Bayes’ rule can be applied everywhere.</p>
+<p>Then we take a limit as trembles go to zero.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Completely mixed strategies] --&gt; B[Every information set reached]
+    B --&gt; C[Bayes' rule applies everywhere]
+    C --&gt; D[Generate beliefs]
+    D --&gt; E[Take limit]
+    E --&gt; F[Consistent beliefs]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This prevents arbitrary off-path beliefs that cannot be justified by small mistakes.</p>
+</section>
+<section id="sequential-equilibrium-versus-pbe" class="level2">
+<h2 class="anchored" data-anchor-id="sequential-equilibrium-versus-pbe">Sequential equilibrium versus PBE</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Sequential rationality</th>
+<th>Belief requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PBE</td>
+<td>yes</td>
+<td>Bayes’ rule on path; off-path beliefs often flexible</td>
+</tr>
+<tr class="even">
+<td>Sequential equilibrium</td>
+<td>yes</td>
+<td>beliefs must be consistent limits of fully mixed strategies</td>
+</tr>
+</tbody>
+</table>
+<p>Every sequential equilibrium is generally a PBE, but not every PBE is sequential.</p>
+</section>
+<section id="why-completely-mixed-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="why-completely-mixed-strategies">Why completely mixed strategies?</h2>
+<p>If every action has positive probability, then every information set can be reached.</p>
+<p>That means beliefs can always be computed by Bayes’ rule.</p>
+<p>The idea is that even if an action is not supposed to occur in equilibrium, it could occur as a small mistake or tremble.</p>
+<p>Beliefs after unexpected actions should be consistent with the relative likelihood of such mistakes.</p>
+</section>
+<section id="example-intuition" class="level2">
+<h2 class="anchored" data-anchor-id="example-intuition">Example intuition</h2>
+<p>Suppose a receiver observes an unexpected signal.</p>
+<p>PBE may allow many possible beliefs after that signal.</p>
+<p>Sequential equilibrium asks:</p>
+<blockquote class="blockquote">
+<p>If the unexpected signal occurred because of very small mistakes, which type would be more likely to make that mistake?</p>
+</blockquote>
+<p>This gives off-path beliefs more structure.</p>
+</section>
+<section id="relation-to-trembling-hand-perfection" class="level2">
+<h2 class="anchored" data-anchor-id="relation-to-trembling-hand-perfection">Relation to trembling-hand perfection</h2>
+<p>Both sequential equilibrium and trembling-hand perfection use the idea of small mistakes, but in different ways.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Main object</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Trembling-hand perfect equilibrium</td>
+<td>robustness of strategies to small mistakes</td>
+</tr>
+<tr class="even">
+<td>Sequential equilibrium</td>
+<td>consistency of beliefs and sequential rationality</td>
+</tr>
+<tr class="odd">
+<td>Proper equilibrium</td>
+<td>relative likelihood of more costly mistakes</td>
+</tr>
+</tbody>
+</table>
+<p>Sequential equilibrium is especially designed for extensive-form games with imperfect information.</p>
+</section>
+<section id="beliefs-at-information-sets" class="level2">
+<h2 class="anchored" data-anchor-id="beliefs-at-information-sets">Beliefs at information sets</h2>
+<p>In an extensive-form game, an information set may contain several decision nodes.</p>
+<p>A belief assigns probabilities to these nodes.</p>
+<p>For example, if information set <span class="math inline">\(I\)</span> contains nodes <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, beliefs may be:</p>
+<p><span class="math display">\[
+\mu(x\mid I)=0.6,
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\mu(y\mid I)=0.4.
+\]</span></p>
+<p>The player’s optimal action depends on expected payoff under these beliefs.</p>
+</section>
+<section id="sequential-equilibrium-in-signaling" class="level2">
+<h2 class="anchored" data-anchor-id="sequential-equilibrium-in-signaling">Sequential equilibrium in signaling</h2>
+<p>In a signaling game, sequential equilibrium can restrict off-path beliefs after unexpected signals.</p>
+<p>For example, in a pooling equilibrium, both types send the same signal. If the receiver observes an unexpected signal, PBE may allow arbitrary beliefs. Sequential equilibrium asks whether those beliefs can be justified by small probabilities of each type deviating.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Pooling signal observed normally] --&gt; B[Receiver uses pooled belief]
+    C[Unexpected signal] --&gt; D[Need off-path belief]
+    D --&gt; E[Sequential consistency restricts belief]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="why-it-is-stronger" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-is-stronger">Why it is stronger</h2>
+<p>Sequential equilibrium is stronger because it connects beliefs to possible trembles.</p>
+<p>It rules out some equilibria that rely on unreasonable beliefs after unexpected events.</p>
+<p>However, it can also be more technically demanding than PBE.</p>
+</section>
+<section id="common-mistakes" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes">Common mistakes</h2>
+<section id="treating-sequential-equilibrium-as-the-same-as-pbe" class="level3">
+<h3 class="anchored" data-anchor-id="treating-sequential-equilibrium-as-the-same-as-pbe">1. Treating sequential equilibrium as the same as PBE</h3>
+<p>Sequential equilibrium has a stronger consistency requirement.</p>
+</section>
+<section id="ignoring-beliefs" class="level3">
+<h3 class="anchored" data-anchor-id="ignoring-beliefs">2. Ignoring beliefs</h3>
+<p>Sequential equilibrium is an assessment: strategies plus beliefs.</p>
+</section>
+<section id="thinking-consistency-means-only-bayes-rule-on-path" class="level3">
+<h3 class="anchored" data-anchor-id="thinking-consistency-means-only-bayes-rule-on-path">3. Thinking consistency means only Bayes’ rule on path</h3>
+<p>Consistency also disciplines off-path beliefs through limits.</p>
+</section>
+<section id="forgetting-sequential-rationality" class="level3">
+<h3 class="anchored" data-anchor-id="forgetting-sequential-rationality">4. Forgetting sequential rationality</h3>
+<p>Beliefs alone are not enough. Actions must be optimal given beliefs.</p>
+</section>
+<section id="confusing-trembles-with-actual-behaviour" class="level3">
+<h3 class="anchored" data-anchor-id="confusing-trembles-with-actual-behaviour">5. Confusing trembles with actual behaviour</h3>
+<p>Trembles are a refinement device, not necessarily a literal behavioural claim.</p>
+</section>
+</section>
+<section id="checklist" class="level2">
+<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
+<p>When checking sequential equilibrium, ask:</p>
+<ol type="1">
+<li>What is the strategy profile?</li>
+<li>What beliefs are assigned at each information set?</li>
+<li>Are strategies sequentially rational given beliefs?</li>
+<li>Can beliefs be generated by fully mixed strategies?</li>
+<li>Do those fully mixed strategies converge to the proposed strategy?</li>
+<li>Do the induced beliefs converge to the proposed beliefs?</li>
+<li>Are off-path beliefs justified by this limiting process?</li>
+<li>Is the assessment also a PBE?</li>
+<li>What equilibria are ruled out by consistency?</li>
+<li>Is the refinement substantively important in this model?</li>
+</ol>
+</section>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
 <ul>
-<li>If <span class="math inline">\(\varepsilon_H/\varepsilon_L \to 0\)</span>, then <span class="math inline">\(\Pr(H\mid e=1)\to 0\)</span>.</li>
-<li>If <span class="math inline">\(\varepsilon_H/\varepsilon_L \to \infty\)</span>, then <span class="math inline">\(\Pr(H\mid e=1)\to 1\)</span>.</li>
-<li>If <span class="math inline">\(\varepsilon_H/\varepsilon_L \to k\in(0,\infty)\)</span>, then the limit is an interior number in <span class="math inline">\((0,1)\)</span>.</li>
-</ul>
-<p><strong>Result:</strong> The off-path belief <span class="math inline">\(\Pr(H\mid e=1)=0\)</span> is consistent only if the perturbations imply that, in the limit, type <span class="math inline">\(H\)</span> is vanishingly less likely than type <span class="math inline">\(L\)</span> to make that mistake.</p>
-</section>
-<section id="check" class="level3">
-<h3 class="anchored" data-anchor-id="check">Check</h3>
-<p>This belief is not “free”: it must be explainable by a sequence of fully mixed strategies.</p>
-</section>
-<section id="takeaway" class="level3">
-<h3 class="anchored" data-anchor-id="takeaway">Takeaway</h3>
-<p>Sequential equilibrium restricts off-path beliefs by requiring them to arise from plausible small mistakes.</p>
-<hr>
-</section>
-</section>
-<section id="later-on-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="later-on-analysis">Later-on analysis</h2>
-<ul>
-<li>Sequential equilibrium is often closer to how theorists think about “reasonable beliefs” off-path.</li>
-<li>Stronger refinements (e.g., intuitive criterion) impose additional structure.</li>
-<li>For applied work, PBE is common; for selection arguments, sequential equilibrium is a useful upgrade.</li>
+<li><a href="../../notes/equilibriums/index.html">Equilibrium Concepts</a></li>
+<li><a href="../../notes/equilibriums/perfect-bayesian.html">Perfect Bayesian Equilibrium</a></li>
+<li><a href="../../notes/equilibriums/trembling-hand-perfect.html">Trembling-hand Perfect Equilibrium</a></li>
+<li><a href="../../notes/equilibriums/proper-equilibrium.html">Proper Equilibrium</a></li>
+<li><a href="../../notes/game-types/signaling.html">Signaling</a></li>
+<li><a href="../../notes/game-types/cheap-talk.html">Cheap Talk</a></li>
+<li><a href="../../foundations/dynamic-reasoning.html">Dynamic Reasoning</a></li>
 </ul>
 
 

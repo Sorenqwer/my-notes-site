@@ -1,59 +1,283 @@
 ---
-title: "Cheap talk"
+title: "Cheap Talk"
 toc: true
+page-layout: full
 ---
 
-## What it is
-Cheap talk is communication that is **costless** and **non-binding**: a sender sends a message, then a receiver chooses an action.
+Cheap talk is communication that is costless, non-binding, and directly payoff-irrelevant. A sender sends a message, and a receiver chooses an action after hearing it.
 
-## What’s special
-- Messages have no direct payoff effect, so credibility comes only from **aligned incentives**.
-- Information can still be partially transmitted when preferences are not too misaligned.
-- Outcomes typically depend on how strongly the sender wants to bias the receiver’s action.
+The central question is:
 
-## One example
-### Setup (a stylized version)
-- State: $\theta \in [0,1]$ is known to the sender.
-- Message: $m$ is any costless statement.
-- Receiver chooses action $a\in[0,1]$.
+> Can information be transmitted when messages are free and interests are not perfectly aligned?
 
-Payoffs:
-- Receiver wants $a$ close to $\theta$.
-- Sender wants $a$ close to $\theta + b$ (bias $b>0$).
+Cheap talk is important because many real interactions involve advice, promises, claims, warnings, recommendations, excuses, and persuasion without formal commitment.
 
-### Key idea
-If the bias $b$ is small, the sender can truthfully separate states into **intervals** (“coarse truth”), and the receiver best-responds by choosing the expected state within the reported interval. If $b$ is large, communication becomes uninformative (pooling).
+## Basic structure
 
+A cheap-talk game usually has three stages:
 
-## Story
-You ask a friend for a restaurant recommendation in a new city. Your friend knows the options. But your tastes differ: they love loud, spicy places; you want calm and mild. They aren’t lying—they just have a bias.
+1. Nature determines the sender's private information.
+2. The sender sends a costless message.
+3. The receiver observes the message and chooses an action.
 
-Cheap talk studies whether costless messages can still transmit information when incentives aren’t perfectly aligned.
+```{mermaid}
+flowchart LR
+    A[Nature chooses state or type] --> B[Sender observes information]
+    B --> C[Sender sends costless message]
+    C --> D[Receiver observes message]
+    D --> E[Receiver chooses action]
+    E --> F[Payoffs realized]
+```
 
-## Model
-- State $\theta$ known to sender
-- Message $m$ is costless and non-binding
-- Receiver chooses action $a$
-- Preferences are biased
+The message has no direct payoff effect. It matters only if it changes the receiver's belief and action.
 
-## Core math (quadratic loss, bias)
-Let $\theta\in[0,1]$, $a\in[0,1]$.
+## Why cheap talk is puzzling
 
-Receiver:
+If messages are free, why would anyone believe them?
+
+A sender may want to manipulate the receiver. If the receiver knows this, the receiver may ignore the message. If messages are ignored, communication becomes uninformative.
+
+This creates the basic cheap-talk tension:
+
+```{mermaid}
+flowchart LR
+    A[Sender has private information] --> B[Sender may benefit from influencing receiver]
+    B --> C[Receiver anticipates bias]
+    C --> D[Receiver may discount or ignore message]
+    D --> E[Communication may collapse]
+```
+
+Cheap talk is therefore not automatically informative.
+
+## Sender and receiver
+
+The sender has information. The receiver has decision power.
+
+For example:
+
+- an expert advises a policymaker;
+- a seller describes product quality;
+- a suspect gives an explanation;
+- a doctor recommends treatment;
+- a friend gives advice;
+- a manager reports project progress;
+- a lobbyist communicates with a regulator.
+
+Cheap talk appears whenever one side knows something and the other side must decide how much to trust the message.
+
+## Messages
+
+Messages are often written as:
+
 $$
-u_R=-(a-\theta)^2
+m \in M.
 $$
 
-Sender (bias $b>0$):
+A sender's strategy maps information into messages.
+
+If the sender observes state $\theta$, a messaging strategy is:
+
 $$
-u_S=-(a-(\theta+b))^2
+\sigma_S(\theta) \in M.
 $$
 
-## Equilibrium (what to expect)
-- There is always a **babbling** equilibrium: messages convey no information and the receiver chooses a constant action (based on the prior).
-- When bias is not too large, there are **partition** equilibria: the sender truthfully reveals which interval $\theta$ lies in; the receiver responds with the conditional mean of that interval.
+The receiver's strategy maps messages into actions:
 
-## Later-on analysis
-- **More alignment → more information:** smaller bias typically supports finer partitions.
-- **Credibility via commitment:** if the sender could commit to a rule (information design), outcomes change drastically.
-- **Costly messages → signaling:** adding costs turns cheap talk into signaling.
+$$
+\sigma_R(m) \in A.
+$$
+
+A cheap-talk equilibrium specifies both a sender messaging rule and a receiver response rule.
+
+## Beliefs
+
+After hearing message $m$, the receiver forms a belief about the state:
+
+$$
+\mu(\theta \mid m).
+$$
+
+If message $m$ is sent with positive probability in equilibrium, beliefs are updated using Bayes' rule:
+
+$$
+\mu(\theta \mid m)
+=
+\frac{
+\Pr(m\mid \theta)\Pr(\theta)
+}{
+\sum_{\theta'}\Pr(m\mid \theta')\Pr(\theta')
+}.
+$$
+
+The receiver then chooses an action that maximizes expected payoff given this posterior belief.
+
+```{mermaid}
+flowchart LR
+    A[Message] --> B[Receiver posterior belief]
+    B --> C[Expected payoff from each action]
+    C --> D[Receiver best response]
+```
+
+## Informative and uninformative communication
+
+Cheap talk may be:
+
+| Type | Meaning |
+|---|---|
+| Fully revealing | different states induce different messages |
+| Partially revealing | messages reveal coarse information |
+| Babbling | messages reveal no information |
+| Pooling | multiple types send the same message |
+| Separating | different types send different messages |
+
+A babbling equilibrium always exists in many cheap-talk games: the sender's message is ignored, so the sender has no reason to choose one message over another.
+
+## Babbling equilibrium
+
+In a babbling equilibrium:
+
+1. all types of sender send messages that do not affect beliefs;
+2. the receiver ignores the message;
+3. the receiver chooses the action optimal under the prior.
+
+```{mermaid}
+flowchart LR
+    A[Sender sends message] --> B[Receiver ignores message]
+    B --> C[Receiver uses prior belief]
+    C --> D[Receiver chooses prior-optimal action]
+```
+
+Babbling is uninformative communication. It is strategically stable because messages do not change the receiver's action.
+
+## When can cheap talk be informative?
+
+Cheap talk can be informative when sender and receiver interests are sufficiently aligned.
+
+If the sender benefits when the receiver chooses an action close to the truth, then the sender may have an incentive to communicate honestly or partially honestly.
+
+If the sender always wants the receiver to choose a higher action than the receiver would prefer, full truth-telling may fail, but coarse communication may still be possible.
+
+```{mermaid}
+flowchart TD
+    A[Preference alignment] --> B{High enough?}
+    B -->|Yes| C[Informative communication possible]
+    B -->|No| D[Babbling or very coarse communication]
+```
+
+The degree of conflict shapes how much information can be transmitted.
+
+## Bias
+
+A common cheap-talk model has a sender who is biased relative to the receiver.
+
+For example, the receiver wants to choose action $a$ close to state $\theta$:
+
+$$
+u_R(a,\theta)=-(a-\theta)^2.
+$$
+
+The sender wants the receiver's action to be shifted upward by bias $b$:
+
+$$
+u_S(a,\theta)=-(a-(\theta+b))^2.
+$$
+
+If $b=0$, preferences are aligned.  
+If $b>0$, the sender wants a higher action than the receiver would choose under full information.
+
+The larger the bias, the harder informative communication becomes.
+
+## Partition equilibria
+
+In some cheap-talk games, equilibrium communication partitions the state space.
+
+The sender does not reveal the exact state. Instead, the sender sends a message indicating that the state lies in a range.
+
+```{mermaid}
+flowchart LR
+    A[Low states] --> D[Message 1]
+    B[Middle states] --> E[Message 2]
+    C[High states] --> F[Message 3]
+    D --> G[Receiver chooses action for interval]
+    E --> H[Receiver chooses action for interval]
+    F --> I[Receiver chooses action for interval]
+```
+
+This is partial information transmission.
+
+## Cheap talk and deception
+
+Cheap talk is useful for thinking about deception because messages can move beliefs without being costly or binding.
+
+However, deception is not always simply “lying.” A sender may:
+
+- reveal fully;
+- pool with other types;
+- exaggerate;
+- understate;
+- send vague messages;
+- stay silent;
+- use ambiguity strategically.
+
+The receiver's interpretation depends on equilibrium beliefs.
+
+## Cheap talk versus signaling
+
+Cheap talk differs from signaling.
+
+| Feature | Cheap talk | Signaling |
+|---|---|---|
+| Message/action cost | costless | often costly |
+| Direct payoff effect | none | may affect payoffs directly |
+| Information source | strategic message | costly action or signal |
+| Credibility | from incentives and equilibrium | often from differential costs |
+
+Cheap talk can be credible only through aligned incentives or equilibrium structure. Signaling can be credible because different types face different costs or benefits from sending signals.
+
+## Common mistakes
+
+### 1. Assuming costless messages are always meaningless
+
+Cheap talk can be informative when incentives are sufficiently aligned.
+
+### 2. Assuming messages are automatically truthful
+
+Cheap talk requires incentive compatibility. Truthful messages must be optimal for the sender.
+
+### 3. Ignoring receiver beliefs
+
+Messages matter only through beliefs and receiver actions.
+
+### 4. Confusing babbling with no communication
+
+Babbling may involve messages, but messages carry no information.
+
+### 5. Treating off-path beliefs as irrelevant
+
+Unexpected messages may affect whether a proposed equilibrium is plausible.
+
+## Checklist
+
+When analysing a cheap-talk game, ask:
+
+1. What does the sender know?
+2. What does the receiver need to decide?
+3. What messages are available?
+4. Are messages costly or binding?
+5. What are the sender's preferences?
+6. What are the receiver's preferences?
+7. Are preferences aligned or biased?
+8. How does each message change beliefs?
+9. What is the receiver's best response to each belief?
+10. Is the sender willing to send the proposed message?
+
+## Related pages
+
+- [Game Types](index.qmd)
+- [Game Theory Notes](../game-theory.qmd)
+- [Bayesian Games](bayesian.qmd)
+- [Signaling](signaling.qmd)
+- [Screening and Mechanism Design](screening-mechanism.qmd)
+- [Babbling Equilibrium](../equilibriums/babbling.qmd)
+- [Perfect Bayesian Equilibrium](../equilibriums/perfect-bayesian.qmd)
+- [Probability](../../foundations/probability.qmd)
