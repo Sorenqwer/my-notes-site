@@ -1,6 +1,10 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"
+    - "**/*.qmd"
+    - "!tasks/**"
 
 website:
   site-url: "https://sorenqwer.github.io/my-notes-site/"
