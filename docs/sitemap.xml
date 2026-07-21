@@ -1,356 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/pdfs/index.html</loc>
-    <lastmod>2026-02-13T07:59:01.750Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/toolkit/modeling-checklist.html</loc>
-    <lastmod>2026-05-18T16:23:41.100Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/toolkit/index.html</loc>
-    <lastmod>2026-05-18T16:23:15.654Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/topics/organized-crime.html</loc>
-    <lastmod>2026-05-18T17:46:49.848Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/topics/property-crime.html</loc>
-    <lastmod>2026-05-18T17:46:20.642Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/topics/violent-crime.html</loc>
-    <lastmod>2026-05-18T17:46:12.563Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/topics/cybercrime.html</loc>
-    <lastmod>2026-05-18T17:46:41.268Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/foundations/index.html</loc>
-    <lastmod>2026-05-18T16:12:43.065Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/index.html</loc>
-    <lastmod>2026-05-18T16:05:45.946Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/models/index.html</loc>
-    <lastmod>2026-05-18T16:13:06.689Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/models/plea-bargaining.html</loc>
-    <lastmod>2026-02-19T17:21:38.232Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/models/network-crime.html</loc>
-    <lastmod>2026-02-19T17:20:47.631Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/mechanisms/life-course.html</loc>
-    <lastmod>2026-02-17T17:50:34.306Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/mechanisms/inequality-trust.html</loc>
-    <lastmod>2026-02-17T17:50:27.625Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/mechanisms/social-interactions.html</loc>
-    <lastmod>2026-02-17T17:47:29.020Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/mechanisms/incentives-deterrence.html</loc>
-    <lastmod>2026-02-17T17:47:09.979Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/mechanisms/self-control.html</loc>
-    <lastmod>2026-02-17T17:50:43.739Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/institutions/index.html</loc>
-    <lastmod>2026-05-18T16:22:45.983Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/institutions/policing.html</loc>
-    <lastmod>2026-02-17T17:59:56.074Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/stylized-facts.html</loc>
-    <lastmod>2026-02-17T17:41:04.232Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-theory.html</loc>
-    <lastmod>2026-05-18T03:15:54.151Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/screening-mechanism.html</loc>
-    <lastmod>2026-05-19T04:31:37.444Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/cheap-talk.html</loc>
-    <lastmod>2026-05-19T04:30:49.993Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/signaling.html</loc>
-    <lastmod>2026-05-19T04:31:25.938Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/evolutionary-learning.html</loc>
-    <lastmod>2026-02-15T12:12:45.817Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/global-games.html</loc>
-    <lastmod>2026-02-15T12:13:18.809Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/extensive-form.html</loc>
-    <lastmod>2026-05-18T19:55:06.685Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/bargaining.html</loc>
-    <lastmod>2026-02-15T12:13:38.731Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/equilibriums/correlated-equilibrium.html</loc>
-    <lastmod>2026-02-15T12:39:26.141Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/equilibriums/index.html</loc>
-    <lastmod>2026-05-18T03:41:35.198Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/equilibriums/rationalizability.html</loc>
-    <lastmod>2026-02-15T12:39:32.494Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/equilibriums/proper-equilibrium.html</loc>
-    <lastmod>2026-02-15T12:39:13.946Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/equilibriums/sequential-equilibrium.html</loc>
-    <lastmod>2026-05-19T04:32:01.889Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/equilibriums/nash.html</loc>
-    <lastmod>2026-05-18T17:57:23.590Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/foundations/convexity.html</loc>
-    <lastmod>2026-05-18T17:56:29.691Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/foundations/information-measure-lite.html</loc>
-    <lastmod>2026-02-13T17:36:16.531Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/foundations/index.html</loc>
-    <lastmod>2026-05-18T16:05:25.734Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/foundations/linear-algebra.html</loc>
-    <lastmod>2026-05-18T17:56:40.563Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/index.html</loc>
-    <lastmod>2026-05-18T19:47:09.360Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/psychopathology/index.html</loc>
-    <lastmod>2026-05-16T17:18:12.682Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/development.html</loc>
-    <lastmod>2026-02-21T07:54:29.079Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/biases.html</loc>
-    <lastmod>2026-02-21T07:24:34.069Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/personality.html</loc>
-    <lastmod>2026-02-21T07:26:27.776Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/educational-psychology.html</loc>
-    <lastmod>2026-03-10T16:52:07.860Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/motivation-goals.html</loc>
-    <lastmod>2026-02-21T07:57:12.414Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/index.html</loc>
-    <lastmod>2026-03-14T17:31:08.157Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/person-perception.html</loc>
-    <lastmod>2026-02-21T07:57:35.185Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/history-philosophy.html</loc>
-    <lastmod>2026-02-21T15:56:43.744Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/neuro-methods.html</loc>
-    <lastmod>2026-02-21T15:57:49.722Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/beliefs-learning.html</loc>
-    <lastmod>2026-02-21T07:48:30.197Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/social-cognition.html</loc>
-    <lastmod>2026-02-21T07:11:19.224Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/sensation-perception.html</loc>
-    <lastmod>2026-02-21T15:52:49.165Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/decision-making.html</loc>
-    <lastmod>2026-02-21T07:24:16.977Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/attention-memory.html</loc>
-    <lastmod>2026-02-21T07:56:34.402Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/biopsychology.html</loc>
-    <lastmod>2026-02-21T15:51:52.879Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/overlaps/communication.html</loc>
-    <lastmod>2026-02-21T07:48:09.055Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/overlaps/criminology.html</loc>
-    <lastmod>2026-02-21T07:47:07.144Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/overlaps/game-theory.html</loc>
-    <lastmod>2026-05-17T06:39:11.362Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/overlaps/index.html</loc>
-    <lastmod>2026-02-21T07:59:01.015Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/posts/2026-02-13-first-post.html</loc>
-    <lastmod>2026-02-12T17:02:18.075Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/posts/index.html</loc>
-    <lastmod>2026-02-13T05:43:21.564Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/overlaps/institutions.html</loc>
-    <lastmod>2026-02-21T07:47:22.551Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/overlaps/economics.html</loc>
-    <lastmod>2026-02-21T07:58:10.741Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/overlaps/policy-design.html</loc>
-    <lastmod>2026-02-21T07:58:20.876Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/index.html</loc>
-    <lastmod>2026-02-21T15:40:22.348Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/self-control.html</loc>
-    <lastmod>2026-02-21T07:51:40.740Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/cognition.html</loc>
-    <lastmod>2026-02-21T07:14:43.004Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/emotion-motivation.html</loc>
-    <lastmod>2026-02-21T07:13:37.637Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/learning.html</loc>
-    <lastmod>2026-02-21T07:14:08.216Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/index.html</loc>
-    <lastmod>2026-02-21T07:09:12.288Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/methods.html</loc>
-    <lastmod>2026-02-21T07:17:58.842Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/measurement.html</loc>
-    <lastmod>2026-02-21T07:56:52.685Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/how-to-study.html</loc>
-    <lastmod>2026-02-21T08:01:21.090Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/therapy-tools.html</loc>
+    <lastmod>2026-02-21T07:57:54.784Z</lastmod>
   </url>
   <url>
     <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/relationships.html</loc>
     <lastmod>2026-02-21T07:52:40.112Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/addiction-compulsion.html</loc>
-    <lastmod>2026-03-10T16:51:59.675Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/health-psychology.html</loc>
-    <lastmod>2026-02-21T16:00:12.248Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/mental-health.html</loc>
-    <lastmod>2026-02-21T07:36:58.305Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/sleep-stress.html</loc>
-    <lastmod>2026-02-21T07:51:55.763Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/moral-psychology.html</loc>
-    <lastmod>2026-02-21T07:52:58.247Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/therapy-tools.html</loc>
-    <lastmod>2026-02-21T07:57:54.784Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/personality.html</loc>
+    <lastmod>2026-02-21T07:26:27.776Z</lastmod>
   </url>
   <url>
     <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/norms-groups.html</loc>
     <lastmod>2026-02-21T07:26:01.161Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/foundations/fixed-points.html</loc>
-    <lastmod>2026-05-18T17:56:19.313Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/moral-psychology.html</loc>
+    <lastmod>2026-02-21T07:52:58.247Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/foundations/probability.html</loc>
-    <lastmod>2026-05-18T15:56:36.876Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/index.html</loc>
+    <lastmod>2026-03-14T17:31:08.157Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/foundations/optimization.html</loc>
-    <lastmod>2026-05-18T15:54:08.161Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/educational-psychology.html</loc>
+    <lastmod>2026-03-10T16:52:07.860Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/foundations/dynamic-reasoning.html</loc>
-    <lastmod>2026-05-18T16:05:12.141Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/biases.html</loc>
+    <lastmod>2026-02-21T07:24:34.069Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/about.html</loc>
-    <lastmod>2026-05-18T16:24:15.899Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/overlaps/policy-design.html</loc>
+    <lastmod>2026-02-21T07:58:20.876Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/equilibriums/bayesian-nash.html</loc>
-    <lastmod>2026-05-18T19:56:04.818Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/overlaps/index.html</loc>
+    <lastmod>2026-02-21T07:59:01.015Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/equilibriums/trembling-hand-perfect.html</loc>
-    <lastmod>2026-02-15T12:39:04.921Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/overlaps/economics.html</loc>
+    <lastmod>2026-02-21T07:58:10.741Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/overlaps/communication.html</loc>
+    <lastmod>2026-02-21T07:48:09.055Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/how-to-study.html</loc>
+    <lastmod>2026-02-21T08:01:21.090Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/sensation-perception.html</loc>
+    <lastmod>2026-02-21T15:52:49.165Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/neuro-methods.html</loc>
+    <lastmod>2026-02-21T15:57:49.722Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/measurement.html</loc>
+    <lastmod>2026-02-21T07:56:52.685Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/index.html</loc>
+    <lastmod>2026-02-21T07:09:12.288Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/emotion-motivation.html</loc>
+    <lastmod>2026-02-21T07:13:37.637Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/cognition.html</loc>
+    <lastmod>2026-02-21T07:14:43.004Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/beliefs-learning.html</loc>
+    <lastmod>2026-02-21T07:48:30.197Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/posts/index.html</loc>
+    <lastmod>2026-02-13T05:43:21.564Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/pdfs/index.html</loc>
+    <lastmod>2026-02-13T07:59:01.750Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/index.html</loc>
+    <lastmod>2026-07-21T15:35:29.221Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/screening-mechanism.html</loc>
+    <lastmod>2026-05-19T04:31:37.444Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/normal-form.html</loc>
+    <lastmod>2026-05-18T17:57:12.137Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/index.html</loc>
+    <lastmod>2026-07-21T15:35:29.365Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/extensive-form.html</loc>
+    <lastmod>2026-05-18T19:55:06.685Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/cheap-talk.html</loc>
+    <lastmod>2026-05-19T04:30:49.993Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/bargaining.html</loc>
+    <lastmod>2026-02-15T12:13:38.731Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-theory.html</loc>
+    <lastmod>2026-05-18T03:15:54.151Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/equilibriums/subgame-perfect.html</loc>
+    <lastmod>2026-05-18T19:55:49.471Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/equilibriums/rationalizability.html</loc>
+    <lastmod>2026-02-15T12:39:32.494Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/equilibriums/perfect-bayesian.html</loc>
+    <lastmod>2026-05-19T04:31:52.623Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/equilibriums/index.html</loc>
+    <lastmod>2026-05-18T03:41:35.198Z</lastmod>
   </url>
   <url>
     <loc>https://sorenqwer.github.io/my-notes-site/notes/equilibriums/cheat-sheet.html</loc>
@@ -361,60 +145,124 @@
     <lastmod>2026-05-19T04:32:11.540Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/equilibriums/perfect-bayesian.html</loc>
-    <lastmod>2026-05-19T04:31:52.623Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/foundations/probability.html</loc>
+    <lastmod>2026-05-18T15:56:36.876Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/equilibriums/subgame-perfect.html</loc>
-    <lastmod>2026-05-18T19:55:49.471Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/foundations/linear-algebra.html</loc>
+    <lastmod>2026-05-18T17:56:40.563Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/repeated.html</loc>
-    <lastmod>2026-05-18T19:55:30.776Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/foundations/information-and-beliefs.html</loc>
+    <lastmod>2026-07-21T15:43:45.544Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/auctions.html</loc>
-    <lastmod>2026-02-15T12:13:28.663Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/foundations/fixed-points.html</loc>
+    <lastmod>2026-05-18T17:56:19.313Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/normal-form.html</loc>
-    <lastmod>2026-05-18T17:57:12.137Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/foundations/convexity.html</loc>
+    <lastmod>2026-05-18T17:56:29.691Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/index.html</loc>
-    <lastmod>2026-05-18T03:44:06.344Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/toolkit/methods-map.html</loc>
+    <lastmod>2026-05-18T16:23:32.300Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/network-games.html</loc>
-    <lastmod>2026-02-15T12:12:58.580Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/toolkit/glossary.html</loc>
+    <lastmod>2026-05-18T16:23:24.008Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/bayesian.html</loc>
-    <lastmod>2026-05-18T19:55:16.680Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/topics/white-collar.html</loc>
+    <lastmod>2026-05-18T17:46:31.078Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/index.html</loc>
-    <lastmod>2026-05-18T03:17:32.122Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/topics/property-crime.html</loc>
+    <lastmod>2026-05-18T17:46:20.642Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/notes/metrics.html</loc>
-    <lastmod>2026-05-18T16:23:55.925Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/topics/index.html</loc>
+    <lastmod>2026-05-18T16:23:03.023Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/index.html</loc>
-    <lastmod>2026-02-19T17:44:58.479Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/topics/cybercrime.html</loc>
+    <lastmod>2026-05-18T17:46:41.268Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/models/plea-bargaining.html</loc>
+    <lastmod>2026-02-19T17:21:38.232Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/models/inspection-games.html</loc>
+    <lastmod>2026-02-17T18:35:20.540Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/models/co-offending-games.html</loc>
+    <lastmod>2026-02-19T17:19:53.348Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/mechanisms/social-interactions.html</loc>
+    <lastmod>2026-02-17T17:47:29.020Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/mechanisms/opportunity-routine.html</loc>
+    <lastmod>2026-02-17T17:47:20.520Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/mechanisms/legitimacy-compliance.html</loc>
+    <lastmod>2026-02-17T17:47:40.251Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/mechanisms/inequality-trust.html</loc>
+    <lastmod>2026-02-17T17:50:27.625Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/mechanisms/incentives-deterrence.html</loc>
+    <lastmod>2026-02-17T17:47:09.979Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/institutions/index.html</loc>
+    <lastmod>2026-05-18T16:22:45.983Z</lastmod>
   </url>
   <url>
     <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/institutions/corrections.html</loc>
     <lastmod>2026-02-17T18:00:22.798Z</lastmod>
   </url>
   <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/foundations/units-of-analysis.html</loc>
+    <lastmod>2026-02-17T17:46:59.696Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/foundations/index.html</loc>
+    <lastmod>2026-05-18T16:12:43.065Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/how-to-study.html</loc>
+    <lastmod>2026-02-17T17:37:19.106Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/about.html</loc>
+    <lastmod>2026-05-18T16:24:15.899Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/index.html</loc>
+    <lastmod>2026-02-19T17:44:58.479Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/foundations/key-definitions.html</loc>
+    <lastmod>2026-02-17T17:46:51.027Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/index.html</loc>
+    <lastmod>2026-05-18T16:05:45.946Z</lastmod>
+  </url>
+  <url>
     <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/institutions/courts.html</loc>
     <lastmod>2026-02-17T18:00:14.294Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/mechanisms/opportunity-routine.html</loc>
-    <lastmod>2026-02-17T17:47:20.520Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/institutions/policing.html</loc>
+    <lastmod>2026-02-17T17:59:56.074Z</lastmod>
   </url>
   <url>
     <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/mechanisms/index.html</loc>
@@ -425,55 +273,211 @@
     <lastmod>2026-02-17T17:51:10.873Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/mechanisms/legitimacy-compliance.html</loc>
-    <lastmod>2026-02-17T17:47:40.251Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/mechanisms/life-course.html</loc>
+    <lastmod>2026-02-17T17:50:34.306Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/models/inspection-games.html</loc>
-    <lastmod>2026-02-17T18:35:20.540Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/mechanisms/self-control.html</loc>
+    <lastmod>2026-02-17T17:50:43.739Z</lastmod>
   </url>
   <url>
     <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/models/allocation-dynamics.html</loc>
     <lastmod>2026-02-19T17:19:21.122Z</lastmod>
   </url>
   <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/models/index.html</loc>
+    <lastmod>2026-05-18T16:13:06.689Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/models/network-crime.html</loc>
+    <lastmod>2026-02-19T17:20:47.631Z</lastmod>
+  </url>
+  <url>
     <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/models/reporting-trust.html</loc>
     <lastmod>2026-02-19T17:28:47.997Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/models/co-offending-games.html</loc>
-    <lastmod>2026-02-19T17:19:53.348Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/foundations/units-of-analysis.html</loc>
-    <lastmod>2026-02-17T17:46:59.696Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/foundations/key-definitions.html</loc>
-    <lastmod>2026-02-17T17:46:51.027Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/topics/white-collar.html</loc>
-    <lastmod>2026-05-18T17:46:31.078Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/topics/index.html</loc>
-    <lastmod>2026-05-18T16:23:03.023Z</lastmod>
   </url>
   <url>
     <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/topics/drug-markets.html</loc>
     <lastmod>2026-05-18T17:46:57.840Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/how-to-study.html</loc>
-    <lastmod>2026-02-17T17:37:19.106Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/topics/organized-crime.html</loc>
+    <lastmod>2026-05-18T17:46:49.848Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/toolkit/glossary.html</loc>
-    <lastmod>2026-05-18T16:23:24.008Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/notes/topics/violent-crime.html</loc>
+    <lastmod>2026-05-18T17:46:12.563Z</lastmod>
   </url>
   <url>
-    <loc>https://sorenqwer.github.io/my-notes-site/criminology/toolkit/methods-map.html</loc>
-    <lastmod>2026-05-18T16:23:32.300Z</lastmod>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/stylized-facts.html</loc>
+    <lastmod>2026-02-17T17:41:04.232Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/toolkit/index.html</loc>
+    <lastmod>2026-05-18T16:23:15.654Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/criminology/toolkit/modeling-checklist.html</loc>
+    <lastmod>2026-05-18T16:23:41.100Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/foundations/dynamic-reasoning.html</loc>
+    <lastmod>2026-05-18T16:05:12.141Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/foundations/index.html</loc>
+    <lastmod>2026-07-21T15:35:29.082Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/foundations/information-measure-lite.html</loc>
+    <lastmod>2026-02-13T17:36:16.531Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/foundations/optimization.html</loc>
+    <lastmod>2026-05-18T15:54:08.161Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/index.html</loc>
+    <lastmod>2026-05-18T19:47:09.360Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/equilibriums/bayesian-nash.html</loc>
+    <lastmod>2026-05-18T19:56:04.818Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/equilibriums/correlated-equilibrium.html</loc>
+    <lastmod>2026-02-15T12:39:26.141Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/equilibriums/nash.html</loc>
+    <lastmod>2026-05-18T17:57:23.590Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/equilibriums/proper-equilibrium.html</loc>
+    <lastmod>2026-02-15T12:39:13.946Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/equilibriums/sequential-equilibrium.html</loc>
+    <lastmod>2026-05-19T04:32:01.889Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/equilibriums/trembling-hand-perfect.html</loc>
+    <lastmod>2026-02-15T12:39:04.921Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/auctions.html</loc>
+    <lastmod>2026-02-15T12:13:28.663Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/bayesian.html</loc>
+    <lastmod>2026-05-18T19:55:16.680Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/evolutionary-learning.html</loc>
+    <lastmod>2026-02-15T12:12:45.817Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/global-games.html</loc>
+    <lastmod>2026-02-15T12:13:18.809Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/network-games.html</loc>
+    <lastmod>2026-02-15T12:12:58.580Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/repeated.html</loc>
+    <lastmod>2026-05-18T19:55:30.776Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/game-types/signaling.html</loc>
+    <lastmod>2026-05-19T04:31:25.938Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/notes/metrics.html</loc>
+    <lastmod>2026-05-18T16:23:55.925Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/posts/2026-02-13-first-post.html</loc>
+    <lastmod>2026-02-12T17:02:18.075Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/attention-memory.html</loc>
+    <lastmod>2026-02-21T07:56:34.402Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/biopsychology.html</loc>
+    <lastmod>2026-02-21T15:51:52.879Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/decision-making.html</loc>
+    <lastmod>2026-02-21T07:24:16.977Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/history-philosophy.html</loc>
+    <lastmod>2026-02-21T15:56:43.744Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/learning.html</loc>
+    <lastmod>2026-02-21T07:14:08.216Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/methods.html</loc>
+    <lastmod>2026-02-21T07:17:58.842Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/self-control.html</loc>
+    <lastmod>2026-02-21T07:51:40.740Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/foundations/social-cognition.html</loc>
+    <lastmod>2026-02-21T07:11:19.224Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/index.html</loc>
+    <lastmod>2026-02-21T15:40:22.348Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/overlaps/criminology.html</loc>
+    <lastmod>2026-02-21T07:47:07.144Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/overlaps/game-theory.html</loc>
+    <lastmod>2026-05-17T06:39:11.362Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/overlaps/institutions.html</loc>
+    <lastmod>2026-02-21T07:47:22.551Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/addiction-compulsion.html</loc>
+    <lastmod>2026-03-10T16:51:59.675Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/development.html</loc>
+    <lastmod>2026-02-21T07:54:29.079Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/health-psychology.html</loc>
+    <lastmod>2026-02-21T16:00:12.248Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/mental-health.html</loc>
+    <lastmod>2026-02-21T07:36:58.305Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/motivation-goals.html</loc>
+    <lastmod>2026-02-21T07:57:12.414Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/person-perception.html</loc>
+    <lastmod>2026-02-21T07:57:35.185Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/psychopathology/index.html</loc>
+    <lastmod>2026-05-16T17:18:12.682Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorenqwer.github.io/my-notes-site/psychology/topics/sleep-stress.html</loc>
+    <lastmod>2026-02-21T07:51:55.763Z</lastmod>
   </url>
 </urlset>

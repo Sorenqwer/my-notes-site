@@ -113,11 +113,12 @@ Different readers may want different entry points.
 
 ### If you want information and communication
 
-1. [Bayesian games](game-types/bayesian.qmd)
-2. [Bayesian Nash equilibrium](equilibriums/bayesian-nash.qmd)
-3. [Cheap talk](game-types/cheap-talk.qmd)
-4. [Signaling](game-types/signaling.qmd)
-5. [Screening and mechanism design](game-types/screening-mechanism.qmd)
+1. [Information & beliefs](../foundations/information-and-beliefs.qmd)
+2. [Bayesian games](game-types/bayesian.qmd)
+3. [Bayesian Nash equilibrium](equilibriums/bayesian-nash.qmd)
+4. [Cheap talk](game-types/cheap-talk.qmd)
+5. [Signaling](game-types/signaling.qmd)
+6. [Screening and mechanism design](game-types/screening-mechanism.qmd)
 
 ### If you want equilibrium refinements
 
@@ -156,6 +157,7 @@ The notes section connects closely to the foundations pages:
 - [Foundations](../foundations/index.qmd)
 - [Optimization](../foundations/optimization.qmd)
 - [Probability](../foundations/probability.qmd)
+- [Information & beliefs](../foundations/information-and-beliefs.qmd)
 - [Dynamic reasoning](../foundations/dynamic-reasoning.qmd)
 - [Fixed points](../foundations/fixed-points.qmd)
 

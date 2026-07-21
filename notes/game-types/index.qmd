@@ -307,11 +307,12 @@ These models are useful when the environment itself is doing important explanato
 
 ### If you are interested in information
 
-1. [Bayesian games](bayesian.qmd)
-2. [Bayesian Nash equilibrium](../equilibriums/bayesian-nash.qmd)
-3. [Cheap talk](cheap-talk.qmd)
-4. [Signaling](signaling.qmd)
-5. [Screening and mechanism design](screening-mechanism.qmd)
+1. [Information & beliefs](../../foundations/information-and-beliefs.qmd)
+2. [Bayesian games](bayesian.qmd)
+3. [Bayesian Nash equilibrium](../equilibriums/bayesian-nash.qmd)
+4. [Cheap talk](cheap-talk.qmd)
+5. [Signaling](signaling.qmd)
+6. [Screening and mechanism design](screening-mechanism.qmd)
 
 ### If you are interested in long-run interaction
 
@@ -356,5 +357,6 @@ Many models differ only in what players know. Changing the information structure
 - [Equilibrium concepts](../equilibriums/index.qmd)
 - [Optimization](../../foundations/optimization.qmd)
 - [Probability](../../foundations/probability.qmd)
+- [Information & beliefs](../../foundations/information-and-beliefs.qmd)
 - [Dynamic reasoning](../../foundations/dynamic-reasoning.qmd)
 - [Psychology and game theory](../../psychology/overlaps/game-theory.qmd)

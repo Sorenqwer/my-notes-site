@@ -1,0 +1,244 @@
+---
+title: "Information & Beliefs"
+toc: true
+page-layout: full
+---
+
+Strategic reasoning under uncertainty has a recurring structure: something relevant is unknown, players observe different evidence, and each player chooses an action using a belief about what remains possible.
+
+This page is a bridge between the site's [probability tools](probability.qmd) and its models of [Bayesian games](../notes/game-types/bayesian.qmd), [signaling](../notes/game-types/signaling.qmd), [perfect Bayesian equilibrium](../notes/equilibriums/perfect-bayesian.qmd), and [sequential equilibrium](../notes/equilibriums/sequential-equilibrium.qmd). It focuses on the information structure connecting those topics rather than repeating their calculations or equilibrium analysis.
+
+::: {.callout-note title="Scope of this page"}
+Here a **belief** is a probability distribution used inside a formal model. For a descriptive account of how attention, identity, trust, and social influence shape human belief formation, see [Beliefs, uncertainty, and confidence](../psychology/foundations/beliefs-learning.qmd).
+:::
+
+## The objects to keep separate
+
+Several related objects appear whenever information matters.
+
+| Object | Question it answers | Typical notation |
+|---|---|---|
+| State | What is actually true? | $\omega \in \Omega$ |
+| Type | What private, payoff-relevant characteristic does a player have? | $\theta_i \in \Theta_i$ |
+| Signal | What does a player observe? | $s_i \in S_i$ |
+| Information partition | Which states can the player distinguish? | $\Pi_i$ |
+| Information set | Which decision node has been reached, from the mover's perspective? | $I$ |
+| Prior | What is believed before the new observation? | $p(\omega)$ or $p(\theta)$ |
+| Posterior | What is believed after the observation? | $\mu(\omega\mid s)$ or $\mu(\theta\mid a)$ |
+
+The **state** or **type** describes uncertainty in the model. A **signal** or observed action changes what a player knows. A **belief** assigns relative probabilities to the possibilities that the observation has not ruled out.
+
+Representing incomplete information by a move of Nature, followed by players receiving only partial information about that move, is the Bayesian formulation developed by Harsanyi [@harsanyi_1967]. The detailed [Bayesian-games page](../notes/game-types/bayesian.qmd) develops types, type-contingent strategies, and expected payoffs.
+
+## States and information partitions
+
+Let the finite state space be
+
+$$
+\Omega=\{\omega_1,\ldots,\omega_K\}.
+$$
+
+A deterministic observation can be represented by a partition
+
+$$
+\Pi_i=\{C_1,\ldots,C_m\}
+$$
+
+of $\Omega$. Exactly one cell contains the true state. Player $i$ learns which cell occurred but cannot distinguish the states inside that cell.
+
+For example, if
+
+$$
+\Omega=\{\omega_1,\omega_2,\omega_3,\omega_4\}
+$$
+
+and
+
+$$
+\Pi_i
+=
+\big\{
+\{\omega_1,\omega_2\},
+\{\omega_3,\omega_4\}
+\big\},
+$$
+
+then learning the first cell rules out $\omega_3$ and $\omega_4$, but it does not tell the player whether $\omega_1$ or $\omega_2$ is true.
+
+### More and less informative partitions
+
+A partition $\Pi_i'$ is **finer** than $\Pi_i$ if every cell of $\Pi_i'$ is contained in a cell of $\Pi_i$. The finer partition lets the player make at least all the distinctions available under the coarser partition, and perhaps more.
+
+This is a statement about what can be distinguished, not yet about how probable each remaining state is. Those weights come from the prior and the observation process. For the $\sigma$-algebra and conditional-expectation version of the same idea, see [Information & beliefs (measure-lite)](information-measure-lite.qmd).
+
+### Noisy signals add likelihoods
+
+A noisy signal need not rule out any state. Instead, the model specifies a signal structure such as
+
+$$
+q_i(s_i\mid \omega),
+$$
+
+the probability that player $i$ observes signal $s_i$ when the state is $\omega$.
+
+Two states may both remain possible after $s_i$, while one becomes more likely because it generates that signal more often. The partition view records indistinguishability; the likelihoods record how evidence reweights the states.
+
+## Information partitions and information sets
+
+An information partition and an information set express the same broad idea—possibilities the player cannot distinguish—but they live in different representations.
+
+| Concept | Possibilities grouped together | Used to describe |
+|---|---|---|
+| Information partition | states of the world | what a player can distinguish about uncertainty |
+| Information set | decision nodes in a game tree | what a player knows when choosing an action |
+
+If an information set $I$ contains nodes $x_1,\ldots,x_r$, a belief system assigns probabilities
+
+$$
+\mu(x_k\mid I)\geq 0,
+\qquad
+\sum_{k=1}^{r}\mu(x_k\mid I)=1.
+$$
+
+These beliefs matter because the same available action can lead to different continuation payoffs at different nodes. The player evaluates an action by averaging those continuation payoffs using $\mu(\cdot\mid I)$.
+
+An information set is therefore not itself a belief. It says which nodes the player cannot distinguish. The belief says how much probability the player assigns to each of those nodes.
+
+## From prior to posterior
+
+Suppose a player begins with prior $p(\omega)$ and observes signal $s$. Whenever the observation has positive probability, the posterior is
+
+$$
+\mu(\omega\mid s)
+=
+\frac{q(s\mid\omega)p(\omega)}
+{\sum_{\omega'\in\Omega}q(s\mid\omega')p(\omega')}.
+$$
+
+The [probability page](probability.qmd) develops this calculation in detail. The strategic point is where the likelihood comes from.
+
+### Exogenous evidence
+
+For a weather report, test result, or private measurement, $q(s\mid\omega)$ is part of the environment. The state affects the signal, but the signal is not chosen to influence the observer.
+
+### Endogenous evidence
+
+In a signaling game, the observation may be another player's action. If type $\theta$ uses strategy $\sigma(a\mid\theta)$, then
+
+$$
+\Pr(a\mid\theta)=\sigma(a\mid\theta)
+$$
+
+acts as the likelihood. The observer's posterior depends on the sender's strategy, while the sender's strategy depends on how the observer will update and respond.
+
+```{mermaid}
+flowchart LR
+    A[Private state or type] --> B[Action or signal]
+    B --> C[Observer's posterior]
+    C --> D[Observer's response]
+    D --> E[Informed player's incentive]
+    E --> B
+```
+
+This feedback loop is what makes information strategic. Bayes' rule performs the update, but incentives determine which actions are informative.
+
+## A compact worked example
+
+Suppose a project is either **sound** ($S$) or **fragile** ($F$). An outside decision-maker begins with prior
+
+$$
+\Pr(S)=0.4,
+\qquad
+\Pr(F)=0.6.
+$$
+
+The project owner can make an observable commitment $c$. Under a candidate strategy,
+
+$$
+\Pr(c\mid S)=0.75,
+\qquad
+\Pr(c\mid F)=0.25.
+$$
+
+After observing the commitment, the decision-maker's posterior is
+
+$$
+\Pr(c)
+=
+0.75(0.4)+0.25(0.6)
+=
+0.45.
+$$
+
+Bayes' rule then gives
+
+$$
+\begin{aligned}
+\Pr(S\mid c)
+&=
+\frac{0.75(0.4)}{0.45} \\
+&=
+\frac{2}{3}.
+\end{aligned}
+$$
+
+The commitment raises belief in a sound project from $0.4$ to $2/3$ because sound projects choose it more often. If approval is optimal only when the probability of a sound project exceeds $0.6$, the observation changes the decision-maker's action.
+
+This calculation does **not** establish an equilibrium. It treats the candidate strategy probabilities as likelihoods. The [signaling page](../notes/game-types/signaling.qmd) asks the next question: do both types actually want to behave with those probabilities once they anticipate the response?
+
+## On-path and off-path beliefs
+
+Belief updating depends on the candidate strategy profile.
+
+- An observation is **on path** if it occurs with positive probability under that profile. Bayes' rule then determines beliefs from the prior and strategies.
+- An observation is **off path** if it occurs with zero probability under that profile. Ordinary conditioning cannot determine a posterior because its denominator is zero.
+
+Off-path beliefs still affect behaviour. They determine how a player would respond to an unexpected action, and that response can change whether another player wants to deviate in the first place.
+
+Perfect Bayesian equilibrium combines strategies, beliefs, and sequential rationality, with Bayes consistency wherever the relevant conditioning event has positive probability. Formal PBE formulations can add further consistency conditions; Fudenberg and Tirole give one for multistage games with observed actions [@fudenberg_tirole_1991]. The site's [PBE page](../notes/equilibriums/perfect-bayesian.qmd) develops the practical equilibrium checks.
+
+Sequential equilibrium imposes a particular stronger discipline: beliefs must arise as limits of Bayes updates generated by completely mixed strategy profiles [@kreps_wilson_1982]. The [sequential-equilibrium page](../notes/equilibriums/sequential-equilibrium.qmd) explains that limiting argument.
+
+## How beliefs enter the solution concepts
+
+| Solution concept | Role of beliefs | Main question |
+|---|---|---|
+| Bayesian Nash equilibrium | Each type evaluates expected payoffs using beliefs about unobserved types | Is every type's strategy a best response? |
+| Perfect Bayesian equilibrium | Beliefs at information sets support optimal continuation actions; on-path beliefs follow Bayes' rule | Are strategies sequentially rational given the stated beliefs? |
+| Sequential equilibrium | Beliefs support sequential rationality and satisfy consistency through a fully mixed limiting sequence | Can off-path beliefs be justified by nearby completely mixed behaviour? |
+
+These are solution concepts, while a [signaling game](../notes/game-types/signaling.qmd) is a game form. A signaling game can be analysed using PBE or sequential equilibrium; "signaling" is not itself an equilibrium refinement.
+
+## Concept map
+
+```{mermaid}
+flowchart TD
+    A[State or type] --> B[Prior belief]
+    A --> C[Information structure]
+    C --> D[Private signal or observed action]
+    B --> E[Posterior belief]
+    D --> E
+    E --> F[Expected continuation payoff]
+    F --> G[Best response]
+    G --> H[Strategic outcome]
+
+    E --> I[Bayesian Nash: type-contingent optimality]
+    E --> J[PBE: sequential rationality]
+    E --> K[Sequential equilibrium: consistent assessment]
+```
+
+The reusable chain is:
+
+**state or type** → **observation** → **belief** → **expected payoff** → **action**.
+
+In a strategic setting, the final action may itself become someone else's observation, starting the chain again.
+
+## Reading routes
+
+- For conditional probability, likelihoods, and Bayes calculations: [Probability](probability.qmd)
+- For partitions, $\sigma$-algebras, and conditional expectation: [Information & beliefs (measure-lite)](information-measure-lite.qmd)
+- For types, Nature's move, and type-contingent strategies: [Bayesian games](../notes/game-types/bayesian.qmd)
+- For incentives that make actions informative: [Signaling](../notes/game-types/signaling.qmd)
+- For strategies, beliefs, and on-path updating: [Perfect Bayesian equilibrium](../notes/equilibriums/perfect-bayesian.qmd)
+- For consistent off-path beliefs: [Sequential equilibrium](../notes/equilibriums/sequential-equilibrium.qmd)
+- For histories and continuation payoffs: [Dynamic reasoning](dynamic-reasoning.qmd)

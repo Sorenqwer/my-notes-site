@@ -18,6 +18,7 @@ flowchart TD
     A --> E[Fixed Points]
     A --> F[Convexity]
     A --> G[Linear Algebra]
+    A --> H[Information & Beliefs]
 
     B --> B1[Choice]
     B --> B2[Argmax]
@@ -26,6 +27,10 @@ flowchart TD
     C --> C1[Uncertainty]
     C --> C2[Beliefs]
     C --> C3[Bayesian Updating]
+
+    H --> H1[States and Signals]
+    H --> H2[Information Sets]
+    H --> H3[Strategic Beliefs]
 
     D --> D1[Timing]
     D --> D2[Backward Induction]
@@ -66,6 +71,16 @@ The language of choice: objectives, constraints, argmax notation, first-order co
 The language of uncertainty: events, random variables, expectation, mixed strategies, conditional probability, Bayes' rule, signals, types, and posterior beliefs.
 
 [Open →](probability.qmd)
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+### Information & Beliefs
+
+The bridge from uncertainty to strategy: states, signals, information partitions and sets, priors and posteriors, and beliefs on and off the equilibrium path.
+
+[Open →](information-and-beliefs.qmd)
 :::
 :::
 
@@ -153,10 +168,11 @@ If you are reading the site from the beginning, use this order:
 
 1. [Optimization](optimization.qmd)
 2. [Probability](probability.qmd)
-3. [Dynamic reasoning](dynamic-reasoning.qmd)
-4. [Fixed points](fixed-points.qmd)
-5. [Convexity](convexity.qmd)
-6. [Linear algebra](linear-algebra.qmd)
+3. [Information & beliefs](information-and-beliefs.qmd)
+4. [Dynamic reasoning](dynamic-reasoning.qmd)
+5. [Fixed points](fixed-points.qmd)
+6. [Convexity](convexity.qmd)
+7. [Linear algebra](linear-algebra.qmd)
 
 This order works because optimization and probability appear almost everywhere. Dynamic reasoning becomes important once timing matters. Fixed points, convexity, and linear algebra become more important when the models become more abstract.
 
@@ -168,6 +184,7 @@ Game theory uses all of these tools.
 |---|---|
 | Optimization | Best responses and payoff maximization |
 | Probability | Mixed strategies, beliefs, types, and signals |
+| Information & beliefs | Information structures, posteriors, and belief-based reasoning |
 | Dynamic reasoning | Sequential moves, credibility, and backward induction |
 | Fixed points | Existence of equilibrium |
 | Convexity | Strategy spaces, mixtures, and well-behaved optimization |

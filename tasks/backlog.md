@@ -10,12 +10,17 @@ This roadmap reflects the current checkout rather than the older conversational 
 - Substantial criminology and psychology source trees.
 - Equilibrium overview plus Nash, Bayesian Nash, subgame perfect, perfect Bayesian, sequential, trembling-hand perfect, proper, correlated, rationalizability, and babbling pages.
 - A compact equilibrium cheat sheet.
+- `foundations/information-and-beliefs.qmd`, a bridge from probability and information structures to strategic beliefs and belief-based equilibrium concepts.
+
+## Latest handoff — Information & Beliefs (2026-07-21)
+
+- **Entry points:** linked from `foundations/index.qmd`, `notes/index.qmd`, and `notes/game-types/index.qmd`; the page links onward to the existing probability, measure-lite, Bayesian-game, signaling, PBE, sequential-equilibrium, and dynamic-reasoning pages.
+- **Sources:** added verified bibliographic records for Harsanyi (1967), Kreps and Wilson (1982), and Fudenberg and Tirole (1991), including complete journal metadata and DOIs.
+- **Validation:** `make check` completed successfully with no render warnings. Generated `docs/` output includes the new page, index links, search entries, and sitemap route, with no removed routes.
+- **Visual review:** checked at 1440×1000 and 390×844. Tables, equations, navigation, citations, both Mermaid diagrams, and diagram zoom were reviewed; the worked update and summary chain were adjusted to remove mobile horizontal overflow.
+- **Follow-up:** the broader citation audit remains open. Existing probability, Bayesian-game, signaling, PBE, and sequential-equilibrium pages were intentionally not rewritten or retrofitted during this task.
 
 ## Next priorities
-
-### P1 — Information & Beliefs foundation page
-
-Add a standalone bridge page explaining states, signals, information sets, priors/posteriors, Bayes updating, and the role of beliefs in strategic reasoning. Keep it distinct from the existing information-measure and psychology belief-learning pages. See `tasks/first-task.md`.
 
 ### P1 — Cross-link the existing refinement sequence
 

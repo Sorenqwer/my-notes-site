@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notes – Margins of Rationality</title>
+<title>Information &amp; Beliefs – Margins of Rationality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -73,6 +93,35 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -99,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../notes/index.html" aria-current="page"> 
+    <a class="nav-link" href="../notes/index.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item">
@@ -134,17 +183,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#map-of-the-notes-section" id="toc-map-of-the-notes-section" class="nav-link active" data-scroll-target="#map-of-the-notes-section">Map of the notes section</a></li>
-  <li><a href="#main-pages" id="toc-main-pages" class="nav-link" data-scroll-target="#main-pages">Main pages</a></li>
-  <li><a href="#suggested-reading-paths" id="toc-suggested-reading-paths" class="nav-link" data-scroll-target="#suggested-reading-paths">Suggested reading paths</a>
+  <li><a href="#the-objects-to-keep-separate" id="toc-the-objects-to-keep-separate" class="nav-link active" data-scroll-target="#the-objects-to-keep-separate">The objects to keep separate</a></li>
+  <li><a href="#states-and-information-partitions" id="toc-states-and-information-partitions" class="nav-link" data-scroll-target="#states-and-information-partitions">States and information partitions</a>
   <ul class="collapse">
-  <li><a href="#if-you-are-new-to-game-theory" id="toc-if-you-are-new-to-game-theory" class="nav-link" data-scroll-target="#if-you-are-new-to-game-theory">If you are new to game theory</a></li>
-  <li><a href="#if-you-want-dynamic-and-sequential-reasoning" id="toc-if-you-want-dynamic-and-sequential-reasoning" class="nav-link" data-scroll-target="#if-you-want-dynamic-and-sequential-reasoning">If you want dynamic and sequential reasoning</a></li>
-  <li><a href="#if-you-want-information-and-communication" id="toc-if-you-want-information-and-communication" class="nav-link" data-scroll-target="#if-you-want-information-and-communication">If you want information and communication</a></li>
-  <li><a href="#if-you-want-equilibrium-refinements" id="toc-if-you-want-equilibrium-refinements" class="nav-link" data-scroll-target="#if-you-want-equilibrium-refinements">If you want equilibrium refinements</a></li>
+  <li><a href="#more-and-less-informative-partitions" id="toc-more-and-less-informative-partitions" class="nav-link" data-scroll-target="#more-and-less-informative-partitions">More and less informative partitions</a></li>
+  <li><a href="#noisy-signals-add-likelihoods" id="toc-noisy-signals-add-likelihoods" class="nav-link" data-scroll-target="#noisy-signals-add-likelihoods">Noisy signals add likelihoods</a></li>
   </ul></li>
-  <li><a href="#how-to-use-these-notes" id="toc-how-to-use-these-notes" class="nav-link" data-scroll-target="#how-to-use-these-notes">How to use these notes</a></li>
-  <li><a href="#related-sections" id="toc-related-sections" class="nav-link" data-scroll-target="#related-sections">Related sections</a></li>
+  <li><a href="#information-partitions-and-information-sets" id="toc-information-partitions-and-information-sets" class="nav-link" data-scroll-target="#information-partitions-and-information-sets">Information partitions and information sets</a></li>
+  <li><a href="#from-prior-to-posterior" id="toc-from-prior-to-posterior" class="nav-link" data-scroll-target="#from-prior-to-posterior">From prior to posterior</a>
+  <ul class="collapse">
+  <li><a href="#exogenous-evidence" id="toc-exogenous-evidence" class="nav-link" data-scroll-target="#exogenous-evidence">Exogenous evidence</a></li>
+  <li><a href="#endogenous-evidence" id="toc-endogenous-evidence" class="nav-link" data-scroll-target="#endogenous-evidence">Endogenous evidence</a></li>
+  </ul></li>
+  <li><a href="#a-compact-worked-example" id="toc-a-compact-worked-example" class="nav-link" data-scroll-target="#a-compact-worked-example">A compact worked example</a></li>
+  <li><a href="#on-path-and-off-path-beliefs" id="toc-on-path-and-off-path-beliefs" class="nav-link" data-scroll-target="#on-path-and-off-path-beliefs">On-path and off-path beliefs</a></li>
+  <li><a href="#how-beliefs-enter-the-solution-concepts" id="toc-how-beliefs-enter-the-solution-concepts" class="nav-link" data-scroll-target="#how-beliefs-enter-the-solution-concepts">How beliefs enter the solution concepts</a></li>
+  <li><a href="#concept-map" id="toc-concept-map" class="nav-link" data-scroll-target="#concept-map">Concept map</a></li>
+  <li><a href="#reading-routes" id="toc-reading-routes" class="nav-link" data-scroll-target="#reading-routes">Reading routes</a></li>
   </ul>
 </nav>
     </div>
@@ -153,7 +208,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Notes</h1>
+<h1 class="title">Information &amp; Beliefs</h1>
 </div>
 
 
@@ -170,179 +225,335 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This section collects the main technical notes of the site. The focus is on strategic reasoning, equilibrium concepts, model structure, and the mathematical tools needed to read game-theoretic arguments carefully.</p>
-<p>The notes are organised around three layers:</p>
-<ol type="1">
-<li><strong>Game types</strong>: what kind of strategic environment we are studying.</li>
-<li><strong>Equilibrium concepts</strong>: what it means for behaviour to be stable or rational.</li>
-<li><strong>Metrics and foundations</strong>: how we measure, compare, and formalise objects in the model.</li>
-</ol>
-<section id="map-of-the-notes-section" class="level2">
-<h2 class="anchored" data-anchor-id="map-of-the-notes-section">Map of the notes section</h2>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TD
-    A[Notes] --&gt; B[Game Theory Overview]
-    A --&gt; C[Game Types]
-    A --&gt; D[Equilibrium Concepts]
-    A --&gt; E[Metrics]
-
-    B --&gt; B1[Players]
-    B --&gt; B2[Strategies]
-    B --&gt; B3[Information]
-    B --&gt; B4[Payoffs]
-
-    C --&gt; C1[Static Games]
-    C --&gt; C2[Dynamic Games]
-    C --&gt; C3[Bayesian Games]
-    C --&gt; C4[Repeated Games]
-    C --&gt; C5[Communication Games]
-
-    D --&gt; D1[Nash Equilibrium]
-    D --&gt; D2[Subgame Perfect Equilibrium]
-    D --&gt; D3[Bayesian Nash Equilibrium]
-    D --&gt; D4[Perfect Bayesian Equilibrium]
-    D --&gt; D5[Refinements]
-
-    E --&gt; E1[Rates and Counts]
-    E --&gt; E2[Beliefs and Accuracy]
-    E --&gt; E3[Welfare and Payoff Comparisons]
-</pre>
+<p>Strategic reasoning under uncertainty has a recurring structure: something relevant is unknown, players observe different evidence, and each player chooses an action using a belief about what remains possible.</p>
+<p>This page is a bridge between the site’s <a href="../foundations/probability.html">probability tools</a> and its models of <a href="../notes/game-types/bayesian.html">Bayesian games</a>, <a href="../notes/game-types/signaling.html">signaling</a>, <a href="../notes/equilibriums/perfect-bayesian.html">perfect Bayesian equilibrium</a>, and <a href="../notes/equilibriums/sequential-equilibrium.html">sequential equilibrium</a>. It focuses on the information structure connecting those topics rather than repeating their calculations or equilibrium analysis.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Scope of this page">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p></p></figure><p></p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Scope of this page
 </div>
 </div>
-</div>
-<p>This map is meant as a guide rather than a strict reading order. In practice, the same model often involves several layers at once. For example, a signaling game is both a game type, an information problem, and an equilibrium problem.</p>
-</section>
-<section id="main-pages" class="level2">
-<h2 class="anchored" data-anchor-id="main-pages">Main pages</h2>
-<div class="grid gap-3">
-<div class="g-col-12 g-col-md-6">
-<section id="game-theory-overview" class="level3 card">
-<h3 class="anchored" data-anchor-id="game-theory-overview">Game Theory Overview</h3>
-<p>A central introduction to strategic interaction, best responses, Nash equilibrium, dynamic games, Bayesian games, repeated games, and communication.</p>
-<p><a href="../notes/game-theory.html">Open →</a></p>
-</section>
-</div>
-<div class="g-col-12 g-col-md-6">
-<section id="game-types" class="level3 card">
-<h3 class="anchored" data-anchor-id="game-types">Game Types</h3>
-<p>A map of different strategic environments: normal-form games, extensive-form games, Bayesian games, repeated games, cheap talk, signaling, bargaining, auctions, global games, evolutionary games, and network games.</p>
-<p><a href="../notes/game-types/index.html">Open →</a></p>
-</section>
-</div>
-<div class="g-col-12 g-col-md-6">
-<section id="equilibrium-concepts" class="level3 card">
-<h3 class="anchored" data-anchor-id="equilibrium-concepts">Equilibrium Concepts</h3>
-<p>A guide to Nash equilibrium, subgame perfection, Bayesian Nash equilibrium, perfect Bayesian equilibrium, sequential equilibrium, refinements, correlated equilibrium, rationalizability, and babbling equilibrium.</p>
-<p><a href="../notes/equilibriums/index.html">Open →</a></p>
-</section>
-</div>
-<div class="g-col-12 g-col-md-6">
-<section id="metrics" class="level3 card">
-<h3 class="anchored" data-anchor-id="metrics">Metrics</h3>
-<p>A small toolkit for thinking about measurement: rates, counts, stocks, flows, proxies, precision, interpretability, and payoff comparisons.</p>
-<p><a href="../notes/metrics.html">Open →</a></p>
-</section>
+<div class="callout-body-container callout-body">
+<p>Here a <strong>belief</strong> is a probability distribution used inside a formal model. For a descriptive account of how attention, identity, trust, and social influence shape human belief formation, see <a href="../psychology/foundations/beliefs-learning.html">Beliefs, uncertainty, and confidence</a>.</p>
 </div>
 </div>
+<section id="the-objects-to-keep-separate" class="level2">
+<h2 class="anchored" data-anchor-id="the-objects-to-keep-separate">The objects to keep separate</h2>
+<p>Several related objects appear whenever information matters.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Object</th>
+<th>Question it answers</th>
+<th>Typical notation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>State</td>
+<td>What is actually true?</td>
+<td><span class="math inline">\(\omega \in \Omega\)</span></td>
+</tr>
+<tr class="even">
+<td>Type</td>
+<td>What private, payoff-relevant characteristic does a player have?</td>
+<td><span class="math inline">\(\theta_i \in \Theta_i\)</span></td>
+</tr>
+<tr class="odd">
+<td>Signal</td>
+<td>What does a player observe?</td>
+<td><span class="math inline">\(s_i \in S_i\)</span></td>
+</tr>
+<tr class="even">
+<td>Information partition</td>
+<td>Which states can the player distinguish?</td>
+<td><span class="math inline">\(\Pi_i\)</span></td>
+</tr>
+<tr class="odd">
+<td>Information set</td>
+<td>Which decision node has been reached, from the mover’s perspective?</td>
+<td><span class="math inline">\(I\)</span></td>
+</tr>
+<tr class="even">
+<td>Prior</td>
+<td>What is believed before the new observation?</td>
+<td><span class="math inline">\(p(\omega)\)</span> or <span class="math inline">\(p(\theta)\)</span></td>
+</tr>
+<tr class="odd">
+<td>Posterior</td>
+<td>What is believed after the observation?</td>
+<td><span class="math inline">\(\mu(\omega\mid s)\)</span> or <span class="math inline">\(\mu(\theta\mid a)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>state</strong> or <strong>type</strong> describes uncertainty in the model. A <strong>signal</strong> or observed action changes what a player knows. A <strong>belief</strong> assigns relative probabilities to the possibilities that the observation has not ruled out.</p>
+<p>Representing incomplete information by a move of Nature, followed by players receiving only partial information about that move, is the Bayesian formulation developed by Harsanyi <span class="citation" data-cites="harsanyi_1967">(<a href="#ref-harsanyi_1967" role="doc-biblioref">Harsanyi 1967</a>)</span>. The detailed <a href="../notes/game-types/bayesian.html">Bayesian-games page</a> develops types, type-contingent strategies, and expected payoffs.</p>
 </section>
-<section id="suggested-reading-paths" class="level2">
-<h2 class="anchored" data-anchor-id="suggested-reading-paths">Suggested reading paths</h2>
-<p>Different readers may want different entry points.</p>
-<section id="if-you-are-new-to-game-theory" class="level3">
-<h3 class="anchored" data-anchor-id="if-you-are-new-to-game-theory">If you are new to game theory</h3>
-<ol type="1">
-<li><a href="../notes/game-theory.html">Game Theory Overview</a></li>
-<li><a href="../notes/game-types/normal-form.html">Normal-form games</a></li>
-<li><a href="../notes/equilibriums/nash.html">Nash equilibrium</a></li>
-<li><a href="../notes/game-types/extensive-form.html">Extensive-form games</a></li>
-<li><a href="../notes/equilibriums/subgame-perfect.html">Subgame perfect equilibrium</a></li>
-</ol>
+<section id="states-and-information-partitions" class="level2">
+<h2 class="anchored" data-anchor-id="states-and-information-partitions">States and information partitions</h2>
+<p>Let the finite state space be</p>
+<p><span class="math display">\[
+\Omega=\{\omega_1,\ldots,\omega_K\}.
+\]</span></p>
+<p>A deterministic observation can be represented by a partition</p>
+<p><span class="math display">\[
+\Pi_i=\{C_1,\ldots,C_m\}
+\]</span></p>
+<p>of <span class="math inline">\(\Omega\)</span>. Exactly one cell contains the true state. Player <span class="math inline">\(i\)</span> learns which cell occurred but cannot distinguish the states inside that cell.</p>
+<p>For example, if</p>
+<p><span class="math display">\[
+\Omega=\{\omega_1,\omega_2,\omega_3,\omega_4\}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\Pi_i
+=
+\big\{
+\{\omega_1,\omega_2\},
+\{\omega_3,\omega_4\}
+\big\},
+\]</span></p>
+<p>then learning the first cell rules out <span class="math inline">\(\omega_3\)</span> and <span class="math inline">\(\omega_4\)</span>, but it does not tell the player whether <span class="math inline">\(\omega_1\)</span> or <span class="math inline">\(\omega_2\)</span> is true.</p>
+<section id="more-and-less-informative-partitions" class="level3">
+<h3 class="anchored" data-anchor-id="more-and-less-informative-partitions">More and less informative partitions</h3>
+<p>A partition <span class="math inline">\(\Pi_i'\)</span> is <strong>finer</strong> than <span class="math inline">\(\Pi_i\)</span> if every cell of <span class="math inline">\(\Pi_i'\)</span> is contained in a cell of <span class="math inline">\(\Pi_i\)</span>. The finer partition lets the player make at least all the distinctions available under the coarser partition, and perhaps more.</p>
+<p>This is a statement about what can be distinguished, not yet about how probable each remaining state is. Those weights come from the prior and the observation process. For the <span class="math inline">\(\sigma\)</span>-algebra and conditional-expectation version of the same idea, see <a href="../foundations/information-measure-lite.html">Information &amp; beliefs (measure-lite)</a>.</p>
 </section>
-<section id="if-you-want-dynamic-and-sequential-reasoning" class="level3">
-<h3 class="anchored" data-anchor-id="if-you-want-dynamic-and-sequential-reasoning">If you want dynamic and sequential reasoning</h3>
-<ol type="1">
-<li><a href="../notes/game-types/extensive-form.html">Extensive-form games</a></li>
-<li><a href="../notes/equilibriums/subgame-perfect.html">Subgame perfect equilibrium</a></li>
-<li><a href="../notes/game-types/repeated.html">Repeated games</a></li>
-<li><a href="../notes/equilibriums/perfect-bayesian.html">Perfect Bayesian equilibrium</a></li>
-<li><a href="../notes/equilibriums/sequential-equilibrium.html">Sequential equilibrium</a></li>
-</ol>
-</section>
-<section id="if-you-want-information-and-communication" class="level3">
-<h3 class="anchored" data-anchor-id="if-you-want-information-and-communication">If you want information and communication</h3>
-<ol type="1">
-<li><a href="../foundations/information-and-beliefs.html">Information &amp; beliefs</a></li>
-<li><a href="../notes/game-types/bayesian.html">Bayesian games</a></li>
-<li><a href="../notes/equilibriums/bayesian-nash.html">Bayesian Nash equilibrium</a></li>
-<li><a href="../notes/game-types/cheap-talk.html">Cheap talk</a></li>
-<li><a href="../notes/game-types/signaling.html">Signaling</a></li>
-<li><a href="../notes/game-types/screening-mechanism.html">Screening and mechanism design</a></li>
-</ol>
-</section>
-<section id="if-you-want-equilibrium-refinements" class="level3">
-<h3 class="anchored" data-anchor-id="if-you-want-equilibrium-refinements">If you want equilibrium refinements</h3>
-<ol type="1">
-<li><a href="../notes/equilibriums/index.html">Equilibrium concepts</a></li>
-<li><a href="../notes/equilibriums/trembling-hand-perfect.html">Trembling-hand perfect equilibrium</a></li>
-<li><a href="../notes/equilibriums/proper-equilibrium.html">Proper equilibrium</a></li>
-<li><a href="../notes/equilibriums/sequential-equilibrium.html">Sequential equilibrium</a></li>
-<li><a href="../notes/equilibriums/rationalizability.html">Rationalizability</a></li>
-</ol>
+<section id="noisy-signals-add-likelihoods" class="level3">
+<h3 class="anchored" data-anchor-id="noisy-signals-add-likelihoods">Noisy signals add likelihoods</h3>
+<p>A noisy signal need not rule out any state. Instead, the model specifies a signal structure such as</p>
+<p><span class="math display">\[
+q_i(s_i\mid \omega),
+\]</span></p>
+<p>the probability that player <span class="math inline">\(i\)</span> observes signal <span class="math inline">\(s_i\)</span> when the state is <span class="math inline">\(\omega\)</span>.</p>
+<p>Two states may both remain possible after <span class="math inline">\(s_i\)</span>, while one becomes more likely because it generates that signal more often. The partition view records indistinguishability; the likelihoods record how evidence reweights the states.</p>
 </section>
 </section>
-<section id="how-to-use-these-notes" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-use-these-notes">How to use these notes</h2>
-<p>Game theory is easiest to learn when every page is read with four questions in mind:</p>
-<ol type="1">
-<li><strong>Who are the players?</strong></li>
-<li><strong>What can they do?</strong></li>
-<li><strong>What do they know?</strong></li>
-<li><strong>Why is the proposed behaviour stable?</strong></li>
-</ol>
-<p>Most mistakes in game-theoretic reasoning come from skipping one of these questions. A model may look formal, but if the players, strategies, information, or payoffs are unclear, the equilibrium result will also be unclear.</p>
+<section id="information-partitions-and-information-sets" class="level2">
+<h2 class="anchored" data-anchor-id="information-partitions-and-information-sets">Information partitions and information sets</h2>
+<p>An information partition and an information set express the same broad idea—possibilities the player cannot distinguish—but they live in different representations.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Possibilities grouped together</th>
+<th>Used to describe</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Information partition</td>
+<td>states of the world</td>
+<td>what a player can distinguish about uncertainty</td>
+</tr>
+<tr class="even">
+<td>Information set</td>
+<td>decision nodes in a game tree</td>
+<td>what a player knows when choosing an action</td>
+</tr>
+</tbody>
+</table>
+<p>If an information set <span class="math inline">\(I\)</span> contains nodes <span class="math inline">\(x_1,\ldots,x_r\)</span>, a belief system assigns probabilities</p>
+<p><span class="math display">\[
+\mu(x_k\mid I)\geq 0,
+\qquad
+\sum_{k=1}^{r}\mu(x_k\mid I)=1.
+\]</span></p>
+<p>These beliefs matter because the same available action can lead to different continuation payoffs at different nodes. The player evaluates an action by averaging those continuation payoffs using <span class="math inline">\(\mu(\cdot\mid I)\)</span>.</p>
+<p>An information set is therefore not itself a belief. It says which nodes the player cannot distinguish. The belief says how much probability the player assigns to each of those nodes.</p>
+</section>
+<section id="from-prior-to-posterior" class="level2">
+<h2 class="anchored" data-anchor-id="from-prior-to-posterior">From prior to posterior</h2>
+<p>Suppose a player begins with prior <span class="math inline">\(p(\omega)\)</span> and observes signal <span class="math inline">\(s\)</span>. Whenever the observation has positive probability, the posterior is</p>
+<p><span class="math display">\[
+\mu(\omega\mid s)
+=
+\frac{q(s\mid\omega)p(\omega)}
+{\sum_{\omega'\in\Omega}q(s\mid\omega')p(\omega')}.
+\]</span></p>
+<p>The <a href="../foundations/probability.html">probability page</a> develops this calculation in detail. The strategic point is where the likelihood comes from.</p>
+<section id="exogenous-evidence" class="level3">
+<h3 class="anchored" data-anchor-id="exogenous-evidence">Exogenous evidence</h3>
+<p>For a weather report, test result, or private measurement, <span class="math inline">\(q(s\mid\omega)\)</span> is part of the environment. The state affects the signal, but the signal is not chosen to influence the observer.</p>
+</section>
+<section id="endogenous-evidence" class="level3">
+<h3 class="anchored" data-anchor-id="endogenous-evidence">Endogenous evidence</h3>
+<p>In a signaling game, the observation may be another player’s action. If type <span class="math inline">\(\theta\)</span> uses strategy <span class="math inline">\(\sigma(a\mid\theta)\)</span>, then</p>
+<p><span class="math display">\[
+\Pr(a\mid\theta)=\sigma(a\mid\theta)
+\]</span></p>
+<p>acts as the likelihood. The observer’s posterior depends on the sender’s strategy, while the sender’s strategy depends on how the observer will update and respond.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
-    A[Players] --&gt; E[Game]
-    B[Strategies] --&gt; E
-    C[Information] --&gt; E
-    D[Payoffs] --&gt; E
-    E --&gt; F[Solution Concept]
-    F --&gt; G[Equilibrium]
-    G --&gt; H[Interpretation]
+    A[Private state or type] --&gt; B[Action or signal]
+    B --&gt; C[Observer's posterior]
+    C --&gt; D[Observer's response]
+    D --&gt; E[Informed player's incentive]
+    E --&gt; B
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
+<p>This feedback loop is what makes information strategic. Bayes’ rule performs the update, but incentives determine which actions are informative.</p>
 </section>
-<section id="related-sections" class="level2">
-<h2 class="anchored" data-anchor-id="related-sections">Related sections</h2>
-<p>The notes section connects closely to the foundations pages:</p>
+</section>
+<section id="a-compact-worked-example" class="level2">
+<h2 class="anchored" data-anchor-id="a-compact-worked-example">A compact worked example</h2>
+<p>Suppose a project is either <strong>sound</strong> (<span class="math inline">\(S\)</span>) or <strong>fragile</strong> (<span class="math inline">\(F\)</span>). An outside decision-maker begins with prior</p>
+<p><span class="math display">\[
+\Pr(S)=0.4,
+\qquad
+\Pr(F)=0.6.
+\]</span></p>
+<p>The project owner can make an observable commitment <span class="math inline">\(c\)</span>. Under a candidate strategy,</p>
+<p><span class="math display">\[
+\Pr(c\mid S)=0.75,
+\qquad
+\Pr(c\mid F)=0.25.
+\]</span></p>
+<p>After observing the commitment, the decision-maker’s posterior is</p>
+<p><span class="math display">\[
+\Pr(c)
+=
+0.75(0.4)+0.25(0.6)
+=
+0.45.
+\]</span></p>
+<p>Bayes’ rule then gives</p>
+<p><span class="math display">\[
+\begin{aligned}
+\Pr(S\mid c)
+&amp;=
+\frac{0.75(0.4)}{0.45} \\
+&amp;=
+\frac{2}{3}.
+\end{aligned}
+\]</span></p>
+<p>The commitment raises belief in a sound project from <span class="math inline">\(0.4\)</span> to <span class="math inline">\(2/3\)</span> because sound projects choose it more often. If approval is optimal only when the probability of a sound project exceeds <span class="math inline">\(0.6\)</span>, the observation changes the decision-maker’s action.</p>
+<p>This calculation does <strong>not</strong> establish an equilibrium. It treats the candidate strategy probabilities as likelihoods. The <a href="../notes/game-types/signaling.html">signaling page</a> asks the next question: do both types actually want to behave with those probabilities once they anticipate the response?</p>
+</section>
+<section id="on-path-and-off-path-beliefs" class="level2">
+<h2 class="anchored" data-anchor-id="on-path-and-off-path-beliefs">On-path and off-path beliefs</h2>
+<p>Belief updating depends on the candidate strategy profile.</p>
 <ul>
-<li><a href="../foundations/index.html">Foundations</a></li>
-<li><a href="../foundations/optimization.html">Optimization</a></li>
-<li><a href="../foundations/probability.html">Probability</a></li>
-<li><a href="../foundations/information-and-beliefs.html">Information &amp; beliefs</a></li>
-<li><a href="../foundations/dynamic-reasoning.html">Dynamic reasoning</a></li>
-<li><a href="../foundations/fixed-points.html">Fixed points</a></li>
+<li>An observation is <strong>on path</strong> if it occurs with positive probability under that profile. Bayes’ rule then determines beliefs from the prior and strategies.</li>
+<li>An observation is <strong>off path</strong> if it occurs with zero probability under that profile. Ordinary conditioning cannot determine a posterior because its denominator is zero.</li>
 </ul>
-<p>The same tools also appear in the criminology and psychology sections, especially when modelling institutions, compliance, trust, social interaction, and bounded reasoning.</p>
+<p>Off-path beliefs still affect behaviour. They determine how a player would respond to an unexpected action, and that response can change whether another player wants to deviate in the first place.</p>
+<p>Perfect Bayesian equilibrium combines strategies, beliefs, and sequential rationality, with Bayes consistency wherever the relevant conditioning event has positive probability. Formal PBE formulations can add further consistency conditions; Fudenberg and Tirole give one for multistage games with observed actions <span class="citation" data-cites="fudenberg_tirole_1991">(<a href="#ref-fudenberg_tirole_1991" role="doc-biblioref">Fudenberg and Tirole 1991</a>)</span>. The site’s <a href="../notes/equilibriums/perfect-bayesian.html">PBE page</a> develops the practical equilibrium checks.</p>
+<p>Sequential equilibrium imposes a particular stronger discipline: beliefs must arise as limits of Bayes updates generated by completely mixed strategy profiles <span class="citation" data-cites="kreps_wilson_1982">(<a href="#ref-kreps_wilson_1982" role="doc-biblioref">Kreps and Wilson 1982</a>)</span>. The <a href="../notes/equilibriums/sequential-equilibrium.html">sequential-equilibrium page</a> explains that limiting argument.</p>
+</section>
+<section id="how-beliefs-enter-the-solution-concepts" class="level2">
+<h2 class="anchored" data-anchor-id="how-beliefs-enter-the-solution-concepts">How beliefs enter the solution concepts</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Solution concept</th>
+<th>Role of beliefs</th>
+<th>Main question</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bayesian Nash equilibrium</td>
+<td>Each type evaluates expected payoffs using beliefs about unobserved types</td>
+<td>Is every type’s strategy a best response?</td>
+</tr>
+<tr class="even">
+<td>Perfect Bayesian equilibrium</td>
+<td>Beliefs at information sets support optimal continuation actions; on-path beliefs follow Bayes’ rule</td>
+<td>Are strategies sequentially rational given the stated beliefs?</td>
+</tr>
+<tr class="odd">
+<td>Sequential equilibrium</td>
+<td>Beliefs support sequential rationality and satisfy consistency through a fully mixed limiting sequence</td>
+<td>Can off-path beliefs be justified by nearby completely mixed behaviour?</td>
+</tr>
+</tbody>
+</table>
+<p>These are solution concepts, while a <a href="../notes/game-types/signaling.html">signaling game</a> is a game form. A signaling game can be analysed using PBE or sequential equilibrium; “signaling” is not itself an equilibrium refinement.</p>
+</section>
+<section id="concept-map" class="level2">
+<h2 class="anchored" data-anchor-id="concept-map">Concept map</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[State or type] --&gt; B[Prior belief]
+    A --&gt; C[Information structure]
+    C --&gt; D[Private signal or observed action]
+    B --&gt; E[Posterior belief]
+    D --&gt; E
+    E --&gt; F[Expected continuation payoff]
+    F --&gt; G[Best response]
+    G --&gt; H[Strategic outcome]
+
+    E --&gt; I[Bayesian Nash: type-contingent optimality]
+    E --&gt; J[PBE: sequential rationality]
+    E --&gt; K[Sequential equilibrium: consistent assessment]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The reusable chain is:</p>
+<p><strong>state or type</strong> → <strong>observation</strong> → <strong>belief</strong> → <strong>expected payoff</strong> → <strong>action</strong>.</p>
+<p>In a strategic setting, the final action may itself become someone else’s observation, starting the chain again.</p>
+</section>
+<section id="reading-routes" class="level2">
+<h2 class="anchored" data-anchor-id="reading-routes">Reading routes</h2>
+<ul>
+<li>For conditional probability, likelihoods, and Bayes calculations: <a href="../foundations/probability.html">Probability</a></li>
+<li>For partitions, <span class="math inline">\(\sigma\)</span>-algebras, and conditional expectation: <a href="../foundations/information-measure-lite.html">Information &amp; beliefs (measure-lite)</a></li>
+<li>For types, Nature’s move, and type-contingent strategies: <a href="../notes/game-types/bayesian.html">Bayesian games</a></li>
+<li>For incentives that make actions informative: <a href="../notes/game-types/signaling.html">Signaling</a></li>
+<li>For strategies, beliefs, and on-path updating: <a href="../notes/equilibriums/perfect-bayesian.html">Perfect Bayesian equilibrium</a></li>
+<li>For consistent off-path beliefs: <a href="../notes/equilibriums/sequential-equilibrium.html">Sequential equilibrium</a></li>
+<li>For histories and continuation payoffs: <a href="../foundations/dynamic-reasoning.html">Dynamic reasoning</a></li>
+</ul>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-fudenberg_tirole_1991" class="csl-entry" role="listitem">
+Fudenberg, Drew, and Jean Tirole. 1991. <span>“Perfect Bayesian Equilibrium and Sequential Equilibrium.”</span> <em>Journal of Economic Theory</em> 53 (2): 236–60. <a href="https://doi.org/10.1016/0022-0531(91)90155-W">https://doi.org/10.1016/0022-0531(91)90155-W</a>.
+</div>
+<div id="ref-harsanyi_1967" class="csl-entry" role="listitem">
+Harsanyi, John C. 1967. <span>“<span class="nocase">Games with Incomplete Information Played by <span>‘Bayesian’</span> Players, I–III Part I. The Basic Model</span>.”</span> <em>Management Science</em> 14 (3): 159–82. <a href="https://doi.org/10.1287/mnsc.14.3.159">https://doi.org/10.1287/mnsc.14.3.159</a>.
+</div>
+<div id="ref-kreps_wilson_1982" class="csl-entry" role="listitem">
+Kreps, David M., and Robert Wilson. 1982. <span>“Sequential Equilibria.”</span> <em>Econometrica</em> 50 (4): 863–94. <a href="https://doi.org/10.2307/1912767">https://doi.org/10.2307/1912767</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script>
 (function () {
   const OVERLAY_ID = "mor-diagram-zoom-overlay";
